@@ -1,0 +1,13 @@
+{
+  "name": "@apideck/php",
+  "version": "0.0.1",
+  "description": "Apideck PHP SDK",
+  "keywords": [
+    "apideck",
+    "api",
+    "unify",
+    "unified apis"
+  ],
+  "homepage": "https://apideck.com",
+  "author": "Apideck <support@apideck.com> (https://apideck.com/)"
+}
