@@ -1,6 +1,5 @@
 {
     "name": "apideck-libraries/php-sdk",
-    "version": "0.0.4",
     "description": "The Apideck OpenAPI Spec: SDK Optimized",
     "keywords": [
         "openapitools",
