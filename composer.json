@@ -1,6 +1,6 @@
 {
     "name": "apideck-libraries/php-sdk",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "The Apideck OpenAPI Spec: SDK Optimized",
     "keywords": [
         "openapitools",
@@ -11,6 +11,7 @@
         "rest",
         "api"
     ],
+    "type": "library",
     "homepage": "https://apideck.com",
     "license": "Apache-2.0",
     "authors": [
@@ -56,9 +57,9 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "Apideck\\Client\\" : "lib/" }
+        "psr-4": { "Apideck\\Client\\" : "src/gen/lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Apideck\\Client\\Test\\" : "test/" }
+        "psr-4": { "Apideck\\Client\\Test\\" : "src/gen/test/" }
     }
 }
