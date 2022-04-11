@@ -1,0 +1,48 @@
+# Apideck.TaxRate
+
+### Description
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+`id` | **string** |  | [optional] 
+`name` | **string** |  | [optional] 
+`code` | **string** |  | [optional] 
+`description` | **string** |  | [optional] 
+`effective_tax_rate` | **float** |  | [optional] 
+`total_tax_rate` | **float** | Not compounded sum of the components of a tax rate | [optional] 
+`tax_payable_account_id` | **string** | Unique identifier for the account for tax collected. | [optional] 
+`tax_remitted_account_id` | **string** | Unique identifier for the account for tax remitted. | [optional] 
+`components` | **object[]** |  | [optional] 
+`type` | **string** | Tax type used to indicate the source of tax collected or paid | [optional] 
+`report_tax_type` | **string** | Report Tax type to aggregate tax collected or paid for reporting purposes | [optional] 
+`original_tax_rate_id` | **string** | ID of the original tax rate from which the new tax rate is derived. Helps to understand the relationship between corresponding tax rate entities. | [optional] 
+`status` | **string** |  | [optional] 
+`row_version` | **string** |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
+
+
+
+
+
+<a name="STATUS"></a>
+## Enum: TaxRate.status
+
+
+* `ACTIVE` (value: `'active'`)
+
+* `INACTIVE` (value: `'inactive'`)
+
+* `ARCHIVED` (value: `'archived'`)
+
+
+
+
+---
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+
