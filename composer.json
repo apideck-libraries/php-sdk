@@ -1,0 +1,64 @@
+{
+    "name": "apideck-libraries/php-sdk",
+    "version": "0.0.3",
+    "description": "The Apideck OpenAPI Spec: SDK Optimized",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://apideck.com",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Elias Meire",
+            "email": "elias@apideck.com",
+            "homepage": "https://apideck.com",
+            "role": "Developer"
+            
+        },
+        {
+            "name": "Geert Wille",
+            "email": "geert@apideck.com",
+            "homepage": "https://apideck.com",
+            "role": "Developer"
+            
+        },
+        {
+            "name": "Nick Lloyd",
+            "email": "nick@apideck.com",
+            "homepage": "https://apideck.com",
+            "role": "Developer"
+            
+        },
+        {
+            "name": "Brahim Mouhamou",
+            "email": "brahim@apideck.com",
+            "homepage": "https://apideck.com",
+            "role": "Developer"
+            
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^2.12"
+    },
+    "autoload": {
+        "psr-4": { "Apideck\\Client\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Apideck\\Client\\Test\\" : "test/" }
+    }
+}

@@ -1,10 +1,12 @@
+../../.gitignore
+../../LICENSE
+../../README.md
+../../composer.json
 ../../package.json
 .gitignore
 .openapi-generator-ignore
 .php_cs
 .travis.yml
-README.md
-composer.json
 docs/Api/AccountingApi.md
 docs/Api/AtsApi.md
 docs/Api/ConnectorApi.md
