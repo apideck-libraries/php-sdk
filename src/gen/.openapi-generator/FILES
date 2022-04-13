@@ -52,6 +52,7 @@ docs/Model/ConnectionState.md
 docs/Model/Connector.md
 docs/Model/ConnectorDoc.md
 docs/Model/ConnectorOauthScopes.md
+docs/Model/ConnectorOauthScopes1.md
 docs/Model/ConnectorResource.md
 docs/Model/ConnectorSetting.md
 docs/Model/ConnectorStatus.md
@@ -365,6 +366,7 @@ lib/Model/ConnectionState.php
 lib/Model/Connector.php
 lib/Model/ConnectorDoc.php
 lib/Model/ConnectorOauthScopes.php
+lib/Model/ConnectorOauthScopes1.php
 lib/Model/ConnectorResource.php
 lib/Model/ConnectorSetting.php
 lib/Model/ConnectorStatus.php
@@ -673,6 +675,7 @@ test/Model/ConnectionMetadataTest.php
 test/Model/ConnectionStateTest.php
 test/Model/ConnectionTest.php
 test/Model/ConnectorDocTest.php
+test/Model/ConnectorOauthScopes1Test.php
 test/Model/ConnectorOauthScopesTest.php
 test/Model/ConnectorResourceTest.php
 test/Model/ConnectorSettingTest.php

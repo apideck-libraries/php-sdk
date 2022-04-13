@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | [**\Apideck\Client\Model\UnifiedApiId**](UnifiedApiId.md) |  | [optional] 
-`oauth_scopes` | [**\Apideck\Client\Model\ConnectorOauthScopes[]**](ConnectorOauthScopes.md) |  | [optional] 
+`oauth_scopes` | [**\Apideck\Client\Model\ConnectorOauthScopes1[]**](ConnectorOauthScopes1.md) |  | [optional] 
 
 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ## Referenced Types:
 * [`UnifiedApiId`](UnifiedApiId.md)
-* [`ConnectorOauthScopes`](ConnectorOauthScopes.md)
+* [`ConnectorOauthScopes1`](ConnectorOauthScopes1.md)
 
 ---
 
