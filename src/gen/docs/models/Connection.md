@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 `website` | **string** |  | [optional] 
 `icon` | **string** |  | [optional] 
 `logo` | **string** |  | [optional] 
-`settings` | **object** | Connection settings. Values will persist to &#x60;form_fields&#x60; with corresponding id | [optional] 
+`settings` | **array&lt;string,object&gt;** | Connection settings. Values will persist to &#x60;form_fields&#x60; with corresponding id | [optional] 
 `metadata` | **array&lt;string,object&gt;** | Attach your own consumer specific metadata | [optional] 
 `auth_type` | [**\Apideck\Client\Model\AuthType**](AuthType.md) |  | [optional] 
 `oauth_grant_type` | [**\Apideck\Client\Model\OAuthGrantType**](OAuthGrantType.md) |  | [optional] 

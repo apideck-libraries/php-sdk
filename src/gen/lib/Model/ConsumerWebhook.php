@@ -276,9 +276,6 @@ class ConsumerWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
     const EVENTS_POS_MODIFIER_GROUP_CREATED = 'pos.modifier-group.created';
     const EVENTS_POS_MODIFIER_GROUP_UPDATED = 'pos.modifier-group.updated';
     const EVENTS_POS_MODIFIER_GROUP_DELETED = 'pos.modifier-group.deleted';
-    const EVENTS_HRIS_DEPARTMENT_CREATED = 'hris.department.created';
-    const EVENTS_HRIS_DEPARTMENT_UPDATED = 'hris.department.updated';
-    const EVENTS_HRIS_DEPARTMENT_DELETED = 'hris.department.deleted';
 
     /**
      * Gets allowable values of the enum
@@ -373,9 +370,6 @@ class ConsumerWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
             self::EVENTS_POS_MODIFIER_GROUP_CREATED,
             self::EVENTS_POS_MODIFIER_GROUP_UPDATED,
             self::EVENTS_POS_MODIFIER_GROUP_DELETED,
-            self::EVENTS_HRIS_DEPARTMENT_CREATED,
-            self::EVENTS_HRIS_DEPARTMENT_UPDATED,
-            self::EVENTS_HRIS_DEPARTMENT_DELETED,
         ];
     }
 

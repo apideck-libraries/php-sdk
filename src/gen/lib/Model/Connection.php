@@ -67,7 +67,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
         'website' => 'string',
         'icon' => 'string',
         'logo' => 'string',
-        'settings' => 'object',
+        'settings' => 'array<string,object>',
         'metadata' => 'array<string,object>',
         'auth_type' => '\Apideck\Client\Model\AuthType',
         'oauth_grant_type' => '\Apideck\Client\Model\OAuthGrantType',
@@ -576,7 +576,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return object|null
+     * @return array<string,object>|null
      */
     public function getSettings()
     {
@@ -586,7 +586,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param object|null $settings Connection settings. Values will persist to `form_fields` with corresponding id
+     * @param array<string,object>|null $settings Connection settings. Values will persist to `form_fields` with corresponding id
      *
      * @return self
      */

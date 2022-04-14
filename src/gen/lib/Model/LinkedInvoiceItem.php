@@ -230,7 +230,7 @@ class LinkedInvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string|null $id ID of the linked item
+     * @param string|null $id ID of the linked item. A reference to the [invoice item](https://developers.apideck.com/apis/accounting/reference#tag/Invoice-Items) that was used to create this line item
      *
      * @return self
      */

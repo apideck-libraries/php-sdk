@@ -186,12 +186,6 @@ class WebhookEventType
 
     const POS_MODIFIER_GROUP_DELETED = 'pos.modifier-group.deleted';
 
-    const HRIS_DEPARTMENT_CREATED = 'hris.department.created';
-
-    const HRIS_DEPARTMENT_UPDATED = 'hris.department.updated';
-
-    const HRIS_DEPARTMENT_DELETED = 'hris.department.deleted';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -270,10 +264,7 @@ class WebhookEventType
             self::POS_MODIFIER_DELETED,
             self::POS_MODIFIER_GROUP_CREATED,
             self::POS_MODIFIER_GROUP_UPDATED,
-            self::POS_MODIFIER_GROUP_DELETED,
-            self::HRIS_DEPARTMENT_CREATED,
-            self::HRIS_DEPARTMENT_UPDATED,
-            self::HRIS_DEPARTMENT_DELETED
+            self::POS_MODIFIER_GROUP_DELETED
         ];
     }
 }
