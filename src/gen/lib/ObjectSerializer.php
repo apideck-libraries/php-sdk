@@ -382,15 +382,16 @@ class ObjectSerializer
             }
             return $data;
         } else {
-            $data = is_string($data) ? json_decode($data) : $data;
-            // If a discriminator is defined and points to a valid subclass, use it.
-            $discriminator = $class::DISCRIMINATOR;
-            if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Apideck\Client\Model\\' . $data->{$discriminator};
-                if (is_subclass_of($subclass, $class)) {
-                    $class = $subclass;
-                }
+            // Polymorphism is not supported yet for PHP
+            // see https://openapi-generator.tech/docs/generators/php/#schema-support-feature
+            // This is a workaround that just sets the type as is.
+            if (strpos($class, "AnyOf") === 0 || strpos($class, "AllOf") === 0 || strpos($class, "OneOf") === 0 ) {
+                $type = gettype($data);
+                settype($data, $type);
+                return $data;
             }
+
+            $data = is_string($data) ? json_decode($data) : $data;
 
             /** @var ModelInterface $instance */
             $instance = new $class();
