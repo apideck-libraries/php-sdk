@@ -12,6 +12,7 @@ use Apideck\Client\Api\CustomerSupportApi;
 use Apideck\Client\Api\FileStorageApi;
 use Apideck\Client\Api\HrisApi;
 use Apideck\Client\Api\LeadApi;
+use Apideck\Client\Api\PosApi;
 use Apideck\Client\Api\SmsApi;
 use Apideck\Client\Api\VaultApi;
 use Apideck\Client\Api\WebhookApi;
@@ -67,6 +68,11 @@ class Apideck
     protected $lead;
 
     /**
+     * @var PosApi
+     */
+    protected $pos;
+
+    /**
      * @var SmsApi
      */
     protected $sms;
@@ -109,6 +115,7 @@ class Apideck
       $this->fileStorage = new FileStorageApi(null, $config);
       $this->hris = new HrisApi(null, $config);
       $this->lead = new LeadApi(null, $config);
+      $this->pos = new PosApi(null, $config);
       $this->sms = new SmsApi(null, $config);
       $this->vault = new VaultApi(null, $config);
       $this->webhook = new WebhookApi(null, $config);
@@ -185,6 +192,15 @@ class Apideck
   public function getLeadApi()
   {
       return $this->lead;
+  }
+  /**
+    * Get the value of pos
+    *
+    * @return  PosApi
+    */ 
+  public function getPosApi()
+  {
+      return $this->pos;
   }
   /**
     * Get the value of sms

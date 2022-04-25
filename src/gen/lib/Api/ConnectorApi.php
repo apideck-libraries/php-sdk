@@ -126,7 +126,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetApiResourceCoverageResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetApiResourceCoverageResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function apiResourceCoverageOne($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -145,7 +145,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetApiResourceCoverageResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetApiResourceCoverageResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiResourceCoverageOneWithHttpInfo($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -200,50 +200,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -275,7 +275,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -283,7 +283,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,7 +299,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -510,7 +510,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetApiResourceResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetApiResourceResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function apiResourcesOne($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -529,7 +529,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetApiResourceResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetApiResourceResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiResourcesOneWithHttpInfo($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -584,50 +584,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -659,7 +659,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -667,7 +667,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -675,7 +675,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -683,7 +683,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -895,7 +895,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetApisResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetApisResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function apisAll($x_apideck_app_id = null, $cursor = null, $limit = 20, $filter = null)
     {
@@ -915,7 +915,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetApisResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetApisResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apisAllWithHttpInfo($x_apideck_app_id = null, $cursor = null, $limit = 20, $filter = null)
     {
@@ -970,50 +970,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1045,7 +1045,7 @@ class ConnectorApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\BadRequestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1061,7 +1061,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1069,7 +1069,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1294,7 +1294,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetApiResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetApiResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function apisOne($id, $x_apideck_app_id = null)
     {
@@ -1312,7 +1312,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetApiResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetApiResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apisOneWithHttpInfo($id, $x_apideck_app_id = null)
     {
@@ -1367,50 +1367,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1442,7 +1442,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1450,7 +1450,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1458,7 +1458,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1660,7 +1660,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectorResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function connectorDocsOne($id, $doc_id, $x_apideck_app_id = null)
     {
@@ -1679,7 +1679,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectorResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectorDocsOneWithHttpInfo($id, $doc_id, $x_apideck_app_id = null)
     {
@@ -1734,50 +1734,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1809,7 +1809,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1817,7 +1817,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1825,7 +1825,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1833,7 +1833,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2044,7 +2044,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectorResourceResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetConnectorResourceResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function connectorResourcesOne($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -2063,7 +2063,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectorResourceResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetConnectorResourceResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectorResourcesOneWithHttpInfo($id, $resource_id, $x_apideck_app_id = null)
     {
@@ -2118,50 +2118,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2193,7 +2193,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2201,7 +2201,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2209,7 +2209,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2217,7 +2217,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2429,7 +2429,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectorsResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetConnectorsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function connectorsAll($x_apideck_app_id = null, $cursor = null, $limit = 20, $filter = null)
     {
@@ -2449,7 +2449,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectorsResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetConnectorsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectorsAllWithHttpInfo($x_apideck_app_id = null, $cursor = null, $limit = 20, $filter = null)
     {
@@ -2504,50 +2504,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2579,7 +2579,7 @@ class ConnectorApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\BadRequestResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2587,7 +2587,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2595,7 +2595,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2603,7 +2603,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2828,7 +2828,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectorResponse|object|object|object|object
+     * @return \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function connectorsOne($id, $x_apideck_app_id = null)
     {
@@ -2846,7 +2846,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectorResponse|object|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectorsOneWithHttpInfo($id, $x_apideck_app_id = null)
     {
@@ -2901,50 +2901,50 @@ class ConnectorApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2976,7 +2976,7 @@ class ConnectorApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnauthorizedResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2984,7 +2984,7 @@ class ConnectorApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2992,7 +2992,7 @@ class ConnectorApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\NotFoundResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3000,7 +3000,7 @@ class ConnectorApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
