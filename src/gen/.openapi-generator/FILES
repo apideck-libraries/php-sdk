@@ -38,10 +38,12 @@ docs/Model/ApplicantWebsites.md
 docs/Model/AuthType.md
 docs/Model/BadRequestResponse.md
 docs/Model/BankAccount.md
+docs/Model/Benefit.md
 docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
 docs/Model/Company.md
 docs/Model/CompanyInfo.md
+docs/Model/Compensation.md
 docs/Model/Connection.md
 docs/Model/ConnectionConfiguration.md
 docs/Model/ConnectionDefaults.md
@@ -106,6 +108,7 @@ docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
 docs/Model/CustomerSupportCustomer.md
+docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteCompanyResponse.md
 docs/Model/DeleteContactResponse.md
@@ -136,6 +139,8 @@ docs/Model/EmployeeCompensations.md
 docs/Model/EmployeeEmploymentRole.md
 docs/Model/EmployeeJobs.md
 docs/Model/EmployeeManager.md
+docs/Model/EmployeePayroll.md
+docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSocialLinks.md
 docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
@@ -177,6 +182,8 @@ docs/Model/GetCustomerSupportCustomersResponse.md
 docs/Model/GetCustomersResponse.md
 docs/Model/GetDepartmentResponse.md
 docs/Model/GetDepartmentsResponse.md
+docs/Model/GetEmployeePayrollResponse.md
+docs/Model/GetEmployeePayrollsResponse.md
 docs/Model/GetEmployeeResponse.md
 docs/Model/GetEmployeesResponse.md
 docs/Model/GetFileResponse.md
@@ -204,6 +211,8 @@ docs/Model/GetOpportunitiesResponse.md
 docs/Model/GetOpportunityResponse.md
 docs/Model/GetPaymentResponse.md
 docs/Model/GetPaymentsResponse.md
+docs/Model/GetPayrollResponse.md
+docs/Model/GetPayrollsResponse.md
 docs/Model/GetPipelineResponse.md
 docs/Model/GetPipelinesResponse.md
 docs/Model/GetSharedLinkResponse.md
@@ -255,6 +264,9 @@ docs/Model/Owner.md
 docs/Model/Payment.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
+docs/Model/Payroll.md
+docs/Model/PayrollTotals.md
+docs/Model/PayrollsFilter.md
 docs/Model/PhoneNumber.md
 docs/Model/Pipeline.md
 docs/Model/PipelineStages.md
@@ -270,6 +282,7 @@ docs/Model/SimpleFormFieldOption.md
 docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
+docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
 docs/Model/UnauthorizedResponse.md
@@ -352,10 +365,12 @@ lib/Model/ApplicantWebsites.php
 lib/Model/AuthType.php
 lib/Model/BadRequestResponse.php
 lib/Model/BankAccount.php
+lib/Model/Benefit.php
 lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
 lib/Model/Company.php
 lib/Model/CompanyInfo.php
+lib/Model/Compensation.php
 lib/Model/Connection.php
 lib/Model/ConnectionConfiguration.php
 lib/Model/ConnectionDefaults.php
@@ -420,6 +435,7 @@ lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
 lib/Model/CustomerSupportCustomer.php
+lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteCompanyResponse.php
 lib/Model/DeleteContactResponse.php
@@ -450,6 +466,8 @@ lib/Model/EmployeeCompensations.php
 lib/Model/EmployeeEmploymentRole.php
 lib/Model/EmployeeJobs.php
 lib/Model/EmployeeManager.php
+lib/Model/EmployeePayroll.php
+lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSocialLinks.php
 lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
@@ -491,6 +509,8 @@ lib/Model/GetCustomerSupportCustomersResponse.php
 lib/Model/GetCustomersResponse.php
 lib/Model/GetDepartmentResponse.php
 lib/Model/GetDepartmentsResponse.php
+lib/Model/GetEmployeePayrollResponse.php
+lib/Model/GetEmployeePayrollsResponse.php
 lib/Model/GetEmployeeResponse.php
 lib/Model/GetEmployeesResponse.php
 lib/Model/GetFileResponse.php
@@ -518,6 +538,8 @@ lib/Model/GetOpportunitiesResponse.php
 lib/Model/GetOpportunityResponse.php
 lib/Model/GetPaymentResponse.php
 lib/Model/GetPaymentsResponse.php
+lib/Model/GetPayrollResponse.php
+lib/Model/GetPayrollsResponse.php
 lib/Model/GetPipelineResponse.php
 lib/Model/GetPipelinesResponse.php
 lib/Model/GetSharedLinkResponse.php
@@ -570,6 +592,9 @@ lib/Model/Owner.php
 lib/Model/Payment.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
+lib/Model/Payroll.php
+lib/Model/PayrollTotals.php
+lib/Model/PayrollsFilter.php
 lib/Model/PhoneNumber.php
 lib/Model/Pipeline.php
 lib/Model/PipelineStages.php
@@ -585,6 +610,7 @@ lib/Model/SimpleFormFieldOption.php
 lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
+lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
 lib/Model/UnauthorizedResponse.php
@@ -663,10 +689,12 @@ test/Model/ApplicantWebsitesTest.php
 test/Model/AuthTypeTest.php
 test/Model/BadRequestResponseTest.php
 test/Model/BankAccountTest.php
+test/Model/BenefitTest.php
 test/Model/CompaniesFilterTest.php
 test/Model/CompaniesSortTest.php
 test/Model/CompanyInfoTest.php
 test/Model/CompanyTest.php
+test/Model/CompensationTest.php
 test/Model/ConnectionConfigurationTest.php
 test/Model/ConnectionDefaultsTest.php
 test/Model/ConnectionImportDataCredentialsTest.php
@@ -731,6 +759,7 @@ test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldTest.php
 test/Model/CustomerSupportCustomerTest.php
+test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
 test/Model/DeleteContactResponseTest.php
@@ -760,6 +789,8 @@ test/Model/EmployeeCompensationsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
 test/Model/EmployeeJobsTest.php
 test/Model/EmployeeManagerTest.php
+test/Model/EmployeePayrollTest.php
+test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSocialLinksTest.php
 test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
@@ -802,6 +833,8 @@ test/Model/GetCustomerSupportCustomersResponseTest.php
 test/Model/GetCustomersResponseTest.php
 test/Model/GetDepartmentResponseTest.php
 test/Model/GetDepartmentsResponseTest.php
+test/Model/GetEmployeePayrollResponseTest.php
+test/Model/GetEmployeePayrollsResponseTest.php
 test/Model/GetEmployeeResponseTest.php
 test/Model/GetEmployeesResponseTest.php
 test/Model/GetFileResponseTest.php
@@ -829,6 +862,8 @@ test/Model/GetOpportunitiesResponseTest.php
 test/Model/GetOpportunityResponseTest.php
 test/Model/GetPaymentResponseTest.php
 test/Model/GetPaymentsResponseTest.php
+test/Model/GetPayrollResponseTest.php
+test/Model/GetPayrollsResponseTest.php
 test/Model/GetPipelineResponseTest.php
 test/Model/GetPipelinesResponseTest.php
 test/Model/GetSharedLinkResponseTest.php
@@ -880,6 +915,9 @@ test/Model/OwnerTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
+test/Model/PayrollTest.php
+test/Model/PayrollTotalsTest.php
+test/Model/PayrollsFilterTest.php
 test/Model/PhoneNumberTest.php
 test/Model/PipelineStagesTest.php
 test/Model/PipelineTest.php
@@ -897,6 +935,7 @@ test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
+test/Model/TaxTest.php
 test/Model/UnauthorizedResponseTest.php
 test/Model/UnexpectedErrorResponseTest.php
 test/Model/UnifiedApiIdTest.php
