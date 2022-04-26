@@ -147,12 +147,6 @@
 
 * `POS_MODIFIER_GROUP_DELETED` (value: `'pos.modifier-group.deleted'`)
 
-* `HRIS_DEPARTMENT_CREATED` (value: `'hris.department.created'`)
-
-* `HRIS_DEPARTMENT_UPDATED` (value: `'hris.department.updated'`)
-
-* `HRIS_DEPARTMENT_DELETED` (value: `'hris.department.deleted'`)
-
 
 ---
 

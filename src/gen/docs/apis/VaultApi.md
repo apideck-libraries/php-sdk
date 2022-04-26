@@ -8,6 +8,7 @@
 * [Get All Connections](#connectionsAll)
 * [Deletes A Connection](#connectionsDelete)
 * [Get Resource Settings](#connectionsGetSettings)
+* [Import Connection](#connectionsImport)
 * [Get Connection](#connectionsOne)
 * [Update Connection](#connectionsUpdate)
 * [Update Settings](#connectionsUpdateSettings)
@@ -203,6 +204,72 @@ $apideck = new Apideck($config);
 
 try {
   $response = await $apideck->getvault()->connectionsGetSettings('crm', 'pipedrive', 'leads');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="connectionsImport"></a>
+# Import Connection
+
+
+Method: **connectionsImport**
+
+```php
+Apideck->getVaultApi()->connectionsImport($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **service_id** | **string**| Service ID of the resource to return |
+ **unified_api** | **string**| Unified API |
+ **connection_import_data** | [\Apideck\Client\Model\ConnectionImportData](../models/\Apideck\Client\Model\ConnectionImportData.md)| Fields that need to be persisted on the resource |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateConnectionResponse`](../models/\Apideck\Client\Model\CreateConnectionResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Connection created | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getvault()->connectionsImport('pipedrive', 'crm', $connection);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

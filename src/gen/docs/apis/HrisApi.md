@@ -15,11 +15,15 @@
 * [Delete Department](#departmentsDelete)
 * [Get Department](#departmentsOne)
 * [Update Department](#departmentsUpdate)
+* [List Employee Payrolls](#employeePayrollsAll)
+* [Get Employee Payroll](#employeePayrollsOne)
 * [Create Employee](#employeesAdd)
 * [List Employees](#employeesAll)
 * [Delete Employee](#employeesDelete)
 * [Get Employee](#employeesOne)
 * [Update Employee](#employeesUpdate)
+* [List Payroll](#payrollsAll)
+* [Get Payroll](#payrollsOne)
 
 <a name="companiesAdd"></a>
 # Create Company
@@ -119,7 +123,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description |
 |-------------|-------------|
-**200** | Company | 
+**200** | Companies | 
 **400** | Bad Request | 
 **401** | Unauthorized | 
 **402** | Payment Required | 
@@ -251,7 +255,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description |
 |-------------|-------------|
-**200** | Companies | 
+**200** | Company | 
 **400** | Bad Request | 
 **401** | Unauthorized | 
 **402** | Payment Required | 
@@ -685,6 +689,140 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
+<a name="employeePayrollsAll"></a>
+# List Employee Payrolls
+
+
+Method: **employeePayrollsAll**
+
+```php
+Apideck->getHrisApi()->employeePayrollsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **employee_id** | **string**| ID of the employee you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters (beta) |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetEmployeePayrollsResponse`](../models/\Apideck\Client\Model\GetEmployeePayrollsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | EmployeePayrolls | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->gethris()->employeePayrollsAll('employee_id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="employeePayrollsOne"></a>
+# Get Employee Payroll
+
+
+Method: **employeePayrollsOne**
+
+```php
+Apideck->getHrisApi()->employeePayrollsOne($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payroll_id** | **string**| ID of the payroll you are acting upon. |
+ **employee_id** | **string**| ID of the employee you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetEmployeePayrollResponse`](../models/\Apideck\Client\Model\GetEmployeePayrollResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Payrolls | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->gethris()->employeePayrollsOne('payroll_id_example', 'employee_id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
 <a name="employeesAdd"></a>
 # Create Employee
 
@@ -1008,6 +1146,138 @@ $apideck = new Apideck($config);
 
 try {
   $response = await $apideck->gethris()->employeesUpdate('id_example', $employee);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="payrollsAll"></a>
+# List Payroll
+
+
+Method: **payrollsAll**
+
+```php
+Apideck->getHrisApi()->payrollsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters (beta) |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetPayrollsResponse`](../models/\Apideck\Client\Model\GetPayrollsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Payrolls | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->gethris()->payrollsAll();
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="payrollsOne"></a>
+# Get Payroll
+
+
+Method: **payrollsOne**
+
+```php
+Apideck->getHrisApi()->payrollsOne($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payroll_id** | **string**| ID of the payroll you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetPayrollResponse`](../models/\Apideck\Client\Model\GetPayrollResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Payrolls | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->gethris()->payrollsOne('payroll_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

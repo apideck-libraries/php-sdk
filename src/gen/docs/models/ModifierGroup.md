@@ -1,0 +1,26 @@
+# Apideck.ModifierGroup
+
+### Description
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+`id` | **string** |  | [optional] 
+`name` | **string** |  | [optional] 
+`alternate_name` | **string** |  | [optional] 
+`minimum_required` | **int** |  | [optional] 
+`maximum_allowed` | **int** |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
+
+
+
+
+
+---
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+
