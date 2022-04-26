@@ -10,25 +10,14 @@ Name | Type | Description | Notes
 `alternate_name` | **string** |  | [optional] 
 `minimum_required` | **int** |  | [optional] 
 `maximum_allowed` | **int** |  | [optional] 
-`updated_by` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
-`created_by` | [**\Apideck\Client\Model\CreatedBy**](CreatedBy.md) |  | [optional] 
-`updated_at` | [**\Apideck\Client\Model\UpdatedAt**](UpdatedAt.md) |  | [optional] 
-`created_at` | [**\Apideck\Client\Model\CreatedAt**](CreatedAt.md) |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
 
 
 
 
-
-## Referenced Types:
-
-
-
-
-
-* [`Version`](Version.md)
-* [`CreatedBy`](CreatedBy.md)
-* [`UpdatedAt`](UpdatedAt.md)
-* [`CreatedAt`](CreatedAt.md)
 
 ---
 

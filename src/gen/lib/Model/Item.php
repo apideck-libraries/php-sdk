@@ -81,7 +81,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
         'hidden' => 'bool',
         'version' => 'string',
         'deleted' => 'bool',
-        'updated_by' => '\Apideck\Client\Model\Version',
+        'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime'
@@ -969,7 +969,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_by
      *
-     * @return \Apideck\Client\Model\Version|null
+     * @return string|null
      */
     public function getUpdatedBy()
     {
@@ -979,7 +979,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param \Apideck\Client\Model\Version|null $updated_by updated_by
+     * @param string|null $updated_by updated_by
      *
      * @return self
      */

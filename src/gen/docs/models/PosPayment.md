@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 `location_id` | **string** |  | [optional] 
 `device_id` | **string** |  | [optional] 
 `external_payment_id` | **string** |  | [optional] 
-`idempotency_key` | [**\Apideck\Client\Model\IdempotencyKey**](IdempotencyKey.md) |  | [optional] 
+`idempotency_key` | **string** | A value you specify that uniquely identifies this request among requests you have sent. | [optional] 
 `tip` | **float** |  | [optional] 
 `tax` | **float** |  | [optional] 
 `total` | **float** |  | [optional] 
@@ -34,10 +34,10 @@ Name | Type | Description | Notes
 `wallet` | [**\Apideck\Client\Model\WalletDetails**](WalletDetails.md) |  | [optional] 
 `external_details` | [**\Apideck\Client\Model\PosPaymentExternalDetails**](PosPaymentExternalDetails.md) |  | [optional] 
 `service_charges` | **object[]** | Optional service charges or gratuity tip applied to the order. | [optional] 
-`updated_by` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
-`created_by` | [**\Apideck\Client\Model\CreatedBy**](CreatedBy.md) |  | [optional] 
-`updated_at` | [**\Apideck\Client\Model\UpdatedAt**](UpdatedAt.md) |  | [optional] 
-`created_at` | [**\Apideck\Client\Model\CreatedAt**](CreatedAt.md) |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
 
 
 
@@ -96,7 +96,7 @@ Name | Type | Description | Notes
 
 
 
-* [`IdempotencyKey`](IdempotencyKey.md)
+
 
 
 
@@ -113,10 +113,10 @@ Name | Type | Description | Notes
 * [`WalletDetails`](WalletDetails.md)
 * [`PosPaymentExternalDetails`](PosPaymentExternalDetails.md)
 
-* [`Version`](Version.md)
-* [`CreatedBy`](CreatedBy.md)
-* [`UpdatedAt`](UpdatedAt.md)
-* [`CreatedAt`](CreatedAt.md)
+
+
+
+
 
 ---
 

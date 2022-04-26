@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 `hidden` | **bool** |  | [optional] 
 `version` | **string** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
-`updated_by` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
+`updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
@@ -85,7 +85,7 @@ Name | Type | Description | Notes
 
 
 
-* [`Version`](Version.md)
+
 
 
 

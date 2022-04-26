@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 `status` | **string** | Status of this merchant. | [optional] 
 `language` | **string** | language code according to ISO 639-1. For the United States - EN | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
-`updated_by` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
-`created_by` | [**\Apideck\Client\Model\CreatedBy**](CreatedBy.md) |  | [optional] 
-`updated_at` | [**\Apideck\Client\Model\UpdatedAt**](UpdatedAt.md) |  | [optional] 
-`created_at` | [**\Apideck\Client\Model\CreatedAt**](CreatedAt.md) |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
 
 
 
@@ -44,10 +44,10 @@ Name | Type | Description | Notes
 
 
 * [`Currency`](Currency.md)
-* [`Version`](Version.md)
-* [`CreatedBy`](CreatedBy.md)
-* [`UpdatedAt`](UpdatedAt.md)
-* [`CreatedAt`](CreatedAt.md)
+
+
+
+
 
 ---
 

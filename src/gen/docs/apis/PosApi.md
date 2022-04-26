@@ -2366,7 +2366,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getpos()->ordersPay('id_example', $ordersPay);
+  $response = await $apideck->getpos()->ordersPay('id_example', $order);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

@@ -10,27 +10,15 @@ Name | Type | Description | Notes
 `id` | **string** |  | [optional] 
 `alternate_name` | **string** |  | [optional] 
 `price_amount` | **float** |  | [optional] 
-`available` | [**\Apideck\Client\Model\Available**](Available.md) |  | [optional] 
-`updated_by` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
-`created_by` | [**\Apideck\Client\Model\CreatedBy**](CreatedBy.md) |  | [optional] 
-`updated_at` | [**\Apideck\Client\Model\UpdatedAt**](UpdatedAt.md) |  | [optional] 
-`created_at` | [**\Apideck\Client\Model\CreatedAt**](CreatedAt.md) |  | [optional] 
+`available` | **bool** |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
 
 
 
 
-
-## Referenced Types:
-
-
-
-
-
-* [`Available`](Available.md)
-* [`Version`](Version.md)
-* [`CreatedBy`](CreatedBy.md)
-* [`UpdatedAt`](UpdatedAt.md)
-* [`CreatedAt`](CreatedAt.md)
 
 ---
 

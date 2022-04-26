@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 `enabled` | **bool** | Indicates whether or not a card can be used for payments. | [optional] 
 `billing_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 `reference_id` | **string** | An optional user-defined reference ID that associates this record with another entity in an external system. For example, a customer ID from an external customer management system. | [optional] 
-`version` | [**\Apideck\Client\Model\Version**](Version.md) |  | [optional] 
+`version` | **string** |  | [optional] 
 
 
 
@@ -107,7 +107,7 @@ Name | Type | Description | Notes
 
 * [`Address`](Address.md)
 
-* [`Version`](Version.md)
+
 
 ---
 

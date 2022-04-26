@@ -71,7 +71,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'location_id' => 'string',
         'device_id' => 'string',
         'external_payment_id' => 'string',
-        'idempotency_key' => '\Apideck\Client\Model\IdempotencyKey',
+        'idempotency_key' => 'string',
         'tip' => 'float',
         'tax' => 'float',
         'total' => 'float',
@@ -88,10 +88,10 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => '\Apideck\Client\Model\WalletDetails',
         'external_details' => '\Apideck\Client\Model\PosPaymentExternalDetails',
         'service_charges' => 'object[]',
-        'updated_by' => '\Apideck\Client\Model\Version',
-        'created_by' => '\Apideck\Client\Model\CreatedBy',
-        'updated_at' => '\Apideck\Client\Model\UpdatedAt',
-        'created_at' => '\Apideck\Client\Model\CreatedAt'
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'updated_at' => '\DateTime',
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -133,8 +133,8 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'service_charges' => null,
         'updated_by' => null,
         'created_by' => null,
-        'updated_at' => null,
-        'created_at' => null
+        'updated_at' => 'date-time',
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -448,6 +448,10 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['currency'] === null) {
             $invalidProperties[] = "'currency' can't be null";
         }
+        if (!is_null($this->container['idempotency_key']) && (mb_strlen($this->container['idempotency_key']) > 45)) {
+            $invalidProperties[] = "invalid value for 'idempotency_key', the character length must be smaller than or equal to 45.";
+        }
+
         $allowedValues = $this->getSourceAllowableValues();
         if (!is_null($this->container['source']) && !in_array($this->container['source'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -772,7 +776,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets idempotency_key
      *
-     * @return \Apideck\Client\Model\IdempotencyKey|null
+     * @return string|null
      */
     public function getIdempotencyKey()
     {
@@ -782,12 +786,16 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets idempotency_key
      *
-     * @param \Apideck\Client\Model\IdempotencyKey|null $idempotency_key idempotency_key
+     * @param string|null $idempotency_key A value you specify that uniquely identifies this request among requests you have sent.
      *
      * @return self
      */
     public function setIdempotencyKey($idempotency_key)
     {
+        if (!is_null($idempotency_key) && (mb_strlen($idempotency_key) > 45)) {
+            throw new \InvalidArgumentException('invalid length for $idempotency_key when calling PosPayment., must be smaller than or equal to 45.');
+        }
+
         $this->container['idempotency_key'] = $idempotency_key;
 
         return $this;
@@ -1200,7 +1208,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_by
      *
-     * @return \Apideck\Client\Model\Version|null
+     * @return string|null
      */
     public function getUpdatedBy()
     {
@@ -1210,7 +1218,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param \Apideck\Client\Model\Version|null $updated_by updated_by
+     * @param string|null $updated_by updated_by
      *
      * @return self
      */
@@ -1224,7 +1232,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_by
      *
-     * @return \Apideck\Client\Model\CreatedBy|null
+     * @return string|null
      */
     public function getCreatedBy()
     {
@@ -1234,7 +1242,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param \Apideck\Client\Model\CreatedBy|null $created_by created_by
+     * @param string|null $created_by created_by
      *
      * @return self
      */
@@ -1248,7 +1256,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_at
      *
-     * @return \Apideck\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
@@ -1258,7 +1266,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \Apideck\Client\Model\UpdatedAt|null $updated_at updated_at
+     * @param \DateTime|null $updated_at updated_at
      *
      * @return self
      */
@@ -1272,7 +1280,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_at
      *
-     * @return \Apideck\Client\Model\CreatedAt|null
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -1282,7 +1290,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \Apideck\Client\Model\CreatedAt|null $created_at created_at
+     * @param \DateTime|null $created_at created_at
      *
      * @return self
      */

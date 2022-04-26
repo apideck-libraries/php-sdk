@@ -75,7 +75,7 @@ class PaymentCard implements ModelInterface, ArrayAccess, \JsonSerializable
         'enabled' => 'bool',
         'billing_address' => '\Apideck\Client\Model\Address',
         'reference_id' => 'string',
-        'version' => '\Apideck\Client\Model\Version'
+        'version' => 'string'
     ];
 
     /**
@@ -807,7 +807,7 @@ class PaymentCard implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets version
      *
-     * @return \Apideck\Client\Model\Version|null
+     * @return string|null
      */
     public function getVersion()
     {
@@ -817,7 +817,7 @@ class PaymentCard implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets version
      *
-     * @param \Apideck\Client\Model\Version|null $version version
+     * @param string|null $version version
      *
      * @return self
      */

@@ -63,14 +63,14 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
         'key' => 'string',
         'label' => 'string',
         'active' => 'bool',
-        'hidden' => '\Apideck\Client\Model\Hidden',
-        'editable' => '\Apideck\Client\Model\Hidden',
+        'hidden' => 'bool',
+        'editable' => 'bool',
         'opens_cash_drawer' => 'bool',
         'allows_tipping' => 'bool',
-        'updated_by' => '\Apideck\Client\Model\Version',
-        'created_by' => '\Apideck\Client\Model\CreatedBy',
-        'updated_at' => '\Apideck\Client\Model\UpdatedAt',
-        'created_at' => '\Apideck\Client\Model\CreatedAt'
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'updated_at' => '\DateTime',
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -91,8 +91,8 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
         'allows_tipping' => null,
         'updated_by' => null,
         'created_by' => null,
-        'updated_at' => null,
-        'created_at' => null
+        'updated_at' => 'date-time',
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -370,7 +370,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets hidden
      *
-     * @return \Apideck\Client\Model\Hidden|null
+     * @return bool|null
      */
     public function getHidden()
     {
@@ -380,7 +380,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets hidden
      *
-     * @param \Apideck\Client\Model\Hidden|null $hidden hidden
+     * @param bool|null $hidden hidden
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets editable
      *
-     * @return \Apideck\Client\Model\Hidden|null
+     * @return bool|null
      */
     public function getEditable()
     {
@@ -404,7 +404,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets editable
      *
-     * @param \Apideck\Client\Model\Hidden|null $editable editable
+     * @param bool|null $editable editable
      *
      * @return self
      */
@@ -466,7 +466,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_by
      *
-     * @return \Apideck\Client\Model\Version|null
+     * @return string|null
      */
     public function getUpdatedBy()
     {
@@ -476,7 +476,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param \Apideck\Client\Model\Version|null $updated_by updated_by
+     * @param string|null $updated_by updated_by
      *
      * @return self
      */
@@ -490,7 +490,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_by
      *
-     * @return \Apideck\Client\Model\CreatedBy|null
+     * @return string|null
      */
     public function getCreatedBy()
     {
@@ -500,7 +500,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param \Apideck\Client\Model\CreatedBy|null $created_by created_by
+     * @param string|null $created_by created_by
      *
      * @return self
      */
@@ -514,7 +514,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_at
      *
-     * @return \Apideck\Client\Model\UpdatedAt|null
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
@@ -524,7 +524,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \Apideck\Client\Model\UpdatedAt|null $updated_at updated_at
+     * @param \DateTime|null $updated_at updated_at
      *
      * @return self
      */
@@ -538,7 +538,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_at
      *
-     * @return \Apideck\Client\Model\CreatedAt|null
+     * @return \DateTime|null
      */
     public function getCreatedAt()
     {
@@ -548,7 +548,7 @@ class Tender implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \Apideck\Client\Model\CreatedAt|null $created_at created_at
+     * @param \DateTime|null $created_at created_at
      *
      * @return self
      */
