@@ -178,6 +178,18 @@ Name | Type | Description | Notes
 
 * `POS_MODIFIER_GROUP_DELETED` (value: `'pos.modifier-group.deleted'`)
 
+* `HRIS_EMPLOYEE_CREATED` (value: `'hris.employee.created'`)
+
+* `HRIS_EMPLOYEE_UPDATED` (value: `'hris.employee.updated'`)
+
+* `HRIS_EMPLOYEE_DELETED` (value: `'hris.employee.deleted'`)
+
+* `HRIS_COMPANY_CREATED` (value: `'hris.company.created'`)
+
+* `HRIS_COMPANY_UPDATED` (value: `'hris.company.updated'`)
+
+* `HRIS_COMPANY_DELETED` (value: `'hris.company.deleted'`)
+
 
 
 
