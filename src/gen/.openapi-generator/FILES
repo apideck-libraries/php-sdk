@@ -265,6 +265,7 @@ docs/Model/GetWebhookEventLogsResponse.md
 docs/Model/GetWebhookResponse.md
 docs/Model/GetWebhooksResponse.md
 docs/Model/HrisCompany.md
+docs/Model/HrisEventType.md
 docs/Model/Invoice.md
 docs/Model/InvoiceItem.md
 docs/Model/InvoiceItemSalesDetails.md
@@ -665,6 +666,7 @@ lib/Model/GetWebhookEventLogsResponse.php
 lib/Model/GetWebhookResponse.php
 lib/Model/GetWebhooksResponse.php
 lib/Model/HrisCompany.php
+lib/Model/HrisEventType.php
 lib/Model/Invoice.php
 lib/Model/InvoiceItem.php
 lib/Model/InvoiceItemSalesDetails.php
@@ -1062,6 +1064,7 @@ test/Model/GetWebhookEventLogsResponseTest.php
 test/Model/GetWebhookResponseTest.php
 test/Model/GetWebhooksResponseTest.php
 test/Model/HrisCompanyTest.php
+test/Model/HrisEventTypeTest.php
 test/Model/InvoiceItemSalesDetailsTest.php
 test/Model/InvoiceItemTest.php
 test/Model/InvoiceLineItemTest.php
