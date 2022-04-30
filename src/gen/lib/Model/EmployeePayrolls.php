@@ -60,7 +60,7 @@ class EmployeePayrolls implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'employee' => '\Apideck\Client\Model\Employee',
-        'payrolls' => '\Apideck\Client\Model\Payroll'
+        'payrolls' => '\Apideck\Client\Model\Payroll[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class EmployeePayrolls implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payrolls
      *
-     * @return \Apideck\Client\Model\Payroll|null
+     * @return \Apideck\Client\Model\Payroll[]|null
      */
     public function getPayrolls()
     {
@@ -248,7 +248,7 @@ class EmployeePayrolls implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payrolls
      *
-     * @param \Apideck\Client\Model\Payroll|null $payrolls payrolls
+     * @param \Apideck\Client\Model\Payroll[]|null $payrolls payrolls
      *
      * @return self
      */

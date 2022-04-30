@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `employee` | [**\Apideck\Client\Model\Employee**](Employee.md) |  | [optional] 
-`payrolls` | [**\Apideck\Client\Model\Payroll**](Payroll.md) |  | [optional] 
+`payrolls` | [**\Apideck\Client\Model\Payroll[]**](Payroll.md) |  | [optional] 
 
 
 
