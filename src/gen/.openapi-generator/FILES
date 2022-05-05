@@ -109,6 +109,7 @@ docs/Model/CreatePosPaymentResponse.md
 docs/Model/CreateSessionResponse.md
 docs/Model/CreateSessionResponseData.md
 docs/Model/CreateSharedLinkResponse.md
+docs/Model/CreateSupplierResponse.md
 docs/Model/CreateTaxRateResponse.md
 docs/Model/CreateTenderResponse.md
 docs/Model/CreateUploadSessionRequest.md
@@ -148,6 +149,7 @@ docs/Model/DeletePaymentResponse.md
 docs/Model/DeletePipelineResponse.md
 docs/Model/DeletePosPaymentResponse.md
 docs/Model/DeleteSharedLinkResponse.md
+docs/Model/DeleteSupplierResponse.md
 docs/Model/DeleteTaxRateResponse.md
 docs/Model/DeleteTenderResponse.md
 docs/Model/DeleteUploadSessionResponse.md
@@ -254,6 +256,8 @@ docs/Model/GetPosPaymentResponse.md
 docs/Model/GetPosPaymentsResponse.md
 docs/Model/GetSharedLinkResponse.md
 docs/Model/GetSharedLinksResponse.md
+docs/Model/GetSupplierResponse.md
+docs/Model/GetSuppliersResponse.md
 docs/Model/GetTaxRateResponse.md
 docs/Model/GetTaxRatesResponse.md
 docs/Model/GetTenderResponse.md
@@ -343,6 +347,7 @@ docs/Model/SimpleFormFieldOption.md
 docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
+docs/Model/Supplier.md
 docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
@@ -385,6 +390,7 @@ docs/Model/UpdatePaymentResponse.md
 docs/Model/UpdatePipelineResponse.md
 docs/Model/UpdatePosPaymentResponse.md
 docs/Model/UpdateSharedLinkResponse.md
+docs/Model/UpdateSupplierResponse.md
 docs/Model/UpdateTaxRateResponse.md
 docs/Model/UpdateTenderResponse.md
 docs/Model/UpdateUploadSessionResponse.md
@@ -510,6 +516,7 @@ lib/Model/CreatePosPaymentResponse.php
 lib/Model/CreateSessionResponse.php
 lib/Model/CreateSessionResponseData.php
 lib/Model/CreateSharedLinkResponse.php
+lib/Model/CreateSupplierResponse.php
 lib/Model/CreateTaxRateResponse.php
 lib/Model/CreateTenderResponse.php
 lib/Model/CreateUploadSessionRequest.php
@@ -549,6 +556,7 @@ lib/Model/DeletePaymentResponse.php
 lib/Model/DeletePipelineResponse.php
 lib/Model/DeletePosPaymentResponse.php
 lib/Model/DeleteSharedLinkResponse.php
+lib/Model/DeleteSupplierResponse.php
 lib/Model/DeleteTaxRateResponse.php
 lib/Model/DeleteTenderResponse.php
 lib/Model/DeleteUploadSessionResponse.php
@@ -655,6 +663,8 @@ lib/Model/GetPosPaymentResponse.php
 lib/Model/GetPosPaymentsResponse.php
 lib/Model/GetSharedLinkResponse.php
 lib/Model/GetSharedLinksResponse.php
+lib/Model/GetSupplierResponse.php
+lib/Model/GetSuppliersResponse.php
 lib/Model/GetTaxRateResponse.php
 lib/Model/GetTaxRatesResponse.php
 lib/Model/GetTenderResponse.php
@@ -745,6 +755,7 @@ lib/Model/SimpleFormFieldOption.php
 lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
+lib/Model/Supplier.php
 lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
@@ -787,6 +798,7 @@ lib/Model/UpdatePaymentResponse.php
 lib/Model/UpdatePipelineResponse.php
 lib/Model/UpdatePosPaymentResponse.php
 lib/Model/UpdateSharedLinkResponse.php
+lib/Model/UpdateSupplierResponse.php
 lib/Model/UpdateTaxRateResponse.php
 lib/Model/UpdateTenderResponse.php
 lib/Model/UpdateUploadSessionResponse.php
@@ -908,6 +920,7 @@ test/Model/CreatePosPaymentResponseTest.php
 test/Model/CreateSessionResponseDataTest.php
 test/Model/CreateSessionResponseTest.php
 test/Model/CreateSharedLinkResponseTest.php
+test/Model/CreateSupplierResponseTest.php
 test/Model/CreateTaxRateResponseTest.php
 test/Model/CreateTenderResponseTest.php
 test/Model/CreateUploadSessionRequestTest.php
@@ -947,6 +960,7 @@ test/Model/DeletePaymentResponseTest.php
 test/Model/DeletePipelineResponseTest.php
 test/Model/DeletePosPaymentResponseTest.php
 test/Model/DeleteSharedLinkResponseTest.php
+test/Model/DeleteSupplierResponseTest.php
 test/Model/DeleteTaxRateResponseTest.php
 test/Model/DeleteTenderResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
@@ -1053,6 +1067,8 @@ test/Model/GetPosPaymentResponseTest.php
 test/Model/GetPosPaymentsResponseTest.php
 test/Model/GetSharedLinkResponseTest.php
 test/Model/GetSharedLinksResponseTest.php
+test/Model/GetSupplierResponseTest.php
+test/Model/GetSuppliersResponseTest.php
 test/Model/GetTaxRateResponseTest.php
 test/Model/GetTaxRatesResponseTest.php
 test/Model/GetTenderResponseTest.php
@@ -1142,6 +1158,7 @@ test/Model/SimpleFormFieldOptionTest.php
 test/Model/SocialLinkTest.php
 test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
+test/Model/SupplierTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
@@ -1184,6 +1201,7 @@ test/Model/UpdatePaymentResponseTest.php
 test/Model/UpdatePipelineResponseTest.php
 test/Model/UpdatePosPaymentResponseTest.php
 test/Model/UpdateSharedLinkResponseTest.php
+test/Model/UpdateSupplierResponseTest.php
 test/Model/UpdateTaxRateResponseTest.php
 test/Model/UpdateTenderResponseTest.php
 test/Model/UpdateUploadSessionResponseTest.php
