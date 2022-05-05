@@ -75,7 +75,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_rate' => '\Apideck\Client\Model\LinkedTaxRate',
         'tax_number' => 'string',
         'currency' => '\Apideck\Client\Model\Currency',
-        'bank_accounts' => '\Apideck\Client\Model\BankAccount',
         'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'status' => 'string',
         'updated_by' => 'string',
@@ -109,7 +108,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_rate' => null,
         'tax_number' => null,
         'currency' => null,
-        'bank_accounts' => null,
         'account' => null,
         'status' => null,
         'updated_by' => null,
@@ -162,7 +160,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_rate' => 'tax_rate',
         'tax_number' => 'tax_number',
         'currency' => 'currency',
-        'bank_accounts' => 'bank_accounts',
         'account' => 'account',
         'status' => 'status',
         'updated_by' => 'updated_by',
@@ -194,7 +191,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_rate' => 'setTaxRate',
         'tax_number' => 'setTaxNumber',
         'currency' => 'setCurrency',
-        'bank_accounts' => 'setBankAccounts',
         'account' => 'setAccount',
         'status' => 'setStatus',
         'updated_by' => 'setUpdatedBy',
@@ -226,7 +222,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_rate' => 'getTaxRate',
         'tax_number' => 'getTaxNumber',
         'currency' => 'getCurrency',
-        'bank_accounts' => 'getBankAccounts',
         'account' => 'getAccount',
         'status' => 'getStatus',
         'updated_by' => 'getUpdatedBy',
@@ -330,7 +325,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
         $this->container['tax_number'] = $data['tax_number'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
-        $this->container['bank_accounts'] = $data['bank_accounts'] ?? null;
         $this->container['account'] = $data['account'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -753,30 +747,6 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets bank_accounts
-     *
-     * @return \Apideck\Client\Model\BankAccount|null
-     */
-    public function getBankAccounts()
-    {
-        return $this->container['bank_accounts'];
-    }
-
-    /**
-     * Sets bank_accounts
-     *
-     * @param \Apideck\Client\Model\BankAccount|null $bank_accounts bank_accounts
-     *
-     * @return self
-     */
-    public function setBankAccounts($bank_accounts)
-    {
-        $this->container['bank_accounts'] = $bank_accounts;
 
         return $this;
     }

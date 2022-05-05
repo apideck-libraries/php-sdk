@@ -224,15 +224,6 @@ class SupplierTest extends TestCase
     }
 
     /**
-     * Test attribute "bank_accounts"
-     */
-    public function testPropertyBankAccounts()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "account"
      */
     public function testPropertyAccount()
