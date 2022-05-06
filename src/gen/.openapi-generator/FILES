@@ -41,6 +41,7 @@ docs/Model/BadRequestResponse.md
 docs/Model/BankAccount.md
 docs/Model/BankAccountAchDetails.md
 docs/Model/Benefit.md
+docs/Model/Bill.md
 docs/Model/CashDetails.md
 docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
@@ -77,6 +78,7 @@ docs/Model/ContactsSort.md
 docs/Model/CopyFolderRequest.md
 docs/Model/CreateActivityResponse.md
 docs/Model/CreateApplicantResponse.md
+docs/Model/CreateBillResponse.md
 docs/Model/CreateCompanyResponse.md
 docs/Model/CreateConnectionResponse.md
 docs/Model/CreateContactResponse.md
@@ -123,6 +125,7 @@ docs/Model/CustomField.md
 docs/Model/CustomerSupportCustomer.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
+docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCompanyResponse.md
 docs/Model/DeleteContactResponse.md
 docs/Model/DeleteCustomerResponse.md
@@ -186,6 +189,8 @@ docs/Model/GetApiResponse.md
 docs/Model/GetApisResponse.md
 docs/Model/GetApplicantResponse.md
 docs/Model/GetApplicantsResponse.md
+docs/Model/GetBillResponse.md
+docs/Model/GetBillsResponse.md
 docs/Model/GetCompaniesResponse.md
 docs/Model/GetCompanyInfoResponse.md
 docs/Model/GetCompanyResponse.md
@@ -289,6 +294,7 @@ docs/Model/LinkedCustomer.md
 docs/Model/LinkedFolder.md
 docs/Model/LinkedInvoiceItem.md
 docs/Model/LinkedLedgerAccount.md
+docs/Model/LinkedSupplier.md
 docs/Model/LinkedTaxRate.md
 docs/Model/Links.md
 docs/Model/Location.md
@@ -361,6 +367,7 @@ docs/Model/UnifiedFile.md
 docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
 docs/Model/UpdateActivityResponse.md
+docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCompanyResponse.md
 docs/Model/UpdateConnectionResponse.md
 docs/Model/UpdateContactResponse.md
@@ -448,6 +455,7 @@ lib/Model/BadRequestResponse.php
 lib/Model/BankAccount.php
 lib/Model/BankAccountAchDetails.php
 lib/Model/Benefit.php
+lib/Model/Bill.php
 lib/Model/CashDetails.php
 lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
@@ -484,6 +492,7 @@ lib/Model/ContactsSort.php
 lib/Model/CopyFolderRequest.php
 lib/Model/CreateActivityResponse.php
 lib/Model/CreateApplicantResponse.php
+lib/Model/CreateBillResponse.php
 lib/Model/CreateCompanyResponse.php
 lib/Model/CreateConnectionResponse.php
 lib/Model/CreateContactResponse.php
@@ -530,6 +539,7 @@ lib/Model/CustomField.php
 lib/Model/CustomerSupportCustomer.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
+lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCompanyResponse.php
 lib/Model/DeleteContactResponse.php
 lib/Model/DeleteCustomerResponse.php
@@ -593,6 +603,8 @@ lib/Model/GetApiResponse.php
 lib/Model/GetApisResponse.php
 lib/Model/GetApplicantResponse.php
 lib/Model/GetApplicantsResponse.php
+lib/Model/GetBillResponse.php
+lib/Model/GetBillsResponse.php
 lib/Model/GetCompaniesResponse.php
 lib/Model/GetCompanyInfoResponse.php
 lib/Model/GetCompanyResponse.php
@@ -696,6 +708,7 @@ lib/Model/LinkedCustomer.php
 lib/Model/LinkedFolder.php
 lib/Model/LinkedInvoiceItem.php
 lib/Model/LinkedLedgerAccount.php
+lib/Model/LinkedSupplier.php
 lib/Model/LinkedTaxRate.php
 lib/Model/Links.php
 lib/Model/Location.php
@@ -769,6 +782,7 @@ lib/Model/UnifiedFile.php
 lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
 lib/Model/UpdateActivityResponse.php
+lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCompanyResponse.php
 lib/Model/UpdateConnectionResponse.php
 lib/Model/UpdateContactResponse.php
@@ -852,6 +866,7 @@ test/Model/BadRequestResponseTest.php
 test/Model/BankAccountAchDetailsTest.php
 test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
+test/Model/BillTest.php
 test/Model/CashDetailsTest.php
 test/Model/CompaniesFilterTest.php
 test/Model/CompaniesSortTest.php
@@ -888,6 +903,7 @@ test/Model/ContactsSortTest.php
 test/Model/CopyFolderRequestTest.php
 test/Model/CreateActivityResponseTest.php
 test/Model/CreateApplicantResponseTest.php
+test/Model/CreateBillResponseTest.php
 test/Model/CreateCompanyResponseTest.php
 test/Model/CreateConnectionResponseTest.php
 test/Model/CreateContactResponseTest.php
@@ -934,6 +950,7 @@ test/Model/CustomFieldTest.php
 test/Model/CustomerSupportCustomerTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
+test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
 test/Model/DeleteContactResponseTest.php
 test/Model/DeleteCustomerResponseTest.php
@@ -997,6 +1014,8 @@ test/Model/GetApiResponseTest.php
 test/Model/GetApisResponseTest.php
 test/Model/GetApplicantResponseTest.php
 test/Model/GetApplicantsResponseTest.php
+test/Model/GetBillResponseTest.php
+test/Model/GetBillsResponseTest.php
 test/Model/GetCompaniesResponseTest.php
 test/Model/GetCompanyInfoResponseTest.php
 test/Model/GetCompanyResponseTest.php
@@ -1100,6 +1119,7 @@ test/Model/LinkedCustomerTest.php
 test/Model/LinkedFolderTest.php
 test/Model/LinkedInvoiceItemTest.php
 test/Model/LinkedLedgerAccountTest.php
+test/Model/LinkedSupplierTest.php
 test/Model/LinkedTaxRateTest.php
 test/Model/LinksTest.php
 test/Model/LocationTest.php
@@ -1172,6 +1192,7 @@ test/Model/UnifiedFileTest.php
 test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php
 test/Model/UpdateActivityResponseTest.php
+test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCompanyResponseTest.php
 test/Model/UpdateConnectionResponseTest.php
 test/Model/UpdateContactResponseTest.php
