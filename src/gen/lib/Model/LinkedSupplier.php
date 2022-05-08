@@ -62,7 +62,8 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'display_name' => 'string',
-        'company_name' => 'string'
+        'company_name' => 'string',
+        'address' => '\Apideck\Client\Model\Address'
     ];
 
     /**
@@ -75,7 +76,8 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'display_name' => null,
-        'company_name' => null
+        'company_name' => null,
+        'address' => null
     ];
 
     /**
@@ -107,7 +109,8 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'display_name' => 'display_name',
-        'company_name' => 'company_name'
+        'company_name' => 'company_name',
+        'address' => 'address'
     ];
 
     /**
@@ -118,7 +121,8 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'display_name' => 'setDisplayName',
-        'company_name' => 'setCompanyName'
+        'company_name' => 'setCompanyName',
+        'address' => 'setAddress'
     ];
 
     /**
@@ -129,7 +133,8 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'display_name' => 'getDisplayName',
-        'company_name' => 'getCompanyName'
+        'company_name' => 'getCompanyName',
+        'address' => 'getAddress'
     ];
 
     /**
@@ -192,6 +197,7 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['display_name'] = $data['display_name'] ?? null;
         $this->container['company_name'] = $data['company_name'] ?? null;
+        $this->container['address'] = $data['address'] ?? null;
     }
 
     /**
@@ -289,6 +295,30 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return \Apideck\Client\Model\Address|null
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param \Apideck\Client\Model\Address|null $address address
+     *
+     * @return self
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
 
         return $this;
     }

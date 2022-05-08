@@ -68,7 +68,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'bill_date' => '\DateTime',
         'due_date' => '\DateTime',
         'po_number' => 'string',
-        'line_items' => '\Apideck\Client\Model\InvoiceLineItem[]',
+        'line_items' => '\Apideck\Client\Model\BillLineItem[]',
         'terms' => 'string',
         'balance' => 'float',
         'total' => 'float',
@@ -586,7 +586,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets line_items
      *
-     * @return \Apideck\Client\Model\InvoiceLineItem[]|null
+     * @return \Apideck\Client\Model\BillLineItem[]|null
      */
     public function getLineItems()
     {
@@ -596,7 +596,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets line_items
      *
-     * @param \Apideck\Client\Model\InvoiceLineItem[]|null $line_items line_items
+     * @param \Apideck\Client\Model\BillLineItem[]|null $line_items line_items
      *
      * @return self
      */

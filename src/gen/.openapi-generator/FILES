@@ -42,6 +42,7 @@ docs/Model/BankAccount.md
 docs/Model/BankAccountAchDetails.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
+docs/Model/BillLineItem.md
 docs/Model/CashDetails.md
 docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
@@ -456,6 +457,7 @@ lib/Model/BankAccount.php
 lib/Model/BankAccountAchDetails.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
+lib/Model/BillLineItem.php
 lib/Model/CashDetails.php
 lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
@@ -866,6 +868,7 @@ test/Model/BadRequestResponseTest.php
 test/Model/BankAccountAchDetailsTest.php
 test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
+test/Model/BillLineItemTest.php
 test/Model/BillTest.php
 test/Model/CashDetailsTest.php
 test/Model/CompaniesFilterTest.php

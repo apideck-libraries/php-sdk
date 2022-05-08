@@ -105,4 +105,13 @@ class LinkedSupplierTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
