@@ -5,6 +5,11 @@
 
 ## Methods
 
+* [Create Bill](#billsAdd)
+* [List Bills](#billsAll)
+* [Delete Bill](#billsDelete)
+* [Get Bill](#billsOne)
+* [Update Bill](#billsUpdate)
 * [Get Company Info](#companyInfoOne)
 * [Create Customer](#customersAdd)
 * [List Customers](#customersAll)
@@ -31,11 +36,348 @@
 * [Delete Payment](#paymentsDelete)
 * [Get Payment](#paymentsOne)
 * [Update Payment](#paymentsUpdate)
+* [Create Supplier](#suppliersAdd)
+* [List Suppliers](#suppliersAll)
+* [Delete Supplier](#suppliersDelete)
+* [Get Supplier](#suppliersOne)
+* [Update Supplier](#suppliersUpdate)
 * [Create Tax Rate](#taxRatesAdd)
 * [List Tax Rates](#taxRatesAll)
 * [Delete Tax Rate](#taxRatesDelete)
 * [Get Tax Rate](#taxRatesOne)
 * [Update Tax Rate](#taxRatesUpdate)
+
+<a name="billsAdd"></a>
+# Create Bill
+
+
+Method: **billsAdd**
+
+```php
+Apideck->getAccountingApi()->billsAdd($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bill** | [\Apideck\Client\Model\Bill](../models/\Apideck\Client\Model\Bill.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateBillResponse`](../models/\Apideck\Client\Model\CreateBillResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**201** | Bill created | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->billsAdd($bill);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="billsAll"></a>
+# List Bills
+
+
+Method: **billsAll**
+
+```php
+Apideck->getAccountingApi()->billsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+ **limit** | [**int**] | Number of records to return | (optional) defaults to 20
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetBillsResponse`](../models/\Apideck\Client\Model\GetBillsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Bills | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->billsAll();
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="billsDelete"></a>
+# Delete Bill
+
+
+Method: **billsDelete**
+
+```php
+Apideck->getAccountingApi()->billsDelete($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\DeleteBillResponse`](../models/\Apideck\Client\Model\DeleteBillResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Bill deleted | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->billsDelete('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="billsOne"></a>
+# Get Bill
+
+
+Method: **billsOne**
+
+```php
+Apideck->getAccountingApi()->billsOne($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetBillResponse`](../models/\Apideck\Client\Model\GetBillResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Bill | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->billsOne('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="billsUpdate"></a>
+# Update Bill
+
+
+Method: **billsUpdate**
+
+```php
+Apideck->getAccountingApi()->billsUpdate($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **bill** | [\Apideck\Client\Model\Bill](../models/\Apideck\Client\Model\Bill.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\UpdateBillResponse`](../models/\Apideck\Client\Model\UpdateBillResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Bill Updated | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->billsUpdate('id_example', $bill);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="companyInfoOne"></a>
 # Get Company Info
@@ -1752,6 +2094,338 @@ $apideck = new Apideck($config);
 
 try {
   $response = await $apideck->getaccounting()->paymentsUpdate('id_example', $payment);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="suppliersAdd"></a>
+# Create Supplier
+
+
+Method: **suppliersAdd**
+
+```php
+Apideck->getAccountingApi()->suppliersAdd($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **supplier** | [\Apideck\Client\Model\Supplier](../models/\Apideck\Client\Model\Supplier.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateSupplierResponse`](../models/\Apideck\Client\Model\CreateSupplierResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**201** | Supplier created | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->suppliersAdd($supplier);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="suppliersAll"></a>
+# List Suppliers
+
+
+Method: **suppliersAll**
+
+```php
+Apideck->getAccountingApi()->suppliersAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+ **limit** | [**int**] | Number of records to return | (optional) defaults to 20
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetSuppliersResponse`](../models/\Apideck\Client\Model\GetSuppliersResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Suppliers | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->suppliersAll();
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="suppliersDelete"></a>
+# Delete Supplier
+
+
+Method: **suppliersDelete**
+
+```php
+Apideck->getAccountingApi()->suppliersDelete($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\DeleteSupplierResponse`](../models/\Apideck\Client\Model\DeleteSupplierResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Supplier deleted | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->suppliersDelete('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="suppliersOne"></a>
+# Get Supplier
+
+
+Method: **suppliersOne**
+
+```php
+Apideck->getAccountingApi()->suppliersOne($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetSupplierResponse`](../models/\Apideck\Client\Model\GetSupplierResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Supplier | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->suppliersOne('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="suppliersUpdate"></a>
+# Update Supplier
+
+
+Method: **suppliersUpdate**
+
+```php
+Apideck->getAccountingApi()->suppliersUpdate($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **supplier** | [\Apideck\Client\Model\Supplier](../models/\Apideck\Client\Model\Supplier.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\UpdateSupplierResponse`](../models/\Apideck\Client\Model\UpdateSupplierResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Supplier updated | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = await $apideck->getaccounting()->suppliersUpdate('id_example', $supplier);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

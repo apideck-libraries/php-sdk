@@ -5,14 +5,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
-`name` | **string** |  | [optional] 
-`description` | **string** |  | [optional] 
+`id` | **string** | The ID of the item. | [optional] 
+`name` | **string** | Item name | [optional] 
+`description` | **string** | A short description of the item | [optional] 
 `code` | **string** | User defined item code | [optional] 
 `sold` | **bool** | Item will be available on sales transactions | [optional] 
 `purchased` | **bool** | Item is available for purchase transactions | [optional] 
 `tracked` | **bool** | Item is inventoried | [optional] 
-`type` | **string** |  | [optional] 
+`type` | **string** | Item type | [optional] 
 `sales_details` | [**\Apideck\Client\Model\InvoiceItemSalesDetails**](InvoiceItemSalesDetails.md) |  | [optional] 
 `purchase_details` | [**\Apideck\Client\Model\InvoiceItemSalesDetails**](InvoiceItemSalesDetails.md) |  | [optional] 
 `quantity` | **float** |  | [optional] 

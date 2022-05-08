@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 `status` | **string** | Status of payment | [optional] 
 `type` | **string** | Type of payment | [optional] 
 `allocations` | **object[]** |  | [optional] 
-`note` | **string** |  | [optional] 
+`note` | **string** | Optional note to be associated with the payment. | [optional] 
 `row_version` | **string** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
