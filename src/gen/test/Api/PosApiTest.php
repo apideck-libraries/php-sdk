@@ -506,7 +506,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsAdd
      *
-     * Create PosPayment.
+     * CreateP ayment.
      *
      */
     public function testPaymentsAdd()
@@ -518,7 +518,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsAll
      *
-     * List PosPayments.
+     * List Payments.
      *
      */
     public function testPaymentsAll()
@@ -530,7 +530,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsDelete
      *
-     * Delete PosPayment.
+     * Delete Payment.
      *
      */
     public function testPaymentsDelete()
@@ -542,7 +542,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsOne
      *
-     * Get PosPayment.
+     * Get Payment.
      *
      */
     public function testPaymentsOne()
@@ -554,7 +554,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsUpdate
      *
-     * Update PosPayment.
+     * Update Payment.
      *
      */
     public function testPaymentsUpdate()

@@ -64,6 +64,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'string',
         'minimum_required' => 'int',
         'maximum_allowed' => 'int',
+        'modifiers' => 'object[]',
+        'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -83,6 +85,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => null,
         'minimum_required' => null,
         'maximum_allowed' => null,
+        'modifiers' => null,
+        'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -121,6 +125,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'alternate_name',
         'minimum_required' => 'minimum_required',
         'maximum_allowed' => 'maximum_allowed',
+        'modifiers' => 'modifiers',
+        'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -138,6 +144,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'setAlternateName',
         'minimum_required' => 'setMinimumRequired',
         'maximum_allowed' => 'setMaximumAllowed',
+        'modifiers' => 'setModifiers',
+        'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -155,6 +163,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'getAlternateName',
         'minimum_required' => 'getMinimumRequired',
         'maximum_allowed' => 'getMaximumAllowed',
+        'modifiers' => 'getModifiers',
+        'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -223,6 +233,8 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['alternate_name'] = $data['alternate_name'] ?? null;
         $this->container['minimum_required'] = $data['minimum_required'] ?? null;
         $this->container['maximum_allowed'] = $data['maximum_allowed'] ?? null;
+        $this->container['modifiers'] = $data['modifiers'] ?? null;
+        $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -369,6 +381,54 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setMaximumAllowed($maximum_allowed)
     {
         $this->container['maximum_allowed'] = $maximum_allowed;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiers
+     *
+     * @return object[]|null
+     */
+    public function getModifiers()
+    {
+        return $this->container['modifiers'];
+    }
+
+    /**
+     * Sets modifiers
+     *
+     * @param object[]|null $modifiers modifiers
+     *
+     * @return self
+     */
+    public function setModifiers($modifiers)
+    {
+        $this->container['modifiers'] = $modifiers;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_version
+     *
+     * @return string|null
+     */
+    public function getRowVersion()
+    {
+        return $this->container['row_version'];
+    }
+
+    /**
+     * Sets row_version
+     *
+     * @param string|null $row_version row_version
+     *
+     * @return self
+     */
+    public function setRowVersion($row_version)
+    {
+        $this->container['row_version'] = $row_version;
 
         return $this;
     }

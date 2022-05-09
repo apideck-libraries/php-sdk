@@ -125,6 +125,24 @@ class ModifierGroupTest extends TestCase
     }
 
     /**
+     * Test attribute "modifiers"
+     */
+    public function testPropertyModifiers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "row_version"
+     */
+    public function testPropertyRowVersion()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

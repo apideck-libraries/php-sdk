@@ -16200,7 +16200,7 @@ class PosApi
     /**
      * Operation paymentsAdd
      *
-     * Create PosPayment
+     * CreateP ayment
      *
      * @param  \Apideck\Client\Model\PosPayment $pos_payment pos_payment (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -16221,7 +16221,7 @@ class PosApi
     /**
      * Operation paymentsAddWithHttpInfo
      *
-     * Create PosPayment
+     * CreateP ayment
      *
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -16438,7 +16438,7 @@ class PosApi
     /**
      * Operation paymentsAddAsync
      *
-     * Create PosPayment
+     * CreateP ayment
      *
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -16462,7 +16462,7 @@ class PosApi
     /**
      * Operation paymentsAddAsyncWithHttpInfo
      *
-     * Create PosPayment
+     * CreateP ayment
      *
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -16637,7 +16637,7 @@ class PosApi
     /**
      * Operation paymentsAll
      *
-     * List PosPayments
+     * List Payments
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -16659,7 +16659,7 @@ class PosApi
     /**
      * Operation paymentsAllWithHttpInfo
      *
-     * List PosPayments
+     * List Payments
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -16877,7 +16877,7 @@ class PosApi
     /**
      * Operation paymentsAllAsync
      *
-     * List PosPayments
+     * List Payments
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -16902,7 +16902,7 @@ class PosApi
     /**
      * Operation paymentsAllAsyncWithHttpInfo
      *
-     * List PosPayments
+     * List Payments
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17096,7 +17096,7 @@ class PosApi
     /**
      * Operation paymentsDelete
      *
-     * Delete PosPayment
+     * Delete Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17117,7 +17117,7 @@ class PosApi
     /**
      * Operation paymentsDeleteWithHttpInfo
      *
-     * Delete PosPayment
+     * Delete Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17334,7 +17334,7 @@ class PosApi
     /**
      * Operation paymentsDeleteAsync
      *
-     * Delete PosPayment
+     * Delete Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17358,7 +17358,7 @@ class PosApi
     /**
      * Operation paymentsDeleteAsyncWithHttpInfo
      *
-     * Delete PosPayment
+     * Delete Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17535,7 +17535,7 @@ class PosApi
     /**
      * Operation paymentsOne
      *
-     * Get PosPayment
+     * Get Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17556,7 +17556,7 @@ class PosApi
     /**
      * Operation paymentsOneWithHttpInfo
      *
-     * Get PosPayment
+     * Get Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17773,7 +17773,7 @@ class PosApi
     /**
      * Operation paymentsOneAsync
      *
-     * Get PosPayment
+     * Get Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17797,7 +17797,7 @@ class PosApi
     /**
      * Operation paymentsOneAsyncWithHttpInfo
      *
-     * Get PosPayment
+     * Get Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -17974,7 +17974,7 @@ class PosApi
     /**
      * Operation paymentsUpdate
      *
-     * Update PosPayment
+     * Update Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  \Apideck\Client\Model\PosPayment $pos_payment pos_payment (required)
@@ -17996,7 +17996,7 @@ class PosApi
     /**
      * Operation paymentsUpdateWithHttpInfo
      *
-     * Update PosPayment
+     * Update Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
@@ -18214,7 +18214,7 @@ class PosApi
     /**
      * Operation paymentsUpdateAsync
      *
-     * Update PosPayment
+     * Update Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
@@ -18239,7 +18239,7 @@ class PosApi
     /**
      * Operation paymentsUpdateAsyncWithHttpInfo
      *
-     * Update PosPayment
+     * Update Payment
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  \Apideck\Client\Model\PosPayment $pos_payment (required)
