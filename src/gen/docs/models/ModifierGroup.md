@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 `alternate_name` | **string** |  | [optional] 
 `minimum_required` | **int** |  | [optional] 
 `maximum_allowed` | **int** |  | [optional] 
+`modifiers` | **object[]** |  | [optional] 
+`row_version` | **string** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 

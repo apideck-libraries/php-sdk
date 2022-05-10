@@ -13,10 +13,14 @@ Name | Type | Description | Notes
 `tax_inclusive` | **bool** | Amounts are including tax | [optional] 
 `bill_date` | **\DateTime** | Date bill was issued - YYYY-MM-DD. | [optional] 
 `due_date` | **\DateTime** | The due date is the date on which a payment is scheduled to be received by the supplier - YYYY-MM-DD. | [optional] 
+`paid_date` | **\DateTime** | The paid date is the date on which a payment was sent to the supplier - YYYY-MM-DD. | [optional] 
 `po_number` | **string** | A PO Number uniquely identifies a purchase order and is generally defined by the buyer. The buyer will match the PO number in the invoice to the Purchase Order. | [optional] 
 `line_items` | [**\Apideck\Client\Model\BillLineItem[]**](BillLineItem.md) |  | [optional] 
 `terms` | **string** | Terms of payment. | [optional] 
 `balance` | **float** | Balance of bill due. | [optional] 
+`deposit` | **float** | Amount of deposit made to this bill. | [optional] 
+`sub_total` | **float** | Sub-total amount, normally before tax. | [optional] 
+`total_tax` | **float** | Total tax amount applied to this bill. | [optional] 
 `total` | **float** | Total amount of bill, including tax. | [optional] 
 `tax_code` | **string** | Applicable tax id/code override if tax is not supplied on a line item basis. | [optional] 
 `notes` | **string** |  | [optional] 
@@ -65,7 +69,11 @@ Name | Type | Description | Notes
 
 
 
+
 * [`BillLineItem`](BillLineItem.md)
+
+
+
 
 
 

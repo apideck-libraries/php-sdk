@@ -41,11 +41,11 @@
 * [Get Order](#ordersOne)
 * [Pay Order](#ordersPay)
 * [Update Order](#ordersUpdate)
-* [Create PosPayment](#paymentsAdd)
-* [List PosPayments](#paymentsAll)
-* [Delete PosPayment](#paymentsDelete)
-* [Get PosPayment](#paymentsOne)
-* [Update PosPayment](#paymentsUpdate)
+* [CreateP Ayment](#paymentsAdd)
+* [List Payments](#paymentsAll)
+* [Delete Payment](#paymentsDelete)
+* [Get Payment](#paymentsOne)
+* [Update Payment](#paymentsUpdate)
 * [Create Tender](#tendersAdd)
 * [List Tenders](#tendersAll)
 * [Delete Tender](#tendersDelete)
@@ -2445,7 +2445,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsAdd"></a>
-# Create PosPayment
+# CreateP Ayment
 
 
 Method: **paymentsAdd**
@@ -2511,7 +2511,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsAll"></a>
-# List PosPayments
+# List Payments
 
 
 Method: **paymentsAll**
@@ -2578,7 +2578,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsDelete"></a>
-# Delete PosPayment
+# Delete Payment
 
 
 Method: **paymentsDelete**
@@ -2644,7 +2644,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsOne"></a>
-# Get PosPayment
+# Get Payment
 
 
 Method: **paymentsOne**
@@ -2710,7 +2710,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsUpdate"></a>
-# Update PosPayment
+# Update Payment
 
 
 Method: **paymentsUpdate**
