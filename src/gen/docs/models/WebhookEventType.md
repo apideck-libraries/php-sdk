@@ -99,6 +99,24 @@
 
 * `ACCOUNTING_TAX_RATE_DELETED` (value: `'accounting.tax_rate.deleted'`)
 
+* `ACCOUNTING_BILL_CREATED` (value: `'accounting.bill.created'`)
+
+* `ACCOUNTING_BILL_UPDATED` (value: `'accounting.bill.updated'`)
+
+* `ACCOUNTING_BILL_DELETED` (value: `'accounting.bill.deleted'`)
+
+* `ACCOUNTING_PAYMENT_CREATED` (value: `'accounting.payment.created'`)
+
+* `ACCOUNTING_PAYMENT_UPDATED` (value: `'accounting.payment.updated'`)
+
+* `ACCOUNTING_PAYMENT_DELETED` (value: `'accounting.payment.deleted'`)
+
+* `ACCOUNTING_SUPPLIER_CREATED` (value: `'accounting.supplier.created'`)
+
+* `ACCOUNTING_SUPPLIER_UPDATED` (value: `'accounting.supplier.updated'`)
+
+* `ACCOUNTING_SUPPLIER_DELETED` (value: `'accounting.supplier.deleted'`)
+
 * `POS_ORDER_CREATED` (value: `'pos.order.created'`)
 
 * `POS_ORDER_UPDATED` (value: `'pos.order.updated'`)

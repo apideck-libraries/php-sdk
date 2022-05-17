@@ -74,6 +74,24 @@ class AccountingEventType
 
     const ACCOUNTING_TAX_RATE_DELETED = 'accounting.tax_rate.deleted';
 
+    const ACCOUNTING_BILL_CREATED = 'accounting.bill.created';
+
+    const ACCOUNTING_BILL_UPDATED = 'accounting.bill.updated';
+
+    const ACCOUNTING_BILL_DELETED = 'accounting.bill.deleted';
+
+    const ACCOUNTING_PAYMENT_CREATED = 'accounting.payment.created';
+
+    const ACCOUNTING_PAYMENT_UPDATED = 'accounting.payment.updated';
+
+    const ACCOUNTING_PAYMENT_DELETED = 'accounting.payment.deleted';
+
+    const ACCOUNTING_SUPPLIER_CREATED = 'accounting.supplier.created';
+
+    const ACCOUNTING_SUPPLIER_UPDATED = 'accounting.supplier.updated';
+
+    const ACCOUNTING_SUPPLIER_DELETED = 'accounting.supplier.deleted';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -96,7 +114,16 @@ class AccountingEventType
             self::ACCOUNTING_LEDGER_ACCOUNT_DELETED,
             self::ACCOUNTING_TAX_RATE_CREATED,
             self::ACCOUNTING_TAX_RATE_UPDATED,
-            self::ACCOUNTING_TAX_RATE_DELETED
+            self::ACCOUNTING_TAX_RATE_DELETED,
+            self::ACCOUNTING_BILL_CREATED,
+            self::ACCOUNTING_BILL_UPDATED,
+            self::ACCOUNTING_BILL_DELETED,
+            self::ACCOUNTING_PAYMENT_CREATED,
+            self::ACCOUNTING_PAYMENT_UPDATED,
+            self::ACCOUNTING_PAYMENT_DELETED,
+            self::ACCOUNTING_SUPPLIER_CREATED,
+            self::ACCOUNTING_SUPPLIER_UPDATED,
+            self::ACCOUNTING_SUPPLIER_DELETED
         ];
     }
 }
