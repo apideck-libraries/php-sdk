@@ -53,6 +53,7 @@ docs/Model/BankAccountAchDetails.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
+docs/Model/Branch.md
 docs/Model/CashDetails.md
 docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
@@ -170,6 +171,7 @@ docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
+docs/Model/Department1.md
 docs/Model/Email.md
 docs/Model/Employee.md
 docs/Model/EmployeeCompensations.md
@@ -294,6 +296,7 @@ docs/Model/InvoiceLineItem.md
 docs/Model/InvoiceResponse.md
 docs/Model/Item.md
 docs/Model/Job.md
+docs/Model/JobSalary.md
 docs/Model/JobStatus.md
 docs/Model/JobsFilter.md
 docs/Model/Lead.md
@@ -479,6 +482,7 @@ lib/Model/BankAccountAchDetails.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
+lib/Model/Branch.php
 lib/Model/CashDetails.php
 lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
@@ -596,6 +600,7 @@ lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
+lib/Model/Department1.php
 lib/Model/Email.php
 lib/Model/Employee.php
 lib/Model/EmployeeCompensations.php
@@ -720,6 +725,7 @@ lib/Model/InvoiceLineItem.php
 lib/Model/InvoiceResponse.php
 lib/Model/Item.php
 lib/Model/Job.php
+lib/Model/JobSalary.php
 lib/Model/JobStatus.php
 lib/Model/JobsFilter.php
 lib/Model/Lead.php
@@ -902,6 +908,7 @@ test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
 test/Model/BillTest.php
+test/Model/BranchTest.php
 test/Model/CashDetailsTest.php
 test/Model/CompaniesFilterTest.php
 test/Model/CompaniesSortTest.php
@@ -1018,6 +1025,7 @@ test/Model/DeleteTenderResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
+test/Model/Department1Test.php
 test/Model/DepartmentTest.php
 test/Model/EmailTest.php
 test/Model/EmployeeCompensationsTest.php
@@ -1142,6 +1150,7 @@ test/Model/InvoiceLineItemTest.php
 test/Model/InvoiceResponseTest.php
 test/Model/InvoiceTest.php
 test/Model/ItemTest.php
+test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
 test/Model/JobsFilterTest.php

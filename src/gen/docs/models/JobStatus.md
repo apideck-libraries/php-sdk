@@ -11,6 +11,10 @@
 
 * `COMPLETED` (value: `'completed'`)
 
+* `ON_HOLD` (value: `'on-hold'`)
+
+* `_PRIVATE` (value: `'private'`)
+
 
 ---
 

@@ -14,5 +14,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           commit: main
-          tag: 0.3.3
+          tag: 0.4.0
 
