@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `tax_number` | **string** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
-`bank_accounts` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
+`bank_accounts` | [**\Apideck\Client\Model\BankAccount[]**](BankAccount.md) |  | [optional] 
 `status` | **string** | Customer status | [optional] 
 `row_version` | **string** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
