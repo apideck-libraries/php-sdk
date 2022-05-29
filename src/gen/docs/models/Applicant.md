@@ -10,6 +10,11 @@ Name | Type | Description | Notes
 `name` | **string** | The name of an applicant. | [optional] 
 `first_name` | **string** |  | [optional] 
 `last_name` | **string** |  | [optional] 
+`middle_name` | **string** |  | [optional] 
+`initials` | **string** |  | [optional] 
+`birthday` | **\DateTime** |  | [optional] 
+`job_url` | **string** |  | [optional] 
+`photo_url` | **string** |  | [optional] 
 `headline` | **string** | Typically a list of previous companies where the contact has worked or schools that the contact has attended | [optional] 
 `title` | **string** |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
@@ -22,6 +27,7 @@ Name | Type | Description | Notes
 `applications` | **string[]** |  | [optional] 
 `followers` | **string[]** |  | [optional] 
 `sources` | **string[]** |  | [optional] 
+`source_id` | **string** |  | [optional] 
 `confidential` | **bool** |  | [optional] 
 `anonymized` | **bool** |  | [optional] 
 `tags` | **string[]** |  | [optional] 
@@ -29,6 +35,10 @@ Name | Type | Description | Notes
 `last_interaction_at` | **\DateTime** |  | [optional] 
 `owner_id` | **string** |  | [optional] 
 `sourced_by` | **string** |  | [optional] 
+`cv_url` | **string** |  | [optional] 
+`record_url` | **string** |  | [optional] 
+`rejected_at` | **\DateTime** |  | [optional] 
+`deleted` | **bool** |  | [optional] 
 `deleted_by` | **string** |  | [optional] 
 `deleted_at` | **\DateTime** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
@@ -46,10 +56,20 @@ Name | Type | Description | Notes
 
 
 
+
+
+
+
+
 * [`Email`](Email.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Address`](Address.md)
 * [`ApplicantWebsites`](ApplicantWebsites.md)
+
+
+
+
+
 
 
 

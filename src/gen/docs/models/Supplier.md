@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `websites` | [**\Apideck\Client\Model\Website[]**](Website.md) |  | [optional] 
+`bank_accounts` | [**\Apideck\Client\Model\BankAccount[]**](BankAccount.md) |  | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `tax_number` | **string** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
@@ -66,6 +67,7 @@ Name | Type | Description | Notes
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`Website`](Website.md)
+* [`BankAccount`](BankAccount.md)
 * [`LinkedTaxRate`](LinkedTaxRate.md)
 
 * [`Currency`](Currency.md)
