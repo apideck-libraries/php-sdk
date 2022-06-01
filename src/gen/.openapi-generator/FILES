@@ -59,6 +59,7 @@ docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
 docs/Model/Company.md
 docs/Model/CompanyInfo.md
+docs/Model/CompanyRowType.md
 docs/Model/Compensation.md
 docs/Model/Connection.md
 docs/Model/ConnectionConfiguration.md
@@ -488,6 +489,7 @@ lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
 lib/Model/Company.php
 lib/Model/CompanyInfo.php
+lib/Model/CompanyRowType.php
 lib/Model/Compensation.php
 lib/Model/Connection.php
 lib/Model/ConnectionConfiguration.php
@@ -913,6 +915,7 @@ test/Model/CashDetailsTest.php
 test/Model/CompaniesFilterTest.php
 test/Model/CompaniesSortTest.php
 test/Model/CompanyInfoTest.php
+test/Model/CompanyRowTypeTest.php
 test/Model/CompanyTest.php
 test/Model/CompensationTest.php
 test/Model/ConnectionConfigurationTest.php
