@@ -24,6 +24,10 @@ Name | Type | Description | Notes
 
 * `TEMP` (value: `'temp'`)
 
+* `INTERSHIP` (value: `'intership'`)
+
+* `OTHER` (value: `'other'`)
+
 
 
 
