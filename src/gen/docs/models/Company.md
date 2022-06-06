@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 `social_links` | [**\Apideck\Client\Model\SocialLink[]**](SocialLink.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
+`row_type` | [**\Apideck\Client\Model\CompanyRowType**](CompanyRowType.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
 `read_only` | **bool** |  | [optional] 
@@ -72,6 +73,7 @@ Name | Type | Description | Notes
 * [`SocialLink`](SocialLink.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
+* [`CompanyRowType`](CompanyRowType.md)
 * [`CustomField`](CustomField.md)
 
 

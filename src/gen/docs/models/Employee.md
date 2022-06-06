@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 `employment_status` | **string** |  | [optional] 
 `employment_role` | [**\Apideck\Client\Model\EmployeeEmploymentRole**](EmployeeEmploymentRole.md) |  | [optional] 
 `manager` | [**\Apideck\Client\Model\EmployeeManager**](EmployeeManager.md) |  | [optional] 
+`direct_reports` | **string[]** |  | [optional] 
 `social_security_number` | **string** |  | [optional] 
 `birthday` | **\DateTime** |  | [optional] 
 `country_of_birth` | **string** | country code according to ISO 3166-1 alpha-2. | [optional] 
@@ -36,13 +37,21 @@ Name | Type | Description | Notes
 `languages` | **string[]** |  | [optional] 
 `nationalities` | **string[]** |  | [optional] 
 `photo_url` | **string** |  | [optional] 
+`timezone` | **string** |  | [optional] 
+`source` | **string** |  | [optional] 
+`source_id` | **string** |  | [optional] 
 `jobs` | [**\Apideck\Client\Model\EmployeeJobs[]**](EmployeeJobs.md) |  | [optional] 
 `compensations` | [**\Apideck\Client\Model\EmployeeCompensations[]**](EmployeeCompensations.md) |  | [optional] 
+`works_remote` | **bool** | Indicates whether the employee works remote | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `social_links` | [**\Apideck\Client\Model\EmployeeSocialLinks[]**](EmployeeSocialLinks.md) |  | [optional] 
+`tax_code` | **string** |  | [optional] 
+`tax_id` | **string** |  | [optional] 
+`dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
+`food_allergies` | **string[]** | Indicate the employee's food allergies. | [optional] 
 `row_version` | **string** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
@@ -95,7 +104,11 @@ Name | Type | Description | Notes
 
 
 
+
 * [`Gender`](Gender.md)
+
+
+
 
 
 
@@ -103,11 +116,16 @@ Name | Type | Description | Notes
 
 * [`EmployeeJobs`](EmployeeJobs.md)
 * [`EmployeeCompensations`](EmployeeCompensations.md)
+
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
 * [`EmployeeSocialLinks`](EmployeeSocialLinks.md)
+
+
+
+
 
 
 

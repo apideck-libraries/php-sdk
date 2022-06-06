@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 `id` | **string** |  | [optional] 
 `display_name` | **string** |  | [optional] 
 `subdomain` | **string** |  | [optional] 
+`status` | **string** |  | [optional] 
 `company_number` | **string** | An Company Number, Company ID or Company Code, is a unique number that has been assigned to each company. | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
@@ -25,7 +26,23 @@ Name | Type | Description | Notes
 
 
 
+<a name="STATUS"></a>
+## Enum: HrisCompany.status
+
+
+* `ACTIVE` (value: `'active'`)
+
+* `INACTIVE` (value: `'inactive'`)
+
+* `TRIAL` (value: `'trial'`)
+
+* `OTHER` (value: `'other'`)
+
+
+
+
 ## Referenced Types:
+
 
 
 

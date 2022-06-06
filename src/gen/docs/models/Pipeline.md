@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 `archived` | **bool** |  | [optional] 
 `display_order` | **int** |  | [optional] 
 `stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) |  | [optional] 
-`updated_at` | **string** |  | [optional] 
-`created_at` | **string** |  | [optional] 
+`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** |  | [optional] 
 
 
 
