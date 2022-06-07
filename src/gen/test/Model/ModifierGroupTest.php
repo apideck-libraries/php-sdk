@@ -125,6 +125,15 @@ class ModifierGroupTest extends TestCase
     }
 
     /**
+     * Test attribute "selection_type"
+     */
+    public function testPropertySelectionType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "modifiers"
      */
     public function testPropertyModifiers()

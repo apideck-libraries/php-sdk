@@ -251,6 +251,24 @@ class CompanyTest extends TestCase
     }
 
     /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "parent_id"
      */
     public function testPropertyParentId()

@@ -325,6 +325,7 @@ docs/Model/Meta.md
 docs/Model/MetaCursors.md
 docs/Model/Modifier.md
 docs/Model/ModifierGroup.md
+docs/Model/ModifierGroupFilter.md
 docs/Model/NotFoundResponse.md
 docs/Model/NotImplementedResponse.md
 docs/Model/Note.md
@@ -757,6 +758,7 @@ lib/Model/MetaCursors.php
 lib/Model/ModelInterface.php
 lib/Model/Modifier.php
 lib/Model/ModifierGroup.php
+lib/Model/ModifierGroupFilter.php
 lib/Model/NotFoundResponse.php
 lib/Model/NotImplementedResponse.php
 lib/Model/Note.php
@@ -1182,6 +1184,7 @@ test/Model/MerchantTest.php
 test/Model/MessageTest.php
 test/Model/MetaCursorsTest.php
 test/Model/MetaTest.php
+test/Model/ModifierGroupFilterTest.php
 test/Model/ModifierGroupTest.php
 test/Model/ModifierTest.php
 test/Model/NotFoundResponseTest.php

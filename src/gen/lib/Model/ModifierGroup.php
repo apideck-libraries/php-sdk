@@ -64,6 +64,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'string',
         'minimum_required' => 'int',
         'maximum_allowed' => 'int',
+        'selection_type' => 'string',
         'modifiers' => 'object[]',
         'row_version' => 'string',
         'updated_by' => 'string',
@@ -85,6 +86,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => null,
         'minimum_required' => null,
         'maximum_allowed' => null,
+        'selection_type' => null,
         'modifiers' => null,
         'row_version' => null,
         'updated_by' => null,
@@ -125,6 +127,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'alternate_name',
         'minimum_required' => 'minimum_required',
         'maximum_allowed' => 'maximum_allowed',
+        'selection_type' => 'selection_type',
         'modifiers' => 'modifiers',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
@@ -144,6 +147,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'setAlternateName',
         'minimum_required' => 'setMinimumRequired',
         'maximum_allowed' => 'setMaximumAllowed',
+        'selection_type' => 'setSelectionType',
         'modifiers' => 'setModifiers',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
@@ -163,6 +167,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternate_name' => 'getAlternateName',
         'minimum_required' => 'getMinimumRequired',
         'maximum_allowed' => 'getMaximumAllowed',
+        'selection_type' => 'getSelectionType',
         'modifiers' => 'getModifiers',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
@@ -212,6 +217,21 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const SELECTION_TYPE_SINGLE = 'single';
+    const SELECTION_TYPE_MULTIPLE = 'multiple';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getSelectionTypeAllowableValues()
+    {
+        return [
+            self::SELECTION_TYPE_SINGLE,
+            self::SELECTION_TYPE_MULTIPLE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -233,6 +253,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['alternate_name'] = $data['alternate_name'] ?? null;
         $this->container['minimum_required'] = $data['minimum_required'] ?? null;
         $this->container['maximum_allowed'] = $data['maximum_allowed'] ?? null;
+        $this->container['selection_type'] = $data['selection_type'] ?? null;
         $this->container['modifiers'] = $data['modifiers'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -249,6 +270,15 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getSelectionTypeAllowableValues();
+        if (!is_null($this->container['selection_type']) && !in_array($this->container['selection_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'selection_type', must be one of '%s'",
+                $this->container['selection_type'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -381,6 +411,40 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setMaximumAllowed($maximum_allowed)
     {
         $this->container['maximum_allowed'] = $maximum_allowed;
+
+        return $this;
+    }
+
+    /**
+     * Gets selection_type
+     *
+     * @return string|null
+     */
+    public function getSelectionType()
+    {
+        return $this->container['selection_type'];
+    }
+
+    /**
+     * Sets selection_type
+     *
+     * @param string|null $selection_type selection_type
+     *
+     * @return self
+     */
+    public function setSelectionType($selection_type)
+    {
+        $allowedValues = $this->getSelectionTypeAllowableValues();
+        if (!is_null($selection_type) && !in_array($selection_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'selection_type', must be one of '%s'",
+                    $selection_type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['selection_type'] = $selection_type;
 
         return $this;
     }

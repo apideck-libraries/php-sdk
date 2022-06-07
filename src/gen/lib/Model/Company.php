@@ -78,6 +78,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'abn_or_tfn' => 'string',
         'abn_branch' => 'string',
         'acn' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
         'parent_id' => 'string',
         'bank_accounts' => '\Apideck\Client\Model\BankAccount[]',
         'websites' => '\Apideck\Client\Model\Website[]',
@@ -124,6 +126,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'abn_or_tfn' => null,
         'abn_branch' => null,
         'acn' => null,
+        'first_name' => null,
+        'last_name' => null,
         'parent_id' => null,
         'bank_accounts' => null,
         'websites' => null,
@@ -189,6 +193,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'abn_or_tfn' => 'abn_or_tfn',
         'abn_branch' => 'abn_branch',
         'acn' => 'acn',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
         'parent_id' => 'parent_id',
         'bank_accounts' => 'bank_accounts',
         'websites' => 'websites',
@@ -233,6 +239,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'abn_or_tfn' => 'setAbnOrTfn',
         'abn_branch' => 'setAbnBranch',
         'acn' => 'setAcn',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
         'parent_id' => 'setParentId',
         'bank_accounts' => 'setBankAccounts',
         'websites' => 'setWebsites',
@@ -277,6 +285,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'abn_or_tfn' => 'getAbnOrTfn',
         'abn_branch' => 'getAbnBranch',
         'acn' => 'getAcn',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
         'parent_id' => 'getParentId',
         'bank_accounts' => 'getBankAccounts',
         'websites' => 'getWebsites',
@@ -372,6 +382,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['abn_or_tfn'] = $data['abn_or_tfn'] ?? null;
         $this->container['abn_branch'] = $data['abn_branch'] ?? null;
         $this->container['acn'] = $data['acn'] ?? null;
+        $this->container['first_name'] = $data['first_name'] ?? null;
+        $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['parent_id'] = $data['parent_id'] ?? null;
         $this->container['bank_accounts'] = $data['bank_accounts'] ?? null;
         $this->container['websites'] = $data['websites'] ?? null;
@@ -879,6 +891,54 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAcn($acn)
     {
         $this->container['acn'] = $acn;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     *
+     * @param string|null $first_name first_name
+     *
+     * @return self
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     *
+     * @param string|null $last_name last_name
+     *
+     * @return self
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
