@@ -134,9 +134,27 @@ class ModifierGroupTest extends TestCase
     }
 
     /**
+     * Test attribute "present_at_all_locations"
+     */
+    public function testPropertyPresentAtAllLocations()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "modifiers"
      */
     public function testPropertyModifiers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "deleted"
+     */
+    public function testPropertyDeleted()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

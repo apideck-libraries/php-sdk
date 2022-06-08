@@ -346,6 +346,7 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/Owner.md
+docs/Model/Passthrough.md
 docs/Model/Payment.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentRequiredResponse.md
@@ -779,6 +780,7 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/Owner.php
+lib/Model/Passthrough.php
 lib/Model/Payment.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentRequiredResponse.php
@@ -1207,6 +1209,7 @@ test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OwnerTest.php
+test/Model/PassthroughTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php

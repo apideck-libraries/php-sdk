@@ -65,7 +65,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'minimum_required' => 'int',
         'maximum_allowed' => 'int',
         'selection_type' => 'string',
+        'present_at_all_locations' => 'bool',
         'modifiers' => 'object[]',
+        'deleted' => 'bool',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -87,7 +89,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'minimum_required' => null,
         'maximum_allowed' => null,
         'selection_type' => null,
+        'present_at_all_locations' => null,
         'modifiers' => null,
+        'deleted' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -128,7 +132,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'minimum_required' => 'minimum_required',
         'maximum_allowed' => 'maximum_allowed',
         'selection_type' => 'selection_type',
+        'present_at_all_locations' => 'present_at_all_locations',
         'modifiers' => 'modifiers',
+        'deleted' => 'deleted',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -148,7 +154,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'minimum_required' => 'setMinimumRequired',
         'maximum_allowed' => 'setMaximumAllowed',
         'selection_type' => 'setSelectionType',
+        'present_at_all_locations' => 'setPresentAtAllLocations',
         'modifiers' => 'setModifiers',
+        'deleted' => 'setDeleted',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -168,7 +176,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'minimum_required' => 'getMinimumRequired',
         'maximum_allowed' => 'getMaximumAllowed',
         'selection_type' => 'getSelectionType',
+        'present_at_all_locations' => 'getPresentAtAllLocations',
         'modifiers' => 'getModifiers',
+        'deleted' => 'getDeleted',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -254,7 +264,9 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['minimum_required'] = $data['minimum_required'] ?? null;
         $this->container['maximum_allowed'] = $data['maximum_allowed'] ?? null;
         $this->container['selection_type'] = $data['selection_type'] ?? null;
+        $this->container['present_at_all_locations'] = $data['present_at_all_locations'] ?? null;
         $this->container['modifiers'] = $data['modifiers'] ?? null;
+        $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -450,6 +462,30 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets present_at_all_locations
+     *
+     * @return bool|null
+     */
+    public function getPresentAtAllLocations()
+    {
+        return $this->container['present_at_all_locations'];
+    }
+
+    /**
+     * Sets present_at_all_locations
+     *
+     * @param bool|null $present_at_all_locations present_at_all_locations
+     *
+     * @return self
+     */
+    public function setPresentAtAllLocations($present_at_all_locations)
+    {
+        $this->container['present_at_all_locations'] = $present_at_all_locations;
+
+        return $this;
+    }
+
+    /**
      * Gets modifiers
      *
      * @return object[]|null
@@ -469,6 +505,30 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setModifiers($modifiers)
     {
         $this->container['modifiers'] = $modifiers;
+
+        return $this;
+    }
+
+    /**
+     * Gets deleted
+     *
+     * @return bool|null
+     */
+    public function getDeleted()
+    {
+        return $this->container['deleted'];
+    }
+
+    /**
+     * Sets deleted
+     *
+     * @param bool|null $deleted deleted
+     *
+     * @return self
+     */
+    public function setDeleted($deleted)
+    {
+        $this->container['deleted'] = $deleted;
 
         return $this;
     }
