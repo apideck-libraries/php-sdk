@@ -172,7 +172,6 @@ docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
-docs/Model/Department1.md
 docs/Model/Email.md
 docs/Model/Employee.md
 docs/Model/EmployeeCompensations.md
@@ -605,7 +604,6 @@ lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
-lib/Model/Department1.php
 lib/Model/Email.php
 lib/Model/Employee.php
 lib/Model/EmployeeCompensations.php
@@ -1034,7 +1032,6 @@ test/Model/DeleteTenderResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
-test/Model/Department1Test.php
 test/Model/DepartmentTest.php
 test/Model/EmailTest.php
 test/Model/EmployeeCompensationsTest.php
