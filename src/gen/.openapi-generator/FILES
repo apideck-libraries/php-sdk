@@ -172,7 +172,6 @@ docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
-docs/Model/Department1.md
 docs/Model/Email.md
 docs/Model/Employee.md
 docs/Model/EmployeeCompensations.md
@@ -325,6 +324,7 @@ docs/Model/Meta.md
 docs/Model/MetaCursors.md
 docs/Model/Modifier.md
 docs/Model/ModifierGroup.md
+docs/Model/ModifierGroupFilter.md
 docs/Model/NotFoundResponse.md
 docs/Model/NotImplementedResponse.md
 docs/Model/Note.md
@@ -345,6 +345,7 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/Owner.md
+docs/Model/Passthrough.md
 docs/Model/Payment.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentRequiredResponse.md
@@ -603,7 +604,6 @@ lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
-lib/Model/Department1.php
 lib/Model/Email.php
 lib/Model/Employee.php
 lib/Model/EmployeeCompensations.php
@@ -757,6 +757,7 @@ lib/Model/MetaCursors.php
 lib/Model/ModelInterface.php
 lib/Model/Modifier.php
 lib/Model/ModifierGroup.php
+lib/Model/ModifierGroupFilter.php
 lib/Model/NotFoundResponse.php
 lib/Model/NotImplementedResponse.php
 lib/Model/Note.php
@@ -777,6 +778,7 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/Owner.php
+lib/Model/Passthrough.php
 lib/Model/Payment.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentRequiredResponse.php
@@ -1030,7 +1032,6 @@ test/Model/DeleteTenderResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
-test/Model/Department1Test.php
 test/Model/DepartmentTest.php
 test/Model/EmailTest.php
 test/Model/EmployeeCompensationsTest.php
@@ -1182,6 +1183,7 @@ test/Model/MerchantTest.php
 test/Model/MessageTest.php
 test/Model/MetaCursorsTest.php
 test/Model/MetaTest.php
+test/Model/ModifierGroupFilterTest.php
 test/Model/ModifierGroupTest.php
 test/Model/ModifierTest.php
 test/Model/NotFoundResponseTest.php
@@ -1204,6 +1206,7 @@ test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OwnerTest.php
+test/Model/PassthroughTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php

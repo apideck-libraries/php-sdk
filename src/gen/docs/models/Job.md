@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 `experience` | **string** | Level of experience required for the job role. | [optional] 
 `remote` | **bool** | Specifies whether the posting is for a remote job. | [optional] 
 `requisition_id` | **string** | A job's Requisition ID (Req ID) allows your organization to identify and track a job based on alphanumeric naming conventions unique to your company's internal processes. | [optional] 
-`department` | [**\Apideck\Client\Model\Department1**](Department1.md) |  | [optional] 
+`department` | [**\Apideck\Client\Model\Department**](Department.md) |  | [optional] 
 `branch` | [**\Apideck\Client\Model\Branch**](Branch.md) |  | [optional] 
 `recruiters` | **string[]** | The recruiter is generally someone who is tasked to help the hiring manager find and screen qualified applicant | [optional] 
 `hiring_managers` | **object[]** |  | [optional] 
@@ -99,7 +99,7 @@ Name | Type | Description | Notes
 
 
 
-* [`Department1`](Department1.md)
+* [`Department`](Department.md)
 * [`Branch`](Branch.md)
 
 
