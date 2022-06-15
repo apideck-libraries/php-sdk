@@ -136,6 +136,7 @@ docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
 docs/Model/CustomerSupportCustomer.md
+docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteBillResponse.md
@@ -568,6 +569,7 @@ lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
 lib/Model/CustomerSupportCustomer.php
+lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteBillResponse.php
@@ -997,6 +999,7 @@ test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldTest.php
 test/Model/CustomerSupportCustomerTest.php
+test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteBillResponseTest.php
