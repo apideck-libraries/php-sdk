@@ -170,6 +170,15 @@ class BillTest extends TestCase
     }
 
     /**
+     * Test attribute "reference"
+     */
+    public function testPropertyReference()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "line_items"
      */
     public function testPropertyLineItems()
