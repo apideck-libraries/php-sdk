@@ -41,7 +41,7 @@
 * [Get Order](#ordersOne)
 * [Pay Order](#ordersPay)
 * [Update Order](#ordersUpdate)
-* [CreateP Ayment](#paymentsAdd)
+* [Create Payment](#paymentsAdd)
 * [List Payments](#paymentsAll)
 * [Delete Payment](#paymentsDelete)
 * [Get Payment](#paymentsOne)
@@ -2447,7 +2447,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="paymentsAdd"></a>
-# CreateP Ayment
+# Create Payment
 
 
 Method: **paymentsAdd**

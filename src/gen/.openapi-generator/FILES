@@ -363,6 +363,7 @@ docs/Model/PosPaymentExternalDetails.md
 docs/Model/Price.md
 docs/Model/RequestCountAllocation.md
 docs/Model/ResourceStatus.md
+docs/Model/ServiceCharge.md
 docs/Model/Session.md
 docs/Model/SessionSettings.md
 docs/Model/SessionTheme.md
@@ -797,6 +798,7 @@ lib/Model/PosPaymentExternalDetails.php
 lib/Model/Price.php
 lib/Model/RequestCountAllocation.php
 lib/Model/ResourceStatus.php
+lib/Model/ServiceCharge.php
 lib/Model/Session.php
 lib/Model/SessionSettings.php
 lib/Model/SessionTheme.php
@@ -1226,6 +1228,7 @@ test/Model/PosPaymentTest.php
 test/Model/PriceTest.php
 test/Model/RequestCountAllocationTest.php
 test/Model/ResourceStatusTest.php
+test/Model/ServiceChargeTest.php
 test/Model/SessionSettingsTest.php
 test/Model/SessionTest.php
 test/Model/SessionThemeTest.php
