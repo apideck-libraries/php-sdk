@@ -1,6 +1,6 @@
 <?php
 /**
- * Merchant
+ * ServiceCharge
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * Merchant Class Doc Comment
+ * ServiceCharge Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
+class ServiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Merchant';
+    protected static $openAPIModelName = 'ServiceCharge';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,17 +61,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'address' => '\Apideck\Client\Model\Address',
-        'owner_id' => 'string',
-        'main_location_id' => 'string',
-        'status' => 'string',
-        'service_charges' => '\Apideck\Client\Model\ServiceCharge[]',
-        'language' => 'string',
+        'amount' => 'float',
+        'percentage' => 'float',
         'currency' => '\Apideck\Client\Model\Currency',
-        'updated_by' => 'string',
-        'created_by' => 'string',
-        'updated_at' => '\DateTime',
-        'created_at' => '\DateTime'
+        'active' => 'bool',
+        'type' => 'string'
     ];
 
     /**
@@ -84,17 +78,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'address' => null,
-        'owner_id' => null,
-        'main_location_id' => null,
-        'status' => null,
-        'service_charges' => null,
-        'language' => null,
+        'amount' => null,
+        'percentage' => null,
         'currency' => null,
-        'updated_by' => null,
-        'created_by' => null,
-        'updated_at' => 'date-time',
-        'created_at' => 'date-time'
+        'active' => null,
+        'type' => null
     ];
 
     /**
@@ -126,17 +114,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'address' => 'address',
-        'owner_id' => 'owner_id',
-        'main_location_id' => 'main_location_id',
-        'status' => 'status',
-        'service_charges' => 'service_charges',
-        'language' => 'language',
+        'amount' => 'amount',
+        'percentage' => 'percentage',
         'currency' => 'currency',
-        'updated_by' => 'updated_by',
-        'created_by' => 'created_by',
-        'updated_at' => 'updated_at',
-        'created_at' => 'created_at'
+        'active' => 'active',
+        'type' => 'type'
     ];
 
     /**
@@ -147,17 +129,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'address' => 'setAddress',
-        'owner_id' => 'setOwnerId',
-        'main_location_id' => 'setMainLocationId',
-        'status' => 'setStatus',
-        'service_charges' => 'setServiceCharges',
-        'language' => 'setLanguage',
+        'amount' => 'setAmount',
+        'percentage' => 'setPercentage',
         'currency' => 'setCurrency',
-        'updated_by' => 'setUpdatedBy',
-        'created_by' => 'setCreatedBy',
-        'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt'
+        'active' => 'setActive',
+        'type' => 'setType'
     ];
 
     /**
@@ -168,17 +144,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'address' => 'getAddress',
-        'owner_id' => 'getOwnerId',
-        'main_location_id' => 'getMainLocationId',
-        'status' => 'getStatus',
-        'service_charges' => 'getServiceCharges',
-        'language' => 'getLanguage',
+        'amount' => 'getAmount',
+        'percentage' => 'getPercentage',
         'currency' => 'getCurrency',
-        'updated_by' => 'getUpdatedBy',
-        'created_by' => 'getCreatedBy',
-        'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt'
+        'active' => 'getActive',
+        'type' => 'getType'
     ];
 
     /**
@@ -222,21 +192,19 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const STATUS_ACTIVE = 'active';
-    const STATUS_INACTIVE = 'inactive';
-    const STATUS_OTHER = 'other';
+    const TYPE_AUTO_GRATUITY = 'auto_gratuity';
+    const TYPE_CUSTOM = 'custom';
 
     /**
      * Gets allowable values of the enum
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::STATUS_ACTIVE,
-            self::STATUS_INACTIVE,
-            self::STATUS_OTHER,
+            self::TYPE_AUTO_GRATUITY,
+            self::TYPE_CUSTOM,
         ];
     }
 
@@ -257,17 +225,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['address'] = $data['address'] ?? null;
-        $this->container['owner_id'] = $data['owner_id'] ?? null;
-        $this->container['main_location_id'] = $data['main_location_id'] ?? null;
-        $this->container['status'] = $data['status'] ?? null;
-        $this->container['service_charges'] = $data['service_charges'] ?? null;
-        $this->container['language'] = $data['language'] ?? null;
+        $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['percentage'] = $data['percentage'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
-        $this->container['updated_by'] = $data['updated_by'] ?? null;
-        $this->container['created_by'] = $data['created_by'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['active'] = $data['active'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -279,11 +241,11 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -340,7 +302,7 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name The name of the merchant
+     * @param string|null $name Service charge name
      *
      * @return self
      */
@@ -352,155 +314,49 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address
+     * Gets amount
      *
-     * @return \Apideck\Client\Model\Address|null
+     * @return float|null
      */
-    public function getAddress()
+    public function getAmount()
     {
-        return $this->container['address'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets address
+     * Sets amount
      *
-     * @param \Apideck\Client\Model\Address|null $address address
+     * @param float|null $amount amount
      *
      * @return self
      */
-    public function setAddress($address)
+    public function setAmount($amount)
     {
-        $this->container['address'] = $address;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets owner_id
+     * Gets percentage
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getOwnerId()
+    public function getPercentage()
     {
-        return $this->container['owner_id'];
+        return $this->container['percentage'];
     }
 
     /**
-     * Sets owner_id
+     * Sets percentage
      *
-     * @param string|null $owner_id owner_id
+     * @param float|null $percentage Service charge percentage. Use this field to calculate the amount of the service charge. Pass a percentage and amount at the same time.
      *
      * @return self
      */
-    public function setOwnerId($owner_id)
+    public function setPercentage($percentage)
     {
-        $this->container['owner_id'] = $owner_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets main_location_id
-     *
-     * @return string|null
-     */
-    public function getMainLocationId()
-    {
-        return $this->container['main_location_id'];
-    }
-
-    /**
-     * Sets main_location_id
-     *
-     * @param string|null $main_location_id The main location ID of the merchant
-     *
-     * @return self
-     */
-    public function setMainLocationId($main_location_id)
-    {
-        $this->container['main_location_id'] = $main_location_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status Status of this merchant.
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets service_charges
-     *
-     * @return \Apideck\Client\Model\ServiceCharge[]|null
-     */
-    public function getServiceCharges()
-    {
-        return $this->container['service_charges'];
-    }
-
-    /**
-     * Sets service_charges
-     *
-     * @param \Apideck\Client\Model\ServiceCharge[]|null $service_charges service_charges
-     *
-     * @return self
-     */
-    public function setServiceCharges($service_charges)
-    {
-        $this->container['service_charges'] = $service_charges;
-
-        return $this;
-    }
-
-    /**
-     * Gets language
-     *
-     * @return string|null
-     */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-     * Sets language
-     *
-     * @param string|null $language language code according to ISO 639-1. For the United States - EN
-     *
-     * @return self
-     */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
+        $this->container['percentage'] = $percentage;
 
         return $this;
     }
@@ -530,97 +386,59 @@ class Merchant implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets updated_by
+     * Gets active
+     *
+     * @return bool|null
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool|null $active active
+     *
+     * @return self
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
      *
      * @return string|null
      */
-    public function getUpdatedBy()
+    public function getType()
     {
-        return $this->container['updated_by'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets updated_by
+     * Sets type
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $type The type of the service charge.
      *
      * @return self
      */
-    public function setUpdatedBy($updated_by)
+    public function setType($type)
     {
-        $this->container['updated_by'] = $updated_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_by
-     *
-     * @return string|null
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['created_by'];
-    }
-
-    /**
-     * Sets created_by
-     *
-     * @param string|null $created_by created_by
-     *
-     * @return self
-     */
-    public function setCreatedBy($created_by)
-    {
-        $this->container['created_by'] = $created_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime|null $updated_at updated_at
-     *
-     * @return self
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime|null $created_at created_at
-     *
-     * @return self
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

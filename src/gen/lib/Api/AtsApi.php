@@ -124,7 +124,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -145,7 +145,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -362,7 +362,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -386,7 +386,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -436,7 +436,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -560,7 +560,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\JobsFilter $filter Apply filters (beta) (optional)
@@ -583,7 +583,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\JobsFilter $filter Apply filters (beta) (optional)
@@ -802,7 +802,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\JobsFilter $filter Apply filters (beta) (optional)
@@ -828,7 +828,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\JobsFilter $filter Apply filters (beta) (optional)
@@ -880,7 +880,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\JobsFilter $filter Apply filters (beta) (optional)
@@ -1035,7 +1035,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
@@ -1056,7 +1056,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
@@ -1273,7 +1273,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -1297,7 +1297,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -1347,7 +1347,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -1474,7 +1474,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      *
@@ -1496,7 +1496,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      *
@@ -1714,7 +1714,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      *
@@ -1739,7 +1739,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      *
@@ -1790,7 +1790,7 @@ class AtsApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
      *
@@ -1933,7 +1933,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
@@ -1954,7 +1954,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
@@ -2171,7 +2171,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -2195,7 +2195,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -2245,7 +2245,7 @@ class AtsApi
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). [See the full list in the connector section.](#section/Connectors) Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
      * @throws \InvalidArgumentException

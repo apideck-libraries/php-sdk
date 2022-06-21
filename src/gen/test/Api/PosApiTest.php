@@ -506,7 +506,7 @@ class PosApiTest extends TestCase
     /**
      * Test case for paymentsAdd
      *
-     * CreateP ayment.
+     * Create Payment.
      *
      */
     public function testPaymentsAdd()

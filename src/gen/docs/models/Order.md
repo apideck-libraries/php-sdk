@@ -12,8 +12,7 @@ Name | Type | Description | Notes
 `order_date` | **\DateTime** |  | [optional] 
 `closed_date` | **\DateTime** |  | [optional] 
 `reference_id` | **string** | An optional user-defined reference ID that associates this record with another entity in an external system. For example, a customer ID from an external customer management system. | [optional] 
-`status` | **string** |  | [optional] 
-`state` | **string** | A string describing the state of the order. Clover specific: If no value is set, the state defaults to null, which indicates a hidden order. A hidden order is not displayed in user interfaces and can only be retrieved by its id. When creating an order via the REST API the value must be manually set to 'open'. More info [https://docs.clover.com/reference/orderupdateorder]() | [optional] 
+`status` | **string** | Order status. Clover specific: If no value is set, the status defaults to hidden, which indicates a hidden order. A hidden order is not displayed in user interfaces and can only be retrieved by its id. When creating an order via the REST API the value must be manually set to 'open'. More info [https://docs.clover.com/reference/orderupdateorder]() | [optional] 
 `payment_status` | **string** | Is this order paid or not? | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `title` | **string** |  | [optional] 
@@ -34,7 +33,7 @@ Name | Type | Description | Notes
 `fulfillments` | [**\Apideck\Client\Model\OrderFulfillments[]**](OrderFulfillments.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\OrderLineItems[]**](OrderLineItems.md) |  | [optional] 
 `payments` | [**\Apideck\Client\Model\OrderPayments[]**](OrderPayments.md) |  | [optional] 
-`service_charges` | **object[]** | Optional service charges or gratuity tip applied to the order. | [optional] 
+`service_charges` | [**\Apideck\Client\Model\ServiceCharge[]**](ServiceCharge.md) | Optional service charges or gratuity tip applied to the order. | [optional] 
 `refunds` | [**\Apideck\Client\Model\OrderRefunds[]**](OrderRefunds.md) |  | [optional] 
 `taxes` | **object[]** |  | [optional] 
 `discounts` | [**\Apideck\Client\Model\OrderDiscounts[]**](OrderDiscounts.md) |  | [optional] 
@@ -67,6 +66,8 @@ Name | Type | Description | Notes
 * `VOIDED` (value: `'voided'`)
 
 * `COMPLETED` (value: `'completed'`)
+
+* `HIDDEN` (value: `'hidden'`)
 
 
 
@@ -125,7 +126,6 @@ Name | Type | Description | Notes
 
 
 
-
 * [`Currency`](Currency.md)
 
 
@@ -145,7 +145,7 @@ Name | Type | Description | Notes
 * [`OrderFulfillments`](OrderFulfillments.md)
 * [`OrderLineItems`](OrderLineItems.md)
 * [`OrderPayments`](OrderPayments.md)
-
+* [`ServiceCharge`](ServiceCharge.md)
 * [`OrderRefunds`](OrderRefunds.md)
 
 * [`OrderDiscounts`](OrderDiscounts.md)

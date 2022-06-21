@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 `bank_account` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
 `wallet` | [**\Apideck\Client\Model\WalletDetails**](WalletDetails.md) |  | [optional] 
 `external_details` | [**\Apideck\Client\Model\PosPaymentExternalDetails**](PosPaymentExternalDetails.md) |  | [optional] 
-`service_charges` | **object[]** | Optional service charges or gratuity tip applied to the order. | [optional] 
+`service_charges` | [**\Apideck\Client\Model\ServiceCharge[]**](ServiceCharge.md) | Optional service charges or gratuity tip applied to the order. | [optional] 
 `updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
@@ -112,7 +112,7 @@ Name | Type | Description | Notes
 * [`BankAccount`](BankAccount.md)
 * [`WalletDetails`](WalletDetails.md)
 * [`PosPaymentExternalDetails`](PosPaymentExternalDetails.md)
-
+* [`ServiceCharge`](ServiceCharge.md)
 
 
 

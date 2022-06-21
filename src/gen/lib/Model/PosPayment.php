@@ -87,7 +87,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'bank_account' => '\Apideck\Client\Model\BankAccount',
         'wallet' => '\Apideck\Client\Model\WalletDetails',
         'external_details' => '\Apideck\Client\Model\PosPaymentExternalDetails',
-        'service_charges' => 'object[]',
+        'service_charges' => '\Apideck\Client\Model\ServiceCharge[]',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -1184,7 +1184,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets service_charges
      *
-     * @return object[]|null
+     * @return \Apideck\Client\Model\ServiceCharge[]|null
      */
     public function getServiceCharges()
     {
@@ -1194,7 +1194,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets service_charges
      *
-     * @param object[]|null $service_charges Optional service charges or gratuity tip applied to the order.
+     * @param \Apideck\Client\Model\ServiceCharge[]|null $service_charges Optional service charges or gratuity tip applied to the order.
      *
      * @return self
      */

@@ -744,7 +744,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets buyer_tendered_cash_amount
      *
-     * @param float|null $buyer_tendered_cash_amount The amount of cash tendered by the buyer. Only applicable when the tender type is cash.
+     * @param float|null $buyer_tendered_cash_amount The amount (in cents) of cash tendered by the buyer. Only applicable when the tender type is cash.
      *
      * @return self
      */
@@ -768,7 +768,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets change_back_cash_amount
      *
-     * @param float|null $change_back_cash_amount The amount of cash returned to the buyer. Only applicable when the tender type is cash.
+     * @param float|null $change_back_cash_amount The amount (in cents) of cash returned to the buyer. Only applicable when the tender type is cash.
      *
      * @return self
      */

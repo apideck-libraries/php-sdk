@@ -1,6 +1,6 @@
 <?php
 /**
- * MerchantTest
+ * ServiceChargeTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MerchantTest Class Doc Comment
+ * ServiceChargeTest Class Doc Comment
  *
  * @category    Class
- * @description Merchant
+ * @description ServiceCharge
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MerchantTest extends TestCase
+class ServiceChargeTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class MerchantTest extends TestCase
     }
 
     /**
-     * Test "Merchant"
+     * Test "ServiceCharge"
      */
-    public function testMerchant()
+    public function testServiceCharge()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -98,54 +98,18 @@ class MerchantTest extends TestCase
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "amount"
      */
-    public function testPropertyAddress()
+    public function testPropertyAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "owner_id"
+     * Test attribute "percentage"
      */
-    public function testPropertyOwnerId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "main_location_id"
-     */
-    public function testPropertyMainLocationId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "service_charges"
-     */
-    public function testPropertyServiceCharges()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
+    public function testPropertyPercentage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -161,36 +125,18 @@ class MerchantTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_by"
+     * Test attribute "active"
      */
-    public function testPropertyUpdatedBy()
+    public function testPropertyActive()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "created_by"
+     * Test attribute "type"
      */
-    public function testPropertyCreatedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

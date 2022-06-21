@@ -152,15 +152,6 @@ class OrderTest extends TestCase
     }
 
     /**
-     * Test attribute "state"
-     */
-    public function testPropertyState()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "payment_status"
      */
     public function testPropertyPaymentStatus()
