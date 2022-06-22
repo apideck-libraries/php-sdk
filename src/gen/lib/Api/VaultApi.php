@@ -116,6 +116,927 @@ class VaultApi
     }
 
     /**
+     * Operation connectionSettingsAll
+     *
+     * Get resource settings
+     *
+     * @param  string $unified_api Unified API (required)
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $resource Resource Name (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\GetConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function connectionSettingsAll($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        list($response) = $this->connectionSettingsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+        return $response;
+    }
+
+    /**
+     * Operation connectionSettingsAllWithHttpInfo
+     *
+     * Get resource settings
+     *
+     * @param  string $unified_api Unified API (required)
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $resource Resource Name (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\GetConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function connectionSettingsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        $request = $this->connectionSettingsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\GetConnectionResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetConnectionResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\GetConnectionResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\GetConnectionResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation connectionSettingsAllAsync
+     *
+     * Get resource settings
+     *
+     * @param  string $unified_api Unified API (required)
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $resource Resource Name (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function connectionSettingsAllAsync($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        return $this->connectionSettingsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation connectionSettingsAllAsyncWithHttpInfo
+     *
+     * Get resource settings
+     *
+     * @param  string $unified_api Unified API (required)
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $resource Resource Name (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function connectionSettingsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        $returnType = '\Apideck\Client\Model\GetConnectionResponse';
+        $request = $this->connectionSettingsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'connectionSettingsAll'
+     *
+     * @param  string $unified_api Unified API (required)
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $resource Resource Name (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function connectionSettingsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        // verify the required parameter 'unified_api' is set
+        if ($unified_api === null || (is_array($unified_api) && count($unified_api) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $unified_api when calling connectionSettingsAll'
+            );
+        }
+        // verify the required parameter 'service_id' is set
+        if ($service_id === null || (is_array($service_id) && count($service_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $service_id when calling connectionSettingsAll'
+            );
+        }
+        // verify the required parameter 'resource' is set
+        if ($resource === null || (is_array($resource) && count($resource) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $resource when calling connectionSettingsAll'
+            );
+        }
+
+        $resourcePath = '/vault/connections/{unified_api}/{service_id}/{resource}/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+
+        // path params
+        if ($unified_api !== null) {
+            $resourcePath = str_replace(
+                '{' . 'unified_api' . '}',
+                ObjectSerializer::toPathValue($unified_api),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($service_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'service_id' . '}',
+                ObjectSerializer::toPathValue($service_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($resource !== null) {
+            $resourcePath = str_replace(
+                '{' . 'resource' . '}',
+                ObjectSerializer::toPathValue($resource),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation connectionSettingsUpdate
+     *
+     * Update settings
+     *
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $unified_api Unified API (required)
+     * @param  string $resource Resource Name (required)
+     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\UpdateConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function connectionSettingsUpdate($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        list($response) = $this->connectionSettingsUpdateWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+        return $response;
+    }
+
+    /**
+     * Operation connectionSettingsUpdateWithHttpInfo
+     *
+     * Update settings
+     *
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $unified_api Unified API (required)
+     * @param  string $resource Resource Name (required)
+     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\UpdateConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function connectionSettingsUpdateWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        $request = $this->connectionSettingsUpdateRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\UpdateConnectionResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UpdateConnectionResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\UpdateConnectionResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UpdateConnectionResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation connectionSettingsUpdateAsync
+     *
+     * Update settings
+     *
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $unified_api Unified API (required)
+     * @param  string $resource Resource Name (required)
+     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function connectionSettingsUpdateAsync($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        return $this->connectionSettingsUpdateAsyncWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation connectionSettingsUpdateAsyncWithHttpInfo
+     *
+     * Update settings
+     *
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $unified_api Unified API (required)
+     * @param  string $resource Resource Name (required)
+     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function connectionSettingsUpdateAsyncWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        $returnType = '\Apideck\Client\Model\UpdateConnectionResponse';
+        $request = $this->connectionSettingsUpdateRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'connectionSettingsUpdate'
+     *
+     * @param  string $service_id Service ID of the resource to return (required)
+     * @param  string $unified_api Unified API (required)
+     * @param  string $resource Resource Name (required)
+     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function connectionSettingsUpdateRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    {
+        // verify the required parameter 'service_id' is set
+        if ($service_id === null || (is_array($service_id) && count($service_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $service_id when calling connectionSettingsUpdate'
+            );
+        }
+        // verify the required parameter 'unified_api' is set
+        if ($unified_api === null || (is_array($unified_api) && count($unified_api) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $unified_api when calling connectionSettingsUpdate'
+            );
+        }
+        // verify the required parameter 'resource' is set
+        if ($resource === null || (is_array($resource) && count($resource) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $resource when calling connectionSettingsUpdate'
+            );
+        }
+        // verify the required parameter 'connection' is set
+        if ($connection === null || (is_array($connection) && count($connection) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $connection when calling connectionSettingsUpdate'
+            );
+        }
+
+        $resourcePath = '/vault/connections/{unified_api}/{service_id}/{resource}/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+
+        // path params
+        if ($service_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'service_id' . '}',
+                ObjectSerializer::toPathValue($service_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($unified_api !== null) {
+            $resourcePath = str_replace(
+                '{' . 'unified_api' . '}',
+                ObjectSerializer::toPathValue($unified_api),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($resource !== null) {
+            $resourcePath = str_replace(
+                '{' . 'resource' . '}',
+                ObjectSerializer::toPathValue($resource),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($connection)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($connection));
+            } else {
+                $httpBody = $connection;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'PATCH',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation connectionsAll
      *
      * Get all connections
@@ -852,458 +1773,6 @@ class VaultApi
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
             'DELETE',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation connectionsGetSettings
-     *
-     * Get resource settings
-     *
-     * @param  string $unified_api Unified API (required)
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $resource Resource Name (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \Apideck\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
-     */
-    public function connectionsGetSettings($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
-    {
-        list($response) = $this->connectionsGetSettingsWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
-        return $response;
-    }
-
-    /**
-     * Operation connectionsGetSettingsWithHttpInfo
-     *
-     * Get resource settings
-     *
-     * @param  string $unified_api Unified API (required)
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $resource Resource Name (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \Apideck\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function connectionsGetSettingsWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
-    {
-        $request = $this->connectionsGetSettingsRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\Apideck\Client\Model\GetConnectionResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetConnectionResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 402:
-                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 422:
-                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\Apideck\Client\Model\GetConnectionResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\GetConnectionResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\BadRequestResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnauthorizedResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 402:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\PaymentRequiredResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\NotFoundResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 422:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnprocessableResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnexpectedErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation connectionsGetSettingsAsync
-     *
-     * Get resource settings
-     *
-     * @param  string $unified_api Unified API (required)
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $resource Resource Name (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function connectionsGetSettingsAsync($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
-    {
-        return $this->connectionsGetSettingsAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation connectionsGetSettingsAsyncWithHttpInfo
-     *
-     * Get resource settings
-     *
-     * @param  string $unified_api Unified API (required)
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $resource Resource Name (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function connectionsGetSettingsAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
-    {
-        $returnType = '\Apideck\Client\Model\GetConnectionResponse';
-        $request = $this->connectionsGetSettingsRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'connectionsGetSettings'
-     *
-     * @param  string $unified_api Unified API (required)
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $resource Resource Name (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function connectionsGetSettingsRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
-    {
-        // verify the required parameter 'unified_api' is set
-        if ($unified_api === null || (is_array($unified_api) && count($unified_api) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $unified_api when calling connectionsGetSettings'
-            );
-        }
-        // verify the required parameter 'service_id' is set
-        if ($service_id === null || (is_array($service_id) && count($service_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $service_id when calling connectionsGetSettings'
-            );
-        }
-        // verify the required parameter 'resource' is set
-        if ($resource === null || (is_array($resource) && count($resource) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $resource when calling connectionsGetSettings'
-            );
-        }
-
-        $resourcePath = '/vault/connections/{unified_api}/{service_id}/{resource}/config';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // header params
-        if ($x_apideck_consumer_id !== null) {
-            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
-        }
-        // header params
-        if ($x_apideck_app_id !== null) {
-            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
-        }
-
-        // path params
-        if ($unified_api !== null) {
-            $resourcePath = str_replace(
-                '{' . 'unified_api' . '}',
-                ObjectSerializer::toPathValue($unified_api),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($service_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'service_id' . '}',
-                ObjectSerializer::toPathValue($service_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($resource !== null) {
-            $resourcePath = str_replace(
-                '{' . 'resource' . '}',
-                ObjectSerializer::toPathValue($resource),
-                $resourcePath
-            );
-        }
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
-        if ($apiKey !== null) {
-            $headers['Authorization'] = $apiKey;
-        }
-
-        $defaultHeaders = $this->config->getDefaultHeaders();
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -2644,46 +3113,42 @@ class VaultApi
     }
 
     /**
-     * Operation connectionsUpdateSettings
+     * Operation consumerRequestCountsAll
      *
-     * Update settings
+     * Consumer request counts
      *
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $unified_api Unified API (required)
-     * @param  string $resource Resource Name (required)
-     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $consumer_id ID of the consumer to return (required)
+     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
+     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\UpdateConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     * @return \Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function connectionsUpdateSettings($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function consumerRequestCountsAll($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
     {
-        list($response) = $this->connectionsUpdateSettingsWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+        list($response) = $this->consumerRequestCountsAllWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
         return $response;
     }
 
     /**
-     * Operation connectionsUpdateSettingsWithHttpInfo
+     * Operation consumerRequestCountsAllWithHttpInfo
      *
-     * Update settings
+     * Consumer request counts
      *
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $unified_api Unified API (required)
-     * @param  string $resource Resource Name (required)
-     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $consumer_id ID of the consumer to return (required)
+     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
+     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\UpdateConnectionResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function connectionsUpdateSettingsWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function consumerRequestCountsAllWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
     {
-        $request = $this->connectionsUpdateSettingsRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+        $request = $this->consumerRequestCountsAllRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2722,14 +3187,14 @@ class VaultApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Apideck\Client\Model\UpdateConnectionResponse' === '\SplFileObject') {
+                    if ('\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UpdateConnectionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2807,7 +3272,7 @@ class VaultApi
                     ];
             }
 
-            $returnType = '\Apideck\Client\Model\UpdateConnectionResponse';
+            $returnType = '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2825,7 +3290,7 @@ class VaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Apideck\Client\Model\UpdateConnectionResponse',
+                        '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2884,23 +3349,21 @@ class VaultApi
     }
 
     /**
-     * Operation connectionsUpdateSettingsAsync
+     * Operation consumerRequestCountsAllAsync
      *
-     * Update settings
+     * Consumer request counts
      *
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $unified_api Unified API (required)
-     * @param  string $resource Resource Name (required)
-     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $consumer_id ID of the consumer to return (required)
+     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
+     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function connectionsUpdateSettingsAsync($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function consumerRequestCountsAllAsync($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
     {
-        return $this->connectionsUpdateSettingsAsyncWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id)
+        return $this->consumerRequestCountsAllAsyncWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2909,24 +3372,22 @@ class VaultApi
     }
 
     /**
-     * Operation connectionsUpdateSettingsAsyncWithHttpInfo
+     * Operation consumerRequestCountsAllAsyncWithHttpInfo
      *
-     * Update settings
+     * Consumer request counts
      *
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $unified_api Unified API (required)
-     * @param  string $resource Resource Name (required)
-     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $consumer_id ID of the consumer to return (required)
+     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
+     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function connectionsUpdateSettingsAsyncWithHttpInfo($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function consumerRequestCountsAllAsyncWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
     {
-        $returnType = '\Apideck\Client\Model\UpdateConnectionResponse';
-        $request = $this->connectionsUpdateSettingsRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id, $x_apideck_app_id);
+        $returnType = '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse';
+        $request = $this->consumerRequestCountsAllRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2962,83 +3423,77 @@ class VaultApi
     }
 
     /**
-     * Create request for operation 'connectionsUpdateSettings'
+     * Create request for operation 'consumerRequestCountsAll'
      *
-     * @param  string $service_id Service ID of the resource to return (required)
-     * @param  string $unified_api Unified API (required)
-     * @param  string $resource Resource Name (required)
-     * @param  \Apideck\Client\Model\Connection $connection Fields that need to be updated on the resource (required)
-     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $consumer_id ID of the consumer to return (required)
+     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
+     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function connectionsUpdateSettingsRequest($service_id, $unified_api, $resource, $connection, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function consumerRequestCountsAllRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
     {
-        // verify the required parameter 'service_id' is set
-        if ($service_id === null || (is_array($service_id) && count($service_id) === 0)) {
+        // verify the required parameter 'consumer_id' is set
+        if ($consumer_id === null || (is_array($consumer_id) && count($consumer_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_id when calling connectionsUpdateSettings'
+                'Missing the required parameter $consumer_id when calling consumerRequestCountsAll'
             );
         }
-        // verify the required parameter 'unified_api' is set
-        if ($unified_api === null || (is_array($unified_api) && count($unified_api) === 0)) {
+        // verify the required parameter 'start_datetime' is set
+        if ($start_datetime === null || (is_array($start_datetime) && count($start_datetime) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $unified_api when calling connectionsUpdateSettings'
+                'Missing the required parameter $start_datetime when calling consumerRequestCountsAll'
             );
         }
-        // verify the required parameter 'resource' is set
-        if ($resource === null || (is_array($resource) && count($resource) === 0)) {
+        // verify the required parameter 'end_datetime' is set
+        if ($end_datetime === null || (is_array($end_datetime) && count($end_datetime) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $resource when calling connectionsUpdateSettings'
-            );
-        }
-        // verify the required parameter 'connection' is set
-        if ($connection === null || (is_array($connection) && count($connection) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $connection when calling connectionsUpdateSettings'
+                'Missing the required parameter $end_datetime when calling consumerRequestCountsAll'
             );
         }
 
-        $resourcePath = '/vault/connections/{unified_api}/{service_id}/{resource}/config';
+        $resourcePath = '/vault/consumers/{consumer_id}/stats';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-
-        // header params
-        if ($x_apideck_consumer_id !== null) {
-            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        // query params
+        if ($start_datetime !== null) {
+            if('form' === 'form' && is_array($start_datetime)) {
+                foreach($start_datetime as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['start_datetime'] = $start_datetime;
+            }
         }
+        // query params
+        if ($end_datetime !== null) {
+            if('form' === 'form' && is_array($end_datetime)) {
+                foreach($end_datetime as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['end_datetime'] = $end_datetime;
+            }
+        }
+
         // header params
         if ($x_apideck_app_id !== null) {
             $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
         }
 
         // path params
-        if ($service_id !== null) {
+        if ($consumer_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'service_id' . '}',
-                ObjectSerializer::toPathValue($service_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($unified_api !== null) {
-            $resourcePath = str_replace(
-                '{' . 'unified_api' . '}',
-                ObjectSerializer::toPathValue($unified_api),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($resource !== null) {
-            $resourcePath = str_replace(
-                '{' . 'resource' . '}',
-                ObjectSerializer::toPathValue($resource),
+                '{' . 'consumer_id' . '}',
+                ObjectSerializer::toPathValue($consumer_id),
                 $resourcePath
             );
         }
@@ -3051,18 +3506,12 @@ class VaultApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json']
+                []
             );
         }
 
         // for model (json/xml)
-        if (isset($connection)) {
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($connection));
-            } else {
-                $httpBody = $connection;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -3105,7 +3554,7 @@ class VaultApi
 
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
-            'PATCH',
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -3864,455 +4313,6 @@ class VaultApi
         $httpBody = '';
         $multipart = false;
 
-
-        // header params
-        if ($x_apideck_app_id !== null) {
-            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
-        }
-
-        // path params
-        if ($consumer_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'consumer_id' . '}',
-                ObjectSerializer::toPathValue($consumer_id),
-                $resourcePath
-            );
-        }
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
-        if ($apiKey !== null) {
-            $headers['Authorization'] = $apiKey;
-        }
-
-        $defaultHeaders = $this->config->getDefaultHeaders();
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation consumersRequestCounts
-     *
-     * Consumer request counts
-     *
-     * @param  string $consumer_id ID of the consumer to return (required)
-     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
-     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \Apideck\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
-     */
-    public function consumersRequestCounts($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
-    {
-        list($response) = $this->consumersRequestCountsWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
-        return $response;
-    }
-
-    /**
-     * Operation consumersRequestCountsWithHttpInfo
-     *
-     * Consumer request counts
-     *
-     * @param  string $consumer_id ID of the consumer to return (required)
-     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
-     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \Apideck\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function consumersRequestCountsWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
-    {
-        $request = $this->consumersRequestCountsRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 402:
-                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 422:
-                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\BadRequestResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnauthorizedResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 402:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\PaymentRequiredResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\NotFoundResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 422:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnprocessableResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Apideck\Client\Model\UnexpectedErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation consumersRequestCountsAsync
-     *
-     * Consumer request counts
-     *
-     * @param  string $consumer_id ID of the consumer to return (required)
-     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
-     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function consumersRequestCountsAsync($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
-    {
-        return $this->consumersRequestCountsAsyncWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation consumersRequestCountsAsyncWithHttpInfo
-     *
-     * Consumer request counts
-     *
-     * @param  string $consumer_id ID of the consumer to return (required)
-     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
-     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function consumersRequestCountsAsyncWithHttpInfo($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
-    {
-        $returnType = '\Apideck\Client\Model\ConsumerRequestCountsInDateRangeResponse';
-        $request = $this->consumersRequestCountsRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'consumersRequestCounts'
-     *
-     * @param  string $consumer_id ID of the consumer to return (required)
-     * @param  string $start_datetime Scopes results to requests that happened after datetime (required)
-     * @param  string $end_datetime Scopes results to requests that happened before datetime (required)
-     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function consumersRequestCountsRequest($consumer_id, $start_datetime, $end_datetime, $x_apideck_app_id = null)
-    {
-        // verify the required parameter 'consumer_id' is set
-        if ($consumer_id === null || (is_array($consumer_id) && count($consumer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $consumer_id when calling consumersRequestCounts'
-            );
-        }
-        // verify the required parameter 'start_datetime' is set
-        if ($start_datetime === null || (is_array($start_datetime) && count($start_datetime) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $start_datetime when calling consumersRequestCounts'
-            );
-        }
-        // verify the required parameter 'end_datetime' is set
-        if ($end_datetime === null || (is_array($end_datetime) && count($end_datetime) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $end_datetime when calling consumersRequestCounts'
-            );
-        }
-
-        $resourcePath = '/vault/consumers/{consumer_id}/stats';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($start_datetime !== null) {
-            if('form' === 'form' && is_array($start_datetime)) {
-                foreach($start_datetime as $key => $value) {
-                    $queryParams[$key] = $value;
-                }
-            }
-            else {
-                $queryParams['start_datetime'] = $start_datetime;
-            }
-        }
-        // query params
-        if ($end_datetime !== null) {
-            if('form' === 'form' && is_array($end_datetime)) {
-                foreach($end_datetime as $key => $value) {
-                    $queryParams[$key] = $value;
-                }
-            }
-            else {
-                $queryParams['end_datetime'] = $end_datetime;
-            }
-        }
 
         // header params
         if ($x_apideck_app_id !== null) {
