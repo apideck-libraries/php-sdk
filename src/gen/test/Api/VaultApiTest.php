@@ -72,6 +72,30 @@ class VaultApiTest extends TestCase
     }
 
     /**
+     * Test case for connectionSettingsAll
+     *
+     * Get resource settings.
+     *
+     */
+    public function testConnectionSettingsAll()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for connectionSettingsUpdate
+     *
+     * Update settings.
+     *
+     */
+    public function testConnectionSettingsUpdate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for connectionsAll
      *
      * Get all connections.
@@ -90,18 +114,6 @@ class VaultApiTest extends TestCase
      *
      */
     public function testConnectionsDelete()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for connectionsGetSettings
-     *
-     * Get resource settings.
-     *
-     */
-    public function testConnectionsGetSettings()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -144,12 +156,12 @@ class VaultApiTest extends TestCase
     }
 
     /**
-     * Test case for connectionsUpdateSettings
+     * Test case for consumerRequestCountsAll
      *
-     * Update settings.
+     * Consumer request counts.
      *
      */
-    public function testConnectionsUpdateSettings()
+    public function testConsumerRequestCountsAll()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -174,18 +186,6 @@ class VaultApiTest extends TestCase
      *
      */
     public function testConsumersOne()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for consumersRequestCounts
-     *
-     * Consumer request counts.
-     *
-     */
-    public function testConsumersRequestCounts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
