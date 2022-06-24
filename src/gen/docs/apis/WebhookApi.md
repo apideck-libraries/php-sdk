@@ -66,7 +66,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->eventLogsAll();
+  $response = $apideck->getWebhookApi()->eventLogsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -129,7 +129,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->webhooksAdd($webhook);
+  $response = $apideck->getWebhookApi()->webhooksAdd($webhook);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -193,7 +193,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->webhooksAll();
+  $response = $apideck->getWebhookApi()->webhooksAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -256,7 +256,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->webhooksDelete('id_example');
+  $response = $apideck->getWebhookApi()->webhooksDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -319,7 +319,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->webhooksOne('id_example');
+  $response = $apideck->getWebhookApi()->webhooksOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -383,7 +383,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getwebhook()->webhooksUpdate('id_example', $webhook);
+  $response = $apideck->getWebhookApi()->webhooksUpdate('id_example', $webhook);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

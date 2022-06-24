@@ -65,7 +65,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->apiResourceCoverageOne('id_example', 'resource_id_example');
+  $response = $apideck->getConnectorApi()->apiResourceCoverageOne('id_example', 'resource_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -127,7 +127,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->apiResourcesOne('id_example', 'resource_id_example');
+  $response = $apideck->getConnectorApi()->apiResourcesOne('id_example', 'resource_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -190,7 +190,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->apisAll();
+  $response = $apideck->getConnectorApi()->apisAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -251,7 +251,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->apisOne('id_example');
+  $response = $apideck->getConnectorApi()->apisOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -313,7 +313,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->connectorDocsOne('id_example', 'doc_id_example');
+  $response = $apideck->getConnectorApi()->connectorDocsOne('id_example', 'doc_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -375,7 +375,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->connectorResourcesOne('id_example', 'resource_id_example');
+  $response = $apideck->getConnectorApi()->connectorResourcesOne('id_example', 'resource_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -438,7 +438,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->connectorsAll();
+  $response = $apideck->getConnectorApi()->connectorsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -499,7 +499,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getconnector()->connectorsOne('id_example');
+  $response = $apideck->getConnectorApi()->connectorsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

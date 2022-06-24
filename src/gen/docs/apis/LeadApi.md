@@ -66,7 +66,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getlead()->leadsAdd($lead);
+  $response = $apideck->getLeadApi()->leadsAdd($lead);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -135,7 +135,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getlead()->leadsAll();
+  $response = $apideck->getLeadApi()->leadsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -201,7 +201,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getlead()->leadsDelete('id_example');
+  $response = $apideck->getLeadApi()->leadsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -267,7 +267,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getlead()->leadsOne('id_example');
+  $response = $apideck->getLeadApi()->leadsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -334,7 +334,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getlead()->leadsUpdate('id_example', $lead);
+  $response = $apideck->getLeadApi()->leadsUpdate('id_example', $lead);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

@@ -83,7 +83,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->filesAll();
+  $response = $apideck->getFileStorageApi()->filesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -149,7 +149,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->filesDelete('id_example');
+  $response = $apideck->getFileStorageApi()->filesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -214,7 +214,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->filesDownload('id_example');
+  $response = $apideck->getFileStorageApi()->filesDownload('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -280,7 +280,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->filesOne('id_example');
+  $response = $apideck->getFileStorageApi()->filesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -345,7 +345,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->filesSearch($filesSearch);
+  $response = $apideck->getFileStorageApi()->filesSearch($filesSearch);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -411,7 +411,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->foldersAdd($folder);
+  $response = $apideck->getFileStorageApi()->foldersAdd($folder);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -478,7 +478,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->foldersCopy('id_example', $folder);
+  $response = $apideck->getFileStorageApi()->foldersCopy('id_example', $folder);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -544,7 +544,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->foldersDelete('id_example');
+  $response = $apideck->getFileStorageApi()->foldersDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -610,7 +610,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->foldersOne('id_example');
+  $response = $apideck->getFileStorageApi()->foldersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -677,7 +677,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->foldersUpdate('id_example', $folder);
+  $response = $apideck->getFileStorageApi()->foldersUpdate('id_example', $folder);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -743,7 +743,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->sharedLinksAdd($sharedLink);
+  $response = $apideck->getFileStorageApi()->sharedLinksAdd($sharedLink);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -810,7 +810,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->sharedLinksAll();
+  $response = $apideck->getFileStorageApi()->sharedLinksAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -876,7 +876,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->sharedLinksDelete('id_example');
+  $response = $apideck->getFileStorageApi()->sharedLinksDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -942,7 +942,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->sharedLinksOne('id_example');
+  $response = $apideck->getFileStorageApi()->sharedLinksOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1009,7 +1009,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->sharedLinksUpdate('id_example', $sharedLink);
+  $response = $apideck->getFileStorageApi()->sharedLinksUpdate('id_example', $sharedLink);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1075,7 +1075,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->uploadSessionsAdd($uploadSession);
+  $response = $apideck->getFileStorageApi()->uploadSessionsAdd($uploadSession);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1141,7 +1141,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->uploadSessionsDelete('id_example');
+  $response = $apideck->getFileStorageApi()->uploadSessionsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1208,7 +1208,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->uploadSessionsFinish('id_example', $uploadSessionsFinish);
+  $response = $apideck->getFileStorageApi()->uploadSessionsFinish('id_example', $uploadSessionsFinish);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1274,7 +1274,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getfileStorage()->uploadSessionsOne('id_example');
+  $response = $apideck->getFileStorageApi()->uploadSessionsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

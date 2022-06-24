@@ -101,7 +101,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->activitiesAdd($activity);
+  $response = $apideck->getCrmApi()->activitiesAdd($activity);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -168,7 +168,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->activitiesAll();
+  $response = $apideck->getCrmApi()->activitiesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -234,7 +234,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->activitiesDelete('id_example');
+  $response = $apideck->getCrmApi()->activitiesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -300,7 +300,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->activitiesOne('id_example');
+  $response = $apideck->getCrmApi()->activitiesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -367,7 +367,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->activitiesUpdate('id_example', $activity);
+  $response = $apideck->getCrmApi()->activitiesUpdate('id_example', $activity);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -433,7 +433,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->companiesAdd($company);
+  $response = $apideck->getCrmApi()->companiesAdd($company);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -502,7 +502,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->companiesAll();
+  $response = $apideck->getCrmApi()->companiesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -568,7 +568,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->companiesDelete('id_example');
+  $response = $apideck->getCrmApi()->companiesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -634,7 +634,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->companiesOne('id_example');
+  $response = $apideck->getCrmApi()->companiesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -701,7 +701,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->companiesUpdate('id_example', $company);
+  $response = $apideck->getCrmApi()->companiesUpdate('id_example', $company);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -767,7 +767,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->contactsAdd($contact);
+  $response = $apideck->getCrmApi()->contactsAdd($contact);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -836,7 +836,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->contactsAll();
+  $response = $apideck->getCrmApi()->contactsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -902,7 +902,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->contactsDelete('id_example');
+  $response = $apideck->getCrmApi()->contactsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -968,7 +968,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->contactsOne('id_example');
+  $response = $apideck->getCrmApi()->contactsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1035,7 +1035,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->contactsUpdate('id_example', $contact);
+  $response = $apideck->getCrmApi()->contactsUpdate('id_example', $contact);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1101,7 +1101,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->leadsAdd($lead);
+  $response = $apideck->getCrmApi()->leadsAdd($lead);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1170,7 +1170,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->leadsAll();
+  $response = $apideck->getCrmApi()->leadsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1236,7 +1236,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->leadsDelete('id_example');
+  $response = $apideck->getCrmApi()->leadsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1302,7 +1302,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->leadsOne('id_example');
+  $response = $apideck->getCrmApi()->leadsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1369,7 +1369,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->leadsUpdate('id_example', $lead);
+  $response = $apideck->getCrmApi()->leadsUpdate('id_example', $lead);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1435,7 +1435,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->notesAdd($note);
+  $response = $apideck->getCrmApi()->notesAdd($note);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1502,7 +1502,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->notesAll();
+  $response = $apideck->getCrmApi()->notesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1568,7 +1568,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->notesDelete('id_example');
+  $response = $apideck->getCrmApi()->notesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1634,7 +1634,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->notesOne('id_example');
+  $response = $apideck->getCrmApi()->notesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1701,7 +1701,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->notesUpdate('id_example', $note);
+  $response = $apideck->getCrmApi()->notesUpdate('id_example', $note);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1767,7 +1767,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->opportunitiesAdd($opportunity);
+  $response = $apideck->getCrmApi()->opportunitiesAdd($opportunity);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1836,7 +1836,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->opportunitiesAll();
+  $response = $apideck->getCrmApi()->opportunitiesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1902,7 +1902,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->opportunitiesDelete('id_example');
+  $response = $apideck->getCrmApi()->opportunitiesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1968,7 +1968,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->opportunitiesOne('id_example');
+  $response = $apideck->getCrmApi()->opportunitiesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2035,7 +2035,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->opportunitiesUpdate('id_example', $opportunity);
+  $response = $apideck->getCrmApi()->opportunitiesUpdate('id_example', $opportunity);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2101,7 +2101,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->pipelinesAdd($pipeline);
+  $response = $apideck->getCrmApi()->pipelinesAdd($pipeline);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2168,7 +2168,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->pipelinesAll();
+  $response = $apideck->getCrmApi()->pipelinesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2234,7 +2234,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->pipelinesDelete('id_example');
+  $response = $apideck->getCrmApi()->pipelinesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2300,7 +2300,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->pipelinesOne('id_example');
+  $response = $apideck->getCrmApi()->pipelinesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2367,7 +2367,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->pipelinesUpdate('id_example', $pipeline);
+  $response = $apideck->getCrmApi()->pipelinesUpdate('id_example', $pipeline);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2433,7 +2433,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->usersAdd($user);
+  $response = $apideck->getCrmApi()->usersAdd($user);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2500,7 +2500,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->usersAll();
+  $response = $apideck->getCrmApi()->usersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2566,7 +2566,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->usersDelete('id_example');
+  $response = $apideck->getCrmApi()->usersDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2632,7 +2632,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->usersOne('id_example');
+  $response = $apideck->getCrmApi()->usersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2699,7 +2699,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcrm()->usersUpdate('id_example', $user);
+  $response = $apideck->getCrmApi()->usersUpdate('id_example', $user);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

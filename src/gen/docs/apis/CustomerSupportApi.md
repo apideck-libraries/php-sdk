@@ -66,7 +66,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcustomerSupport()->customersAdd($customer);
+  $response = $apideck->getCustomerSupportApi()->customersAdd($customer);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -133,7 +133,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcustomerSupport()->customersAll();
+  $response = $apideck->getCustomerSupportApi()->customersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -199,7 +199,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcustomerSupport()->customersDelete('id_example');
+  $response = $apideck->getCustomerSupportApi()->customersDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -265,7 +265,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcustomerSupport()->customersOne('id_example');
+  $response = $apideck->getCustomerSupportApi()->customersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -332,7 +332,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getcustomerSupport()->customersUpdate('id_example', $customer);
+  $response = $apideck->getCustomerSupportApi()->customersUpdate('id_example', $customer);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

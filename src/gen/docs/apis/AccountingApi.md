@@ -103,7 +103,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->balanceSheetOne();
+  $response = $apideck->getAccountingApi()->balanceSheetOne();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -169,7 +169,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->billsAdd($bill);
+  $response = $apideck->getAccountingApi()->billsAdd($bill);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -236,7 +236,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->billsAll();
+  $response = $apideck->getAccountingApi()->billsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -302,7 +302,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->billsDelete('id_example');
+  $response = $apideck->getAccountingApi()->billsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -368,7 +368,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->billsOne('id_example');
+  $response = $apideck->getAccountingApi()->billsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -435,7 +435,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->billsUpdate('id_example', $bill);
+  $response = $apideck->getAccountingApi()->billsUpdate('id_example', $bill);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -500,7 +500,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->companyInfoOne();
+  $response = $apideck->getAccountingApi()->companyInfoOne();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -566,7 +566,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->customersAdd($customer);
+  $response = $apideck->getAccountingApi()->customersAdd($customer);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -634,7 +634,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->customersAll();
+  $response = $apideck->getAccountingApi()->customersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -700,7 +700,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->customersDelete('id_example');
+  $response = $apideck->getAccountingApi()->customersDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -766,7 +766,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->customersOne('id_example');
+  $response = $apideck->getAccountingApi()->customersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -833,7 +833,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->customersUpdate('id_example', $customer);
+  $response = $apideck->getAccountingApi()->customersUpdate('id_example', $customer);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -899,7 +899,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoiceItemsAdd($invoiceItem);
+  $response = $apideck->getAccountingApi()->invoiceItemsAdd($invoiceItem);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -967,7 +967,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoiceItemsAll();
+  $response = $apideck->getAccountingApi()->invoiceItemsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1033,7 +1033,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoiceItemsDelete('id_example');
+  $response = $apideck->getAccountingApi()->invoiceItemsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1099,7 +1099,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoiceItemsOne('id_example');
+  $response = $apideck->getAccountingApi()->invoiceItemsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1166,7 +1166,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoiceItemsUpdate('id_example', $invoiceItem);
+  $response = $apideck->getAccountingApi()->invoiceItemsUpdate('id_example', $invoiceItem);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1232,7 +1232,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoicesAdd($invoice);
+  $response = $apideck->getAccountingApi()->invoicesAdd($invoice);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1299,7 +1299,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoicesAll();
+  $response = $apideck->getAccountingApi()->invoicesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1365,7 +1365,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoicesDelete('id_example');
+  $response = $apideck->getAccountingApi()->invoicesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1431,7 +1431,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoicesOne('id_example');
+  $response = $apideck->getAccountingApi()->invoicesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1498,7 +1498,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->invoicesUpdate('id_example', $invoice);
+  $response = $apideck->getAccountingApi()->invoicesUpdate('id_example', $invoice);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1564,7 +1564,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->ledgerAccountsAdd($ledgerAccount);
+  $response = $apideck->getAccountingApi()->ledgerAccountsAdd($ledgerAccount);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1631,7 +1631,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->ledgerAccountsAll();
+  $response = $apideck->getAccountingApi()->ledgerAccountsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1697,7 +1697,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->ledgerAccountsDelete('id_example');
+  $response = $apideck->getAccountingApi()->ledgerAccountsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1763,7 +1763,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->ledgerAccountsOne('id_example');
+  $response = $apideck->getAccountingApi()->ledgerAccountsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1830,7 +1830,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->ledgerAccountsUpdate('id_example', $ledgerAccount);
+  $response = $apideck->getAccountingApi()->ledgerAccountsUpdate('id_example', $ledgerAccount);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1896,7 +1896,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->paymentsAdd($payment);
+  $response = $apideck->getAccountingApi()->paymentsAdd($payment);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1963,7 +1963,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->paymentsAll();
+  $response = $apideck->getAccountingApi()->paymentsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2029,7 +2029,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->paymentsDelete('id_example');
+  $response = $apideck->getAccountingApi()->paymentsDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2095,7 +2095,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->paymentsOne('id_example');
+  $response = $apideck->getAccountingApi()->paymentsOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2162,7 +2162,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->paymentsUpdate('id_example', $payment);
+  $response = $apideck->getAccountingApi()->paymentsUpdate('id_example', $payment);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2228,7 +2228,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->suppliersAdd($supplier);
+  $response = $apideck->getAccountingApi()->suppliersAdd($supplier);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2295,7 +2295,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->suppliersAll();
+  $response = $apideck->getAccountingApi()->suppliersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2361,7 +2361,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->suppliersDelete('id_example');
+  $response = $apideck->getAccountingApi()->suppliersDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2427,7 +2427,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->suppliersOne('id_example');
+  $response = $apideck->getAccountingApi()->suppliersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2494,7 +2494,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->suppliersUpdate('id_example', $supplier);
+  $response = $apideck->getAccountingApi()->suppliersUpdate('id_example', $supplier);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2560,7 +2560,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->taxRatesAdd($taxRate);
+  $response = $apideck->getAccountingApi()->taxRatesAdd($taxRate);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2628,7 +2628,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->taxRatesAll();
+  $response = $apideck->getAccountingApi()->taxRatesAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2694,7 +2694,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->taxRatesDelete('id_example');
+  $response = $apideck->getAccountingApi()->taxRatesDelete('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2760,7 +2760,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->taxRatesOne('id_example');
+  $response = $apideck->getAccountingApi()->taxRatesOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -2827,7 +2827,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getaccounting()->taxRatesUpdate('id_example', $taxRate);
+  $response = $apideck->getAccountingApi()->taxRatesUpdate('id_example', $taxRate);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
