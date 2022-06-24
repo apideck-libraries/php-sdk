@@ -17,6 +17,7 @@
 * [Update Department](#departmentsUpdate)
 * [List Employee Payrolls](#employeePayrollsAll)
 * [Get Employee Payroll](#employeePayrollsOne)
+* [List Employee Schedules](#employeeSchedulesAll)
 * [Create Employee](#employeesAdd)
 * [List Employees](#employeesAll)
 * [Delete Employee](#employeesDelete)
@@ -813,6 +814,72 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getHrisApi()->employeePayrollsOne('payroll_id_example', 'employee_id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="employeeSchedulesAll"></a>
+# List Employee Schedules
+
+
+Method: **employeeSchedulesAll**
+
+```php
+Apideck->getHrisApi()->employeeSchedulesAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **employee_id** | **string**| ID of the employee you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetEmployeeSchedulesResponse`](../models/\Apideck\Client\Model\GetEmployeeSchedulesResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | EmployeeSchedules | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getHrisApi()->employeeSchedulesAll('employee_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

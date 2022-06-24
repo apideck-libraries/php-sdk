@@ -181,6 +181,7 @@ docs/Model/EmployeeJobs.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
+docs/Model/EmployeeSchedules.md
 docs/Model/EmployeeSocialLinks.md
 docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
@@ -228,6 +229,7 @@ docs/Model/GetDepartmentsResponse.md
 docs/Model/GetEmployeePayrollResponse.md
 docs/Model/GetEmployeePayrollsResponse.md
 docs/Model/GetEmployeeResponse.md
+docs/Model/GetEmployeeSchedulesResponse.md
 docs/Model/GetEmployeesResponse.md
 docs/Model/GetFileResponse.md
 docs/Model/GetFilesResponse.md
@@ -363,6 +365,9 @@ docs/Model/PosPaymentExternalDetails.md
 docs/Model/Price.md
 docs/Model/RequestCountAllocation.md
 docs/Model/ResourceStatus.md
+docs/Model/Schedule.md
+docs/Model/ScheduleWorkPattern.md
+docs/Model/ScheduleWorkPatternOddWeeks.md
 docs/Model/ServiceCharge.md
 docs/Model/Session.md
 docs/Model/SessionSettings.md
@@ -615,6 +620,7 @@ lib/Model/EmployeeJobs.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
+lib/Model/EmployeeSchedules.php
 lib/Model/EmployeeSocialLinks.php
 lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
@@ -662,6 +668,7 @@ lib/Model/GetDepartmentsResponse.php
 lib/Model/GetEmployeePayrollResponse.php
 lib/Model/GetEmployeePayrollsResponse.php
 lib/Model/GetEmployeeResponse.php
+lib/Model/GetEmployeeSchedulesResponse.php
 lib/Model/GetEmployeesResponse.php
 lib/Model/GetFileResponse.php
 lib/Model/GetFilesResponse.php
@@ -798,6 +805,9 @@ lib/Model/PosPaymentExternalDetails.php
 lib/Model/Price.php
 lib/Model/RequestCountAllocation.php
 lib/Model/ResourceStatus.php
+lib/Model/Schedule.php
+lib/Model/ScheduleWorkPattern.php
+lib/Model/ScheduleWorkPatternOddWeeks.php
 lib/Model/ServiceCharge.php
 lib/Model/Session.php
 lib/Model/SessionSettings.php
@@ -1045,6 +1055,7 @@ test/Model/EmployeeJobsTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
+test/Model/EmployeeSchedulesTest.php
 test/Model/EmployeeSocialLinksTest.php
 test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
@@ -1093,6 +1104,7 @@ test/Model/GetDepartmentsResponseTest.php
 test/Model/GetEmployeePayrollResponseTest.php
 test/Model/GetEmployeePayrollsResponseTest.php
 test/Model/GetEmployeeResponseTest.php
+test/Model/GetEmployeeSchedulesResponseTest.php
 test/Model/GetEmployeesResponseTest.php
 test/Model/GetFileResponseTest.php
 test/Model/GetFilesResponseTest.php
@@ -1228,6 +1240,9 @@ test/Model/PosPaymentTest.php
 test/Model/PriceTest.php
 test/Model/RequestCountAllocationTest.php
 test/Model/ResourceStatusTest.php
+test/Model/ScheduleTest.php
+test/Model/ScheduleWorkPatternOddWeeksTest.php
+test/Model/ScheduleWorkPatternTest.php
 test/Model/ServiceChargeTest.php
 test/Model/SessionSettingsTest.php
 test/Model/SessionTest.php

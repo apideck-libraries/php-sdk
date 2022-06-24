@@ -216,6 +216,18 @@ class HrisApiTest extends TestCase
     }
 
     /**
+     * Test case for employeeSchedulesAll
+     *
+     * List Employee Schedules.
+     *
+     */
+    public function testEmployeeSchedulesAll()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for employeesAdd
      *
      * Create Employee.
