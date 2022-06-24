@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 `status_code` | **int** | HTTP Response Status Code | 
 `status` | **string** | HTTP Response Status | 
 `data` | [**\Apideck\Client\Model\GetConsumersResponseData[]**](GetConsumersResponseData.md) |  | 
+`meta` | [**\Apideck\Client\Model\Meta**](Meta.md) |  | [optional] 
+`links` | [**\Apideck\Client\Model\Links**](Links.md) |  | [optional] 
 
 
 
@@ -17,6 +19,8 @@ Name | Type | Description | Notes
 
 
 * [`GetConsumersResponseData`](GetConsumersResponseData.md)
+* [`Meta`](Meta.md)
+* [`Links`](Links.md)
 
 ---
 
