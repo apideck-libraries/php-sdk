@@ -73,7 +73,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionSettingsAll('crm', 'pipedrive', 'leads');
+  $response = $apideck->getVaultApi()->connectionSettingsAll('crm', 'pipedrive', 'leads');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -140,7 +140,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionSettingsUpdate('pipedrive', 'crm', 'leads', $connection);
+  $response = $apideck->getVaultApi()->connectionSettingsUpdate('pipedrive', 'crm', 'leads', $connection);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -205,7 +205,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionsAll();
+  $response = $apideck->getVaultApi()->connectionsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -270,7 +270,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionsDelete('pipedrive', 'crm');
+  $response = $apideck->getVaultApi()->connectionsDelete('pipedrive', 'crm');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -336,7 +336,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionsImport('pipedrive', 'crm', $connection);
+  $response = $apideck->getVaultApi()->connectionsImport('pipedrive', 'crm', $connection);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -401,7 +401,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionsOne('pipedrive', 'crm');
+  $response = $apideck->getVaultApi()->connectionsOne('pipedrive', 'crm');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -467,7 +467,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->connectionsUpdate('pipedrive', 'crm', $connection);
+  $response = $apideck->getVaultApi()->connectionsUpdate('pipedrive', 'crm', $connection);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -532,7 +532,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->consumerRequestCountsAll('test_user_id', '2021-05-01T12:00:00.000Z', '2021-05-30T12:00:00.000Z');
+  $response = $apideck->getVaultApi()->consumerRequestCountsAll('test_user_id', '2021-05-01T12:00:00.000Z', '2021-05-30T12:00:00.000Z');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -596,7 +596,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->consumersAll();
+  $response = $apideck->getVaultApi()->consumersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -659,7 +659,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->consumersOne('test_user_id');
+  $response = $apideck->getVaultApi()->consumersOne('test_user_id');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -725,7 +725,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->logsAll();
+  $response = $apideck->getVaultApi()->logsAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -789,7 +789,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = await $apideck->getvault()->sessionsCreate($session);
+  $response = $apideck->getVaultApi()->sessionsCreate($session);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
