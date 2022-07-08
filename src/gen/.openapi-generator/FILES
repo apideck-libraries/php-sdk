@@ -179,6 +179,7 @@ docs/Model/EmployeeCompensations.md
 docs/Model/EmployeeEmploymentRole.md
 docs/Model/EmployeeJobs.md
 docs/Model/EmployeeManager.md
+docs/Model/EmployeePartner.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
@@ -237,6 +238,8 @@ docs/Model/GetFolderResponse.md
 docs/Model/GetFoldersResponse.md
 docs/Model/GetHrisCompaniesResponse.md
 docs/Model/GetHrisCompanyResponse.md
+docs/Model/GetHrisJobResponse.md
+docs/Model/GetHrisJobsResponse.md
 docs/Model/GetInvoiceItemResponse.md
 docs/Model/GetInvoiceItemsResponse.md
 docs/Model/GetInvoiceResponse.md
@@ -292,6 +295,9 @@ docs/Model/GetWebhookResponse.md
 docs/Model/GetWebhooksResponse.md
 docs/Model/HrisCompany.md
 docs/Model/HrisEventType.md
+docs/Model/HrisJob.md
+docs/Model/HrisJobLocation.md
+docs/Model/HrisJobs.md
 docs/Model/Invoice.md
 docs/Model/InvoiceItem.md
 docs/Model/InvoiceItemSalesDetails.md
@@ -618,6 +624,7 @@ lib/Model/EmployeeCompensations.php
 lib/Model/EmployeeEmploymentRole.php
 lib/Model/EmployeeJobs.php
 lib/Model/EmployeeManager.php
+lib/Model/EmployeePartner.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
@@ -676,6 +683,8 @@ lib/Model/GetFolderResponse.php
 lib/Model/GetFoldersResponse.php
 lib/Model/GetHrisCompaniesResponse.php
 lib/Model/GetHrisCompanyResponse.php
+lib/Model/GetHrisJobResponse.php
+lib/Model/GetHrisJobsResponse.php
 lib/Model/GetInvoiceItemResponse.php
 lib/Model/GetInvoiceItemsResponse.php
 lib/Model/GetInvoiceResponse.php
@@ -731,6 +740,9 @@ lib/Model/GetWebhookResponse.php
 lib/Model/GetWebhooksResponse.php
 lib/Model/HrisCompany.php
 lib/Model/HrisEventType.php
+lib/Model/HrisJob.php
+lib/Model/HrisJobLocation.php
+lib/Model/HrisJobs.php
 lib/Model/Invoice.php
 lib/Model/InvoiceItem.php
 lib/Model/InvoiceItemSalesDetails.php
@@ -1053,6 +1065,7 @@ test/Model/EmployeeCompensationsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
 test/Model/EmployeeJobsTest.php
 test/Model/EmployeeManagerTest.php
+test/Model/EmployeePartnerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
@@ -1112,6 +1125,8 @@ test/Model/GetFolderResponseTest.php
 test/Model/GetFoldersResponseTest.php
 test/Model/GetHrisCompaniesResponseTest.php
 test/Model/GetHrisCompanyResponseTest.php
+test/Model/GetHrisJobResponseTest.php
+test/Model/GetHrisJobsResponseTest.php
 test/Model/GetInvoiceItemResponseTest.php
 test/Model/GetInvoiceItemsResponseTest.php
 test/Model/GetInvoiceResponseTest.php
@@ -1167,6 +1182,9 @@ test/Model/GetWebhookResponseTest.php
 test/Model/GetWebhooksResponseTest.php
 test/Model/HrisCompanyTest.php
 test/Model/HrisEventTypeTest.php
+test/Model/HrisJobLocationTest.php
+test/Model/HrisJobTest.php
+test/Model/HrisJobsTest.php
 test/Model/InvoiceItemSalesDetailsTest.php
 test/Model/InvoiceItemTest.php
 test/Model/InvoiceItemsFilterTest.php
