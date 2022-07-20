@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 `salutation` | **string** |  | [optional] 
 `title` | **string** |  | [optional] 
 `marital_status` | **string** |  | [optional] 
+`partner` | [**\Apideck\Client\Model\EmployeePartner**](EmployeePartner.md) |  | [optional] 
 `division` | **string** | The division the user is currently in. | [optional] 
 `department` | **string** | The department the user is currently in. | [optional] 
 `team` | [**\Apideck\Client\Model\EmployeeTeam**](EmployeeTeam.md) |  | [optional] 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 `direct_reports` | **string[]** |  | [optional] 
 `social_security_number` | **string** |  | [optional] 
 `birthday` | **\DateTime** |  | [optional] 
+`deceased_on` | **\DateTime** |  | [optional] 
 `country_of_birth` | **string** | country code according to ISO 3166-1 alpha-2. | [optional] 
 `description` | **string** |  | [optional] 
 `gender` | [**\Apideck\Client\Model\Gender**](Gender.md) |  | [optional] 
@@ -89,6 +91,7 @@ Name | Type | Description | Notes
 
 
 
+* [`EmployeePartner`](EmployeePartner.md)
 
 
 * [`EmployeeTeam`](EmployeeTeam.md)
@@ -100,6 +103,7 @@ Name | Type | Description | Notes
 
 * [`EmployeeEmploymentRole`](EmployeeEmploymentRole.md)
 * [`EmployeeManager`](EmployeeManager.md)
+
 
 
 

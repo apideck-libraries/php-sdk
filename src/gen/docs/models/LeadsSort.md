@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`by` | **string** | The field on which to sort the Leads | 
+`by` | **string** | The field on which to sort the Leads | [optional] 
 `direction` | [**\Apideck\Client\Model\SortDirection**](SortDirection.md) |  | [optional] 
 
 

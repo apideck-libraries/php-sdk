@@ -22,7 +22,7 @@ Should also work with PHP 8.0 but has not been tested.
 Install the latest SDK using composer:
 
 ```console
-$ composer require @apideck/php
+$ composer require apideck-libraries/php-sdk
 ```
 
 ## Getting started
@@ -105,7 +105,7 @@ $result = $crmApi->contactsUpdate([
         "number" => "0486565656",
         "phoneType" => "home"
       ])
-    ] 
+    ]
   ])
 ]);
 

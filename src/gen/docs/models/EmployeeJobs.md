@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 `employee_id` | **string** |  | [optional] 
 `title` | **string** |  | [optional] 
 `role` | **string** |  | [optional] 
+`start_date` | **\DateTime** |  | [optional] 
+`end_date` | **\DateTime** |  | [optional] 
 `compensation_rate` | **float** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `payment_unit` | [**\Apideck\Client\Model\PaymentUnit**](PaymentUnit.md) |  | [optional] 
@@ -21,6 +23,8 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
+
+
 
 
 
