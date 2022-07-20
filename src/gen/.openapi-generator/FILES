@@ -36,6 +36,7 @@ docs/Model/ApiStatus.md
 docs/Model/ApisFilter.md
 docs/Model/Applicant.md
 docs/Model/ApplicantWebsites.md
+docs/Model/AtsActivity.md
 docs/Model/AuthType.md
 docs/Model/BadRequestResponse.md
 docs/Model/BalanceSheet.md
@@ -339,6 +340,7 @@ docs/Model/NotFoundResponse.md
 docs/Model/NotImplementedResponse.md
 docs/Model/Note.md
 docs/Model/OAuthGrantType.md
+docs/Model/Offer.md
 docs/Model/OpportunitiesFilter.md
 docs/Model/OpportunitiesSort.md
 docs/Model/Opportunity.md
@@ -491,6 +493,7 @@ lib/Model/ApiStatus.php
 lib/Model/ApisFilter.php
 lib/Model/Applicant.php
 lib/Model/ApplicantWebsites.php
+lib/Model/AtsActivity.php
 lib/Model/AuthType.php
 lib/Model/BadRequestResponse.php
 lib/Model/BalanceSheet.php
@@ -795,6 +798,7 @@ lib/Model/NotFoundResponse.php
 lib/Model/NotImplementedResponse.php
 lib/Model/Note.php
 lib/Model/OAuthGrantType.php
+lib/Model/Offer.php
 lib/Model/OpportunitiesFilter.php
 lib/Model/OpportunitiesSort.php
 lib/Model/Opportunity.php
@@ -943,6 +947,7 @@ test/Model/ApiTest.php
 test/Model/ApisFilterTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
+test/Model/AtsActivityTest.php
 test/Model/AuthTypeTest.php
 test/Model/BadRequestResponseTest.php
 test/Model/BalanceSheetAssetsCurrentAssetsAccountsTest.php
@@ -1246,6 +1251,7 @@ test/Model/NotFoundResponseTest.php
 test/Model/NotImplementedResponseTest.php
 test/Model/NoteTest.php
 test/Model/OAuthGrantTypeTest.php
+test/Model/OfferTest.php
 test/Model/OpportunitiesFilterTest.php
 test/Model/OpportunitiesSortTest.php
 test/Model/OpportunityTest.php
