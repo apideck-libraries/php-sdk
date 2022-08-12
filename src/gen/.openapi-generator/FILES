@@ -99,6 +99,8 @@ docs/Model/CreateContactResponse.md
 docs/Model/CreateCustomerResponse.md
 docs/Model/CreateCustomerSupportCustomerResponse.md
 docs/Model/CreateDepartmentResponse.md
+docs/Model/CreateDriveGroupResponse.md
+docs/Model/CreateDriveResponse.md
 docs/Model/CreateEmployeeResponse.md
 docs/Model/CreateFileRequest.md
 docs/Model/CreateFileResponse.md
@@ -146,6 +148,8 @@ docs/Model/DeleteContactResponse.md
 docs/Model/DeleteCustomerResponse.md
 docs/Model/DeleteCustomerSupportCustomerResponse.md
 docs/Model/DeleteDepartmentResponse.md
+docs/Model/DeleteDriveGroupResponse.md
+docs/Model/DeleteDriveResponse.md
 docs/Model/DeleteEmployeeResponse.md
 docs/Model/DeleteFileResponse.md
 docs/Model/DeleteFolderResponse.md
@@ -174,6 +178,10 @@ docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
+docs/Model/Drive.md
+docs/Model/DriveGroup.md
+docs/Model/DriveGroupsFilter.md
+docs/Model/DrivesFilter.md
 docs/Model/Email.md
 docs/Model/Employee.md
 docs/Model/EmployeeCompensations.md
@@ -228,6 +236,10 @@ docs/Model/GetCustomerSupportCustomersResponse.md
 docs/Model/GetCustomersResponse.md
 docs/Model/GetDepartmentResponse.md
 docs/Model/GetDepartmentsResponse.md
+docs/Model/GetDriveGroupResponse.md
+docs/Model/GetDriveGroupsResponse.md
+docs/Model/GetDriveResponse.md
+docs/Model/GetDrivesResponse.md
 docs/Model/GetEmployeePayrollResponse.md
 docs/Model/GetEmployeePayrollsResponse.md
 docs/Model/GetEmployeeResponse.md
@@ -417,6 +429,8 @@ docs/Model/UpdateContactResponse.md
 docs/Model/UpdateCustomerResponse.md
 docs/Model/UpdateCustomerSupportCustomerResponse.md
 docs/Model/UpdateDepartmentResponse.md
+docs/Model/UpdateDriveGroupResponse.md
+docs/Model/UpdateDriveResponse.md
 docs/Model/UpdateEmployeeResponse.md
 docs/Model/UpdateFileResponse.md
 docs/Model/UpdateFolderRequest.md
@@ -556,6 +570,8 @@ lib/Model/CreateContactResponse.php
 lib/Model/CreateCustomerResponse.php
 lib/Model/CreateCustomerSupportCustomerResponse.php
 lib/Model/CreateDepartmentResponse.php
+lib/Model/CreateDriveGroupResponse.php
+lib/Model/CreateDriveResponse.php
 lib/Model/CreateEmployeeResponse.php
 lib/Model/CreateFileRequest.php
 lib/Model/CreateFileResponse.php
@@ -603,6 +619,8 @@ lib/Model/DeleteContactResponse.php
 lib/Model/DeleteCustomerResponse.php
 lib/Model/DeleteCustomerSupportCustomerResponse.php
 lib/Model/DeleteDepartmentResponse.php
+lib/Model/DeleteDriveGroupResponse.php
+lib/Model/DeleteDriveResponse.php
 lib/Model/DeleteEmployeeResponse.php
 lib/Model/DeleteFileResponse.php
 lib/Model/DeleteFolderResponse.php
@@ -631,6 +649,10 @@ lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
+lib/Model/Drive.php
+lib/Model/DriveGroup.php
+lib/Model/DriveGroupsFilter.php
+lib/Model/DrivesFilter.php
 lib/Model/Email.php
 lib/Model/Employee.php
 lib/Model/EmployeeCompensations.php
@@ -685,6 +707,10 @@ lib/Model/GetCustomerSupportCustomersResponse.php
 lib/Model/GetCustomersResponse.php
 lib/Model/GetDepartmentResponse.php
 lib/Model/GetDepartmentsResponse.php
+lib/Model/GetDriveGroupResponse.php
+lib/Model/GetDriveGroupsResponse.php
+lib/Model/GetDriveResponse.php
+lib/Model/GetDrivesResponse.php
 lib/Model/GetEmployeePayrollResponse.php
 lib/Model/GetEmployeePayrollsResponse.php
 lib/Model/GetEmployeeResponse.php
@@ -875,6 +901,8 @@ lib/Model/UpdateContactResponse.php
 lib/Model/UpdateCustomerResponse.php
 lib/Model/UpdateCustomerSupportCustomerResponse.php
 lib/Model/UpdateDepartmentResponse.php
+lib/Model/UpdateDriveGroupResponse.php
+lib/Model/UpdateDriveResponse.php
 lib/Model/UpdateEmployeeResponse.php
 lib/Model/UpdateFileResponse.php
 lib/Model/UpdateFolderRequest.php
@@ -1010,6 +1038,8 @@ test/Model/CreateContactResponseTest.php
 test/Model/CreateCustomerResponseTest.php
 test/Model/CreateCustomerSupportCustomerResponseTest.php
 test/Model/CreateDepartmentResponseTest.php
+test/Model/CreateDriveGroupResponseTest.php
+test/Model/CreateDriveResponseTest.php
 test/Model/CreateEmployeeResponseTest.php
 test/Model/CreateFileRequestTest.php
 test/Model/CreateFileResponseTest.php
@@ -1057,6 +1087,8 @@ test/Model/DeleteContactResponseTest.php
 test/Model/DeleteCustomerResponseTest.php
 test/Model/DeleteCustomerSupportCustomerResponseTest.php
 test/Model/DeleteDepartmentResponseTest.php
+test/Model/DeleteDriveGroupResponseTest.php
+test/Model/DeleteDriveResponseTest.php
 test/Model/DeleteEmployeeResponseTest.php
 test/Model/DeleteFileResponseTest.php
 test/Model/DeleteFolderResponseTest.php
@@ -1085,6 +1117,10 @@ test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
 test/Model/DepartmentTest.php
+test/Model/DriveGroupTest.php
+test/Model/DriveGroupsFilterTest.php
+test/Model/DriveTest.php
+test/Model/DrivesFilterTest.php
 test/Model/EmailTest.php
 test/Model/EmployeeCompensationsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
@@ -1139,6 +1175,10 @@ test/Model/GetCustomerSupportCustomersResponseTest.php
 test/Model/GetCustomersResponseTest.php
 test/Model/GetDepartmentResponseTest.php
 test/Model/GetDepartmentsResponseTest.php
+test/Model/GetDriveGroupResponseTest.php
+test/Model/GetDriveGroupsResponseTest.php
+test/Model/GetDriveResponseTest.php
+test/Model/GetDrivesResponseTest.php
 test/Model/GetEmployeePayrollResponseTest.php
 test/Model/GetEmployeePayrollsResponseTest.php
 test/Model/GetEmployeeResponseTest.php
@@ -1328,6 +1368,8 @@ test/Model/UpdateContactResponseTest.php
 test/Model/UpdateCustomerResponseTest.php
 test/Model/UpdateCustomerSupportCustomerResponseTest.php
 test/Model/UpdateDepartmentResponseTest.php
+test/Model/UpdateDriveGroupResponseTest.php
+test/Model/UpdateDriveResponseTest.php
 test/Model/UpdateEmployeeResponseTest.php
 test/Model/UpdateFileResponseTest.php
 test/Model/UpdateFolderRequestTest.php

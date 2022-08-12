@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 `product_id` | **string** |  | [optional] 
 `name` | **string** |  | [optional] 
 `type` | **string** |  | [optional] 
-`amount` | **float** |  | [optional] 
+`amount` | **int** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `scope` | **string** |  | [optional] 
 
@@ -21,7 +21,9 @@ Name | Type | Description | Notes
 ## Enum: OrderDiscounts.type
 
 
-* `FIXED_PERCENTAGE` (value: `'fixed_percentage'`)
+* `PERCENTAGE` (value: `'percentage'`)
+
+* `FLAT_FEE` (value: `'flat_fee'`)
 
 
 

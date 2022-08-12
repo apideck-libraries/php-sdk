@@ -14,7 +14,8 @@ Name | Type | Description | Notes
 `supported_operations` | **string[]** | List of supported operations on the resource. | [optional] 
 `supported_filters` | **string[]** | Supported filters on the list endpoint of the resource. | [optional] 
 `supported_sort_by` | **string[]** | Supported sorting properties on the list endpoint of the resource. | [optional] 
-`supported_fields` | [**\Apideck\Client\Model\ApiResourceCoverageSupportedFields[]**](ApiResourceCoverageSupportedFields.md) | Supported fields. | [optional] 
+`supported_fields` | [**\Apideck\Client\Model\ApiResourceCoverageSupportedFields[]**](ApiResourceCoverageSupportedFields.md) | Supported fields on the detail endpoint. | [optional] 
+`supported_list_fields` | [**\Apideck\Client\Model\ApiResourceCoverageSupportedFields[]**](ApiResourceCoverageSupportedFields.md) | Supported fields on the list endpoint. | [optional] 
 
 
 
@@ -30,6 +31,7 @@ Name | Type | Description | Notes
 
 
 
+* [`ApiResourceCoverageSupportedFields`](ApiResourceCoverageSupportedFields.md)
 * [`ApiResourceCoverageSupportedFields`](ApiResourceCoverageSupportedFields.md)
 
 ---
