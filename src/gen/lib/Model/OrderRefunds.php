@@ -61,7 +61,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'location_id' => 'string',
-        'amount' => 'float',
+        'amount' => 'int',
         'currency' => '\Apideck\Client\Model\Currency',
         'reason' => 'string',
         'status' => 'string',
@@ -326,7 +326,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getAmount()
     {
@@ -336,7 +336,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param float|null $amount amount
+     * @param int|null $amount amount
      *
      * @return self
      */

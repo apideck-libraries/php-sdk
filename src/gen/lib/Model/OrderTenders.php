@@ -64,16 +64,17 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'note' => 'string',
         'amount' => 'float',
+        'percentage' => 'float',
         'currency' => '\Apideck\Client\Model\Currency',
-        'total_amount' => 'float',
-        'total_tip' => 'float',
-        'total_processing_fee' => 'float',
-        'total_tax' => 'float',
-        'total_discount' => 'float',
-        'total_refund' => 'float',
-        'total_service_charge' => 'float',
-        'buyer_tendered_cash_amount' => 'float',
-        'change_back_cash_amount' => 'float',
+        'total_amount' => 'int',
+        'total_tip' => 'int',
+        'total_processing_fee' => 'int',
+        'total_tax' => 'int',
+        'total_discount' => 'int',
+        'total_refund' => 'int',
+        'total_service_charge' => 'int',
+        'buyer_tendered_cash_amount' => 'int',
+        'change_back_cash_amount' => 'int',
         'card' => '\Apideck\Client\Model\PaymentCard',
         'card_status' => 'string',
         'card_entry_method' => 'string',
@@ -95,6 +96,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'note' => null,
         'amount' => null,
+        'percentage' => null,
         'currency' => null,
         'total_amount' => null,
         'total_tip' => null,
@@ -145,6 +147,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'note' => 'note',
         'amount' => 'amount',
+        'percentage' => 'percentage',
         'currency' => 'currency',
         'total_amount' => 'total_amount',
         'total_tip' => 'total_tip',
@@ -174,6 +177,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'note' => 'setNote',
         'amount' => 'setAmount',
+        'percentage' => 'setPercentage',
         'currency' => 'setCurrency',
         'total_amount' => 'setTotalAmount',
         'total_tip' => 'setTotalTip',
@@ -203,6 +207,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'note' => 'getNote',
         'amount' => 'getAmount',
+        'percentage' => 'getPercentage',
         'currency' => 'getCurrency',
         'total_amount' => 'getTotalAmount',
         'total_tip' => 'getTotalTip',
@@ -340,6 +345,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['type'] = $data['type'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['percentage'] = $data['percentage'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['total_amount'] = $data['total_amount'] ?? null;
         $this->container['total_tip'] = $data['total_tip'] ?? null;
@@ -540,6 +546,30 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets percentage
+     *
+     * @return float|null
+     */
+    public function getPercentage()
+    {
+        return $this->container['percentage'];
+    }
+
+    /**
+     * Sets percentage
+     *
+     * @param float|null $percentage percentage
+     *
+     * @return self
+     */
+    public function setPercentage($percentage)
+    {
+        $this->container['percentage'] = $percentage;
+
+        return $this;
+    }
+
+    /**
      * Gets currency
      *
      * @return \Apideck\Client\Model\Currency|null
@@ -566,7 +596,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalAmount()
     {
@@ -576,7 +606,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_amount
      *
-     * @param float|null $total_amount total_amount
+     * @param int|null $total_amount total_amount
      *
      * @return self
      */
@@ -590,7 +620,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_tip
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalTip()
     {
@@ -600,7 +630,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_tip
      *
-     * @param float|null $total_tip total_tip
+     * @param int|null $total_tip total_tip
      *
      * @return self
      */
@@ -614,7 +644,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_processing_fee
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalProcessingFee()
     {
@@ -624,7 +654,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_processing_fee
      *
-     * @param float|null $total_processing_fee total_processing_fee
+     * @param int|null $total_processing_fee total_processing_fee
      *
      * @return self
      */
@@ -638,7 +668,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_tax
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalTax()
     {
@@ -648,7 +678,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_tax
      *
-     * @param float|null $total_tax total_tax
+     * @param int|null $total_tax total_tax
      *
      * @return self
      */
@@ -662,7 +692,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_discount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalDiscount()
     {
@@ -672,7 +702,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_discount
      *
-     * @param float|null $total_discount total_discount
+     * @param int|null $total_discount total_discount
      *
      * @return self
      */
@@ -686,7 +716,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_refund
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalRefund()
     {
@@ -696,7 +726,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_refund
      *
-     * @param float|null $total_refund total_refund
+     * @param int|null $total_refund total_refund
      *
      * @return self
      */
@@ -710,7 +740,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_service_charge
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalServiceCharge()
     {
@@ -720,7 +750,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_service_charge
      *
-     * @param float|null $total_service_charge total_service_charge
+     * @param int|null $total_service_charge total_service_charge
      *
      * @return self
      */
@@ -734,7 +764,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets buyer_tendered_cash_amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getBuyerTenderedCashAmount()
     {
@@ -744,7 +774,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets buyer_tendered_cash_amount
      *
-     * @param float|null $buyer_tendered_cash_amount The amount (in cents) of cash tendered by the buyer. Only applicable when the tender type is cash.
+     * @param int|null $buyer_tendered_cash_amount The amount (in cents) of cash tendered by the buyer. Only applicable when the tender type is cash.
      *
      * @return self
      */
@@ -758,7 +788,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets change_back_cash_amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getChangeBackCashAmount()
     {
@@ -768,7 +798,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets change_back_cash_amount
      *
-     * @param float|null $change_back_cash_amount The amount (in cents) of cash returned to the buyer. Only applicable when the tender type is cash.
+     * @param int|null $change_back_cash_amount The amount (in cents) of cash returned to the buyer. Only applicable when the tender type is cash.
      *
      * @return self
      */

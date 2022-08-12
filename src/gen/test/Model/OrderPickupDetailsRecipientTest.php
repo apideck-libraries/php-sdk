@@ -89,6 +89,15 @@ class OrderPickupDetailsRecipientTest extends TestCase
     }
 
     /**
+     * Test attribute "display_name"
+     */
+    public function testPropertyDisplayName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "address"
      */
     public function testPropertyAddress()

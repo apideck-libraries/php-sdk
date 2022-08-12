@@ -62,9 +62,9 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'name' => 'string',
         'item' => 'object',
-        'total_tax' => 'float',
-        'total_discount' => 'float',
-        'total_amount' => 'float',
+        'total_tax' => 'int',
+        'total_discount' => 'int',
+        'total_amount' => 'int',
         'quantity' => 'float',
         'unit_price' => 'float',
         'applied_taxes' => 'object[]',
@@ -340,7 +340,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_tax
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalTax()
     {
@@ -350,7 +350,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_tax
      *
-     * @param float|null $total_tax total_tax
+     * @param int|null $total_tax total_tax
      *
      * @return self
      */
@@ -364,7 +364,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_discount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalDiscount()
     {
@@ -374,7 +374,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_discount
      *
-     * @param float|null $total_discount total_discount
+     * @param int|null $total_discount total_discount
      *
      * @return self
      */
@@ -388,7 +388,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getTotalAmount()
     {
@@ -398,7 +398,7 @@ class OrderLineItems implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_amount
      *
-     * @param float|null $total_amount total_amount
+     * @param int|null $total_amount total_amount
      *
      * @return self
      */

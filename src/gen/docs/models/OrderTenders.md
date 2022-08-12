@@ -10,16 +10,17 @@ Name | Type | Description | Notes
 `type` | **string** |  | [optional] 
 `note` | **string** |  | [optional] 
 `amount` | **float** |  | [optional] 
+`percentage` | **float** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
-`total_amount` | **float** |  | [optional] 
-`total_tip` | **float** |  | [optional] 
-`total_processing_fee` | **float** |  | [optional] 
-`total_tax` | **float** |  | [optional] 
-`total_discount` | **float** |  | [optional] 
-`total_refund` | **float** |  | [optional] 
-`total_service_charge` | **float** |  | [optional] 
-`buyer_tendered_cash_amount` | **float** | The amount (in cents) of cash tendered by the buyer. Only applicable when the tender type is cash. | [optional] 
-`change_back_cash_amount` | **float** | The amount (in cents) of cash returned to the buyer. Only applicable when the tender type is cash. | [optional] 
+`total_amount` | **int** |  | [optional] 
+`total_tip` | **int** |  | [optional] 
+`total_processing_fee` | **int** |  | [optional] 
+`total_tax` | **int** |  | [optional] 
+`total_discount` | **int** |  | [optional] 
+`total_refund` | **int** |  | [optional] 
+`total_service_charge` | **int** |  | [optional] 
+`buyer_tendered_cash_amount` | **int** | The amount (in cents) of cash tendered by the buyer. Only applicable when the tender type is cash. | [optional] 
+`change_back_cash_amount` | **int** | The amount (in cents) of cash returned to the buyer. Only applicable when the tender type is cash. | [optional] 
 `card` | [**\Apideck\Client\Model\PaymentCard**](PaymentCard.md) |  | [optional] 
 `card_status` | **string** | The status of the card. Only applicable when the tender type is card. | [optional] 
 `card_entry_method` | **string** | The entry method of the card. Only applicable when the tender type is card. | [optional] 
@@ -77,6 +78,7 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
+
 
 
 

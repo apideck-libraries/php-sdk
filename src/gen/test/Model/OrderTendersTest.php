@@ -125,6 +125,15 @@ class OrderTendersTest extends TestCase
     }
 
     /**
+     * Test attribute "percentage"
+     */
+    public function testPropertyPercentage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "currency"
      */
     public function testPropertyCurrency()

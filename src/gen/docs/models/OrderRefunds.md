@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** |  | [optional] 
 `location_id` | **string** |  | [optional] 
-`amount` | **float** |  | [optional] 
+`amount` | **int** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `reason` | **string** |  | [optional] 
 `status` | **string** |  | [optional] 

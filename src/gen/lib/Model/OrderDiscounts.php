@@ -63,7 +63,7 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
         'product_id' => 'string',
         'name' => 'string',
         'type' => 'string',
-        'amount' => 'float',
+        'amount' => 'int',
         'currency' => '\Apideck\Client\Model\Currency',
         'scope' => 'string'
     ];
@@ -192,7 +192,8 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const TYPE_FIXED_PERCENTAGE = 'fixed_percentage';
+    const TYPE_PERCENTAGE = 'percentage';
+    const TYPE_FLAT_FEE = 'flat_fee';
     const SCOPE_ORDER = 'order';
     const SCOPE_LINE_ITEM = 'line_item';
 
@@ -204,7 +205,8 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_FIXED_PERCENTAGE,
+            self::TYPE_PERCENTAGE,
+            self::TYPE_FLAT_FEE,
         ];
     }
 
@@ -396,7 +398,7 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getAmount()
     {
@@ -406,7 +408,7 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param float|null $amount amount
+     * @param int|null $amount amount
      *
      * @return self
      */

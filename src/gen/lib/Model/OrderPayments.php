@@ -60,7 +60,7 @@ class OrderPayments implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'amount' => 'float',
+        'amount' => 'int',
         'currency' => '\Apideck\Client\Model\Currency'
     ];
 
@@ -244,7 +244,7 @@ class OrderPayments implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return float|null
+     * @return int|null
      */
     public function getAmount()
     {
@@ -254,7 +254,7 @@ class OrderPayments implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param float|null $amount amount
+     * @param int|null $amount amount
      *
      * @return self
      */
