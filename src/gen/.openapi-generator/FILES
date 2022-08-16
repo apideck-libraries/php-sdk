@@ -47,6 +47,7 @@ docs/Model/BalanceSheetAssetsFixedAssets.md
 docs/Model/BalanceSheetAssetsFixedAssetsAccounts.md
 docs/Model/BalanceSheetEquity.md
 docs/Model/BalanceSheetEquityItems.md
+docs/Model/BalanceSheetFilter.md
 docs/Model/BalanceSheetLiabilities.md
 docs/Model/BalanceSheetLiabilitiesAccounts.md
 docs/Model/BankAccount.md
@@ -518,6 +519,7 @@ lib/Model/BalanceSheetAssetsFixedAssets.php
 lib/Model/BalanceSheetAssetsFixedAssetsAccounts.php
 lib/Model/BalanceSheetEquity.php
 lib/Model/BalanceSheetEquityItems.php
+lib/Model/BalanceSheetFilter.php
 lib/Model/BalanceSheetLiabilities.php
 lib/Model/BalanceSheetLiabilitiesAccounts.php
 lib/Model/BankAccount.php
@@ -985,6 +987,7 @@ test/Model/BalanceSheetAssetsFixedAssetsTest.php
 test/Model/BalanceSheetAssetsTest.php
 test/Model/BalanceSheetEquityItemsTest.php
 test/Model/BalanceSheetEquityTest.php
+test/Model/BalanceSheetFilterTest.php
 test/Model/BalanceSheetLiabilitiesAccountsTest.php
 test/Model/BalanceSheetLiabilitiesTest.php
 test/Model/BalanceSheetTest.php
