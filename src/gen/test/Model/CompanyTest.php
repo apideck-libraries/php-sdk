@@ -386,6 +386,24 @@ class CompanyTest extends TestCase
     }
 
     /**
+     * Test attribute "salutation"
+     */
+    public function testPropertySalutation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "birthday"
+     */
+    public function testPropertyBirthday()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

@@ -93,6 +93,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => 'bool',
         'last_activity_at' => '\DateTime',
         'deleted' => 'bool',
+        'salutation' => 'string',
+        'birthday' => '\DateTime',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -141,6 +143,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => null,
         'last_activity_at' => 'date-time',
         'deleted' => null,
+        'salutation' => null,
+        'birthday' => 'date',
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -208,6 +212,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => 'read_only',
         'last_activity_at' => 'last_activity_at',
         'deleted' => 'deleted',
+        'salutation' => 'salutation',
+        'birthday' => 'birthday',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -254,6 +260,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => 'setReadOnly',
         'last_activity_at' => 'setLastActivityAt',
         'deleted' => 'setDeleted',
+        'salutation' => 'setSalutation',
+        'birthday' => 'setBirthday',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -300,6 +308,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         'read_only' => 'getReadOnly',
         'last_activity_at' => 'getLastActivityAt',
         'deleted' => 'getDeleted',
+        'salutation' => 'getSalutation',
+        'birthday' => 'getBirthday',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -397,6 +407,8 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['read_only'] = $data['read_only'] ?? null;
         $this->container['last_activity_at'] = $data['last_activity_at'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
+        $this->container['salutation'] = $data['salutation'] ?? null;
+        $this->container['birthday'] = $data['birthday'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -1251,6 +1263,54 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDeleted($deleted)
     {
         $this->container['deleted'] = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets salutation
+     *
+     * @return string|null
+     */
+    public function getSalutation()
+    {
+        return $this->container['salutation'];
+    }
+
+    /**
+     * Sets salutation
+     *
+     * @param string|null $salutation salutation
+     *
+     * @return self
+     */
+    public function setSalutation($salutation)
+    {
+        $this->container['salutation'] = $salutation;
+
+        return $this;
+    }
+
+    /**
+     * Gets birthday
+     *
+     * @return \DateTime|null
+     */
+    public function getBirthday()
+    {
+        return $this->container['birthday'];
+    }
+
+    /**
+     * Sets birthday
+     *
+     * @param \DateTime|null $birthday birthday
+     *
+     * @return self
+     */
+    public function setBirthday($birthday)
+    {
+        $this->container['birthday'] = $birthday;
 
         return $this;
     }
