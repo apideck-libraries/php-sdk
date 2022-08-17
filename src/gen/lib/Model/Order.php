@@ -62,6 +62,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'merchant_id' => 'string',
         'location_id' => 'string',
         'id' => 'string',
+        'idempotency_key' => 'string',
         'order_number' => 'string',
         'order_date' => '\DateTime',
         'closed_date' => '\DateTime',
@@ -113,6 +114,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'merchant_id' => null,
         'location_id' => null,
         'id' => null,
+        'idempotency_key' => null,
         'order_number' => null,
         'order_date' => 'date',
         'closed_date' => 'date',
@@ -183,6 +185,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'merchant_id' => 'merchant_id',
         'location_id' => 'location_id',
         'id' => 'id',
+        'idempotency_key' => 'idempotency_key',
         'order_number' => 'order_number',
         'order_date' => 'order_date',
         'closed_date' => 'closed_date',
@@ -232,6 +235,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'merchant_id' => 'setMerchantId',
         'location_id' => 'setLocationId',
         'id' => 'setId',
+        'idempotency_key' => 'setIdempotencyKey',
         'order_number' => 'setOrderNumber',
         'order_date' => 'setOrderDate',
         'closed_date' => 'setClosedDate',
@@ -281,6 +285,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'merchant_id' => 'getMerchantId',
         'location_id' => 'getLocationId',
         'id' => 'getId',
+        'idempotency_key' => 'getIdempotencyKey',
         'order_number' => 'getOrderNumber',
         'order_date' => 'getOrderDate',
         'closed_date' => 'getClosedDate',
@@ -458,6 +463,7 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['merchant_id'] = $data['merchant_id'] ?? null;
         $this->container['location_id'] = $data['location_id'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
+        $this->container['idempotency_key'] = $data['idempotency_key'] ?? null;
         $this->container['order_number'] = $data['order_number'] ?? null;
         $this->container['order_date'] = $data['order_date'] ?? null;
         $this->container['closed_date'] = $data['closed_date'] ?? null;
@@ -513,6 +519,10 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['location_id'] === null) {
             $invalidProperties[] = "'location_id' can't be null";
         }
+        if (!is_null($this->container['idempotency_key']) && (mb_strlen($this->container['idempotency_key']) > 45)) {
+            $invalidProperties[] = "invalid value for 'idempotency_key', the character length must be smaller than or equal to 45.";
+        }
+
         $allowedValues = $this->getStatusAllowableValues();
         if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -623,6 +633,34 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets idempotency_key
+     *
+     * @return string|null
+     */
+    public function getIdempotencyKey()
+    {
+        return $this->container['idempotency_key'];
+    }
+
+    /**
+     * Sets idempotency_key
+     *
+     * @param string|null $idempotency_key A value you specify that uniquely identifies this request among requests you have sent.
+     *
+     * @return self
+     */
+    public function setIdempotencyKey($idempotency_key)
+    {
+        if (!is_null($idempotency_key) && (mb_strlen($idempotency_key) > 45)) {
+            throw new \InvalidArgumentException('invalid length for $idempotency_key when calling Order., must be smaller than or equal to 45.');
+        }
+
+        $this->container['idempotency_key'] = $idempotency_key;
 
         return $this;
     }

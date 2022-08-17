@@ -107,6 +107,15 @@ class OrderTest extends TestCase
     }
 
     /**
+     * Test attribute "idempotency_key"
+     */
+    public function testPropertyIdempotencyKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "order_number"
      */
     public function testPropertyOrderNumber()
