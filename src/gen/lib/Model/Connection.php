@@ -932,7 +932,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings_required_for_authorization
      *
-     * @param string[]|null $settings_required_for_authorization settings_required_for_authorization
+     * @param string[]|null $settings_required_for_authorization List of settings that are required to be configured on integration before authorization can occur
      *
      * @return self
      */
