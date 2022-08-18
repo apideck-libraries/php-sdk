@@ -47,6 +47,7 @@ docs/Model/BalanceSheetAssetsFixedAssets.md
 docs/Model/BalanceSheetAssetsFixedAssetsAccounts.md
 docs/Model/BalanceSheetEquity.md
 docs/Model/BalanceSheetEquityItems.md
+docs/Model/BalanceSheetFilter.md
 docs/Model/BalanceSheetLiabilities.md
 docs/Model/BalanceSheetLiabilitiesAccounts.md
 docs/Model/BankAccount.md
@@ -96,6 +97,7 @@ docs/Model/CreateBillResponse.md
 docs/Model/CreateCompanyResponse.md
 docs/Model/CreateConnectionResponse.md
 docs/Model/CreateContactResponse.md
+docs/Model/CreateCreditNoteResponse.md
 docs/Model/CreateCustomerResponse.md
 docs/Model/CreateCustomerSupportCustomerResponse.md
 docs/Model/CreateDepartmentResponse.md
@@ -135,6 +137,7 @@ docs/Model/CreateUploadSessionResponse.md
 docs/Model/CreateUserResponse.md
 docs/Model/CreateWebhookRequest.md
 docs/Model/CreateWebhookResponse.md
+docs/Model/CreditNote.md
 docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
@@ -145,6 +148,7 @@ docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCompanyResponse.md
 docs/Model/DeleteContactResponse.md
+docs/Model/DeleteCreditNoteResponse.md
 docs/Model/DeleteCustomerResponse.md
 docs/Model/DeleteCustomerSupportCustomerResponse.md
 docs/Model/DeleteDepartmentResponse.md
@@ -230,6 +234,8 @@ docs/Model/GetConsumersResponse.md
 docs/Model/GetConsumersResponseData.md
 docs/Model/GetContactResponse.md
 docs/Model/GetContactsResponse.md
+docs/Model/GetCreditNoteResponse.md
+docs/Model/GetCreditNotesResponse.md
 docs/Model/GetCustomerResponse.md
 docs/Model/GetCustomerSupportCustomerResponse.md
 docs/Model/GetCustomerSupportCustomersResponse.md
@@ -426,6 +432,7 @@ docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCompanyResponse.md
 docs/Model/UpdateConnectionResponse.md
 docs/Model/UpdateContactResponse.md
+docs/Model/UpdateCreditNoteResponse.md
 docs/Model/UpdateCustomerResponse.md
 docs/Model/UpdateCustomerSupportCustomerResponse.md
 docs/Model/UpdateDepartmentResponse.md
@@ -518,6 +525,7 @@ lib/Model/BalanceSheetAssetsFixedAssets.php
 lib/Model/BalanceSheetAssetsFixedAssetsAccounts.php
 lib/Model/BalanceSheetEquity.php
 lib/Model/BalanceSheetEquityItems.php
+lib/Model/BalanceSheetFilter.php
 lib/Model/BalanceSheetLiabilities.php
 lib/Model/BalanceSheetLiabilitiesAccounts.php
 lib/Model/BankAccount.php
@@ -567,6 +575,7 @@ lib/Model/CreateBillResponse.php
 lib/Model/CreateCompanyResponse.php
 lib/Model/CreateConnectionResponse.php
 lib/Model/CreateContactResponse.php
+lib/Model/CreateCreditNoteResponse.php
 lib/Model/CreateCustomerResponse.php
 lib/Model/CreateCustomerSupportCustomerResponse.php
 lib/Model/CreateDepartmentResponse.php
@@ -606,6 +615,7 @@ lib/Model/CreateUploadSessionResponse.php
 lib/Model/CreateUserResponse.php
 lib/Model/CreateWebhookRequest.php
 lib/Model/CreateWebhookResponse.php
+lib/Model/CreditNote.php
 lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
@@ -616,6 +626,7 @@ lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCompanyResponse.php
 lib/Model/DeleteContactResponse.php
+lib/Model/DeleteCreditNoteResponse.php
 lib/Model/DeleteCustomerResponse.php
 lib/Model/DeleteCustomerSupportCustomerResponse.php
 lib/Model/DeleteDepartmentResponse.php
@@ -701,6 +712,8 @@ lib/Model/GetConsumersResponse.php
 lib/Model/GetConsumersResponseData.php
 lib/Model/GetContactResponse.php
 lib/Model/GetContactsResponse.php
+lib/Model/GetCreditNoteResponse.php
+lib/Model/GetCreditNotesResponse.php
 lib/Model/GetCustomerResponse.php
 lib/Model/GetCustomerSupportCustomerResponse.php
 lib/Model/GetCustomerSupportCustomersResponse.php
@@ -898,6 +911,7 @@ lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCompanyResponse.php
 lib/Model/UpdateConnectionResponse.php
 lib/Model/UpdateContactResponse.php
+lib/Model/UpdateCreditNoteResponse.php
 lib/Model/UpdateCustomerResponse.php
 lib/Model/UpdateCustomerSupportCustomerResponse.php
 lib/Model/UpdateDepartmentResponse.php
@@ -985,6 +999,7 @@ test/Model/BalanceSheetAssetsFixedAssetsTest.php
 test/Model/BalanceSheetAssetsTest.php
 test/Model/BalanceSheetEquityItemsTest.php
 test/Model/BalanceSheetEquityTest.php
+test/Model/BalanceSheetFilterTest.php
 test/Model/BalanceSheetLiabilitiesAccountsTest.php
 test/Model/BalanceSheetLiabilitiesTest.php
 test/Model/BalanceSheetTest.php
@@ -1035,6 +1050,7 @@ test/Model/CreateBillResponseTest.php
 test/Model/CreateCompanyResponseTest.php
 test/Model/CreateConnectionResponseTest.php
 test/Model/CreateContactResponseTest.php
+test/Model/CreateCreditNoteResponseTest.php
 test/Model/CreateCustomerResponseTest.php
 test/Model/CreateCustomerSupportCustomerResponseTest.php
 test/Model/CreateDepartmentResponseTest.php
@@ -1074,6 +1090,7 @@ test/Model/CreateUploadSessionResponseTest.php
 test/Model/CreateUserResponseTest.php
 test/Model/CreateWebhookRequestTest.php
 test/Model/CreateWebhookResponseTest.php
+test/Model/CreditNoteTest.php
 test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldTest.php
@@ -1084,6 +1101,7 @@ test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
 test/Model/DeleteContactResponseTest.php
+test/Model/DeleteCreditNoteResponseTest.php
 test/Model/DeleteCustomerResponseTest.php
 test/Model/DeleteCustomerSupportCustomerResponseTest.php
 test/Model/DeleteDepartmentResponseTest.php
@@ -1169,6 +1187,8 @@ test/Model/GetConsumersResponseDataTest.php
 test/Model/GetConsumersResponseTest.php
 test/Model/GetContactResponseTest.php
 test/Model/GetContactsResponseTest.php
+test/Model/GetCreditNoteResponseTest.php
+test/Model/GetCreditNotesResponseTest.php
 test/Model/GetCustomerResponseTest.php
 test/Model/GetCustomerSupportCustomerResponseTest.php
 test/Model/GetCustomerSupportCustomersResponseTest.php
@@ -1365,6 +1385,7 @@ test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCompanyResponseTest.php
 test/Model/UpdateConnectionResponseTest.php
 test/Model/UpdateContactResponseTest.php
+test/Model/UpdateCreditNoteResponseTest.php
 test/Model/UpdateCustomerResponseTest.php
 test/Model/UpdateCustomerSupportCustomerResponseTest.php
 test/Model/UpdateDepartmentResponseTest.php

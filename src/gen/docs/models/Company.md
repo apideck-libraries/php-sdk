@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 `read_only` | **bool** |  | [optional] 
 `last_activity_at` | **\DateTime** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
+`salutation` | **string** |  | [optional] 
+`birthday` | **\DateTime** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
@@ -79,6 +81,8 @@ Name | Type | Description | Notes
 * [`Email`](Email.md)
 * [`CompanyRowType`](CompanyRowType.md)
 * [`CustomField`](CustomField.md)
+
+
 
 
 

@@ -45,6 +45,16 @@ Name | Type | Description | Notes
 
 * `ACCOUNTING` (value: `'accounting'`)
 
+* `HRIS` (value: `'hris'`)
+
+* `ATS` (value: `'ats'`)
+
+* `POS` (value: `'pos'`)
+
+* `FILE_STORAGE` (value: `'file-storage'`)
+
+* `SMS` (value: `'sms'`)
+
 
 
 
