@@ -710,7 +710,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
- **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters (beta) |
+ **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -976,7 +976,7 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
- **filter** | [\Apideck\Client\Model\EmployeesFilter](../models/\Apideck\Client\Model\EmployeesFilter.md)| Apply filters (beta) |
+ **filter** | [\Apideck\Client\Model\EmployeesFilter](../models/\Apideck\Client\Model\EmployeesFilter.md)| Apply filters |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -1375,7 +1375,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
- **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters (beta) |
+ **filter** | [\Apideck\Client\Model\PayrollsFilter](../models/\Apideck\Client\Model\PayrollsFilter.md)| Apply filters |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
