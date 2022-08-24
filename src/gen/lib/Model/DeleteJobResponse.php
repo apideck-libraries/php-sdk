@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSocialLinks
+ * DeleteJobResponse
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * EmployeeSocialLinks Class Doc Comment
+ * DeleteJobResponse Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializable
+class DeleteJobResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Employee_social_links';
+    protected static $openAPIModelName = 'DeleteJobResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'url' => 'string',
-        'id' => 'string',
-        'type' => 'string'
+        'status_code' => 'int',
+        'status' => 'string',
+        'service' => 'string',
+        'resource' => 'string',
+        'operation' => 'string',
+        'data' => '\Apideck\Client\Model\UnifiedId'
     ];
 
     /**
@@ -72,9 +75,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'url' => null,
-        'id' => null,
-        'type' => null
+        'status_code' => null,
+        'status' => null,
+        'service' => null,
+        'resource' => null,
+        'operation' => null,
+        'data' => null
     ];
 
     /**
@@ -104,9 +110,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'url' => 'url',
-        'id' => 'id',
-        'type' => 'type'
+        'status_code' => 'status_code',
+        'status' => 'status',
+        'service' => 'service',
+        'resource' => 'resource',
+        'operation' => 'operation',
+        'data' => 'data'
     ];
 
     /**
@@ -115,9 +124,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'url' => 'setUrl',
-        'id' => 'setId',
-        'type' => 'setType'
+        'status_code' => 'setStatusCode',
+        'status' => 'setStatus',
+        'service' => 'setService',
+        'resource' => 'setResource',
+        'operation' => 'setOperation',
+        'data' => 'setData'
     ];
 
     /**
@@ -126,9 +138,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'url' => 'getUrl',
-        'id' => 'getId',
-        'type' => 'getType'
+        'status_code' => 'getStatusCode',
+        'status' => 'getStatus',
+        'service' => 'getService',
+        'resource' => 'getResource',
+        'operation' => 'getOperation',
+        'data' => 'getData'
     ];
 
     /**
@@ -188,9 +203,12 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['url'] = $data['url'] ?? null;
-        $this->container['id'] = $data['id'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
+        $this->container['status_code'] = $data['status_code'] ?? null;
+        $this->container['status'] = $data['status'] ?? null;
+        $this->container['service'] = $data['service'] ?? null;
+        $this->container['resource'] = $data['resource'] ?? null;
+        $this->container['operation'] = $data['operation'] ?? null;
+        $this->container['data'] = $data['data'] ?? null;
     }
 
     /**
@@ -202,13 +220,24 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['url'] === null) {
-            $invalidProperties[] = "'url' can't be null";
+        if ($this->container['status_code'] === null) {
+            $invalidProperties[] = "'status_code' can't be null";
         }
-        if ((mb_strlen($this->container['url']) < 1)) {
-            $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
-
+        if ($this->container['service'] === null) {
+            $invalidProperties[] = "'service' can't be null";
+        }
+        if ($this->container['resource'] === null) {
+            $invalidProperties[] = "'resource' can't be null";
+        }
+        if ($this->container['operation'] === null) {
+            $invalidProperties[] = "'operation' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -225,78 +254,145 @@ class EmployeeSocialLinks implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets url
+     * Gets status_code
+     *
+     * @return int
+     */
+    public function getStatusCode()
+    {
+        return $this->container['status_code'];
+    }
+
+    /**
+     * Sets status_code
+     *
+     * @param int $status_code HTTP Response Status Code
+     *
+     * @return self
+     */
+    public function setStatusCode($status_code)
+    {
+        $this->container['status_code'] = $status_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
      *
      * @return string
      */
-    public function getUrl()
+    public function getStatus()
     {
-        return $this->container['url'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets url
+     * Sets status
      *
-     * @param string $url url
+     * @param string $status HTTP Response Status
      *
      * @return self
      */
-    public function setUrl($url)
+    public function setStatus($status)
     {
-
-        if ((mb_strlen($url) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $url when calling EmployeeSocialLinks., must be bigger than or equal to 1.');
-        }
-
-        $this->container['url'] = $url;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets service
      *
-     * @return string|null
+     * @return string
      */
-    public function getId()
+    public function getService()
     {
-        return $this->container['id'];
+        return $this->container['service'];
     }
 
     /**
-     * Sets id
+     * Sets service
      *
-     * @param string|null $id id
+     * @param string $service Apideck ID of service provider
      *
      * @return self
      */
-    public function setId($id)
+    public function setService($service)
     {
-        $this->container['id'] = $id;
+        $this->container['service'] = $service;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets resource
      *
-     * @return string|null
+     * @return string
      */
-    public function getType()
+    public function getResource()
     {
-        return $this->container['type'];
+        return $this->container['resource'];
     }
 
     /**
-     * Sets type
+     * Sets resource
      *
-     * @param string|null $type type
+     * @param string $resource Unified API resource name
      *
      * @return self
      */
-    public function setType($type)
+    public function setResource($resource)
     {
-        $this->container['type'] = $type;
+        $this->container['resource'] = $resource;
+
+        return $this;
+    }
+
+    /**
+     * Gets operation
+     *
+     * @return string
+     */
+    public function getOperation()
+    {
+        return $this->container['operation'];
+    }
+
+    /**
+     * Sets operation
+     *
+     * @param string $operation Operation performed
+     *
+     * @return self
+     */
+    public function setOperation($operation)
+    {
+        $this->container['operation'] = $operation;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Apideck\Client\Model\UnifiedId
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Apideck\Client\Model\UnifiedId $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

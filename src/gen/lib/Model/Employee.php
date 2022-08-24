@@ -103,7 +103,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'emails' => '\Apideck\Client\Model\Email[]',
         'custom_fields' => '\Apideck\Client\Model\CustomField[]',
-        'social_links' => '\Apideck\Client\Model\EmployeeSocialLinks[]',
+        'social_links' => '\Apideck\Client\Model\ApplicantSocialLinks[]',
         'tax_code' => 'string',
         'tax_id' => 'string',
         'dietary_preference' => 'string',
@@ -1641,7 +1641,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets social_links
      *
-     * @return \Apideck\Client\Model\EmployeeSocialLinks[]|null
+     * @return \Apideck\Client\Model\ApplicantSocialLinks[]|null
      */
     public function getSocialLinks()
     {
@@ -1651,7 +1651,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_links
      *
-     * @param \Apideck\Client\Model\EmployeeSocialLinks[]|null $social_links social_links
+     * @param \Apideck\Client\Model\ApplicantSocialLinks[]|null $social_links social_links
      *
      * @return self
      */

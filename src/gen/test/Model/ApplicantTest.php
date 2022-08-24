@@ -152,6 +152,15 @@ class ApplicantTest extends TestCase
     }
 
     /**
+     * Test attribute "cover_letter"
+     */
+    public function testPropertyCoverLetter()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "job_url"
      */
     public function testPropertyJobUrl()
@@ -218,6 +227,15 @@ class ApplicantTest extends TestCase
      * Test attribute "websites"
      */
     public function testPropertyWebsites()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "social_links"
+     */
+    public function testPropertySocialLinks()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

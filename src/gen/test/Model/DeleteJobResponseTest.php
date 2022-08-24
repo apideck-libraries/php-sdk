@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSocialLinksTest
+ * DeleteJobResponseTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * EmployeeSocialLinksTest Class Doc Comment
+ * DeleteJobResponseTest Class Doc Comment
  *
  * @category    Class
- * @description EmployeeSocialLinks
+ * @description DeleteJobResponse
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class EmployeeSocialLinksTest extends TestCase
+class DeleteJobResponseTest extends TestCase
 {
 
     /**
@@ -71,36 +71,63 @@ class EmployeeSocialLinksTest extends TestCase
     }
 
     /**
-     * Test "EmployeeSocialLinks"
+     * Test "DeleteJobResponse"
      */
-    public function testEmployeeSocialLinks()
+    public function testDeleteJobResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "status_code"
      */
-    public function testPropertyUrl()
+    public function testPropertyStatusCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "status"
      */
-    public function testPropertyId()
+    public function testPropertyStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "service"
      */
-    public function testPropertyType()
+    public function testPropertyService()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "resource"
+     */
+    public function testPropertyResource()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "operation"
+     */
+    public function testPropertyOperation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

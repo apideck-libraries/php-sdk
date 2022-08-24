@@ -1469,7 +1469,7 @@ class AtsApi
     /**
      * Operation jobsAll
      *
-     * List jobs
+     * List Jobs
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -1491,7 +1491,7 @@ class AtsApi
     /**
      * Operation jobsAllWithHttpInfo
      *
-     * List jobs
+     * List Jobs
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -1709,7 +1709,7 @@ class AtsApi
     /**
      * Operation jobsAllAsync
      *
-     * List jobs
+     * List Jobs
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -1734,7 +1734,7 @@ class AtsApi
     /**
      * Operation jobsAllAsyncWithHttpInfo
      *
-     * List jobs
+     * List Jobs
      *
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -1928,7 +1928,7 @@ class AtsApi
     /**
      * Operation jobsOne
      *
-     * Get job
+     * Get Job
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -1949,7 +1949,7 @@ class AtsApi
     /**
      * Operation jobsOneWithHttpInfo
      *
-     * Get job
+     * Get Job
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -2166,7 +2166,7 @@ class AtsApi
     /**
      * Operation jobsOneAsync
      *
-     * Get job
+     * Get Job
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -2190,7 +2190,7 @@ class AtsApi
     /**
      * Operation jobsOneAsyncWithHttpInfo
      *
-     * Get job
+     * Get Job
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)

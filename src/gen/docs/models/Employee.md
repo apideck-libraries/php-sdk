@@ -49,7 +49,7 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`social_links` | [**\Apideck\Client\Model\EmployeeSocialLinks[]**](EmployeeSocialLinks.md) |  | [optional] 
+`social_links` | [**\Apideck\Client\Model\ApplicantSocialLinks[]**](ApplicantSocialLinks.md) |  | [optional] 
 `tax_code` | **string** |  | [optional] 
 `tax_id` | **string** |  | [optional] 
 `dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
@@ -125,7 +125,7 @@ Name | Type | Description | Notes
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
-* [`EmployeeSocialLinks`](EmployeeSocialLinks.md)
+* [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
 
 
 

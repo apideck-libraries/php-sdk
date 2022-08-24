@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 `middle_name` | **string** |  | [optional] 
 `initials` | **string** |  | [optional] 
 `birthday` | **\DateTime** |  | [optional] 
+`cover_letter` | **string** |  | [optional] 
 `job_url` | **string** |  | [optional] 
 `photo_url` | **string** |  | [optional] 
 `headline` | **string** | Typically a list of previous companies where the contact has worked or schools that the contact has attended | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `websites` | [**\Apideck\Client\Model\ApplicantWebsites[]**](ApplicantWebsites.md) |  | [optional] 
+`social_links` | [**\Apideck\Client\Model\ApplicantSocialLinks[]**](ApplicantSocialLinks.md) |  | [optional] 
 `stage_id` | **string** |  | [optional] 
 `recruiter_id` | **string** |  | [optional] 
 `coordinator_id` | **string** |  | [optional] 
@@ -61,10 +63,12 @@ Name | Type | Description | Notes
 
 
 
+
 * [`Email`](Email.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Address`](Address.md)
 * [`ApplicantWebsites`](ApplicantWebsites.md)
+* [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
 
 
 

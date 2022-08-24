@@ -35,6 +35,7 @@ docs/Model/ApiResources.md
 docs/Model/ApiStatus.md
 docs/Model/ApisFilter.md
 docs/Model/Applicant.md
+docs/Model/ApplicantSocialLinks.md
 docs/Model/ApplicantWebsites.md
 docs/Model/AtsActivity.md
 docs/Model/AuthType.md
@@ -112,6 +113,7 @@ docs/Model/CreateHrisCompanyResponse.md
 docs/Model/CreateInvoiceItemResponse.md
 docs/Model/CreateInvoiceResponse.md
 docs/Model/CreateItemResponse.md
+docs/Model/CreateJobResponse.md
 docs/Model/CreateLeadResponse.md
 docs/Model/CreateLedgerAccountResponse.md
 docs/Model/CreateLocationResponse.md
@@ -160,6 +162,7 @@ docs/Model/DeleteFolderResponse.md
 docs/Model/DeleteHrisCompanyResponse.md
 docs/Model/DeleteInvoiceResponse.md
 docs/Model/DeleteItemResponse.md
+docs/Model/DeleteJobResponse.md
 docs/Model/DeleteLeadResponse.md
 docs/Model/DeleteLedgerAccountResponse.md
 docs/Model/DeleteLocationResponse.md
@@ -196,7 +199,6 @@ docs/Model/EmployeePartner.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
-docs/Model/EmployeeSocialLinks.md
 docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
 docs/Model/Error.md
@@ -446,6 +448,7 @@ docs/Model/UpdateHrisCompanyResponse.md
 docs/Model/UpdateInvoiceItemsResponse.md
 docs/Model/UpdateInvoiceResponse.md
 docs/Model/UpdateItemResponse.md
+docs/Model/UpdateJobResponse.md
 docs/Model/UpdateLeadResponse.md
 docs/Model/UpdateLedgerAccountResponse.md
 docs/Model/UpdateLocationResponse.md
@@ -513,6 +516,7 @@ lib/Model/ApiResources.php
 lib/Model/ApiStatus.php
 lib/Model/ApisFilter.php
 lib/Model/Applicant.php
+lib/Model/ApplicantSocialLinks.php
 lib/Model/ApplicantWebsites.php
 lib/Model/AtsActivity.php
 lib/Model/AuthType.php
@@ -590,6 +594,7 @@ lib/Model/CreateHrisCompanyResponse.php
 lib/Model/CreateInvoiceItemResponse.php
 lib/Model/CreateInvoiceResponse.php
 lib/Model/CreateItemResponse.php
+lib/Model/CreateJobResponse.php
 lib/Model/CreateLeadResponse.php
 lib/Model/CreateLedgerAccountResponse.php
 lib/Model/CreateLocationResponse.php
@@ -638,6 +643,7 @@ lib/Model/DeleteFolderResponse.php
 lib/Model/DeleteHrisCompanyResponse.php
 lib/Model/DeleteInvoiceResponse.php
 lib/Model/DeleteItemResponse.php
+lib/Model/DeleteJobResponse.php
 lib/Model/DeleteLeadResponse.php
 lib/Model/DeleteLedgerAccountResponse.php
 lib/Model/DeleteLocationResponse.php
@@ -674,7 +680,6 @@ lib/Model/EmployeePartner.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
-lib/Model/EmployeeSocialLinks.php
 lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
 lib/Model/Error.php
@@ -925,6 +930,7 @@ lib/Model/UpdateHrisCompanyResponse.php
 lib/Model/UpdateInvoiceItemsResponse.php
 lib/Model/UpdateInvoiceResponse.php
 lib/Model/UpdateItemResponse.php
+lib/Model/UpdateJobResponse.php
 lib/Model/UpdateLeadResponse.php
 lib/Model/UpdateLedgerAccountResponse.php
 lib/Model/UpdateLocationResponse.php
@@ -987,6 +993,7 @@ test/Model/ApiResourcesTest.php
 test/Model/ApiStatusTest.php
 test/Model/ApiTest.php
 test/Model/ApisFilterTest.php
+test/Model/ApplicantSocialLinksTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
 test/Model/AtsActivityTest.php
@@ -1065,6 +1072,7 @@ test/Model/CreateHrisCompanyResponseTest.php
 test/Model/CreateInvoiceItemResponseTest.php
 test/Model/CreateInvoiceResponseTest.php
 test/Model/CreateItemResponseTest.php
+test/Model/CreateJobResponseTest.php
 test/Model/CreateLeadResponseTest.php
 test/Model/CreateLedgerAccountResponseTest.php
 test/Model/CreateLocationResponseTest.php
@@ -1113,6 +1121,7 @@ test/Model/DeleteFolderResponseTest.php
 test/Model/DeleteHrisCompanyResponseTest.php
 test/Model/DeleteInvoiceResponseTest.php
 test/Model/DeleteItemResponseTest.php
+test/Model/DeleteJobResponseTest.php
 test/Model/DeleteLeadResponseTest.php
 test/Model/DeleteLedgerAccountResponseTest.php
 test/Model/DeleteLocationResponseTest.php
@@ -1148,7 +1157,6 @@ test/Model/EmployeePartnerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
-test/Model/EmployeeSocialLinksTest.php
 test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php
@@ -1399,6 +1407,7 @@ test/Model/UpdateHrisCompanyResponseTest.php
 test/Model/UpdateInvoiceItemsResponseTest.php
 test/Model/UpdateInvoiceResponseTest.php
 test/Model/UpdateItemResponseTest.php
+test/Model/UpdateJobResponseTest.php
 test/Model/UpdateLeadResponseTest.php
 test/Model/UpdateLedgerAccountResponseTest.php
 test/Model/UpdateLocationResponseTest.php
