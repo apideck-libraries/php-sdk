@@ -185,6 +185,7 @@ class ConnectorSetting implements ModelInterface, ArrayAccess, \JsonSerializable
     const TYPE_DATE = 'date';
     const TYPE_TIME = 'time';
     const TYPE_NUMBER = 'number';
+    const TYPE_PASSWORD = 'password';
 
     /**
      * Gets allowable values of the enum
@@ -207,6 +208,7 @@ class ConnectorSetting implements ModelInterface, ArrayAccess, \JsonSerializable
             self::TYPE_DATE,
             self::TYPE_TIME,
             self::TYPE_NUMBER,
+            self::TYPE_PASSWORD,
         ];
     }
 
