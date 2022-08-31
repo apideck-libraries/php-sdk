@@ -108,6 +108,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_id' => 'string',
         'dietary_preference' => 'string',
         'food_allergies' => 'string[]',
+        'tags' => 'string[]',
         'row_version' => 'string',
         'deleted' => 'bool',
         'updated_by' => 'string',
@@ -173,6 +174,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_id' => null,
         'dietary_preference' => null,
         'food_allergies' => null,
+        'tags' => null,
         'row_version' => null,
         'deleted' => null,
         'updated_by' => null,
@@ -257,6 +259,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_id' => 'tax_id',
         'dietary_preference' => 'dietary_preference',
         'food_allergies' => 'food_allergies',
+        'tags' => 'tags',
         'row_version' => 'row_version',
         'deleted' => 'deleted',
         'updated_by' => 'updated_by',
@@ -320,6 +323,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_id' => 'setTaxId',
         'dietary_preference' => 'setDietaryPreference',
         'food_allergies' => 'setFoodAllergies',
+        'tags' => 'setTags',
         'row_version' => 'setRowVersion',
         'deleted' => 'setDeleted',
         'updated_by' => 'setUpdatedBy',
@@ -383,6 +387,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_id' => 'getTaxId',
         'dietary_preference' => 'getDietaryPreference',
         'food_allergies' => 'getFoodAllergies',
+        'tags' => 'getTags',
         'row_version' => 'getRowVersion',
         'deleted' => 'getDeleted',
         'updated_by' => 'getUpdatedBy',
@@ -516,6 +521,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['tax_id'] = $data['tax_id'] ?? null;
         $this->container['dietary_preference'] = $data['dietary_preference'] ?? null;
         $this->container['food_allergies'] = $data['food_allergies'] ?? null;
+        $this->container['tags'] = $data['tags'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -1754,6 +1760,30 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFoodAllergies($food_allergies)
     {
         $this->container['food_allergies'] = $food_allergies;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return string[]|null
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param string[]|null $tags tags
+     *
+     * @return self
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

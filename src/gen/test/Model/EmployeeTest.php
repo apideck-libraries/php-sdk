@@ -521,6 +521,15 @@ class EmployeeTest extends TestCase
     }
 
     /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()
