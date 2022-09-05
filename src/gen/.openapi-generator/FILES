@@ -52,7 +52,6 @@ docs/Model/BalanceSheetFilter.md
 docs/Model/BalanceSheetLiabilities.md
 docs/Model/BalanceSheetLiabilitiesAccounts.md
 docs/Model/BankAccount.md
-docs/Model/BankAccountAchDetails.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
@@ -390,6 +389,8 @@ docs/Model/PayrollsFilter.md
 docs/Model/PhoneNumber.md
 docs/Model/Pipeline.md
 docs/Model/PipelineStages.md
+docs/Model/PosBankAccount.md
+docs/Model/PosBankAccountAchDetails.md
 docs/Model/PosPayment.md
 docs/Model/PosPaymentCardDetails.md
 docs/Model/PosPaymentExternalDetails.md
@@ -535,7 +536,6 @@ lib/Model/BalanceSheetFilter.php
 lib/Model/BalanceSheetLiabilities.php
 lib/Model/BalanceSheetLiabilitiesAccounts.php
 lib/Model/BankAccount.php
-lib/Model/BankAccountAchDetails.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
@@ -874,6 +874,8 @@ lib/Model/PayrollsFilter.php
 lib/Model/PhoneNumber.php
 lib/Model/Pipeline.php
 lib/Model/PipelineStages.php
+lib/Model/PosBankAccount.php
+lib/Model/PosBankAccountAchDetails.php
 lib/Model/PosPayment.php
 lib/Model/PosPaymentCardDetails.php
 lib/Model/PosPaymentExternalDetails.php
@@ -1014,7 +1016,6 @@ test/Model/BalanceSheetFilterTest.php
 test/Model/BalanceSheetLiabilitiesAccountsTest.php
 test/Model/BalanceSheetLiabilitiesTest.php
 test/Model/BalanceSheetTest.php
-test/Model/BankAccountAchDetailsTest.php
 test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
@@ -1353,6 +1354,8 @@ test/Model/PayrollsFilterTest.php
 test/Model/PhoneNumberTest.php
 test/Model/PipelineStagesTest.php
 test/Model/PipelineTest.php
+test/Model/PosBankAccountAchDetailsTest.php
+test/Model/PosBankAccountTest.php
 test/Model/PosPaymentCardDetailsTest.php
 test/Model/PosPaymentExternalDetailsTest.php
 test/Model/PosPaymentTest.php

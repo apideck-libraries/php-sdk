@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 `status` | **string** | Status of this payment. | [optional] 
 `cash` | [**\Apideck\Client\Model\CashDetails**](CashDetails.md) |  | [optional] 
 `card_details` | [**\Apideck\Client\Model\PosPaymentCardDetails**](PosPaymentCardDetails.md) |  | [optional] 
-`bank_account` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
+`bank_account` | [**\Apideck\Client\Model\PosBankAccount**](PosBankAccount.md) |  | [optional] 
 `wallet` | [**\Apideck\Client\Model\WalletDetails**](WalletDetails.md) |  | [optional] 
 `external_details` | [**\Apideck\Client\Model\PosPaymentExternalDetails**](PosPaymentExternalDetails.md) |  | [optional] 
 `service_charges` | [**\Apideck\Client\Model\ServiceCharge[]**](ServiceCharge.md) | Optional service charges or gratuity tip applied to the order. | [optional] 
@@ -109,7 +109,7 @@ Name | Type | Description | Notes
 
 * [`CashDetails`](CashDetails.md)
 * [`PosPaymentCardDetails`](PosPaymentCardDetails.md)
-* [`BankAccount`](BankAccount.md)
+* [`PosBankAccount`](PosBankAccount.md)
 * [`WalletDetails`](WalletDetails.md)
 * [`PosPaymentExternalDetails`](PosPaymentExternalDetails.md)
 * [`ServiceCharge`](ServiceCharge.md)
