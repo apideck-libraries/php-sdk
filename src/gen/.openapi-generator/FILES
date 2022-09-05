@@ -80,6 +80,7 @@ docs/Model/ConnectorSetting.md
 docs/Model/ConnectorStatus.md
 docs/Model/ConnectorSupportedEvents.md
 docs/Model/ConnectorSupportedResources.md
+docs/Model/ConnectorTlsSupport.md
 docs/Model/ConnectorUnifiedApis.md
 docs/Model/ConnectorsFilter.md
 docs/Model/Consumer.md
@@ -562,6 +563,7 @@ lib/Model/ConnectorSetting.php
 lib/Model/ConnectorStatus.php
 lib/Model/ConnectorSupportedEvents.php
 lib/Model/ConnectorSupportedResources.php
+lib/Model/ConnectorTlsSupport.php
 lib/Model/ConnectorUnifiedApis.php
 lib/Model/ConnectorsFilter.php
 lib/Model/Consumer.php
@@ -1041,6 +1043,7 @@ test/Model/ConnectorStatusTest.php
 test/Model/ConnectorSupportedEventsTest.php
 test/Model/ConnectorSupportedResourcesTest.php
 test/Model/ConnectorTest.php
+test/Model/ConnectorTlsSupportTest.php
 test/Model/ConnectorUnifiedApisTest.php
 test/Model/ConnectorsFilterTest.php
 test/Model/ConsumerConnectionTest.php

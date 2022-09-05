@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 `configurable_resources` | **string[]** | List of resources that have settings that can be configured. | [optional] 
 `supported_events` | [**\Apideck\Client\Model\ConnectorSupportedEvents[]**](ConnectorSupportedEvents.md) | List of events that are supported on the connector. Events are delivered via Webhooks. | [optional] 
 `docs` | [**\Apideck\Client\Model\ConnectorDoc[]**](ConnectorDoc.md) |  | [optional] 
+`tls_support` | [**\Apideck\Client\Model\ConnectorTlsSupport**](ConnectorTlsSupport.md) |  | [optional] 
 
 
 
@@ -90,6 +91,7 @@ Name | Type | Description | Notes
 
 * [`ConnectorSupportedEvents`](ConnectorSupportedEvents.md)
 * [`ConnectorDoc`](ConnectorDoc.md)
+* [`ConnectorTlsSupport`](ConnectorTlsSupport.md)
 
 ---
 
