@@ -59,7 +59,13 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'company_id' => 'string'
+        'company_id' => 'string',
+        'email' => 'string',
+        'first_name' => 'string',
+        'title' => 'string',
+        'last_name' => 'string',
+        'manager_id' => 'string',
+        'employment_status' => 'string'
     ];
 
     /**
@@ -70,7 +76,13 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'company_id' => null
+        'company_id' => null,
+        'email' => null,
+        'first_name' => null,
+        'title' => null,
+        'last_name' => null,
+        'manager_id' => null,
+        'employment_status' => null
     ];
 
     /**
@@ -100,7 +112,13 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'company_id' => 'company_id'
+        'company_id' => 'company_id',
+        'email' => 'email',
+        'first_name' => 'first_name',
+        'title' => 'title',
+        'last_name' => 'last_name',
+        'manager_id' => 'manager_id',
+        'employment_status' => 'employment_status'
     ];
 
     /**
@@ -109,7 +127,13 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'company_id' => 'setCompanyId'
+        'company_id' => 'setCompanyId',
+        'email' => 'setEmail',
+        'first_name' => 'setFirstName',
+        'title' => 'setTitle',
+        'last_name' => 'setLastName',
+        'manager_id' => 'setManagerId',
+        'employment_status' => 'setEmploymentStatus'
     ];
 
     /**
@@ -118,7 +142,13 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'company_id' => 'getCompanyId'
+        'company_id' => 'getCompanyId',
+        'email' => 'getEmail',
+        'first_name' => 'getFirstName',
+        'title' => 'getTitle',
+        'last_name' => 'getLastName',
+        'manager_id' => 'getManagerId',
+        'employment_status' => 'getEmploymentStatus'
     ];
 
     /**
@@ -162,6 +192,25 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const EMPLOYMENT_STATUS_ACTIVE = 'active';
+    const EMPLOYMENT_STATUS_INACTIVE = 'inactive';
+    const EMPLOYMENT_STATUS_TERMINATED = 'terminated';
+    const EMPLOYMENT_STATUS_OTHER = 'other';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getEmploymentStatusAllowableValues()
+    {
+        return [
+            self::EMPLOYMENT_STATUS_ACTIVE,
+            self::EMPLOYMENT_STATUS_INACTIVE,
+            self::EMPLOYMENT_STATUS_TERMINATED,
+            self::EMPLOYMENT_STATUS_OTHER,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -179,6 +228,12 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['company_id'] = $data['company_id'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
+        $this->container['first_name'] = $data['first_name'] ?? null;
+        $this->container['title'] = $data['title'] ?? null;
+        $this->container['last_name'] = $data['last_name'] ?? null;
+        $this->container['manager_id'] = $data['manager_id'] ?? null;
+        $this->container['employment_status'] = $data['employment_status'] ?? null;
     }
 
     /**
@@ -189,6 +244,15 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getEmploymentStatusAllowableValues();
+        if (!is_null($this->container['employment_status']) && !in_array($this->container['employment_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'employment_status', must be one of '%s'",
+                $this->container['employment_status'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -225,6 +289,160 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyId($company_id)
     {
         $this->container['company_id'] = $company_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     *
+     * @return string|null
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string|null $email Email to filter on
+     *
+     * @return self
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     *
+     * @param string|null $first_name First Name to filter on
+     *
+     * @return self
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title Job title to filter on
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     *
+     * @param string|null $last_name Last Name to filter on
+     *
+     * @return self
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets manager_id
+     *
+     * @return string|null
+     */
+    public function getManagerId()
+    {
+        return $this->container['manager_id'];
+    }
+
+    /**
+     * Sets manager_id
+     *
+     * @param string|null $manager_id Manager id to filter on
+     *
+     * @return self
+     */
+    public function setManagerId($manager_id)
+    {
+        $this->container['manager_id'] = $manager_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets employment_status
+     *
+     * @return string|null
+     */
+    public function getEmploymentStatus()
+    {
+        return $this->container['employment_status'];
+    }
+
+    /**
+     * Sets employment_status
+     *
+     * @param string|null $employment_status Employment status to filter on
+     *
+     * @return self
+     */
+    public function setEmploymentStatus($employment_status)
+    {
+        $allowedValues = $this->getEmploymentStatusAllowableValues();
+        if (!is_null($employment_status) && !in_array($employment_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'employment_status', must be one of '%s'",
+                    $employment_status,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['employment_status'] = $employment_status;
 
         return $this;
     }

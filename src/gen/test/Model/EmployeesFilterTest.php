@@ -87,4 +87,58 @@ class EmployeesFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "manager_id"
+     */
+    public function testPropertyManagerId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "employment_status"
+     */
+    public function testPropertyEmploymentStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
