@@ -60,6 +60,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'amount' => 'mixed',
         'charge_back_amount' => 'mixed'
     ];
 
@@ -71,6 +72,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'amount' => null,
         'charge_back_amount' => null
     ];
 
@@ -101,6 +103,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'amount' => 'amount',
         'charge_back_amount' => 'charge_back_amount'
     ];
 
@@ -110,6 +113,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'amount' => 'setAmount',
         'charge_back_amount' => 'setChargeBackAmount'
     ];
 
@@ -119,6 +123,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'amount' => 'getAmount',
         'charge_back_amount' => 'getChargeBackAmount'
     ];
 
@@ -179,6 +184,7 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['amount'] = $data['amount'] ?? null;
         $this->container['charge_back_amount'] = $data['charge_back_amount'] ?? null;
     }
 
@@ -205,6 +211,30 @@ class CashDetails implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets amount
+     *
+     * @return mixed|null
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param mixed|null $amount The amount of cash given by the customer.
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
 
     /**
      * Gets charge_back_amount

@@ -80,6 +80,15 @@ class CashDetailsTest extends TestCase
     }
 
     /**
+     * Test attribute "amount"
+     */
+    public function testPropertyAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "charge_back_amount"
      */
     public function testPropertyChargeBackAmount()
