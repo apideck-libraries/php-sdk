@@ -134,6 +134,7 @@ docs/Model/CreateSharedLinkResponse.md
 docs/Model/CreateSupplierResponse.md
 docs/Model/CreateTaxRateResponse.md
 docs/Model/CreateTenderResponse.md
+docs/Model/CreateTimeOffRequestResponse.md
 docs/Model/CreateUploadSessionRequest.md
 docs/Model/CreateUploadSessionResponse.md
 docs/Model/CreateUserResponse.md
@@ -181,6 +182,7 @@ docs/Model/DeleteSharedLinkResponse.md
 docs/Model/DeleteSupplierResponse.md
 docs/Model/DeleteTaxRateResponse.md
 docs/Model/DeleteTenderResponse.md
+docs/Model/DeleteTimeOffRequestResponse.md
 docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
@@ -309,6 +311,8 @@ docs/Model/GetTaxRateResponse.md
 docs/Model/GetTaxRatesResponse.md
 docs/Model/GetTenderResponse.md
 docs/Model/GetTendersResponse.md
+docs/Model/GetTimeOffRequestResponse.md
+docs/Model/GetTimeOffRequestsResponse.md
 docs/Model/GetUploadSessionResponse.md
 docs/Model/GetUserResponse.md
 docs/Model/GetUsersResponse.md
@@ -424,6 +428,9 @@ docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
 docs/Model/Tender.md
+docs/Model/TimeOffRequest.md
+docs/Model/TimeOffRequestNotes.md
+docs/Model/TimeOffRequestsFilter.md
 docs/Model/TooManyRequestsResponse.md
 docs/Model/TooManyRequestsResponseDetail.md
 docs/Model/UnauthorizedResponse.md
@@ -470,6 +477,7 @@ docs/Model/UpdateSharedLinkResponse.md
 docs/Model/UpdateSupplierResponse.md
 docs/Model/UpdateTaxRateResponse.md
 docs/Model/UpdateTenderResponse.md
+docs/Model/UpdateTimeOffRequestResponse.md
 docs/Model/UpdateUploadSessionResponse.md
 docs/Model/UpdateUserResponse.md
 docs/Model/UpdateWebhookRequest.md
@@ -618,6 +626,7 @@ lib/Model/CreateSharedLinkResponse.php
 lib/Model/CreateSupplierResponse.php
 lib/Model/CreateTaxRateResponse.php
 lib/Model/CreateTenderResponse.php
+lib/Model/CreateTimeOffRequestResponse.php
 lib/Model/CreateUploadSessionRequest.php
 lib/Model/CreateUploadSessionResponse.php
 lib/Model/CreateUserResponse.php
@@ -665,6 +674,7 @@ lib/Model/DeleteSharedLinkResponse.php
 lib/Model/DeleteSupplierResponse.php
 lib/Model/DeleteTaxRateResponse.php
 lib/Model/DeleteTenderResponse.php
+lib/Model/DeleteTimeOffRequestResponse.php
 lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
@@ -793,6 +803,8 @@ lib/Model/GetTaxRateResponse.php
 lib/Model/GetTaxRatesResponse.php
 lib/Model/GetTenderResponse.php
 lib/Model/GetTendersResponse.php
+lib/Model/GetTimeOffRequestResponse.php
+lib/Model/GetTimeOffRequestsResponse.php
 lib/Model/GetUploadSessionResponse.php
 lib/Model/GetUserResponse.php
 lib/Model/GetUsersResponse.php
@@ -909,6 +921,9 @@ lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
 lib/Model/Tender.php
+lib/Model/TimeOffRequest.php
+lib/Model/TimeOffRequestNotes.php
+lib/Model/TimeOffRequestsFilter.php
 lib/Model/TooManyRequestsResponse.php
 lib/Model/TooManyRequestsResponseDetail.php
 lib/Model/UnauthorizedResponse.php
@@ -955,6 +970,7 @@ lib/Model/UpdateSharedLinkResponse.php
 lib/Model/UpdateSupplierResponse.php
 lib/Model/UpdateTaxRateResponse.php
 lib/Model/UpdateTenderResponse.php
+lib/Model/UpdateTimeOffRequestResponse.php
 lib/Model/UpdateUploadSessionResponse.php
 lib/Model/UpdateUserResponse.php
 lib/Model/UpdateWebhookRequest.php
@@ -1099,6 +1115,7 @@ test/Model/CreateSharedLinkResponseTest.php
 test/Model/CreateSupplierResponseTest.php
 test/Model/CreateTaxRateResponseTest.php
 test/Model/CreateTenderResponseTest.php
+test/Model/CreateTimeOffRequestResponseTest.php
 test/Model/CreateUploadSessionRequestTest.php
 test/Model/CreateUploadSessionResponseTest.php
 test/Model/CreateUserResponseTest.php
@@ -1146,6 +1163,7 @@ test/Model/DeleteSharedLinkResponseTest.php
 test/Model/DeleteSupplierResponseTest.php
 test/Model/DeleteTaxRateResponseTest.php
 test/Model/DeleteTenderResponseTest.php
+test/Model/DeleteTimeOffRequestResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
@@ -1274,6 +1292,8 @@ test/Model/GetTaxRateResponseTest.php
 test/Model/GetTaxRatesResponseTest.php
 test/Model/GetTenderResponseTest.php
 test/Model/GetTendersResponseTest.php
+test/Model/GetTimeOffRequestResponseTest.php
+test/Model/GetTimeOffRequestsResponseTest.php
 test/Model/GetUploadSessionResponseTest.php
 test/Model/GetUserResponseTest.php
 test/Model/GetUsersResponseTest.php
@@ -1389,6 +1409,9 @@ test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
 test/Model/TenderTest.php
+test/Model/TimeOffRequestNotesTest.php
+test/Model/TimeOffRequestTest.php
+test/Model/TimeOffRequestsFilterTest.php
 test/Model/TooManyRequestsResponseDetailTest.php
 test/Model/TooManyRequestsResponseTest.php
 test/Model/UnauthorizedResponseTest.php
@@ -1435,6 +1458,7 @@ test/Model/UpdateSharedLinkResponseTest.php
 test/Model/UpdateSupplierResponseTest.php
 test/Model/UpdateTaxRateResponseTest.php
 test/Model/UpdateTenderResponseTest.php
+test/Model/UpdateTimeOffRequestResponseTest.php
 test/Model/UpdateUploadSessionResponseTest.php
 test/Model/UpdateUserResponseTest.php
 test/Model/UpdateWebhookRequestTest.php
