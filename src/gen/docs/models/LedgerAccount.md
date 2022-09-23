@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 `status` | **string** | The status of the account. | [optional] 
 `header` | **bool** | Whether the account is a header or not. | [optional] 
 `bank_account` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
-`categories` | **object[]** | The categories of the account. | [optional] 
+`categories` | [**\Apideck\Client\Model\LedgerAccountCategories[]**](LedgerAccountCategories.md) | The categories of the account. | [optional] 
 `parent_account` | [**\Apideck\Client\Model\LedgerAccountParentAccount**](LedgerAccountParentAccount.md) |  | [optional] 
 `sub_account` | **bool** | Whether the account is a sub account or not. | [optional] 
 `sub_accounts` | **object[]** | The sub accounts of the account. | [optional] 
@@ -144,7 +144,7 @@ Name | Type | Description | Notes
 
 
 * [`BankAccount`](BankAccount.md)
-
+* [`LedgerAccountCategories`](LedgerAccountCategories.md)
 * [`LedgerAccountParentAccount`](LedgerAccountParentAccount.md)
 
 

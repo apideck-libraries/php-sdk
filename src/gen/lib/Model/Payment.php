@@ -74,7 +74,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'reconciled' => 'bool',
         'status' => 'string',
         'type' => 'string',
-        'allocations' => 'object[]',
+        'allocations' => '\Apideck\Client\Model\PaymentAllocations[]',
         'note' => 'string',
         'row_version' => 'string',
         'created_at' => '\DateTime',
@@ -776,7 +776,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets allocations
      *
-     * @return object[]|null
+     * @return \Apideck\Client\Model\PaymentAllocations[]|null
      */
     public function getAllocations()
     {
@@ -786,7 +786,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets allocations
      *
-     * @param object[]|null $allocations allocations
+     * @param \Apideck\Client\Model\PaymentAllocations[]|null $allocations allocations
      *
      * @return self
      */

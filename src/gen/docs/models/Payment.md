@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 `reconciled` | **bool** | Payment has been reconciled | [optional] 
 `status` | **string** | Status of payment | [optional] 
 `type` | **string** | Type of payment | [optional] 
-`allocations` | **object[]** |  | [optional] 
+`allocations` | [**\Apideck\Client\Model\PaymentAllocations[]**](PaymentAllocations.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
 `row_version` | **string** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
@@ -84,7 +84,7 @@ Name | Type | Description | Notes
 
 
 
-
+* [`PaymentAllocations`](PaymentAllocations.md)
 
 
 

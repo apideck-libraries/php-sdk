@@ -79,7 +79,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'string',
         'header' => 'bool',
         'bank_account' => '\Apideck\Client\Model\BankAccount',
-        'categories' => 'object[]',
+        'categories' => '\Apideck\Client\Model\LedgerAccountCategories[]',
         'parent_account' => '\Apideck\Client\Model\LedgerAccountParentAccount',
         'sub_account' => 'bool',
         'sub_accounts' => 'object[]',
@@ -1016,7 +1016,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return object[]|null
+     * @return \Apideck\Client\Model\LedgerAccountCategories[]|null
      */
     public function getCategories()
     {
@@ -1026,7 +1026,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param object[]|null $categories The categories of the account.
+     * @param \Apideck\Client\Model\LedgerAccountCategories[]|null $categories The categories of the account.
      *
      * @return self
      */
