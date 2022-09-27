@@ -47,6 +47,8 @@
 
 * `POS` (value: `'pos'`)
 
+* `PROJECT_MANAGEMENT` (value: `'project-management'`)
+
 
 ---
 
