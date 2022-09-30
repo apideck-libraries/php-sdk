@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 `allocations` | [**\Apideck\Client\Model\PaymentAllocations[]**](PaymentAllocations.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
 `row_version` | **string** |  | [optional] 
+`display_id` | **string** | Payment id to be displayed. | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 
@@ -85,6 +88,9 @@ Name | Type | Description | Notes
 
 
 * [`PaymentAllocations`](PaymentAllocations.md)
+
+
+
 
 
 

@@ -77,6 +77,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => '\Apideck\Client\Model\PaymentAllocations[]',
         'note' => 'string',
         'row_version' => 'string',
+        'display_id' => 'string',
+        'updated_by' => 'string',
+        'created_by' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -107,6 +110,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => null,
         'note' => null,
         'row_version' => null,
+        'display_id' => null,
+        'updated_by' => null,
+        'created_by' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time'
     ];
@@ -156,6 +162,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'allocations',
         'note' => 'note',
         'row_version' => 'row_version',
+        'display_id' => 'display_id',
+        'updated_by' => 'updated_by',
+        'created_by' => 'created_by',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     ];
@@ -184,6 +193,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'setAllocations',
         'note' => 'setNote',
         'row_version' => 'setRowVersion',
+        'display_id' => 'setDisplayId',
+        'updated_by' => 'setUpdatedBy',
+        'created_by' => 'setCreatedBy',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -212,6 +224,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'getAllocations',
         'note' => 'getNote',
         'row_version' => 'getRowVersion',
+        'display_id' => 'getDisplayId',
+        'updated_by' => 'getUpdatedBy',
+        'created_by' => 'getCreatedBy',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -337,6 +352,9 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['allocations'] = $data['allocations'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
+        $this->container['display_id'] = $data['display_id'] ?? null;
+        $this->container['updated_by'] = $data['updated_by'] ?? null;
+        $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
     }
@@ -841,6 +859,78 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRowVersion($row_version)
     {
         $this->container['row_version'] = $row_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_id
+     *
+     * @return string|null
+     */
+    public function getDisplayId()
+    {
+        return $this->container['display_id'];
+    }
+
+    /**
+     * Sets display_id
+     *
+     * @param string|null $display_id Payment id to be displayed.
+     *
+     * @return self
+     */
+    public function setDisplayId($display_id)
+    {
+        $this->container['display_id'] = $display_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by
+     *
+     * @return string|null
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updated_by'];
+    }
+
+    /**
+     * Sets updated_by
+     *
+     * @param string|null $updated_by updated_by
+     *
+     * @return self
+     */
+    public function setUpdatedBy($updated_by)
+    {
+        $this->container['updated_by'] = $updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
+     *
+     * @return string|null
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     *
+     * @param string|null $created_by created_by
+     *
+     * @return self
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
 
         return $this;
     }
