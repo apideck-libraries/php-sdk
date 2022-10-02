@@ -29,7 +29,6 @@ docs/Model/Api.md
 docs/Model/ApiResource.md
 docs/Model/ApiResourceCoverage.md
 docs/Model/ApiResourceCoverageCoverage.md
-docs/Model/ApiResourceCoverageSupportedFields.md
 docs/Model/ApiResourceLinkedResources.md
 docs/Model/ApiResources.md
 docs/Model/ApiStatus.md
@@ -426,6 +425,8 @@ docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
 docs/Model/Supplier.md
+docs/Model/SupportedProperty.md
+docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
@@ -523,7 +524,6 @@ lib/Model/Api.php
 lib/Model/ApiResource.php
 lib/Model/ApiResourceCoverage.php
 lib/Model/ApiResourceCoverageCoverage.php
-lib/Model/ApiResourceCoverageSupportedFields.php
 lib/Model/ApiResourceLinkedResources.php
 lib/Model/ApiResources.php
 lib/Model/ApiStatus.php
@@ -921,6 +921,8 @@ lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
 lib/Model/Supplier.php
+lib/Model/SupportedProperty.php
+lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
@@ -1011,7 +1013,6 @@ test/Model/ActivityAttendeeTest.php
 test/Model/ActivityTest.php
 test/Model/AddressTest.php
 test/Model/ApiResourceCoverageCoverageTest.php
-test/Model/ApiResourceCoverageSupportedFieldsTest.php
 test/Model/ApiResourceCoverageTest.php
 test/Model/ApiResourceLinkedResourcesTest.php
 test/Model/ApiResourceTest.php
@@ -1411,6 +1412,8 @@ test/Model/SocialLinkTest.php
 test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
 test/Model/SupplierTest.php
+test/Model/SupportedPropertyChildPropertiesTest.php
+test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
