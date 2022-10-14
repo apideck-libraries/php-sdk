@@ -37,6 +37,7 @@ docs/Model/Applicant.md
 docs/Model/ApplicantSocialLinks.md
 docs/Model/ApplicantWebsites.md
 docs/Model/AtsActivity.md
+docs/Model/AtsEventType.md
 docs/Model/AuthType.md
 docs/Model/BadRequestResponse.md
 docs/Model/BalanceSheet.md
@@ -533,6 +534,7 @@ lib/Model/Applicant.php
 lib/Model/ApplicantSocialLinks.php
 lib/Model/ApplicantWebsites.php
 lib/Model/AtsActivity.php
+lib/Model/AtsEventType.php
 lib/Model/AuthType.php
 lib/Model/BadRequestResponse.php
 lib/Model/BalanceSheet.php
@@ -1026,6 +1028,7 @@ test/Model/ApplicantSocialLinksTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
 test/Model/AtsActivityTest.php
+test/Model/AtsEventTypeTest.php
 test/Model/AuthTypeTest.php
 test/Model/BadRequestResponseTest.php
 test/Model/BalanceSheetAssetsCurrentAssetsAccountsTest.php
