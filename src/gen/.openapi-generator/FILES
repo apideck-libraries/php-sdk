@@ -382,6 +382,7 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/Owner.md
+docs/Model/PaginationCoverage.md
 docs/Model/Passthrough.md
 docs/Model/Payment.md
 docs/Model/PaymentAllocations.md
@@ -878,6 +879,7 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/Owner.php
+lib/Model/PaginationCoverage.php
 lib/Model/Passthrough.php
 lib/Model/Payment.php
 lib/Model/PaymentAllocations.php
@@ -1369,6 +1371,7 @@ test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OwnerTest.php
+test/Model/PaginationCoverageTest.php
 test/Model/PassthroughTest.php
 test/Model/PaymentAllocationsTest.php
 test/Model/PaymentCardTest.php
