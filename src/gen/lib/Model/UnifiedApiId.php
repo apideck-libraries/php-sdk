@@ -73,8 +73,6 @@ class UnifiedApiId
 
     const TRANSACTIONAL_EMAIL = 'transactional-email';
 
-    const HCM = 'hcm';
-
     const FORM = 'form';
 
     const CSP = 'csp';
@@ -113,7 +111,6 @@ class UnifiedApiId
             self::CUSTOMER_SUPPORT,
             self::TIME_REGISTRATION,
             self::TRANSACTIONAL_EMAIL,
-            self::HCM,
             self::FORM,
             self::CSP,
             self::EMAIL_MARKETING,
