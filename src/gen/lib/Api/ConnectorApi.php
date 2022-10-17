@@ -1660,7 +1660,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     * @return string|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
     public function connectorDocsOne($id, $doc_id, $x_apideck_app_id = null)
     {
@@ -1679,7 +1679,7 @@ class ConnectorApi
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Apideck\Client\Model\GetConnectorResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectorDocsOneWithHttpInfo($id, $doc_id, $x_apideck_app_id = null)
     {
@@ -1722,14 +1722,14 @@ class ConnectorApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Apideck\Client\Model\GetConnectorResponse' === '\SplFileObject') {
+                    if ('string' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetConnectorResponse', []),
+                        ObjectSerializer::deserialize($content, 'string', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1783,7 +1783,7 @@ class ConnectorApi
                     ];
             }
 
-            $returnType = '\Apideck\Client\Model\GetConnectorResponse';
+            $returnType = 'string';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1801,7 +1801,7 @@ class ConnectorApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Apideck\Client\Model\GetConnectorResponse',
+                        'string',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1879,7 +1879,7 @@ class ConnectorApi
      */
     public function connectorDocsOneAsyncWithHttpInfo($id, $doc_id, $x_apideck_app_id = null)
     {
-        $returnType = '\Apideck\Client\Model\GetConnectorResponse';
+        $returnType = 'string';
         $request = $this->connectorDocsOneRequest($id, $doc_id, $x_apideck_app_id);
 
         return $this->client
@@ -1973,11 +1973,11 @@ class ConnectorApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['text/markdown', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['text/markdown', 'application/json'],
                 []
             );
         }

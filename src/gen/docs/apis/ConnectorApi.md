@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Response Type
 
-[`\Apideck\Client\Model\GetConnectorResponse`](../models/\Apideck\Client\Model\GetConnectorResponse.md)
+**string**
 
 
 
