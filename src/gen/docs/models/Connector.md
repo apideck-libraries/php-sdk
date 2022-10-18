@@ -22,9 +22,9 @@ Name | Type | Description | Notes
 `settings` | [**\Apideck\Client\Model\ConnectorSetting[]**](ConnectorSetting.md) |  | [optional] 
 `service_id` | **string** | Service provider identifier | [optional] 
 `unified_apis` | [**\Apideck\Client\Model\ConnectorUnifiedApis[]**](ConnectorUnifiedApis.md) | List of Unified APIs that feature this connector. | [optional] 
-`supported_resources` | [**\Apideck\Client\Model\ConnectorSupportedResources[]**](ConnectorSupportedResources.md) | List of resources that are supported on the connector. | [optional] 
+`supported_resources` | [**\Apideck\Client\Model\LinkedConnectorResource[]**](LinkedConnectorResource.md) | List of resources that are supported on the connector. | [optional] 
 `configurable_resources` | **string[]** | List of resources that have settings that can be configured. | [optional] 
-`supported_events` | [**\Apideck\Client\Model\ConnectorSupportedEvents[]**](ConnectorSupportedEvents.md) | List of events that are supported on the connector. Events are delivered via Webhooks. | [optional] 
+`supported_events` | [**\Apideck\Client\Model\ConnectorEvent[]**](ConnectorEvent.md) | List of events that are supported on the connector across all Unified APIs. | [optional] 
 `docs` | [**\Apideck\Client\Model\ConnectorDoc[]**](ConnectorDoc.md) |  | [optional] 
 `tls_support` | [**\Apideck\Client\Model\ConnectorTlsSupport**](ConnectorTlsSupport.md) |  | [optional] 
 
@@ -89,9 +89,9 @@ Name | Type | Description | Notes
 * [`ConnectorSetting`](ConnectorSetting.md)
 
 * [`ConnectorUnifiedApis`](ConnectorUnifiedApis.md)
-* [`ConnectorSupportedResources`](ConnectorSupportedResources.md)
+* [`LinkedConnectorResource`](LinkedConnectorResource.md)
 
-* [`ConnectorSupportedEvents`](ConnectorSupportedEvents.md)
+* [`ConnectorEvent`](ConnectorEvent.md)
 * [`ConnectorDoc`](ConnectorDoc.md)
 * [`ConnectorTlsSupport`](ConnectorTlsSupport.md)
 

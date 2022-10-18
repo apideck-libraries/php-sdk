@@ -341,6 +341,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the record you are acting upon. |
  **resource_id** | **string**| ID of the resource you are acting upon. |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **unified_api** | [\Apideck\Client\Model\UnifiedApiId](../models/\Apideck\Client\Model\UnifiedApiId.md)| ID of the Doc |
 
 
 
