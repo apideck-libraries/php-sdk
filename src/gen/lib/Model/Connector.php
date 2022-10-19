@@ -274,6 +274,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     const AUTH_TYPE_NONE = 'none';
     const OAUTH_GRANT_TYPE_AUTHORIZATION_CODE = 'authorization_code';
     const OAUTH_GRANT_TYPE_CLIENT_CREDENTIALS = 'client_credentials';
+    const OAUTH_GRANT_TYPE_PASSWORD = 'password';
     const OAUTH_CREDENTIALS_SOURCE_INTEGRATION = 'integration';
     const OAUTH_CREDENTIALS_SOURCE_CONNECTION = 'connection';
 
@@ -303,6 +304,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         return [
             self::OAUTH_GRANT_TYPE_AUTHORIZATION_CODE,
             self::OAUTH_GRANT_TYPE_CLIENT_CREDENTIALS,
+            self::OAUTH_GRANT_TYPE_PASSWORD,
         ];
     }
 

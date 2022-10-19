@@ -47,6 +47,8 @@ class OAuthGrantType
 
     const CLIENT_CREDENTIALS = 'client_credentials';
 
+    const PASSWORD = 'password';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -55,7 +57,8 @@ class OAuthGrantType
     {
         return [
             self::AUTHORIZATION_CODE,
-            self::CLIENT_CREDENTIALS
+            self::CLIENT_CREDENTIALS,
+            self::PASSWORD
         ];
     }
 }

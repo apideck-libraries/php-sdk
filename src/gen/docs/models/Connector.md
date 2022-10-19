@@ -57,6 +57,8 @@ Name | Type | Description | Notes
 
 * `CLIENT_CREDENTIALS` (value: `'client_credentials'`)
 
+* `PASSWORD` (value: `'password'`)
+
 
 
 
