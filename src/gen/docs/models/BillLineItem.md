@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 `unit_price` | **float** |  | [optional] 
 `unit_of_measure` | **string** | Description of the unit type the item is sold as, ie: kg, hour. | [optional] 
 `discount_percentage` | **float** | Discount percentage | [optional] 
+`location_id` | **string** | Location id | [optional] 
+`department_id` | **string** | Department id | [optional] 
 `item` | [**\Apideck\Client\Model\LinkedInvoiceItem**](LinkedInvoiceItem.md) |  | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
@@ -38,6 +40,8 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
+
+
 
 
 
