@@ -1,4 +1,4 @@
-# Apideck.ConsumerWebhook
+# Apideck.ConnectionWebhook
 
 ### Description
 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 
 <a name="STATUS"></a>
-## Enum: ConsumerWebhook.status
+## Enum: ConnectionWebhook.status
 
 
 * `ENABLED` (value: `'enabled'`)
@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 
 
 <a name="EVENTS[]"></a>
-## Enum: ConsumerWebhook.events
+## Enum: ConnectionWebhook.events
 
 
 * `STAR` (value: `'*'`)
@@ -81,6 +81,8 @@ Name | Type | Description | Notes
 * `VAULT_CONNECTION_CREATED` (value: `'vault.connection.created'`)
 
 * `VAULT_CONNECTION_UPDATED` (value: `'vault.connection.updated'`)
+
+* `VAULT_CONNECTION_DISABLED` (value: `'vault.connection.disabled'`)
 
 * `VAULT_CONNECTION_DELETED` (value: `'vault.connection.deleted'`)
 
