@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 `website_url` | **string** | Link to the connector's website. | [optional] 
 `auth_type` | **string** | Type of authorization used by the connector | [optional] 
 `auth_only` | **bool** | Indicates whether a connector only supports authentication. In this case the connector is not mapped to a Unified API, but can be used with the Proxy API | [optional] 
+`blind_mapped` | **bool** | Set to &#x60;true&#x60; when connector was implemented from downstream docs only and without API access. This state indicates that integration will require Apideck support, and access to downstream API to validate mapping quality. | [optional] 
+`webhook_support_type` | [**\Apideck\Client\Model\ConnectorWebhookSupportType**](ConnectorWebhookSupportType.md) |  | [optional] 
 `oauth_grant_type` | **string** | OAuth grant type used by the connector. More info: https://oauth.net/2/grant-types | [optional] 
 `oauth_credentials_source` | **string** | Location of the OAuth client credentials. For most connectors the OAuth client credentials are stored on integration and managed by the application owner. For others they are stored on connection and managed by the consumer in Vault. | [optional] 
 `oauth_scopes` | [**\Apideck\Client\Model\ConnectorOauthScopes[]**](ConnectorOauthScopes.md) | List of OAuth Scopes available for this connector. | [optional] 
@@ -21,10 +23,11 @@ Name | Type | Description | Notes
 `settings` | [**\Apideck\Client\Model\ConnectorSetting[]**](ConnectorSetting.md) |  | [optional] 
 `service_id` | **string** | Service provider identifier | [optional] 
 `unified_apis` | [**\Apideck\Client\Model\ConnectorUnifiedApis[]**](ConnectorUnifiedApis.md) | List of Unified APIs that feature this connector. | [optional] 
-`supported_resources` | [**\Apideck\Client\Model\ConnectorSupportedResources[]**](ConnectorSupportedResources.md) | List of resources that are supported on the connector. | [optional] 
+`supported_resources` | [**\Apideck\Client\Model\LinkedConnectorResource[]**](LinkedConnectorResource.md) | List of resources that are supported on the connector. | [optional] 
 `configurable_resources` | **string[]** | List of resources that have settings that can be configured. | [optional] 
-`supported_events` | [**\Apideck\Client\Model\ConnectorSupportedEvents[]**](ConnectorSupportedEvents.md) | List of events that are supported on the connector. Events are delivered via Webhooks. | [optional] 
+`supported_events` | [**\Apideck\Client\Model\ConnectorEvent[]**](ConnectorEvent.md) | List of events that are supported on the connector across all Unified APIs. | [optional] 
 `docs` | [**\Apideck\Client\Model\ConnectorDoc[]**](ConnectorDoc.md) |  | [optional] 
+`tls_support` | [**\Apideck\Client\Model\ConnectorTlsSupport**](ConnectorTlsSupport.md) |  | [optional] 
 
 
 
@@ -55,6 +58,8 @@ Name | Type | Description | Notes
 
 * `CLIENT_CREDENTIALS` (value: `'client_credentials'`)
 
+* `PASSWORD` (value: `'password'`)
+
 
 
 
@@ -80,16 +85,19 @@ Name | Type | Description | Notes
 
 
 
+* [`ConnectorWebhookSupportType`](ConnectorWebhookSupportType.md)
+
 
 * [`ConnectorOauthScopes`](ConnectorOauthScopes.md)
 
 * [`ConnectorSetting`](ConnectorSetting.md)
 
 * [`ConnectorUnifiedApis`](ConnectorUnifiedApis.md)
-* [`ConnectorSupportedResources`](ConnectorSupportedResources.md)
+* [`LinkedConnectorResource`](LinkedConnectorResource.md)
 
-* [`ConnectorSupportedEvents`](ConnectorSupportedEvents.md)
+* [`ConnectorEvent`](ConnectorEvent.md)
 * [`ConnectorDoc`](ConnectorDoc.md)
+* [`ConnectorTlsSupport`](ConnectorTlsSupport.md)
 
 ---
 

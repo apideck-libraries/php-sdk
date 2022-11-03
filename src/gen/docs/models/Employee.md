@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** |  | 
 `first_name` | **string** |  | [optional] 
 `last_name` | **string** |  | [optional] 
 `middle_name` | **string** |  | [optional] 
@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 `partner` | [**\Apideck\Client\Model\EmployeePartner**](EmployeePartner.md) |  | [optional] 
 `division` | **string** | The division the user is currently in. | [optional] 
 `department` | **string** | The department the user is currently in. | [optional] 
+`department_id` | **string** | Unique identifier of the department ID this employee belongs to. | [optional] 
 `team` | [**\Apideck\Client\Model\EmployeeTeam**](EmployeeTeam.md) |  | [optional] 
 `company_id` | **string** |  | [optional] 
 `company_name` | **string** |  | [optional] 
@@ -40,8 +41,9 @@ Name | Type | Description | Notes
 `nationalities` | **string[]** |  | [optional] 
 `photo_url` | **string** |  | [optional] 
 `timezone` | **string** |  | [optional] 
-`source` | **string** |  | [optional] 
-`source_id` | **string** |  | [optional] 
+`source` | **string** | When the employee is imported as a new hire, this field indicates what system (e.g. the name of the ATS) this employee was imported from. | [optional] 
+`source_id` | **string** | Unique identifier of the employee in the system this employee was imported from (e.g. the ID in the ATS). | [optional] 
+`record_url` | **string** |  | [optional] 
 `jobs` | [**\Apideck\Client\Model\EmployeeJobs[]**](EmployeeJobs.md) |  | [optional] 
 `compensations` | [**\Apideck\Client\Model\EmployeeCompensations[]**](EmployeeCompensations.md) |  | [optional] 
 `works_remote` | **bool** | Indicates whether the employee works remote | [optional] 
@@ -49,11 +51,12 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`social_links` | [**\Apideck\Client\Model\EmployeeSocialLinks[]**](EmployeeSocialLinks.md) |  | [optional] 
+`social_links` | [**\Apideck\Client\Model\ApplicantSocialLinks[]**](ApplicantSocialLinks.md) |  | [optional] 
 `tax_code` | **string** |  | [optional] 
 `tax_id` | **string** |  | [optional] 
 `dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
 `food_allergies` | **string[]** | Indicate the employee's food allergies. | [optional] 
+`tags` | **string[]** |  | [optional] 
 `row_version` | **string** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
@@ -94,6 +97,7 @@ Name | Type | Description | Notes
 * [`EmployeePartner`](EmployeePartner.md)
 
 
+
 * [`EmployeeTeam`](EmployeeTeam.md)
 
 
@@ -118,6 +122,7 @@ Name | Type | Description | Notes
 
 
 
+
 * [`EmployeeJobs`](EmployeeJobs.md)
 * [`EmployeeCompensations`](EmployeeCompensations.md)
 
@@ -125,7 +130,8 @@ Name | Type | Description | Notes
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
-* [`EmployeeSocialLinks`](EmployeeSocialLinks.md)
+* [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
+
 
 
 
