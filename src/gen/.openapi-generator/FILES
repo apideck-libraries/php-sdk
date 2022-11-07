@@ -413,6 +413,7 @@ docs/Model/ProfitAndLossNetOperatingIncome.md
 docs/Model/ProfitAndLossRecord.md
 docs/Model/ProfitAndLossSection.md
 docs/Model/RequestCountAllocation.md
+docs/Model/ResolveWebhookResponse.md
 docs/Model/ResourceStatus.md
 docs/Model/Schedule.md
 docs/Model/ScheduleWorkPattern.md
@@ -913,6 +914,7 @@ lib/Model/ProfitAndLossNetOperatingIncome.php
 lib/Model/ProfitAndLossRecord.php
 lib/Model/ProfitAndLossSection.php
 lib/Model/RequestCountAllocation.php
+lib/Model/ResolveWebhookResponse.php
 lib/Model/ResourceStatus.php
 lib/Model/Schedule.php
 lib/Model/ScheduleWorkPattern.php
@@ -1408,6 +1410,7 @@ test/Model/ProfitAndLossRecordTest.php
 test/Model/ProfitAndLossSectionTest.php
 test/Model/ProfitAndLossTest.php
 test/Model/RequestCountAllocationTest.php
+test/Model/ResolveWebhookResponseTest.php
 test/Model/ResourceStatusTest.php
 test/Model/ScheduleTest.php
 test/Model/ScheduleWorkPatternOddWeeksTest.php
