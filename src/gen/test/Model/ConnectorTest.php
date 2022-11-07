@@ -206,6 +206,15 @@ class ConnectorTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_scopes"
+     */
+    public function testPropertyCustomScopes()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "has_sandbox_credentials"
      */
     public function testPropertyHasSandboxCredentials()

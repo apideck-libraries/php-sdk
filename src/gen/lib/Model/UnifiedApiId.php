@@ -91,6 +91,8 @@ class UnifiedApiId
 
     const CALENDAR = 'calendar';
 
+    const PROCUREMENT = 'procurement';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -121,7 +123,8 @@ class UnifiedApiId
             self::POS,
             self::PROJECT_MANAGEMENT,
             self::EXPENSE_MANAGEMENT,
-            self::CALENDAR
+            self::CALENDAR,
+            self::PROCUREMENT
         ];
     }
 }

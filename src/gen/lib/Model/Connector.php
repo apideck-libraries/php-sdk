@@ -73,6 +73,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'oauth_grant_type' => 'string',
         'oauth_credentials_source' => 'string',
         'oauth_scopes' => '\Apideck\Client\Model\ConnectorOauthScopes[]',
+        'custom_scopes' => 'bool',
         'has_sandbox_credentials' => 'bool',
         'settings' => '\Apideck\Client\Model\ConnectorSetting[]',
         'service_id' => 'string',
@@ -106,6 +107,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'oauth_grant_type' => null,
         'oauth_credentials_source' => null,
         'oauth_scopes' => null,
+        'custom_scopes' => null,
         'has_sandbox_credentials' => null,
         'settings' => null,
         'service_id' => null,
@@ -158,6 +160,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'oauth_grant_type' => 'oauth_grant_type',
         'oauth_credentials_source' => 'oauth_credentials_source',
         'oauth_scopes' => 'oauth_scopes',
+        'custom_scopes' => 'custom_scopes',
         'has_sandbox_credentials' => 'has_sandbox_credentials',
         'settings' => 'settings',
         'service_id' => 'service_id',
@@ -189,6 +192,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'oauth_grant_type' => 'setOauthGrantType',
         'oauth_credentials_source' => 'setOauthCredentialsSource',
         'oauth_scopes' => 'setOauthScopes',
+        'custom_scopes' => 'setCustomScopes',
         'has_sandbox_credentials' => 'setHasSandboxCredentials',
         'settings' => 'setSettings',
         'service_id' => 'setServiceId',
@@ -220,6 +224,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'oauth_grant_type' => 'getOauthGrantType',
         'oauth_credentials_source' => 'getOauthCredentialsSource',
         'oauth_scopes' => 'getOauthScopes',
+        'custom_scopes' => 'getCustomScopes',
         'has_sandbox_credentials' => 'getHasSandboxCredentials',
         'settings' => 'getSettings',
         'service_id' => 'getServiceId',
@@ -355,6 +360,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['oauth_grant_type'] = $data['oauth_grant_type'] ?? null;
         $this->container['oauth_credentials_source'] = $data['oauth_credentials_source'] ?? null;
         $this->container['oauth_scopes'] = $data['oauth_scopes'] ?? null;
+        $this->container['custom_scopes'] = $data['custom_scopes'] ?? null;
         $this->container['has_sandbox_credentials'] = $data['has_sandbox_credentials'] ?? null;
         $this->container['settings'] = $data['settings'] ?? null;
         $this->container['service_id'] = $data['service_id'] ?? null;
@@ -779,6 +785,30 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setOauthScopes($oauth_scopes)
     {
         $this->container['oauth_scopes'] = $oauth_scopes;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_scopes
+     *
+     * @return bool|null
+     */
+    public function getCustomScopes()
+    {
+        return $this->container['custom_scopes'];
+    }
+
+    /**
+     * Sets custom_scopes
+     *
+     * @param bool|null $custom_scopes Set to `true` when connector allows the definition of custom scopes.
+     *
+     * @return self
+     */
+    public function setCustomScopes($custom_scopes)
+    {
+        $this->container['custom_scopes'] = $custom_scopes;
 
         return $this;
     }
