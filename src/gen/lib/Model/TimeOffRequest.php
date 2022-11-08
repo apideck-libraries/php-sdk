@@ -248,7 +248,7 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     const STATUS_CANCELLED = 'cancelled';
     const STATUS_DELETED = 'deleted';
     const STATUS_OTHER = 'other';
-    const REQUEST_TYPE_VACACTION = 'vacaction';
+    const REQUEST_TYPE_VACATION = 'vacation';
     const REQUEST_TYPE_SICK = 'sick';
     const REQUEST_TYPE_PERSONAL = 'personal';
     const REQUEST_TYPE_JURY_DUTY = 'jury_duty';
@@ -284,7 +284,7 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getRequestTypeAllowableValues()
     {
         return [
-            self::REQUEST_TYPE_VACACTION,
+            self::REQUEST_TYPE_VACATION,
             self::REQUEST_TYPE_SICK,
             self::REQUEST_TYPE_PERSONAL,
             self::REQUEST_TYPE_JURY_DUTY,
