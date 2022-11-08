@@ -60,7 +60,8 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'start_date' => 'string',
-        'end_date' => 'string'
+        'end_date' => 'string',
+        'employee_id' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'start_date' => null,
-        'end_date' => null
+        'end_date' => null,
+        'employee_id' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'start_date' => 'start_date',
-        'end_date' => 'end_date'
+        'end_date' => 'end_date',
+        'employee_id' => 'employee_id'
     ];
 
     /**
@@ -113,7 +116,8 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'start_date' => 'setStartDate',
-        'end_date' => 'setEndDate'
+        'end_date' => 'setEndDate',
+        'employee_id' => 'setEmployeeId'
     ];
 
     /**
@@ -123,7 +127,8 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'start_date' => 'getStartDate',
-        'end_date' => 'getEndDate'
+        'end_date' => 'getEndDate',
+        'employee_id' => 'getEmployeeId'
     ];
 
     /**
@@ -185,6 +190,7 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $this->container['start_date'] = $data['start_date'] ?? null;
         $this->container['end_date'] = $data['end_date'] ?? null;
+        $this->container['employee_id'] = $data['employee_id'] ?? null;
     }
 
     /**
@@ -273,6 +279,30 @@ class TimeOffRequestsFilter implements ModelInterface, ArrayAccess, \JsonSeriali
         }
 
         $this->container['end_date'] = $end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee_id
+     *
+     * @return string|null
+     */
+    public function getEmployeeId()
+    {
+        return $this->container['employee_id'];
+    }
+
+    /**
+     * Sets employee_id
+     *
+     * @param string|null $employee_id Employee ID
+     *
+     * @return self
+     */
+    public function setEmployeeId($employee_id)
+    {
+        $this->container['employee_id'] = $employee_id;
 
         return $this;
     }
