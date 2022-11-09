@@ -36,6 +36,7 @@ docs/Model/ApisFilter.md
 docs/Model/Applicant.md
 docs/Model/ApplicantSocialLinks.md
 docs/Model/ApplicantWebsites.md
+docs/Model/ApplicantsFilter.md
 docs/Model/AtsActivity.md
 docs/Model/AtsEventType.md
 docs/Model/AuthType.md
@@ -536,6 +537,7 @@ lib/Model/ApisFilter.php
 lib/Model/Applicant.php
 lib/Model/ApplicantSocialLinks.php
 lib/Model/ApplicantWebsites.php
+lib/Model/ApplicantsFilter.php
 lib/Model/AtsActivity.php
 lib/Model/AtsEventType.php
 lib/Model/AuthType.php
@@ -1033,6 +1035,7 @@ test/Model/ApisFilterTest.php
 test/Model/ApplicantSocialLinksTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
+test/Model/ApplicantsFilterTest.php
 test/Model/AtsActivityTest.php
 test/Model/AtsEventTypeTest.php
 test/Model/AuthTypeTest.php
