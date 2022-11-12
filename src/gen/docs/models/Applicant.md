@@ -43,6 +43,8 @@ Name | Type | Description | Notes
 `deleted` | **bool** |  | [optional] 
 `deleted_by` | **string** |  | [optional] 
 `deleted_at` | **\DateTime** |  | [optional] 
+`updated_by` | **string** |  | [optional] 
+`created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
 
@@ -69,6 +71,8 @@ Name | Type | Description | Notes
 * [`Address`](Address.md)
 * [`ApplicantWebsites`](ApplicantWebsites.md)
 * [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
+
+
 
 
 
