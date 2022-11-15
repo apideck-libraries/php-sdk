@@ -82,7 +82,6 @@ docs/Model/ConnectorSetting.md
 docs/Model/ConnectorStatus.md
 docs/Model/ConnectorTlsSupport.md
 docs/Model/ConnectorUnifiedApis.md
-docs/Model/ConnectorWebhookSupportType.md
 docs/Model/ConnectorsFilter.md
 docs/Model/Consumer.md
 docs/Model/ConsumerConnection.md
@@ -502,6 +501,7 @@ docs/Model/WebhookEventLogsFilter.md
 docs/Model/WebhookEventLogsFilterService.md
 docs/Model/WebhookEventType.md
 docs/Model/WebhookSubscription.md
+docs/Model/WebhookSupport.md
 docs/Model/Website.md
 git_push.sh
 lib/Api/AccountingApi.php
@@ -583,7 +583,6 @@ lib/Model/ConnectorSetting.php
 lib/Model/ConnectorStatus.php
 lib/Model/ConnectorTlsSupport.php
 lib/Model/ConnectorUnifiedApis.php
-lib/Model/ConnectorWebhookSupportType.php
 lib/Model/ConnectorsFilter.php
 lib/Model/Consumer.php
 lib/Model/ConsumerConnection.php
@@ -1004,6 +1003,7 @@ lib/Model/WebhookEventLogsFilter.php
 lib/Model/WebhookEventLogsFilterService.php
 lib/Model/WebhookEventType.php
 lib/Model/WebhookSubscription.php
+lib/Model/WebhookSupport.php
 lib/Model/Website.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
@@ -1081,7 +1081,6 @@ test/Model/ConnectorStatusTest.php
 test/Model/ConnectorTest.php
 test/Model/ConnectorTlsSupportTest.php
 test/Model/ConnectorUnifiedApisTest.php
-test/Model/ConnectorWebhookSupportTypeTest.php
 test/Model/ConnectorsFilterTest.php
 test/Model/ConsumerConnectionTest.php
 test/Model/ConsumerMetadataTest.php
@@ -1500,5 +1499,6 @@ test/Model/WebhookEventLogsFilterServiceTest.php
 test/Model/WebhookEventLogsFilterTest.php
 test/Model/WebhookEventTypeTest.php
 test/Model/WebhookSubscriptionTest.php
+test/Model/WebhookSupportTest.php
 test/Model/WebhookTest.php
 test/Model/WebsiteTest.php
