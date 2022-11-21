@@ -292,6 +292,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_HRIS_COMPANY_CREATED = 'hris.company.created';
     const EVENTS_HRIS_COMPANY_UPDATED = 'hris.company.updated';
     const EVENTS_HRIS_COMPANY_DELETED = 'hris.company.deleted';
+    const EVENTS_FILE_STORAGE_FILE_CREATED = 'file-storage.file.created';
+    const EVENTS_FILE_STORAGE_FILE_UPDATED = 'file-storage.file.updated';
+    const EVENTS_FILE_STORAGE_FILE_DELETED = 'file-storage.file.deleted';
 
     /**
      * Gets allowable values of the enum
@@ -402,6 +405,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
             self::EVENTS_HRIS_COMPANY_CREATED,
             self::EVENTS_HRIS_COMPANY_UPDATED,
             self::EVENTS_HRIS_COMPANY_DELETED,
+            self::EVENTS_FILE_STORAGE_FILE_CREATED,
+            self::EVENTS_FILE_STORAGE_FILE_UPDATED,
+            self::EVENTS_FILE_STORAGE_FILE_DELETED,
         ];
     }
 

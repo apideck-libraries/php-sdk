@@ -218,6 +218,12 @@ class WebhookEventType
 
     const HRIS_COMPANY_DELETED = 'hris.company.deleted';
 
+    const FILE_STORAGE_FILE_CREATED = 'file-storage.file.created';
+
+    const FILE_STORAGE_FILE_UPDATED = 'file-storage.file.updated';
+
+    const FILE_STORAGE_FILE_DELETED = 'file-storage.file.deleted';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -312,7 +318,10 @@ class WebhookEventType
             self::HRIS_EMPLOYEE_DELETED,
             self::HRIS_COMPANY_CREATED,
             self::HRIS_COMPANY_UPDATED,
-            self::HRIS_COMPANY_DELETED
+            self::HRIS_COMPANY_DELETED,
+            self::FILE_STORAGE_FILE_CREATED,
+            self::FILE_STORAGE_FILE_UPDATED,
+            self::FILE_STORAGE_FILE_DELETED
         ];
     }
 }
