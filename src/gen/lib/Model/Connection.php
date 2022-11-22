@@ -400,7 +400,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the connection.
      *
      * @return self
      */
@@ -424,7 +424,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets service_id
      *
-     * @param string|null $service_id service_id
+     * @param string|null $service_id The ID of the service this connection belongs to.
      *
      * @return self
      */
@@ -448,7 +448,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name The name of the connection
      *
      * @return self
      */
@@ -496,7 +496,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets unified_api
      *
-     * @param string|null $unified_api unified_api
+     * @param string|null $unified_api The unified API category where the connection belongs to.
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status status
+     * @param string|null $status Status of the connection.
      *
      * @return self
      */
@@ -650,7 +650,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets website
      *
-     * @param string|null $website website
+     * @param string|null $website The website URL of the connection
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets icon
      *
-     * @param string|null $icon icon
+     * @param string|null $icon A visual icon of the connection, that will be shown in the Vault
      *
      * @return self
      */
@@ -698,7 +698,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets logo
      *
-     * @param string|null $logo logo
+     * @param string|null $logo The logo of the connection, that will be shown in the Vault
      *
      * @return self
      */
@@ -818,7 +818,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets form_fields
      *
-     * @param \Apideck\Client\Model\FormField[]|null $form_fields form_fields
+     * @param \Apideck\Client\Model\FormField[]|null $form_fields The settings that are wanted to create a connection.
      *
      * @return self
      */

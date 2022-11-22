@@ -68,6 +68,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_field' => 'bool',
         'allow_custom_values' => 'bool',
         'disabled' => 'bool',
+        'hidden' => 'bool',
         'sensitive' => 'bool',
         'options' => '\Apideck\Client\Model\FormFieldOption[]'
     ];
@@ -89,6 +90,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_field' => null,
         'allow_custom_values' => null,
         'disabled' => null,
+        'hidden' => null,
         'sensitive' => null,
         'options' => null
     ];
@@ -129,6 +131,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_field' => 'custom_field',
         'allow_custom_values' => 'allow_custom_values',
         'disabled' => 'disabled',
+        'hidden' => 'hidden',
         'sensitive' => 'sensitive',
         'options' => 'options'
     ];
@@ -148,6 +151,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_field' => 'setCustomField',
         'allow_custom_values' => 'setAllowCustomValues',
         'disabled' => 'setDisabled',
+        'hidden' => 'setHidden',
         'sensitive' => 'setSensitive',
         'options' => 'setOptions'
     ];
@@ -167,6 +171,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_field' => 'getCustomField',
         'allow_custom_values' => 'getAllowCustomValues',
         'disabled' => 'getDisabled',
+        'hidden' => 'getHidden',
         'sensitive' => 'getSensitive',
         'options' => 'getOptions'
     ];
@@ -274,6 +279,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['custom_field'] = $data['custom_field'] ?? null;
         $this->container['allow_custom_values'] = $data['allow_custom_values'] ?? false;
         $this->container['disabled'] = $data['disabled'] ?? null;
+        $this->container['hidden'] = $data['hidden'] ?? null;
         $this->container['sensitive'] = $data['sensitive'] ?? null;
         $this->container['options'] = $data['options'] ?? null;
     }
@@ -324,7 +330,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the form field.
      *
      * @return self
      */
@@ -348,7 +354,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets label
      *
-     * @param string|null $label label
+     * @param string|null $label The label of the field
      *
      * @return self
      */
@@ -372,7 +378,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets placeholder
      *
-     * @param string|null $placeholder placeholder
+     * @param string|null $placeholder The placeholder for the form field
      *
      * @return self
      */
@@ -396,7 +402,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description The description of the form field
      *
      * @return self
      */
@@ -454,7 +460,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets required
      *
-     * @param bool|null $required required
+     * @param bool|null $required Indicates if the form field is required, which means it must be filled in before the form can be submitted
      *
      * @return self
      */
@@ -526,13 +532,37 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets disabled
      *
-     * @param bool|null $disabled disabled
+     * @param bool|null $disabled Indicates if the form field is displayed in a “read-only” mode.
      *
      * @return self
      */
     public function setDisabled($disabled)
     {
         $this->container['disabled'] = $disabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets hidden
+     *
+     * @return bool|null
+     */
+    public function getHidden()
+    {
+        return $this->container['hidden'];
+    }
+
+    /**
+     * Sets hidden
+     *
+     * @param bool|null $hidden Indicates if the form field is not displayed but the value that is being stored on the connection.
+     *
+     * @return self
+     */
+    public function setHidden($hidden)
+    {
+        $this->container['hidden'] = $hidden;
 
         return $this;
     }
@@ -550,7 +580,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sensitive
      *
-     * @param bool|null $sensitive sensitive
+     * @param bool|null $sensitive Indicates if the form field contains sensitive data, which will display the value as a masked input.
      *
      * @return self
      */

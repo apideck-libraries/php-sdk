@@ -161,6 +161,15 @@ class FormFieldTest extends TestCase
     }
 
     /**
+     * Test attribute "hidden"
+     */
+    public function testPropertyHidden()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sensitive"
      */
     public function testPropertySensitive()
