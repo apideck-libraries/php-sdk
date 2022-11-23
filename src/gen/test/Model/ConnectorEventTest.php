@@ -89,6 +89,15 @@ class ConnectorEventTest extends TestCase
     }
 
     /**
+     * Test attribute "event_source"
+     */
+    public function testPropertyEventSource()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "downstream_event_type"
      */
     public function testPropertyDownstreamEventType()
