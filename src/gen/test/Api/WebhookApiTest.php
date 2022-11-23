@@ -86,7 +86,7 @@ class WebhookApiTest extends TestCase
     /**
      * Test case for webhooksAdd
      *
-     * Create webhook.
+     * Create webhook subscription.
      *
      */
     public function testWebhooksAdd()
@@ -98,7 +98,7 @@ class WebhookApiTest extends TestCase
     /**
      * Test case for webhooksAll
      *
-     * List webhooks.
+     * List webhook subscriptions.
      *
      */
     public function testWebhooksAll()
@@ -110,7 +110,7 @@ class WebhookApiTest extends TestCase
     /**
      * Test case for webhooksDelete
      *
-     * Delete webhook.
+     * Delete webhook subscription.
      *
      */
     public function testWebhooksDelete()
@@ -122,7 +122,7 @@ class WebhookApiTest extends TestCase
     /**
      * Test case for webhooksOne
      *
-     * Get webhook.
+     * Get webhook subscription.
      *
      */
     public function testWebhooksOne()
@@ -134,7 +134,7 @@ class WebhookApiTest extends TestCase
     /**
      * Test case for webhooksUpdate
      *
-     * Update webhook.
+     * Update webhook subscription.
      *
      */
     public function testWebhooksUpdate()

@@ -559,7 +559,7 @@ class WebhookApi
     /**
      * Operation webhooksAdd
      *
-     * Create webhook
+     * Create webhook subscription
      *
      * @param  \Apideck\Client\Model\CreateWebhookRequest $create_webhook_request create_webhook_request (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -577,7 +577,7 @@ class WebhookApi
     /**
      * Operation webhooksAddWithHttpInfo
      *
-     * Create webhook
+     * Create webhook subscription
      *
      * @param  \Apideck\Client\Model\CreateWebhookRequest $create_webhook_request (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -791,7 +791,7 @@ class WebhookApi
     /**
      * Operation webhooksAddAsync
      *
-     * Create webhook
+     * Create webhook subscription
      *
      * @param  \Apideck\Client\Model\CreateWebhookRequest $create_webhook_request (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -812,7 +812,7 @@ class WebhookApi
     /**
      * Operation webhooksAddAsyncWithHttpInfo
      *
-     * Create webhook
+     * Create webhook subscription
      *
      * @param  \Apideck\Client\Model\CreateWebhookRequest $create_webhook_request (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -962,7 +962,7 @@ class WebhookApi
     /**
      * Operation webhooksAll
      *
-     * List webhooks
+     * List webhook subscriptions
      *
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
@@ -981,7 +981,7 @@ class WebhookApi
     /**
      * Operation webhooksAllWithHttpInfo
      *
-     * List webhooks
+     * List webhook subscriptions
      *
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
@@ -1196,7 +1196,7 @@ class WebhookApi
     /**
      * Operation webhooksAllAsync
      *
-     * List webhooks
+     * List webhook subscriptions
      *
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
@@ -1218,7 +1218,7 @@ class WebhookApi
     /**
      * Operation webhooksAllAsyncWithHttpInfo
      *
-     * List webhooks
+     * List webhook subscriptions
      *
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
@@ -1387,7 +1387,7 @@ class WebhookApi
     /**
      * Operation webhooksDelete
      *
-     * Delete webhook
+     * Delete webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -1405,7 +1405,7 @@ class WebhookApi
     /**
      * Operation webhooksDeleteWithHttpInfo
      *
-     * Delete webhook
+     * Delete webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -1619,7 +1619,7 @@ class WebhookApi
     /**
      * Operation webhooksDeleteAsync
      *
-     * Delete webhook
+     * Delete webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -1640,7 +1640,7 @@ class WebhookApi
     /**
      * Operation webhooksDeleteAsyncWithHttpInfo
      *
-     * Delete webhook
+     * Delete webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -1792,7 +1792,7 @@ class WebhookApi
     /**
      * Operation webhooksOne
      *
-     * Get webhook
+     * Get webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -1810,7 +1810,7 @@ class WebhookApi
     /**
      * Operation webhooksOneWithHttpInfo
      *
-     * Get webhook
+     * Get webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -2024,7 +2024,7 @@ class WebhookApi
     /**
      * Operation webhooksOneAsync
      *
-     * Get webhook
+     * Get webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -2045,7 +2045,7 @@ class WebhookApi
     /**
      * Operation webhooksOneAsyncWithHttpInfo
      *
-     * Get webhook
+     * Get webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -2197,7 +2197,7 @@ class WebhookApi
     /**
      * Operation webhooksUpdate
      *
-     * Update webhook
+     * Update webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  \Apideck\Client\Model\UpdateWebhookRequest $update_webhook_request update_webhook_request (required)
@@ -2216,7 +2216,7 @@ class WebhookApi
     /**
      * Operation webhooksUpdateWithHttpInfo
      *
-     * Update webhook
+     * Update webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  \Apideck\Client\Model\UpdateWebhookRequest $update_webhook_request (required)
@@ -2431,7 +2431,7 @@ class WebhookApi
     /**
      * Operation webhooksUpdateAsync
      *
-     * Update webhook
+     * Update webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  \Apideck\Client\Model\UpdateWebhookRequest $update_webhook_request (required)
@@ -2453,7 +2453,7 @@ class WebhookApi
     /**
      * Operation webhooksUpdateAsyncWithHttpInfo
      *
-     * Update webhook
+     * Update webhook subscription
      *
      * @param  string $id JWT Webhook token that represents the unifiedApi and applicationId associated to the event source. (required)
      * @param  \Apideck\Client\Model\UpdateWebhookRequest $update_webhook_request (required)
