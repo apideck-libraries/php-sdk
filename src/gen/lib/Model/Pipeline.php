@@ -63,7 +63,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'currency' => '\Apideck\Client\Model\Currency',
         'archived' => 'bool',
+        'active' => 'bool',
         'display_order' => 'int',
+        'win_probability_enabled' => 'bool',
         'stages' => '\Apideck\Client\Model\PipelineStages[]',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime'
@@ -81,7 +83,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'currency' => null,
         'archived' => null,
+        'active' => null,
         'display_order' => null,
+        'win_probability_enabled' => null,
         'stages' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time'
@@ -118,7 +122,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'currency' => 'currency',
         'archived' => 'archived',
+        'active' => 'active',
         'display_order' => 'display_order',
+        'win_probability_enabled' => 'win_probability_enabled',
         'stages' => 'stages',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at'
@@ -134,7 +140,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'currency' => 'setCurrency',
         'archived' => 'setArchived',
+        'active' => 'setActive',
         'display_order' => 'setDisplayOrder',
+        'win_probability_enabled' => 'setWinProbabilityEnabled',
         'stages' => 'setStages',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt'
@@ -150,7 +158,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'currency' => 'getCurrency',
         'archived' => 'getArchived',
+        'active' => 'getActive',
         'display_order' => 'getDisplayOrder',
+        'win_probability_enabled' => 'getWinProbabilityEnabled',
         'stages' => 'getStages',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt'
@@ -217,7 +227,9 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['archived'] = $data['archived'] ?? null;
+        $this->container['active'] = $data['active'] ?? null;
         $this->container['display_order'] = $data['display_order'] ?? null;
+        $this->container['win_probability_enabled'] = $data['win_probability_enabled'] ?? null;
         $this->container['stages'] = $data['stages'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
@@ -356,6 +368,30 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets active
+     *
+     * @return bool|null
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool|null $active active
+     *
+     * @return self
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
      * Gets display_order
      *
      * @return int|null
@@ -375,6 +411,30 @@ class Pipeline implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDisplayOrder($display_order)
     {
         $this->container['display_order'] = $display_order;
+
+        return $this;
+    }
+
+    /**
+     * Gets win_probability_enabled
+     *
+     * @return bool|null
+     */
+    public function getWinProbabilityEnabled()
+    {
+        return $this->container['win_probability_enabled'];
+    }
+
+    /**
+     * Sets win_probability_enabled
+     *
+     * @param bool|null $win_probability_enabled win_probability_enabled
+     *
+     * @return self
+     */
+    public function setWinProbabilityEnabled($win_probability_enabled)
+    {
+        $this->container['win_probability_enabled'] = $win_probability_enabled;
 
         return $this;
     }

@@ -116,9 +116,27 @@ class PipelineTest extends TestCase
     }
 
     /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "display_order"
      */
     public function testPropertyDisplayOrder()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "win_probability_enabled"
+     */
+    public function testPropertyWinProbabilityEnabled()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

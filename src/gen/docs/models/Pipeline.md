@@ -9,7 +9,9 @@ Name | Type | Description | Notes
 `id` | **string** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `archived` | **bool** |  | [optional] 
+`active` | **bool** |  | [optional] 
 `display_order` | **int** |  | [optional] 
+`win_probability_enabled` | **bool** |  | [optional] 
 `stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
@@ -22,6 +24,8 @@ Name | Type | Description | Notes
 
 
 * [`Currency`](Currency.md)
+
+
 
 
 * [`PipelineStages`](PipelineStages.md)
