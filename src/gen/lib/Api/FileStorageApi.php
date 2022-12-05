@@ -11282,6 +11282,9 @@ class FileStorageApi
      *
      * Start Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  \Apideck\Client\Model\CreateUploadSessionRequest $create_upload_session_request create_upload_session_request (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -11302,6 +11305,9 @@ class FileStorageApi
      * Operation uploadSessionsAddWithHttpInfo
      *
      * Start Upload Session
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  \Apideck\Client\Model\CreateUploadSessionRequest $create_upload_session_request (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -11520,6 +11526,9 @@ class FileStorageApi
      *
      * Start Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  \Apideck\Client\Model\CreateUploadSessionRequest $create_upload_session_request (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -11543,6 +11552,9 @@ class FileStorageApi
      * Operation uploadSessionsAddAsyncWithHttpInfo
      *
      * Start Upload Session
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  \Apideck\Client\Model\CreateUploadSessionRequest $create_upload_session_request (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -11593,6 +11605,9 @@ class FileStorageApi
 
     /**
      * Create request for operation 'uploadSessionsAdd'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  \Apideck\Client\Model\CreateUploadSessionRequest $create_upload_session_request (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
@@ -11705,10 +11720,16 @@ class FileStorageApi
             $headers
         );
 
+        $operationHosts = ["https://upload.apideck.com"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= sizeof($operationHosts)) {
+            throw new \InvalidArgumentException("Invalid index {$this->hostIndex} when selecting the host. Must be less than ".sizeof($operationHosts));
+        }
+        $operationHost = $operationHosts[$this->hostIndex];
+
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -12158,20 +12179,24 @@ class FileStorageApi
      *
      * Finish Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $digest The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) (optional)
      * @param  object $body body (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetFileResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function uploadSessionsFinish($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    public function uploadSessionsFinish($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $digest = null, $body = null)
     {
-        list($response) = $this->uploadSessionsFinishWithHttpInfo($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+        list($response) = $this->uploadSessionsFinishWithHttpInfo($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $digest, $body);
         return $response;
     }
 
@@ -12180,20 +12205,24 @@ class FileStorageApi
      *
      * Finish Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $digest The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) (optional)
      * @param  object $body (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetFileResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uploadSessionsFinishWithHttpInfo($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    public function uploadSessionsFinishWithHttpInfo($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $digest = null, $body = null)
     {
-        $request = $this->uploadSessionsFinishRequest($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+        $request = $this->uploadSessionsFinishRequest($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $digest, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12398,19 +12427,23 @@ class FileStorageApi
      *
      * Finish Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $digest The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) (optional)
      * @param  object $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadSessionsFinishAsync($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    public function uploadSessionsFinishAsync($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $digest = null, $body = null)
     {
-        return $this->uploadSessionsFinishAsyncWithHttpInfo($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body)
+        return $this->uploadSessionsFinishAsyncWithHttpInfo($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $digest, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12423,20 +12456,24 @@ class FileStorageApi
      *
      * Finish Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $digest The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) (optional)
      * @param  object $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadSessionsFinishAsyncWithHttpInfo($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    public function uploadSessionsFinishAsyncWithHttpInfo($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $digest = null, $body = null)
     {
         $returnType = '\Apideck\Client\Model\GetFileResponse';
-        $request = $this->uploadSessionsFinishRequest($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+        $request = $this->uploadSessionsFinishRequest($id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $digest, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12474,17 +12511,21 @@ class FileStorageApi
     /**
      * Create request for operation 'uploadSessionsFinish'
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $digest The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) (optional)
      * @param  object $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uploadSessionsFinishRequest($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    public function uploadSessionsFinishRequest($id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $digest = null, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -12523,6 +12564,10 @@ class FileStorageApi
         // header params
         if ($x_apideck_service_id !== null) {
             $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+        // header params
+        if ($digest !== null) {
+            $headerParams['digest'] = ObjectSerializer::toHeaderValue($digest);
         }
 
         // path params
@@ -12594,10 +12639,16 @@ class FileStorageApi
             $headers
         );
 
+        $operationHosts = ["https://upload.apideck.com"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= sizeof($operationHosts)) {
+            throw new \InvalidArgumentException("Invalid index {$this->hostIndex} when selecting the host. Must be less than ".sizeof($operationHosts));
+        }
+        $operationHost = $operationHosts[$this->hostIndex];
+
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -12607,6 +12658,9 @@ class FileStorageApi
      * Operation uploadSessionsOne
      *
      * Get Upload Session
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -12628,6 +12682,9 @@ class FileStorageApi
      * Operation uploadSessionsOneWithHttpInfo
      *
      * Get Upload Session
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -12846,6 +12903,9 @@ class FileStorageApi
      *
      * Get Upload Session
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
+     *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -12869,6 +12929,9 @@ class FileStorageApi
      * Operation uploadSessionsOneAsyncWithHttpInfo
      *
      * Get Upload Session
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -12919,6 +12982,9 @@ class FileStorageApi
 
     /**
      * Create request for operation 'uploadSessionsOne'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://upload.apideck.com
      *
      * @param  string $id ID of the record you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
@@ -13033,10 +13099,16 @@ class FileStorageApi
             $headers
         );
 
+        $operationHosts = ["https://upload.apideck.com"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= sizeof($operationHosts)) {
+            throw new \InvalidArgumentException("Invalid index {$this->hostIndex} when selecting the host. Must be less than ".sizeof($operationHosts));
+        }
+        $operationHost = $operationHosts[$this->hostIndex];
+
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
             'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
