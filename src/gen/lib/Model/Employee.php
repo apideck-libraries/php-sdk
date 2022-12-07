@@ -71,6 +71,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'marital_status' => 'string',
         'partner' => '\Apideck\Client\Model\EmployeePartner',
         'division' => 'string',
+        'division_id' => 'string',
         'department' => 'string',
         'department_id' => 'string',
         'team' => '\Apideck\Client\Model\EmployeeTeam',
@@ -139,6 +140,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'marital_status' => null,
         'partner' => null,
         'division' => null,
+        'division_id' => null,
         'department' => null,
         'department_id' => null,
         'team' => null,
@@ -226,6 +228,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'marital_status' => 'marital_status',
         'partner' => 'partner',
         'division' => 'division',
+        'division_id' => 'division_id',
         'department' => 'department',
         'department_id' => 'department_id',
         'team' => 'team',
@@ -292,6 +295,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'marital_status' => 'setMaritalStatus',
         'partner' => 'setPartner',
         'division' => 'setDivision',
+        'division_id' => 'setDivisionId',
         'department' => 'setDepartment',
         'department_id' => 'setDepartmentId',
         'team' => 'setTeam',
@@ -358,6 +362,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'marital_status' => 'getMaritalStatus',
         'partner' => 'getPartner',
         'division' => 'getDivision',
+        'division_id' => 'getDivisionId',
         'department' => 'getDepartment',
         'department_id' => 'getDepartmentId',
         'team' => 'getTeam',
@@ -494,6 +499,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['marital_status'] = $data['marital_status'] ?? null;
         $this->container['partner'] = $data['partner'] ?? null;
         $this->container['division'] = $data['division'] ?? null;
+        $this->container['division_id'] = $data['division_id'] ?? null;
         $this->container['department'] = $data['department'] ?? null;
         $this->container['department_id'] = $data['department_id'] ?? null;
         $this->container['team'] = $data['team'] ?? null;
@@ -870,6 +876,30 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDivision($division)
     {
         $this->container['division'] = $division;
+
+        return $this;
+    }
+
+    /**
+     * Gets division_id
+     *
+     * @return string|null
+     */
+    public function getDivisionId()
+    {
+        return $this->container['division_id'];
+    }
+
+    /**
+     * Sets division_id
+     *
+     * @param string|null $division_id Unique identifier of the division this employee belongs to.
+     *
+     * @return self
+     */
+    public function setDivisionId($division_id)
+    {
+        $this->container['division_id'] = $division_id;
 
         return $this;
     }

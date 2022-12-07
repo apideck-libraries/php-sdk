@@ -188,6 +188,15 @@ class EmployeeTest extends TestCase
     }
 
     /**
+     * Test attribute "division_id"
+     */
+    public function testPropertyDivisionId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "department"
      */
     public function testPropertyDepartment()
