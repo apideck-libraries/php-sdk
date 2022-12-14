@@ -350,6 +350,15 @@ class ContactTest extends TestCase
     }
 
     /**
+     * Test attribute "email_domain"
+     */
+    public function testPropertyEmailDomain()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "custom_fields"
      */
     public function testPropertyCustomFields()

@@ -79,6 +79,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'string',
         'employment_start_date' => 'string',
         'employment_end_date' => 'string',
+        'leaving_reason' => 'string',
         'employee_number' => 'string',
         'employment_status' => 'string',
         'employment_role' => '\Apideck\Client\Model\EmployeeEmploymentRole',
@@ -148,6 +149,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => null,
         'employment_start_date' => null,
         'employment_end_date' => null,
+        'leaving_reason' => null,
         'employee_number' => null,
         'employment_status' => null,
         'employment_role' => null,
@@ -236,6 +238,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'company_name',
         'employment_start_date' => 'employment_start_date',
         'employment_end_date' => 'employment_end_date',
+        'leaving_reason' => 'leaving_reason',
         'employee_number' => 'employee_number',
         'employment_status' => 'employment_status',
         'employment_role' => 'employment_role',
@@ -303,6 +306,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'setCompanyName',
         'employment_start_date' => 'setEmploymentStartDate',
         'employment_end_date' => 'setEmploymentEndDate',
+        'leaving_reason' => 'setLeavingReason',
         'employee_number' => 'setEmployeeNumber',
         'employment_status' => 'setEmploymentStatus',
         'employment_role' => 'setEmploymentRole',
@@ -370,6 +374,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'getCompanyName',
         'employment_start_date' => 'getEmploymentStartDate',
         'employment_end_date' => 'getEmploymentEndDate',
+        'leaving_reason' => 'getLeavingReason',
         'employee_number' => 'getEmployeeNumber',
         'employment_status' => 'getEmploymentStatus',
         'employment_role' => 'getEmploymentRole',
@@ -452,10 +457,29 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const LEAVING_REASON_DISMISSED = 'dismissed';
+    const LEAVING_REASON_RESIGNED = 'resigned';
+    const LEAVING_REASON_REDUNDANCY = 'redundancy';
+    const LEAVING_REASON_OTHER = 'other';
     const EMPLOYMENT_STATUS_ACTIVE = 'active';
     const EMPLOYMENT_STATUS_INACTIVE = 'inactive';
     const EMPLOYMENT_STATUS_TERMINATED = 'terminated';
     const EMPLOYMENT_STATUS_OTHER = 'other';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLeavingReasonAllowableValues()
+    {
+        return [
+            self::LEAVING_REASON_DISMISSED,
+            self::LEAVING_REASON_RESIGNED,
+            self::LEAVING_REASON_REDUNDANCY,
+            self::LEAVING_REASON_OTHER,
+        ];
+    }
 
     /**
      * Gets allowable values of the enum
@@ -507,6 +531,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['company_name'] = $data['company_name'] ?? null;
         $this->container['employment_start_date'] = $data['employment_start_date'] ?? null;
         $this->container['employment_end_date'] = $data['employment_end_date'] ?? null;
+        $this->container['leaving_reason'] = $data['leaving_reason'] ?? null;
         $this->container['employee_number'] = $data['employee_number'] ?? null;
         $this->container['employment_status'] = $data['employment_status'] ?? null;
         $this->container['employment_role'] = $data['employment_role'] ?? null;
@@ -560,6 +585,15 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+        $allowedValues = $this->getLeavingReasonAllowableValues();
+        if (!is_null($this->container['leaving_reason']) && !in_array($this->container['leaving_reason'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'leaving_reason', must be one of '%s'",
+                $this->container['leaving_reason'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         $allowedValues = $this->getEmploymentStatusAllowableValues();
         if (!is_null($this->container['employment_status']) && !in_array($this->container['employment_status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -1068,6 +1102,40 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmploymentEndDate($employment_end_date)
     {
         $this->container['employment_end_date'] = $employment_end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets leaving_reason
+     *
+     * @return string|null
+     */
+    public function getLeavingReason()
+    {
+        return $this->container['leaving_reason'];
+    }
+
+    /**
+     * Sets leaving_reason
+     *
+     * @param string|null $leaving_reason The reason because the employment ended
+     *
+     * @return self
+     */
+    public function setLeavingReason($leaving_reason)
+    {
+        $allowedValues = $this->getLeavingReasonAllowableValues();
+        if (!is_null($leaving_reason) && !in_array($leaving_reason, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'leaving_reason', must be one of '%s'",
+                    $leaving_reason,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['leaving_reason'] = $leaving_reason;
 
         return $this;
     }

@@ -260,6 +260,15 @@ class EmployeeTest extends TestCase
     }
 
     /**
+     * Test attribute "leaving_reason"
+     */
+    public function testPropertyLeavingReason()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "employee_number"
      */
     public function testPropertyEmployeeNumber()

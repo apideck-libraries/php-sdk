@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 `company_name` | **string** |  | [optional] 
 `employment_start_date` | **string** | A Start Date is the date that the employee started working at the company | [optional] 
 `employment_end_date` | **string** | A Start Date is the date that the employee ended working at the company | [optional] 
+`leaving_reason` | **string** | The reason because the employment ended | [optional] 
 `employee_number` | **string** | An Employee Number, Employee ID or Employee Code, is a unique number that has been assigned to each individual staff member within a company. | [optional] 
 `employment_status` | **string** |  | [optional] 
 `employment_role` | [**\Apideck\Client\Model\EmployeeEmploymentRole**](EmployeeEmploymentRole.md) |  | [optional] 
@@ -69,6 +70,21 @@ Name | Type | Description | Notes
 
 
 
+<a name="LEAVING_REASON"></a>
+## Enum: Employee.leaving_reason
+
+
+* `DISMISSED` (value: `'dismissed'`)
+
+* `RESIGNED` (value: `'resigned'`)
+
+* `REDUNDANCY` (value: `'redundancy'`)
+
+* `OTHER` (value: `'other'`)
+
+
+
+
 <a name="EMPLOYMENT_STATUS"></a>
 ## Enum: Employee.employment_status
 
@@ -101,6 +117,7 @@ Name | Type | Description | Notes
 
 
 * [`EmployeeTeam`](EmployeeTeam.md)
+
 
 
 

@@ -89,6 +89,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'social_links' => '\Apideck\Client\Model\SocialLink[]',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'emails' => '\Apideck\Client\Model\Email[]',
+        'email_domain' => 'string',
         'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'tags' => 'string[]',
         'first_call_at' => '\DateTime',
@@ -136,6 +137,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'social_links' => null,
         'phone_numbers' => null,
         'emails' => null,
+        'email_domain' => null,
         'custom_fields' => null,
         'tags' => null,
         'first_call_at' => 'date-time',
@@ -202,6 +204,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'social_links' => 'social_links',
         'phone_numbers' => 'phone_numbers',
         'emails' => 'emails',
+        'email_domain' => 'email_domain',
         'custom_fields' => 'custom_fields',
         'tags' => 'tags',
         'first_call_at' => 'first_call_at',
@@ -247,6 +250,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'social_links' => 'setSocialLinks',
         'phone_numbers' => 'setPhoneNumbers',
         'emails' => 'setEmails',
+        'email_domain' => 'setEmailDomain',
         'custom_fields' => 'setCustomFields',
         'tags' => 'setTags',
         'first_call_at' => 'setFirstCallAt',
@@ -292,6 +296,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'social_links' => 'getSocialLinks',
         'phone_numbers' => 'getPhoneNumbers',
         'emails' => 'getEmails',
+        'email_domain' => 'getEmailDomain',
         'custom_fields' => 'getCustomFields',
         'tags' => 'getTags',
         'first_call_at' => 'getFirstCallAt',
@@ -424,6 +429,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['social_links'] = $data['social_links'] ?? null;
         $this->container['phone_numbers'] = $data['phone_numbers'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
+        $this->container['email_domain'] = $data['email_domain'] ?? null;
         $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
         $this->container['first_call_at'] = $data['first_call_at'] ?? null;
@@ -1225,6 +1231,30 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmails($emails)
     {
         $this->container['emails'] = $emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_domain
+     *
+     * @return string|null
+     */
+    public function getEmailDomain()
+    {
+        return $this->container['email_domain'];
+    }
+
+    /**
+     * Sets email_domain
+     *
+     * @param string|null $email_domain email_domain
+     *
+     * @return self
+     */
+    public function setEmailDomain($email_domain)
+    {
+        $this->container['email_domain'] = $email_domain;
 
         return $this;
     }
