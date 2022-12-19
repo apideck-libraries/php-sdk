@@ -206,6 +206,15 @@ class ApplicantTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "phone_numbers"
      */
     public function testPropertyPhoneNumbers()

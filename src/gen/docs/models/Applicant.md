@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 `headline` | **string** | Typically a list of previous companies where the contact has worked or schools that the contact has attended | [optional] 
 `title` | **string** |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
+`custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `websites` | [**\Apideck\Client\Model\ApplicantWebsites[]**](ApplicantWebsites.md) |  | [optional] 
@@ -67,6 +68,7 @@ Name | Type | Description | Notes
 
 
 * [`Email`](Email.md)
+* [`CustomField`](CustomField.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Address`](Address.md)
 * [`ApplicantWebsites`](ApplicantWebsites.md)

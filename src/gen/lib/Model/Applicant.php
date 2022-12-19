@@ -73,6 +73,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'headline' => 'string',
         'title' => 'string',
         'emails' => '\Apideck\Client\Model\Email[]',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'addresses' => '\Apideck\Client\Model\Address[]',
         'websites' => '\Apideck\Client\Model\ApplicantWebsites[]',
@@ -125,6 +126,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'headline' => null,
         'title' => null,
         'emails' => null,
+        'custom_fields' => null,
         'phone_numbers' => null,
         'addresses' => null,
         'websites' => null,
@@ -196,6 +198,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'headline' => 'headline',
         'title' => 'title',
         'emails' => 'emails',
+        'custom_fields' => 'custom_fields',
         'phone_numbers' => 'phone_numbers',
         'addresses' => 'addresses',
         'websites' => 'websites',
@@ -246,6 +249,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'headline' => 'setHeadline',
         'title' => 'setTitle',
         'emails' => 'setEmails',
+        'custom_fields' => 'setCustomFields',
         'phone_numbers' => 'setPhoneNumbers',
         'addresses' => 'setAddresses',
         'websites' => 'setWebsites',
@@ -296,6 +300,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'headline' => 'getHeadline',
         'title' => 'getTitle',
         'emails' => 'getEmails',
+        'custom_fields' => 'getCustomFields',
         'phone_numbers' => 'getPhoneNumbers',
         'addresses' => 'getAddresses',
         'websites' => 'getWebsites',
@@ -397,6 +402,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['headline'] = $data['headline'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['phone_numbers'] = $data['phone_numbers'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['websites'] = $data['websites'] ?? null;
@@ -783,6 +789,30 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmails($emails)
     {
         $this->container['emails'] = $emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

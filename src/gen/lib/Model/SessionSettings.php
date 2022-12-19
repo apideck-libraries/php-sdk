@@ -266,7 +266,7 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets unified_apis
      *
-     * @param \Apideck\Client\Model\UnifiedApiId[]|null $unified_apis Provide the IDs of the Unified APIs you want to be visible. Leaving it empty or omiting this field will show all Unified APIs.
+     * @param \Apideck\Client\Model\UnifiedApiId[]|null $unified_apis Provide the IDs of the Unified APIs you want to be visible. Leaving it empty or omitting this field will show all Unified APIs.
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets hide_resource_settings
      *
-     * @param bool|null $hide_resource_settings hide_resource_settings
+     * @param bool|null $hide_resource_settings A boolean that controls the display of the configurable resources for an integration. When set to true, the resource configuration options will be hidden and not shown to the user. When set to false, the resource configuration options will be displayed to the user.
      *
      * @return self
      */
