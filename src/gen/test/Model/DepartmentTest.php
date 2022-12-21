@@ -89,6 +89,15 @@ class DepartmentTest extends TestCase
     }
 
     /**
+     * Test attribute "parent_id"
+     */
+    public function testPropertyParentId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
