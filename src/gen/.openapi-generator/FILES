@@ -1,4 +1,5 @@
 ../../.github/workflows/release.yml
+../../.github/workflows/sync.yml
 ../../.gitignore
 ../../LICENSE
 ../../README.md
