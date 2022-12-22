@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 `social_links` | [**\Apideck\Client\Model\SocialLink[]**](SocialLink.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
+`email_domain` | **string** |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
 `first_call_at` | **\DateTime** |  | [optional] 
@@ -106,6 +107,7 @@ Name | Type | Description | Notes
 * [`SocialLink`](SocialLink.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
+
 * [`CustomField`](CustomField.md)
 
 

@@ -1846,6 +1846,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **digest** | **string**| The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest) |
  **body** | **object**|  |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 

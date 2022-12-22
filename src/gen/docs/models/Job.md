@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 `slug` | **string** |  | [optional] 
 `title` | **string** |  | [optional] 
 `sequence` | **int** | Sequence in relation to other jobs. | [optional] 
-`visibility` | **string[]** |  | [optional] 
+`visibility` | **string** | The visibility of the job | [optional] 
 `status` | [**\Apideck\Client\Model\JobStatus**](JobStatus.md) |  | [optional] 
 `code` | **string** | The code of the job. | [optional] 
 `language` | **string** | language code according to ISO 639-1. For the United States - EN | [optional] 
@@ -48,7 +48,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="VISIBILITY[]"></a>
+<a name="VISIBILITY"></a>
 ## Enum: Job.visibility
 
 

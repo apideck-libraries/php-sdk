@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 `events` | **string[]** | The list of subscribed events for this webhook. [&#x60;*&#x60;] indicates that all events are enabled. | 
 `id` | **string** |  | [optional] 
 `description` | **string** |  | [optional] 
+`disabled_reason` | **string** | Indicates if the webhook has has been disabled as it reached its retry limit or if account is over the usage allocated by it's plan. | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
 
@@ -210,11 +211,29 @@ Name | Type | Description | Notes
 
 * `HRIS_COMPANY_DELETED` (value: `'hris.company.deleted'`)
 
+* `FILE_STORAGE_FILE_CREATED` (value: `'file-storage.file.created'`)
+
+* `FILE_STORAGE_FILE_UPDATED` (value: `'file-storage.file.updated'`)
+
+* `FILE_STORAGE_FILE_DELETED` (value: `'file-storage.file.deleted'`)
+
+
+
+
+<a name="DISABLED_REASON"></a>
+## Enum: ConnectionWebhook.disabled_reason
+
+
+* `RETRY_LIMIT` (value: `'retry_limit'`)
+
+* `USAGE_LIMIT` (value: `'usage_limit'`)
+
 
 
 
 ## Referenced Types:
 * [`UnifiedApiId`](UnifiedApiId.md)
+
 
 
 
