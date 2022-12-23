@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookSupportTest
+ * VirtualWebhooksTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * WebhookSupportTest Class Doc Comment
+ * VirtualWebhooksTest Class Doc Comment
  *
  * @category    Class
- * @description WebhookSupport
+ * @description Virtual webhook config for the connector.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class WebhookSupportTest extends TestCase
+class VirtualWebhooksTest extends TestCase
 {
 
     /**
@@ -71,45 +71,27 @@ class WebhookSupportTest extends TestCase
     }
 
     /**
-     * Test "WebhookSupport"
+     * Test "VirtualWebhooks"
      */
-    public function testWebhookSupport()
+    public function testVirtualWebhooks()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mode"
+     * Test attribute "request_rate"
      */
-    public function testPropertyMode()
+    public function testPropertyRequestRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "subscription_level"
+     * Test attribute "resources"
      */
-    public function testPropertySubscriptionLevel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "managed_via"
-     */
-    public function testPropertyManagedVia()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "virtual_webhooks"
-     */
-    public function testPropertyVirtualWebhooks()
+    public function testPropertyResources()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

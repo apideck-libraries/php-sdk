@@ -415,6 +415,7 @@ docs/Model/ProfitAndLossNetOperatingIncome.md
 docs/Model/ProfitAndLossRecord.md
 docs/Model/ProfitAndLossSection.md
 docs/Model/RequestCountAllocation.md
+docs/Model/RequestRate.md
 docs/Model/ResolveWebhookResponse.md
 docs/Model/ResourceStatus.md
 docs/Model/Schedule.md
@@ -494,6 +495,7 @@ docs/Model/UpdateWebhookResponse.md
 docs/Model/UploadSession.md
 docs/Model/User.md
 docs/Model/VaultEventType.md
+docs/Model/VirtualWebhooks.md
 docs/Model/WalletDetails.md
 docs/Model/Webhook.md
 docs/Model/WebhookEventLog.md
@@ -918,6 +920,7 @@ lib/Model/ProfitAndLossNetOperatingIncome.php
 lib/Model/ProfitAndLossRecord.php
 lib/Model/ProfitAndLossSection.php
 lib/Model/RequestCountAllocation.php
+lib/Model/RequestRate.php
 lib/Model/ResolveWebhookResponse.php
 lib/Model/ResourceStatus.php
 lib/Model/Schedule.php
@@ -997,6 +1000,7 @@ lib/Model/UpdateWebhookResponse.php
 lib/Model/UploadSession.php
 lib/Model/User.php
 lib/Model/VaultEventType.php
+lib/Model/VirtualWebhooks.php
 lib/Model/WalletDetails.php
 lib/Model/Webhook.php
 lib/Model/WebhookEventLog.php
@@ -1416,6 +1420,7 @@ test/Model/ProfitAndLossRecordTest.php
 test/Model/ProfitAndLossSectionTest.php
 test/Model/ProfitAndLossTest.php
 test/Model/RequestCountAllocationTest.php
+test/Model/RequestRateTest.php
 test/Model/ResolveWebhookResponseTest.php
 test/Model/ResourceStatusTest.php
 test/Model/ScheduleTest.php
@@ -1495,6 +1500,7 @@ test/Model/UpdateWebhookResponseTest.php
 test/Model/UploadSessionTest.php
 test/Model/UserTest.php
 test/Model/VaultEventTypeTest.php
+test/Model/VirtualWebhooksTest.php
 test/Model/WalletDetailsTest.php
 test/Model/WebhookEventLogAttemptsTest.php
 test/Model/WebhookEventLogServiceTest.php

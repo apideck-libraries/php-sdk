@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookSupport
+ * RequestRate
  *
  * PHP version 7.3
  *
@@ -32,9 +32,10 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * WebhookSupport Class Doc Comment
+ * RequestRate Class Doc Comment
  *
  * @category Class
+ * @description The rate at which requests for resources will be made to downstream.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -42,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
+class RequestRate implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +52,7 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'WebhookSupport';
+    protected static $openAPIModelName = 'Request_Rate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +60,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'mode' => 'string',
-        'subscription_level' => 'string',
-        'managed_via' => 'string',
-        'virtual_webhooks' => '\Apideck\Client\Model\VirtualWebhooks'
+        'rate' => 'int',
+        'size' => 'int',
+        'unit' => 'string'
     ];
 
     /**
@@ -73,10 +73,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'mode' => null,
-        'subscription_level' => null,
-        'managed_via' => null,
-        'virtual_webhooks' => null
+        'rate' => null,
+        'size' => null,
+        'unit' => null
     ];
 
     /**
@@ -106,10 +105,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'mode' => 'mode',
-        'subscription_level' => 'subscription_level',
-        'managed_via' => 'managed_via',
-        'virtual_webhooks' => 'virtual_webhooks'
+        'rate' => 'rate',
+        'size' => 'size',
+        'unit' => 'unit'
     ];
 
     /**
@@ -118,10 +116,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'mode' => 'setMode',
-        'subscription_level' => 'setSubscriptionLevel',
-        'managed_via' => 'setManagedVia',
-        'virtual_webhooks' => 'setVirtualWebhooks'
+        'rate' => 'setRate',
+        'size' => 'setSize',
+        'unit' => 'setUnit'
     ];
 
     /**
@@ -130,10 +127,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'mode' => 'getMode',
-        'subscription_level' => 'getSubscriptionLevel',
-        'managed_via' => 'getManagedVia',
-        'virtual_webhooks' => 'getVirtualWebhooks'
+        'rate' => 'getRate',
+        'size' => 'getSize',
+        'unit' => 'getUnit'
     ];
 
     /**
@@ -177,51 +173,23 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const MODE_NATIVE = 'native';
-    const MODE_VIRTUAL = 'virtual';
-    const MODE_NONE = 'none';
-    const SUBSCRIPTION_LEVEL_CONNECTION = 'connection';
-    const SUBSCRIPTION_LEVEL_INTEGRATION = 'integration';
-    const MANAGED_VIA_MANUAL = 'manual';
-    const MANAGED_VIA_API = 'api';
+    const UNIT_SECOND = 'second';
+    const UNIT_MINUTE = 'minute';
+    const UNIT_HOUR = 'hour';
+    const UNIT_DAY = 'day';
 
     /**
      * Gets allowable values of the enum
      *
      * @return string[]
      */
-    public function getModeAllowableValues()
+    public function getUnitAllowableValues()
     {
         return [
-            self::MODE_NATIVE,
-            self::MODE_VIRTUAL,
-            self::MODE_NONE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getSubscriptionLevelAllowableValues()
-    {
-        return [
-            self::SUBSCRIPTION_LEVEL_CONNECTION,
-            self::SUBSCRIPTION_LEVEL_INTEGRATION,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getManagedViaAllowableValues()
-    {
-        return [
-            self::MANAGED_VIA_MANUAL,
-            self::MANAGED_VIA_API,
+            self::UNIT_SECOND,
+            self::UNIT_MINUTE,
+            self::UNIT_HOUR,
+            self::UNIT_DAY,
         ];
     }
 
@@ -240,10 +208,9 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['mode'] = $data['mode'] ?? null;
-        $this->container['subscription_level'] = $data['subscription_level'] ?? null;
-        $this->container['managed_via'] = $data['managed_via'] ?? null;
-        $this->container['virtual_webhooks'] = $data['virtual_webhooks'] ?? null;
+        $this->container['rate'] = $data['rate'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
+        $this->container['unit'] = $data['unit'] ?? null;
     }
 
     /**
@@ -255,29 +222,20 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getModeAllowableValues();
-        if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'mode', must be one of '%s'",
-                $this->container['mode'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['rate'] === null) {
+            $invalidProperties[] = "'rate' can't be null";
         }
-
-        $allowedValues = $this->getSubscriptionLevelAllowableValues();
-        if (!is_null($this->container['subscription_level']) && !in_array($this->container['subscription_level'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'subscription_level', must be one of '%s'",
-                $this->container['subscription_level'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
-
-        $allowedValues = $this->getManagedViaAllowableValues();
-        if (!is_null($this->container['managed_via']) && !in_array($this->container['managed_via'], $allowedValues, true)) {
+        if ($this->container['unit'] === null) {
+            $invalidProperties[] = "'unit' can't be null";
+        }
+        $allowedValues = $this->getUnitAllowableValues();
+        if (!is_null($this->container['unit']) && !in_array($this->container['unit'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'managed_via', must be one of '%s'",
-                $this->container['managed_via'],
+                "invalid value '%s' for 'unit', must be one of '%s'",
+                $this->container['unit'],
                 implode("', '", $allowedValues)
             );
         }
@@ -298,127 +256,83 @@ class WebhookSupport implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets mode
+     * Gets rate
      *
-     * @return string|null
+     * @return int
      */
-    public function getMode()
+    public function getRate()
     {
-        return $this->container['mode'];
+        return $this->container['rate'];
     }
 
     /**
-     * Sets mode
+     * Sets rate
      *
-     * @param string|null $mode Mode of the webhook support.
+     * @param int $rate The number of requests per window unit.
      *
      * @return self
      */
-    public function setMode($mode)
+    public function setRate($rate)
     {
-        $allowedValues = $this->getModeAllowableValues();
-        if (!is_null($mode) && !in_array($mode, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'mode', must be one of '%s'",
-                    $mode,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['mode'] = $mode;
+        $this->container['rate'] = $rate;
 
         return $this;
     }
 
     /**
-     * Gets subscription_level
+     * Gets size
      *
-     * @return string|null
+     * @return int
      */
-    public function getSubscriptionLevel()
+    public function getSize()
     {
-        return $this->container['subscription_level'];
+        return $this->container['size'];
     }
 
     /**
-     * Sets subscription_level
+     * Sets size
      *
-     * @param string|null $subscription_level Received events are scoped to connection or across integration.
+     * @param int $size Size of request window.
      *
      * @return self
      */
-    public function setSubscriptionLevel($subscription_level)
+    public function setSize($size)
     {
-        $allowedValues = $this->getSubscriptionLevelAllowableValues();
-        if (!is_null($subscription_level) && !in_array($subscription_level, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'subscription_level', must be one of '%s'",
-                    $subscription_level,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['subscription_level'] = $subscription_level;
+        $this->container['size'] = $size;
 
         return $this;
     }
 
     /**
-     * Gets managed_via
+     * Gets unit
      *
-     * @return string|null
+     * @return string
      */
-    public function getManagedVia()
+    public function getUnit()
     {
-        return $this->container['managed_via'];
+        return $this->container['unit'];
     }
 
     /**
-     * Sets managed_via
+     * Sets unit
      *
-     * @param string|null $managed_via How the subscription is managed in the downstream.
+     * @param string $unit The window unit for the rate.
      *
      * @return self
      */
-    public function setManagedVia($managed_via)
+    public function setUnit($unit)
     {
-        $allowedValues = $this->getManagedViaAllowableValues();
-        if (!is_null($managed_via) && !in_array($managed_via, $allowedValues, true)) {
+        $allowedValues = $this->getUnitAllowableValues();
+        if (!in_array($unit, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'managed_via', must be one of '%s'",
-                    $managed_via,
+                    "Invalid value '%s' for 'unit', must be one of '%s'",
+                    $unit,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['managed_via'] = $managed_via;
-
-        return $this;
-    }
-
-    /**
-     * Gets virtual_webhooks
-     *
-     * @return \Apideck\Client\Model\VirtualWebhooks|null
-     */
-    public function getVirtualWebhooks()
-    {
-        return $this->container['virtual_webhooks'];
-    }
-
-    /**
-     * Sets virtual_webhooks
-     *
-     * @param \Apideck\Client\Model\VirtualWebhooks|null $virtual_webhooks virtual_webhooks
-     *
-     * @return self
-     */
-    public function setVirtualWebhooks($virtual_webhooks)
-    {
-        $this->container['virtual_webhooks'] = $virtual_webhooks;
+        $this->container['unit'] = $unit;
 
         return $this;
     }

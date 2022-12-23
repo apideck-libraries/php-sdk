@@ -6,8 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `mode` | **string** | Mode of the webhook support. | [optional] 
-`subscription_level` | **string** | Received events are scoped to consumer or across integration. | [optional] 
+`subscription_level` | **string** | Received events are scoped to connection or across integration. | [optional] 
 `managed_via` | **string** | How the subscription is managed in the downstream. | [optional] 
+`virtual_webhooks` | [**\Apideck\Client\Model\VirtualWebhooks**](VirtualWebhooks.md) |  | [optional] 
 
 
 
@@ -30,7 +31,7 @@ Name | Type | Description | Notes
 ## Enum: WebhookSupport.subscription_level
 
 
-* `CONSUMER` (value: `'consumer'`)
+* `CONNECTION` (value: `'connection'`)
 
 * `INTEGRATION` (value: `'integration'`)
 
@@ -47,6 +48,12 @@ Name | Type | Description | Notes
 
 
 
+
+## Referenced Types:
+
+
+
+* [`VirtualWebhooks`](VirtualWebhooks.md)
 
 ---
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookSupportTest
+ * RequestRateTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * WebhookSupportTest Class Doc Comment
+ * RequestRateTest Class Doc Comment
  *
  * @category    Class
- * @description WebhookSupport
+ * @description The rate at which requests for resources will be made to downstream.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class WebhookSupportTest extends TestCase
+class RequestRateTest extends TestCase
 {
 
     /**
@@ -71,45 +71,36 @@ class WebhookSupportTest extends TestCase
     }
 
     /**
-     * Test "WebhookSupport"
+     * Test "RequestRate"
      */
-    public function testWebhookSupport()
+    public function testRequestRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mode"
+     * Test attribute "rate"
      */
-    public function testPropertyMode()
+    public function testPropertyRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "subscription_level"
+     * Test attribute "size"
      */
-    public function testPropertySubscriptionLevel()
+    public function testPropertySize()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "managed_via"
+     * Test attribute "unit"
      */
-    public function testPropertyManagedVia()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "virtual_webhooks"
-     */
-    public function testPropertyVirtualWebhooks()
+    public function testPropertyUnit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
