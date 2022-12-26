@@ -82,7 +82,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'supported_resources' => '\Apideck\Client\Model\LinkedConnectorResource[]',
         'configurable_resources' => 'string[]',
         'supported_events' => '\Apideck\Client\Model\ConnectorEvent[]',
-        'webhook_support' => '\Apideck\Client\Model\WebhookSupport[]',
+        'webhook_support' => '\Apideck\Client\Model\WebhookSupport',
         'docs' => '\Apideck\Client\Model\ConnectorDoc[]',
         'tls_support' => '\Apideck\Client\Model\ConnectorTlsSupport'
     ];
@@ -1020,7 +1020,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets webhook_support
      *
-     * @return \Apideck\Client\Model\WebhookSupport[]|null
+     * @return \Apideck\Client\Model\WebhookSupport|null
      */
     public function getWebhookSupport()
     {
@@ -1030,7 +1030,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets webhook_support
      *
-     * @param \Apideck\Client\Model\WebhookSupport[]|null $webhook_support How webhooks are supported for the connector. Sometimes the connector natively supports webhooks, other times Apideck virtualizes them based on polling.
+     * @param \Apideck\Client\Model\WebhookSupport|null $webhook_support webhook_support
      *
      * @return self
      */

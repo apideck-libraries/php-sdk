@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * WebhookSupportTest Class Doc Comment
  *
  * @category    Class
- * @description WebhookSupport
+ * @description How webhooks are supported for the connector. Sometimes the connector natively supports webhooks, other times Apideck virtualizes them based on polling.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
