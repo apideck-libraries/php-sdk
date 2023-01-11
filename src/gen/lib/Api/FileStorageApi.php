@@ -4620,14 +4620,15 @@ class FileStorageApi
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\FilesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\FilesSort $sort Apply sorting (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetFilesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function filesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null)
+    public function filesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null)
     {
-        list($response) = $this->filesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort);
+        list($response) = $this->filesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through);
         return $response;
     }
 
@@ -4644,14 +4645,15 @@ class FileStorageApi
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\FilesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\FilesSort $sort Apply sorting (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetFilesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function filesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null)
+    public function filesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null)
     {
-        $request = $this->filesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort);
+        $request = $this->filesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4864,13 +4866,14 @@ class FileStorageApi
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\FilesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\FilesSort $sort Apply sorting (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null)
+    public function filesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null)
     {
-        return $this->filesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort)
+        return $this->filesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4891,14 +4894,15 @@ class FileStorageApi
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\FilesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\FilesSort $sort Apply sorting (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null)
+    public function filesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null)
     {
         $returnType = '\Apideck\Client\Model\GetFilesResponse';
-        $request = $this->filesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort);
+        $request = $this->filesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4944,11 +4948,12 @@ class FileStorageApi
      * @param  int $limit Number of records to return (optional, default to 20)
      * @param  \Apideck\Client\Model\FilesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\FilesSort $sort Apply sorting (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function filesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null)
+    public function filesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling FileStorageApi.filesAll, must be smaller than or equal to 200.');
@@ -5018,6 +5023,17 @@ class FileStorageApi
             }
             else {
                 $queryParams['sort'] = $sort;
+            }
+        }
+        // query params
+        if ($pass_through !== null) {
+            if('form' === 'deepObject' && is_array($pass_through)) {
+                foreach($pass_through as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['pass_through'] = $pass_through;
             }
         }
 
@@ -6408,14 +6424,15 @@ class FileStorageApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetFilesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function filesSearch($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function filesSearch($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $pass_through = null)
     {
-        list($response) = $this->filesSearchWithHttpInfo($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        list($response) = $this->filesSearchWithHttpInfo($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $pass_through);
         return $response;
     }
 
@@ -6428,14 +6445,15 @@ class FileStorageApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetFilesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function filesSearchWithHttpInfo($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function filesSearchWithHttpInfo($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $pass_through = null)
     {
-        $request = $this->filesSearchRequest($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->filesSearchRequest($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $pass_through);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6644,13 +6662,14 @@ class FileStorageApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesSearchAsync($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function filesSearchAsync($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $pass_through = null)
     {
-        return $this->filesSearchAsyncWithHttpInfo($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
+        return $this->filesSearchAsyncWithHttpInfo($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $pass_through)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6667,14 +6686,15 @@ class FileStorageApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesSearchAsyncWithHttpInfo($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function filesSearchAsyncWithHttpInfo($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $pass_through = null)
     {
         $returnType = '\Apideck\Client\Model\GetFilesResponse';
-        $request = $this->filesSearchRequest($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->filesSearchRequest($files_search, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $pass_through);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6716,11 +6736,12 @@ class FileStorageApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function filesSearchRequest($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function filesSearchRequest($files_search, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $pass_through = null)
     {
         // verify the required parameter 'files_search' is set
         if ($files_search === null || (is_array($files_search) && count($files_search) === 0)) {
@@ -6736,6 +6757,17 @@ class FileStorageApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($pass_through !== null) {
+            if('form' === 'deepObject' && is_array($pass_through)) {
+                foreach($pass_through as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['pass_through'] = $pass_through;
+            }
+        }
 
         // header params
         if ($x_apideck_consumer_id !== null) {
