@@ -98,6 +98,7 @@ docs/Model/CreateApplicantResponse.md
 docs/Model/CreateBillResponse.md
 docs/Model/CreateCompanyResponse.md
 docs/Model/CreateConnectionResponse.md
+docs/Model/CreateConsumerResponse.md
 docs/Model/CreateContactResponse.md
 docs/Model/CreateCreditNoteResponse.md
 docs/Model/CreateCustomerResponse.md
@@ -151,6 +152,7 @@ docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCompanyResponse.md
+docs/Model/DeleteConsumerResponse.md
 docs/Model/DeleteContactResponse.md
 docs/Model/DeleteCreditNoteResponse.md
 docs/Model/DeleteCustomerResponse.md
@@ -453,6 +455,8 @@ docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCompanyResponse.md
 docs/Model/UpdateConnectionResponse.md
+docs/Model/UpdateConsumerRequest.md
+docs/Model/UpdateConsumerResponse.md
 docs/Model/UpdateContactResponse.md
 docs/Model/UpdateCreditNoteResponse.md
 docs/Model/UpdateCustomerResponse.md
@@ -602,6 +606,7 @@ lib/Model/CreateApplicantResponse.php
 lib/Model/CreateBillResponse.php
 lib/Model/CreateCompanyResponse.php
 lib/Model/CreateConnectionResponse.php
+lib/Model/CreateConsumerResponse.php
 lib/Model/CreateContactResponse.php
 lib/Model/CreateCreditNoteResponse.php
 lib/Model/CreateCustomerResponse.php
@@ -655,6 +660,7 @@ lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCompanyResponse.php
+lib/Model/DeleteConsumerResponse.php
 lib/Model/DeleteContactResponse.php
 lib/Model/DeleteCreditNoteResponse.php
 lib/Model/DeleteCustomerResponse.php
@@ -958,6 +964,8 @@ lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCompanyResponse.php
 lib/Model/UpdateConnectionResponse.php
+lib/Model/UpdateConsumerRequest.php
+lib/Model/UpdateConsumerResponse.php
 lib/Model/UpdateContactResponse.php
 lib/Model/UpdateCreditNoteResponse.php
 lib/Model/UpdateCustomerResponse.php
@@ -1103,6 +1111,7 @@ test/Model/CreateApplicantResponseTest.php
 test/Model/CreateBillResponseTest.php
 test/Model/CreateCompanyResponseTest.php
 test/Model/CreateConnectionResponseTest.php
+test/Model/CreateConsumerResponseTest.php
 test/Model/CreateContactResponseTest.php
 test/Model/CreateCreditNoteResponseTest.php
 test/Model/CreateCustomerResponseTest.php
@@ -1156,6 +1165,7 @@ test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
+test/Model/DeleteConsumerResponseTest.php
 test/Model/DeleteContactResponseTest.php
 test/Model/DeleteCreditNoteResponseTest.php
 test/Model/DeleteCustomerResponseTest.php
@@ -1458,6 +1468,8 @@ test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCompanyResponseTest.php
 test/Model/UpdateConnectionResponseTest.php
+test/Model/UpdateConsumerRequestTest.php
+test/Model/UpdateConsumerResponseTest.php
 test/Model/UpdateContactResponseTest.php
 test/Model/UpdateCreditNoteResponseTest.php
 test/Model/UpdateCustomerResponseTest.php
