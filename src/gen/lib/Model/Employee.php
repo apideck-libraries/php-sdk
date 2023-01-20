@@ -1095,7 +1095,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employment_end_date
      *
-     * @param string|null $employment_end_date A Start Date is the date that the employee ended working at the company
+     * @param string|null $employment_end_date An End Date is the date that the employee ended working at the company
      *
      * @return self
      */
