@@ -98,6 +98,15 @@ class BillTest extends TestCase
     }
 
     /**
+     * Test attribute "bill_number"
+     */
+    public function testPropertyBillNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "supplier"
      */
     public function testPropertySupplier()
@@ -272,15 +281,6 @@ class BillTest extends TestCase
      * Test attribute "ledger_account"
      */
     public function testPropertyLedgerAccount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "bill_number"
-     */
-    public function testPropertyBillNumber()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

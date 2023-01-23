@@ -80,6 +80,33 @@ class BankAccountTest extends TestCase
     }
 
     /**
+     * Test attribute "account_number"
+     */
+    public function testPropertyAccountNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "account_name"
+     */
+    public function testPropertyAccountName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "account_type"
+     */
+    public function testPropertyAccountType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "iban"
      */
     public function testPropertyIban()
@@ -119,33 +146,6 @@ class BankAccountTest extends TestCase
      * Test attribute "bank_code"
      */
     public function testPropertyBankCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "account_number"
-     */
-    public function testPropertyAccountNumber()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "account_name"
-     */
-    public function testPropertyAccountName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "account_type"
-     */
-    public function testPropertyAccountType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -713,7 +713,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status Status of payment
+     * @param string|null $status Status of credit notes
      *
      * @return self
      */

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 `tax_code` | **string** | Applicable tax id/code override if tax is not supplied on a line item basis. | [optional] 
 `balance` | **float** | The balance reflecting any payments made against the transaction. | [optional] 
 `remaining_credit` | **float** | Indicates the total credit amount still available to apply towards the payment. | [optional] 
-`status` | **string** | Status of payment | [optional] 
+`status` | **string** | Status of credit notes | [optional] 
 `reference` | **string** | Optional reference message ie: Debit remittance detail. | [optional] 
 `date_issued` | **\DateTime** | Date credit note issued - YYYY:MM::DDThh:mm:ss.sTZD | [optional] 
 `date_paid` | **\DateTime** | Date credit note paid - YYYY:MM::DDThh:mm:ss.sTZD | [optional] 

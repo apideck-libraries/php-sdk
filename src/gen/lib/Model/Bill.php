@@ -61,6 +61,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'downstream_id' => 'string',
+        'bill_number' => 'string',
         'supplier' => '\Apideck\Client\Model\LinkedSupplier',
         'currency' => '\Apideck\Client\Model\Currency',
         'currency_rate' => 'float',
@@ -81,7 +82,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'string',
         'status' => 'string',
         'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
-        'bill_number' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -99,6 +99,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'downstream_id' => null,
+        'bill_number' => null,
         'supplier' => null,
         'currency' => null,
         'currency_rate' => null,
@@ -119,7 +120,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => null,
         'status' => null,
         'ledger_account' => null,
-        'bill_number' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -156,6 +156,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'downstream_id' => 'downstream_id',
+        'bill_number' => 'bill_number',
         'supplier' => 'supplier',
         'currency' => 'currency',
         'currency_rate' => 'currency_rate',
@@ -176,7 +177,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'notes',
         'status' => 'status',
         'ledger_account' => 'ledger_account',
-        'bill_number' => 'bill_number',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -192,6 +192,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'downstream_id' => 'setDownstreamId',
+        'bill_number' => 'setBillNumber',
         'supplier' => 'setSupplier',
         'currency' => 'setCurrency',
         'currency_rate' => 'setCurrencyRate',
@@ -212,7 +213,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'setNotes',
         'status' => 'setStatus',
         'ledger_account' => 'setLedgerAccount',
-        'bill_number' => 'setBillNumber',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -228,6 +228,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'downstream_id' => 'getDownstreamId',
+        'bill_number' => 'getBillNumber',
         'supplier' => 'getSupplier',
         'currency' => 'getCurrency',
         'currency_rate' => 'getCurrencyRate',
@@ -248,7 +249,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'getNotes',
         'status' => 'getStatus',
         'ledger_account' => 'getLedgerAccount',
-        'bill_number' => 'getBillNumber',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -342,6 +342,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['downstream_id'] = $data['downstream_id'] ?? null;
+        $this->container['bill_number'] = $data['bill_number'] ?? null;
         $this->container['supplier'] = $data['supplier'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['currency_rate'] = $data['currency_rate'] ?? null;
@@ -362,7 +363,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['notes'] = $data['notes'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['ledger_account'] = $data['ledger_account'] ?? null;
-        $this->container['bill_number'] = $data['bill_number'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -447,6 +447,30 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDownstreamId($downstream_id)
     {
         $this->container['downstream_id'] = $downstream_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets bill_number
+     *
+     * @return string|null
+     */
+    public function getBillNumber()
+    {
+        return $this->container['bill_number'];
+    }
+
+    /**
+     * Sets bill_number
+     *
+     * @param string|null $bill_number bill_number
+     *
+     * @return self
+     */
+    public function setBillNumber($bill_number)
+    {
+        $this->container['bill_number'] = $bill_number;
 
         return $this;
     }
@@ -937,30 +961,6 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLedgerAccount($ledger_account)
     {
         $this->container['ledger_account'] = $ledger_account;
-
-        return $this;
-    }
-
-    /**
-     * Gets bill_number
-     *
-     * @return string|null
-     */
-    public function getBillNumber()
-    {
-        return $this->container['bill_number'];
-    }
-
-    /**
-     * Sets bill_number
-     *
-     * @param string|null $bill_number bill_number
-     *
-     * @return self
-     */
-    public function setBillNumber($bill_number)
-    {
-        $this->container['bill_number'] = $bill_number;
 
         return $this;
     }

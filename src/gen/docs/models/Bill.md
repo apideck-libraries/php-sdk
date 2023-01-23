@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** |  | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
+`bill_number` | **string** |  | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
@@ -27,7 +28,6 @@ Name | Type | Description | Notes
 `notes` | **string** |  | [optional] 
 `status` | **string** | Invoice status | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
-`bill_number` | **string** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
@@ -64,6 +64,7 @@ Name | Type | Description | Notes
 ## Referenced Types:
 
 
+
 * [`LinkedSupplier`](LinkedSupplier.md)
 * [`Currency`](Currency.md)
 
@@ -84,7 +85,6 @@ Name | Type | Description | Notes
 
 
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
-
 
 
 
