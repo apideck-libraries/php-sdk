@@ -206,6 +206,7 @@ docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
 docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
+docs/Model/EmployeesSort.md
 docs/Model/Error.md
 docs/Model/ExecuteWebhookResponse.md
 docs/Model/FileStorageEventType.md
@@ -714,6 +715,7 @@ lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
 lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
+lib/Model/EmployeesSort.php
 lib/Model/Error.php
 lib/Model/ExecuteWebhookResponse.php
 lib/Model/FileStorageEventType.php
@@ -1219,6 +1221,7 @@ test/Model/EmployeeSchedulesTest.php
 test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php
+test/Model/EmployeesSortTest.php
 test/Model/ErrorTest.php
 test/Model/ExecuteWebhookResponseTest.php
 test/Model/FileStorageEventTypeTest.php
