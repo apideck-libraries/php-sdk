@@ -23,6 +23,7 @@ docs/Api/VaultApi.md
 docs/Api/WebhookApi.md
 docs/Model/AccountingCustomer.md
 docs/Model/AccountingEventType.md
+docs/Model/ActivitiesFilter.md
 docs/Model/Activity.md
 docs/Model/ActivityAttendee.md
 docs/Model/Address.md
@@ -532,6 +533,7 @@ lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/AccountingCustomer.php
 lib/Model/AccountingEventType.php
+lib/Model/ActivitiesFilter.php
 lib/Model/Activity.php
 lib/Model/ActivityAttendee.php
 lib/Model/Address.php
@@ -1038,6 +1040,7 @@ test/Api/VaultApiTest.php
 test/Api/WebhookApiTest.php
 test/Model/AccountingCustomerTest.php
 test/Model/AccountingEventTypeTest.php
+test/Model/ActivitiesFilterTest.php
 test/Model/ActivityAttendeeTest.php
 test/Model/ActivityTest.php
 test/Model/AddressTest.php
