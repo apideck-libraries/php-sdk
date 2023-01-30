@@ -89,6 +89,15 @@ class AccountingCustomerTest extends TestCase
     }
 
     /**
+     * Test attribute "downstream_id"
+     */
+    public function testPropertyDownstreamId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "display_id"
      */
     public function testPropertyDisplayId()
@@ -179,15 +188,6 @@ class AccountingCustomerTest extends TestCase
     }
 
     /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "phone_numbers"
      */
     public function testPropertyPhoneNumbers()
@@ -209,6 +209,24 @@ class AccountingCustomerTest extends TestCase
      * Test attribute "websites"
      */
     public function testPropertyWebsites()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "bank_accounts"
+     */
+    public function testPropertyBankAccounts()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -242,9 +260,9 @@ class AccountingCustomerTest extends TestCase
     }
 
     /**
-     * Test attribute "bank_accounts"
+     * Test attribute "account"
      */
-    public function testPropertyBankAccounts()
+    public function testPropertyAccount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -254,15 +272,6 @@ class AccountingCustomerTest extends TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "row_version"
-     */
-    public function testPropertyRowVersion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -299,6 +308,15 @@ class AccountingCustomerTest extends TestCase
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "row_version"
+     */
+    public function testPropertyRowVersion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

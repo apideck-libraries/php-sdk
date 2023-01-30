@@ -60,6 +60,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'string',
+        'downstream_id' => 'string',
         'display_id' => 'string',
         'display_name' => 'string',
         'company_name' => 'string',
@@ -70,20 +71,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'suffix' => 'string',
         'individual' => 'bool',
         'addresses' => '\Apideck\Client\Model\Address[]',
-        'notes' => 'string',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'emails' => '\Apideck\Client\Model\Email[]',
         'websites' => '\Apideck\Client\Model\Website[]',
+        'bank_accounts' => '\Apideck\Client\Model\BankAccount[]',
+        'notes' => 'string',
         'tax_rate' => '\Apideck\Client\Model\LinkedTaxRate',
         'tax_number' => 'string',
         'currency' => '\Apideck\Client\Model\Currency',
-        'bank_accounts' => '\Apideck\Client\Model\BankAccount[]',
+        'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'status' => 'string',
-        'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
-        'created_at' => '\DateTime'
+        'created_at' => '\DateTime',
+        'row_version' => 'string'
     ];
 
     /**
@@ -95,6 +97,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'downstream_id' => null,
         'display_id' => null,
         'display_name' => null,
         'company_name' => null,
@@ -105,20 +108,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'suffix' => null,
         'individual' => null,
         'addresses' => null,
-        'notes' => null,
         'phone_numbers' => null,
         'emails' => null,
         'websites' => null,
+        'bank_accounts' => null,
+        'notes' => null,
         'tax_rate' => null,
         'tax_number' => null,
         'currency' => null,
-        'bank_accounts' => null,
+        'account' => null,
         'status' => null,
-        'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
-        'created_at' => 'date-time'
+        'created_at' => 'date-time',
+        'row_version' => null
     ];
 
     /**
@@ -149,6 +153,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'downstream_id' => 'downstream_id',
         'display_id' => 'display_id',
         'display_name' => 'display_name',
         'company_name' => 'company_name',
@@ -159,20 +164,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'suffix' => 'suffix',
         'individual' => 'individual',
         'addresses' => 'addresses',
-        'notes' => 'notes',
         'phone_numbers' => 'phone_numbers',
         'emails' => 'emails',
         'websites' => 'websites',
+        'bank_accounts' => 'bank_accounts',
+        'notes' => 'notes',
         'tax_rate' => 'tax_rate',
         'tax_number' => 'tax_number',
         'currency' => 'currency',
-        'bank_accounts' => 'bank_accounts',
+        'account' => 'account',
         'status' => 'status',
-        'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
-        'created_at' => 'created_at'
+        'created_at' => 'created_at',
+        'row_version' => 'row_version'
     ];
 
     /**
@@ -182,6 +188,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'id' => 'setId',
+        'downstream_id' => 'setDownstreamId',
         'display_id' => 'setDisplayId',
         'display_name' => 'setDisplayName',
         'company_name' => 'setCompanyName',
@@ -192,20 +199,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'suffix' => 'setSuffix',
         'individual' => 'setIndividual',
         'addresses' => 'setAddresses',
-        'notes' => 'setNotes',
         'phone_numbers' => 'setPhoneNumbers',
         'emails' => 'setEmails',
         'websites' => 'setWebsites',
+        'bank_accounts' => 'setBankAccounts',
+        'notes' => 'setNotes',
         'tax_rate' => 'setTaxRate',
         'tax_number' => 'setTaxNumber',
         'currency' => 'setCurrency',
-        'bank_accounts' => 'setBankAccounts',
+        'account' => 'setAccount',
         'status' => 'setStatus',
-        'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt'
+        'created_at' => 'setCreatedAt',
+        'row_version' => 'setRowVersion'
     ];
 
     /**
@@ -215,6 +223,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'id' => 'getId',
+        'downstream_id' => 'getDownstreamId',
         'display_id' => 'getDisplayId',
         'display_name' => 'getDisplayName',
         'company_name' => 'getCompanyName',
@@ -225,20 +234,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'suffix' => 'getSuffix',
         'individual' => 'getIndividual',
         'addresses' => 'getAddresses',
-        'notes' => 'getNotes',
         'phone_numbers' => 'getPhoneNumbers',
         'emails' => 'getEmails',
         'websites' => 'getWebsites',
+        'bank_accounts' => 'getBankAccounts',
+        'notes' => 'getNotes',
         'tax_rate' => 'getTaxRate',
         'tax_number' => 'getTaxNumber',
         'currency' => 'getCurrency',
-        'bank_accounts' => 'getBankAccounts',
+        'account' => 'getAccount',
         'status' => 'getStatus',
-        'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt'
+        'created_at' => 'getCreatedAt',
+        'row_version' => 'getRowVersion'
     ];
 
     /**
@@ -320,6 +330,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
+        $this->container['downstream_id'] = $data['downstream_id'] ?? null;
         $this->container['display_id'] = $data['display_id'] ?? null;
         $this->container['display_name'] = $data['display_name'] ?? null;
         $this->container['company_name'] = $data['company_name'] ?? null;
@@ -330,20 +341,21 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['suffix'] = $data['suffix'] ?? null;
         $this->container['individual'] = $data['individual'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
-        $this->container['notes'] = $data['notes'] ?? null;
         $this->container['phone_numbers'] = $data['phone_numbers'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
         $this->container['websites'] = $data['websites'] ?? null;
+        $this->container['bank_accounts'] = $data['bank_accounts'] ?? null;
+        $this->container['notes'] = $data['notes'] ?? null;
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
         $this->container['tax_number'] = $data['tax_number'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
-        $this->container['bank_accounts'] = $data['bank_accounts'] ?? null;
+        $this->container['account'] = $data['account'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
-        $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['row_version'] = $data['row_version'] ?? null;
     }
 
     /**
@@ -404,6 +416,30 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
+     * Gets downstream_id
+     *
+     * @return string|null
+     */
+    public function getDownstreamId()
+    {
+        return $this->container['downstream_id'];
+    }
+
+    /**
+     * Sets downstream_id
+     *
+     * @param string|null $downstream_id The third-party API ID of original entity
+     *
+     * @return self
+     */
+    public function setDownstreamId($downstream_id)
+    {
+        $this->container['downstream_id'] = $downstream_id;
+
+        return $this;
+    }
+
+    /**
      * Gets display_id
      *
      * @return string|null
@@ -440,7 +476,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets display_name
      *
-     * @param string|null $display_name Display Name
+     * @param string|null $display_name Display name
      *
      * @return self
      */
@@ -644,30 +680,6 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets notes
-     *
-     * @return string|null
-     */
-    public function getNotes()
-    {
-        return $this->container['notes'];
-    }
-
-    /**
-     * Sets notes
-     *
-     * @param string|null $notes Some notes about this customer
-     *
-     * @return self
-     */
-    public function setNotes($notes)
-    {
-        $this->container['notes'] = $notes;
-
-        return $this;
-    }
-
-    /**
      * Gets phone_numbers
      *
      * @return \Apideck\Client\Model\PhoneNumber[]|null
@@ -735,6 +747,54 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     public function setWebsites($websites)
     {
         $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_accounts
+     *
+     * @return \Apideck\Client\Model\BankAccount[]|null
+     */
+    public function getBankAccounts()
+    {
+        return $this->container['bank_accounts'];
+    }
+
+    /**
+     * Sets bank_accounts
+     *
+     * @param \Apideck\Client\Model\BankAccount[]|null $bank_accounts bank_accounts
+     *
+     * @return self
+     */
+    public function setBankAccounts($bank_accounts)
+    {
+        $this->container['bank_accounts'] = $bank_accounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     *
+     * @return string|null
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     *
+     * @param string|null $notes Some notes about this customer
+     *
+     * @return self
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }
@@ -812,25 +872,25 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets bank_accounts
+     * Gets account
      *
-     * @return \Apideck\Client\Model\BankAccount[]|null
+     * @return \Apideck\Client\Model\LinkedLedgerAccount|null
      */
-    public function getBankAccounts()
+    public function getAccount()
     {
-        return $this->container['bank_accounts'];
+        return $this->container['account'];
     }
 
     /**
-     * Sets bank_accounts
+     * Sets account
      *
-     * @param \Apideck\Client\Model\BankAccount[]|null $bank_accounts bank_accounts
+     * @param \Apideck\Client\Model\LinkedLedgerAccount|null $account account
      *
      * @return self
      */
-    public function setBankAccounts($bank_accounts)
+    public function setAccount($account)
     {
-        $this->container['bank_accounts'] = $bank_accounts;
+        $this->container['account'] = $account;
 
         return $this;
     }
@@ -865,30 +925,6 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets row_version
-     *
-     * @return string|null
-     */
-    public function getRowVersion()
-    {
-        return $this->container['row_version'];
-    }
-
-    /**
-     * Sets row_version
-     *
-     * @param string|null $row_version row_version
-     *
-     * @return self
-     */
-    public function setRowVersion($row_version)
-    {
-        $this->container['row_version'] = $row_version;
 
         return $this;
     }
@@ -985,6 +1021,30 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_version
+     *
+     * @return string|null
+     */
+    public function getRowVersion()
+    {
+        return $this->container['row_version'];
+    }
+
+    /**
+     * Sets row_version
+     *
+     * @param string|null $row_version row_version
+     *
+     * @return self
+     */
+    public function setRowVersion($row_version)
+    {
+        $this->container['row_version'] = $row_version;
 
         return $this;
     }

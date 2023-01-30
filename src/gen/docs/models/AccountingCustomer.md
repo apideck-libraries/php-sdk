@@ -6,8 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** |  | [optional] 
+`downstream_id` | **string** | The third-party API ID of original entity | [optional] 
 `display_id` | **string** | Display ID | [optional] 
-`display_name` | **string** | Display Name | [optional] 
+`display_name` | **string** | Display name | [optional] 
 `company_name` | **string** |  | [optional] 
 `title` | **string** |  | [optional] 
 `first_name` | **string** |  | [optional] 
@@ -16,20 +17,21 @@ Name | Type | Description | Notes
 `suffix` | **string** |  | [optional] 
 `individual` | **bool** | Is this an individual or business customer | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
-`notes` | **string** | Some notes about this customer | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `websites` | [**\Apideck\Client\Model\Website[]**](Website.md) |  | [optional] 
+`bank_accounts` | [**\Apideck\Client\Model\BankAccount[]**](BankAccount.md) |  | [optional] 
+`notes` | **string** | Some notes about this customer | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `tax_number` | **string** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
-`bank_accounts` | [**\Apideck\Client\Model\BankAccount[]**](BankAccount.md) |  | [optional] 
+`account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `status` | **string** | Customer status | [optional] 
-`row_version` | **string** |  | [optional] 
 `updated_by` | **string** |  | [optional] 
 `created_by` | **string** |  | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 `created_at` | **\DateTime** |  | [optional] 
+`row_version` | **string** |  | [optional] 
 
 
 
@@ -63,15 +65,17 @@ Name | Type | Description | Notes
 
 
 
-* [`Address`](Address.md)
 
+* [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`Website`](Website.md)
+* [`BankAccount`](BankAccount.md)
+
 * [`LinkedTaxRate`](LinkedTaxRate.md)
 
 * [`Currency`](Currency.md)
-* [`BankAccount`](BankAccount.md)
+* [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 
 
 

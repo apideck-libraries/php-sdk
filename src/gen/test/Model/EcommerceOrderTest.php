@@ -1,6 +1,6 @@
 <?php
 /**
- * SupplierTest
+ * EcommerceOrderTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SupplierTest Class Doc Comment
+ * EcommerceOrderTest Class Doc Comment
  *
  * @category    Class
- * @description Supplier
+ * @description EcommerceOrder
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SupplierTest extends TestCase
+class EcommerceOrderTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class SupplierTest extends TestCase
     }
 
     /**
-     * Test "Supplier"
+     * Test "EcommerceOrder"
      */
-    public function testSupplier()
+    public function testEcommerceOrder()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,162 +89,9 @@ class SupplierTest extends TestCase
     }
 
     /**
-     * Test attribute "downstream_id"
+     * Test attribute "order_number"
      */
-    public function testPropertyDownstreamId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "display_id"
-     */
-    public function testPropertyDisplayId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "display_name"
-     */
-    public function testPropertyDisplayName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "company_name"
-     */
-    public function testPropertyCompanyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "middle_name"
-     */
-    public function testPropertyMiddleName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "suffix"
-     */
-    public function testPropertySuffix()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "individual"
-     */
-    public function testPropertyIndividual()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addresses"
-     */
-    public function testPropertyAddresses()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "phone_numbers"
-     */
-    public function testPropertyPhoneNumbers()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "emails"
-     */
-    public function testPropertyEmails()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "websites"
-     */
-    public function testPropertyWebsites()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "bank_accounts"
-     */
-    public function testPropertyBankAccounts()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tax_rate"
-     */
-    public function testPropertyTaxRate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tax_number"
-     */
-    public function testPropertyTaxNumber()
+    public function testPropertyOrderNumber()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -260,9 +107,54 @@ class SupplierTest extends TestCase
     }
 
     /**
-     * Test attribute "account"
+     * Test attribute "discounts"
      */
-    public function testPropertyAccount()
+    public function testPropertyDiscounts()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sub_total"
+     */
+    public function testPropertySubTotal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "shipping_cost"
+     */
+    public function testPropertyShippingCost()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "total_discount"
+     */
+    public function testPropertyTotalDiscount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "total_tax"
+     */
+    public function testPropertyTotalTax()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "total_amount"
+     */
+    public function testPropertyTotalAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -278,18 +170,81 @@ class SupplierTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_by"
+     * Test attribute "payment_status"
      */
-    public function testPropertyUpdatedBy()
+    public function testPropertyPaymentStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "created_by"
+     * Test attribute "fulfillment_status"
      */
-    public function testPropertyCreatedBy()
+    public function testPropertyFulfillmentStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "billing_address"
+     */
+    public function testPropertyBillingAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "shipping_address"
+     */
+    public function testPropertyShippingAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "line_items"
+     */
+    public function testPropertyLineItems()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fulfillments"
+     */
+    public function testPropertyFulfillments()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "note"
+     */
+    public function testPropertyNote()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -299,24 +254,6 @@ class SupplierTest extends TestCase
      * Test attribute "updated_at"
      */
     public function testPropertyUpdatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "row_version"
-     */
-    public function testPropertyRowVersion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
