@@ -76,7 +76,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => '\Apideck\Client\Model\EcommerceAddress',
         'shipping_address' => '\Apideck\Client\Model\EcommerceAddress',
         'line_items' => '\Apideck\Client\Model\EcommerceOrderLineItem[]',
-        'fulfillments' => 'mixed[]',
         'note' => 'string',
         'updated_at' => '\DateTime'
     ];
@@ -106,7 +105,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => null,
         'shipping_address' => null,
         'line_items' => null,
-        'fulfillments' => null,
         'note' => null,
         'updated_at' => 'date-time'
     ];
@@ -155,7 +153,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'billing_address',
         'shipping_address' => 'shipping_address',
         'line_items' => 'line_items',
-        'fulfillments' => 'fulfillments',
         'note' => 'note',
         'updated_at' => 'updated_at'
     ];
@@ -183,7 +180,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'setBillingAddress',
         'shipping_address' => 'setShippingAddress',
         'line_items' => 'setLineItems',
-        'fulfillments' => 'setFulfillments',
         'note' => 'setNote',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -211,7 +207,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'getBillingAddress',
         'shipping_address' => 'getShippingAddress',
         'line_items' => 'getLineItems',
-        'fulfillments' => 'getFulfillments',
         'note' => 'getNote',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -338,7 +333,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
         $this->container['line_items'] = $data['line_items'] ?? null;
-        $this->container['fulfillments'] = $data['fulfillments'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
     }
@@ -812,30 +806,6 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLineItems($line_items)
     {
         $this->container['line_items'] = $line_items;
-
-        return $this;
-    }
-
-    /**
-     * Gets fulfillments
-     *
-     * @return mixed[]|null
-     */
-    public function getFulfillments()
-    {
-        return $this->container['fulfillments'];
-    }
-
-    /**
-     * Sets fulfillments
-     *
-     * @param mixed[]|null $fulfillments fulfillments
-     *
-     * @return self
-     */
-    public function setFulfillments($fulfillments)
-    {
-        $this->container['fulfillments'] = $fulfillments;
 
         return $this;
     }

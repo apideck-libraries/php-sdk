@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 `billing_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
 `shipping_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\EcommerceOrderLineItem[]**](EcommerceOrderLineItem.md) |  | [optional] 
-`fulfillments` | **mixed[]** |  | [optional] 
 `note` | **string** | Note for the order. | [optional] 
 `updated_at` | **\DateTime** |  | [optional] 
 
@@ -88,7 +87,6 @@ Name | Type | Description | Notes
 * [`EcommerceAddress`](EcommerceAddress.md)
 * [`EcommerceAddress`](EcommerceAddress.md)
 * [`EcommerceOrderLineItem`](EcommerceOrderLineItem.md)
-
 
 
 

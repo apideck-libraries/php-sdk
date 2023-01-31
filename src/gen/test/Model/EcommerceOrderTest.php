@@ -233,15 +233,6 @@ class EcommerceOrderTest extends TestCase
     }
 
     /**
-     * Test attribute "fulfillments"
-     */
-    public function testPropertyFulfillments()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "note"
      */
     public function testPropertyNote()
