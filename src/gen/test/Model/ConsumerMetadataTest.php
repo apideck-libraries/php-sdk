@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * ConsumerMetadataTest Class Doc Comment
  *
  * @category    Class
- * @description ConsumerMetadata
+ * @description The metadata of the consumer. This is used to display the consumer in the sidebar. This is optional, but recommended.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

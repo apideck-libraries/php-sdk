@@ -60,10 +60,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'consumer_metadata' => '\Apideck\Client\Model\ConsumerMetadata',
-        'custom_consumer_settings' => 'array<string,object>',
         'redirect_uri' => 'string',
         'settings' => '\Apideck\Client\Model\SessionSettings',
-        'theme' => '\Apideck\Client\Model\SessionTheme'
+        'theme' => '\Apideck\Client\Model\SessionTheme',
+        'custom_consumer_settings' => 'array<string,object>'
     ];
 
     /**
@@ -75,10 +75,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'consumer_metadata' => null,
-        'custom_consumer_settings' => null,
         'redirect_uri' => null,
         'settings' => null,
-        'theme' => null
+        'theme' => null,
+        'custom_consumer_settings' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'consumer_metadata' => 'consumer_metadata',
-        'custom_consumer_settings' => 'custom_consumer_settings',
         'redirect_uri' => 'redirect_uri',
         'settings' => 'settings',
-        'theme' => 'theme'
+        'theme' => 'theme',
+        'custom_consumer_settings' => 'custom_consumer_settings'
     ];
 
     /**
@@ -122,10 +122,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'consumer_metadata' => 'setConsumerMetadata',
-        'custom_consumer_settings' => 'setCustomConsumerSettings',
         'redirect_uri' => 'setRedirectUri',
         'settings' => 'setSettings',
-        'theme' => 'setTheme'
+        'theme' => 'setTheme',
+        'custom_consumer_settings' => 'setCustomConsumerSettings'
     ];
 
     /**
@@ -135,10 +135,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'consumer_metadata' => 'getConsumerMetadata',
-        'custom_consumer_settings' => 'getCustomConsumerSettings',
         'redirect_uri' => 'getRedirectUri',
         'settings' => 'getSettings',
-        'theme' => 'getTheme'
+        'theme' => 'getTheme',
+        'custom_consumer_settings' => 'getCustomConsumerSettings'
     ];
 
     /**
@@ -199,10 +199,10 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['consumer_metadata'] = $data['consumer_metadata'] ?? null;
-        $this->container['custom_consumer_settings'] = $data['custom_consumer_settings'] ?? null;
         $this->container['redirect_uri'] = $data['redirect_uri'] ?? null;
         $this->container['settings'] = $data['settings'] ?? null;
         $this->container['theme'] = $data['theme'] ?? null;
+        $this->container['custom_consumer_settings'] = $data['custom_consumer_settings'] ?? null;
     }
 
     /**
@@ -254,30 +254,6 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets custom_consumer_settings
-     *
-     * @return array<string,object>|null
-     */
-    public function getCustomConsumerSettings()
-    {
-        return $this->container['custom_consumer_settings'];
-    }
-
-    /**
-     * Sets custom_consumer_settings
-     *
-     * @param array<string,object>|null $custom_consumer_settings Custom consumer settings that are passed as part of the session.
-     *
-     * @return self
-     */
-    public function setCustomConsumerSettings($custom_consumer_settings)
-    {
-        $this->container['custom_consumer_settings'] = $custom_consumer_settings;
-
-        return $this;
-    }
-
-    /**
      * Gets redirect_uri
      *
      * @return string|null
@@ -290,7 +266,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets redirect_uri
      *
-     * @param string|null $redirect_uri redirect_uri
+     * @param string|null $redirect_uri The URL to redirect the user to after the session has been configured.
      *
      * @return self
      */
@@ -345,6 +321,30 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTheme($theme)
     {
         $this->container['theme'] = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_consumer_settings
+     *
+     * @return array<string,object>|null
+     */
+    public function getCustomConsumerSettings()
+    {
+        return $this->container['custom_consumer_settings'];
+    }
+
+    /**
+     * Sets custom_consumer_settings
+     *
+     * @param array<string,object>|null $custom_consumer_settings Custom consumer settings that are passed as part of the session.
+     *
+     * @return self
+     */
+    public function setCustomConsumerSettings($custom_consumer_settings)
+    {
+        $this->container['custom_consumer_settings'] = $custom_consumer_settings;
 
         return $this;
     }

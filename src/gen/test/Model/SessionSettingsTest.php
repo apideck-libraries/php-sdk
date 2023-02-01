@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * SessionSettingsTest Class Doc Comment
  *
  * @category    Class
- * @description SessionSettings
+ * @description Settings to change the way the Vault is displayed.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -2,6 +2,8 @@
 
 ### Description
 
+Settings to change the way the Vault is displayed.
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

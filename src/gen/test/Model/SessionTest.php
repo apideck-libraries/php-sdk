@@ -89,15 +89,6 @@ class SessionTest extends TestCase
     }
 
     /**
-     * Test attribute "custom_consumer_settings"
-     */
-    public function testPropertyCustomConsumerSettings()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "redirect_uri"
      */
     public function testPropertyRedirectUri()
@@ -119,6 +110,15 @@ class SessionTest extends TestCase
      * Test attribute "theme"
      */
     public function testPropertyTheme()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "custom_consumer_settings"
+     */
+    public function testPropertyCustomConsumerSettings()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

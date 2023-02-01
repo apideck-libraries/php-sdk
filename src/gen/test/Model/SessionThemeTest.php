@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * SessionThemeTest Class Doc Comment
  *
  * @category    Class
- * @description SessionTheme
+ * @description Theming options to change the look and feel of Vault.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -98,15 +98,6 @@ class SessionThemeTest extends TestCase
     }
 
     /**
-     * Test attribute "privacy_url"
-     */
-    public function testPropertyPrivacyUrl()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "sidepanel_background_color"
      */
     public function testPropertySidepanelBackgroundColor()
@@ -125,18 +116,27 @@ class SessionThemeTest extends TestCase
     }
 
     /**
-     * Test attribute "terms_url"
+     * Test attribute "vault_name"
      */
-    public function testPropertyTermsUrl()
+    public function testPropertyVaultName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "vault_name"
+     * Test attribute "privacy_url"
      */
-    public function testPropertyVaultName()
+    public function testPropertyPrivacyUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "terms_url"
+     */
+    public function testPropertyTermsUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

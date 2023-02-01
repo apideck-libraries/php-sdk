@@ -35,6 +35,7 @@ use \Apideck\Client\ObjectSerializer;
  * SessionTheme Class Doc Comment
  *
  * @category Class
+ * @description Theming options to change the look and feel of Vault.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -61,11 +62,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'favicon' => 'string',
         'primary_color' => 'string',
-        'privacy_url' => 'string',
         'sidepanel_background_color' => 'string',
         'sidepanel_text_color' => 'string',
-        'terms_url' => 'string',
-        'vault_name' => 'string'
+        'vault_name' => 'string',
+        'privacy_url' => 'string',
+        'terms_url' => 'string'
     ];
 
     /**
@@ -78,11 +79,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'favicon' => null,
         'primary_color' => null,
-        'privacy_url' => null,
         'sidepanel_background_color' => null,
         'sidepanel_text_color' => null,
-        'terms_url' => null,
-        'vault_name' => null
+        'vault_name' => null,
+        'privacy_url' => null,
+        'terms_url' => null
     ];
 
     /**
@@ -114,11 +115,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'favicon' => 'favicon',
         'primary_color' => 'primary_color',
-        'privacy_url' => 'privacy_url',
         'sidepanel_background_color' => 'sidepanel_background_color',
         'sidepanel_text_color' => 'sidepanel_text_color',
-        'terms_url' => 'terms_url',
-        'vault_name' => 'vault_name'
+        'vault_name' => 'vault_name',
+        'privacy_url' => 'privacy_url',
+        'terms_url' => 'terms_url'
     ];
 
     /**
@@ -129,11 +130,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'favicon' => 'setFavicon',
         'primary_color' => 'setPrimaryColor',
-        'privacy_url' => 'setPrivacyUrl',
         'sidepanel_background_color' => 'setSidepanelBackgroundColor',
         'sidepanel_text_color' => 'setSidepanelTextColor',
-        'terms_url' => 'setTermsUrl',
-        'vault_name' => 'setVaultName'
+        'vault_name' => 'setVaultName',
+        'privacy_url' => 'setPrivacyUrl',
+        'terms_url' => 'setTermsUrl'
     ];
 
     /**
@@ -144,11 +145,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'favicon' => 'getFavicon',
         'primary_color' => 'getPrimaryColor',
-        'privacy_url' => 'getPrivacyUrl',
         'sidepanel_background_color' => 'getSidepanelBackgroundColor',
         'sidepanel_text_color' => 'getSidepanelTextColor',
-        'terms_url' => 'getTermsUrl',
-        'vault_name' => 'getVaultName'
+        'vault_name' => 'getVaultName',
+        'privacy_url' => 'getPrivacyUrl',
+        'terms_url' => 'getTermsUrl'
     ];
 
     /**
@@ -210,11 +211,11 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['favicon'] = $data['favicon'] ?? null;
         $this->container['primary_color'] = $data['primary_color'] ?? null;
-        $this->container['privacy_url'] = $data['privacy_url'] ?? null;
         $this->container['sidepanel_background_color'] = $data['sidepanel_background_color'] ?? null;
         $this->container['sidepanel_text_color'] = $data['sidepanel_text_color'] ?? null;
-        $this->container['terms_url'] = $data['terms_url'] ?? null;
         $this->container['vault_name'] = $data['vault_name'] ?? null;
+        $this->container['privacy_url'] = $data['privacy_url'] ?? null;
+        $this->container['terms_url'] = $data['terms_url'] ?? null;
     }
 
     /**
@@ -254,7 +255,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets favicon
      *
-     * @param string|null $favicon favicon
+     * @param string|null $favicon The URL to the favicon to use for Vault.
      *
      * @return self
      */
@@ -278,37 +279,13 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets primary_color
      *
-     * @param string|null $primary_color primary_color
+     * @param string|null $primary_color The primary color to use for Vault.
      *
      * @return self
      */
     public function setPrimaryColor($primary_color)
     {
         $this->container['primary_color'] = $primary_color;
-
-        return $this;
-    }
-
-    /**
-     * Gets privacy_url
-     *
-     * @return string|null
-     */
-    public function getPrivacyUrl()
-    {
-        return $this->container['privacy_url'];
-    }
-
-    /**
-     * Sets privacy_url
-     *
-     * @param string|null $privacy_url privacy_url
-     *
-     * @return self
-     */
-    public function setPrivacyUrl($privacy_url)
-    {
-        $this->container['privacy_url'] = $privacy_url;
 
         return $this;
     }
@@ -326,7 +303,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sidepanel_background_color
      *
-     * @param string|null $sidepanel_background_color sidepanel_background_color
+     * @param string|null $sidepanel_background_color The background color to use for the sidebar.
      *
      * @return self
      */
@@ -350,37 +327,13 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sidepanel_text_color
      *
-     * @param string|null $sidepanel_text_color sidepanel_text_color
+     * @param string|null $sidepanel_text_color The text color to use for the sidebar.
      *
      * @return self
      */
     public function setSidepanelTextColor($sidepanel_text_color)
     {
         $this->container['sidepanel_text_color'] = $sidepanel_text_color;
-
-        return $this;
-    }
-
-    /**
-     * Gets terms_url
-     *
-     * @return string|null
-     */
-    public function getTermsUrl()
-    {
-        return $this->container['terms_url'];
-    }
-
-    /**
-     * Sets terms_url
-     *
-     * @param string|null $terms_url terms_url
-     *
-     * @return self
-     */
-    public function setTermsUrl($terms_url)
-    {
-        $this->container['terms_url'] = $terms_url;
 
         return $this;
     }
@@ -398,13 +351,61 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vault_name
      *
-     * @param string|null $vault_name vault_name
+     * @param string|null $vault_name The name that will be shown in the sidebar.
      *
      * @return self
      */
     public function setVaultName($vault_name)
     {
         $this->container['vault_name'] = $vault_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets privacy_url
+     *
+     * @return string|null
+     */
+    public function getPrivacyUrl()
+    {
+        return $this->container['privacy_url'];
+    }
+
+    /**
+     * Sets privacy_url
+     *
+     * @param string|null $privacy_url The URL to the privacy policy that will be shown in the sidebar.
+     *
+     * @return self
+     */
+    public function setPrivacyUrl($privacy_url)
+    {
+        $this->container['privacy_url'] = $privacy_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets terms_url
+     *
+     * @return string|null
+     */
+    public function getTermsUrl()
+    {
+        return $this->container['terms_url'];
+    }
+
+    /**
+     * Sets terms_url
+     *
+     * @param string|null $terms_url The URL to the terms and conditions that will be shown in the sidebar.
+     *
+     * @return self
+     */
+    public function setTermsUrl($terms_url)
+    {
+        $this->container['terms_url'] = $terms_url;
 
         return $this;
     }

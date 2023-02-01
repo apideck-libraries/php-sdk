@@ -150,4 +150,13 @@ class EmployeesFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "department_id"
+     */
+    public function testPropertyDepartmentId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

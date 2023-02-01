@@ -66,7 +66,8 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'string',
         'manager_id' => 'string',
         'employment_status' => 'string',
-        'employee_number' => 'string'
+        'employee_number' => 'string',
+        'department_id' => 'string'
     ];
 
     /**
@@ -84,7 +85,8 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => null,
         'manager_id' => null,
         'employment_status' => null,
-        'employee_number' => null
+        'employee_number' => null,
+        'department_id' => null
     ];
 
     /**
@@ -121,7 +123,8 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'last_name',
         'manager_id' => 'manager_id',
         'employment_status' => 'employment_status',
-        'employee_number' => 'employee_number'
+        'employee_number' => 'employee_number',
+        'department_id' => 'department_id'
     ];
 
     /**
@@ -137,7 +140,8 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'setLastName',
         'manager_id' => 'setManagerId',
         'employment_status' => 'setEmploymentStatus',
-        'employee_number' => 'setEmployeeNumber'
+        'employee_number' => 'setEmployeeNumber',
+        'department_id' => 'setDepartmentId'
     ];
 
     /**
@@ -153,7 +157,8 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'getLastName',
         'manager_id' => 'getManagerId',
         'employment_status' => 'getEmploymentStatus',
-        'employee_number' => 'getEmployeeNumber'
+        'employee_number' => 'getEmployeeNumber',
+        'department_id' => 'getDepartmentId'
     ];
 
     /**
@@ -240,6 +245,7 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['manager_id'] = $data['manager_id'] ?? null;
         $this->container['employment_status'] = $data['employment_status'] ?? null;
         $this->container['employee_number'] = $data['employee_number'] ?? null;
+        $this->container['department_id'] = $data['department_id'] ?? null;
     }
 
     /**
@@ -473,6 +479,30 @@ class EmployeesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmployeeNumber($employee_number)
     {
         $this->container['employee_number'] = $employee_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets department_id
+     *
+     * @return string|null
+     */
+    public function getDepartmentId()
+    {
+        return $this->container['department_id'];
+    }
+
+    /**
+     * Sets department_id
+     *
+     * @param string|null $department_id ID of the department to filter on
+     *
+     * @return self
+     */
+    public function setDepartmentId($department_id)
+    {
+        $this->container['department_id'] = $department_id;
 
         return $this;
     }
