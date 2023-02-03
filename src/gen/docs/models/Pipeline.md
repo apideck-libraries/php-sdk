@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 `display_order` | **int** |  | [optional] 
 `win_probability_enabled` | **bool** |  | [optional] 
 `stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 

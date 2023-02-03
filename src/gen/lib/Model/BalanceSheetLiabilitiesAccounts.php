@@ -230,7 +230,7 @@ class BalanceSheetLiabilitiesAccounts implements ModelInterface, ArrayAccess, \J
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */

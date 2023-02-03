@@ -395,7 +395,7 @@ class PosBankAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets country
      *
-     * @param string|null $country country code according to ISO 3166-1 alpha-2.
+     * @param string|null $country Country code according to ISO 3166-1 alpha-2.
      *
      * @return self
      */

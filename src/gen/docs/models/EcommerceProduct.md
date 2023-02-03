@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | 
+`id` | **string** | A unique identifier for an object. | 
 `name` | **string** | The name of the product as it should be displayed to customers. | [optional] 
 `description` | **string** | A detailed description of the product. | [optional] 
 `status` | **string** | The current status of the product (active or archived). | [optional] 
@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 `variants` | [**\Apideck\Client\Model\EcommerceProductVariants[]**](EcommerceProductVariants.md) |  | [optional] 
 `tags` | **string[]** | An array of tags for the product, used for organization and searching. | [optional] 
 `categories` | **string[]** | An array of categories for the product, used for organization and searching. | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
 

@@ -5,15 +5,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
 `display_id` | **string** | Display ID | [optional] 
 `display_name` | **string** | Display name | [optional] 
-`company_name` | **string** |  | [optional] 
-`title` | **string** |  | [optional] 
-`first_name` | **string** |  | [optional] 
-`middle_name` | **string** |  | [optional] 
-`last_name` | **string** |  | [optional] 
+`company_name` | **string** | The name of the company. | [optional] 
+`title` | **string** | The job title of the person. | [optional] 
+`first_name` | **string** | The first name of the person. | [optional] 
+`middle_name` | **string** | Middle name of the person. | [optional] 
+`last_name` | **string** | The last name of the person. | [optional] 
 `suffix` | **string** |  | [optional] 
 `individual` | **bool** | Is this an individual or business supplier | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
@@ -27,11 +27,11 @@ Name | Type | Description | Notes
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `status` | **string** | Supplier status | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`row_version` | **string** |  | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 
 
 

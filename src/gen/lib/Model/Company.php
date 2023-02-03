@@ -920,7 +920,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
@@ -944,7 +944,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
@@ -1280,7 +1280,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets salutation
      *
-     * @param string|null $salutation salutation
+     * @param string|null $salutation A formal salutation for the person. For example, 'Mr', 'Mrs'
      *
      * @return self
      */
@@ -1304,7 +1304,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets birthday
      *
-     * @param \DateTime|null $birthday birthday
+     * @param \DateTime|null $birthday The date of birth of the person.
      *
      * @return self
      */

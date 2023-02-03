@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeePartner
+ * Person
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * EmployeePartner Class Doc Comment
+ * Person Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
+class Person implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Employee_partner';
+    protected static $openAPIModelName = 'Person';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -260,7 +260,7 @@ class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -284,7 +284,7 @@ class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class EmployeePartner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets middle_name
      *
-     * @param string|null $middle_name middle_name
+     * @param string|null $middle_name Middle name of the person.
      *
      * @return self
      */

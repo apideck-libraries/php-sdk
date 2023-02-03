@@ -473,7 +473,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the object.
      *
      * @return self
      */
@@ -531,7 +531,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
@@ -555,7 +555,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */

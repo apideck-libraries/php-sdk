@@ -171,7 +171,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
     const TYPE_EMPLOYEE = 'employee';
     const TYPE_FREELANCE = 'freelance';
     const TYPE_TEMP = 'temp';
-    const TYPE_INTERSHIP = 'intership';
+    const TYPE_INTERNSHIP = 'internship';
     const TYPE_OTHER = 'other';
     const SUB_TYPE_FULL_TIME = 'full_time';
     const SUB_TYPE_PART_TIME = 'part_time';
@@ -189,7 +189,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
             self::TYPE_EMPLOYEE,
             self::TYPE_FREELANCE,
             self::TYPE_TEMP,
-            self::TYPE_INTERSHIP,
+            self::TYPE_INTERNSHIP,
             self::TYPE_OTHER,
         ];
     }
@@ -282,7 +282,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type The type of employment relationship the employee has with the organization.
      *
      * @return self
      */
@@ -316,7 +316,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets sub_type
      *
-     * @param string|null $sub_type sub_type
+     * @param string|null $sub_type The work schedule of the employee.
      *
      * @return self
      */

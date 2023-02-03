@@ -123,7 +123,7 @@ class AccountingApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
-     * @param  \Apideck\Client\Model\Passthrough $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      * @param  \Apideck\Client\Model\BalanceSheetFilter $filter Apply filters (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
@@ -145,7 +145,7 @@ class AccountingApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
-     * @param  \Apideck\Client\Model\Passthrough $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      * @param  \Apideck\Client\Model\BalanceSheetFilter $filter Apply filters (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
@@ -363,7 +363,7 @@ class AccountingApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
-     * @param  \Apideck\Client\Model\Passthrough $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      * @param  \Apideck\Client\Model\BalanceSheetFilter $filter Apply filters (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
@@ -388,7 +388,7 @@ class AccountingApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
-     * @param  \Apideck\Client\Model\Passthrough $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      * @param  \Apideck\Client\Model\BalanceSheetFilter $filter Apply filters (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *
@@ -439,7 +439,7 @@ class AccountingApi
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
-     * @param  \Apideck\Client\Model\Passthrough $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
+     * @param  array<string,object> $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters (optional)
      * @param  \Apideck\Client\Model\BalanceSheetFilter $filter Apply filters (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      *

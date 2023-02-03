@@ -302,7 +302,7 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class OrderDiscounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets product_id
      *
-     * @param string|null $product_id product_id
+     * @param string|null $product_id A unique identifier for an object.
      *
      * @return self
      */

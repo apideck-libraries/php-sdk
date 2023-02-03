@@ -33,6 +33,7 @@ use \Apideck\Client\ObjectSerializer;
  * Gender Class Doc Comment
  *
  * @category Class
+ * @description The gender represents the gender identity of a person.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

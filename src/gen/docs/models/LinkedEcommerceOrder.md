@@ -7,7 +7,7 @@ The order this entity is linked to.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `total` | **string** | The total amount of the order. | [optional] 
 `order_status` | [**\Apideck\Client\Model\EcommerceOrderStatus**](EcommerceOrderStatus.md) |  | [optional] 
 

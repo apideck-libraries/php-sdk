@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeePartnerTest
+ * PersonTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * EmployeePartnerTest Class Doc Comment
+ * PersonTest Class Doc Comment
  *
  * @category    Class
- * @description EmployeePartner
+ * @description Person
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class EmployeePartnerTest extends TestCase
+class PersonTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class EmployeePartnerTest extends TestCase
     }
 
     /**
-     * Test "EmployeePartner"
+     * Test "Person"
      */
-    public function testEmployeePartner()
+    public function testPerson()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

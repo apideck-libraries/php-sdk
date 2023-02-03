@@ -297,7 +297,7 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id A unique identifier for an object.
      *
      * @return self
      */
@@ -432,7 +432,7 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The unique identifier of the company.
      *
      * @return self
      */

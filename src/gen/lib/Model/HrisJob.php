@@ -288,7 +288,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the person.
      *
      * @return self
      */

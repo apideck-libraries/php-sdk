@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
- **pass_through** | [\Apideck\Client\Model\Passthrough](../models/\Apideck\Client\Model\Passthrough.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
  **filter** | [\Apideck\Client\Model\BalanceSheetFilter](../models/\Apideck\Client\Model\BalanceSheetFilter.md)| Apply filters |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 

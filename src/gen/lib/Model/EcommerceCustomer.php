@@ -311,7 +311,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id A unique identifier for an object.
      *
      * @return self
      */
@@ -561,7 +561,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */
@@ -585,7 +585,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */

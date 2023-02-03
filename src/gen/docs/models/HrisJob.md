@@ -5,9 +5,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `employee_id` | **string** | Id of the employee | [optional] 
-`title` | **string** |  | [optional] 
+`title` | **string** | The job title of the person. | [optional] 
 `start_date` | **\DateTime** |  | [optional] 
 `end_date` | **\DateTime** |  | [optional] 
 `employment_status` | **string** |  | [optional] 

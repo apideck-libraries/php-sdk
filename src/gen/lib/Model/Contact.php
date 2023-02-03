@@ -960,7 +960,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets photo_url
      *
-     * @param string|null $photo_url photo_url
+     * @param string|null $photo_url The URL of the photo of a person.
      *
      * @return self
      */

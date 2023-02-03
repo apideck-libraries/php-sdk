@@ -520,7 +520,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the object.
      *
      * @return self
      */

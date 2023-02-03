@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
 `type` | **string** | Invoice type | [optional] 
 `number` | **string** | Invoice number. | [optional] 
@@ -33,11 +33,11 @@ Name | Type | Description | Notes
 `shipping_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 `template_id` | **string** | Optional invoice template | [optional] 
 `source_document_url` | **string** | URL link to a source document - shown as 'Go to [appName]' in the downstream app. Currently only supported for Xero. | [optional] 
-`row_version` | **string** |  | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 

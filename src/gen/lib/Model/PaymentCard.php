@@ -419,7 +419,7 @@ class PaymentCard implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */

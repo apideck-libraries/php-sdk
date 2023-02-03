@@ -24,12 +24,12 @@ Name | Type | Description | Notes
 `type` | **string** | Type of payment | [optional] 
 `allocations` | [**\Apideck\Client\Model\PaymentAllocations[]**](PaymentAllocations.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
-`row_version` | **string** |  | [optional] 
+`row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `display_id` | **string** | Payment id to be displayed. | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
 

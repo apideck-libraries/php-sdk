@@ -5,9 +5,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `slug` | **string** |  | [optional] 
-`title` | **string** |  | [optional] 
+`title` | **string** | The job title of the person. | [optional] 
 `sequence` | **int** | Sequence in relation to other jobs. | [optional] 
 `visibility` | **string** | The visibility of the job | [optional] 
 `status` | [**\Apideck\Client\Model\JobStatus**](JobStatus.md) |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 `recruiters` | **string[]** | The recruiter is generally someone who is tasked to help the hiring manager find and screen qualified applicant | [optional] 
 `hiring_managers` | **object[]** |  | [optional] 
 `followers` | **string[]** |  | [optional] 
-`description` | **string** |  | [optional] 
+`description` | **string** | A description of the object. | [optional] 
 `description_html` | **string** | The job description in HTML format | [optional] 
 `blocks` | **object[]** |  | [optional] 
 `closing` | **string** |  | [optional] 
@@ -39,10 +39,10 @@ Name | Type | Description | Notes
 `deleted` | **bool** |  | [optional] 
 `owner_id` | **string** |  | [optional] 
 `published_at` | **\DateTime** |  | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 
@@ -67,7 +67,7 @@ Name | Type | Description | Notes
 
 * `PART_TIME` (value: `'part-time'`)
 
-* `INTERSHIP` (value: `'intership'`)
+* `INTERNSHIP` (value: `'internship'`)
 
 * `CONTRACTOR` (value: `'contractor'`)
 

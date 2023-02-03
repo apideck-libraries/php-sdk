@@ -470,7 +470,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -542,7 +542,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
@@ -566,7 +566,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
@@ -590,7 +590,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets middle_name
      *
-     * @param string|null $middle_name middle_name
+     * @param string|null $middle_name Middle name of the person.
      *
      * @return self
      */
@@ -614,7 +614,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initials
      *
-     * @param string|null $initials initials
+     * @param string|null $initials The initials of the person, usually derived from their first, middle, and last names.
      *
      * @return self
      */
@@ -638,7 +638,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets birthday
      *
-     * @param \DateTime|null $birthday birthday
+     * @param \DateTime|null $birthday The date of birth of the person.
      *
      * @return self
      */
@@ -710,7 +710,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets photo_url
      *
-     * @param string|null $photo_url photo_url
+     * @param string|null $photo_url The URL of the photo of a person.
      *
      * @return self
      */
@@ -758,7 +758,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the person.
      *
      * @return self
      */
@@ -1358,7 +1358,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deleted_by
      *
-     * @param string|null $deleted_by deleted_by
+     * @param string|null $deleted_by The user who deleted the object.
      *
      * @return self
      */
@@ -1382,7 +1382,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deleted_at
      *
-     * @param \DateTime|null $deleted_at deleted_at
+     * @param \DateTime|null $deleted_at The time at which the object was deleted.
      *
      * @return self
      */
@@ -1406,7 +1406,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by The user who last updated the object.
      *
      * @return self
      */
@@ -1430,7 +1430,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by The user who created the object.
      *
      * @return self
      */
@@ -1454,7 +1454,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
@@ -1478,7 +1478,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */

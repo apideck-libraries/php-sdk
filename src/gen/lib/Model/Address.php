@@ -922,7 +922,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets row_version
      *
-     * @param string|null $row_version row_version
+     * @param string|null $row_version A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object.
      *
      * @return self
      */

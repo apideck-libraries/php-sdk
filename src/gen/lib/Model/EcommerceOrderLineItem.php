@@ -372,7 +372,7 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */

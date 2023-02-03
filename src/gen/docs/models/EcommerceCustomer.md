@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | 
+`id` | **string** | A unique identifier for an object. | 
 `name` | **string** | Full name of the customer | [optional] 
 `first_name` | **string** | First name of the customer | [optional] 
 `last_name` | **string** | Last name of the customer | [optional] 
@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) | An array of phone numbers for the customer. | [optional] 
 `addresses` | [**\Apideck\Client\Model\EcommerceCustomerAddresses[]**](EcommerceCustomerAddresses.md) | An array of addresses for the customer. | [optional] 
 `orders` | [**\Apideck\Client\Model\LinkedEcommerceOrder[]**](LinkedEcommerceOrder.md) |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
 

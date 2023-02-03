@@ -359,7 +359,7 @@ class CreateWebhookRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the object.
      *
      * @return self
      */

@@ -288,7 +288,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -312,7 +312,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets location_id
      *
-     * @param string|null $location_id location_id
+     * @param string|null $location_id A unique identifier for an object.
      *
      * @return self
      */
@@ -442,7 +442,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tender_id
      *
-     * @param string|null $tender_id tender_id
+     * @param string|null $tender_id A unique identifier for an object.
      *
      * @return self
      */
@@ -466,7 +466,7 @@ class OrderRefunds implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction_id
      *
-     * @param string|null $transaction_id transaction_id
+     * @param string|null $transaction_id A unique identifier for an object.
      *
      * @return self
      */

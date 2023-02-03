@@ -224,7 +224,6 @@ docs/Model/EmployeeCompensations.md
 docs/Model/EmployeeEmploymentRole.md
 docs/Model/EmployeeJobs.md
 docs/Model/EmployeeManager.md
-docs/Model/EmployeePartner.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
@@ -424,7 +423,6 @@ docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
-docs/Model/Passthrough.md
 docs/Model/Payment.md
 docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
@@ -433,6 +431,7 @@ docs/Model/PaymentUnit.md
 docs/Model/Payroll.md
 docs/Model/PayrollTotals.md
 docs/Model/PayrollsFilter.md
+docs/Model/Person.md
 docs/Model/PhoneNumber.md
 docs/Model/Pipeline.md
 docs/Model/PipelineStages.md
@@ -770,7 +769,6 @@ lib/Model/EmployeeCompensations.php
 lib/Model/EmployeeEmploymentRole.php
 lib/Model/EmployeeJobs.php
 lib/Model/EmployeeManager.php
-lib/Model/EmployeePartner.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
@@ -971,7 +969,6 @@ lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
-lib/Model/Passthrough.php
 lib/Model/Payment.php
 lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
@@ -980,6 +977,7 @@ lib/Model/PaymentUnit.php
 lib/Model/Payroll.php
 lib/Model/PayrollTotals.php
 lib/Model/PayrollsFilter.php
+lib/Model/Person.php
 lib/Model/PhoneNumber.php
 lib/Model/Pipeline.php
 lib/Model/PipelineStages.php
@@ -1312,7 +1310,6 @@ test/Model/EmployeeCompensationsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
 test/Model/EmployeeJobsTest.php
 test/Model/EmployeeManagerTest.php
-test/Model/EmployeePartnerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
@@ -1513,7 +1510,6 @@ test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
-test/Model/PassthroughTest.php
 test/Model/PaymentAllocationsTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
@@ -1522,6 +1518,7 @@ test/Model/PaymentUnitTest.php
 test/Model/PayrollTest.php
 test/Model/PayrollTotalsTest.php
 test/Model/PayrollsFilterTest.php
+test/Model/PersonTest.php
 test/Model/PhoneNumberTest.php
 test/Model/PipelineStagesTest.php
 test/Model/PipelineTest.php

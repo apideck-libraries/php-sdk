@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * PaymentUnitTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentUnit
+ * @description Unit of measurement for employee compensation.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

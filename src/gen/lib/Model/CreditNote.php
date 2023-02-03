@@ -949,7 +949,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets row_version
      *
-     * @param string|null $row_version row_version
+     * @param string|null $row_version A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object.
      *
      * @return self
      */
@@ -973,7 +973,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by The user who last updated the object.
      *
      * @return self
      */
@@ -997,7 +997,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by The user who created the object.
      *
      * @return self
      */
@@ -1021,7 +1021,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
@@ -1045,7 +1045,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */

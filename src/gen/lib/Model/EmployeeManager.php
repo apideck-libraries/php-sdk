@@ -242,7 +242,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -266,7 +266,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name The name of the manager, often a combination of their first and last names.
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email
      *
-     * @param string|null $email email
+     * @param string|null $email The email address of the manager.
      *
      * @return self
      */

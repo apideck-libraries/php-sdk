@@ -233,7 +233,7 @@ class SharedLinkTarget implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id A unique identifier for an object.
      *
      * @return self
      */

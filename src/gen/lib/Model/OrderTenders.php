@@ -428,7 +428,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -914,7 +914,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_id
      *
-     * @param string|null $payment_id payment_id
+     * @param string|null $payment_id A unique identifier for an object.
      *
      * @return self
      */
@@ -938,7 +938,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets location_id
      *
-     * @param string|null $location_id location_id
+     * @param string|null $location_id A unique identifier for an object.
      *
      * @return self
      */
@@ -962,7 +962,7 @@ class OrderTenders implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction_id
      *
-     * @param string|null $transaction_id transaction_id
+     * @param string|null $transaction_id A unique identifier for an object.
      *
      * @return self
      */

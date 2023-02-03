@@ -35,7 +35,7 @@ use \Apideck\Client\ObjectSerializer;
  * EmployeeTeam Class Doc Comment
  *
  * @category Class
- * @description The team the user is currently in.
+ * @description The team the person is currently in.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -225,7 +225,7 @@ class EmployeeTeam implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the team.
      *
      * @return self
      */
@@ -249,7 +249,7 @@ class EmployeeTeam implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name The name of the team.
      *
      * @return self
      */

@@ -709,7 +709,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the object.
      *
      * @return self
      */
@@ -767,7 +767,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
@@ -791,7 +791,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */

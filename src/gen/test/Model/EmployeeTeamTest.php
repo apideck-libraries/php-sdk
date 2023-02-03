@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * EmployeeTeamTest Class Doc Comment
  *
  * @category    Class
- * @description The team the user is currently in.
+ * @description The team the person is currently in.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

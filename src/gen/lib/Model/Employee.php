@@ -69,7 +69,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'salutation' => 'string',
         'title' => 'string',
         'marital_status' => 'string',
-        'partner' => '\Apideck\Client\Model\EmployeePartner',
+        'partner' => '\Apideck\Client\Model\Person',
         'division' => 'string',
         'division_id' => 'string',
         'department' => 'string',
@@ -639,7 +639,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id A unique identifier for an object.
      *
      * @return self
      */
@@ -663,7 +663,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
@@ -687,7 +687,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
@@ -711,7 +711,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets middle_name
      *
-     * @param string|null $middle_name middle_name
+     * @param string|null $middle_name Middle name of the person.
      *
      * @return self
      */
@@ -735,7 +735,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets display_name
      *
-     * @param string|null $display_name display_name
+     * @param string|null $display_name The name used to display the employee, often a combination of their first and last names.
      *
      * @return self
      */
@@ -759,7 +759,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets preferred_name
      *
-     * @param string|null $preferred_name preferred_name
+     * @param string|null $preferred_name The name the employee prefers to be addressed by, which may be different from their legal name.
      *
      * @return self
      */
@@ -783,7 +783,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initials
      *
-     * @param string|null $initials initials
+     * @param string|null $initials The initials of the person, usually derived from their first, middle, and last names.
      *
      * @return self
      */
@@ -807,7 +807,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets salutation
      *
-     * @param string|null $salutation salutation
+     * @param string|null $salutation A formal salutation for the person. For example, 'Mr', 'Mrs'
      *
      * @return self
      */
@@ -831,7 +831,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the person.
      *
      * @return self
      */
@@ -855,7 +855,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets marital_status
      *
-     * @param string|null $marital_status marital_status
+     * @param string|null $marital_status The marital status of the employee.
      *
      * @return self
      */
@@ -869,7 +869,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets partner
      *
-     * @return \Apideck\Client\Model\EmployeePartner|null
+     * @return \Apideck\Client\Model\Person|null
      */
     public function getPartner()
     {
@@ -879,7 +879,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets partner
      *
-     * @param \Apideck\Client\Model\EmployeePartner|null $partner partner
+     * @param \Apideck\Client\Model\Person|null $partner partner
      *
      * @return self
      */
@@ -903,7 +903,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets division
      *
-     * @param string|null $division The division the user is currently in.
+     * @param string|null $division The division the person is currently in. Usually a collection of departments or teams or regions.
      *
      * @return self
      */
@@ -951,7 +951,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets department
      *
-     * @param string|null $department The department the user is currently in.
+     * @param string|null $department The department the person is currently in.
      *
      * @return self
      */
@@ -1023,7 +1023,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The unique identifier of the company.
      *
      * @return self
      */
@@ -1047,7 +1047,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_name
      *
-     * @param string|null $company_name company_name
+     * @param string|null $company_name The name of the company.
      *
      * @return self
      */
@@ -1119,7 +1119,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets leaving_reason
      *
-     * @param string|null $leaving_reason The reason because the employment ended
+     * @param string|null $leaving_reason The reason because the employment ended.
      *
      * @return self
      */
@@ -1177,7 +1177,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employment_status
      *
-     * @param string|null $employment_status employment_status
+     * @param string|null $employment_status The employment status of the employee, indicating whether they are currently employed, inactive, terminated, or in another status.
      *
      * @return self
      */
@@ -1259,7 +1259,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets direct_reports
      *
-     * @param string[]|null $direct_reports direct_reports
+     * @param string[]|null $direct_reports The direct reports refer to the individuals who report directly to a person in the organizational hierarchy.
      *
      * @return self
      */
@@ -1283,7 +1283,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_security_number
      *
-     * @param string|null $social_security_number social_security_number
+     * @param string|null $social_security_number A unique identifier assigned by the government. This field is considered sensitive information and may be subject to special security and privacy restrictions.
      *
      * @return self
      */
@@ -1307,7 +1307,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets birthday
      *
-     * @param \DateTime|null $birthday birthday
+     * @param \DateTime|null $birthday The date of birth of the person.
      *
      * @return self
      */
@@ -1331,7 +1331,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deceased_on
      *
-     * @param \DateTime|null $deceased_on deceased_on
+     * @param \DateTime|null $deceased_on The date the person deceased.
      *
      * @return self
      */
@@ -1355,7 +1355,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets country_of_birth
      *
-     * @param string|null $country_of_birth country code according to ISO 3166-1 alpha-2.
+     * @param string|null $country_of_birth Country code according to ISO 3166-1 alpha-2.
      *
      * @return self
      */
@@ -1386,7 +1386,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the object.
      *
      * @return self
      */
@@ -1434,7 +1434,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pronouns
      *
-     * @param string|null $pronouns pronouns
+     * @param string|null $pronouns The preferred pronouns of the person.
      *
      * @return self
      */
@@ -1530,7 +1530,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets photo_url
      *
-     * @param string|null $photo_url photo_url
+     * @param string|null $photo_url The URL of the photo of a person.
      *
      * @return self
      */
@@ -1554,7 +1554,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timezone
      *
-     * @param string|null $timezone timezone
+     * @param string|null $timezone The time zone related to the resource. The value is a string containing a standard time zone identifier, e.g. Europe/London.
      *
      * @return self
      */
@@ -1698,7 +1698,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets works_remote
      *
-     * @param bool|null $works_remote Indicates whether the employee works remote
+     * @param bool|null $works_remote Indicates if the employee works from a remote location.
      *
      * @return self
      */
@@ -1962,7 +1962,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets row_version
      *
-     * @param string|null $row_version row_version
+     * @param string|null $row_version A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object.
      *
      * @return self
      */
@@ -2010,7 +2010,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by The user who last updated the object.
      *
      * @return self
      */
@@ -2034,7 +2034,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by The user who created the object.
      *
      * @return self
      */
@@ -2058,7 +2058,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
@@ -2082,7 +2082,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */

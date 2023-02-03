@@ -395,7 +395,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id A unique identifier for an object.
      *
      * @return self
      */
@@ -847,7 +847,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */

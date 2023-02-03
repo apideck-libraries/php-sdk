@@ -251,7 +251,7 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employee_id
      *
-     * @param string $employee_id employee_id
+     * @param string $employee_id A unique identifier for an object.
      *
      * @return self
      */

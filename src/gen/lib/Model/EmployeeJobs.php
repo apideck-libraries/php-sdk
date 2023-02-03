@@ -284,7 +284,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employee_id
      *
-     * @param string|null $employee_id employee_id
+     * @param string|null $employee_id A unique identifier for an object.
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the person.
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets role
      *
-     * @param string|null $role role
+     * @param string|null $role The position and responsibilities of the person within the organization.
      *
      * @return self
      */
@@ -380,7 +380,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets start_date
      *
-     * @param \DateTime|null $start_date start_date
+     * @param \DateTime|null $start_date The date on which the employee starts working in their current job role.
      *
      * @return self
      */
@@ -404,7 +404,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets end_date
      *
-     * @param \DateTime|null $end_date end_date
+     * @param \DateTime|null $end_date The date on which the employee leaves or is expected to leave their current job role.
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets compensation_rate
      *
-     * @param float|null $compensation_rate compensation_rate
+     * @param float|null $compensation_rate The rate of pay for the employee in their current job role.
      *
      * @return self
      */
@@ -500,7 +500,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets hired_at
      *
-     * @param \DateTime|null $hired_at hired_at
+     * @param \DateTime|null $hired_at The date on which the employee was hired by the organization
      *
      * @return self
      */
@@ -524,7 +524,7 @@ class EmployeeJobs implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets is_primary
      *
-     * @param bool|null $is_primary Indicates whether this the employee's primary job
+     * @param bool|null $is_primary Indicates whether this the employee's primary job.
      *
      * @return self
      */

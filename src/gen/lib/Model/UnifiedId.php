@@ -221,7 +221,7 @@ class UnifiedId implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id The unique identifier of the resource
      *
      * @return self
      */

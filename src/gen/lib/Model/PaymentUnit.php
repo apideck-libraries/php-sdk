@@ -33,6 +33,7 @@ use \Apideck\Client\ObjectSerializer;
  * PaymentUnit Class Doc Comment
  *
  * @category Class
+ * @description Unit of measurement for employee compensation.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

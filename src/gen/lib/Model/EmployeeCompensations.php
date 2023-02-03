@@ -282,7 +282,7 @@ class EmployeeCompensations implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class EmployeeCompensations implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets effective_date
      *
-     * @param string|null $effective_date The effective date for this compensation.
+     * @param string|null $effective_date The date on which a change to an employee's compensation takes effect.
      *
      * @return self
      */

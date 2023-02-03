@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | 
+`id` | **string** | A unique identifier for an object. | 
 `order_number` | **string** | Order number, if any. | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `discounts` | [**\Apideck\Client\Model\EcommerceDiscount[]**](EcommerceDiscount.md) |  | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 `shipping_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\EcommerceOrderLineItem[]**](EcommerceOrderLineItem.md) |  | [optional] 
 `note` | **string** | Note for the order. | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
 

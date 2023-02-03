@@ -5,12 +5,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | 
+`id` | **string** | A unique identifier for an object. | 
 `name` | **string** | The store's name | [optional] 
 `store_url` | **string** | The store's website URL | [optional] 
 `admin_url` | **string** | The store's admin login URL | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
 
