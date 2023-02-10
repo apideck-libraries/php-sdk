@@ -224,6 +224,8 @@ Name | Type | Description | Notes
 ## Enum: ConnectionWebhook.disabled_reason
 
 
+* `NONE` (value: `'none'`)
+
 * `RETRY_LIMIT` (value: `'retry_limit'`)
 
 * `USAGE_LIMIT` (value: `'usage_limit'`)

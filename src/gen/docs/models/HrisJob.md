@@ -10,25 +10,10 @@ Name | Type | Description | Notes
 `title` | **string** | The job title of the person. | [optional] 
 `start_date` | **\DateTime** |  | [optional] 
 `end_date` | **\DateTime** |  | [optional] 
-`employment_status` | **string** |  | [optional] 
+`employment_status` | [**\Apideck\Client\Model\EmploymentStatus**](EmploymentStatus.md) |  | [optional] 
 `department` | **string** | Department name | [optional] 
 `location` | [**\Apideck\Client\Model\HrisJobLocation**](HrisJobLocation.md) |  | [optional] 
 
-
-
-
-
-<a name="EMPLOYMENT_STATUS"></a>
-## Enum: HrisJob.employment_status
-
-
-* `ACTIVE` (value: `'active'`)
-
-* `INACTIVE` (value: `'inactive'`)
-
-* `TERMINATED` (value: `'terminated'`)
-
-* `OTHER` (value: `'other'`)
 
 
 
@@ -39,7 +24,7 @@ Name | Type | Description | Notes
 
 
 
-
+* [`EmploymentStatus`](EmploymentStatus.md)
 
 * [`HrisJobLocation`](HrisJobLocation.md)
 

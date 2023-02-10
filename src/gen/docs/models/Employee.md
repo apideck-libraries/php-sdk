@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 `employment_end_date` | **string** | An End Date is the date that the employee ended working at the company | [optional] 
 `leaving_reason` | **string** | The reason because the employment ended. | [optional] 
 `employee_number` | **string** | An Employee Number, Employee ID or Employee Code, is a unique number that has been assigned to each individual staff member within a company. | [optional] 
-`employment_status` | **string** | The employment status of the employee, indicating whether they are currently employed, inactive, terminated, or in another status. | [optional] 
+`employment_status` | [**\Apideck\Client\Model\EmploymentStatus**](EmploymentStatus.md) |  | [optional] 
 `employment_role` | [**\Apideck\Client\Model\EmployeeEmploymentRole**](EmployeeEmploymentRole.md) |  | [optional] 
 `manager` | [**\Apideck\Client\Model\EmployeeManager**](EmployeeManager.md) |  | [optional] 
 `direct_reports` | **string[]** | The direct reports refer to the individuals who report directly to a person in the organizational hierarchy. | [optional] 
@@ -85,21 +85,6 @@ Name | Type | Description | Notes
 
 
 
-<a name="EMPLOYMENT_STATUS"></a>
-## Enum: Employee.employment_status
-
-
-* `ACTIVE` (value: `'active'`)
-
-* `INACTIVE` (value: `'inactive'`)
-
-* `TERMINATED` (value: `'terminated'`)
-
-* `OTHER` (value: `'other'`)
-
-
-
-
 ## Referenced Types:
 
 
@@ -123,7 +108,7 @@ Name | Type | Description | Notes
 
 
 
-
+* [`EmploymentStatus`](EmploymentStatus.md)
 * [`EmployeeEmploymentRole`](EmployeeEmploymentRole.md)
 * [`EmployeeManager`](EmployeeManager.md)
 

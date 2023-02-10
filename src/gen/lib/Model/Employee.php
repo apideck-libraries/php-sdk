@@ -81,7 +81,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'employment_end_date' => 'string',
         'leaving_reason' => 'string',
         'employee_number' => 'string',
-        'employment_status' => 'string',
+        'employment_status' => '\Apideck\Client\Model\EmploymentStatus',
         'employment_role' => '\Apideck\Client\Model\EmployeeEmploymentRole',
         'manager' => '\Apideck\Client\Model\EmployeeManager',
         'direct_reports' => 'string[]',
@@ -461,10 +461,6 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     const LEAVING_REASON_RESIGNED = 'resigned';
     const LEAVING_REASON_REDUNDANCY = 'redundancy';
     const LEAVING_REASON_OTHER = 'other';
-    const EMPLOYMENT_STATUS_ACTIVE = 'active';
-    const EMPLOYMENT_STATUS_INACTIVE = 'inactive';
-    const EMPLOYMENT_STATUS_TERMINATED = 'terminated';
-    const EMPLOYMENT_STATUS_OTHER = 'other';
 
     /**
      * Gets allowable values of the enum
@@ -478,21 +474,6 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
             self::LEAVING_REASON_RESIGNED,
             self::LEAVING_REASON_REDUNDANCY,
             self::LEAVING_REASON_OTHER,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getEmploymentStatusAllowableValues()
-    {
-        return [
-            self::EMPLOYMENT_STATUS_ACTIVE,
-            self::EMPLOYMENT_STATUS_INACTIVE,
-            self::EMPLOYMENT_STATUS_TERMINATED,
-            self::EMPLOYMENT_STATUS_OTHER,
         ];
     }
 
@@ -590,15 +571,6 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'leaving_reason', must be one of '%s'",
                 $this->container['leaving_reason'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getEmploymentStatusAllowableValues();
-        if (!is_null($this->container['employment_status']) && !in_array($this->container['employment_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'employment_status', must be one of '%s'",
-                $this->container['employment_status'],
                 implode("', '", $allowedValues)
             );
         }
@@ -1167,7 +1139,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets employment_status
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\EmploymentStatus|null
      */
     public function getEmploymentStatus()
     {
@@ -1177,22 +1149,12 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employment_status
      *
-     * @param string|null $employment_status The employment status of the employee, indicating whether they are currently employed, inactive, terminated, or in another status.
+     * @param \Apideck\Client\Model\EmploymentStatus|null $employment_status employment_status
      *
      * @return self
      */
     public function setEmploymentStatus($employment_status)
     {
-        $allowedValues = $this->getEmploymentStatusAllowableValues();
-        if (!is_null($employment_status) && !in_array($employment_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'employment_status', must be one of '%s'",
-                    $employment_status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['employment_status'] = $employment_status;
 
         return $this;

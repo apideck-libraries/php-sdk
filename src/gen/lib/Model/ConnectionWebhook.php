@@ -300,6 +300,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_FILE_STORAGE_FILE_CREATED = 'file-storage.file.created';
     const EVENTS_FILE_STORAGE_FILE_UPDATED = 'file-storage.file.updated';
     const EVENTS_FILE_STORAGE_FILE_DELETED = 'file-storage.file.deleted';
+    const DISABLED_REASON_NONE = 'none';
     const DISABLED_REASON_RETRY_LIMIT = 'retry_limit';
     const DISABLED_REASON_USAGE_LIMIT = 'usage_limit';
 
@@ -426,6 +427,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function getDisabledReasonAllowableValues()
     {
         return [
+            self::DISABLED_REASON_NONE,
             self::DISABLED_REASON_RETRY_LIMIT,
             self::DISABLED_REASON_USAGE_LIMIT,
         ];

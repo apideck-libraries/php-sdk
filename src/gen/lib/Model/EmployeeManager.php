@@ -63,7 +63,8 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'employment_status' => '\Apideck\Client\Model\EmploymentStatus'
     ];
 
     /**
@@ -78,7 +79,8 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'first_name' => null,
         'last_name' => null,
-        'email' => 'email'
+        'email' => 'email',
+        'employment_status' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
-        'email' => 'email'
+        'email' => 'email',
+        'employment_status' => 'employment_status'
     ];
 
     /**
@@ -125,7 +128,8 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'employment_status' => 'setEmploymentStatus'
     ];
 
     /**
@@ -138,7 +142,8 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'employment_status' => 'getEmploymentStatus'
     ];
 
     /**
@@ -203,6 +208,7 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['employment_status'] = $data['employment_status'] ?? null;
     }
 
     /**
@@ -345,6 +351,30 @@ class EmployeeManager implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets employment_status
+     *
+     * @return \Apideck\Client\Model\EmploymentStatus|null
+     */
+    public function getEmploymentStatus()
+    {
+        return $this->container['employment_status'];
+    }
+
+    /**
+     * Sets employment_status
+     *
+     * @param \Apideck\Client\Model\EmploymentStatus|null $employment_status employment_status
+     *
+     * @return self
+     */
+    public function setEmploymentStatus($employment_status)
+    {
+        $this->container['employment_status'] = $employment_status;
 
         return $this;
     }

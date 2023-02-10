@@ -10,10 +10,19 @@ Name | Type | Description | Notes
 `first_name` | **string** | The first name of the person. | [optional] 
 `last_name` | **string** | The last name of the person. | [optional] 
 `email` | **string** | The email address of the manager. | [optional] 
+`employment_status` | [**\Apideck\Client\Model\EmploymentStatus**](EmploymentStatus.md) |  | [optional] 
 
 
 
 
+
+## Referenced Types:
+
+
+
+
+
+* [`EmploymentStatus`](EmploymentStatus.md)
 
 ---
 

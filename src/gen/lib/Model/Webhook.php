@@ -207,6 +207,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const DISABLED_REASON_NONE = 'none';
     const DISABLED_REASON_RETRY_LIMIT = 'retry_limit';
     const DISABLED_REASON_USAGE_LIMIT = 'usage_limit';
 
@@ -218,6 +219,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getDisabledReasonAllowableValues()
     {
         return [
+            self::DISABLED_REASON_NONE,
             self::DISABLED_REASON_RETRY_LIMIT,
             self::DISABLED_REASON_USAGE_LIMIT,
         ];

@@ -64,7 +64,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'title' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'employment_status' => 'string',
+        'employment_status' => '\Apideck\Client\Model\EmploymentStatus',
         'department' => 'string',
         'location' => '\Apideck\Client\Model\HrisJobLocation'
     ];
@@ -197,25 +197,6 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const EMPLOYMENT_STATUS_ACTIVE = 'active';
-    const EMPLOYMENT_STATUS_INACTIVE = 'inactive';
-    const EMPLOYMENT_STATUS_TERMINATED = 'terminated';
-    const EMPLOYMENT_STATUS_OTHER = 'other';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getEmploymentStatusAllowableValues()
-    {
-        return [
-            self::EMPLOYMENT_STATUS_ACTIVE,
-            self::EMPLOYMENT_STATUS_INACTIVE,
-            self::EMPLOYMENT_STATUS_TERMINATED,
-            self::EMPLOYMENT_STATUS_OTHER,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -250,15 +231,6 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getEmploymentStatusAllowableValues();
-        if (!is_null($this->container['employment_status']) && !in_array($this->container['employment_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'employment_status', must be one of '%s'",
-                $this->container['employment_status'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -398,7 +370,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets employment_status
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\EmploymentStatus|null
      */
     public function getEmploymentStatus()
     {
@@ -408,22 +380,12 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employment_status
      *
-     * @param string|null $employment_status employment_status
+     * @param \Apideck\Client\Model\EmploymentStatus|null $employment_status employment_status
      *
      * @return self
      */
     public function setEmploymentStatus($employment_status)
     {
-        $allowedValues = $this->getEmploymentStatusAllowableValues();
-        if (!is_null($employment_status) && !in_array($employment_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'employment_status', must be one of '%s'",
-                    $employment_status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['employment_status'] = $employment_status;
 
         return $this;
