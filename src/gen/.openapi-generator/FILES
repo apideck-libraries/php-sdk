@@ -120,6 +120,7 @@ docs/Model/CreateInvoiceItemResponse.md
 docs/Model/CreateInvoiceResponse.md
 docs/Model/CreateItemResponse.md
 docs/Model/CreateJobResponse.md
+docs/Model/CreateJournalEntryResponse.md
 docs/Model/CreateLeadResponse.md
 docs/Model/CreateLedgerAccountResponse.md
 docs/Model/CreateLocationResponse.md
@@ -174,6 +175,7 @@ docs/Model/DeleteHrisCompanyResponse.md
 docs/Model/DeleteInvoiceResponse.md
 docs/Model/DeleteItemResponse.md
 docs/Model/DeleteJobResponse.md
+docs/Model/DeleteJournalEntryResponse.md
 docs/Model/DeleteLeadResponse.md
 docs/Model/DeleteLedgerAccountResponse.md
 docs/Model/DeleteLocationResponse.md
@@ -304,6 +306,8 @@ docs/Model/GetItemResponse.md
 docs/Model/GetItemsResponse.md
 docs/Model/GetJobResponse.md
 docs/Model/GetJobsResponse.md
+docs/Model/GetJournalEntriesResponse.md
+docs/Model/GetJournalEntryResponse.md
 docs/Model/GetLeadResponse.md
 docs/Model/GetLeadsResponse.md
 docs/Model/GetLedgerAccountResponse.md
@@ -373,6 +377,8 @@ docs/Model/Job.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
 docs/Model/JobsFilter.md
+docs/Model/JournalEntry.md
+docs/Model/JournalEntryLineItem.md
 docs/Model/Lead.md
 docs/Model/LeadEventType.md
 docs/Model/LeadsFilter.md
@@ -389,6 +395,7 @@ docs/Model/LinkedInvoiceItem.md
 docs/Model/LinkedLedgerAccount.md
 docs/Model/LinkedSupplier.md
 docs/Model/LinkedTaxRate.md
+docs/Model/LinkedTrackingCategory.md
 docs/Model/Links.md
 docs/Model/Location.md
 docs/Model/Log.md
@@ -510,6 +517,7 @@ docs/Model/UpdateInvoiceItemsResponse.md
 docs/Model/UpdateInvoiceResponse.md
 docs/Model/UpdateItemResponse.md
 docs/Model/UpdateJobResponse.md
+docs/Model/UpdateJournalEntryResponse.md
 docs/Model/UpdateLeadResponse.md
 docs/Model/UpdateLedgerAccountResponse.md
 docs/Model/UpdateLocationResponse.md
@@ -666,6 +674,7 @@ lib/Model/CreateInvoiceItemResponse.php
 lib/Model/CreateInvoiceResponse.php
 lib/Model/CreateItemResponse.php
 lib/Model/CreateJobResponse.php
+lib/Model/CreateJournalEntryResponse.php
 lib/Model/CreateLeadResponse.php
 lib/Model/CreateLedgerAccountResponse.php
 lib/Model/CreateLocationResponse.php
@@ -720,6 +729,7 @@ lib/Model/DeleteHrisCompanyResponse.php
 lib/Model/DeleteInvoiceResponse.php
 lib/Model/DeleteItemResponse.php
 lib/Model/DeleteJobResponse.php
+lib/Model/DeleteJournalEntryResponse.php
 lib/Model/DeleteLeadResponse.php
 lib/Model/DeleteLedgerAccountResponse.php
 lib/Model/DeleteLocationResponse.php
@@ -850,6 +860,8 @@ lib/Model/GetItemResponse.php
 lib/Model/GetItemsResponse.php
 lib/Model/GetJobResponse.php
 lib/Model/GetJobsResponse.php
+lib/Model/GetJournalEntriesResponse.php
+lib/Model/GetJournalEntryResponse.php
 lib/Model/GetLeadResponse.php
 lib/Model/GetLeadsResponse.php
 lib/Model/GetLedgerAccountResponse.php
@@ -919,6 +931,8 @@ lib/Model/Job.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
 lib/Model/JobsFilter.php
+lib/Model/JournalEntry.php
+lib/Model/JournalEntryLineItem.php
 lib/Model/Lead.php
 lib/Model/LeadEventType.php
 lib/Model/LeadsFilter.php
@@ -935,6 +949,7 @@ lib/Model/LinkedInvoiceItem.php
 lib/Model/LinkedLedgerAccount.php
 lib/Model/LinkedSupplier.php
 lib/Model/LinkedTaxRate.php
+lib/Model/LinkedTrackingCategory.php
 lib/Model/Links.php
 lib/Model/Location.php
 lib/Model/Log.php
@@ -1057,6 +1072,7 @@ lib/Model/UpdateInvoiceItemsResponse.php
 lib/Model/UpdateInvoiceResponse.php
 lib/Model/UpdateItemResponse.php
 lib/Model/UpdateJobResponse.php
+lib/Model/UpdateJournalEntryResponse.php
 lib/Model/UpdateLeadResponse.php
 lib/Model/UpdateLedgerAccountResponse.php
 lib/Model/UpdateLocationResponse.php
@@ -1209,6 +1225,7 @@ test/Model/CreateInvoiceItemResponseTest.php
 test/Model/CreateInvoiceResponseTest.php
 test/Model/CreateItemResponseTest.php
 test/Model/CreateJobResponseTest.php
+test/Model/CreateJournalEntryResponseTest.php
 test/Model/CreateLeadResponseTest.php
 test/Model/CreateLedgerAccountResponseTest.php
 test/Model/CreateLocationResponseTest.php
@@ -1263,6 +1280,7 @@ test/Model/DeleteHrisCompanyResponseTest.php
 test/Model/DeleteInvoiceResponseTest.php
 test/Model/DeleteItemResponseTest.php
 test/Model/DeleteJobResponseTest.php
+test/Model/DeleteJournalEntryResponseTest.php
 test/Model/DeleteLeadResponseTest.php
 test/Model/DeleteLedgerAccountResponseTest.php
 test/Model/DeleteLocationResponseTest.php
@@ -1393,6 +1411,8 @@ test/Model/GetItemResponseTest.php
 test/Model/GetItemsResponseTest.php
 test/Model/GetJobResponseTest.php
 test/Model/GetJobsResponseTest.php
+test/Model/GetJournalEntriesResponseTest.php
+test/Model/GetJournalEntryResponseTest.php
 test/Model/GetLeadResponseTest.php
 test/Model/GetLeadsResponseTest.php
 test/Model/GetLedgerAccountResponseTest.php
@@ -1462,6 +1482,8 @@ test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
 test/Model/JobsFilterTest.php
+test/Model/JournalEntryLineItemTest.php
+test/Model/JournalEntryTest.php
 test/Model/LeadEventTypeTest.php
 test/Model/LeadTest.php
 test/Model/LeadsFilterTest.php
@@ -1478,6 +1500,7 @@ test/Model/LinkedInvoiceItemTest.php
 test/Model/LinkedLedgerAccountTest.php
 test/Model/LinkedSupplierTest.php
 test/Model/LinkedTaxRateTest.php
+test/Model/LinkedTrackingCategoryTest.php
 test/Model/LinksTest.php
 test/Model/LocationTest.php
 test/Model/LogOperationTest.php
@@ -1599,6 +1622,7 @@ test/Model/UpdateInvoiceItemsResponseTest.php
 test/Model/UpdateInvoiceResponseTest.php
 test/Model/UpdateItemResponseTest.php
 test/Model/UpdateJobResponseTest.php
+test/Model/UpdateJournalEntryResponseTest.php
 test/Model/UpdateLeadResponseTest.php
 test/Model/UpdateLedgerAccountResponseTest.php
 test/Model/UpdateLocationResponseTest.php
