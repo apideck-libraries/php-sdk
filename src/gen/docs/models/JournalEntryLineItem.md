@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 `description` | **string** | User defined description | [optional] 
 `tax_amount` | **float** | Tax amount | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
-`linked_tracking_category` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
+`tracking_category` | [**\Apideck\Client\Model\LinkedTrackingCategory**](LinkedTrackingCategory.md) |  | [optional] 
 
 
 
@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedTaxRate`](LinkedTaxRate.md)
-* [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
+* [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 
 ---
 

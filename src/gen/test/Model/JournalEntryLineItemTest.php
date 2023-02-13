@@ -143,9 +143,9 @@ class JournalEntryLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "linked_tracking_category"
+     * Test attribute "tracking_category"
      */
-    public function testPropertyLinkedTrackingCategory()
+    public function testPropertyTrackingCategory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

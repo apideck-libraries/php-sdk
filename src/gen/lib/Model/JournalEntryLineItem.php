@@ -66,7 +66,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'description' => 'string',
         'tax_amount' => 'float',
         'tax_rate' => '\Apideck\Client\Model\LinkedTaxRate',
-        'linked_tracking_category' => '\Apideck\Client\Model\LinkedLedgerAccount'
+        'tracking_category' => '\Apideck\Client\Model\LinkedTrackingCategory'
     ];
 
     /**
@@ -84,7 +84,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'description' => null,
         'tax_amount' => null,
         'tax_rate' => null,
-        'linked_tracking_category' => null
+        'tracking_category' => null
     ];
 
     /**
@@ -121,7 +121,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'description' => 'description',
         'tax_amount' => 'tax_amount',
         'tax_rate' => 'tax_rate',
-        'linked_tracking_category' => 'linked_tracking_category'
+        'tracking_category' => 'tracking_category'
     ];
 
     /**
@@ -137,7 +137,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'description' => 'setDescription',
         'tax_amount' => 'setTaxAmount',
         'tax_rate' => 'setTaxRate',
-        'linked_tracking_category' => 'setLinkedTrackingCategory'
+        'tracking_category' => 'setTrackingCategory'
     ];
 
     /**
@@ -153,7 +153,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'description' => 'getDescription',
         'tax_amount' => 'getTaxAmount',
         'tax_rate' => 'getTaxRate',
-        'linked_tracking_category' => 'getLinkedTrackingCategory'
+        'tracking_category' => 'getTrackingCategory'
     ];
 
     /**
@@ -235,7 +235,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->container['description'] = $data['description'] ?? null;
         $this->container['tax_amount'] = $data['tax_amount'] ?? null;
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
-        $this->container['linked_tracking_category'] = $data['linked_tracking_category'] ?? null;
+        $this->container['tracking_category'] = $data['tracking_category'] ?? null;
     }
 
     /**
@@ -459,25 +459,25 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets linked_tracking_category
+     * Gets tracking_category
      *
-     * @return \Apideck\Client\Model\LinkedLedgerAccount|null
+     * @return \Apideck\Client\Model\LinkedTrackingCategory|null
      */
-    public function getLinkedTrackingCategory()
+    public function getTrackingCategory()
     {
-        return $this->container['linked_tracking_category'];
+        return $this->container['tracking_category'];
     }
 
     /**
-     * Sets linked_tracking_category
+     * Sets tracking_category
      *
-     * @param \Apideck\Client\Model\LinkedLedgerAccount|null $linked_tracking_category linked_tracking_category
+     * @param \Apideck\Client\Model\LinkedTrackingCategory|null $tracking_category tracking_category
      *
      * @return self
      */
-    public function setLinkedTrackingCategory($linked_tracking_category)
+    public function setTrackingCategory($tracking_category)
     {
-        $this->container['linked_tracking_category'] = $linked_tracking_category;
+        $this->container['tracking_category'] = $tracking_category;
 
         return $this;
     }
