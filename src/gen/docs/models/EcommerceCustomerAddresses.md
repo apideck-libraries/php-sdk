@@ -21,9 +21,9 @@ Name | Type | Description | Notes
 ## Enum: EcommerceCustomerAddresses.type
 
 
-* `PRIMARY` (value: `'primary'`)
+* `BILLING` (value: `'billing'`)
 
-* `SECONDARY` (value: `'secondary'`)
+* `SHIPPING` (value: `'shipping'`)
 
 * `OTHER` (value: `'other'`)
 

@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 `shipping_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\EcommerceOrderLineItem[]**](EcommerceOrderLineItem.md) |  | [optional] 
 `note` | **string** | Note for the order. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
 
@@ -38,6 +39,8 @@ Name | Type | Description | Notes
 * `AUTHORIZED` (value: `'authorized'`)
 
 * `PAID` (value: `'paid'`)
+
+* `PARTIAL` (value: `'partial'`)
 
 * `REFUNDED` (value: `'refunded'`)
 
@@ -87,6 +90,7 @@ Name | Type | Description | Notes
 * [`EcommerceAddress`](EcommerceAddress.md)
 * [`EcommerceAddress`](EcommerceAddress.md)
 * [`EcommerceOrderLineItem`](EcommerceOrderLineItem.md)
+
 
 
 

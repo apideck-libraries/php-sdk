@@ -5,6 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+`id` | **string** | A unique identifier for an object. | [optional] 
 `url` | **string** | The URL of an image of the product. | [optional] 
 
 

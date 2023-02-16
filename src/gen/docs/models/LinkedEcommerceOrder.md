@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** | A unique identifier for an object. | [optional] 
 `total` | **string** | The total amount of the order. | [optional] 
-`order_status` | [**\Apideck\Client\Model\EcommerceOrderStatus**](EcommerceOrderStatus.md) |  | [optional] 
+`status` | [**\Apideck\Client\Model\EcommerceOrderStatus**](EcommerceOrderStatus.md) |  | [optional] 
 
 
 

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 `options` | [**\Apideck\Client\Model\EcommerceProductOptions[]**](EcommerceProductOptions.md) | An array of options for the product. | [optional] 
 `variants` | [**\Apideck\Client\Model\EcommerceProductVariants[]**](EcommerceProductVariants.md) |  | [optional] 
 `tags` | **string[]** | An array of tags for the product, used for organization and searching. | [optional] 
-`categories` | **string[]** | An array of categories for the product, used for organization and searching. | [optional] 
+`categories` | [**\Apideck\Client\Model\EcommerceProductCategories[]**](EcommerceProductCategories.md) | An array of categories for the product, used for organization and searching. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 * [`EcommerceProductOptions`](EcommerceProductOptions.md)
 * [`EcommerceProductVariants`](EcommerceProductVariants.md)
 
-
+* [`EcommerceProductCategories`](EcommerceProductCategories.md)
 
 
 

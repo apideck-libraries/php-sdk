@@ -5,6 +5,8 @@
 
 * `ACTIVE` (value: `'active'`)
 
+* `COMPLETED` (value: `'completed'`)
+
 * `CANCELLED` (value: `'cancelled'`)
 
 * `ARCHIVED` (value: `'archived'`)

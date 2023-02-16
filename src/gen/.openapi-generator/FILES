@@ -214,6 +214,7 @@ docs/Model/EcommerceOrderLineItem.md
 docs/Model/EcommerceOrderStatus.md
 docs/Model/EcommerceOrdersFilter.md
 docs/Model/EcommerceProduct.md
+docs/Model/EcommerceProductCategories.md
 docs/Model/EcommerceProductImages.md
 docs/Model/EcommerceProductImages1.md
 docs/Model/EcommerceProductOptions.md
@@ -768,6 +769,7 @@ lib/Model/EcommerceOrderLineItem.php
 lib/Model/EcommerceOrderStatus.php
 lib/Model/EcommerceOrdersFilter.php
 lib/Model/EcommerceProduct.php
+lib/Model/EcommerceProductCategories.php
 lib/Model/EcommerceProductImages.php
 lib/Model/EcommerceProductImages1.php
 lib/Model/EcommerceProductOptions.php
@@ -1318,6 +1320,7 @@ test/Model/EcommerceOrderLineItemTest.php
 test/Model/EcommerceOrderStatusTest.php
 test/Model/EcommerceOrderTest.php
 test/Model/EcommerceOrdersFilterTest.php
+test/Model/EcommerceProductCategoriesTest.php
 test/Model/EcommerceProductImages1Test.php
 test/Model/EcommerceProductImagesTest.php
 test/Model/EcommerceProductOptions1Test.php

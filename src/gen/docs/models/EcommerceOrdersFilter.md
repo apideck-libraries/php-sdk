@@ -5,7 +5,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`customer_id` | **string** | Customer ID to filter on | [optional] 
+`email` | **string** | Customer email address to filter on | [optional] 
 
 
 
