@@ -478,6 +478,7 @@ docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
 docs/Model/Supplier.md
+docs/Model/SuppliersFilter.md
 docs/Model/SupportedProperty.md
 docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
@@ -1035,6 +1036,7 @@ lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
 lib/Model/Supplier.php
+lib/Model/SuppliersFilter.php
 lib/Model/SupportedProperty.php
 lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
@@ -1587,6 +1589,7 @@ test/Model/SocialLinkTest.php
 test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
 test/Model/SupplierTest.php
+test/Model/SuppliersFilterTest.php
 test/Model/SupportedPropertyChildPropertiesTest.php
 test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
