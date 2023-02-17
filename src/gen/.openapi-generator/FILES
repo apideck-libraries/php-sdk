@@ -394,6 +394,7 @@ docs/Model/LinkedEcommerceOrder.md
 docs/Model/LinkedFolder.md
 docs/Model/LinkedInvoiceItem.md
 docs/Model/LinkedLedgerAccount.md
+docs/Model/LinkedParentCustomer.md
 docs/Model/LinkedSupplier.md
 docs/Model/LinkedTaxRate.md
 docs/Model/LinkedTrackingCategory.md
@@ -949,6 +950,7 @@ lib/Model/LinkedEcommerceOrder.php
 lib/Model/LinkedFolder.php
 lib/Model/LinkedInvoiceItem.php
 lib/Model/LinkedLedgerAccount.php
+lib/Model/LinkedParentCustomer.php
 lib/Model/LinkedSupplier.php
 lib/Model/LinkedTaxRate.php
 lib/Model/LinkedTrackingCategory.php
@@ -1501,6 +1503,7 @@ test/Model/LinkedEcommerceOrderTest.php
 test/Model/LinkedFolderTest.php
 test/Model/LinkedInvoiceItemTest.php
 test/Model/LinkedLedgerAccountTest.php
+test/Model/LinkedParentCustomerTest.php
 test/Model/LinkedSupplierTest.php
 test/Model/LinkedTaxRateTest.php
 test/Model/LinkedTrackingCategoryTest.php

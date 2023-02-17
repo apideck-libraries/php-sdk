@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 `tax_amount` | **float** | Tax amount | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `tracking_category` | [**\Apideck\Client\Model\LinkedTrackingCategory**](LinkedTrackingCategory.md) |  | [optional] 
+`department_id` | **string** | A unique identifier for an object. | [optional] 
+`location_id` | **string** | A unique identifier for an object. | [optional] 
 
 
 
@@ -38,6 +40,8 @@ Name | Type | Description | Notes
 
 * [`LinkedTaxRate`](LinkedTaxRate.md)
 * [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
+
+
 
 ---
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 `last_name` | **string** | The last name of the person. | [optional] 
 `suffix` | **string** |  | [optional] 
 `individual` | **bool** | Is this an individual or business customer | [optional] 
+`project` | **bool** | If true, indicates this is a Project. | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
@@ -26,6 +27,7 @@ Name | Type | Description | Notes
 `tax_number` | **string** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
+`parent` | [**\Apideck\Client\Model\LinkedParentCustomer**](LinkedParentCustomer.md) |  | [optional] 
 `status` | **string** | Customer status | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
@@ -66,6 +68,7 @@ Name | Type | Description | Notes
 
 
 
+
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
@@ -76,6 +79,7 @@ Name | Type | Description | Notes
 
 * [`Currency`](Currency.md)
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
+* [`LinkedParentCustomer`](LinkedParentCustomer.md)
 
 
 
