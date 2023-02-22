@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 `name` | **string** | The name for the variant, used for displaying to customers. | [optional] 
 `price` | **string** | The price of the variant. | [optional] 
 `sku` | **string** | The stock keeping unit of the variant. | [optional] 
-`inventory_quantity` | **int** | The quantity of the variant in stock. | [optional] 
+`inventory_quantity` | **string** | The quantity of the variant in stock. | [optional] 
 `weight` | **string** | The weight of the variant. | [optional] 
 `weight_unit` | **string** | The unit of measurement for the weight of the variant. | [optional] 
 `options` | [**\Apideck\Client\Model\EcommerceProductOptions1[]**](EcommerceProductOptions1.md) |  | [optional] 

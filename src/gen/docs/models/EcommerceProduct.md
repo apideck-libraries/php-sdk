@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 `status` | **string** | The current status of the product (active or archived). | [optional] 
 `price` | **string** | The price of the product. | [optional] 
 `sku` | **string** | The stock keeping unit of the product. | [optional] 
-`inventory_quantity` | **int** | The quantity of the product in stock. | [optional] 
+`inventory_quantity` | **string** | The quantity of the product in stock. | [optional] 
 `images` | [**\Apideck\Client\Model\EcommerceProductImages[]**](EcommerceProductImages.md) | An array of image URLs for the product. | [optional] 
 `weight` | **string** | The weight of the product. | [optional] 
 `weight_unit` | **string** | The unit of measurement for the weight of the product. | [optional] 

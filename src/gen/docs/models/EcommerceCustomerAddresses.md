@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `type` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `line1` | **string** | First line of the street address of the customer | [optional] 
 `line2` | **string** | Second line of the street address of the customer | [optional] 
 `city` | **string** | City of the customer | [optional] 
