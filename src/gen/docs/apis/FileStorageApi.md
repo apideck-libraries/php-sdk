@@ -20,6 +20,7 @@
 * [Download File](#filesDownload)
 * [Get File](#filesOne)
 * [Search Files](#filesSearch)
+* [Rename Or Move File](#filesUpdate)
 * [Create Folder](#foldersAdd)
 * [Copy Folder](#foldersCopy)
 * [Delete Folder](#foldersDelete)
@@ -1024,6 +1025,73 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getFileStorageApi()->filesSearch($filesSearch);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="filesUpdate"></a>
+# Rename Or Move File
+
+
+Method: **filesUpdate**
+
+```php
+Apideck->getFileStorageApi()->filesUpdate($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **update_file_request** | [\Apideck\Client\Model\UpdateFileRequest](../models/\Apideck\Client\Model\UpdateFileRequest.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\UpdateFileResponse`](../models/\Apideck\Client\Model\UpdateFileResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Files | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getFileStorageApi()->filesUpdate('id_example', $file);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

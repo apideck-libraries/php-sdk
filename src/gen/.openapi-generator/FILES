@@ -512,6 +512,7 @@ docs/Model/UpdateDriveResponse.md
 docs/Model/UpdateEcommerceCustomerResponse.md
 docs/Model/UpdateEcommerceOrderResponse.md
 docs/Model/UpdateEmployeeResponse.md
+docs/Model/UpdateFileRequest.md
 docs/Model/UpdateFileResponse.md
 docs/Model/UpdateFolderRequest.md
 docs/Model/UpdateFolderResponse.md
@@ -1070,6 +1071,7 @@ lib/Model/UpdateDriveResponse.php
 lib/Model/UpdateEcommerceCustomerResponse.php
 lib/Model/UpdateEcommerceOrderResponse.php
 lib/Model/UpdateEmployeeResponse.php
+lib/Model/UpdateFileRequest.php
 lib/Model/UpdateFileResponse.php
 lib/Model/UpdateFolderRequest.php
 lib/Model/UpdateFolderResponse.php
@@ -1623,6 +1625,7 @@ test/Model/UpdateDriveResponseTest.php
 test/Model/UpdateEcommerceCustomerResponseTest.php
 test/Model/UpdateEcommerceOrderResponseTest.php
 test/Model/UpdateEmployeeResponseTest.php
+test/Model/UpdateFileRequestTest.php
 test/Model/UpdateFileResponseTest.php
 test/Model/UpdateFolderRequestTest.php
 test/Model/UpdateFolderResponseTest.php
