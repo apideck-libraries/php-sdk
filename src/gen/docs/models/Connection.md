@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 `tag_line` | **string** |  | [optional] 
 `unified_api` | **string** | The unified API category where the connection belongs to. | [optional] 
 `state` | [**\Apideck\Client\Model\ConnectionState**](ConnectionState.md) |  | [optional] 
+`integration_state` | [**\Apideck\Client\Model\IntegrationState**](IntegrationState.md) |  | [optional] 
 `auth_type` | [**\Apideck\Client\Model\AuthType**](AuthType.md) |  | [optional] 
 `oauth_grant_type` | [**\Apideck\Client\Model\OAuthGrantType**](OAuthGrantType.md) |  | [optional] 
 `status` | **string** | Status of the connection. | [optional] 
@@ -57,6 +58,7 @@ Name | Type | Description | Notes
 
 
 * [`ConnectionState`](ConnectionState.md)
+* [`IntegrationState`](IntegrationState.md)
 * [`AuthType`](AuthType.md)
 * [`OAuthGrantType`](OAuthGrantType.md)
 

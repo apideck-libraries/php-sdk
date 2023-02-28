@@ -149,6 +149,10 @@ Read the full documentation of the FileStorageApi [here](./src/gen/docs/apis/Fil
 
 Read the full documentation of the HrisApi [here](./src/gen/docs/apis/HrisApi.md).
 
+### IssueTrackingApi
+
+Read the full documentation of the IssueTrackingApi [here](./src/gen/docs/apis/IssueTrackingApi.md).
+
 ### LeadApi
 
 Read the full documentation of the LeadApi [here](./src/gen/docs/apis/LeadApi.md).

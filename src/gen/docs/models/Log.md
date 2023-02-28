@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 
 * `ECOMMERCE` (value: `'ecommerce'`)
 
-* `TICKETING` (value: `'ticketing'`)
+* `ISSUE_TRACKING` (value: `'issue-tracking'`)
 
 * `POS` (value: `'pos'`)
 

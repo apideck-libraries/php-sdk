@@ -12,6 +12,7 @@ use Apideck\Client\Api\CustomerSupportApi;
 use Apideck\Client\Api\EcommerceApi;
 use Apideck\Client\Api\FileStorageApi;
 use Apideck\Client\Api\HrisApi;
+use Apideck\Client\Api\IssueTrackingApi;
 use Apideck\Client\Api\LeadApi;
 use Apideck\Client\Api\PosApi;
 use Apideck\Client\Api\SmsApi;
@@ -69,6 +70,11 @@ class Apideck
     protected $hris;
 
     /**
+     * @var IssueTrackingApi
+     */
+    protected $issueTracking;
+
+    /**
      * @var LeadApi
      */
     protected $lead;
@@ -121,6 +127,7 @@ class Apideck
       $this->ecommerce = new EcommerceApi(null, $config);
       $this->fileStorage = new FileStorageApi(null, $config);
       $this->hris = new HrisApi(null, $config);
+      $this->issueTracking = new IssueTrackingApi(null, $config);
       $this->lead = new LeadApi(null, $config);
       $this->pos = new PosApi(null, $config);
       $this->sms = new SmsApi(null, $config);
@@ -199,6 +206,15 @@ class Apideck
   public function getHrisApi()
   {
       return $this->hris;
+  }
+  /**
+    * Get the value of issueTracking
+    *
+    * @return  IssueTrackingApi
+    */ 
+  public function getIssueTrackingApi()
+  {
+      return $this->issueTracking;
   }
   /**
     * Get the value of lead

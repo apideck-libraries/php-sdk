@@ -17,6 +17,7 @@ docs/Api/CustomerSupportApi.md
 docs/Api/EcommerceApi.md
 docs/Api/FileStorageApi.md
 docs/Api/HrisApi.md
+docs/Api/IssueTrackingApi.md
 docs/Api/LeadApi.md
 docs/Api/PosApi.md
 docs/Api/SmsApi.md
@@ -40,6 +41,7 @@ docs/Model/Applicant.md
 docs/Model/ApplicantSocialLinks.md
 docs/Model/ApplicantWebsites.md
 docs/Model/ApplicantsFilter.md
+docs/Model/Assignee.md
 docs/Model/AtsActivity.md
 docs/Model/AtsEventType.md
 docs/Model/AuthType.md
@@ -61,6 +63,11 @@ docs/Model/Bill.md
 docs/Model/BillLineItem.md
 docs/Model/Branch.md
 docs/Model/CashDetails.md
+docs/Model/Collection.md
+docs/Model/CollectionTicketComment.md
+docs/Model/CollectionUser.md
+docs/Model/CollectionsSort.md
+docs/Model/CommentsSort.md
 docs/Model/CompaniesFilter.md
 docs/Model/CompaniesSort.md
 docs/Model/Company.md
@@ -98,6 +105,7 @@ docs/Model/CopyFolderRequest.md
 docs/Model/CreateActivityResponse.md
 docs/Model/CreateApplicantResponse.md
 docs/Model/CreateBillResponse.md
+docs/Model/CreateCommentResponse.md
 docs/Model/CreateCompanyResponse.md
 docs/Model/CreateConnectionResponse.md
 docs/Model/CreateConsumerResponse.md
@@ -142,6 +150,7 @@ docs/Model/CreateSharedLinkResponse.md
 docs/Model/CreateSupplierResponse.md
 docs/Model/CreateTaxRateResponse.md
 docs/Model/CreateTenderResponse.md
+docs/Model/CreateTicketResponse.md
 docs/Model/CreateTimeOffRequestResponse.md
 docs/Model/CreateUploadSessionRequest.md
 docs/Model/CreateUploadSessionResponse.md
@@ -157,6 +166,7 @@ docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteBillResponse.md
+docs/Model/DeleteCommentResponse.md
 docs/Model/DeleteCompanyResponse.md
 docs/Model/DeleteConsumerResponse.md
 docs/Model/DeleteContactResponse.md
@@ -195,6 +205,7 @@ docs/Model/DeleteSharedLinkResponse.md
 docs/Model/DeleteSupplierResponse.md
 docs/Model/DeleteTaxRateResponse.md
 docs/Model/DeleteTenderResponse.md
+docs/Model/DeleteTicketResponse.md
 docs/Model/DeleteTimeOffRequestResponse.md
 docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
@@ -257,6 +268,12 @@ docs/Model/GetApplicantsResponse.md
 docs/Model/GetBalanceSheetResponse.md
 docs/Model/GetBillResponse.md
 docs/Model/GetBillsResponse.md
+docs/Model/GetCollectionResponse.md
+docs/Model/GetCollectionUserResponse.md
+docs/Model/GetCollectionUsersResponse.md
+docs/Model/GetCollectionsResponse.md
+docs/Model/GetCommentResponse.md
+docs/Model/GetCommentsResponse.md
 docs/Model/GetCompaniesResponse.md
 docs/Model/GetCompanyInfoResponse.md
 docs/Model/GetCompanyResponse.md
@@ -353,6 +370,8 @@ docs/Model/GetTaxRateResponse.md
 docs/Model/GetTaxRatesResponse.md
 docs/Model/GetTenderResponse.md
 docs/Model/GetTendersResponse.md
+docs/Model/GetTicketResponse.md
+docs/Model/GetTicketsResponse.md
 docs/Model/GetTimeOffRequestResponse.md
 docs/Model/GetTimeOffRequestsResponse.md
 docs/Model/GetUploadSessionResponse.md
@@ -366,6 +385,7 @@ docs/Model/HrisEventType.md
 docs/Model/HrisJob.md
 docs/Model/HrisJobLocation.md
 docs/Model/HrisJobs.md
+docs/Model/IntegrationState.md
 docs/Model/Invoice.md
 docs/Model/InvoiceItem.md
 docs/Model/InvoiceItemSalesDetails.md
@@ -373,6 +393,8 @@ docs/Model/InvoiceItemsFilter.md
 docs/Model/InvoiceLineItem.md
 docs/Model/InvoiceResponse.md
 docs/Model/InvoicesSort.md
+docs/Model/IssueTrackingEventType.md
+docs/Model/IssuesFilter.md
 docs/Model/Item.md
 docs/Model/Job.md
 docs/Model/JobSalary.md
@@ -485,6 +507,8 @@ docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
 docs/Model/Tender.md
+docs/Model/Ticket.md
+docs/Model/TicketsSort.md
 docs/Model/TimeOffRequest.md
 docs/Model/TimeOffRequestNotes.md
 docs/Model/TimeOffRequestsFilter.md
@@ -498,6 +522,7 @@ docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
 docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateBillResponse.md
+docs/Model/UpdateCommentResponse.md
 docs/Model/UpdateCompanyResponse.md
 docs/Model/UpdateConnectionResponse.md
 docs/Model/UpdateConsumerRequest.md
@@ -541,6 +566,7 @@ docs/Model/UpdateSharedLinkResponse.md
 docs/Model/UpdateSupplierResponse.md
 docs/Model/UpdateTaxRateResponse.md
 docs/Model/UpdateTenderResponse.md
+docs/Model/UpdateTicketResponse.md
 docs/Model/UpdateTimeOffRequestResponse.md
 docs/Model/UpdateUploadSessionResponse.md
 docs/Model/UpdateUserResponse.md
@@ -570,6 +596,7 @@ lib/Api/CustomerSupportApi.php
 lib/Api/EcommerceApi.php
 lib/Api/FileStorageApi.php
 lib/Api/HrisApi.php
+lib/Api/IssueTrackingApi.php
 lib/Api/LeadApi.php
 lib/Api/PosApi.php
 lib/Api/SmsApi.php
@@ -598,6 +625,7 @@ lib/Model/Applicant.php
 lib/Model/ApplicantSocialLinks.php
 lib/Model/ApplicantWebsites.php
 lib/Model/ApplicantsFilter.php
+lib/Model/Assignee.php
 lib/Model/AtsActivity.php
 lib/Model/AtsEventType.php
 lib/Model/AuthType.php
@@ -619,6 +647,11 @@ lib/Model/Bill.php
 lib/Model/BillLineItem.php
 lib/Model/Branch.php
 lib/Model/CashDetails.php
+lib/Model/Collection.php
+lib/Model/CollectionTicketComment.php
+lib/Model/CollectionUser.php
+lib/Model/CollectionsSort.php
+lib/Model/CommentsSort.php
 lib/Model/CompaniesFilter.php
 lib/Model/CompaniesSort.php
 lib/Model/Company.php
@@ -656,6 +689,7 @@ lib/Model/CopyFolderRequest.php
 lib/Model/CreateActivityResponse.php
 lib/Model/CreateApplicantResponse.php
 lib/Model/CreateBillResponse.php
+lib/Model/CreateCommentResponse.php
 lib/Model/CreateCompanyResponse.php
 lib/Model/CreateConnectionResponse.php
 lib/Model/CreateConsumerResponse.php
@@ -700,6 +734,7 @@ lib/Model/CreateSharedLinkResponse.php
 lib/Model/CreateSupplierResponse.php
 lib/Model/CreateTaxRateResponse.php
 lib/Model/CreateTenderResponse.php
+lib/Model/CreateTicketResponse.php
 lib/Model/CreateTimeOffRequestResponse.php
 lib/Model/CreateUploadSessionRequest.php
 lib/Model/CreateUploadSessionResponse.php
@@ -715,6 +750,7 @@ lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteBillResponse.php
+lib/Model/DeleteCommentResponse.php
 lib/Model/DeleteCompanyResponse.php
 lib/Model/DeleteConsumerResponse.php
 lib/Model/DeleteContactResponse.php
@@ -753,6 +789,7 @@ lib/Model/DeleteSharedLinkResponse.php
 lib/Model/DeleteSupplierResponse.php
 lib/Model/DeleteTaxRateResponse.php
 lib/Model/DeleteTenderResponse.php
+lib/Model/DeleteTicketResponse.php
 lib/Model/DeleteTimeOffRequestResponse.php
 lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
@@ -815,6 +852,12 @@ lib/Model/GetApplicantsResponse.php
 lib/Model/GetBalanceSheetResponse.php
 lib/Model/GetBillResponse.php
 lib/Model/GetBillsResponse.php
+lib/Model/GetCollectionResponse.php
+lib/Model/GetCollectionUserResponse.php
+lib/Model/GetCollectionUsersResponse.php
+lib/Model/GetCollectionsResponse.php
+lib/Model/GetCommentResponse.php
+lib/Model/GetCommentsResponse.php
 lib/Model/GetCompaniesResponse.php
 lib/Model/GetCompanyInfoResponse.php
 lib/Model/GetCompanyResponse.php
@@ -911,6 +954,8 @@ lib/Model/GetTaxRateResponse.php
 lib/Model/GetTaxRatesResponse.php
 lib/Model/GetTenderResponse.php
 lib/Model/GetTendersResponse.php
+lib/Model/GetTicketResponse.php
+lib/Model/GetTicketsResponse.php
 lib/Model/GetTimeOffRequestResponse.php
 lib/Model/GetTimeOffRequestsResponse.php
 lib/Model/GetUploadSessionResponse.php
@@ -924,6 +969,7 @@ lib/Model/HrisEventType.php
 lib/Model/HrisJob.php
 lib/Model/HrisJobLocation.php
 lib/Model/HrisJobs.php
+lib/Model/IntegrationState.php
 lib/Model/Invoice.php
 lib/Model/InvoiceItem.php
 lib/Model/InvoiceItemSalesDetails.php
@@ -931,6 +977,8 @@ lib/Model/InvoiceItemsFilter.php
 lib/Model/InvoiceLineItem.php
 lib/Model/InvoiceResponse.php
 lib/Model/InvoicesSort.php
+lib/Model/IssueTrackingEventType.php
+lib/Model/IssuesFilter.php
 lib/Model/Item.php
 lib/Model/Job.php
 lib/Model/JobSalary.php
@@ -1044,6 +1092,8 @@ lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
 lib/Model/Tender.php
+lib/Model/Ticket.php
+lib/Model/TicketsSort.php
 lib/Model/TimeOffRequest.php
 lib/Model/TimeOffRequestNotes.php
 lib/Model/TimeOffRequestsFilter.php
@@ -1057,6 +1107,7 @@ lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
 lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateBillResponse.php
+lib/Model/UpdateCommentResponse.php
 lib/Model/UpdateCompanyResponse.php
 lib/Model/UpdateConnectionResponse.php
 lib/Model/UpdateConsumerRequest.php
@@ -1100,6 +1151,7 @@ lib/Model/UpdateSharedLinkResponse.php
 lib/Model/UpdateSupplierResponse.php
 lib/Model/UpdateTaxRateResponse.php
 lib/Model/UpdateTenderResponse.php
+lib/Model/UpdateTicketResponse.php
 lib/Model/UpdateTimeOffRequestResponse.php
 lib/Model/UpdateUploadSessionResponse.php
 lib/Model/UpdateUserResponse.php
@@ -1130,6 +1182,7 @@ test/Api/CustomerSupportApiTest.php
 test/Api/EcommerceApiTest.php
 test/Api/FileStorageApiTest.php
 test/Api/HrisApiTest.php
+test/Api/IssueTrackingApiTest.php
 test/Api/LeadApiTest.php
 test/Api/PosApiTest.php
 test/Api/SmsApiTest.php
@@ -1153,6 +1206,7 @@ test/Model/ApplicantSocialLinksTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
 test/Model/ApplicantsFilterTest.php
+test/Model/AssigneeTest.php
 test/Model/AtsActivityTest.php
 test/Model/AtsEventTypeTest.php
 test/Model/AuthTypeTest.php
@@ -1174,6 +1228,11 @@ test/Model/BillLineItemTest.php
 test/Model/BillTest.php
 test/Model/BranchTest.php
 test/Model/CashDetailsTest.php
+test/Model/CollectionTest.php
+test/Model/CollectionTicketCommentTest.php
+test/Model/CollectionUserTest.php
+test/Model/CollectionsSortTest.php
+test/Model/CommentsSortTest.php
 test/Model/CompaniesFilterTest.php
 test/Model/CompaniesSortTest.php
 test/Model/CompanyInfoTest.php
@@ -1211,6 +1270,7 @@ test/Model/CopyFolderRequestTest.php
 test/Model/CreateActivityResponseTest.php
 test/Model/CreateApplicantResponseTest.php
 test/Model/CreateBillResponseTest.php
+test/Model/CreateCommentResponseTest.php
 test/Model/CreateCompanyResponseTest.php
 test/Model/CreateConnectionResponseTest.php
 test/Model/CreateConsumerResponseTest.php
@@ -1255,6 +1315,7 @@ test/Model/CreateSharedLinkResponseTest.php
 test/Model/CreateSupplierResponseTest.php
 test/Model/CreateTaxRateResponseTest.php
 test/Model/CreateTenderResponseTest.php
+test/Model/CreateTicketResponseTest.php
 test/Model/CreateTimeOffRequestResponseTest.php
 test/Model/CreateUploadSessionRequestTest.php
 test/Model/CreateUploadSessionResponseTest.php
@@ -1270,6 +1331,7 @@ test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteBillResponseTest.php
+test/Model/DeleteCommentResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
 test/Model/DeleteConsumerResponseTest.php
 test/Model/DeleteContactResponseTest.php
@@ -1308,6 +1370,7 @@ test/Model/DeleteSharedLinkResponseTest.php
 test/Model/DeleteSupplierResponseTest.php
 test/Model/DeleteTaxRateResponseTest.php
 test/Model/DeleteTenderResponseTest.php
+test/Model/DeleteTicketResponseTest.php
 test/Model/DeleteTimeOffRequestResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
@@ -1370,6 +1433,12 @@ test/Model/GetApplicantsResponseTest.php
 test/Model/GetBalanceSheetResponseTest.php
 test/Model/GetBillResponseTest.php
 test/Model/GetBillsResponseTest.php
+test/Model/GetCollectionResponseTest.php
+test/Model/GetCollectionUserResponseTest.php
+test/Model/GetCollectionUsersResponseTest.php
+test/Model/GetCollectionsResponseTest.php
+test/Model/GetCommentResponseTest.php
+test/Model/GetCommentsResponseTest.php
 test/Model/GetCompaniesResponseTest.php
 test/Model/GetCompanyInfoResponseTest.php
 test/Model/GetCompanyResponseTest.php
@@ -1466,6 +1535,8 @@ test/Model/GetTaxRateResponseTest.php
 test/Model/GetTaxRatesResponseTest.php
 test/Model/GetTenderResponseTest.php
 test/Model/GetTendersResponseTest.php
+test/Model/GetTicketResponseTest.php
+test/Model/GetTicketsResponseTest.php
 test/Model/GetTimeOffRequestResponseTest.php
 test/Model/GetTimeOffRequestsResponseTest.php
 test/Model/GetUploadSessionResponseTest.php
@@ -1479,6 +1550,7 @@ test/Model/HrisEventTypeTest.php
 test/Model/HrisJobLocationTest.php
 test/Model/HrisJobTest.php
 test/Model/HrisJobsTest.php
+test/Model/IntegrationStateTest.php
 test/Model/InvoiceItemSalesDetailsTest.php
 test/Model/InvoiceItemTest.php
 test/Model/InvoiceItemsFilterTest.php
@@ -1486,6 +1558,8 @@ test/Model/InvoiceLineItemTest.php
 test/Model/InvoiceResponseTest.php
 test/Model/InvoiceTest.php
 test/Model/InvoicesSortTest.php
+test/Model/IssueTrackingEventTypeTest.php
+test/Model/IssuesFilterTest.php
 test/Model/ItemTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
@@ -1598,6 +1672,8 @@ test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
 test/Model/TenderTest.php
+test/Model/TicketTest.php
+test/Model/TicketsSortTest.php
 test/Model/TimeOffRequestNotesTest.php
 test/Model/TimeOffRequestTest.php
 test/Model/TimeOffRequestsFilterTest.php
@@ -1611,6 +1687,7 @@ test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php
 test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateBillResponseTest.php
+test/Model/UpdateCommentResponseTest.php
 test/Model/UpdateCompanyResponseTest.php
 test/Model/UpdateConnectionResponseTest.php
 test/Model/UpdateConsumerRequestTest.php
@@ -1654,6 +1731,7 @@ test/Model/UpdateSharedLinkResponseTest.php
 test/Model/UpdateSupplierResponseTest.php
 test/Model/UpdateTaxRateResponseTest.php
 test/Model/UpdateTenderResponseTest.php
+test/Model/UpdateTicketResponseTest.php
 test/Model/UpdateTimeOffRequestResponseTest.php
 test/Model/UpdateUploadSessionResponseTest.php
 test/Model/UpdateUserResponseTest.php
