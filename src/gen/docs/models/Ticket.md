@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `due_date` | **\DateTime** | Due date of the ticket | [optional] 
 `completed_at` | **\DateTime** | When the ticket was completed | [optional] 
-`tags` | **string[]** |  | [optional] 
+`tags` | [**\Apideck\Client\Model\CollectionTag[]**](CollectionTag.md) |  | [optional] 
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 
 
-
+* [`CollectionTag`](CollectionTag.md)
 
 ---
 

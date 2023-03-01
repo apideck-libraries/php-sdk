@@ -64,6 +64,7 @@ docs/Model/BillLineItem.md
 docs/Model/Branch.md
 docs/Model/CashDetails.md
 docs/Model/Collection.md
+docs/Model/CollectionTag.md
 docs/Model/CollectionTicketComment.md
 docs/Model/CollectionUser.md
 docs/Model/CollectionsSort.md
@@ -269,6 +270,7 @@ docs/Model/GetBalanceSheetResponse.md
 docs/Model/GetBillResponse.md
 docs/Model/GetBillsResponse.md
 docs/Model/GetCollectionResponse.md
+docs/Model/GetCollectionTagsResponse.md
 docs/Model/GetCollectionUserResponse.md
 docs/Model/GetCollectionUsersResponse.md
 docs/Model/GetCollectionsResponse.md
@@ -648,6 +650,7 @@ lib/Model/BillLineItem.php
 lib/Model/Branch.php
 lib/Model/CashDetails.php
 lib/Model/Collection.php
+lib/Model/CollectionTag.php
 lib/Model/CollectionTicketComment.php
 lib/Model/CollectionUser.php
 lib/Model/CollectionsSort.php
@@ -853,6 +856,7 @@ lib/Model/GetBalanceSheetResponse.php
 lib/Model/GetBillResponse.php
 lib/Model/GetBillsResponse.php
 lib/Model/GetCollectionResponse.php
+lib/Model/GetCollectionTagsResponse.php
 lib/Model/GetCollectionUserResponse.php
 lib/Model/GetCollectionUsersResponse.php
 lib/Model/GetCollectionsResponse.php
@@ -1228,6 +1232,7 @@ test/Model/BillLineItemTest.php
 test/Model/BillTest.php
 test/Model/BranchTest.php
 test/Model/CashDetailsTest.php
+test/Model/CollectionTagTest.php
 test/Model/CollectionTest.php
 test/Model/CollectionTicketCommentTest.php
 test/Model/CollectionUserTest.php
@@ -1434,6 +1439,7 @@ test/Model/GetBalanceSheetResponseTest.php
 test/Model/GetBillResponseTest.php
 test/Model/GetBillsResponseTest.php
 test/Model/GetCollectionResponseTest.php
+test/Model/GetCollectionTagsResponseTest.php
 test/Model/GetCollectionUserResponseTest.php
 test/Model/GetCollectionUsersResponseTest.php
 test/Model/GetCollectionsResponseTest.php
