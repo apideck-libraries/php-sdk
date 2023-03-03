@@ -68,7 +68,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_logs' => 'bool',
         'show_suggestions' => 'bool',
         'show_sidebar' => 'bool',
-        'auto_redirect' => 'bool'
+        'auto_redirect' => 'bool',
+        'hide_guides' => 'bool'
     ];
 
     /**
@@ -87,7 +88,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_logs' => null,
         'show_suggestions' => null,
         'show_sidebar' => null,
-        'auto_redirect' => null
+        'auto_redirect' => null,
+        'hide_guides' => null
     ];
 
     /**
@@ -125,7 +127,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_logs' => 'show_logs',
         'show_suggestions' => 'show_suggestions',
         'show_sidebar' => 'show_sidebar',
-        'auto_redirect' => 'auto_redirect'
+        'auto_redirect' => 'auto_redirect',
+        'hide_guides' => 'hide_guides'
     ];
 
     /**
@@ -142,7 +145,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_logs' => 'setShowLogs',
         'show_suggestions' => 'setShowSuggestions',
         'show_sidebar' => 'setShowSidebar',
-        'auto_redirect' => 'setAutoRedirect'
+        'auto_redirect' => 'setAutoRedirect',
+        'hide_guides' => 'setHideGuides'
     ];
 
     /**
@@ -159,7 +163,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_logs' => 'getShowLogs',
         'show_suggestions' => 'getShowSuggestions',
         'show_sidebar' => 'getShowSidebar',
-        'auto_redirect' => 'getAutoRedirect'
+        'auto_redirect' => 'getAutoRedirect',
+        'hide_guides' => 'getHideGuides'
     ];
 
     /**
@@ -228,6 +233,7 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['show_suggestions'] = $data['show_suggestions'] ?? false;
         $this->container['show_sidebar'] = $data['show_sidebar'] ?? true;
         $this->container['auto_redirect'] = $data['auto_redirect'] ?? false;
+        $this->container['hide_guides'] = $data['hide_guides'] ?? false;
     }
 
     /**
@@ -466,6 +472,30 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAutoRedirect($auto_redirect)
     {
         $this->container['auto_redirect'] = $auto_redirect;
+
+        return $this;
+    }
+
+    /**
+     * Gets hide_guides
+     *
+     * @return bool|null
+     */
+    public function getHideGuides()
+    {
+        return $this->container['hide_guides'];
+    }
+
+    /**
+     * Sets hide_guides
+     *
+     * @param bool|null $hide_guides Hide Apideck connection guides in [Vault](/apis/vault/reference#section/Get-Started). Defaults to `false`.
+     *
+     * @return self
+     */
+    public function setHideGuides($hide_guides)
+    {
+        $this->container['hide_guides'] = $hide_guides;
 
         return $this;
     }

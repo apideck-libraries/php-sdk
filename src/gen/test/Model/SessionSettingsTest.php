@@ -159,4 +159,13 @@ class SessionSettingsTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "hide_guides"
+     */
+    public function testPropertyHideGuides()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
