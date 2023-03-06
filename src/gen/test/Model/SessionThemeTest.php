@@ -89,6 +89,15 @@ class SessionThemeTest extends TestCase
     }
 
     /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "primary_color"
      */
     public function testPropertyPrimaryColor()

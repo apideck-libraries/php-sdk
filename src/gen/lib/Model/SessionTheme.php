@@ -61,6 +61,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'favicon' => 'string',
+        'logo' => 'string',
         'primary_color' => 'string',
         'sidepanel_background_color' => 'string',
         'sidepanel_text_color' => 'string',
@@ -78,6 +79,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'favicon' => null,
+        'logo' => null,
         'primary_color' => null,
         'sidepanel_background_color' => null,
         'sidepanel_text_color' => null,
@@ -114,6 +116,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'favicon' => 'favicon',
+        'logo' => 'logo',
         'primary_color' => 'primary_color',
         'sidepanel_background_color' => 'sidepanel_background_color',
         'sidepanel_text_color' => 'sidepanel_text_color',
@@ -129,6 +132,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'favicon' => 'setFavicon',
+        'logo' => 'setLogo',
         'primary_color' => 'setPrimaryColor',
         'sidepanel_background_color' => 'setSidepanelBackgroundColor',
         'sidepanel_text_color' => 'setSidepanelTextColor',
@@ -144,6 +148,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'favicon' => 'getFavicon',
+        'logo' => 'getLogo',
         'primary_color' => 'getPrimaryColor',
         'sidepanel_background_color' => 'getSidepanelBackgroundColor',
         'sidepanel_text_color' => 'getSidepanelTextColor',
@@ -210,6 +215,7 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['favicon'] = $data['favicon'] ?? null;
+        $this->container['logo'] = $data['logo'] ?? null;
         $this->container['primary_color'] = $data['primary_color'] ?? null;
         $this->container['sidepanel_background_color'] = $data['sidepanel_background_color'] ?? null;
         $this->container['sidepanel_text_color'] = $data['sidepanel_text_color'] ?? null;
@@ -262,6 +268,30 @@ class SessionTheme implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFavicon($favicon)
     {
         $this->container['favicon'] = $favicon;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo
+     *
+     * @return string|null
+     */
+    public function getLogo()
+    {
+        return $this->container['logo'];
+    }
+
+    /**
+     * Sets logo
+     *
+     * @param string|null $logo The URL to the logo to use for Vault.
+     *
+     * @return self
+     */
+    public function setLogo($logo)
+    {
+        $this->container['logo'] = $logo;
 
         return $this;
     }
