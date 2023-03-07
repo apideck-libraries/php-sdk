@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 
 
 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 
 * [`Currency`](Currency.md)
 * [`JournalEntryLineItem`](JournalEntryLineItem.md)
+
 
 
 

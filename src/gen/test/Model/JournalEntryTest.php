@@ -186,4 +186,13 @@ class JournalEntryTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "row_version"
+     */
+    public function testPropertyRowVersion()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

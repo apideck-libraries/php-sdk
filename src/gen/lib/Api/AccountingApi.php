@@ -1015,14 +1015,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetBillsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function billsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    public function billsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null)
     {
-        list($response) = $this->billsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+        list($response) = $this->billsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort);
         return $response;
     }
 
@@ -1037,14 +1038,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetBillsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function billsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    public function billsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null)
     {
-        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1255,13 +1257,14 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function billsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    public function billsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null)
     {
-        return $this->billsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit)
+        return $this->billsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1280,14 +1283,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function billsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    public function billsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null)
     {
         $returnType = '\Apideck\Client\Model\GetBillsResponse';
-        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1331,11 +1335,12 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of records to return (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function billsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    public function billsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.billsAll, must be smaller than or equal to 200.');
@@ -1383,6 +1388,17 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+        if ($sort !== null) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
 

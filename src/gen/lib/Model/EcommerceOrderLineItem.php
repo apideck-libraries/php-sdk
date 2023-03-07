@@ -61,7 +61,7 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'quantity' => 'float',
+        'quantity' => 'string',
         'total_amount' => 'string',
         'id' => 'string',
         'product_id' => 'string',
@@ -314,7 +314,7 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets quantity
      *
-     * @return float
+     * @return string
      */
     public function getQuantity()
     {
@@ -324,7 +324,7 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets quantity
      *
-     * @param float $quantity The quantity of the product or variant associated with the line item.
+     * @param string $quantity The quantity of the product or variant associated with the line item.
      *
      * @return self
      */

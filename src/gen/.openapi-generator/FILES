@@ -61,6 +61,7 @@ docs/Model/BankAccount.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
+docs/Model/BillsSort.md
 docs/Model/Branch.md
 docs/Model/CashDetails.md
 docs/Model/Collection.md
@@ -647,6 +648,7 @@ lib/Model/BankAccount.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
+lib/Model/BillsSort.php
 lib/Model/Branch.php
 lib/Model/CashDetails.php
 lib/Model/Collection.php
@@ -1230,6 +1232,7 @@ test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
 test/Model/BillTest.php
+test/Model/BillsSortTest.php
 test/Model/BranchTest.php
 test/Model/CashDetailsTest.php
 test/Model/CollectionTagTest.php

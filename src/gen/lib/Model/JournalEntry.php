@@ -70,7 +70,8 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
-        'created_at' => '\DateTime'
+        'created_at' => '\DateTime',
+        'row_version' => 'string'
     ];
 
     /**
@@ -92,7 +93,8 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
-        'created_at' => 'date-time'
+        'created_at' => 'date-time',
+        'row_version' => null
     ];
 
     /**
@@ -133,7 +135,8 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
-        'created_at' => 'created_at'
+        'created_at' => 'created_at',
+        'row_version' => 'row_version'
     ];
 
     /**
@@ -153,7 +156,8 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt'
+        'created_at' => 'setCreatedAt',
+        'row_version' => 'setRowVersion'
     ];
 
     /**
@@ -173,7 +177,8 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt'
+        'created_at' => 'getCreatedAt',
+        'row_version' => 'getRowVersion'
     ];
 
     /**
@@ -245,6 +250,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['row_version'] = $data['row_version'] ?? null;
     }
 
     /**
@@ -564,6 +570,30 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_version
+     *
+     * @return string|null
+     */
+    public function getRowVersion()
+    {
+        return $this->container['row_version'];
+    }
+
+    /**
+     * Sets row_version
+     *
+     * @param string|null $row_version A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object.
+     *
+     * @return self
+     */
+    public function setRowVersion($row_version)
+    {
+        $this->container['row_version'] = $row_version;
 
         return $this;
     }
