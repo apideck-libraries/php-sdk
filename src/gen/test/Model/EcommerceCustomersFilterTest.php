@@ -87,4 +87,13 @@ class EcommerceCustomersFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "phone_number"
+     */
+    public function testPropertyPhoneNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

@@ -59,7 +59,8 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'email' => 'string'
+        'email' => 'string',
+        'phone_number' => 'string'
     ];
 
     /**
@@ -70,7 +71,8 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'email' => null
+        'email' => null,
+        'phone_number' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'email'
+        'email' => 'email',
+        'phone_number' => 'phone_number'
     ];
 
     /**
@@ -109,7 +112,8 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'phone_number' => 'setPhoneNumber'
     ];
 
     /**
@@ -118,7 +122,8 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'phone_number' => 'getPhoneNumber'
     ];
 
     /**
@@ -179,6 +184,7 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(array $data = null)
     {
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['phone_number'] = $data['phone_number'] ?? null;
     }
 
     /**
@@ -225,6 +231,30 @@ class EcommerceCustomersFilter implements ModelInterface, ArrayAccess, \JsonSeri
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return string|null
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param string|null $phone_number Customer phone number to filter on
+     *
+     * @return self
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }
