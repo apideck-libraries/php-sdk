@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 `unit_price` | **float** |  | [optional] 
 `unit_of_measure` | **string** | Description of the unit type the item is sold as, ie: kg, hour. | [optional] 
 `discount_percentage` | **float** | Discount percentage applied to the line item when supported downstream. | [optional] 
+`discount_amount` | **float** | Discount amount applied to the line item when supported downstream. | [optional] 
 `location_id` | **string** | Location id | [optional] 
 `department_id` | **string** | Department id | [optional] 
 `item` | [**\Apideck\Client\Model\LinkedInvoiceItem**](LinkedInvoiceItem.md) |  | [optional] 
@@ -48,6 +49,7 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
+
 
 
 
