@@ -143,6 +143,15 @@ class HrisJobTest extends TestCase
     }
 
     /**
+     * Test attribute "is_primary"
+     */
+    public function testPropertyIsPrimary()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "location"
      */
     public function testPropertyLocation()

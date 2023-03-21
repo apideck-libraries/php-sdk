@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 `end_date` | **\DateTime** |  | [optional] 
 `employment_status` | [**\Apideck\Client\Model\EmploymentStatus**](EmploymentStatus.md) |  | [optional] 
 `department` | **string** | Department name | [optional] 
+`is_primary` | **bool** | Indicates whether this the employee's primary job. | [optional] 
 `location` | [**\Apideck\Client\Model\HrisJobLocation**](HrisJobLocation.md) |  | [optional] 
 
 
@@ -25,6 +26,7 @@ Name | Type | Description | Notes
 
 
 * [`EmploymentStatus`](EmploymentStatus.md)
+
 
 * [`HrisJobLocation`](HrisJobLocation.md)
 

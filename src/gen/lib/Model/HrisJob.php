@@ -66,6 +66,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => '\DateTime',
         'employment_status' => '\Apideck\Client\Model\EmploymentStatus',
         'department' => 'string',
+        'is_primary' => 'bool',
         'location' => '\Apideck\Client\Model\HrisJobLocation'
     ];
 
@@ -84,6 +85,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'date',
         'employment_status' => null,
         'department' => null,
+        'is_primary' => null,
         'location' => null
     ];
 
@@ -121,6 +123,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'end_date',
         'employment_status' => 'employment_status',
         'department' => 'department',
+        'is_primary' => 'is_primary',
         'location' => 'location'
     ];
 
@@ -137,6 +140,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'setEndDate',
         'employment_status' => 'setEmploymentStatus',
         'department' => 'setDepartment',
+        'is_primary' => 'setIsPrimary',
         'location' => 'setLocation'
     ];
 
@@ -153,6 +157,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'getEndDate',
         'employment_status' => 'getEmploymentStatus',
         'department' => 'getDepartment',
+        'is_primary' => 'getIsPrimary',
         'location' => 'getLocation'
     ];
 
@@ -220,6 +225,7 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['end_date'] = $data['end_date'] ?? null;
         $this->container['employment_status'] = $data['employment_status'] ?? null;
         $this->container['department'] = $data['department'] ?? null;
+        $this->container['is_primary'] = $data['is_primary'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
     }
 
@@ -411,6 +417,30 @@ class HrisJob implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDepartment($department)
     {
         $this->container['department'] = $department;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_primary
+     *
+     * @return bool|null
+     */
+    public function getIsPrimary()
+    {
+        return $this->container['is_primary'];
+    }
+
+    /**
+     * Sets is_primary
+     *
+     * @param bool|null $is_primary Indicates whether this the employee's primary job.
+     *
+     * @return self
+     */
+    public function setIsPrimary($is_primary)
+    {
+        $this->container['is_primary'] = $is_primary;
 
         return $this;
     }
