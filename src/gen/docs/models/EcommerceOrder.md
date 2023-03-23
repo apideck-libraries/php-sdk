@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 `customer` | [**\Apideck\Client\Model\LinkedEcommerceCustomer**](LinkedEcommerceCustomer.md) |  | [optional] 
 `billing_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
 `shipping_address` | [**\Apideck\Client\Model\EcommerceAddress**](EcommerceAddress.md) |  | [optional] 
+`tracking` | [**\Apideck\Client\Model\TrackingItem[]**](TrackingItem.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\EcommerceOrderLineItem[]**](EcommerceOrderLineItem.md) |  | [optional] 
 `note` | **string** | Note for the order. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
@@ -89,6 +90,7 @@ Name | Type | Description | Notes
 * [`LinkedEcommerceCustomer`](LinkedEcommerceCustomer.md)
 * [`EcommerceAddress`](EcommerceAddress.md)
 * [`EcommerceAddress`](EcommerceAddress.md)
+* [`TrackingItem`](TrackingItem.md)
 * [`EcommerceOrderLineItem`](EcommerceOrderLineItem.md)
 
 

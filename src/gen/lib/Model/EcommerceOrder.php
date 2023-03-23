@@ -75,6 +75,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer' => '\Apideck\Client\Model\LinkedEcommerceCustomer',
         'billing_address' => '\Apideck\Client\Model\EcommerceAddress',
         'shipping_address' => '\Apideck\Client\Model\EcommerceAddress',
+        'tracking' => '\Apideck\Client\Model\TrackingItem[]',
         'line_items' => '\Apideck\Client\Model\EcommerceOrderLineItem[]',
         'note' => 'string',
         'created_at' => '\DateTime',
@@ -105,6 +106,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer' => null,
         'billing_address' => null,
         'shipping_address' => null,
+        'tracking' => null,
         'line_items' => null,
         'note' => null,
         'created_at' => 'date-time',
@@ -154,6 +156,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer' => 'customer',
         'billing_address' => 'billing_address',
         'shipping_address' => 'shipping_address',
+        'tracking' => 'tracking',
         'line_items' => 'line_items',
         'note' => 'note',
         'created_at' => 'created_at',
@@ -182,6 +185,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer' => 'setCustomer',
         'billing_address' => 'setBillingAddress',
         'shipping_address' => 'setShippingAddress',
+        'tracking' => 'setTracking',
         'line_items' => 'setLineItems',
         'note' => 'setNote',
         'created_at' => 'setCreatedAt',
@@ -210,6 +214,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer' => 'getCustomer',
         'billing_address' => 'getBillingAddress',
         'shipping_address' => 'getShippingAddress',
+        'tracking' => 'getTracking',
         'line_items' => 'getLineItems',
         'note' => 'getNote',
         'created_at' => 'getCreatedAt',
@@ -339,6 +344,7 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['customer'] = $data['customer'] ?? null;
         $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
+        $this->container['tracking'] = $data['tracking'] ?? null;
         $this->container['line_items'] = $data['line_items'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
@@ -790,6 +796,30 @@ class EcommerceOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setShippingAddress($shipping_address)
     {
         $this->container['shipping_address'] = $shipping_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking
+     *
+     * @return \Apideck\Client\Model\TrackingItem[]|null
+     */
+    public function getTracking()
+    {
+        return $this->container['tracking'];
+    }
+
+    /**
+     * Sets tracking
+     *
+     * @param \Apideck\Client\Model\TrackingItem[]|null $tracking tracking
+     *
+     * @return self
+     */
+    public function setTracking($tracking)
+    {
+        $this->container['tracking'] = $tracking;
 
         return $this;
     }
