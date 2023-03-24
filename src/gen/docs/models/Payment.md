@@ -5,9 +5,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+`id` | **string** | Unique identifier representing the entity | 
 `total_amount` | **float** | Amount of payment | 
 `transaction_date` | **\DateTime** | Date transaction was entered - YYYY:MM::DDThh:mm:ss.sTZD | 
-`id` | **string** | Unique identifier representing the entity | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 

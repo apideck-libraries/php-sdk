@@ -5,8 +5,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+`id` | **string** | Unique identifier representing the entity | 
 `total_amount` | **float** | Amount of transaction | 
-`id` | **string** | Unique identifier representing the entity | [optional] 
 `number` | **string** | Credit note number. | [optional] 
 `customer` | [**\Apideck\Client\Model\LinkedCustomer**](LinkedCustomer.md) |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 `line_items` | [**\Apideck\Client\Model\InvoiceLineItem[]**](InvoiceLineItem.md) |  | [optional] 
 `allocations` | **object[]** |  | [optional] 
 `note` | **string** | Optional note to be associated with the credit note. | [optional] 
+`terms` | **string** | Optional terms to be associated with the credit note. | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
@@ -84,6 +85,7 @@ Name | Type | Description | Notes
 
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 * [`InvoiceLineItem`](InvoiceLineItem.md)
+
 
 
 
