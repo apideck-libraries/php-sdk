@@ -168,4 +168,13 @@ class SessionSettingsTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "allow_actions"
+     */
+    public function testPropertyAllowActions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

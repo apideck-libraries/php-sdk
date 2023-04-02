@@ -69,7 +69,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_suggestions' => 'bool',
         'show_sidebar' => 'bool',
         'auto_redirect' => 'bool',
-        'hide_guides' => 'bool'
+        'hide_guides' => 'bool',
+        'allow_actions' => 'string[]'
     ];
 
     /**
@@ -89,7 +90,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_suggestions' => null,
         'show_sidebar' => null,
         'auto_redirect' => null,
-        'hide_guides' => null
+        'hide_guides' => null,
+        'allow_actions' => null
     ];
 
     /**
@@ -128,7 +130,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_suggestions' => 'show_suggestions',
         'show_sidebar' => 'show_sidebar',
         'auto_redirect' => 'auto_redirect',
-        'hide_guides' => 'hide_guides'
+        'hide_guides' => 'hide_guides',
+        'allow_actions' => 'allow_actions'
     ];
 
     /**
@@ -146,7 +149,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_suggestions' => 'setShowSuggestions',
         'show_sidebar' => 'setShowSidebar',
         'auto_redirect' => 'setAutoRedirect',
-        'hide_guides' => 'setHideGuides'
+        'hide_guides' => 'setHideGuides',
+        'allow_actions' => 'setAllowActions'
     ];
 
     /**
@@ -164,7 +168,8 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'show_suggestions' => 'getShowSuggestions',
         'show_sidebar' => 'getShowSidebar',
         'auto_redirect' => 'getAutoRedirect',
-        'hide_guides' => 'getHideGuides'
+        'hide_guides' => 'getHideGuides',
+        'allow_actions' => 'getAllowActions'
     ];
 
     /**
@@ -208,6 +213,25 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const ALLOW_ACTIONS_DELETE = 'delete';
+    const ALLOW_ACTIONS_DISCONNECT = 'disconnect';
+    const ALLOW_ACTIONS_REAUTHORIZE = 'reauthorize';
+    const ALLOW_ACTIONS_DISABLE = 'disable';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getAllowActionsAllowableValues()
+    {
+        return [
+            self::ALLOW_ACTIONS_DELETE,
+            self::ALLOW_ACTIONS_DISCONNECT,
+            self::ALLOW_ACTIONS_REAUTHORIZE,
+            self::ALLOW_ACTIONS_DISABLE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -234,6 +258,7 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['show_sidebar'] = $data['show_sidebar'] ?? true;
         $this->container['auto_redirect'] = $data['auto_redirect'] ?? false;
         $this->container['hide_guides'] = $data['hide_guides'] ?? false;
+        $this->container['allow_actions'] = $data['allow_actions'] ?? null;
     }
 
     /**
@@ -496,6 +521,39 @@ class SessionSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setHideGuides($hide_guides)
     {
         $this->container['hide_guides'] = $hide_guides;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_actions
+     *
+     * @return string[]|null
+     */
+    public function getAllowActions()
+    {
+        return $this->container['allow_actions'];
+    }
+
+    /**
+     * Sets allow_actions
+     *
+     * @param string[]|null $allow_actions Hide actions from your users in [Vault](/apis/vault/reference#section/Get-Started). Actions in `allow_actions` will be shown on a connection in Vault. Available actions are: `delete`, `disconnect`, `reauthorize` and `disable`. Empty array will hide all actions. By default all actions are visible.
+     *
+     * @return self
+     */
+    public function setAllowActions($allow_actions)
+    {
+        $allowedValues = $this->getAllowActionsAllowableValues();
+        if (!is_null($allow_actions) && array_diff($allow_actions, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'allow_actions', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['allow_actions'] = $allow_actions;
 
         return $this;
     }

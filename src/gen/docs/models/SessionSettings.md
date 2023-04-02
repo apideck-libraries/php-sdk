@@ -17,13 +17,30 @@ Name | Type | Description | Notes
 `show_sidebar` | **bool** | Configure [Vault](/apis/vault/reference#section/Get-Started) to show the sidebar. Defaults to &#x60;true&#x60;. | [optional] 
 `auto_redirect` | **bool** | Automatically redirect to redirect uri after the connection has been configured as callable. Defaults to &#x60;false&#x60;. | [optional] 
 `hide_guides` | **bool** | Hide Apideck connection guides in [Vault](/apis/vault/reference#section/Get-Started). Defaults to &#x60;false&#x60;. | [optional] 
+`allow_actions` | **string[]** | Hide actions from your users in [Vault](/apis/vault/reference#section/Get-Started). Actions in &#x60;allow_actions&#x60; will be shown on a connection in Vault. Available actions are: &#x60;delete&#x60;, &#x60;disconnect&#x60;, &#x60;reauthorize&#x60; and &#x60;disable&#x60;. Empty array will hide all actions. By default all actions are visible. | [optional] 
 
+
+
+
+
+<a name="ALLOW_ACTIONS[]"></a>
+## Enum: SessionSettings.allow_actions
+
+
+* `DELETE` (value: `'delete'`)
+
+* `DISCONNECT` (value: `'disconnect'`)
+
+* `REAUTHORIZE` (value: `'reauthorize'`)
+
+* `DISABLE` (value: `'disable'`)
 
 
 
 
 ## Referenced Types:
 * [`UnifiedApiId`](UnifiedApiId.md)
+
 
 
 
