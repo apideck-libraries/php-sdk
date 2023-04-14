@@ -49,6 +49,10 @@ Name | Type | Description | Notes
 
 * `ATS` (value: `'ats'`)
 
+* `ECOMMERCE` (value: `'ecommerce'`)
+
+* `ISSUE_TRACKING` (value: `'issue-tracking'`)
+
 * `POS` (value: `'pos'`)
 
 * `FILE_STORAGE` (value: `'file-storage'`)

@@ -9,8 +9,10 @@ use Apideck\Client\Api\AtsApi;
 use Apideck\Client\Api\ConnectorApi;
 use Apideck\Client\Api\CrmApi;
 use Apideck\Client\Api\CustomerSupportApi;
+use Apideck\Client\Api\EcommerceApi;
 use Apideck\Client\Api\FileStorageApi;
 use Apideck\Client\Api\HrisApi;
+use Apideck\Client\Api\IssueTrackingApi;
 use Apideck\Client\Api\LeadApi;
 use Apideck\Client\Api\PosApi;
 use Apideck\Client\Api\SmsApi;
@@ -53,6 +55,11 @@ class Apideck
     protected $customerSupport;
 
     /**
+     * @var EcommerceApi
+     */
+    protected $ecommerce;
+
+    /**
      * @var FileStorageApi
      */
     protected $fileStorage;
@@ -61,6 +68,11 @@ class Apideck
      * @var HrisApi
      */
     protected $hris;
+
+    /**
+     * @var IssueTrackingApi
+     */
+    protected $issueTracking;
 
     /**
      * @var LeadApi
@@ -112,8 +124,10 @@ class Apideck
       $this->connector = new ConnectorApi(null, $config);
       $this->crm = new CrmApi(null, $config);
       $this->customerSupport = new CustomerSupportApi(null, $config);
+      $this->ecommerce = new EcommerceApi(null, $config);
       $this->fileStorage = new FileStorageApi(null, $config);
       $this->hris = new HrisApi(null, $config);
+      $this->issueTracking = new IssueTrackingApi(null, $config);
       $this->lead = new LeadApi(null, $config);
       $this->pos = new PosApi(null, $config);
       $this->sms = new SmsApi(null, $config);
@@ -167,6 +181,15 @@ class Apideck
       return $this->customerSupport;
   }
   /**
+    * Get the value of ecommerce
+    *
+    * @return  EcommerceApi
+    */ 
+  public function getEcommerceApi()
+  {
+      return $this->ecommerce;
+  }
+  /**
     * Get the value of fileStorage
     *
     * @return  FileStorageApi
@@ -183,6 +206,15 @@ class Apideck
   public function getHrisApi()
   {
       return $this->hris;
+  }
+  /**
+    * Get the value of issueTracking
+    *
+    * @return  IssueTrackingApi
+    */ 
+  public function getIssueTrackingApi()
+  {
+      return $this->issueTracking;
   }
   /**
     * Get the value of lead

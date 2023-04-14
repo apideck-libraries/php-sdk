@@ -137,6 +137,10 @@ Read the full documentation of the CrmApi [here](./src/gen/docs/apis/CrmApi.md).
 
 Read the full documentation of the CustomerSupportApi [here](./src/gen/docs/apis/CustomerSupportApi.md).
 
+### EcommerceApi
+
+Read the full documentation of the EcommerceApi [here](./src/gen/docs/apis/EcommerceApi.md).
+
 ### FileStorageApi
 
 Read the full documentation of the FileStorageApi [here](./src/gen/docs/apis/FileStorageApi.md).
@@ -144,6 +148,10 @@ Read the full documentation of the FileStorageApi [here](./src/gen/docs/apis/Fil
 ### HrisApi
 
 Read the full documentation of the HrisApi [here](./src/gen/docs/apis/HrisApi.md).
+
+### IssueTrackingApi
+
+Read the full documentation of the IssueTrackingApi [here](./src/gen/docs/apis/IssueTrackingApi.md).
 
 ### LeadApi
 

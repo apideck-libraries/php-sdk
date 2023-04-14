@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 `execute_base_url` | **string** | The Unify Base URL events from connectors will be sent to after service id is appended. | 
 `events` | **string[]** | The list of subscribed events for this webhook. [&#x60;*&#x60;] indicates that all events are enabled. | 
 `id` | **string** |  | [optional] 
-`description` | **string** |  | [optional] 
+`description` | **string** | A description of the object. | [optional] 
 `disabled_reason` | **string** | Indicates if the webhook has has been disabled as it reached its retry limit or if account is over the usage allocated by it's plan. | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 
@@ -217,12 +217,20 @@ Name | Type | Description | Notes
 
 * `FILE_STORAGE_FILE_DELETED` (value: `'file-storage.file.deleted'`)
 
+* `ISSUE_TRACKING_TICKET_CREATED` (value: `'issue-tracking.ticket.created'`)
+
+* `ISSUE_TRACKING_TICKET_UPDATED` (value: `'issue-tracking.ticket.updated'`)
+
+* `ISSUE_TRACKING_TICKET_DELETED` (value: `'issue-tracking.ticket.deleted'`)
+
 
 
 
 <a name="DISABLED_REASON"></a>
 ## Enum: ConnectionWebhook.disabled_reason
 
+
+* `NONE` (value: `'none'`)
 
 * `RETRY_LIMIT` (value: `'retry_limit'`)
 

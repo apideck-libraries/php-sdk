@@ -3,55 +3,57 @@
 ## Enum
 
 
-* `VAULT` (value: `'vault'`)
+* `ACCOUNTING` (value: `'accounting'`)
 
-* `LEAD` (value: `'lead'`)
+* `ATS` (value: `'ats'`)
+
+* `CALENDAR` (value: `'calendar'`)
 
 * `CRM` (value: `'crm'`)
 
-* `ACCOUNTING` (value: `'accounting'`)
+* `CSP` (value: `'csp'`)
+
+* `CUSTOMER_SUPPORT` (value: `'customer-support'`)
+
+* `ECOMMERCE` (value: `'ecommerce'`)
+
+* `EMAIL` (value: `'email'`)
+
+* `EMAIL_MARKETING` (value: `'email-marketing'`)
+
+* `EXPENSE_MANAGEMENT` (value: `'expense-management'`)
 
 * `FILE_STORAGE` (value: `'file-storage'`)
 
-* `SPREADSHEET` (value: `'spreadsheet'`)
+* `FORM` (value: `'form'`)
 
-* `EMAIL` (value: `'email'`)
+* `HRIS` (value: `'hris'`)
+
+* `LEAD` (value: `'lead'`)
+
+* `PAYROLL` (value: `'payroll'`)
+
+* `POS` (value: `'pos'`)
+
+* `PROCUREMENT` (value: `'procurement'`)
+
+* `PROJECT_MANAGEMENT` (value: `'project-management'`)
 
 * `SCRIPT` (value: `'script'`)
 
 * `SMS` (value: `'sms'`)
 
+* `SPREADSHEET` (value: `'spreadsheet'`)
+
 * `TEAM_MESSAGING` (value: `'team-messaging'`)
 
-* `ECOMMERCE` (value: `'ecommerce'`)
-
-* `PAYROLL` (value: `'payroll'`)
-
-* `CUSTOMER_SUPPORT` (value: `'customer-support'`)
+* `ISSUE_TRACKING` (value: `'issue-tracking'`)
 
 * `TIME_REGISTRATION` (value: `'time-registration'`)
 
 * `TRANSACTIONAL_EMAIL` (value: `'transactional-email'`)
 
-* `FORM` (value: `'form'`)
-
-* `CSP` (value: `'csp'`)
-
-* `EMAIL_MARKETING` (value: `'email-marketing'`)
-
-* `ATS` (value: `'ats'`)
-
-* `HRIS` (value: `'hris'`)
-
-* `POS` (value: `'pos'`)
-
-* `PROJECT_MANAGEMENT` (value: `'project-management'`)
-
-* `EXPENSE_MANAGEMENT` (value: `'expense-management'`)
-
-* `CALENDAR` (value: `'calendar'`)
-
-* `PROCUREMENT` (value: `'procurement'`)
+* `VAULT` (value: `'vault'`)
 
 
 ---

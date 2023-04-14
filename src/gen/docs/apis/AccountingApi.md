@@ -32,6 +32,11 @@
 * [Delete Invoice](#invoicesDelete)
 * [Get Invoice](#invoicesOne)
 * [Update Invoice](#invoicesUpdate)
+* [Create Journal Entry](#journalEntriesAdd)
+* [List Journal Entries](#journalEntriesAll)
+* [Delete Journal Entry](#journalEntriesDelete)
+* [Get Journal Entry](#journalEntriesOne)
+* [Update Journal Entry](#journalEntriesUpdate)
 * [Create Ledger Account](#ledgerAccountsAdd)
 * [List Ledger Accounts](#ledgerAccountsAll)
 * [Delete Ledger Account](#ledgerAccountsDelete)
@@ -71,7 +76,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
- **pass_through** | [\Apideck\Client\Model\Passthrough](../models/\Apideck\Client\Model\Passthrough.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
  **filter** | [\Apideck\Client\Model\BalanceSheetFilter](../models/\Apideck\Client\Model\BalanceSheetFilter.md)| Apply filters |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
@@ -205,6 +210,9 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **sort** | [\Apideck\Client\Model\BillsSort](../models/\Apideck\Client\Model\BillsSort.md)| Apply sorting |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -338,6 +346,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -470,6 +479,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -602,6 +612,8 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -735,6 +747,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -935,6 +948,8 @@ Name | Type | Description  | Notes
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\CustomersFilter](../models/\Apideck\Client\Model\CustomersFilter.md)| Apply filters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -1068,6 +1083,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -1268,6 +1284,8 @@ Name | Type | Description  | Notes
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\InvoiceItemsFilter](../models/\Apideck\Client\Model\InvoiceItemsFilter.md)| Apply filters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -1401,6 +1419,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -1601,6 +1620,8 @@ Name | Type | Description  | Notes
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **sort** | [\Apideck\Client\Model\InvoicesSort](../models/\Apideck\Client\Model\InvoicesSort.md)| Apply sorting |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -1734,6 +1755,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -1849,6 +1871,341 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
+<a name="journalEntriesAdd"></a>
+# Create Journal Entry
+
+
+Method: **journalEntriesAdd**
+
+```php
+Apideck->getAccountingApi()->journalEntriesAdd($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **journal_entry** | [\Apideck\Client\Model\JournalEntry](../models/\Apideck\Client\Model\JournalEntry.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateJournalEntryResponse`](../models/\Apideck\Client\Model\CreateJournalEntryResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**201** | JournalEntries | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getAccountingApi()->journalEntriesAdd($journalEntry);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="journalEntriesAll"></a>
+# List Journal Entries
+
+
+Method: **journalEntriesAll**
+
+```php
+Apideck->getAccountingApi()->journalEntriesAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+ **limit** | [**int**] | Number of records to return | (optional) defaults to 20
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetJournalEntriesResponse`](../models/\Apideck\Client\Model\GetJournalEntriesResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | JournalEntry | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getAccountingApi()->journalEntriesAll();
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="journalEntriesDelete"></a>
+# Delete Journal Entry
+
+
+Method: **journalEntriesDelete**
+
+```php
+Apideck->getAccountingApi()->journalEntriesDelete($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\DeleteJournalEntryResponse`](../models/\Apideck\Client\Model\DeleteJournalEntryResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | JournalEntries | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getAccountingApi()->journalEntriesDelete('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="journalEntriesOne"></a>
+# Get Journal Entry
+
+
+Method: **journalEntriesOne**
+
+```php
+Apideck->getAccountingApi()->journalEntriesOne($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetJournalEntryResponse`](../models/\Apideck\Client\Model\GetJournalEntryResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | JournalEntries | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getAccountingApi()->journalEntriesOne('id_example');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="journalEntriesUpdate"></a>
+# Update Journal Entry
+
+
+Method: **journalEntriesUpdate**
+
+```php
+Apideck->getAccountingApi()->journalEntriesUpdate($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the record you are acting upon. |
+ **journal_entry** | [\Apideck\Client\Model\JournalEntry](../models/\Apideck\Client\Model\JournalEntry.md)|  |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\UpdateJournalEntryResponse`](../models/\Apideck\Client\Model\UpdateJournalEntryResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | JournalEntries | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getAccountingApi()->journalEntriesUpdate('id_example', $journalEntry);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
 <a name="ledgerAccountsAdd"></a>
 # Create Ledger Account
 
@@ -1933,6 +2290,8 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -2066,6 +2425,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -2265,6 +2625,8 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -2398,6 +2760,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -2531,6 +2894,8 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **filter** | [\Apideck\Client\Model\ProfitAndLossFilter](../models/\Apideck\Client\Model\ProfitAndLossFilter.md)| Apply filters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -2663,6 +3028,9 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
+ **filter** | [\Apideck\Client\Model\SuppliersFilter](../models/\Apideck\Client\Model\SuppliersFilter.md)| Apply filters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -2796,6 +3164,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
@@ -2996,6 +3365,8 @@ Name | Type | Description  | Notes
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\TaxRatesFilter](../models/\Apideck\Client\Model\TaxRatesFilter.md)| Apply filters |
+ **pass_through** | [array<string,object>](../models/array<string,object>.md)| Optional unmapped key/values that will be passed through to downstream as query parameters |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
  **limit** | [**int**] | Number of records to return | (optional) defaults to 20
 
@@ -3129,6 +3500,7 @@ Name | Type | Description  | Notes
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
+ **fields** | **string**| The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: &#x60;fields=name,email,addresses.city&#x60;<br /><br />In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. |
  **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 

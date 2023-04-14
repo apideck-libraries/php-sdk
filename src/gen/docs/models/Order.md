@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `merchant_id` | **string** |  | 
 `location_id` | **string** |  | 
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `idempotency_key` | **string** | A value you specify that uniquely identifies this request among requests you have sent. | [optional] 
 `order_number` | **string** |  | [optional] 
 `order_date` | **\DateTime** |  | [optional] 
@@ -43,10 +43,10 @@ Name | Type | Description | Notes
 `voided` | **bool** |  | [optional] 
 `voided_at` | **\DateTime** |  | [optional] 
 `version` | **string** |  | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 

@@ -5,8 +5,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
+`bill_number` | **string** |  | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 `due_date` | **\DateTime** | The due date is the date on which a payment is scheduled to be received by the supplier - YYYY-MM-DD. | [optional] 
 `paid_date` | **\DateTime** | The paid date is the date on which a payment was sent to the supplier - YYYY-MM-DD. | [optional] 
 `po_number` | **string** | A PO Number uniquely identifies a purchase order and is generally defined by the buyer. The buyer will match the PO number in the invoice to the Purchase Order. | [optional] 
-`reference` | **string** | Optional invoice reference. | [optional] 
+`reference` | **string** | Optional bill reference. | [optional] 
 `line_items` | [**\Apideck\Client\Model\BillLineItem[]**](BillLineItem.md) |  | [optional] 
 `terms` | **string** | Terms of payment. | [optional] 
 `balance` | **float** | Balance of bill due. | [optional] 
@@ -27,12 +28,11 @@ Name | Type | Description | Notes
 `notes` | **string** |  | [optional] 
 `status` | **string** | Invoice status | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
-`bill_number` | **string** |  | [optional] 
-`updated_by` | **string** |  | [optional] 
-`created_by` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
-`row_version` | **string** |  | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 
 
 
@@ -64,6 +64,7 @@ Name | Type | Description | Notes
 ## Referenced Types:
 
 
+
 * [`LinkedSupplier`](LinkedSupplier.md)
 * [`Currency`](Currency.md)
 
@@ -84,7 +85,6 @@ Name | Type | Description | Notes
 
 
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
-
 
 
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 `currency` | **string** |  | 
 `income` | [**\Apideck\Client\Model\ProfitAndLossIncome**](ProfitAndLossIncome.md) |  | 
 `expenses` | [**\Apideck\Client\Model\ProfitAndLossExpenses**](ProfitAndLossExpenses.md) |  | 
-`id` | **string** |  | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
 `start_date` | **string** | The start date of the report | [optional] 
 `end_date` | **string** | The start date of the report | [optional] 
 `customer_id` | **string** | Customer id | [optional] 

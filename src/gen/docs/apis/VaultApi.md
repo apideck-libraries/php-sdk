@@ -13,8 +13,11 @@
 * [Get Connection](#connectionsOne)
 * [Update Connection](#connectionsUpdate)
 * [Consumer Request Counts](#consumerRequestCountsAll)
+* [Create Consumer](#consumersAdd)
 * [Get All Consumers](#consumersAll)
+* [Delete Consumer](#consumersDelete)
 * [Get Consumer](#consumersOne)
+* [Update Consumer](#consumersUpdate)
 * [Get All Consumer Request Logs](#logsAll)
 * [Create Session](#sessionsCreate)
 
@@ -543,6 +546,69 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
+<a name="consumersAdd"></a>
+# Create Consumer
+
+
+Method: **consumersAdd**
+
+```php
+Apideck->getVaultApi()->consumersAdd($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consumer** | [\Apideck\Client\Model\Consumer](../models/\Apideck\Client\Model\Consumer.md)|  |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateConsumerResponse`](../models/\Apideck\Client\Model\CreateConsumerResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Consumer created | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->consumersAdd($consumer);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
 <a name="consumersAll"></a>
 # Get All Consumers
 
@@ -607,6 +673,69 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
+<a name="consumersDelete"></a>
+# Delete Consumer
+
+
+Method: **consumersDelete**
+
+```php
+Apideck->getVaultApi()->consumersDelete($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consumer_id** | **string**| ID of the consumer to return |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\DeleteConsumerResponse`](../models/\Apideck\Client\Model\DeleteConsumerResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Consumer deleted | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->consumersDelete('test_user_id');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
 <a name="consumersOne"></a>
 # Get Consumer
 
@@ -660,6 +789,70 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getVaultApi()->consumersOne('test_user_id');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="consumersUpdate"></a>
+# Update Consumer
+
+
+Method: **consumersUpdate**
+
+```php
+Apideck->getVaultApi()->consumersUpdate($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consumer_id** | **string**| ID of the consumer to return |
+ **update_consumer_request** | [\Apideck\Client\Model\UpdateConsumerRequest](../models/\Apideck\Client\Model\UpdateConsumerRequest.md)|  |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\UpdateConsumerResponse`](../models/\Apideck\Client\Model\UpdateConsumerResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Consumer updated | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->consumersUpdate('test_user_id', $consumer);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
