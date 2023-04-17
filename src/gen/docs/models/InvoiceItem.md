@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 `sold` | **bool** | Item will be available on sales transactions | [optional] 
 `purchased` | **bool** | Item is available for purchase transactions | [optional] 
 `tracked` | **bool** | Item is inventoried | [optional] 
+`taxable` | **bool** | If true, transactions for this item are taxable | [optional] 
 `inventory_date` | **\DateTime** | The date of opening balance if inventory item is tracked - YYYY-MM-DD. | [optional] 
 `type` | **string** | Item type | [optional] 
 `sales_details` | [**\Apideck\Client\Model\InvoiceItemSalesDetails**](InvoiceItemSalesDetails.md) |  | [optional] 
@@ -46,6 +47,7 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
+
 
 
 
