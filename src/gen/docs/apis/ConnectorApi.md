@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\ApisFilter](../models/\Apideck\Client\Model\ApisFilter.md)| Apply filters |
- **limit** | [**int**] | Number of records to return | (optional) defaults to 20
+ **limit** | [**int**] | Number of results to return. Minimum 1, Maximum 200, Default 20 | (optional) defaults to 20
 
 
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\ConnectorsFilter](../models/\Apideck\Client\Model\ConnectorsFilter.md)| Apply filters |
- **limit** | [**int**] | Number of records to return | (optional) defaults to 20
+ **limit** | [**int**] | Number of results to return. Minimum 1, Maximum 200, Default 20 | (optional) defaults to 20
 
 
 
