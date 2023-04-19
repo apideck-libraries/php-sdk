@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 `configurable_resources` | **string[]** |  | [optional] 
 `resource_schema_support` | **string[]** |  | [optional] 
 `resource_settings_support` | **string[]** |  | [optional] 
+`validation_support` | **bool** |  | [optional] 
 `settings_required_for_authorization` | **string[]** | List of settings that are required to be configured on integration before authorization can occur | [optional] 
 `subscriptions` | [**\Apideck\Client\Model\WebhookSubscription[]**](WebhookSubscription.md) |  | [optional] 
 `has_guide` | **bool** | Whether the connector has a guide available in the developer docs or not (https://docs.apideck.com/connectors/{service_id}/docs/consumer+connection). | [optional] 
@@ -72,6 +73,7 @@ Name | Type | Description | Notes
 
 * [`FormField`](FormField.md)
 * [`ConnectionConfiguration`](ConnectionConfiguration.md)
+
 
 
 
