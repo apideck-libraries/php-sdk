@@ -95,6 +95,8 @@ class UnifiedApiId
 
     const VAULT = 'vault';
 
+    const DATA_WAREHOUSE = 'data-warehouse';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -127,7 +129,8 @@ class UnifiedApiId
             self::ISSUE_TRACKING,
             self::TIME_REGISTRATION,
             self::TRANSACTIONAL_EMAIL,
-            self::VAULT
+            self::VAULT,
+            self::DATA_WAREHOUSE
         ];
     }
 }
