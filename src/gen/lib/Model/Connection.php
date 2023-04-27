@@ -758,7 +758,7 @@ class Connection implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets authorize_url
      *
-     * @param string|null $authorize_url The OAuth redirect URI. Redirect your users to this URI to let them authorize your app in the connector's UI. Before you can use this URI, you must add `redirect_uri` as a query parameter. Your users will be redirected to this `redirect_uri` after they granted access to your app in the connector's UI.
+     * @param string|null $authorize_url The OAuth redirect URI. Redirect your users to this URI to let them authorize your app in the connector's UI. Before you can use this URI, you must add `redirect_uri` as a query parameter to the `authorize_url`. Be sure to URL encode the `redirect_uri` part. Your users will be redirected to this `redirect_uri` after they granted access to your app in the connector's UI.
      *
      * @return self
      */
