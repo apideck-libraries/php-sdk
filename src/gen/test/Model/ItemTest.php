@@ -179,6 +179,24 @@ class ItemTest extends TestCase
     }
 
     /**
+     * Test attribute "is_revenue"
+     */
+    public function testPropertyIsRevenue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "use_default_tax_rates"
+     */
+    public function testPropertyUseDefaultTaxRates()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "absent_at_location_ids"
      */
     public function testPropertyAbsentAtLocationIds()
