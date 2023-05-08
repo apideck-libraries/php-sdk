@@ -5,10 +5,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+`type` | **string** |  | 
 `id` | **string** | A unique identifier for an object. | [optional] 
 `product_id` | **string** | A unique identifier for an object. | [optional] 
 `name` | **string** |  | [optional] 
-`type` | **string** |  | [optional] 
 `amount` | **int** |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `scope` | **string** |  | [optional] 
