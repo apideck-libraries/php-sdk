@@ -98,6 +98,15 @@ class ConnectorUnifiedApisTest extends TestCase
     }
 
     /**
+     * Test attribute "auth_only"
+     */
+    public function testPropertyAuthOnly()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "oauth_scopes"
      */
     public function testPropertyOauthScopes()

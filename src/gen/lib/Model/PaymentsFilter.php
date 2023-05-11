@@ -1,6 +1,6 @@
 <?php
 /**
- * ConnectorUnifiedApis
+ * PaymentsFilter
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * ConnectorUnifiedApis Class Doc Comment
+ * PaymentsFilter Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializable
+class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Connector_unified_apis';
+    protected static $openAPIModelName = 'PaymentsFilter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,13 +59,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => '\Apideck\Client\Model\UnifiedApiId',
-        'name' => 'string',
-        'auth_only' => 'bool',
-        'oauth_scopes' => '\Apideck\Client\Model\ConnectorOauthScopes1[]',
-        'supported_resources' => '\Apideck\Client\Model\LinkedConnectorResource[]',
-        'downstream_unsupported_resources' => 'string[]',
-        'supported_events' => '\Apideck\Client\Model\ConnectorEvent[]'
+        'invoice_number' => 'string'
     ];
 
     /**
@@ -76,13 +70,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'auth_only' => null,
-        'oauth_scopes' => null,
-        'supported_resources' => null,
-        'downstream_unsupported_resources' => null,
-        'supported_events' => null
+        'invoice_number' => null
     ];
 
     /**
@@ -112,13 +100,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'auth_only' => 'auth_only',
-        'oauth_scopes' => 'oauth_scopes',
-        'supported_resources' => 'supported_resources',
-        'downstream_unsupported_resources' => 'downstream_unsupported_resources',
-        'supported_events' => 'supported_events'
+        'invoice_number' => 'invoice_number'
     ];
 
     /**
@@ -127,13 +109,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'auth_only' => 'setAuthOnly',
-        'oauth_scopes' => 'setOauthScopes',
-        'supported_resources' => 'setSupportedResources',
-        'downstream_unsupported_resources' => 'setDownstreamUnsupportedResources',
-        'supported_events' => 'setSupportedEvents'
+        'invoice_number' => 'setInvoiceNumber'
     ];
 
     /**
@@ -142,13 +118,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'auth_only' => 'getAuthOnly',
-        'oauth_scopes' => 'getOauthScopes',
-        'supported_resources' => 'getSupportedResources',
-        'downstream_unsupported_resources' => 'getDownstreamUnsupportedResources',
-        'supported_events' => 'getSupportedEvents'
+        'invoice_number' => 'getInvoiceNumber'
     ];
 
     /**
@@ -208,13 +178,7 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
-        $this->container['name'] = $data['name'] ?? null;
-        $this->container['auth_only'] = $data['auth_only'] ?? null;
-        $this->container['oauth_scopes'] = $data['oauth_scopes'] ?? null;
-        $this->container['supported_resources'] = $data['supported_resources'] ?? null;
-        $this->container['downstream_unsupported_resources'] = $data['downstream_unsupported_resources'] ?? null;
-        $this->container['supported_events'] = $data['supported_events'] ?? null;
+        $this->container['invoice_number'] = $data['invoice_number'] ?? null;
     }
 
     /**
@@ -242,169 +206,25 @@ class ConnectorUnifiedApis implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets id
-     *
-     * @return \Apideck\Client\Model\UnifiedApiId|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param \Apideck\Client\Model\UnifiedApiId|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
+     * Gets invoice_number
      *
      * @return string|null
      */
-    public function getName()
+    public function getInvoiceNumber()
     {
-        return $this->container['name'];
+        return $this->container['invoice_number'];
     }
 
     /**
-     * Sets name
+     * Sets invoice_number
      *
-     * @param string|null $name Name of the API.
+     * @param string|null $invoice_number Invoice number for payments to filter on
      *
      * @return self
      */
-    public function setName($name)
+    public function setInvoiceNumber($invoice_number)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets auth_only
-     *
-     * @return bool|null
-     */
-    public function getAuthOnly()
-    {
-        return $this->container['auth_only'];
-    }
-
-    /**
-     * Sets auth_only
-     *
-     * @param bool|null $auth_only Indicates whether a connector only supports authentication. In this case the connector is not mapped to a Unified API, but can be used with the Proxy API
-     *
-     * @return self
-     */
-    public function setAuthOnly($auth_only)
-    {
-        $this->container['auth_only'] = $auth_only;
-
-        return $this;
-    }
-
-    /**
-     * Gets oauth_scopes
-     *
-     * @return \Apideck\Client\Model\ConnectorOauthScopes1[]|null
-     */
-    public function getOauthScopes()
-    {
-        return $this->container['oauth_scopes'];
-    }
-
-    /**
-     * Sets oauth_scopes
-     *
-     * @param \Apideck\Client\Model\ConnectorOauthScopes1[]|null $oauth_scopes oauth_scopes
-     *
-     * @return self
-     */
-    public function setOauthScopes($oauth_scopes)
-    {
-        $this->container['oauth_scopes'] = $oauth_scopes;
-
-        return $this;
-    }
-
-    /**
-     * Gets supported_resources
-     *
-     * @return \Apideck\Client\Model\LinkedConnectorResource[]|null
-     */
-    public function getSupportedResources()
-    {
-        return $this->container['supported_resources'];
-    }
-
-    /**
-     * Sets supported_resources
-     *
-     * @param \Apideck\Client\Model\LinkedConnectorResource[]|null $supported_resources List of resources that are supported on the connector.
-     *
-     * @return self
-     */
-    public function setSupportedResources($supported_resources)
-    {
-        $this->container['supported_resources'] = $supported_resources;
-
-        return $this;
-    }
-
-    /**
-     * Gets downstream_unsupported_resources
-     *
-     * @return string[]|null
-     */
-    public function getDownstreamUnsupportedResources()
-    {
-        return $this->container['downstream_unsupported_resources'];
-    }
-
-    /**
-     * Sets downstream_unsupported_resources
-     *
-     * @param string[]|null $downstream_unsupported_resources List of resources that are not supported on the downstream.
-     *
-     * @return self
-     */
-    public function setDownstreamUnsupportedResources($downstream_unsupported_resources)
-    {
-        $this->container['downstream_unsupported_resources'] = $downstream_unsupported_resources;
-
-        return $this;
-    }
-
-    /**
-     * Gets supported_events
-     *
-     * @return \Apideck\Client\Model\ConnectorEvent[]|null
-     */
-    public function getSupportedEvents()
-    {
-        return $this->container['supported_events'];
-    }
-
-    /**
-     * Sets supported_events
-     *
-     * @param \Apideck\Client\Model\ConnectorEvent[]|null $supported_events List of events that are supported on the connector for this Unified API.
-     *
-     * @return self
-     */
-    public function setSupportedEvents($supported_events)
-    {
-        $this->container['supported_events'] = $supported_events;
+        $this->container['invoice_number'] = $invoice_number;
 
         return $this;
     }

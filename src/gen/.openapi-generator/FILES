@@ -465,6 +465,7 @@ docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
+docs/Model/PaymentsFilter.md
 docs/Model/Payroll.md
 docs/Model/PayrollTotals.md
 docs/Model/PayrollsFilter.md
@@ -1057,6 +1058,7 @@ lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
+lib/Model/PaymentsFilter.php
 lib/Model/Payroll.php
 lib/Model/PayrollTotals.php
 lib/Model/PayrollsFilter.php
@@ -1644,6 +1646,7 @@ test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
+test/Model/PaymentsFilterTest.php
 test/Model/PayrollTest.php
 test/Model/PayrollTotalsTest.php
 test/Model/PayrollsFilterTest.php
