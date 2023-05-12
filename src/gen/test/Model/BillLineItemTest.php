@@ -188,6 +188,15 @@ class BillLineItemTest extends TestCase
     }
 
     /**
+     * Test attribute "discount_amount"
+     */
+    public function testPropertyDiscountAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "location_id"
      */
     public function testPropertyLocationId()
@@ -215,18 +224,18 @@ class BillLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "ledger_account"
+     * Test attribute "tax_rate"
      */
-    public function testPropertyLedgerAccount()
+    public function testPropertyTaxRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "tax_rate"
+     * Test attribute "ledger_account"
      */
-    public function testPropertyTaxRate()
+    public function testPropertyLedgerAccount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

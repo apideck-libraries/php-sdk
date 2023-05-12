@@ -71,11 +71,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit_price' => 'float',
         'unit_of_measure' => 'string',
         'discount_percentage' => 'float',
+        'discount_amount' => 'float',
         'location_id' => 'string',
         'department_id' => 'string',
         'item' => '\Apideck\Client\Model\LinkedInvoiceItem',
-        'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'tax_rate' => '\Apideck\Client\Model\LinkedTaxRate',
+        'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -103,11 +104,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit_price' => null,
         'unit_of_measure' => null,
         'discount_percentage' => null,
+        'discount_amount' => null,
         'location_id' => null,
         'department_id' => null,
         'item' => null,
-        'ledger_account' => null,
         'tax_rate' => null,
+        'ledger_account' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -154,11 +156,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit_price' => 'unit_price',
         'unit_of_measure' => 'unit_of_measure',
         'discount_percentage' => 'discount_percentage',
+        'discount_amount' => 'discount_amount',
         'location_id' => 'location_id',
         'department_id' => 'department_id',
         'item' => 'item',
-        'ledger_account' => 'ledger_account',
         'tax_rate' => 'tax_rate',
+        'ledger_account' => 'ledger_account',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -184,11 +187,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit_price' => 'setUnitPrice',
         'unit_of_measure' => 'setUnitOfMeasure',
         'discount_percentage' => 'setDiscountPercentage',
+        'discount_amount' => 'setDiscountAmount',
         'location_id' => 'setLocationId',
         'department_id' => 'setDepartmentId',
         'item' => 'setItem',
-        'ledger_account' => 'setLedgerAccount',
         'tax_rate' => 'setTaxRate',
+        'ledger_account' => 'setLedgerAccount',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -214,11 +218,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit_price' => 'getUnitPrice',
         'unit_of_measure' => 'getUnitOfMeasure',
         'discount_percentage' => 'getDiscountPercentage',
+        'discount_amount' => 'getDiscountAmount',
         'location_id' => 'getLocationId',
         'department_id' => 'getDepartmentId',
         'item' => 'getItem',
-        'ledger_account' => 'getLedgerAccount',
         'tax_rate' => 'getTaxRate',
+        'ledger_account' => 'getLedgerAccount',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -310,11 +315,12 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['unit_price'] = $data['unit_price'] ?? null;
         $this->container['unit_of_measure'] = $data['unit_of_measure'] ?? null;
         $this->container['discount_percentage'] = $data['discount_percentage'] ?? null;
+        $this->container['discount_amount'] = $data['discount_amount'] ?? null;
         $this->container['location_id'] = $data['location_id'] ?? null;
         $this->container['department_id'] = $data['department_id'] ?? null;
         $this->container['item'] = $data['item'] ?? null;
-        $this->container['ledger_account'] = $data['ledger_account'] ?? null;
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
+        $this->container['ledger_account'] = $data['ledger_account'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -642,13 +648,37 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets discount_percentage
      *
-     * @param float|null $discount_percentage Discount percentage
+     * @param float|null $discount_percentage Discount percentage applied to the line item when supported downstream.
      *
      * @return self
      */
     public function setDiscountPercentage($discount_percentage)
     {
         $this->container['discount_percentage'] = $discount_percentage;
+
+        return $this;
+    }
+
+    /**
+     * Gets discount_amount
+     *
+     * @return float|null
+     */
+    public function getDiscountAmount()
+    {
+        return $this->container['discount_amount'];
+    }
+
+    /**
+     * Sets discount_amount
+     *
+     * @param float|null $discount_amount Discount amount applied to the line item when supported downstream.
+     *
+     * @return self
+     */
+    public function setDiscountAmount($discount_amount)
+    {
+        $this->container['discount_amount'] = $discount_amount;
 
         return $this;
     }
@@ -726,30 +756,6 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ledger_account
-     *
-     * @return \Apideck\Client\Model\LinkedLedgerAccount|null
-     */
-    public function getLedgerAccount()
-    {
-        return $this->container['ledger_account'];
-    }
-
-    /**
-     * Sets ledger_account
-     *
-     * @param \Apideck\Client\Model\LinkedLedgerAccount|null $ledger_account ledger_account
-     *
-     * @return self
-     */
-    public function setLedgerAccount($ledger_account)
-    {
-        $this->container['ledger_account'] = $ledger_account;
-
-        return $this;
-    }
-
-    /**
      * Gets tax_rate
      *
      * @return \Apideck\Client\Model\LinkedTaxRate|null
@@ -769,6 +775,30 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTaxRate($tax_rate)
     {
         $this->container['tax_rate'] = $tax_rate;
+
+        return $this;
+    }
+
+    /**
+     * Gets ledger_account
+     *
+     * @return \Apideck\Client\Model\LinkedLedgerAccount|null
+     */
+    public function getLedgerAccount()
+    {
+        return $this->container['ledger_account'];
+    }
+
+    /**
+     * Sets ledger_account
+     *
+     * @param \Apideck\Client\Model\LinkedLedgerAccount|null $ledger_account ledger_account
+     *
+     * @return self
+     */
+    public function setLedgerAccount($ledger_account)
+    {
+        $this->container['ledger_account'] = $ledger_account;
 
         return $this;
     }
