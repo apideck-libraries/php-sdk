@@ -9,6 +9,8 @@
 
 * `HRIS_EMPLOYEE_UPDATED` (value: `'hris.employee.updated'`)
 
+* `HRIS_EMPLOYEE_TERMINATED` (value: `'hris.employee.terminated'`)
+
 * `HRIS_EMPLOYEE_DELETED` (value: `'hris.employee.deleted'`)
 
 * `HRIS_COMPANY_CREATED` (value: `'hris.company.created'`)

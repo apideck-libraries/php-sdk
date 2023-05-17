@@ -167,6 +167,7 @@ docs/Model/CustomerSupportCustomer.md
 docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
+docs/Model/DeleteApplicantResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCommentResponse.md
 docs/Model/DeleteCompanyResponse.md
@@ -464,6 +465,7 @@ docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
+docs/Model/PaymentsFilter.md
 docs/Model/Payroll.md
 docs/Model/PayrollTotals.md
 docs/Model/PayrollsFilter.md
@@ -526,6 +528,7 @@ docs/Model/UnifiedFile.md
 docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
 docs/Model/UpdateActivityResponse.md
+docs/Model/UpdateApplicantResponse.md
 docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCommentResponse.md
 docs/Model/UpdateCompanyResponse.md
@@ -756,6 +759,7 @@ lib/Model/CustomerSupportCustomer.php
 lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
+lib/Model/DeleteApplicantResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCommentResponse.php
 lib/Model/DeleteCompanyResponse.php
@@ -1054,6 +1058,7 @@ lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
+lib/Model/PaymentsFilter.php
 lib/Model/Payroll.php
 lib/Model/PayrollTotals.php
 lib/Model/PayrollsFilter.php
@@ -1116,6 +1121,7 @@ lib/Model/UnifiedFile.php
 lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
 lib/Model/UpdateActivityResponse.php
+lib/Model/UpdateApplicantResponse.php
 lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCommentResponse.php
 lib/Model/UpdateCompanyResponse.php
@@ -1342,6 +1348,7 @@ test/Model/CustomerSupportCustomerTest.php
 test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
+test/Model/DeleteApplicantResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCommentResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
@@ -1639,6 +1646,7 @@ test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
+test/Model/PaymentsFilterTest.php
 test/Model/PayrollTest.php
 test/Model/PayrollTotalsTest.php
 test/Model/PayrollsFilterTest.php
@@ -1701,6 +1709,7 @@ test/Model/UnifiedFileTest.php
 test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php
 test/Model/UpdateActivityResponseTest.php
+test/Model/UpdateApplicantResponseTest.php
 test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCommentResponseTest.php
 test/Model/UpdateCompanyResponseTest.php

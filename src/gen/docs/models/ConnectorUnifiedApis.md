@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | [**\Apideck\Client\Model\UnifiedApiId**](UnifiedApiId.md) |  | [optional] 
 `name` | **string** | Name of the API. | [optional] 
+`auth_only` | **bool** | Indicates whether a connector only supports authentication. In this case the connector is not mapped to a Unified API, but can be used with the Proxy API | [optional] 
 `oauth_scopes` | [**\Apideck\Client\Model\ConnectorOauthScopes1[]**](ConnectorOauthScopes1.md) |  | [optional] 
 `supported_resources` | [**\Apideck\Client\Model\LinkedConnectorResource[]**](LinkedConnectorResource.md) | List of resources that are supported on the connector. | [optional] 
 `downstream_unsupported_resources` | **string[]** | List of resources that are not supported on the downstream. | [optional] 
@@ -18,6 +19,7 @@ Name | Type | Description | Notes
 
 ## Referenced Types:
 * [`UnifiedApiId`](UnifiedApiId.md)
+
 
 * [`ConnectorOauthScopes1`](ConnectorOauthScopes1.md)
 * [`LinkedConnectorResource`](LinkedConnectorResource.md)
