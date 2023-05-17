@@ -173,6 +173,8 @@
 
 * `HRIS_EMPLOYEE_DELETED` (value: `'hris.employee.deleted'`)
 
+* `HRIS_EMPLOYEE_TERMINATED` (value: `'hris.employee.terminated'`)
+
 * `HRIS_COMPANY_CREATED` (value: `'hris.company.created'`)
 
 * `HRIS_COMPANY_UPDATED` (value: `'hris.company.updated'`)

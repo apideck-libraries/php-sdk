@@ -212,6 +212,8 @@ class WebhookEventType
 
     const HRIS_EMPLOYEE_DELETED = 'hris.employee.deleted';
 
+    const HRIS_EMPLOYEE_TERMINATED = 'hris.employee.terminated';
+
     const HRIS_COMPANY_CREATED = 'hris.company.created';
 
     const HRIS_COMPANY_UPDATED = 'hris.company.updated';
@@ -328,6 +330,7 @@ class WebhookEventType
             self::HRIS_EMPLOYEE_CREATED,
             self::HRIS_EMPLOYEE_UPDATED,
             self::HRIS_EMPLOYEE_DELETED,
+            self::HRIS_EMPLOYEE_TERMINATED,
             self::HRIS_COMPANY_CREATED,
             self::HRIS_COMPANY_UPDATED,
             self::HRIS_COMPANY_DELETED,

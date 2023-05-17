@@ -294,6 +294,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_HRIS_EMPLOYEE_CREATED = 'hris.employee.created';
     const EVENTS_HRIS_EMPLOYEE_UPDATED = 'hris.employee.updated';
     const EVENTS_HRIS_EMPLOYEE_DELETED = 'hris.employee.deleted';
+    const EVENTS_HRIS_EMPLOYEE_TERMINATED = 'hris.employee.terminated';
     const EVENTS_HRIS_COMPANY_CREATED = 'hris.company.created';
     const EVENTS_HRIS_COMPANY_UPDATED = 'hris.company.updated';
     const EVENTS_HRIS_COMPANY_DELETED = 'hris.company.deleted';
@@ -416,6 +417,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
             self::EVENTS_HRIS_EMPLOYEE_CREATED,
             self::EVENTS_HRIS_EMPLOYEE_UPDATED,
             self::EVENTS_HRIS_EMPLOYEE_DELETED,
+            self::EVENTS_HRIS_EMPLOYEE_TERMINATED,
             self::EVENTS_HRIS_COMPANY_CREATED,
             self::EVENTS_HRIS_COMPANY_UPDATED,
             self::EVENTS_HRIS_COMPANY_DELETED,
