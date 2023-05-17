@@ -41,6 +41,8 @@ docs/Model/Applicant.md
 docs/Model/ApplicantSocialLinks.md
 docs/Model/ApplicantWebsites.md
 docs/Model/ApplicantsFilter.md
+docs/Model/Application.md
+docs/Model/ApplicationStage.md
 docs/Model/Assignee.md
 docs/Model/AtsActivity.md
 docs/Model/AtsEventType.md
@@ -106,6 +108,7 @@ docs/Model/ContactsSort.md
 docs/Model/CopyFolderRequest.md
 docs/Model/CreateActivityResponse.md
 docs/Model/CreateApplicantResponse.md
+docs/Model/CreateApplicationResponse.md
 docs/Model/CreateBillResponse.md
 docs/Model/CreateCommentResponse.md
 docs/Model/CreateCompanyResponse.md
@@ -168,6 +171,7 @@ docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
+docs/Model/DeleteApplicationResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCommentResponse.md
 docs/Model/DeleteCompanyResponse.md
@@ -268,6 +272,8 @@ docs/Model/GetApiResponse.md
 docs/Model/GetApisResponse.md
 docs/Model/GetApplicantResponse.md
 docs/Model/GetApplicantsResponse.md
+docs/Model/GetApplicationResponse.md
+docs/Model/GetApplicationsResponse.md
 docs/Model/GetBalanceSheetResponse.md
 docs/Model/GetBillResponse.md
 docs/Model/GetBillsResponse.md
@@ -529,6 +535,7 @@ docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
 docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateApplicantResponse.md
+docs/Model/UpdateApplicationResponse.md
 docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCommentResponse.md
 docs/Model/UpdateCompanyResponse.md
@@ -633,6 +640,8 @@ lib/Model/Applicant.php
 lib/Model/ApplicantSocialLinks.php
 lib/Model/ApplicantWebsites.php
 lib/Model/ApplicantsFilter.php
+lib/Model/Application.php
+lib/Model/ApplicationStage.php
 lib/Model/Assignee.php
 lib/Model/AtsActivity.php
 lib/Model/AtsEventType.php
@@ -698,6 +707,7 @@ lib/Model/ContactsSort.php
 lib/Model/CopyFolderRequest.php
 lib/Model/CreateActivityResponse.php
 lib/Model/CreateApplicantResponse.php
+lib/Model/CreateApplicationResponse.php
 lib/Model/CreateBillResponse.php
 lib/Model/CreateCommentResponse.php
 lib/Model/CreateCompanyResponse.php
@@ -760,6 +770,7 @@ lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
+lib/Model/DeleteApplicationResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCommentResponse.php
 lib/Model/DeleteCompanyResponse.php
@@ -860,6 +871,8 @@ lib/Model/GetApiResponse.php
 lib/Model/GetApisResponse.php
 lib/Model/GetApplicantResponse.php
 lib/Model/GetApplicantsResponse.php
+lib/Model/GetApplicationResponse.php
+lib/Model/GetApplicationsResponse.php
 lib/Model/GetBalanceSheetResponse.php
 lib/Model/GetBillResponse.php
 lib/Model/GetBillsResponse.php
@@ -1122,6 +1135,7 @@ lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
 lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateApplicantResponse.php
+lib/Model/UpdateApplicationResponse.php
 lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCommentResponse.php
 lib/Model/UpdateCompanyResponse.php
@@ -1222,6 +1236,8 @@ test/Model/ApplicantSocialLinksTest.php
 test/Model/ApplicantTest.php
 test/Model/ApplicantWebsitesTest.php
 test/Model/ApplicantsFilterTest.php
+test/Model/ApplicationStageTest.php
+test/Model/ApplicationTest.php
 test/Model/AssigneeTest.php
 test/Model/AtsActivityTest.php
 test/Model/AtsEventTypeTest.php
@@ -1287,6 +1303,7 @@ test/Model/ContactsSortTest.php
 test/Model/CopyFolderRequestTest.php
 test/Model/CreateActivityResponseTest.php
 test/Model/CreateApplicantResponseTest.php
+test/Model/CreateApplicationResponseTest.php
 test/Model/CreateBillResponseTest.php
 test/Model/CreateCommentResponseTest.php
 test/Model/CreateCompanyResponseTest.php
@@ -1349,6 +1366,7 @@ test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
+test/Model/DeleteApplicationResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCommentResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
@@ -1449,6 +1467,8 @@ test/Model/GetApiResponseTest.php
 test/Model/GetApisResponseTest.php
 test/Model/GetApplicantResponseTest.php
 test/Model/GetApplicantsResponseTest.php
+test/Model/GetApplicationResponseTest.php
+test/Model/GetApplicationsResponseTest.php
 test/Model/GetBalanceSheetResponseTest.php
 test/Model/GetBillResponseTest.php
 test/Model/GetBillsResponseTest.php
@@ -1710,6 +1730,7 @@ test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php
 test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateApplicantResponseTest.php
+test/Model/UpdateApplicationResponseTest.php
 test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCommentResponseTest.php
 test/Model/UpdateCompanyResponseTest.php

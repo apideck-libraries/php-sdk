@@ -223,6 +223,12 @@ Name | Type | Description | Notes
 
 * `ISSUE_TRACKING_TICKET_DELETED` (value: `'issue-tracking.ticket.deleted'`)
 
+* `ATS_APPLICATION_CREATED` (value: `'ats.application.created'`)
+
+* `ATS_APPLICATION_UPDATED` (value: `'ats.application.updated'`)
+
+* `ATS_APPLICATION_DELETED` (value: `'ats.application.deleted'`)
+
 
 
 

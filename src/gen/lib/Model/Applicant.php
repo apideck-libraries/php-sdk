@@ -81,6 +81,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'stage_id' => 'string',
         'recruiter_id' => 'string',
         'coordinator_id' => 'string',
+        'application_ids' => 'string[]',
         'applications' => 'string[]',
         'followers' => 'string[]',
         'sources' => 'string[]',
@@ -134,6 +135,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'stage_id' => null,
         'recruiter_id' => null,
         'coordinator_id' => null,
+        'application_ids' => null,
         'applications' => null,
         'followers' => null,
         'sources' => null,
@@ -206,6 +208,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'stage_id' => 'stage_id',
         'recruiter_id' => 'recruiter_id',
         'coordinator_id' => 'coordinator_id',
+        'application_ids' => 'application_ids',
         'applications' => 'applications',
         'followers' => 'followers',
         'sources' => 'sources',
@@ -257,6 +260,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'stage_id' => 'setStageId',
         'recruiter_id' => 'setRecruiterId',
         'coordinator_id' => 'setCoordinatorId',
+        'application_ids' => 'setApplicationIds',
         'applications' => 'setApplications',
         'followers' => 'setFollowers',
         'sources' => 'setSources',
@@ -308,6 +312,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'stage_id' => 'getStageId',
         'recruiter_id' => 'getRecruiterId',
         'coordinator_id' => 'getCoordinatorId',
+        'application_ids' => 'getApplicationIds',
         'applications' => 'getApplications',
         'followers' => 'getFollowers',
         'sources' => 'getSources',
@@ -410,6 +415,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['stage_id'] = $data['stage_id'] ?? null;
         $this->container['recruiter_id'] = $data['recruiter_id'] ?? null;
         $this->container['coordinator_id'] = $data['coordinator_id'] ?? null;
+        $this->container['application_ids'] = $data['application_ids'] ?? null;
         $this->container['applications'] = $data['applications'] ?? null;
         $this->container['followers'] = $data['followers'] ?? null;
         $this->container['sources'] = $data['sources'] ?? null;
@@ -981,6 +987,30 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCoordinatorId($coordinator_id)
     {
         $this->container['coordinator_id'] = $coordinator_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets application_ids
+     *
+     * @return string[]|null
+     */
+    public function getApplicationIds()
+    {
+        return $this->container['application_ids'];
+    }
+
+    /**
+     * Sets application_ids
+     *
+     * @param string[]|null $application_ids application_ids
+     *
+     * @return self
+     */
+    public function setApplicationIds($application_ids)
+    {
+        $this->container['application_ids'] = $application_ids;
 
         return $this;
     }

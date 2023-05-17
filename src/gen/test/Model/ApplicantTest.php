@@ -278,6 +278,15 @@ class ApplicantTest extends TestCase
     }
 
     /**
+     * Test attribute "application_ids"
+     */
+    public function testPropertyApplicationIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "applications"
      */
     public function testPropertyApplications()

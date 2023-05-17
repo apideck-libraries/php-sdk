@@ -230,6 +230,12 @@ class WebhookEventType
 
     const ISSUE_TRACKING_TICKET_DELETED = 'issue-tracking.ticket.deleted';
 
+    const ATS_APPLICATION_CREATED = 'ats.application.created';
+
+    const ATS_APPLICATION_UPDATED = 'ats.application.updated';
+
+    const ATS_APPLICATION_DELETED = 'ats.application.deleted';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -330,7 +336,10 @@ class WebhookEventType
             self::FILE_STORAGE_FILE_DELETED,
             self::ISSUE_TRACKING_TICKET_CREATED,
             self::ISSUE_TRACKING_TICKET_UPDATED,
-            self::ISSUE_TRACKING_TICKET_DELETED
+            self::ISSUE_TRACKING_TICKET_DELETED,
+            self::ATS_APPLICATION_CREATED,
+            self::ATS_APPLICATION_UPDATED,
+            self::ATS_APPLICATION_DELETED
         ];
     }
 }

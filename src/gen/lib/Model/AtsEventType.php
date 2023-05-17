@@ -54,6 +54,12 @@ class AtsEventType
 
     const APPLICANT_DELETED = 'ats.applicant.deleted';
 
+    const APPLICATION_CREATED = 'ats.application.created';
+
+    const APPLICATION_UPDATED = 'ats.application.updated';
+
+    const APPLICATION_DELETED = 'ats.application.deleted';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -66,7 +72,10 @@ class AtsEventType
             self::JOB_DELETED,
             self::APPLICANT_CREATED,
             self::APPLICANT_UPDATED,
-            self::APPLICANT_DELETED
+            self::APPLICANT_DELETED,
+            self::APPLICATION_CREATED,
+            self::APPLICATION_UPDATED,
+            self::APPLICATION_DELETED
         ];
     }
 }

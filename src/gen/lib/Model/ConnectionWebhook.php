@@ -303,6 +303,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_ISSUE_TRACKING_TICKET_CREATED = 'issue-tracking.ticket.created';
     const EVENTS_ISSUE_TRACKING_TICKET_UPDATED = 'issue-tracking.ticket.updated';
     const EVENTS_ISSUE_TRACKING_TICKET_DELETED = 'issue-tracking.ticket.deleted';
+    const EVENTS_ATS_APPLICATION_CREATED = 'ats.application.created';
+    const EVENTS_ATS_APPLICATION_UPDATED = 'ats.application.updated';
+    const EVENTS_ATS_APPLICATION_DELETED = 'ats.application.deleted';
     const DISABLED_REASON_NONE = 'none';
     const DISABLED_REASON_RETRY_LIMIT = 'retry_limit';
     const DISABLED_REASON_USAGE_LIMIT = 'usage_limit';
@@ -422,6 +425,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
             self::EVENTS_ISSUE_TRACKING_TICKET_CREATED,
             self::EVENTS_ISSUE_TRACKING_TICKET_UPDATED,
             self::EVENTS_ISSUE_TRACKING_TICKET_DELETED,
+            self::EVENTS_ATS_APPLICATION_CREATED,
+            self::EVENTS_ATS_APPLICATION_UPDATED,
+            self::EVENTS_ATS_APPLICATION_DELETED,
         ];
     }
 
