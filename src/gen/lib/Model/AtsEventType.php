@@ -42,23 +42,25 @@ class AtsEventType
     /**
      * Possible values of this enum
      */
-    const JOB_CREATED = 'ats.job.created';
+    const STAR = '*';
 
-    const JOB_UPDATED = 'ats.job.updated';
+    const ATS_JOB_CREATED = 'ats.job.created';
 
-    const JOB_DELETED = 'ats.job.deleted';
+    const ATS_JOB_UPDATED = 'ats.job.updated';
 
-    const APPLICANT_CREATED = 'ats.applicant.created';
+    const ATS_JOB_DELETED = 'ats.job.deleted';
 
-    const APPLICANT_UPDATED = 'ats.applicant.updated';
+    const ATS_APPLICANT_CREATED = 'ats.applicant.created';
 
-    const APPLICANT_DELETED = 'ats.applicant.deleted';
+    const ATS_APPLICANT_UPDATED = 'ats.applicant.updated';
 
-    const APPLICATION_CREATED = 'ats.application.created';
+    const ATS_APPLICANT_DELETED = 'ats.applicant.deleted';
 
-    const APPLICATION_UPDATED = 'ats.application.updated';
+    const ATS_APPLICATION_CREATED = 'ats.application.created';
 
-    const APPLICATION_DELETED = 'ats.application.deleted';
+    const ATS_APPLICATION_UPDATED = 'ats.application.updated';
+
+    const ATS_APPLICATION_DELETED = 'ats.application.deleted';
 
     /**
      * Gets allowable values of the enum
@@ -67,15 +69,16 @@ class AtsEventType
     public static function getAllowableEnumValues()
     {
         return [
-            self::JOB_CREATED,
-            self::JOB_UPDATED,
-            self::JOB_DELETED,
-            self::APPLICANT_CREATED,
-            self::APPLICANT_UPDATED,
-            self::APPLICANT_DELETED,
-            self::APPLICATION_CREATED,
-            self::APPLICATION_UPDATED,
-            self::APPLICATION_DELETED
+            self::STAR,
+            self::ATS_JOB_CREATED,
+            self::ATS_JOB_UPDATED,
+            self::ATS_JOB_DELETED,
+            self::ATS_APPLICANT_CREATED,
+            self::ATS_APPLICANT_UPDATED,
+            self::ATS_APPLICANT_DELETED,
+            self::ATS_APPLICATION_CREATED,
+            self::ATS_APPLICATION_UPDATED,
+            self::ATS_APPLICATION_DELETED
         ];
     }
 }

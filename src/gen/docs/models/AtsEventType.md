@@ -3,23 +3,25 @@
 ## Enum
 
 
-* `JOB_CREATED` (value: `'ats.job.created'`)
+* `STAR` (value: `'*'`)
 
-* `JOB_UPDATED` (value: `'ats.job.updated'`)
+* `ATS_JOB_CREATED` (value: `'ats.job.created'`)
 
-* `JOB_DELETED` (value: `'ats.job.deleted'`)
+* `ATS_JOB_UPDATED` (value: `'ats.job.updated'`)
 
-* `APPLICANT_CREATED` (value: `'ats.applicant.created'`)
+* `ATS_JOB_DELETED` (value: `'ats.job.deleted'`)
 
-* `APPLICANT_UPDATED` (value: `'ats.applicant.updated'`)
+* `ATS_APPLICANT_CREATED` (value: `'ats.applicant.created'`)
 
-* `APPLICANT_DELETED` (value: `'ats.applicant.deleted'`)
+* `ATS_APPLICANT_UPDATED` (value: `'ats.applicant.updated'`)
 
-* `APPLICATION_CREATED` (value: `'ats.application.created'`)
+* `ATS_APPLICANT_DELETED` (value: `'ats.applicant.deleted'`)
 
-* `APPLICATION_UPDATED` (value: `'ats.application.updated'`)
+* `ATS_APPLICATION_CREATED` (value: `'ats.application.created'`)
 
-* `APPLICATION_DELETED` (value: `'ats.application.deleted'`)
+* `ATS_APPLICATION_UPDATED` (value: `'ats.application.updated'`)
+
+* `ATS_APPLICATION_DELETED` (value: `'ats.application.deleted'`)
 
 
 ---
