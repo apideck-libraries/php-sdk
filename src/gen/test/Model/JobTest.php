@@ -170,6 +170,15 @@ class JobTest extends TestCase
     }
 
     /**
+     * Test attribute "location"
+     */
+    public function testPropertyLocation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "remote"
      */
     public function testPropertyRemote()
@@ -344,6 +353,15 @@ class JobTest extends TestCase
      * Test attribute "addresses"
      */
     public function testPropertyAddresses()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

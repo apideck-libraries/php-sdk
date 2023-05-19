@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 `language` | **string** | language code according to ISO 639-1. For the United States - EN | [optional] 
 `employment_terms` | **string** |  | [optional] 
 `experience` | **string** | Level of experience required for the job role. | [optional] 
+`location` | **string** | Specifies the location for the job posting. | [optional] 
 `remote` | **bool** | Specifies whether the posting is for a remote job. | [optional] 
 `requisition_id` | **string** | A job's Requisition ID (Req ID) allows your organization to identify and track a job based on alphanumeric naming conventions unique to your company's internal processes. | [optional] 
 `department` | [**\Apideck\Client\Model\Department**](Department.md) |  | [optional] 
@@ -35,6 +36,7 @@ Name | Type | Description | Notes
 `available_to_employees` | **bool** | Specifies whether an employee of the organization can apply for the job. | [optional] 
 `tags` | **string[]** |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
+`custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `record_url` | **string** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
 `owner_id` | **string** |  | [optional] 
@@ -99,6 +101,7 @@ Name | Type | Description | Notes
 
 
 
+
 * [`Department`](Department.md)
 * [`Branch`](Branch.md)
 
@@ -117,6 +120,7 @@ Name | Type | Description | Notes
 
 
 * [`Address`](Address.md)
+* [`CustomField`](CustomField.md)
 
 
 

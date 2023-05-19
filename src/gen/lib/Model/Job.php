@@ -69,6 +69,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'string',
         'employment_terms' => 'string',
         'experience' => 'string',
+        'location' => 'string',
         'remote' => 'bool',
         'requisition_id' => 'string',
         'department' => '\Apideck\Client\Model\Department',
@@ -89,6 +90,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'available_to_employees' => 'bool',
         'tags' => 'string[]',
         'addresses' => '\Apideck\Client\Model\Address[]',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'record_url' => 'string',
         'deleted' => 'bool',
         'owner_id' => 'string',
@@ -117,6 +119,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => null,
         'employment_terms' => null,
         'experience' => null,
+        'location' => null,
         'remote' => null,
         'requisition_id' => null,
         'department' => null,
@@ -137,6 +140,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'available_to_employees' => null,
         'tags' => null,
         'addresses' => null,
+        'custom_fields' => null,
         'record_url' => null,
         'deleted' => null,
         'owner_id' => null,
@@ -184,6 +188,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'language',
         'employment_terms' => 'employment_terms',
         'experience' => 'experience',
+        'location' => 'location',
         'remote' => 'remote',
         'requisition_id' => 'requisition_id',
         'department' => 'department',
@@ -204,6 +209,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'available_to_employees' => 'available_to_employees',
         'tags' => 'tags',
         'addresses' => 'addresses',
+        'custom_fields' => 'custom_fields',
         'record_url' => 'record_url',
         'deleted' => 'deleted',
         'owner_id' => 'owner_id',
@@ -230,6 +236,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'setLanguage',
         'employment_terms' => 'setEmploymentTerms',
         'experience' => 'setExperience',
+        'location' => 'setLocation',
         'remote' => 'setRemote',
         'requisition_id' => 'setRequisitionId',
         'department' => 'setDepartment',
@@ -250,6 +257,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'available_to_employees' => 'setAvailableToEmployees',
         'tags' => 'setTags',
         'addresses' => 'setAddresses',
+        'custom_fields' => 'setCustomFields',
         'record_url' => 'setRecordUrl',
         'deleted' => 'setDeleted',
         'owner_id' => 'setOwnerId',
@@ -276,6 +284,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'getLanguage',
         'employment_terms' => 'getEmploymentTerms',
         'experience' => 'getExperience',
+        'location' => 'getLocation',
         'remote' => 'getRemote',
         'requisition_id' => 'getRequisitionId',
         'department' => 'getDepartment',
@@ -296,6 +305,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'available_to_employees' => 'getAvailableToEmployees',
         'tags' => 'getTags',
         'addresses' => 'getAddresses',
+        'custom_fields' => 'getCustomFields',
         'record_url' => 'getRecordUrl',
         'deleted' => 'getDeleted',
         'owner_id' => 'getOwnerId',
@@ -419,6 +429,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['language'] = $data['language'] ?? null;
         $this->container['employment_terms'] = $data['employment_terms'] ?? null;
         $this->container['experience'] = $data['experience'] ?? null;
+        $this->container['location'] = $data['location'] ?? null;
         $this->container['remote'] = $data['remote'] ?? null;
         $this->container['requisition_id'] = $data['requisition_id'] ?? null;
         $this->container['department'] = $data['department'] ?? null;
@@ -439,6 +450,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['available_to_employees'] = $data['available_to_employees'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['record_url'] = $data['record_url'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['owner_id'] = $data['owner_id'] ?? null;
@@ -747,6 +759,30 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setExperience($experience)
     {
         $this->container['experience'] = $experience;
+
+        return $this;
+    }
+
+    /**
+     * Gets location
+     *
+     * @return string|null
+     */
+    public function getLocation()
+    {
+        return $this->container['location'];
+    }
+
+    /**
+     * Sets location
+     *
+     * @param string|null $location Specifies the location for the job posting.
+     *
+     * @return self
+     */
+    public function setLocation($location)
+    {
+        $this->container['location'] = $location;
 
         return $this;
     }
@@ -1227,6 +1263,30 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAddresses($addresses)
     {
         $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }
