@@ -19776,6 +19776,2236 @@ class AccountingApi
     }
 
     /**
+     * Operation purchaseOrdersAdd
+     *
+     * Create Purchase Order
+     *
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order purchase_order (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\CreatePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function purchaseOrdersAdd($purchase_order, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    {
+        list($response) = $this->purchaseOrdersAddWithHttpInfo($purchase_order, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        return $response;
+    }
+
+    /**
+     * Operation purchaseOrdersAddWithHttpInfo
+     *
+     * Create Purchase Order
+     *
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\CreatePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purchaseOrdersAddWithHttpInfo($purchase_order, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    {
+        $request = $this->purchaseOrdersAddRequest($purchase_order, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 201:
+                    if ('\Apideck\Client\Model\CreatePurchaseOrderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\CreatePurchaseOrderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\CreatePurchaseOrderResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\CreatePurchaseOrderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation purchaseOrdersAddAsync
+     *
+     * Create Purchase Order
+     *
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersAddAsync($purchase_order, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    {
+        return $this->purchaseOrdersAddAsyncWithHttpInfo($purchase_order, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation purchaseOrdersAddAsyncWithHttpInfo
+     *
+     * Create Purchase Order
+     *
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersAddAsyncWithHttpInfo($purchase_order, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    {
+        $returnType = '\Apideck\Client\Model\CreatePurchaseOrderResponse';
+        $request = $this->purchaseOrdersAddRequest($purchase_order, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'purchaseOrdersAdd'
+     *
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function purchaseOrdersAddRequest($purchase_order, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    {
+        // verify the required parameter 'purchase_order' is set
+        if ($purchase_order === null || (is_array($purchase_order) && count($purchase_order) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $purchase_order when calling purchaseOrdersAdd'
+            );
+        }
+
+        $resourcePath = '/accounting/purchase-orders';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($raw !== null) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($purchase_order)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($purchase_order));
+            } else {
+                $httpBody = $purchase_order;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation purchaseOrdersAll
+     *
+     * List Purchase Orders
+     *
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\GetPurchaseOrdersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function purchaseOrdersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    {
+        list($response) = $this->purchaseOrdersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+        return $response;
+    }
+
+    /**
+     * Operation purchaseOrdersAllWithHttpInfo
+     *
+     * List Purchase Orders
+     *
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\GetPurchaseOrdersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purchaseOrdersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    {
+        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\GetPurchaseOrdersResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetPurchaseOrdersResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\GetPurchaseOrdersResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\GetPurchaseOrdersResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation purchaseOrdersAllAsync
+     *
+     * List Purchase Orders
+     *
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    {
+        return $this->purchaseOrdersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation purchaseOrdersAllAsyncWithHttpInfo
+     *
+     * List Purchase Orders
+     *
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    {
+        $returnType = '\Apideck\Client\Model\GetPurchaseOrdersResponse';
+        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'purchaseOrdersAll'
+     *
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function purchaseOrdersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20)
+    {
+        if ($limit !== null && $limit > 200) {
+            throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.purchaseOrdersAll, must be smaller than or equal to 200.');
+        }
+        if ($limit !== null && $limit < 1) {
+            throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.purchaseOrdersAll, must be bigger than or equal to 1.');
+        }
+
+
+        $resourcePath = '/accounting/purchase-orders';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($raw !== null) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+        // query params
+        if ($cursor !== null) {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor;
+            }
+        }
+        // query params
+        if ($limit !== null) {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation purchaseOrdersDelete
+     *
+     * Delete Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\DeletePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function purchaseOrdersDelete($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        list($response) = $this->purchaseOrdersDeleteWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        return $response;
+    }
+
+    /**
+     * Operation purchaseOrdersDeleteWithHttpInfo
+     *
+     * Delete Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\DeletePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purchaseOrdersDeleteWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $request = $this->purchaseOrdersDeleteRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\DeletePurchaseOrderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\DeletePurchaseOrderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\DeletePurchaseOrderResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\DeletePurchaseOrderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation purchaseOrdersDeleteAsync
+     *
+     * Delete Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersDeleteAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        return $this->purchaseOrdersDeleteAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation purchaseOrdersDeleteAsyncWithHttpInfo
+     *
+     * Delete Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersDeleteAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $returnType = '\Apideck\Client\Model\DeletePurchaseOrderResponse';
+        $request = $this->purchaseOrdersDeleteRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'purchaseOrdersDelete'
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function purchaseOrdersDeleteRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling purchaseOrdersDelete'
+            );
+        }
+
+        $resourcePath = '/accounting/purchase-orders/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($raw !== null) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation purchaseOrdersOne
+     *
+     * Get Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\GetPurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function purchaseOrdersOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        list($response) = $this->purchaseOrdersOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        return $response;
+    }
+
+    /**
+     * Operation purchaseOrdersOneWithHttpInfo
+     *
+     * Get Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\GetPurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purchaseOrdersOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $request = $this->purchaseOrdersOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\GetPurchaseOrderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetPurchaseOrderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\GetPurchaseOrderResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\GetPurchaseOrderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation purchaseOrdersOneAsync
+     *
+     * Get Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        return $this->purchaseOrdersOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation purchaseOrdersOneAsyncWithHttpInfo
+     *
+     * Get Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $returnType = '\Apideck\Client\Model\GetPurchaseOrderResponse';
+        $request = $this->purchaseOrdersOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'purchaseOrdersOne'
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function purchaseOrdersOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling purchaseOrdersOne'
+            );
+        }
+
+        $resourcePath = '/accounting/purchase-orders/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($raw !== null) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation purchaseOrdersUpdate
+     *
+     * Update Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order purchase_order (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\UpdatePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function purchaseOrdersUpdate($id, $purchase_order, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        list($response) = $this->purchaseOrdersUpdateWithHttpInfo($id, $purchase_order, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        return $response;
+    }
+
+    /**
+     * Operation purchaseOrdersUpdateWithHttpInfo
+     *
+     * Update Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\UpdatePurchaseOrderResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purchaseOrdersUpdateWithHttpInfo($id, $purchase_order, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $request = $this->purchaseOrdersUpdateRequest($id, $purchase_order, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\UpdatePurchaseOrderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UpdatePurchaseOrderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\UpdatePurchaseOrderResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UpdatePurchaseOrderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation purchaseOrdersUpdateAsync
+     *
+     * Update Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersUpdateAsync($id, $purchase_order, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        return $this->purchaseOrdersUpdateAsyncWithHttpInfo($id, $purchase_order, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation purchaseOrdersUpdateAsyncWithHttpInfo
+     *
+     * Update Purchase Order
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function purchaseOrdersUpdateAsyncWithHttpInfo($id, $purchase_order, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $returnType = '\Apideck\Client\Model\UpdatePurchaseOrderResponse';
+        $request = $this->purchaseOrdersUpdateRequest($id, $purchase_order, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'purchaseOrdersUpdate'
+     *
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  \Apideck\Client\Model\PurchaseOrder $purchase_order (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function purchaseOrdersUpdateRequest($id, $purchase_order, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling purchaseOrdersUpdate'
+            );
+        }
+        // verify the required parameter 'purchase_order' is set
+        if ($purchase_order === null || (is_array($purchase_order) && count($purchase_order) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $purchase_order when calling purchaseOrdersUpdate'
+            );
+        }
+
+        $resourcePath = '/accounting/purchase-orders/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($raw !== null) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($purchase_order)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($purchase_order));
+            } else {
+                $httpBody = $purchase_order;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'PATCH',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation suppliersAdd
      *
      * Create Supplier

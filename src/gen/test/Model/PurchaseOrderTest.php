@@ -1,6 +1,6 @@
 <?php
 /**
- * AddressTest
+ * PurchaseOrderTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AddressTest Class Doc Comment
+ * PurchaseOrderTest Class Doc Comment
  *
  * @category    Class
- * @description Address
+ * @description PurchaseOrder
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AddressTest extends TestCase
+class PurchaseOrderTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class AddressTest extends TestCase
     }
 
     /**
-     * Test "Address"
+     * Test "PurchaseOrder"
      */
-    public function testAddress()
+    public function testPurchaseOrder()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,198 +89,162 @@ class AddressTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "downstream_id"
      */
-    public function testPropertyType()
+    public function testPropertyDownstreamId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "string"
+     * Test attribute "po_number"
      */
-    public function testPropertyString()
+    public function testPropertyPoNumber()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "reference"
      */
-    public function testPropertyName()
+    public function testPropertyReference()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "supplier"
      */
-    public function testPropertyLine1()
+    public function testPropertySupplier()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line2"
+     * Test attribute "status"
      */
-    public function testPropertyLine2()
+    public function testPropertyStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line3"
+     * Test attribute "issued_date"
      */
-    public function testPropertyLine3()
+    public function testPropertyIssuedDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line4"
+     * Test attribute "delivery_date"
      */
-    public function testPropertyLine4()
+    public function testPropertyDeliveryDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "street_number"
+     * Test attribute "expected_arrival_date"
      */
-    public function testPropertyStreetNumber()
+    public function testPropertyExpectedArrivalDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "currency"
      */
-    public function testPropertyCity()
+    public function testPropertyCurrency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "currency_rate"
      */
-    public function testPropertyState()
+    public function testPropertyCurrencyRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "postal_code"
+     * Test attribute "sub_total"
      */
-    public function testPropertyPostalCode()
+    public function testPropertySubTotal()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "total_tax"
      */
-    public function testPropertyCountry()
+    public function testPropertyTotalTax()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "latitude"
+     * Test attribute "total"
      */
-    public function testPropertyLatitude()
+    public function testPropertyTotal()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "longitude"
+     * Test attribute "tax_inclusive"
      */
-    public function testPropertyLongitude()
+    public function testPropertyTaxInclusive()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "county"
+     * Test attribute "line_items"
      */
-    public function testPropertyCounty()
+    public function testPropertyLineItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "contact_name"
+     * Test attribute "shipping_address"
      */
-    public function testPropertyContactName()
+    public function testPropertyShippingAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "salutation"
+     * Test attribute "ledger_account"
      */
-    public function testPropertySalutation()
+    public function testPropertyLedgerAccount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "phone_number"
+     * Test attribute "template_id"
      */
-    public function testPropertyPhoneNumber()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "fax"
-     */
-    public function testPropertyFax()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "website"
-     */
-    public function testPropertyWebsite()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
+    public function testPropertyTemplateId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -290,6 +254,42 @@ class AddressTest extends TestCase
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

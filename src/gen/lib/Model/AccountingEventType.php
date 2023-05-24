@@ -92,6 +92,12 @@ class AccountingEventType
 
     const ACCOUNTING_SUPPLIER_DELETED = 'accounting.supplier.deleted';
 
+    const ACCOUNTING_PURCHASE_ORDER_CREATED = 'accounting.purchase-order.created';
+
+    const ACCOUNTING_PURCHASE_ORDER_UPDATED = 'accounting.purchase-order.updated';
+
+    const ACCOUNTING_PURCHASE_ORDER_DELETED = 'accounting.purchase-order.deleted';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -123,7 +129,10 @@ class AccountingEventType
             self::ACCOUNTING_PAYMENT_DELETED,
             self::ACCOUNTING_SUPPLIER_CREATED,
             self::ACCOUNTING_SUPPLIER_UPDATED,
-            self::ACCOUNTING_SUPPLIER_DELETED
+            self::ACCOUNTING_SUPPLIER_DELETED,
+            self::ACCOUNTING_PURCHASE_ORDER_CREATED,
+            self::ACCOUNTING_PURCHASE_ORDER_UPDATED,
+            self::ACCOUNTING_PURCHASE_ORDER_DELETED
         ];
     }
 }

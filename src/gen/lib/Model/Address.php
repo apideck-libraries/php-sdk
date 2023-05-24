@@ -81,6 +81,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'fax' => 'string',
         'email' => 'string',
         'website' => 'string',
+        'notes' => 'string',
         'row_version' => 'string'
     ];
 
@@ -114,6 +115,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'fax' => null,
         'email' => null,
         'website' => null,
+        'notes' => null,
         'row_version' => null
     ];
 
@@ -166,6 +168,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'fax' => 'fax',
         'email' => 'email',
         'website' => 'website',
+        'notes' => 'notes',
         'row_version' => 'row_version'
     ];
 
@@ -197,6 +200,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'fax' => 'setFax',
         'email' => 'setEmail',
         'website' => 'setWebsite',
+        'notes' => 'setNotes',
         'row_version' => 'setRowVersion'
     ];
 
@@ -228,6 +232,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'fax' => 'getFax',
         'email' => 'getEmail',
         'website' => 'getWebsite',
+        'notes' => 'getNotes',
         'row_version' => 'getRowVersion'
     ];
 
@@ -335,6 +340,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['fax'] = $data['fax'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
         $this->container['website'] = $data['website'] ?? null;
+        $this->container['notes'] = $data['notes'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
     }
 
@@ -905,6 +911,30 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setWebsite($website)
     {
         $this->container['website'] = $website;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     *
+     * @return string|null
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     *
+     * @param string|null $notes notes
+     *
+     * @return self
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }

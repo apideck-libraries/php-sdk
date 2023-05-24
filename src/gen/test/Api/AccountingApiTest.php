@@ -588,6 +588,66 @@ class AccountingApiTest extends TestCase
     }
 
     /**
+     * Test case for purchaseOrdersAdd
+     *
+     * Create Purchase Order.
+     *
+     */
+    public function testPurchaseOrdersAdd()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for purchaseOrdersAll
+     *
+     * List Purchase Orders.
+     *
+     */
+    public function testPurchaseOrdersAll()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for purchaseOrdersDelete
+     *
+     * Delete Purchase Order.
+     *
+     */
+    public function testPurchaseOrdersDelete()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for purchaseOrdersOne
+     *
+     * Get Purchase Order.
+     *
+     */
+    public function testPurchaseOrdersOne()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for purchaseOrdersUpdate
+     *
+     * Update Purchase Order.
+     *
+     */
+    public function testPurchaseOrdersUpdate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for suppliersAdd
      *
      * Create Supplier.

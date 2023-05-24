@@ -267,6 +267,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_ACCOUNTING_SUPPLIER_CREATED = 'accounting.supplier.created';
     const EVENTS_ACCOUNTING_SUPPLIER_UPDATED = 'accounting.supplier.updated';
     const EVENTS_ACCOUNTING_SUPPLIER_DELETED = 'accounting.supplier.deleted';
+    const EVENTS_ACCOUNTING_PURCHASE_ORDER_CREATED = 'accounting.purchase-order.created';
+    const EVENTS_ACCOUNTING_PURCHASE_ORDER_UPDATED = 'accounting.purchase-order.updated';
+    const EVENTS_ACCOUNTING_PURCHASE_ORDER_DELETED = 'accounting.purchase-order.deleted';
     const EVENTS_POS_ORDER_CREATED = 'pos.order.created';
     const EVENTS_POS_ORDER_UPDATED = 'pos.order.updated';
     const EVENTS_POS_ORDER_DELETED = 'pos.order.deleted';
@@ -390,6 +393,9 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
             self::EVENTS_ACCOUNTING_SUPPLIER_CREATED,
             self::EVENTS_ACCOUNTING_SUPPLIER_UPDATED,
             self::EVENTS_ACCOUNTING_SUPPLIER_DELETED,
+            self::EVENTS_ACCOUNTING_PURCHASE_ORDER_CREATED,
+            self::EVENTS_ACCOUNTING_PURCHASE_ORDER_UPDATED,
+            self::EVENTS_ACCOUNTING_PURCHASE_ORDER_DELETED,
             self::EVENTS_POS_ORDER_CREATED,
             self::EVENTS_POS_ORDER_UPDATED,
             self::EVENTS_POS_ORDER_DELETED,

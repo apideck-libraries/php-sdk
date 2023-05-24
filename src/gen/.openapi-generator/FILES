@@ -147,6 +147,7 @@ docs/Model/CreatePaymentResponse.md
 docs/Model/CreatePipelineResponse.md
 docs/Model/CreatePosPaymentResponse.md
 docs/Model/CreateProductResponse.md
+docs/Model/CreatePurchaseOrderResponse.md
 docs/Model/CreateSessionResponse.md
 docs/Model/CreateSessionResponseData.md
 docs/Model/CreateSharedLinkResponse.md
@@ -204,6 +205,7 @@ docs/Model/DeletePaymentResponse.md
 docs/Model/DeletePipelineResponse.md
 docs/Model/DeletePosPaymentResponse.md
 docs/Model/DeleteProductResponse.md
+docs/Model/DeletePurchaseOrderResponse.md
 docs/Model/DeleteSharedLinkResponse.md
 docs/Model/DeleteSupplierResponse.md
 docs/Model/DeleteTaxRateResponse.md
@@ -364,6 +366,8 @@ docs/Model/GetPosPaymentsResponse.md
 docs/Model/GetProductResponse.md
 docs/Model/GetProductsResponse.md
 docs/Model/GetProfitAndLossResponse.md
+docs/Model/GetPurchaseOrderResponse.md
+docs/Model/GetPurchaseOrdersResponse.md
 docs/Model/GetSharedLinkResponse.md
 docs/Model/GetSharedLinksResponse.md
 docs/Model/GetStoreResponse.md
@@ -488,6 +492,7 @@ docs/Model/ProfitAndLossNetIncome.md
 docs/Model/ProfitAndLossNetOperatingIncome.md
 docs/Model/ProfitAndLossRecord.md
 docs/Model/ProfitAndLossSection.md
+docs/Model/PurchaseOrder.md
 docs/Model/RequestCountAllocation.md
 docs/Model/RequestRate.md
 docs/Model/ResolveWebhookResponse.md
@@ -570,6 +575,7 @@ docs/Model/UpdatePaymentResponse.md
 docs/Model/UpdatePipelineResponse.md
 docs/Model/UpdatePosPaymentResponse.md
 docs/Model/UpdateProductResponse.md
+docs/Model/UpdatePurchaseOrderResponse.md
 docs/Model/UpdateSharedLinkResponse.md
 docs/Model/UpdateSupplierResponse.md
 docs/Model/UpdateTaxRateResponse.md
@@ -739,6 +745,7 @@ lib/Model/CreatePaymentResponse.php
 lib/Model/CreatePipelineResponse.php
 lib/Model/CreatePosPaymentResponse.php
 lib/Model/CreateProductResponse.php
+lib/Model/CreatePurchaseOrderResponse.php
 lib/Model/CreateSessionResponse.php
 lib/Model/CreateSessionResponseData.php
 lib/Model/CreateSharedLinkResponse.php
@@ -796,6 +803,7 @@ lib/Model/DeletePaymentResponse.php
 lib/Model/DeletePipelineResponse.php
 lib/Model/DeletePosPaymentResponse.php
 lib/Model/DeleteProductResponse.php
+lib/Model/DeletePurchaseOrderResponse.php
 lib/Model/DeleteSharedLinkResponse.php
 lib/Model/DeleteSupplierResponse.php
 lib/Model/DeleteTaxRateResponse.php
@@ -956,6 +964,8 @@ lib/Model/GetPosPaymentsResponse.php
 lib/Model/GetProductResponse.php
 lib/Model/GetProductsResponse.php
 lib/Model/GetProfitAndLossResponse.php
+lib/Model/GetPurchaseOrderResponse.php
+lib/Model/GetPurchaseOrdersResponse.php
 lib/Model/GetSharedLinkResponse.php
 lib/Model/GetSharedLinksResponse.php
 lib/Model/GetStoreResponse.php
@@ -1081,6 +1091,7 @@ lib/Model/ProfitAndLossNetIncome.php
 lib/Model/ProfitAndLossNetOperatingIncome.php
 lib/Model/ProfitAndLossRecord.php
 lib/Model/ProfitAndLossSection.php
+lib/Model/PurchaseOrder.php
 lib/Model/RequestCountAllocation.php
 lib/Model/RequestRate.php
 lib/Model/ResolveWebhookResponse.php
@@ -1163,6 +1174,7 @@ lib/Model/UpdatePaymentResponse.php
 lib/Model/UpdatePipelineResponse.php
 lib/Model/UpdatePosPaymentResponse.php
 lib/Model/UpdateProductResponse.php
+lib/Model/UpdatePurchaseOrderResponse.php
 lib/Model/UpdateSharedLinkResponse.php
 lib/Model/UpdateSupplierResponse.php
 lib/Model/UpdateTaxRateResponse.php
@@ -1328,6 +1340,7 @@ test/Model/CreatePaymentResponseTest.php
 test/Model/CreatePipelineResponseTest.php
 test/Model/CreatePosPaymentResponseTest.php
 test/Model/CreateProductResponseTest.php
+test/Model/CreatePurchaseOrderResponseTest.php
 test/Model/CreateSessionResponseDataTest.php
 test/Model/CreateSessionResponseTest.php
 test/Model/CreateSharedLinkResponseTest.php
@@ -1385,6 +1398,7 @@ test/Model/DeletePaymentResponseTest.php
 test/Model/DeletePipelineResponseTest.php
 test/Model/DeletePosPaymentResponseTest.php
 test/Model/DeleteProductResponseTest.php
+test/Model/DeletePurchaseOrderResponseTest.php
 test/Model/DeleteSharedLinkResponseTest.php
 test/Model/DeleteSupplierResponseTest.php
 test/Model/DeleteTaxRateResponseTest.php
@@ -1545,6 +1559,8 @@ test/Model/GetPosPaymentsResponseTest.php
 test/Model/GetProductResponseTest.php
 test/Model/GetProductsResponseTest.php
 test/Model/GetProfitAndLossResponseTest.php
+test/Model/GetPurchaseOrderResponseTest.php
+test/Model/GetPurchaseOrdersResponseTest.php
 test/Model/GetSharedLinkResponseTest.php
 test/Model/GetSharedLinksResponseTest.php
 test/Model/GetStoreResponseTest.php
@@ -1669,6 +1685,7 @@ test/Model/ProfitAndLossNetOperatingIncomeTest.php
 test/Model/ProfitAndLossRecordTest.php
 test/Model/ProfitAndLossSectionTest.php
 test/Model/ProfitAndLossTest.php
+test/Model/PurchaseOrderTest.php
 test/Model/RequestCountAllocationTest.php
 test/Model/RequestRateTest.php
 test/Model/ResolveWebhookResponseTest.php
@@ -1751,6 +1768,7 @@ test/Model/UpdatePaymentResponseTest.php
 test/Model/UpdatePipelineResponseTest.php
 test/Model/UpdatePosPaymentResponseTest.php
 test/Model/UpdateProductResponseTest.php
+test/Model/UpdatePurchaseOrderResponseTest.php
 test/Model/UpdateSharedLinkResponseTest.php
 test/Model/UpdateSupplierResponseTest.php
 test/Model/UpdateTaxRateResponseTest.php
