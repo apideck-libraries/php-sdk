@@ -5,22 +5,22 @@
 
 ## Methods
 
-* [List Customers](#customersAll2)
-* [Get Customer](#customersOne2)
+* [List Customers](#customersAll)
+* [Get Customer](#customersOne)
 * [List Orders](#ordersAll)
 * [Get Order](#ordersOne)
 * [List Products](#productsAll)
 * [Get Product](#productsOne)
 * [Get Store](#storesOne)
 
-<a name="customersAll2"></a>
+<a name="customersAll"></a>
 # List Customers
 
 
-Method: **customersAll2**
+Method: **customersAll**
 
 ```php
-Apideck->getEcommerceApi()->customersAll2($data)
+Apideck->getEcommerceApi()->customersAll($data)
 ```
 
 ### Parameters
@@ -71,7 +71,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getEcommerceApi()->customersAll2();
+  $response = $apideck->getEcommerceApi()->customersAll();
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -82,14 +82,14 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
-<a name="customersOne2"></a>
+<a name="customersOne"></a>
 # Get Customer
 
 
-Method: **customersOne2**
+Method: **customersOne**
 
 ```php
-Apideck->getEcommerceApi()->customersOne2($data)
+Apideck->getEcommerceApi()->customersOne($data)
 ```
 
 ### Parameters
@@ -138,7 +138,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getEcommerceApi()->customersOne2('id_example');
+  $response = $apideck->getEcommerceApi()->customersOne('id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

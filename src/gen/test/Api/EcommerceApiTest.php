@@ -72,24 +72,24 @@ class EcommerceApiTest extends TestCase
     }
 
     /**
-     * Test case for customersAll2
+     * Test case for customersAll
      *
      * List Customers.
      *
      */
-    public function testCustomersAll2()
+    public function testCustomersAll()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for customersOne2
+     * Test case for customersOne
      *
      * Get Customer.
      *
      */
-    public function testCustomersOne2()
+    public function testCustomersOne()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -8,7 +8,6 @@ use Apideck\Client\Api\AccountingApi;
 use Apideck\Client\Api\AtsApi;
 use Apideck\Client\Api\ConnectorApi;
 use Apideck\Client\Api\CrmApi;
-use Apideck\Client\Api\CustomerSupportApi;
 use Apideck\Client\Api\EcommerceApi;
 use Apideck\Client\Api\FileStorageApi;
 use Apideck\Client\Api\HrisApi;
@@ -48,11 +47,6 @@ class Apideck
      * @var CrmApi
      */
     protected $crm;
-
-    /**
-     * @var CustomerSupportApi
-     */
-    protected $customerSupport;
 
     /**
      * @var EcommerceApi
@@ -123,7 +117,6 @@ class Apideck
       $this->ats = new AtsApi(null, $config);
       $this->connector = new ConnectorApi(null, $config);
       $this->crm = new CrmApi(null, $config);
-      $this->customerSupport = new CustomerSupportApi(null, $config);
       $this->ecommerce = new EcommerceApi(null, $config);
       $this->fileStorage = new FileStorageApi(null, $config);
       $this->hris = new HrisApi(null, $config);
@@ -170,15 +163,6 @@ class Apideck
   public function getCrmApi()
   {
       return $this->crm;
-  }
-  /**
-    * Get the value of customerSupport
-    *
-    * @return  CustomerSupportApi
-    */ 
-  public function getCustomerSupportApi()
-  {
-      return $this->customerSupport;
   }
   /**
     * Get the value of ecommerce
