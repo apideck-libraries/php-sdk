@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 `id` | **string** |  | 
 `name` | **string** | Name of the custom field. | [optional] 
 `description` | **string** | More information about the custom field | [optional] 
-`value` | [**AnyOfStringNumberBooleanArray**](AnyOfStringNumberBooleanArray.md) |  | [optional] 
+`value` | [**AnyOfStringNumberBooleanObjectArray**](AnyOfStringNumberBooleanObjectArray.md) |  | [optional] 
 
 
 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 
 
-* [`AnyOfStringNumberBooleanArray`](AnyOfStringNumberBooleanArray.md)
+* [`AnyOfStringNumberBooleanObjectArray`](AnyOfStringNumberBooleanObjectArray.md)
 
 ---
 

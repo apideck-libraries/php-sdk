@@ -405,6 +405,7 @@ docs/Model/IssueTrackingEventType.md
 docs/Model/IssuesFilter.md
 docs/Model/Item.md
 docs/Model/Job.md
+docs/Model/JobLinks.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
 docs/Model/JobsFilter.md
@@ -1003,6 +1004,7 @@ lib/Model/IssueTrackingEventType.php
 lib/Model/IssuesFilter.php
 lib/Model/Item.php
 lib/Model/Job.php
+lib/Model/JobLinks.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
 lib/Model/JobsFilter.php
@@ -1597,6 +1599,7 @@ test/Model/InvoicesSortTest.php
 test/Model/IssueTrackingEventTypeTest.php
 test/Model/IssuesFilterTest.php
 test/Model/ItemTest.php
+test/Model/JobLinksTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php

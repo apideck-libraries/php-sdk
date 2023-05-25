@@ -32,12 +32,13 @@ Name | Type | Description | Notes
 `salary` | [**\Apideck\Client\Model\JobSalary**](JobSalary.md) |  | [optional] 
 `url` | **string** | URL of the job description | [optional] 
 `job_portal_url` | **string** | URL of the job portal | [optional] 
+`record_url` | **string** |  | [optional] 
+`links` | [**\Apideck\Client\Model\JobLinks[]**](JobLinks.md) |  | [optional] 
 `confidential` | **bool** |  | [optional] 
 `available_to_employees` | **bool** | Specifies whether an employee of the organization can apply for the job. | [optional] 
 `tags` | **string[]** |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`record_url` | **string** |  | [optional] 
 `deleted` | **bool** |  | [optional] 
 `owner_id` | **string** |  | [optional] 
 `published_at` | **\DateTime** |  | [optional] 
@@ -117,11 +118,12 @@ Name | Type | Description | Notes
 
 
 
+* [`JobLinks`](JobLinks.md)
+
 
 
 * [`Address`](Address.md)
 * [`CustomField`](CustomField.md)
-
 
 
 

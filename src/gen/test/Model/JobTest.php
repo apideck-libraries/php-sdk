@@ -323,6 +323,24 @@ class JobTest extends TestCase
     }
 
     /**
+     * Test attribute "record_url"
+     */
+    public function testPropertyRecordUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "confidential"
      */
     public function testPropertyConfidential()
@@ -362,15 +380,6 @@ class JobTest extends TestCase
      * Test attribute "custom_fields"
      */
     public function testPropertyCustomFields()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "record_url"
-     */
-    public function testPropertyRecordUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

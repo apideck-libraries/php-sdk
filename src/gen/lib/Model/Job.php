@@ -86,12 +86,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'salary' => '\Apideck\Client\Model\JobSalary',
         'url' => 'string',
         'job_portal_url' => 'string',
+        'record_url' => 'string',
+        'links' => '\Apideck\Client\Model\JobLinks[]',
         'confidential' => 'bool',
         'available_to_employees' => 'bool',
         'tags' => 'string[]',
         'addresses' => '\Apideck\Client\Model\Address[]',
         'custom_fields' => '\Apideck\Client\Model\CustomField[]',
-        'record_url' => 'string',
         'deleted' => 'bool',
         'owner_id' => 'string',
         'published_at' => '\DateTime',
@@ -136,12 +137,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'salary' => null,
         'url' => null,
         'job_portal_url' => null,
+        'record_url' => null,
+        'links' => null,
         'confidential' => null,
         'available_to_employees' => null,
         'tags' => null,
         'addresses' => null,
         'custom_fields' => null,
-        'record_url' => null,
         'deleted' => null,
         'owner_id' => null,
         'published_at' => 'date-time',
@@ -205,12 +207,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'salary' => 'salary',
         'url' => 'url',
         'job_portal_url' => 'job_portal_url',
+        'record_url' => 'record_url',
+        'links' => 'links',
         'confidential' => 'confidential',
         'available_to_employees' => 'available_to_employees',
         'tags' => 'tags',
         'addresses' => 'addresses',
         'custom_fields' => 'custom_fields',
-        'record_url' => 'record_url',
         'deleted' => 'deleted',
         'owner_id' => 'owner_id',
         'published_at' => 'published_at',
@@ -253,12 +256,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'salary' => 'setSalary',
         'url' => 'setUrl',
         'job_portal_url' => 'setJobPortalUrl',
+        'record_url' => 'setRecordUrl',
+        'links' => 'setLinks',
         'confidential' => 'setConfidential',
         'available_to_employees' => 'setAvailableToEmployees',
         'tags' => 'setTags',
         'addresses' => 'setAddresses',
         'custom_fields' => 'setCustomFields',
-        'record_url' => 'setRecordUrl',
         'deleted' => 'setDeleted',
         'owner_id' => 'setOwnerId',
         'published_at' => 'setPublishedAt',
@@ -301,12 +305,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'salary' => 'getSalary',
         'url' => 'getUrl',
         'job_portal_url' => 'getJobPortalUrl',
+        'record_url' => 'getRecordUrl',
+        'links' => 'getLinks',
         'confidential' => 'getConfidential',
         'available_to_employees' => 'getAvailableToEmployees',
         'tags' => 'getTags',
         'addresses' => 'getAddresses',
         'custom_fields' => 'getCustomFields',
-        'record_url' => 'getRecordUrl',
         'deleted' => 'getDeleted',
         'owner_id' => 'getOwnerId',
         'published_at' => 'getPublishedAt',
@@ -446,12 +451,13 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['salary'] = $data['salary'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['job_portal_url'] = $data['job_portal_url'] ?? null;
+        $this->container['record_url'] = $data['record_url'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
         $this->container['confidential'] = $data['confidential'] ?? null;
         $this->container['available_to_employees'] = $data['available_to_employees'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['custom_fields'] = $data['custom_fields'] ?? null;
-        $this->container['record_url'] = $data['record_url'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['owner_id'] = $data['owner_id'] ?? null;
         $this->container['published_at'] = $data['published_at'] ?? null;
@@ -1127,6 +1133,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets url
      *
      * @return string|null
+     * @deprecated
      */
     public function getUrl()
     {
@@ -1139,6 +1146,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
      * @param string|null $url URL of the job description
      *
      * @return self
+     * @deprecated
      */
     public function setUrl($url)
     {
@@ -1151,6 +1159,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets job_portal_url
      *
      * @return string|null
+     * @deprecated
      */
     public function getJobPortalUrl()
     {
@@ -1163,10 +1172,63 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
      * @param string|null $job_portal_url URL of the job portal
      *
      * @return self
+     * @deprecated
      */
     public function setJobPortalUrl($job_portal_url)
     {
         $this->container['job_portal_url'] = $job_portal_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets record_url
+     *
+     * @return string|null
+     * @deprecated
+     */
+    public function getRecordUrl()
+    {
+        return $this->container['record_url'];
+    }
+
+    /**
+     * Sets record_url
+     *
+     * @param string|null $record_url record_url
+     *
+     * @return self
+     * @deprecated
+     */
+    public function setRecordUrl($record_url)
+    {
+        $this->container['record_url'] = $record_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Apideck\Client\Model\JobLinks[]|null
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Apideck\Client\Model\JobLinks[]|null $links links
+     *
+     * @return self
+     */
+    public function setLinks($links)
+    {
+
+
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -1287,30 +1349,6 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomFields($custom_fields)
     {
         $this->container['custom_fields'] = $custom_fields;
-
-        return $this;
-    }
-
-    /**
-     * Gets record_url
-     *
-     * @return string|null
-     */
-    public function getRecordUrl()
-    {
-        return $this->container['record_url'];
-    }
-
-    /**
-     * Sets record_url
-     *
-     * @param string|null $record_url record_url
-     *
-     * @return self
-     */
-    public function setRecordUrl($record_url)
-    {
-        $this->container['record_url'] = $record_url;
 
         return $this;
     }
