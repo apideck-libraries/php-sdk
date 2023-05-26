@@ -105,4 +105,13 @@ class JobSalaryTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "interval"
+     */
+    public function testPropertyInterval()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

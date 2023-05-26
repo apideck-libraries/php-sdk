@@ -61,7 +61,8 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'min' => 'int',
         'max' => 'int',
-        'currency' => '\Apideck\Client\Model\Currency'
+        'currency' => '\Apideck\Client\Model\Currency',
+        'interval' => 'string'
     ];
 
     /**
@@ -74,7 +75,8 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'min' => null,
         'max' => null,
-        'currency' => null
+        'currency' => null,
+        'interval' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'min' => 'min',
         'max' => 'max',
-        'currency' => 'currency'
+        'currency' => 'currency',
+        'interval' => 'interval'
     ];
 
     /**
@@ -117,7 +120,8 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'min' => 'setMin',
         'max' => 'setMax',
-        'currency' => 'setCurrency'
+        'currency' => 'setCurrency',
+        'interval' => 'setInterval'
     ];
 
     /**
@@ -128,7 +132,8 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'min' => 'getMin',
         'max' => 'getMax',
-        'currency' => 'getCurrency'
+        'currency' => 'getCurrency',
+        'interval' => 'getInterval'
     ];
 
     /**
@@ -191,6 +196,7 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['min'] = $data['min'] ?? null;
         $this->container['max'] = $data['max'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['interval'] = $data['interval'] ?? null;
     }
 
     /**
@@ -285,6 +291,30 @@ class JobSalary implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets interval
+     *
+     * @return string|null
+     */
+    public function getInterval()
+    {
+        return $this->container['interval'];
+    }
+
+    /**
+     * Sets interval
+     *
+     * @param string|null $interval interval
+     *
+     * @return self
+     */
+    public function setInterval($interval)
+    {
+        $this->container['interval'] = $interval;
 
         return $this;
     }

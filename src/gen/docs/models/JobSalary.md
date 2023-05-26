@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 `min` | **int** | Minimum salary payable for the job role. | [optional] 
 `max` | **int** | Maximum salary payable for the job role. | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
+`interval` | **string** |  | [optional] 
 
 
 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 
 
 * [`Currency`](Currency.md)
+
 
 ---
 
