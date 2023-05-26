@@ -484,6 +484,7 @@ docs/Model/PosPayment.md
 docs/Model/PosPaymentCardDetails.md
 docs/Model/PosPaymentExternalDetails.md
 docs/Model/Price.md
+docs/Model/ProbationPeriod.md
 docs/Model/ProfitAndLoss.md
 docs/Model/ProfitAndLossExpenses.md
 docs/Model/ProfitAndLossFilter.md
@@ -1084,6 +1085,7 @@ lib/Model/PosPayment.php
 lib/Model/PosPaymentCardDetails.php
 lib/Model/PosPaymentExternalDetails.php
 lib/Model/Price.php
+lib/Model/ProbationPeriod.php
 lib/Model/ProfitAndLoss.php
 lib/Model/ProfitAndLossExpenses.php
 lib/Model/ProfitAndLossFilter.php
@@ -1679,6 +1681,7 @@ test/Model/PosPaymentCardDetailsTest.php
 test/Model/PosPaymentExternalDetailsTest.php
 test/Model/PosPaymentTest.php
 test/Model/PriceTest.php
+test/Model/ProbationPeriodTest.php
 test/Model/ProfitAndLossExpensesTest.php
 test/Model/ProfitAndLossFilterTest.php
 test/Model/ProfitAndLossGrossProfitTest.php
