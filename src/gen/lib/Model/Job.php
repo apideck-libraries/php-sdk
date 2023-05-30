@@ -75,7 +75,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         'department' => '\Apideck\Client\Model\Department',
         'branch' => '\Apideck\Client\Model\Branch',
         'recruiters' => 'string[]',
-        'hiring_managers' => 'object[]',
+        'hiring_managers' => 'string[]',
         'followers' => 'string[]',
         'description' => 'string',
         'description_html' => 'string',
@@ -362,6 +362,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const VISIBILITY_DRAFT = 'draft';
     const VISIBILITY__PUBLIC = 'public';
     const VISIBILITY_INTERNAL = 'internal';
     const EMPLOYMENT_TERMS_FULL_TIME = 'full-time';
@@ -383,6 +384,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getVisibilityAllowableValues()
     {
         return [
+            self::VISIBILITY_DRAFT,
             self::VISIBILITY__PUBLIC,
             self::VISIBILITY_INTERNAL,
         ];
@@ -916,7 +918,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets hiring_managers
      *
-     * @return object[]|null
+     * @return string[]|null
      */
     public function getHiringManagers()
     {
@@ -926,7 +928,7 @@ class Job implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets hiring_managers
      *
-     * @param object[]|null $hiring_managers hiring_managers
+     * @param string[]|null $hiring_managers hiring_managers
      *
      * @return self
      */

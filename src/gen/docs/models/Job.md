@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 `department` | [**\Apideck\Client\Model\Department**](Department.md) |  | [optional] 
 `branch` | [**\Apideck\Client\Model\Branch**](Branch.md) |  | [optional] 
 `recruiters` | **string[]** | The recruiter is generally someone who is tasked to help the hiring manager find and screen qualified applicant | [optional] 
-`hiring_managers` | **object[]** |  | [optional] 
+`hiring_managers` | **string[]** |  | [optional] 
 `followers` | **string[]** |  | [optional] 
 `description` | **string** | A description of the object. | [optional] 
 `description_html` | **string** | The job description in HTML format | [optional] 
@@ -54,6 +54,8 @@ Name | Type | Description | Notes
 <a name="VISIBILITY"></a>
 ## Enum: Job.visibility
 
+
+* `DRAFT` (value: `'draft'`)
 
 * `_PUBLIC` (value: `'public'`)
 
