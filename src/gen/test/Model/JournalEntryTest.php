@@ -152,6 +152,24 @@ class JournalEntryTest extends TestCase
     }
 
     /**
+     * Test attribute "tax_type"
+     */
+    public function testPropertyTaxType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "tax_code"
+     */
+    public function testPropertyTaxCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

@@ -22,7 +22,6 @@ docs/Api/PosApi.md
 docs/Api/SmsApi.md
 docs/Api/VaultApi.md
 docs/Api/WebhookApi.md
-docs/Model/AccountingCustomer.md
 docs/Model/AccountingEventType.md
 docs/Model/ActivitiesFilter.md
 docs/Model/Activity.md
@@ -165,6 +164,7 @@ docs/Model/CreditNote.md
 docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
+docs/Model/Customer.md
 docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
@@ -622,7 +622,6 @@ lib/Apideck.php
 lib/ApideckConfiguration.php
 lib/Configuration.php
 lib/HeaderSelector.php
-lib/Model/AccountingCustomer.php
 lib/Model/AccountingEventType.php
 lib/Model/ActivitiesFilter.php
 lib/Model/Activity.php
@@ -765,6 +764,7 @@ lib/Model/CreditNote.php
 lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
+lib/Model/Customer.php
 lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
@@ -1219,7 +1219,6 @@ test/Api/PosApiTest.php
 test/Api/SmsApiTest.php
 test/Api/VaultApiTest.php
 test/Api/WebhookApiTest.php
-test/Model/AccountingCustomerTest.php
 test/Model/AccountingEventTypeTest.php
 test/Model/ActivitiesFilterTest.php
 test/Model/ActivityAttendeeTest.php
@@ -1362,6 +1361,7 @@ test/Model/CreditNoteTest.php
 test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldTest.php
+test/Model/CustomerTest.php
 test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php

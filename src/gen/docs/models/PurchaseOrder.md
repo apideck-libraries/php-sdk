@@ -24,6 +24,13 @@ Name | Type | Description | Notes
 `shipping_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `template_id` | **string** | Optional purchase order template | [optional] 
+`discount_percentage` | **float** | Discount percentage applied to this transaction. | [optional] 
+`bank_account` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
+`accounting_by_row` | **bool** | Indicates if accounting by row is used (true) or not (false). Accounting by row means that a separate ledger transaction is created for each row. | [optional] 
+`due_date` | **\DateTime** | The due date is the date on which a payment is scheduled to be received - YYYY-MM-DD. | [optional] 
+`payment_method` | **string** | Payment method used for the transaction, such as cash, credit card, bank transfer, or check | [optional] 
+`tax_code` | **string** | Applicable tax id/code override if tax is not supplied on a line item basis. | [optional] 
+`channel` | **string** | The channel through which the transaction is processed. | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
@@ -72,6 +79,13 @@ Name | Type | Description | Notes
 * [`InvoiceLineItem`](InvoiceLineItem.md)
 * [`Address`](Address.md)
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
+
+
+* [`BankAccount`](BankAccount.md)
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountingCustomerTest
+ * CustomerTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AccountingCustomerTest Class Doc Comment
+ * CustomerTest Class Doc Comment
  *
  * @category    Class
- * @description AccountingCustomer
+ * @description Customer
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AccountingCustomerTest extends TestCase
+class CustomerTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class AccountingCustomerTest extends TestCase
     }
 
     /**
-     * Test "AccountingCustomer"
+     * Test "Customer"
      */
-    public function testAccountingCustomer()
+    public function testCustomer()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -290,6 +290,24 @@ class AccountingCustomerTest extends TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "channel"
+     */
+    public function testPropertyChannel()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

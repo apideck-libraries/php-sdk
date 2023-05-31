@@ -341,6 +341,51 @@ class InvoiceTest extends TestCase
     }
 
     /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "channel"
+     */
+    public function testPropertyChannel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "language"
+     */
+    public function testPropertyLanguage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "accounting_by_row"
+     */
+    public function testPropertyAccountingByRow()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "bank_account"
+     */
+    public function testPropertyBankAccount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()

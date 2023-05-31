@@ -81,6 +81,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => '\Apideck\Client\Model\Currency',
         'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'status' => 'string',
+        'payment_method' => 'string',
+        'channel' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -118,6 +120,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => null,
         'account' => null,
         'status' => null,
+        'payment_method' => null,
+        'channel' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -174,6 +178,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => 'currency',
         'account' => 'account',
         'status' => 'status',
+        'payment_method' => 'payment_method',
+        'channel' => 'channel',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -209,6 +215,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => 'setCurrency',
         'account' => 'setAccount',
         'status' => 'setStatus',
+        'payment_method' => 'setPaymentMethod',
+        'channel' => 'setChannel',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -244,6 +252,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => 'getCurrency',
         'account' => 'getAccount',
         'status' => 'getStatus',
+        'payment_method' => 'getPaymentMethod',
+        'channel' => 'getChannel',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -351,6 +361,8 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['account'] = $data['account'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
+        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['channel'] = $data['channel'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -928,6 +940,54 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return string|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param string|null $payment_method Payment method used for the transaction, such as cash, credit card, bank transfer, or check
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel
+     *
+     * @return string|null
+     */
+    public function getChannel()
+    {
+        return $this->container['channel'];
+    }
+
+    /**
+     * Sets channel
+     *
+     * @param string|null $channel The channel through which the transaction is processed.
+     *
+     * @return self
+     */
+    public function setChannel($channel)
+    {
+        $this->container['channel'] = $channel;
 
         return $this;
     }

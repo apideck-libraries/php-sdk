@@ -1,4 +1,4 @@
-# Apideck.AccountingCustomer
+# Apideck.Customer
 
 ### Description
 
@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 `account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `parent` | [**\Apideck\Client\Model\LinkedParentCustomer**](LinkedParentCustomer.md) |  | [optional] 
 `status` | **string** | Customer status | [optional] 
+`payment_method` | **string** | Payment method used for the transaction, such as cash, credit card, bank transfer, or check | [optional] 
+`channel` | **string** | The channel through which the transaction is processed. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -40,7 +42,7 @@ Name | Type | Description | Notes
 
 
 <a name="STATUS"></a>
-## Enum: AccountingCustomer.status
+## Enum: Customer.status
 
 
 * `ACTIVE` (value: `'active'`)
@@ -80,6 +82,8 @@ Name | Type | Description | Notes
 * [`Currency`](Currency.md)
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 * [`LinkedParentCustomer`](LinkedParentCustomer.md)
+
+
 
 
 

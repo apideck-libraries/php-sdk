@@ -60,6 +60,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'company_name' => 'string',
+        'display_name' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
         'email' => 'string'
     ];
 
@@ -72,6 +75,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'company_name' => null,
+        'display_name' => null,
+        'first_name' => null,
+        'last_name' => null,
         'email' => null
     ];
 
@@ -103,6 +109,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'company_name' => 'company_name',
+        'display_name' => 'display_name',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
         'email' => 'email'
     ];
 
@@ -113,6 +122,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'company_name' => 'setCompanyName',
+        'display_name' => 'setDisplayName',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
         'email' => 'setEmail'
     ];
 
@@ -123,6 +135,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'company_name' => 'getCompanyName',
+        'display_name' => 'getDisplayName',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
         'email' => 'getEmail'
     ];
 
@@ -184,6 +199,9 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['company_name'] = $data['company_name'] ?? null;
+        $this->container['display_name'] = $data['display_name'] ?? null;
+        $this->container['first_name'] = $data['first_name'] ?? null;
+        $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
     }
 
@@ -231,6 +249,78 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_name
+     *
+     * @return string|null
+     */
+    public function getDisplayName()
+    {
+        return $this->container['display_name'];
+    }
+
+    /**
+     * Sets display_name
+     *
+     * @param string|null $display_name Display Name of supplier to search for
+     *
+     * @return self
+     */
+    public function setDisplayName($display_name)
+    {
+        $this->container['display_name'] = $display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     *
+     * @param string|null $first_name First name of supplier to search for
+     *
+     * @return self
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     *
+     * @param string|null $last_name Last name of supplier to search for
+     *
+     * @return self
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

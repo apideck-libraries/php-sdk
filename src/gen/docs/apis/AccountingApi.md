@@ -882,7 +882,7 @@ Apideck->getAccountingApi()->customersAdd($data)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accounting_customer** | [\Apideck\Client\Model\AccountingCustomer](../models/\Apideck\Client\Model\AccountingCustomer.md)|  |
+ **customer** | [\Apideck\Client\Model\Customer](../models/\Apideck\Client\Model\Customer.md)|  |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
@@ -1152,7 +1152,7 @@ Apideck->getAccountingApi()->customersUpdate($data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the record you are acting upon. |
- **accounting_customer** | [\Apideck\Client\Model\AccountingCustomer](../models/\Apideck\Client\Model\AccountingCustomer.md)|  |
+ **customer** | [\Apideck\Client\Model\Customer](../models/\Apideck\Client\Model\Customer.md)|  |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |

@@ -80,15 +80,6 @@ class JournalEntryLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "total_amount"
-     */
-    public function testPropertyTotalAmount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "type"
      */
     public function testPropertyType()
@@ -128,6 +119,24 @@ class JournalEntryLineItemTest extends TestCase
      * Test attribute "tax_amount"
      */
     public function testPropertyTaxAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sub_total"
+     */
+    public function testPropertySubTotal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "total_amount"
+     */
+    public function testPropertyTotalAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

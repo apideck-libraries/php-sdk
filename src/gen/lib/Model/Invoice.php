@@ -88,6 +88,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => '\Apideck\Client\Model\Address',
         'template_id' => 'string',
         'source_document_url' => 'string',
+        'payment_method' => 'string',
+        'channel' => 'string',
+        'language' => 'string',
+        'accounting_by_row' => 'bool',
+        'bank_account' => '\Apideck\Client\Model\BankAccount',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -132,6 +137,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => null,
         'template_id' => null,
         'source_document_url' => null,
+        'payment_method' => null,
+        'channel' => null,
+        'language' => null,
+        'accounting_by_row' => null,
+        'bank_account' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -195,6 +205,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'shipping_address',
         'template_id' => 'template_id',
         'source_document_url' => 'source_document_url',
+        'payment_method' => 'payment_method',
+        'channel' => 'channel',
+        'language' => 'language',
+        'accounting_by_row' => 'accounting_by_row',
+        'bank_account' => 'bank_account',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -237,6 +252,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'setShippingAddress',
         'template_id' => 'setTemplateId',
         'source_document_url' => 'setSourceDocumentUrl',
+        'payment_method' => 'setPaymentMethod',
+        'channel' => 'setChannel',
+        'language' => 'setLanguage',
+        'accounting_by_row' => 'setAccountingByRow',
+        'bank_account' => 'setBankAccount',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -279,6 +299,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'getShippingAddress',
         'template_id' => 'getTemplateId',
         'source_document_url' => 'getSourceDocumentUrl',
+        'payment_method' => 'getPaymentMethod',
+        'channel' => 'getChannel',
+        'language' => 'getLanguage',
+        'accounting_by_row' => 'getAccountingByRow',
+        'bank_account' => 'getBankAccount',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -422,6 +447,11 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
         $this->container['template_id'] = $data['template_id'] ?? null;
         $this->container['source_document_url'] = $data['source_document_url'] ?? null;
+        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['channel'] = $data['channel'] ?? null;
+        $this->container['language'] = $data['language'] ?? null;
+        $this->container['accounting_by_row'] = $data['accounting_by_row'] ?? null;
+        $this->container['bank_account'] = $data['bank_account'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1183,6 +1213,126 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSourceDocumentUrl($source_document_url)
     {
         $this->container['source_document_url'] = $source_document_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return string|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param string|null $payment_method Payment method used for the transaction, such as cash, credit card, bank transfer, or check
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel
+     *
+     * @return string|null
+     */
+    public function getChannel()
+    {
+        return $this->container['channel'];
+    }
+
+    /**
+     * Sets channel
+     *
+     * @param string|null $channel The channel through which the transaction is processed.
+     *
+     * @return self
+     */
+    public function setChannel($channel)
+    {
+        $this->container['channel'] = $channel;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return string|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param string|null $language language code according to ISO 639-1. For the United States - EN
+     *
+     * @return self
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets accounting_by_row
+     *
+     * @return bool|null
+     */
+    public function getAccountingByRow()
+    {
+        return $this->container['accounting_by_row'];
+    }
+
+    /**
+     * Sets accounting_by_row
+     *
+     * @param bool|null $accounting_by_row Indicates if accounting by row is used (true) or not (false). Accounting by row means that a separate ledger transaction is created for each row.
+     *
+     * @return self
+     */
+    public function setAccountingByRow($accounting_by_row)
+    {
+        $this->container['accounting_by_row'] = $accounting_by_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account
+     *
+     * @return \Apideck\Client\Model\BankAccount|null
+     */
+    public function getBankAccount()
+    {
+        return $this->container['bank_account'];
+    }
+
+    /**
+     * Sets bank_account
+     *
+     * @param \Apideck\Client\Model\BankAccount|null $bank_account bank_account
+     *
+     * @return self
+     */
+    public function setBankAccount($bank_account)
+    {
+        $this->container['bank_account'] = $bank_account;
 
         return $this;
     }

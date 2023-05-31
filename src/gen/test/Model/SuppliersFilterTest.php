@@ -89,6 +89,33 @@ class SuppliersFilterTest extends TestCase
     }
 
     /**
+     * Test attribute "display_name"
+     */
+    public function testPropertyDisplayName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "email"
      */
     public function testPropertyEmail()

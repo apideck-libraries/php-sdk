@@ -448,7 +448,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets string
      *
-     * @param string|null $string string
+     * @param string|null $string The address string. Some APIs don't provide structured address data.
      *
      * @return self
      */

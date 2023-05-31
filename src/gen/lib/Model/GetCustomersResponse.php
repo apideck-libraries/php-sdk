@@ -64,7 +64,7 @@ class GetCustomersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'service' => 'string',
         'resource' => 'string',
         'operation' => 'string',
-        'data' => '\Apideck\Client\Model\AccountingCustomer[]',
+        'data' => '\Apideck\Client\Model\Customer[]',
         'meta' => '\Apideck\Client\Model\Meta',
         'links' => '\Apideck\Client\Model\Links'
     ];
@@ -388,7 +388,7 @@ class GetCustomersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \Apideck\Client\Model\AccountingCustomer[]
+     * @return \Apideck\Client\Model\Customer[]
      */
     public function getData()
     {
@@ -398,7 +398,7 @@ class GetCustomersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \Apideck\Client\Model\AccountingCustomer[] $data data
+     * @param \Apideck\Client\Model\Customer[] $data data
      *
      * @return self
      */

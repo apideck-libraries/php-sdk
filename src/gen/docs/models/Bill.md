@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
 `tax_inclusive` | **bool** | Amounts are including tax | [optional] 
 `bill_date` | **\DateTime** | Date bill was issued - YYYY-MM-DD. | [optional] 
-`due_date` | **\DateTime** | The due date is the date on which a payment is scheduled to be received by the supplier - YYYY-MM-DD. | [optional] 
+`due_date` | **\DateTime** | The due date is the date on which a payment is scheduled to be received - YYYY-MM-DD. | [optional] 
 `paid_date` | **\DateTime** | The paid date is the date on which a payment was sent to the supplier - YYYY-MM-DD. | [optional] 
 `po_number` | **string** | A PO Number uniquely identifies a purchase order and is generally defined by the buyer. The buyer will match the PO number in the invoice to the Purchase Order. | [optional] 
 `reference` | **string** | Optional bill reference. | [optional] 
@@ -28,6 +28,12 @@ Name | Type | Description | Notes
 `notes` | **string** |  | [optional] 
 `status` | **string** | Invoice status | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
+`payment_method` | **string** | Payment method used for the transaction, such as cash, credit card, bank transfer, or check | [optional] 
+`channel` | **string** | The channel through which the transaction is processed. | [optional] 
+`language` | **string** | language code according to ISO 639-1. For the United States - EN | [optional] 
+`accounting_by_row` | **bool** | Indicates if accounting by row is used (true) or not (false). Accounting by row means that a separate ledger transaction is created for each row. | [optional] 
+`bank_account` | [**\Apideck\Client\Model\BankAccount**](BankAccount.md) |  | [optional] 
+`discount_percentage` | **float** | Discount percentage applied to this transaction. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -85,6 +91,12 @@ Name | Type | Description | Notes
 
 
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
+
+
+
+
+* [`BankAccount`](BankAccount.md)
+
 
 
 

@@ -82,6 +82,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'string',
         'status' => 'string',
         'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
+        'payment_method' => 'string',
+        'channel' => 'string',
+        'language' => 'string',
+        'accounting_by_row' => 'bool',
+        'bank_account' => '\Apideck\Client\Model\BankAccount',
+        'discount_percentage' => 'float',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -120,6 +126,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => null,
         'status' => null,
         'ledger_account' => null,
+        'payment_method' => null,
+        'channel' => null,
+        'language' => null,
+        'accounting_by_row' => null,
+        'bank_account' => null,
+        'discount_percentage' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -177,6 +189,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'notes',
         'status' => 'status',
         'ledger_account' => 'ledger_account',
+        'payment_method' => 'payment_method',
+        'channel' => 'channel',
+        'language' => 'language',
+        'accounting_by_row' => 'accounting_by_row',
+        'bank_account' => 'bank_account',
+        'discount_percentage' => 'discount_percentage',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -213,6 +231,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'setNotes',
         'status' => 'setStatus',
         'ledger_account' => 'setLedgerAccount',
+        'payment_method' => 'setPaymentMethod',
+        'channel' => 'setChannel',
+        'language' => 'setLanguage',
+        'accounting_by_row' => 'setAccountingByRow',
+        'bank_account' => 'setBankAccount',
+        'discount_percentage' => 'setDiscountPercentage',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -249,6 +273,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'notes' => 'getNotes',
         'status' => 'getStatus',
         'ledger_account' => 'getLedgerAccount',
+        'payment_method' => 'getPaymentMethod',
+        'channel' => 'getChannel',
+        'language' => 'getLanguage',
+        'accounting_by_row' => 'getAccountingByRow',
+        'bank_account' => 'getBankAccount',
+        'discount_percentage' => 'getDiscountPercentage',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -363,6 +393,12 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['notes'] = $data['notes'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['ledger_account'] = $data['ledger_account'] ?? null;
+        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['channel'] = $data['channel'] ?? null;
+        $this->container['language'] = $data['language'] ?? null;
+        $this->container['accounting_by_row'] = $data['accounting_by_row'] ?? null;
+        $this->container['bank_account'] = $data['bank_account'] ?? null;
+        $this->container['discount_percentage'] = $data['discount_percentage'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -608,7 +644,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets due_date
      *
-     * @param \DateTime|null $due_date The due date is the date on which a payment is scheduled to be received by the supplier - YYYY-MM-DD.
+     * @param \DateTime|null $due_date The due date is the date on which a payment is scheduled to be received - YYYY-MM-DD.
      *
      * @return self
      */
@@ -961,6 +997,150 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLedgerAccount($ledger_account)
     {
         $this->container['ledger_account'] = $ledger_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return string|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param string|null $payment_method Payment method used for the transaction, such as cash, credit card, bank transfer, or check
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel
+     *
+     * @return string|null
+     */
+    public function getChannel()
+    {
+        return $this->container['channel'];
+    }
+
+    /**
+     * Sets channel
+     *
+     * @param string|null $channel The channel through which the transaction is processed.
+     *
+     * @return self
+     */
+    public function setChannel($channel)
+    {
+        $this->container['channel'] = $channel;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return string|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param string|null $language language code according to ISO 639-1. For the United States - EN
+     *
+     * @return self
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets accounting_by_row
+     *
+     * @return bool|null
+     */
+    public function getAccountingByRow()
+    {
+        return $this->container['accounting_by_row'];
+    }
+
+    /**
+     * Sets accounting_by_row
+     *
+     * @param bool|null $accounting_by_row Indicates if accounting by row is used (true) or not (false). Accounting by row means that a separate ledger transaction is created for each row.
+     *
+     * @return self
+     */
+    public function setAccountingByRow($accounting_by_row)
+    {
+        $this->container['accounting_by_row'] = $accounting_by_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account
+     *
+     * @return \Apideck\Client\Model\BankAccount|null
+     */
+    public function getBankAccount()
+    {
+        return $this->container['bank_account'];
+    }
+
+    /**
+     * Sets bank_account
+     *
+     * @param \Apideck\Client\Model\BankAccount|null $bank_account bank_account
+     *
+     * @return self
+     */
+    public function setBankAccount($bank_account)
+    {
+        $this->container['bank_account'] = $bank_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets discount_percentage
+     *
+     * @return float|null
+     */
+    public function getDiscountPercentage()
+    {
+        return $this->container['discount_percentage'];
+    }
+
+    /**
+     * Sets discount_percentage
+     *
+     * @param float|null $discount_percentage Discount percentage applied to this transaction.
+     *
+     * @return self
+     */
+    public function setDiscountPercentage($discount_percentage)
+    {
+        $this->container['discount_percentage'] = $discount_percentage;
 
         return $this;
     }

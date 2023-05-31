@@ -278,6 +278,24 @@ class SupplierTest extends TestCase
     }
 
     /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "channel"
+     */
+    public function testPropertyChannel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

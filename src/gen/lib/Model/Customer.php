@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountingCustomer
+ * Customer
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * AccountingCustomer Class Doc Comment
+ * Customer Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
+class Customer implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'AccountingCustomer';
+    protected static $openAPIModelName = 'Customer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -83,6 +83,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'parent' => '\Apideck\Client\Model\LinkedParentCustomer',
         'status' => 'string',
+        'payment_method' => 'string',
+        'channel' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -122,6 +124,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'account' => null,
         'parent' => null,
         'status' => null,
+        'payment_method' => null,
+        'channel' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -180,6 +184,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'account' => 'account',
         'parent' => 'parent',
         'status' => 'status',
+        'payment_method' => 'payment_method',
+        'channel' => 'channel',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -217,6 +223,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'account' => 'setAccount',
         'parent' => 'setParent',
         'status' => 'setStatus',
+        'payment_method' => 'setPaymentMethod',
+        'channel' => 'setChannel',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -254,6 +262,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         'account' => 'getAccount',
         'parent' => 'getParent',
         'status' => 'getStatus',
+        'payment_method' => 'getPaymentMethod',
+        'channel' => 'getChannel',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -363,6 +373,8 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['account'] = $data['account'] ?? null;
         $this->container['parent'] = $data['parent'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
+        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['channel'] = $data['channel'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -988,6 +1000,54 @@ class AccountingCustomer implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return string|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param string|null $payment_method Payment method used for the transaction, such as cash, credit card, bank transfer, or check
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel
+     *
+     * @return string|null
+     */
+    public function getChannel()
+    {
+        return $this->container['channel'];
+    }
+
+    /**
+     * Sets channel
+     *
+     * @param string|null $channel The channel through which the transaction is processed.
+     *
+     * @return self
+     */
+    public function setChannel($channel)
+    {
+        $this->container['channel'] = $channel;
 
         return $this;
     }

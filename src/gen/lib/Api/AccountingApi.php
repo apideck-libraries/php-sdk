@@ -5580,7 +5580,7 @@ class AccountingApi
      *
      * Create Customer
      *
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer customer (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -5590,9 +5590,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\CreateCustomerResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function customersAdd($accounting_customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function customersAdd($customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        list($response) = $this->customersAddWithHttpInfo($accounting_customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        list($response) = $this->customersAddWithHttpInfo($customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
         return $response;
     }
 
@@ -5601,7 +5601,7 @@ class AccountingApi
      *
      * Create Customer
      *
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -5611,9 +5611,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\CreateCustomerResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customersAddWithHttpInfo($accounting_customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function customersAddWithHttpInfo($customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        $request = $this->customersAddRequest($accounting_customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->customersAddRequest($customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5818,7 +5818,7 @@ class AccountingApi
      *
      * Create Customer
      *
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -5827,9 +5827,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersAddAsync($accounting_customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function customersAddAsync($customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        return $this->customersAddAsyncWithHttpInfo($accounting_customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
+        return $this->customersAddAsyncWithHttpInfo($customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5842,7 +5842,7 @@ class AccountingApi
      *
      * Create Customer
      *
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -5851,10 +5851,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersAddAsyncWithHttpInfo($accounting_customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function customersAddAsyncWithHttpInfo($customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
         $returnType = '\Apideck\Client\Model\CreateCustomerResponse';
-        $request = $this->customersAddRequest($accounting_customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->customersAddRequest($customer, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5892,7 +5892,7 @@ class AccountingApi
     /**
      * Create request for operation 'customersAdd'
      *
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -5901,12 +5901,12 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function customersAddRequest($accounting_customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function customersAddRequest($customer, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        // verify the required parameter 'accounting_customer' is set
-        if ($accounting_customer === null || (is_array($accounting_customer) && count($accounting_customer) === 0)) {
+        // verify the required parameter 'customer' is set
+        if ($customer === null || (is_array($customer) && count($customer) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $accounting_customer when calling customersAdd'
+                'Missing the required parameter $customer when calling customersAdd'
             );
         }
 
@@ -5956,11 +5956,11 @@ class AccountingApi
         }
 
         // for model (json/xml)
-        if (isset($accounting_customer)) {
+        if (isset($customer)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($accounting_customer));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($customer));
             } else {
-                $httpBody = $accounting_customer;
+                $httpBody = $customer;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -7419,7 +7419,7 @@ class AccountingApi
      * Update Customer
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer customer (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -7429,9 +7429,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\UpdateCustomerResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function customersUpdate($id, $accounting_customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function customersUpdate($id, $customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        list($response) = $this->customersUpdateWithHttpInfo($id, $accounting_customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        list($response) = $this->customersUpdateWithHttpInfo($id, $customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
         return $response;
     }
 
@@ -7441,7 +7441,7 @@ class AccountingApi
      * Update Customer
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -7451,9 +7451,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\UpdateCustomerResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customersUpdateWithHttpInfo($id, $accounting_customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function customersUpdateWithHttpInfo($id, $customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        $request = $this->customersUpdateRequest($id, $accounting_customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->customersUpdateRequest($id, $customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7659,7 +7659,7 @@ class AccountingApi
      * Update Customer
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -7668,9 +7668,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersUpdateAsync($id, $accounting_customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function customersUpdateAsync($id, $customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        return $this->customersUpdateAsyncWithHttpInfo($id, $accounting_customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+        return $this->customersUpdateAsyncWithHttpInfo($id, $customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7684,7 +7684,7 @@ class AccountingApi
      * Update Customer
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -7693,10 +7693,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersUpdateAsyncWithHttpInfo($id, $accounting_customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function customersUpdateAsyncWithHttpInfo($id, $customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         $returnType = '\Apideck\Client\Model\UpdateCustomerResponse';
-        $request = $this->customersUpdateRequest($id, $accounting_customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->customersUpdateRequest($id, $customer, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7735,7 +7735,7 @@ class AccountingApi
      * Create request for operation 'customersUpdate'
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  \Apideck\Client\Model\AccountingCustomer $accounting_customer (required)
+     * @param  \Apideck\Client\Model\Customer $customer (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -7744,7 +7744,7 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function customersUpdateRequest($id, $accounting_customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function customersUpdateRequest($id, $customer, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -7752,10 +7752,10 @@ class AccountingApi
                 'Missing the required parameter $id when calling customersUpdate'
             );
         }
-        // verify the required parameter 'accounting_customer' is set
-        if ($accounting_customer === null || (is_array($accounting_customer) && count($accounting_customer) === 0)) {
+        // verify the required parameter 'customer' is set
+        if ($customer === null || (is_array($customer) && count($customer) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $accounting_customer when calling customersUpdate'
+                'Missing the required parameter $customer when calling customersUpdate'
             );
         }
 
@@ -7813,11 +7813,11 @@ class AccountingApi
         }
 
         // for model (json/xml)
-        if (isset($accounting_customer)) {
+        if (isset($customer)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($accounting_customer));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($customer));
             } else {
-                $httpBody = $accounting_customer;
+                $httpBody = $customer;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

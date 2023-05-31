@@ -78,6 +78,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => '\Apideck\Client\Model\Address',
         'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'template_id' => 'string',
+        'discount_percentage' => 'float',
+        'bank_account' => '\Apideck\Client\Model\BankAccount',
+        'accounting_by_row' => 'bool',
+        'due_date' => '\DateTime',
+        'payment_method' => 'string',
+        'tax_code' => 'string',
+        'channel' => 'string',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -112,6 +119,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => null,
         'ledger_account' => null,
         'template_id' => null,
+        'discount_percentage' => null,
+        'bank_account' => null,
+        'accounting_by_row' => null,
+        'due_date' => 'date',
+        'payment_method' => null,
+        'tax_code' => null,
+        'channel' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -165,6 +179,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'shipping_address',
         'ledger_account' => 'ledger_account',
         'template_id' => 'template_id',
+        'discount_percentage' => 'discount_percentage',
+        'bank_account' => 'bank_account',
+        'accounting_by_row' => 'accounting_by_row',
+        'due_date' => 'due_date',
+        'payment_method' => 'payment_method',
+        'tax_code' => 'tax_code',
+        'channel' => 'channel',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -197,6 +218,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'setShippingAddress',
         'ledger_account' => 'setLedgerAccount',
         'template_id' => 'setTemplateId',
+        'discount_percentage' => 'setDiscountPercentage',
+        'bank_account' => 'setBankAccount',
+        'accounting_by_row' => 'setAccountingByRow',
+        'due_date' => 'setDueDate',
+        'payment_method' => 'setPaymentMethod',
+        'tax_code' => 'setTaxCode',
+        'channel' => 'setChannel',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -229,6 +257,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'shipping_address' => 'getShippingAddress',
         'ledger_account' => 'getLedgerAccount',
         'template_id' => 'getTemplateId',
+        'discount_percentage' => 'getDiscountPercentage',
+        'bank_account' => 'getBankAccount',
+        'accounting_by_row' => 'getAccountingByRow',
+        'due_date' => 'getDueDate',
+        'payment_method' => 'getPaymentMethod',
+        'tax_code' => 'getTaxCode',
+        'channel' => 'getChannel',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -335,6 +370,13 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
         $this->container['ledger_account'] = $data['ledger_account'] ?? null;
         $this->container['template_id'] = $data['template_id'] ?? null;
+        $this->container['discount_percentage'] = $data['discount_percentage'] ?? null;
+        $this->container['bank_account'] = $data['bank_account'] ?? null;
+        $this->container['accounting_by_row'] = $data['accounting_by_row'] ?? null;
+        $this->container['due_date'] = $data['due_date'] ?? null;
+        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['tax_code'] = $data['tax_code'] ?? null;
+        $this->container['channel'] = $data['channel'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -837,6 +879,174 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTemplateId($template_id)
     {
         $this->container['template_id'] = $template_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets discount_percentage
+     *
+     * @return float|null
+     */
+    public function getDiscountPercentage()
+    {
+        return $this->container['discount_percentage'];
+    }
+
+    /**
+     * Sets discount_percentage
+     *
+     * @param float|null $discount_percentage Discount percentage applied to this transaction.
+     *
+     * @return self
+     */
+    public function setDiscountPercentage($discount_percentage)
+    {
+        $this->container['discount_percentage'] = $discount_percentage;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account
+     *
+     * @return \Apideck\Client\Model\BankAccount|null
+     */
+    public function getBankAccount()
+    {
+        return $this->container['bank_account'];
+    }
+
+    /**
+     * Sets bank_account
+     *
+     * @param \Apideck\Client\Model\BankAccount|null $bank_account bank_account
+     *
+     * @return self
+     */
+    public function setBankAccount($bank_account)
+    {
+        $this->container['bank_account'] = $bank_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets accounting_by_row
+     *
+     * @return bool|null
+     */
+    public function getAccountingByRow()
+    {
+        return $this->container['accounting_by_row'];
+    }
+
+    /**
+     * Sets accounting_by_row
+     *
+     * @param bool|null $accounting_by_row Indicates if accounting by row is used (true) or not (false). Accounting by row means that a separate ledger transaction is created for each row.
+     *
+     * @return self
+     */
+    public function setAccountingByRow($accounting_by_row)
+    {
+        $this->container['accounting_by_row'] = $accounting_by_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets due_date
+     *
+     * @return \DateTime|null
+     */
+    public function getDueDate()
+    {
+        return $this->container['due_date'];
+    }
+
+    /**
+     * Sets due_date
+     *
+     * @param \DateTime|null $due_date The due date is the date on which a payment is scheduled to be received - YYYY-MM-DD.
+     *
+     * @return self
+     */
+    public function setDueDate($due_date)
+    {
+        $this->container['due_date'] = $due_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return string|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param string|null $payment_method Payment method used for the transaction, such as cash, credit card, bank transfer, or check
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_code
+     *
+     * @return string|null
+     */
+    public function getTaxCode()
+    {
+        return $this->container['tax_code'];
+    }
+
+    /**
+     * Sets tax_code
+     *
+     * @param string|null $tax_code Applicable tax id/code override if tax is not supplied on a line item basis.
+     *
+     * @return self
+     */
+    public function setTaxCode($tax_code)
+    {
+        $this->container['tax_code'] = $tax_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel
+     *
+     * @return string|null
+     */
+    public function getChannel()
+    {
+        return $this->container['channel'];
+    }
+
+    /**
+     * Sets channel
+     *
+     * @param string|null $channel The channel through which the transaction is processed.
+     *
+     * @return self
+     */
+    public function setChannel($channel)
+    {
+        $this->container['channel'] = $channel;
 
         return $this;
     }

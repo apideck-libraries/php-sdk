@@ -251,6 +251,69 @@ class PurchaseOrderTest extends TestCase
     }
 
     /**
+     * Test attribute "discount_percentage"
+     */
+    public function testPropertyDiscountPercentage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "bank_account"
+     */
+    public function testPropertyBankAccount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "accounting_by_row"
+     */
+    public function testPropertyAccountingByRow()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "due_date"
+     */
+    public function testPropertyDueDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "tax_code"
+     */
+    public function testPropertyTaxCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "channel"
+     */
+    public function testPropertyChannel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()
