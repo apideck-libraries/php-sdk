@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 `service` | **string** | Apideck ID of service provider | 
 `resource` | **string** | Unified API resource name | 
 `operation` | **string** | Operation performed | 
-`data` | [**\Apideck\Client\Model\AccountingCustomer[]**](AccountingCustomer.md) |  | 
+`data` | [**\Apideck\Client\Model\Customer[]**](Customer.md) |  | 
 `meta` | [**\Apideck\Client\Model\Meta**](Meta.md) |  | [optional] 
 `links` | [**\Apideck\Client\Model\Links**](Links.md) |  | [optional] 
 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 
 
-* [`AccountingCustomer`](AccountingCustomer.md)
+* [`Customer`](Customer.md)
 * [`Meta`](Meta.md)
 * [`Links`](Links.md)
 

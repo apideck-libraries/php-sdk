@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 `tax_id` | **string** |  | [optional] 
 `dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
 `food_allergies` | **string[]** | Indicate the employee's food allergies. | [optional] 
+`probation_period` | [**\Apideck\Client\Model\ProbationPeriod**](ProbationPeriod.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `deleted` | **bool** |  | [optional] 
@@ -141,6 +142,7 @@ Name | Type | Description | Notes
 
 
 
+* [`ProbationPeriod`](ProbationPeriod.md)
 
 
 

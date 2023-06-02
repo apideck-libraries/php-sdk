@@ -15,12 +15,13 @@ Name | Type | Description | Notes
 `language` | **string** | language code according to ISO 639-1. For the United States - EN | [optional] 
 `employment_terms` | **string** |  | [optional] 
 `experience` | **string** | Level of experience required for the job role. | [optional] 
+`location` | **string** | Specifies the location for the job posting. | [optional] 
 `remote` | **bool** | Specifies whether the posting is for a remote job. | [optional] 
 `requisition_id` | **string** | A job's Requisition ID (Req ID) allows your organization to identify and track a job based on alphanumeric naming conventions unique to your company's internal processes. | [optional] 
 `department` | [**\Apideck\Client\Model\Department**](Department.md) |  | [optional] 
 `branch` | [**\Apideck\Client\Model\Branch**](Branch.md) |  | [optional] 
 `recruiters` | **string[]** | The recruiter is generally someone who is tasked to help the hiring manager find and screen qualified applicant | [optional] 
-`hiring_managers` | **object[]** |  | [optional] 
+`hiring_managers` | **string[]** |  | [optional] 
 `followers` | **string[]** |  | [optional] 
 `description` | **string** | A description of the object. | [optional] 
 `description_html` | **string** | The job description in HTML format | [optional] 
@@ -31,11 +32,13 @@ Name | Type | Description | Notes
 `salary` | [**\Apideck\Client\Model\JobSalary**](JobSalary.md) |  | [optional] 
 `url` | **string** | URL of the job description | [optional] 
 `job_portal_url` | **string** | URL of the job portal | [optional] 
+`record_url` | **string** |  | [optional] 
+`links` | [**\Apideck\Client\Model\JobLinks[]**](JobLinks.md) |  | [optional] 
 `confidential` | **bool** |  | [optional] 
 `available_to_employees` | **bool** | Specifies whether an employee of the organization can apply for the job. | [optional] 
 `tags` | **string[]** |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
-`record_url` | **string** |  | [optional] 
+`custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `deleted` | **bool** |  | [optional] 
 `owner_id` | **string** |  | [optional] 
 `published_at` | **\DateTime** |  | [optional] 
@@ -51,6 +54,8 @@ Name | Type | Description | Notes
 <a name="VISIBILITY"></a>
 ## Enum: Job.visibility
 
+
+* `DRAFT` (value: `'draft'`)
 
 * `_PUBLIC` (value: `'public'`)
 
@@ -99,6 +104,7 @@ Name | Type | Description | Notes
 
 
 
+
 * [`Department`](Department.md)
 * [`Branch`](Branch.md)
 
@@ -114,10 +120,12 @@ Name | Type | Description | Notes
 
 
 
+* [`JobLinks`](JobLinks.md)
+
 
 
 * [`Address`](Address.md)
-
+* [`CustomField`](CustomField.md)
 
 
 

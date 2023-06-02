@@ -151,6 +151,12 @@ Name | Type | Description | Notes
 
 * `ACCOUNTING_SUPPLIER_DELETED` (value: `'accounting.supplier.deleted'`)
 
+* `ACCOUNTING_PURCHASE_ORDER_CREATED` (value: `'accounting.purchase-order.created'`)
+
+* `ACCOUNTING_PURCHASE_ORDER_UPDATED` (value: `'accounting.purchase-order.updated'`)
+
+* `ACCOUNTING_PURCHASE_ORDER_DELETED` (value: `'accounting.purchase-order.deleted'`)
+
 * `POS_ORDER_CREATED` (value: `'pos.order.created'`)
 
 * `POS_ORDER_UPDATED` (value: `'pos.order.updated'`)
@@ -205,6 +211,8 @@ Name | Type | Description | Notes
 
 * `HRIS_EMPLOYEE_DELETED` (value: `'hris.employee.deleted'`)
 
+* `HRIS_EMPLOYEE_TERMINATED` (value: `'hris.employee.terminated'`)
+
 * `HRIS_COMPANY_CREATED` (value: `'hris.company.created'`)
 
 * `HRIS_COMPANY_UPDATED` (value: `'hris.company.updated'`)
@@ -222,6 +230,12 @@ Name | Type | Description | Notes
 * `ISSUE_TRACKING_TICKET_UPDATED` (value: `'issue-tracking.ticket.updated'`)
 
 * `ISSUE_TRACKING_TICKET_DELETED` (value: `'issue-tracking.ticket.deleted'`)
+
+* `ATS_APPLICATION_CREATED` (value: `'ats.application.created'`)
+
+* `ATS_APPLICATION_UPDATED` (value: `'ats.application.updated'`)
+
+* `ATS_APPLICATION_DELETED` (value: `'ats.application.deleted'`)
 
 
 
