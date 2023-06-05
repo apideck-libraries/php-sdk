@@ -408,7 +408,6 @@ docs/Model/Job.md
 docs/Model/JobLinks.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
-docs/Model/JobsFilter.md
 docs/Model/JournalEntry.md
 docs/Model/JournalEntryLineItem.md
 docs/Model/Lead.md
@@ -464,7 +463,6 @@ docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
-docs/Model/PassThroughQuery.md
 docs/Model/Payment.md
 docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
@@ -1008,7 +1006,6 @@ lib/Model/Job.php
 lib/Model/JobLinks.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
-lib/Model/JobsFilter.php
 lib/Model/JournalEntry.php
 lib/Model/JournalEntryLineItem.php
 lib/Model/Lead.php
@@ -1065,7 +1062,6 @@ lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
-lib/Model/PassThroughQuery.php
 lib/Model/Payment.php
 lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
@@ -1605,7 +1601,6 @@ test/Model/JobLinksTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
-test/Model/JobsFilterTest.php
 test/Model/JournalEntryLineItemTest.php
 test/Model/JournalEntryTest.php
 test/Model/LeadEventTypeTest.php
@@ -1661,7 +1656,6 @@ test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
-test/Model/PassThroughQueryTest.php
 test/Model/PaymentAllocationsTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentRequiredResponseTest.php
