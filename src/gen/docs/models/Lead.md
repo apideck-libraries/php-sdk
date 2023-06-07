@@ -29,8 +29,8 @@ Name | Type | Description | Notes
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
-`updated_at` | **string** |  | [optional] 
-`created_at` | **string** |  | [optional] 
+`updated_at` | **string** | Date updated in ISO 8601 format | [optional] 
+`created_at` | **string** | Date created in ISO 8601 format | [optional] 
 
 
 
