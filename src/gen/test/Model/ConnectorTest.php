@@ -152,6 +152,15 @@ class ConnectorTest extends TestCase
     }
 
     /**
+     * Test attribute "partner_signup_url"
+     */
+    public function testPropertyPartnerSignupUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "free_trial_available"
      */
     public function testPropertyFreeTrialAvailable()

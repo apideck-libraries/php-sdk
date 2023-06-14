@@ -67,6 +67,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'logo_url' => 'string',
         'website_url' => 'string',
         'signup_url' => 'string',
+        'partner_signup_url' => 'string',
         'free_trial_available' => 'bool',
         'auth_type' => 'string',
         'auth_only' => 'bool',
@@ -103,6 +104,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'logo_url' => 'uri',
         'website_url' => 'uri',
         'signup_url' => 'uri',
+        'partner_signup_url' => 'uri',
         'free_trial_available' => null,
         'auth_type' => null,
         'auth_only' => null,
@@ -158,6 +160,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'logo_url' => 'logo_url',
         'website_url' => 'website_url',
         'signup_url' => 'signup_url',
+        'partner_signup_url' => 'partner_signup_url',
         'free_trial_available' => 'free_trial_available',
         'auth_type' => 'auth_type',
         'auth_only' => 'auth_only',
@@ -192,6 +195,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'logo_url' => 'setLogoUrl',
         'website_url' => 'setWebsiteUrl',
         'signup_url' => 'setSignupUrl',
+        'partner_signup_url' => 'setPartnerSignupUrl',
         'free_trial_available' => 'setFreeTrialAvailable',
         'auth_type' => 'setAuthType',
         'auth_only' => 'setAuthOnly',
@@ -226,6 +230,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         'logo_url' => 'getLogoUrl',
         'website_url' => 'getWebsiteUrl',
         'signup_url' => 'getSignupUrl',
+        'partner_signup_url' => 'getPartnerSignupUrl',
         'free_trial_available' => 'getFreeTrialAvailable',
         'auth_type' => 'getAuthType',
         'auth_only' => 'getAuthOnly',
@@ -364,6 +369,7 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['logo_url'] = $data['logo_url'] ?? null;
         $this->container['website_url'] = $data['website_url'] ?? null;
         $this->container['signup_url'] = $data['signup_url'] ?? null;
+        $this->container['partner_signup_url'] = $data['partner_signup_url'] ?? null;
         $this->container['free_trial_available'] = $data['free_trial_available'] ?? null;
         $this->container['auth_type'] = $data['auth_type'] ?? null;
         $this->container['auth_only'] = $data['auth_only'] ?? null;
@@ -623,6 +629,30 @@ class Connector implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSignupUrl($signup_url)
     {
         $this->container['signup_url'] = $signup_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_signup_url
+     *
+     * @return string|null
+     */
+    public function getPartnerSignupUrl()
+    {
+        return $this->container['partner_signup_url'];
+    }
+
+    /**
+     * Sets partner_signup_url
+     *
+     * @param string|null $partner_signup_url Link to the connector's partner program signup page.
+     *
+     * @return self
+     */
+    public function setPartnerSignupUrl($partner_signup_url)
+    {
+        $this->container['partner_signup_url'] = $partner_signup_url;
 
         return $this;
     }
