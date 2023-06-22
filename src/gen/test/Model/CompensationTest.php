@@ -80,54 +80,63 @@ class CompensationTest extends TestCase
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "id"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "net_pay"
+     * Test attribute "job_id"
      */
-    public function testPropertyNetPay()
+    public function testPropertyJobId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "gross_pay"
+     * Test attribute "rate"
      */
-    public function testPropertyGrossPay()
+    public function testPropertyRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "taxes"
+     * Test attribute "payment_unit"
      */
-    public function testPropertyTaxes()
+    public function testPropertyPaymentUnit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "deductions"
+     * Test attribute "currency"
      */
-    public function testPropertyDeductions()
+    public function testPropertyCurrency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "benefits"
+     * Test attribute "flsa_status"
      */
-    public function testPropertyBenefits()
+    public function testPropertyFlsaStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "effective_date"
+     */
+    public function testPropertyEffectiveDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

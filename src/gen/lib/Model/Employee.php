@@ -101,8 +101,8 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'source' => 'string',
         'source_id' => 'string',
         'record_url' => 'string',
-        'jobs' => '\Apideck\Client\Model\EmployeeJobs[]',
-        'compensations' => '\Apideck\Client\Model\EmployeeCompensations[]',
+        'jobs' => '\Apideck\Client\Model\Job[]',
+        'compensations' => '\Apideck\Client\Model\Compensation[]',
         'works_remote' => 'bool',
         'addresses' => '\Apideck\Client\Model\Address[]',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
@@ -1640,7 +1640,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets jobs
      *
-     * @return \Apideck\Client\Model\EmployeeJobs[]|null
+     * @return \Apideck\Client\Model\Job[]|null
      */
     public function getJobs()
     {
@@ -1650,7 +1650,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets jobs
      *
-     * @param \Apideck\Client\Model\EmployeeJobs[]|null $jobs jobs
+     * @param \Apideck\Client\Model\Job[]|null $jobs jobs
      *
      * @return self
      */
@@ -1664,7 +1664,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets compensations
      *
-     * @return \Apideck\Client\Model\EmployeeCompensations[]|null
+     * @return \Apideck\Client\Model\Compensation[]|null
      */
     public function getCompensations()
     {
@@ -1674,7 +1674,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets compensations
      *
-     * @param \Apideck\Client\Model\EmployeeCompensations[]|null $compensations compensations
+     * @param \Apideck\Client\Model\Compensation[]|null $compensations compensations
      *
      * @return self
      */

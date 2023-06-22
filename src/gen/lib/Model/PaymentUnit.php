@@ -53,6 +53,8 @@ class PaymentUnit
 
     const PAYCHECK = 'paycheck';
 
+    const OTHER = 'other';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -64,7 +66,8 @@ class PaymentUnit
             self::WEEK,
             self::MONTH,
             self::YEAR,
-            self::PAYCHECK
+            self::PAYCHECK,
+            self::OTHER
         ];
     }
 }
