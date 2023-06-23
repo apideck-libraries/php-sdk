@@ -96,6 +96,8 @@ class WebhookEventType
 
     const VAULT_CONNECTION_CALLABLE = 'vault.connection.callable';
 
+    const VAULT_CONNECTION_REVOKED = 'vault.connection.revoked';
+
     const VAULT_CONNECTION_TOKEN_REFRESH_FAILED = 'vault.connection.token_refresh.failed';
 
     const ATS_JOB_CREATED = 'ats.job.created';
@@ -278,6 +280,7 @@ class WebhookEventType
             self::VAULT_CONNECTION_DISABLED,
             self::VAULT_CONNECTION_DELETED,
             self::VAULT_CONNECTION_CALLABLE,
+            self::VAULT_CONNECTION_REVOKED,
             self::VAULT_CONNECTION_TOKEN_REFRESH_FAILED,
             self::ATS_JOB_CREATED,
             self::ATS_JOB_UPDATED,

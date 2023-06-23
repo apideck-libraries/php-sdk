@@ -236,6 +236,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     const EVENTS_VAULT_CONNECTION_DISABLED = 'vault.connection.disabled';
     const EVENTS_VAULT_CONNECTION_DELETED = 'vault.connection.deleted';
     const EVENTS_VAULT_CONNECTION_CALLABLE = 'vault.connection.callable';
+    const EVENTS_VAULT_CONNECTION_REVOKED = 'vault.connection.revoked';
     const EVENTS_VAULT_CONNECTION_TOKEN_REFRESH_FAILED = 'vault.connection.token_refresh.failed';
     const EVENTS_ATS_JOB_CREATED = 'ats.job.created';
     const EVENTS_ATS_JOB_UPDATED = 'ats.job.updated';
@@ -362,6 +363,7 @@ class ConnectionWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
             self::EVENTS_VAULT_CONNECTION_DISABLED,
             self::EVENTS_VAULT_CONNECTION_DELETED,
             self::EVENTS_VAULT_CONNECTION_CALLABLE,
+            self::EVENTS_VAULT_CONNECTION_REVOKED,
             self::EVENTS_VAULT_CONNECTION_TOKEN_REFRESH_FAILED,
             self::EVENTS_ATS_JOB_CREATED,
             self::EVENTS_ATS_JOB_UPDATED,
