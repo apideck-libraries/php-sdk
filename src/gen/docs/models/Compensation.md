@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `flsa_status` | **string** | The FLSA status for this compensation. | [optional] 
 `effective_date` | **string** | The date on which a change to an employee's compensation takes effect. | [optional] 
+`payment_frequency` | **string** | Frequency of employee compensation. | [optional] 
 
 
 
@@ -32,12 +33,30 @@ Name | Type | Description | Notes
 
 
 
+<a name="PAYMENT_FREQUENCY"></a>
+## Enum: Compensation.payment_frequency
+
+
+* `WEEKLY` (value: `'weekly'`)
+
+* `BIWEEKLY` (value: `'biweekly'`)
+
+* `MONTHLY` (value: `'monthly'`)
+
+* `PRO_RATA` (value: `'pro-rata'`)
+
+* `OTHER` (value: `'other'`)
+
+
+
+
 ## Referenced Types:
 
 
 
 * [`PaymentUnit`](PaymentUnit.md)
 * [`Currency`](Currency.md)
+
 
 
 
