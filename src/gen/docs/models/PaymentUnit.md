@@ -13,6 +13,8 @@
 
 * `PAYCHECK` (value: `'paycheck'`)
 
+* `OTHER` (value: `'other'`)
+
 
 ---
 

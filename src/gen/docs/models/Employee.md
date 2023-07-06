@@ -47,8 +47,8 @@ Name | Type | Description | Notes
 `source` | **string** | When the employee is imported as a new hire, this field indicates what system (e.g. the name of the ATS) this employee was imported from. | [optional] 
 `source_id` | **string** | Unique identifier of the employee in the system this employee was imported from (e.g. the ID in the ATS). | [optional] 
 `record_url` | **string** |  | [optional] 
-`jobs` | [**\Apideck\Client\Model\EmployeeJobs[]**](EmployeeJobs.md) |  | [optional] 
-`compensations` | [**\Apideck\Client\Model\EmployeeCompensations[]**](EmployeeCompensations.md) |  | [optional] 
+`jobs` | [**\Apideck\Client\Model\Job[]**](Job.md) |  | [optional] 
+`compensations` | [**\Apideck\Client\Model\Compensation[]**](Compensation.md) |  | [optional] 
 `works_remote` | **bool** | Indicates if the employee works from a remote location. | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
@@ -130,8 +130,8 @@ Name | Type | Description | Notes
 
 
 
-* [`EmployeeJobs`](EmployeeJobs.md)
-* [`EmployeeCompensations`](EmployeeCompensations.md)
+* [`Job`](Job.md)
+* [`Compensation`](Compensation.md)
 
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)

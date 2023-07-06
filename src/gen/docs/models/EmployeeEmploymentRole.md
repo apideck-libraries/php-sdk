@@ -41,6 +41,8 @@ Name | Type | Description | Notes
 
 * `HOURLY` (value: `'hourly'`)
 
+* `OTHER` (value: `'other'`)
+
 
 
 

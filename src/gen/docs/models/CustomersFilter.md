@@ -10,7 +10,23 @@ Name | Type | Description | Notes
 `first_name` | **string** | First name of customer to search for | [optional] 
 `last_name` | **string** | Last name of customer to search for | [optional] 
 `email` | **string** | Email of customer to search for | [optional] 
+`status` | **string** | Status of customer to filter on | [optional] 
 
+
+
+
+
+<a name="STATUS"></a>
+## Enum: CustomersFilter.status
+
+
+* `ACTIVE` (value: `'active'`)
+
+* `INACTIVE` (value: `'inactive'`)
+
+* `ARCHIVED` (value: `'archived'`)
+
+* `ALL` (value: `'all'`)
 
 
 

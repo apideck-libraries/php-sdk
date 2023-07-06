@@ -239,9 +239,7 @@ docs/Model/EcommerceProductVariants.md
 docs/Model/EcommerceStore.md
 docs/Model/Email.md
 docs/Model/Employee.md
-docs/Model/EmployeeCompensations.md
 docs/Model/EmployeeEmploymentRole.md
-docs/Model/EmployeeJobs.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
@@ -408,7 +406,6 @@ docs/Model/Job.md
 docs/Model/JobLinks.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
-docs/Model/JobsFilter.md
 docs/Model/JournalEntry.md
 docs/Model/JournalEntryLineItem.md
 docs/Model/Lead.md
@@ -839,9 +836,7 @@ lib/Model/EcommerceProductVariants.php
 lib/Model/EcommerceStore.php
 lib/Model/Email.php
 lib/Model/Employee.php
-lib/Model/EmployeeCompensations.php
 lib/Model/EmployeeEmploymentRole.php
-lib/Model/EmployeeJobs.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
@@ -1008,7 +1003,6 @@ lib/Model/Job.php
 lib/Model/JobLinks.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
-lib/Model/JobsFilter.php
 lib/Model/JournalEntry.php
 lib/Model/JournalEntryLineItem.php
 lib/Model/Lead.php
@@ -1435,9 +1429,7 @@ test/Model/EcommerceProductTest.php
 test/Model/EcommerceProductVariantsTest.php
 test/Model/EcommerceStoreTest.php
 test/Model/EmailTest.php
-test/Model/EmployeeCompensationsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
-test/Model/EmployeeJobsTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
@@ -1605,7 +1597,6 @@ test/Model/JobLinksTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
-test/Model/JobsFilterTest.php
 test/Model/JournalEntryLineItemTest.php
 test/Model/JournalEntryTest.php
 test/Model/LeadEventTypeTest.php
