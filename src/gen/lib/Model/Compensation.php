@@ -201,6 +201,7 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
     const FLSA_STATUS_SALARIED_NONEXEMPT = 'salaried-nonexempt';
     const FLSA_STATUS_NONEXEMPT = 'nonexempt';
     const FLSA_STATUS_OWNER = 'owner';
+    const FLSA_STATUS_OTHER = 'other';
     const PAYMENT_FREQUENCY_WEEKLY = 'weekly';
     const PAYMENT_FREQUENCY_BIWEEKLY = 'biweekly';
     const PAYMENT_FREQUENCY_MONTHLY = 'monthly';
@@ -219,6 +220,7 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
             self::FLSA_STATUS_SALARIED_NONEXEMPT,
             self::FLSA_STATUS_NONEXEMPT,
             self::FLSA_STATUS_OWNER,
+            self::FLSA_STATUS_OTHER,
         ];
     }
 
