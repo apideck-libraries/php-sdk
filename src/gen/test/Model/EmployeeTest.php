@@ -233,6 +233,15 @@ class EmployeeTest extends TestCase
     }
 
     /**
+     * Test attribute "teams"
+     */
+    public function testPropertyTeams()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "company_id"
      */
     public function testPropertyCompanyId()

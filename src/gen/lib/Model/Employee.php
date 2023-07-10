@@ -75,7 +75,8 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department' => 'string',
         'department_id' => 'string',
         'department_name' => 'string',
-        'team' => '\Apideck\Client\Model\EmployeeTeam',
+        'team' => '\Apideck\Client\Model\Team',
+        'teams' => '\Apideck\Client\Model\Team[]',
         'company_id' => 'string',
         'company_name' => 'string',
         'employment_start_date' => 'string',
@@ -149,6 +150,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department_id' => null,
         'department_name' => null,
         'team' => null,
+        'teams' => null,
         'company_id' => null,
         'company_name' => null,
         'employment_start_date' => null,
@@ -241,6 +243,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department_id' => 'department_id',
         'department_name' => 'department_name',
         'team' => 'team',
+        'teams' => 'teams',
         'company_id' => 'company_id',
         'company_name' => 'company_name',
         'employment_start_date' => 'employment_start_date',
@@ -312,6 +315,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department_id' => 'setDepartmentId',
         'department_name' => 'setDepartmentName',
         'team' => 'setTeam',
+        'teams' => 'setTeams',
         'company_id' => 'setCompanyId',
         'company_name' => 'setCompanyName',
         'employment_start_date' => 'setEmploymentStartDate',
@@ -383,6 +387,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department_id' => 'getDepartmentId',
         'department_name' => 'getDepartmentName',
         'team' => 'getTeam',
+        'teams' => 'getTeams',
         'company_id' => 'getCompanyId',
         'company_name' => 'getCompanyName',
         'employment_start_date' => 'getEmploymentStartDate',
@@ -524,6 +529,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['department_id'] = $data['department_id'] ?? null;
         $this->container['department_name'] = $data['department_name'] ?? null;
         $this->container['team'] = $data['team'] ?? null;
+        $this->container['teams'] = $data['teams'] ?? null;
         $this->container['company_id'] = $data['company_id'] ?? null;
         $this->container['company_name'] = $data['company_name'] ?? null;
         $this->container['employment_start_date'] = $data['employment_start_date'] ?? null;
@@ -1005,7 +1011,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets team
      *
-     * @return \Apideck\Client\Model\EmployeeTeam|null
+     * @return \Apideck\Client\Model\Team|null
      */
     public function getTeam()
     {
@@ -1015,13 +1021,37 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets team
      *
-     * @param \Apideck\Client\Model\EmployeeTeam|null $team team
+     * @param \Apideck\Client\Model\Team|null $team team
      *
      * @return self
      */
     public function setTeam($team)
     {
         $this->container['team'] = $team;
+
+        return $this;
+    }
+
+    /**
+     * Gets teams
+     *
+     * @return \Apideck\Client\Model\Team[]|null
+     */
+    public function getTeams()
+    {
+        return $this->container['teams'];
+    }
+
+    /**
+     * Sets teams
+     *
+     * @param \Apideck\Client\Model\Team[]|null $teams teams
+     *
+     * @return self
+     */
+    public function setTeams($teams)
+    {
+        $this->container['teams'] = $teams;
 
         return $this;
     }

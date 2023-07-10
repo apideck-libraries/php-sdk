@@ -245,7 +245,6 @@ docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
-docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
 docs/Model/EmployeesSort.md
 docs/Model/EmploymentStatus.md
@@ -517,6 +516,7 @@ docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
+docs/Model/Team.md
 docs/Model/Tender.md
 docs/Model/Ticket.md
 docs/Model/TicketsSort.md
@@ -843,7 +843,6 @@ lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
-lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
 lib/Model/EmployeesSort.php
 lib/Model/EmploymentStatus.php
@@ -1116,6 +1115,7 @@ lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
+lib/Model/Team.php
 lib/Model/Tender.php
 lib/Model/Ticket.php
 lib/Model/TicketsSort.php
@@ -1437,7 +1437,6 @@ test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
-test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php
 test/Model/EmployeesSortTest.php
@@ -1710,6 +1709,7 @@ test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
+test/Model/TeamTest.php
 test/Model/TenderTest.php
 test/Model/TicketTest.php
 test/Model/TicketsSortTest.php
