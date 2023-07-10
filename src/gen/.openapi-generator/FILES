@@ -239,6 +239,7 @@ docs/Model/EcommerceProductVariants.md
 docs/Model/EcommerceStore.md
 docs/Model/Email.md
 docs/Model/Employee.md
+docs/Model/EmployeeBankAccounts.md
 docs/Model/EmployeeEmploymentRole.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
@@ -836,6 +837,7 @@ lib/Model/EcommerceProductVariants.php
 lib/Model/EcommerceStore.php
 lib/Model/Email.php
 lib/Model/Employee.php
+lib/Model/EmployeeBankAccounts.php
 lib/Model/EmployeeEmploymentRole.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
@@ -1429,6 +1431,7 @@ test/Model/EcommerceProductTest.php
 test/Model/EcommerceProductVariantsTest.php
 test/Model/EcommerceStoreTest.php
 test/Model/EmailTest.php
+test/Model/EmployeeBankAccountsTest.php
 test/Model/EmployeeEmploymentRoleTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
