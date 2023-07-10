@@ -1,6 +1,6 @@
 <?php
 /**
- * Team
+ * EmployeeTeam
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * Team Class Doc Comment
+ * EmployeeTeam Class Doc Comment
  *
  * @category Class
  * @description The team the person is currently in.
@@ -43,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Team implements ModelInterface, ArrayAccess, \JsonSerializable
+class EmployeeTeam implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class Team implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Team';
+    protected static $openAPIModelName = 'Employee_team';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
