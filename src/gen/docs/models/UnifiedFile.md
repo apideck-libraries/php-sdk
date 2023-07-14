@@ -16,7 +16,10 @@ Name | Type | Description | Notes
 `size` | **int** | The size of the file in bytes | [optional] 
 `owner` | [**\Apideck\Client\Model\Owner**](Owner.md) |  | [optional] 
 `parent_folders` | [**\Apideck\Client\Model\LinkedFolder[]**](LinkedFolder.md) | The parent folders of the file, starting from the root | [optional] 
-`parent_folders_complete` | **bool** | Whether the list of parent folder is complete. Some connectors only return the direct parent of a file | [optional] 
+`parent_folders_complete` | **bool** | Whether the list of parent folders is complete. Some connectors only return the direct parent of a file | [optional] 
+`permissions` | [**\Apideck\Client\Model\UnifiedFilePermissions**](UnifiedFilePermissions.md) |  | [optional] 
+`exportable` | **bool** | Whether the current file is exportable to other file formats. This property is relevant for proprietary file formats such as Google Docs or Dropbox Paper. | [optional] 
+`export_formats` | **string[]** | The available file formats when exporting this file. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -38,6 +41,9 @@ Name | Type | Description | Notes
 
 * [`Owner`](Owner.md)
 * [`LinkedFolder`](LinkedFolder.md)
+
+* [`UnifiedFilePermissions`](UnifiedFilePermissions.md)
+
 
 
 

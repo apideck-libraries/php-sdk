@@ -55,6 +55,7 @@ Name | Type | Description | Notes
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `social_links` | [**\Apideck\Client\Model\ApplicantSocialLinks[]**](ApplicantSocialLinks.md) |  | [optional] 
+`bank_accounts` | [**\Apideck\Client\Model\EmployeeBankAccounts[]**](EmployeeBankAccounts.md) |  | [optional] 
 `tax_code` | **string** |  | [optional] 
 `tax_id` | **string** |  | [optional] 
 `dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
@@ -138,6 +139,7 @@ Name | Type | Description | Notes
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
 * [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
+* [`EmployeeBankAccounts`](EmployeeBankAccounts.md)
 
 
 
