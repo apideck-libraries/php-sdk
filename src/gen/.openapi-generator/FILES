@@ -530,6 +530,7 @@ docs/Model/UnauthorizedResponse.md
 docs/Model/UnexpectedErrorResponse.md
 docs/Model/UnifiedApiId.md
 docs/Model/UnifiedFile.md
+docs/Model/UnifiedFilePermissions.md
 docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
 docs/Model/UpdateActivityResponse.md
@@ -1129,6 +1130,7 @@ lib/Model/UnauthorizedResponse.php
 lib/Model/UnexpectedErrorResponse.php
 lib/Model/UnifiedApiId.php
 lib/Model/UnifiedFile.php
+lib/Model/UnifiedFilePermissions.php
 lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
 lib/Model/UpdateActivityResponse.php
@@ -1722,6 +1724,7 @@ test/Model/TrackingItemTest.php
 test/Model/UnauthorizedResponseTest.php
 test/Model/UnexpectedErrorResponseTest.php
 test/Model/UnifiedApiIdTest.php
+test/Model/UnifiedFilePermissionsTest.php
 test/Model/UnifiedFileTest.php
 test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php

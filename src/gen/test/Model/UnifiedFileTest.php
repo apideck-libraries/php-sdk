@@ -188,6 +188,33 @@ class UnifiedFileTest extends TestCase
     }
 
     /**
+     * Test attribute "permissions"
+     */
+    public function testPropertyPermissions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "exportable"
+     */
+    public function testPropertyExportable()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "export_formats"
+     */
+    public function testPropertyExportFormats()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

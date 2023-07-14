@@ -71,6 +71,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'owner' => '\Apideck\Client\Model\Owner',
         'parent_folders' => '\Apideck\Client\Model\LinkedFolder[]',
         'parent_folders_complete' => 'bool',
+        'permissions' => '\Apideck\Client\Model\UnifiedFilePermissions',
+        'exportable' => 'bool',
+        'export_formats' => 'string[]',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -97,6 +100,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'owner' => null,
         'parent_folders' => null,
         'parent_folders_complete' => null,
+        'permissions' => null,
+        'exportable' => null,
+        'export_formats' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -142,6 +148,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'owner' => 'owner',
         'parent_folders' => 'parent_folders',
         'parent_folders_complete' => 'parent_folders_complete',
+        'permissions' => 'permissions',
+        'exportable' => 'exportable',
+        'export_formats' => 'export_formats',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -166,6 +175,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'owner' => 'setOwner',
         'parent_folders' => 'setParentFolders',
         'parent_folders_complete' => 'setParentFoldersComplete',
+        'permissions' => 'setPermissions',
+        'exportable' => 'setExportable',
+        'export_formats' => 'setExportFormats',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -190,6 +202,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'owner' => 'getOwner',
         'parent_folders' => 'getParentFolders',
         'parent_folders_complete' => 'getParentFoldersComplete',
+        'permissions' => 'getPermissions',
+        'exportable' => 'getExportable',
+        'export_formats' => 'getExportFormats',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -265,6 +280,9 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['owner'] = $data['owner'] ?? null;
         $this->container['parent_folders'] = $data['parent_folders'] ?? null;
         $this->container['parent_folders_complete'] = $data['parent_folders_complete'] ?? null;
+        $this->container['permissions'] = $data['permissions'] ?? null;
+        $this->container['exportable'] = $data['exportable'] ?? null;
+        $this->container['export_formats'] = $data['export_formats'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -581,13 +599,85 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parent_folders_complete
      *
-     * @param bool|null $parent_folders_complete Whether the list of parent folder is complete. Some connectors only return the direct parent of a file
+     * @param bool|null $parent_folders_complete Whether the list of parent folders is complete. Some connectors only return the direct parent of a file
      *
      * @return self
      */
     public function setParentFoldersComplete($parent_folders_complete)
     {
         $this->container['parent_folders_complete'] = $parent_folders_complete;
+
+        return $this;
+    }
+
+    /**
+     * Gets permissions
+     *
+     * @return \Apideck\Client\Model\UnifiedFilePermissions|null
+     */
+    public function getPermissions()
+    {
+        return $this->container['permissions'];
+    }
+
+    /**
+     * Sets permissions
+     *
+     * @param \Apideck\Client\Model\UnifiedFilePermissions|null $permissions permissions
+     *
+     * @return self
+     */
+    public function setPermissions($permissions)
+    {
+        $this->container['permissions'] = $permissions;
+
+        return $this;
+    }
+
+    /**
+     * Gets exportable
+     *
+     * @return bool|null
+     */
+    public function getExportable()
+    {
+        return $this->container['exportable'];
+    }
+
+    /**
+     * Sets exportable
+     *
+     * @param bool|null $exportable Whether the current file is exportable to other file formats. This property is relevant for proprietary file formats such as Google Docs or Dropbox Paper.
+     *
+     * @return self
+     */
+    public function setExportable($exportable)
+    {
+        $this->container['exportable'] = $exportable;
+
+        return $this;
+    }
+
+    /**
+     * Gets export_formats
+     *
+     * @return string[]|null
+     */
+    public function getExportFormats()
+    {
+        return $this->container['export_formats'];
+    }
+
+    /**
+     * Sets export_formats
+     *
+     * @param string[]|null $export_formats The available file formats when exporting this file.
+     *
+     * @return self
+     */
+    public function setExportFormats($export_formats)
+    {
+        $this->container['export_formats'] = $export_formats;
 
         return $this;
     }
