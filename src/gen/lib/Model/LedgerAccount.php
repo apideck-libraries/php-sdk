@@ -335,6 +335,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     const TYPE_CURRENT_LIABILITY = 'current_liability';
     const TYPE_NON_CURRENT_LIABILITY = 'non_current_liability';
     const TYPE_OTHER_LIABILITY = 'other_liability';
+    const TYPE_OTHER = 'other';
     const STATUS_ACTIVE = 'active';
     const STATUS_INACTIVE = 'inactive';
     const STATUS_ARCHIVED = 'archived';
@@ -386,6 +387,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
             self::TYPE_CURRENT_LIABILITY,
             self::TYPE_NON_CURRENT_LIABILITY,
             self::TYPE_OTHER_LIABILITY,
+            self::TYPE_OTHER,
         ];
     }
 
