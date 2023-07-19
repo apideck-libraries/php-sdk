@@ -239,13 +239,13 @@ docs/Model/EcommerceProductVariants.md
 docs/Model/EcommerceStore.md
 docs/Model/Email.md
 docs/Model/Employee.md
-docs/Model/EmployeeBankAccounts.md
+docs/Model/EmployeeCompensation.md
 docs/Model/EmployeeEmploymentRole.md
+docs/Model/EmployeeJob.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
-docs/Model/EmployeeTeam.md
 docs/Model/EmployeesFilter.md
 docs/Model/EmployeesSort.md
 docs/Model/EmploymentStatus.md
@@ -466,6 +466,7 @@ docs/Model/PassThroughQuery.md
 docs/Model/Payment.md
 docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
+docs/Model/PaymentFrequency.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
 docs/Model/PaymentsFilter.md
@@ -517,6 +518,7 @@ docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
+docs/Model/Team.md
 docs/Model/Tender.md
 docs/Model/Ticket.md
 docs/Model/TicketsSort.md
@@ -593,6 +595,7 @@ docs/Model/VaultEventType.md
 docs/Model/VirtualWebhooks.md
 docs/Model/WalletDetails.md
 docs/Model/Webhook.md
+docs/Model/WebhookEvent.md
 docs/Model/WebhookEventLog.md
 docs/Model/WebhookEventLogAttempts.md
 docs/Model/WebhookEventLogService.md
@@ -838,13 +841,13 @@ lib/Model/EcommerceProductVariants.php
 lib/Model/EcommerceStore.php
 lib/Model/Email.php
 lib/Model/Employee.php
-lib/Model/EmployeeBankAccounts.php
+lib/Model/EmployeeCompensation.php
 lib/Model/EmployeeEmploymentRole.php
+lib/Model/EmployeeJob.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
-lib/Model/EmployeeTeam.php
 lib/Model/EmployeesFilter.php
 lib/Model/EmployeesSort.php
 lib/Model/EmploymentStatus.php
@@ -1066,6 +1069,7 @@ lib/Model/PassThroughQuery.php
 lib/Model/Payment.php
 lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
+lib/Model/PaymentFrequency.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
 lib/Model/PaymentsFilter.php
@@ -1117,6 +1121,7 @@ lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
+lib/Model/Team.php
 lib/Model/Tender.php
 lib/Model/Ticket.php
 lib/Model/TicketsSort.php
@@ -1193,6 +1198,7 @@ lib/Model/VaultEventType.php
 lib/Model/VirtualWebhooks.php
 lib/Model/WalletDetails.php
 lib/Model/Webhook.php
+lib/Model/WebhookEvent.php
 lib/Model/WebhookEventLog.php
 lib/Model/WebhookEventLogAttempts.php
 lib/Model/WebhookEventLogService.php
@@ -1433,13 +1439,13 @@ test/Model/EcommerceProductTest.php
 test/Model/EcommerceProductVariantsTest.php
 test/Model/EcommerceStoreTest.php
 test/Model/EmailTest.php
-test/Model/EmployeeBankAccountsTest.php
+test/Model/EmployeeCompensationTest.php
 test/Model/EmployeeEmploymentRoleTest.php
+test/Model/EmployeeJobTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
-test/Model/EmployeeTeamTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php
 test/Model/EmployeesSortTest.php
@@ -1660,6 +1666,7 @@ test/Model/PaginationCoverageTest.php
 test/Model/PassThroughQueryTest.php
 test/Model/PaymentAllocationsTest.php
 test/Model/PaymentCardTest.php
+test/Model/PaymentFrequencyTest.php
 test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
@@ -1712,6 +1719,7 @@ test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
 test/Model/TaxTest.php
+test/Model/TeamTest.php
 test/Model/TenderTest.php
 test/Model/TicketTest.php
 test/Model/TicketsSortTest.php
@@ -1792,6 +1800,7 @@ test/Model/WebhookEventLogServiceTest.php
 test/Model/WebhookEventLogTest.php
 test/Model/WebhookEventLogsFilterServiceTest.php
 test/Model/WebhookEventLogsFilterTest.php
+test/Model/WebhookEventTest.php
 test/Model/WebhookEventTypeTest.php
 test/Model/WebhookSubscriptionTest.php
 test/Model/WebhookSupportTest.php

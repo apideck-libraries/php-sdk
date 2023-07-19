@@ -1,6 +1,6 @@
 <?php
 /**
- * CompensationTest
+ * EmployeeJobTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * CompensationTest Class Doc Comment
+ * EmployeeJobTest Class Doc Comment
  *
  * @category    Class
- * @description Compensation
+ * @description EmployeeJob
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class CompensationTest extends TestCase
+class EmployeeJobTest extends TestCase
 {
 
     /**
@@ -71,9 +71,18 @@ class CompensationTest extends TestCase
     }
 
     /**
-     * Test "Compensation"
+     * Test "EmployeeJob"
      */
-    public function testCompensation()
+    public function testEmployeeJob()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,45 +98,90 @@ class CompensationTest extends TestCase
     }
 
     /**
-     * Test attribute "net_pay"
+     * Test attribute "title"
      */
-    public function testPropertyNetPay()
+    public function testPropertyTitle()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "gross_pay"
+     * Test attribute "role"
      */
-    public function testPropertyGrossPay()
+    public function testPropertyRole()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "taxes"
+     * Test attribute "start_date"
      */
-    public function testPropertyTaxes()
+    public function testPropertyStartDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "deductions"
+     * Test attribute "end_date"
      */
-    public function testPropertyDeductions()
+    public function testPropertyEndDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "benefits"
+     * Test attribute "compensation_rate"
      */
-    public function testPropertyBenefits()
+    public function testPropertyCompensationRate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payment_unit"
+     */
+    public function testPropertyPaymentUnit()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "hired_at"
+     */
+    public function testPropertyHiredAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "is_primary"
+     */
+    public function testPropertyIsPrimary()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "location"
+     */
+    public function testPropertyLocation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

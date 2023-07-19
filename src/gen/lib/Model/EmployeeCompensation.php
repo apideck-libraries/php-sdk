@@ -1,6 +1,6 @@
 <?php
 /**
- * Compensation
+ * EmployeeCompensation
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * Compensation Class Doc Comment
+ * EmployeeCompensation Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
+class EmployeeCompensation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Compensation';
+    protected static $openAPIModelName = 'EmployeeCompensation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,12 +59,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'employee_id' => 'string',
-        'net_pay' => 'float',
-        'gross_pay' => 'float',
-        'taxes' => '\Apideck\Client\Model\Tax[]',
-        'deductions' => '\Apideck\Client\Model\Deduction[]',
-        'benefits' => '\Apideck\Client\Model\Benefit[]'
+        'id' => 'string',
+        'job_id' => 'string',
+        'rate' => 'float',
+        'payment_unit' => '\Apideck\Client\Model\PaymentUnit',
+        'currency' => '\Apideck\Client\Model\Currency',
+        'flsa_status' => 'string',
+        'effective_date' => 'string',
+        'payment_frequency' => '\Apideck\Client\Model\PaymentFrequency'
     ];
 
     /**
@@ -75,12 +77,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'employee_id' => null,
-        'net_pay' => null,
-        'gross_pay' => null,
-        'taxes' => null,
-        'deductions' => null,
-        'benefits' => null
+        'id' => null,
+        'job_id' => null,
+        'rate' => null,
+        'payment_unit' => null,
+        'currency' => null,
+        'flsa_status' => null,
+        'effective_date' => null,
+        'payment_frequency' => null
     ];
 
     /**
@@ -110,12 +114,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'employee_id' => 'employee_id',
-        'net_pay' => 'net_pay',
-        'gross_pay' => 'gross_pay',
-        'taxes' => 'taxes',
-        'deductions' => 'deductions',
-        'benefits' => 'benefits'
+        'id' => 'id',
+        'job_id' => 'job_id',
+        'rate' => 'rate',
+        'payment_unit' => 'payment_unit',
+        'currency' => 'currency',
+        'flsa_status' => 'flsa_status',
+        'effective_date' => 'effective_date',
+        'payment_frequency' => 'payment_frequency'
     ];
 
     /**
@@ -124,12 +130,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'employee_id' => 'setEmployeeId',
-        'net_pay' => 'setNetPay',
-        'gross_pay' => 'setGrossPay',
-        'taxes' => 'setTaxes',
-        'deductions' => 'setDeductions',
-        'benefits' => 'setBenefits'
+        'id' => 'setId',
+        'job_id' => 'setJobId',
+        'rate' => 'setRate',
+        'payment_unit' => 'setPaymentUnit',
+        'currency' => 'setCurrency',
+        'flsa_status' => 'setFlsaStatus',
+        'effective_date' => 'setEffectiveDate',
+        'payment_frequency' => 'setPaymentFrequency'
     ];
 
     /**
@@ -138,12 +146,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'employee_id' => 'getEmployeeId',
-        'net_pay' => 'getNetPay',
-        'gross_pay' => 'getGrossPay',
-        'taxes' => 'getTaxes',
-        'deductions' => 'getDeductions',
-        'benefits' => 'getBenefits'
+        'id' => 'getId',
+        'job_id' => 'getJobId',
+        'rate' => 'getRate',
+        'payment_unit' => 'getPaymentUnit',
+        'currency' => 'getCurrency',
+        'flsa_status' => 'getFlsaStatus',
+        'effective_date' => 'getEffectiveDate',
+        'payment_frequency' => 'getPaymentFrequency'
     ];
 
     /**
@@ -187,6 +197,27 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const FLSA_STATUS_EXEMPT = 'exempt';
+    const FLSA_STATUS_SALARIED_NONEXEMPT = 'salaried-nonexempt';
+    const FLSA_STATUS_NONEXEMPT = 'nonexempt';
+    const FLSA_STATUS_OWNER = 'owner';
+    const FLSA_STATUS_OTHER = 'other';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getFlsaStatusAllowableValues()
+    {
+        return [
+            self::FLSA_STATUS_EXEMPT,
+            self::FLSA_STATUS_SALARIED_NONEXEMPT,
+            self::FLSA_STATUS_NONEXEMPT,
+            self::FLSA_STATUS_OWNER,
+            self::FLSA_STATUS_OTHER,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -203,12 +234,14 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['employee_id'] = $data['employee_id'] ?? null;
-        $this->container['net_pay'] = $data['net_pay'] ?? null;
-        $this->container['gross_pay'] = $data['gross_pay'] ?? null;
-        $this->container['taxes'] = $data['taxes'] ?? null;
-        $this->container['deductions'] = $data['deductions'] ?? null;
-        $this->container['benefits'] = $data['benefits'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['job_id'] = $data['job_id'] ?? null;
+        $this->container['rate'] = $data['rate'] ?? null;
+        $this->container['payment_unit'] = $data['payment_unit'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['flsa_status'] = $data['flsa_status'] ?? null;
+        $this->container['effective_date'] = $data['effective_date'] ?? null;
+        $this->container['payment_frequency'] = $data['payment_frequency'] ?? null;
     }
 
     /**
@@ -220,9 +253,15 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['employee_id'] === null) {
-            $invalidProperties[] = "'employee_id' can't be null";
+        $allowedValues = $this->getFlsaStatusAllowableValues();
+        if (!is_null($this->container['flsa_status']) && !in_array($this->container['flsa_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'flsa_status', must be one of '%s'",
+                $this->container['flsa_status'],
+                implode("', '", $allowedValues)
+            );
         }
+
         return $invalidProperties;
     }
 
@@ -239,145 +278,203 @@ class Compensation implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets employee_id
+     * Gets id
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmployeeId()
+    public function getId()
     {
-        return $this->container['employee_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets employee_id
+     * Sets id
      *
-     * @param string $employee_id A unique identifier for an object.
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
-    public function setEmployeeId($employee_id)
+    public function setId($id)
     {
-        $this->container['employee_id'] = $employee_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets net_pay
+     * Gets job_id
+     *
+     * @return string|null
+     */
+    public function getJobId()
+    {
+        return $this->container['job_id'];
+    }
+
+    /**
+     * Sets job_id
+     *
+     * @param string|null $job_id The ID of the job to which the compensation belongs.
+     *
+     * @return self
+     */
+    public function setJobId($job_id)
+    {
+        $this->container['job_id'] = $job_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets rate
      *
      * @return float|null
      */
-    public function getNetPay()
+    public function getRate()
     {
-        return $this->container['net_pay'];
+        return $this->container['rate'];
     }
 
     /**
-     * Sets net_pay
+     * Sets rate
      *
-     * @param float|null $net_pay The employee's net pay. Only available when payroll has been processed
+     * @param float|null $rate The amount paid per payment unit.
      *
      * @return self
      */
-    public function setNetPay($net_pay)
+    public function setRate($rate)
     {
-        $this->container['net_pay'] = $net_pay;
+        $this->container['rate'] = $rate;
 
         return $this;
     }
 
     /**
-     * Gets gross_pay
+     * Gets payment_unit
      *
-     * @return float|null
+     * @return \Apideck\Client\Model\PaymentUnit|null
      */
-    public function getGrossPay()
+    public function getPaymentUnit()
     {
-        return $this->container['gross_pay'];
+        return $this->container['payment_unit'];
     }
 
     /**
-     * Sets gross_pay
+     * Sets payment_unit
      *
-     * @param float|null $gross_pay The employee's gross pay. Only available when payroll has been processed
+     * @param \Apideck\Client\Model\PaymentUnit|null $payment_unit payment_unit
      *
      * @return self
      */
-    public function setGrossPay($gross_pay)
+    public function setPaymentUnit($payment_unit)
     {
-        $this->container['gross_pay'] = $gross_pay;
+        $this->container['payment_unit'] = $payment_unit;
 
         return $this;
     }
 
     /**
-     * Gets taxes
+     * Gets currency
      *
-     * @return \Apideck\Client\Model\Tax[]|null
+     * @return \Apideck\Client\Model\Currency|null
      */
-    public function getTaxes()
+    public function getCurrency()
     {
-        return $this->container['taxes'];
+        return $this->container['currency'];
     }
 
     /**
-     * Sets taxes
+     * Sets currency
      *
-     * @param \Apideck\Client\Model\Tax[]|null $taxes An array of employer and employee taxes for the pay period.
+     * @param \Apideck\Client\Model\Currency|null $currency currency
      *
      * @return self
      */
-    public function setTaxes($taxes)
+    public function setCurrency($currency)
     {
-        $this->container['taxes'] = $taxes;
+        $this->container['currency'] = $currency;
 
         return $this;
     }
 
     /**
-     * Gets deductions
+     * Gets flsa_status
      *
-     * @return \Apideck\Client\Model\Deduction[]|null
+     * @return string|null
      */
-    public function getDeductions()
+    public function getFlsaStatus()
     {
-        return $this->container['deductions'];
+        return $this->container['flsa_status'];
     }
 
     /**
-     * Sets deductions
+     * Sets flsa_status
      *
-     * @param \Apideck\Client\Model\Deduction[]|null $deductions An array of employee deductions for the pay period.
+     * @param string|null $flsa_status The FLSA status for this compensation.
      *
      * @return self
      */
-    public function setDeductions($deductions)
+    public function setFlsaStatus($flsa_status)
     {
-        $this->container['deductions'] = $deductions;
+        $allowedValues = $this->getFlsaStatusAllowableValues();
+        if (!is_null($flsa_status) && !in_array($flsa_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'flsa_status', must be one of '%s'",
+                    $flsa_status,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['flsa_status'] = $flsa_status;
 
         return $this;
     }
 
     /**
-     * Gets benefits
+     * Gets effective_date
      *
-     * @return \Apideck\Client\Model\Benefit[]|null
+     * @return string|null
      */
-    public function getBenefits()
+    public function getEffectiveDate()
     {
-        return $this->container['benefits'];
+        return $this->container['effective_date'];
     }
 
     /**
-     * Sets benefits
+     * Sets effective_date
      *
-     * @param \Apideck\Client\Model\Benefit[]|null $benefits An array of employee benefits for the pay period.
+     * @param string|null $effective_date The date on which a change to an employee's compensation takes effect.
      *
      * @return self
      */
-    public function setBenefits($benefits)
+    public function setEffectiveDate($effective_date)
     {
-        $this->container['benefits'] = $benefits;
+        $this->container['effective_date'] = $effective_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_frequency
+     *
+     * @return \Apideck\Client\Model\PaymentFrequency|null
+     */
+    public function getPaymentFrequency()
+    {
+        return $this->container['payment_frequency'];
+    }
+
+    /**
+     * Sets payment_frequency
+     *
+     * @param \Apideck\Client\Model\PaymentFrequency|null $payment_frequency payment_frequency
+     *
+     * @return self
+     */
+    public function setPaymentFrequency($payment_frequency)
+    {
+        $this->container['payment_frequency'] = $payment_frequency;
 
         return $this;
     }

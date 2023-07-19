@@ -75,7 +75,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'department' => 'string',
         'department_id' => 'string',
         'department_name' => 'string',
-        'team' => '\Apideck\Client\Model\EmployeeTeam',
+        'team' => '\Apideck\Client\Model\Team',
         'company_id' => 'string',
         'company_name' => 'string',
         'employment_start_date' => 'string',
@@ -101,15 +101,15 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'source' => 'string',
         'source_id' => 'string',
         'record_url' => 'string',
-        'jobs' => '\Apideck\Client\Model\Job[]',
-        'compensations' => '\Apideck\Client\Model\Compensation[]',
+        'jobs' => '\Apideck\Client\Model\EmployeeJob[]',
+        'compensations' => '\Apideck\Client\Model\EmployeeCompensation[]',
         'works_remote' => 'bool',
         'addresses' => '\Apideck\Client\Model\Address[]',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'emails' => '\Apideck\Client\Model\Email[]',
         'custom_fields' => '\Apideck\Client\Model\CustomField[]',
-        'social_links' => '\Apideck\Client\Model\ApplicantSocialLinks[]',
-        'bank_accounts' => '\Apideck\Client\Model\EmployeeBankAccounts[]',
+        'social_links' => '\Apideck\Client\Model\SocialLink[]',
+        'bank_accounts' => '\Apideck\Client\Model\BankAccount[]',
         'tax_code' => 'string',
         'tax_id' => 'string',
         'dietary_preference' => 'string',
@@ -1005,7 +1005,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets team
      *
-     * @return \Apideck\Client\Model\EmployeeTeam|null
+     * @return \Apideck\Client\Model\Team|null
      */
     public function getTeam()
     {
@@ -1015,7 +1015,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets team
      *
-     * @param \Apideck\Client\Model\EmployeeTeam|null $team team
+     * @param \Apideck\Client\Model\Team|null $team team
      *
      * @return self
      */
@@ -1265,7 +1265,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets direct_reports
      *
-     * @param string[]|null $direct_reports The direct reports refer to the individuals who report directly to a person in the organizational hierarchy.
+     * @param string[]|null $direct_reports Direct reports is an array of ids that reflect the individuals in an organizational hierarchy who are directly supervised by this specific employee.
      *
      * @return self
      */
@@ -1646,7 +1646,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets jobs
      *
-     * @return \Apideck\Client\Model\Job[]|null
+     * @return \Apideck\Client\Model\EmployeeJob[]|null
      */
     public function getJobs()
     {
@@ -1656,7 +1656,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets jobs
      *
-     * @param \Apideck\Client\Model\Job[]|null $jobs jobs
+     * @param \Apideck\Client\Model\EmployeeJob[]|null $jobs jobs
      *
      * @return self
      */
@@ -1670,7 +1670,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets compensations
      *
-     * @return \Apideck\Client\Model\Compensation[]|null
+     * @return \Apideck\Client\Model\EmployeeCompensation[]|null
      */
     public function getCompensations()
     {
@@ -1680,7 +1680,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets compensations
      *
-     * @param \Apideck\Client\Model\Compensation[]|null $compensations compensations
+     * @param \Apideck\Client\Model\EmployeeCompensation[]|null $compensations compensations
      *
      * @return self
      */
@@ -1814,7 +1814,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets social_links
      *
-     * @return \Apideck\Client\Model\ApplicantSocialLinks[]|null
+     * @return \Apideck\Client\Model\SocialLink[]|null
      */
     public function getSocialLinks()
     {
@@ -1824,7 +1824,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_links
      *
-     * @param \Apideck\Client\Model\ApplicantSocialLinks[]|null $social_links social_links
+     * @param \Apideck\Client\Model\SocialLink[]|null $social_links social_links
      *
      * @return self
      */
@@ -1838,7 +1838,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets bank_accounts
      *
-     * @return \Apideck\Client\Model\EmployeeBankAccounts[]|null
+     * @return \Apideck\Client\Model\BankAccount[]|null
      */
     public function getBankAccounts()
     {
@@ -1848,7 +1848,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bank_accounts
      *
-     * @param \Apideck\Client\Model\EmployeeBankAccounts[]|null $bank_accounts bank_accounts
+     * @param \Apideck\Client\Model\BankAccount[]|null $bank_accounts bank_accounts
      *
      * @return self
      */

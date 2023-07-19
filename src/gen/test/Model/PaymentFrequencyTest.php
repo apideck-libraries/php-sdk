@@ -1,6 +1,6 @@
 <?php
 /**
- * CompensationTest
+ * PaymentFrequencyTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * CompensationTest Class Doc Comment
+ * PaymentFrequencyTest Class Doc Comment
  *
  * @category    Class
- * @description Compensation
+ * @description Frequency of employee compensation.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class CompensationTest extends TestCase
+class PaymentFrequencyTest extends TestCase
 {
 
     /**
@@ -71,63 +71,9 @@ class CompensationTest extends TestCase
     }
 
     /**
-     * Test "Compensation"
+     * Test "PaymentFrequency"
      */
-    public function testCompensation()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "employee_id"
-     */
-    public function testPropertyEmployeeId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "net_pay"
-     */
-    public function testPropertyNetPay()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "gross_pay"
-     */
-    public function testPropertyGrossPay()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "taxes"
-     */
-    public function testPropertyTaxes()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "deductions"
-     */
-    public function testPropertyDeductions()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "benefits"
-     */
-    public function testPropertyBenefits()
+    public function testPaymentFrequency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

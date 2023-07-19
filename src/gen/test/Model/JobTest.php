@@ -89,9 +89,9 @@ class JobTest extends TestCase
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "slug"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertySlug()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -107,72 +107,63 @@ class JobTest extends TestCase
     }
 
     /**
-     * Test attribute "role"
+     * Test attribute "sequence"
      */
-    public function testPropertyRole()
+    public function testPropertySequence()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "start_date"
+     * Test attribute "visibility"
      */
-    public function testPropertyStartDate()
+    public function testPropertyVisibility()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "end_date"
+     * Test attribute "status"
      */
-    public function testPropertyEndDate()
+    public function testPropertyStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "compensation_rate"
+     * Test attribute "code"
      */
-    public function testPropertyCompensationRate()
+    public function testPropertyCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "language"
      */
-    public function testPropertyCurrency()
+    public function testPropertyLanguage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "payment_unit"
+     * Test attribute "employment_terms"
      */
-    public function testPropertyPaymentUnit()
+    public function testPropertyEmploymentTerms()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hired_at"
+     * Test attribute "experience"
      */
-    public function testPropertyHiredAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "is_primary"
-     */
-    public function testPropertyIsPrimary()
+    public function testPropertyExperience()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -182,6 +173,276 @@ class JobTest extends TestCase
      * Test attribute "location"
      */
     public function testPropertyLocation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "remote"
+     */
+    public function testPropertyRemote()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "requisition_id"
+     */
+    public function testPropertyRequisitionId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "department"
+     */
+    public function testPropertyDepartment()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "branch"
+     */
+    public function testPropertyBranch()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "recruiters"
+     */
+    public function testPropertyRecruiters()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "hiring_managers"
+     */
+    public function testPropertyHiringManagers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "followers"
+     */
+    public function testPropertyFollowers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "description_html"
+     */
+    public function testPropertyDescriptionHtml()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "blocks"
+     */
+    public function testPropertyBlocks()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "closing"
+     */
+    public function testPropertyClosing()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "closing_html"
+     */
+    public function testPropertyClosingHtml()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "closing_date"
+     */
+    public function testPropertyClosingDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "salary"
+     */
+    public function testPropertySalary()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "job_portal_url"
+     */
+    public function testPropertyJobPortalUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "record_url"
+     */
+    public function testPropertyRecordUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "confidential"
+     */
+    public function testPropertyConfidential()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "available_to_employees"
+     */
+    public function testPropertyAvailableToEmployees()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "addresses"
+     */
+    public function testPropertyAddresses()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "deleted"
+     */
+    public function testPropertyDeleted()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "owner_id"
+     */
+    public function testPropertyOwnerId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "published_at"
+     */
+    public function testPropertyPublishedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
