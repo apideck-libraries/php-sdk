@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 `department` | **string** | The department the person is currently in. [Deprecated](https://developers.apideck.com/changelog) in favor of the dedicated department_id and department_name field. | [optional] 
 `department_id` | **string** | Unique identifier of the department ID this employee belongs to. | [optional] 
 `department_name` | **string** | Name of the department this employee belongs to. | [optional] 
-`team` | [**\Apideck\Client\Model\EmployeeTeam**](EmployeeTeam.md) |  | [optional] 
+`team` | [**\Apideck\Client\Model\Team**](Team.md) |  | [optional] 
 `company_id` | **string** | The unique identifier of the company. | [optional] 
 `company_name` | **string** | The name of the company. | [optional] 
 `employment_start_date` | **string** | A Start Date is the date that the employee started working at the company | [optional] 
@@ -47,15 +47,15 @@ Name | Type | Description | Notes
 `source` | **string** | When the employee is imported as a new hire, this field indicates what system (e.g. the name of the ATS) this employee was imported from. | [optional] 
 `source_id` | **string** | Unique identifier of the employee in the system this employee was imported from (e.g. the ID in the ATS). | [optional] 
 `record_url` | **string** |  | [optional] 
-`jobs` | [**\Apideck\Client\Model\Job[]**](Job.md) |  | [optional] 
-`compensations` | [**\Apideck\Client\Model\Compensation[]**](Compensation.md) |  | [optional] 
+`jobs` | [**\Apideck\Client\Model\EmployeeJob[]**](EmployeeJob.md) |  | [optional] 
+`compensations` | [**\Apideck\Client\Model\EmployeeCompensation[]**](EmployeeCompensation.md) |  | [optional] 
 `works_remote` | **bool** | Indicates if the employee works from a remote location. | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`social_links` | [**\Apideck\Client\Model\ApplicantSocialLinks[]**](ApplicantSocialLinks.md) |  | [optional] 
-`bank_accounts` | [**\Apideck\Client\Model\EmployeeBankAccounts[]**](EmployeeBankAccounts.md) |  | [optional] 
+`social_links` | [**\Apideck\Client\Model\SocialLink[]**](SocialLink.md) |  | [optional] 
+`bank_accounts` | [**\Apideck\Client\Model\BankAccount[]**](BankAccount.md) |  | [optional] 
 `tax_code` | **string** |  | [optional] 
 `tax_id` | **string** |  | [optional] 
 `dietary_preference` | **string** | Indicate the employee's dietary preference. | [optional] 
@@ -105,7 +105,7 @@ Name | Type | Description | Notes
 
 
 
-* [`EmployeeTeam`](EmployeeTeam.md)
+* [`Team`](Team.md)
 
 
 
@@ -131,15 +131,15 @@ Name | Type | Description | Notes
 
 
 
-* [`Job`](Job.md)
-* [`Compensation`](Compensation.md)
+* [`EmployeeJob`](EmployeeJob.md)
+* [`EmployeeCompensation`](EmployeeCompensation.md)
 
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
-* [`ApplicantSocialLinks`](ApplicantSocialLinks.md)
-* [`EmployeeBankAccounts`](EmployeeBankAccounts.md)
+* [`SocialLink`](SocialLink.md)
+* [`BankAccount`](BankAccount.md)
 
 
 

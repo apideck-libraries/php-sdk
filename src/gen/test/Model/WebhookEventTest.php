@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeBankAccountsTest
+ * WebhookEventTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * EmployeeBankAccountsTest Class Doc Comment
+ * WebhookEventTest Class Doc Comment
  *
  * @category    Class
- * @description EmployeeBankAccounts
+ * @description WebhookEvent
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class EmployeeBankAccountsTest extends TestCase
+class WebhookEventTest extends TestCase
 {
 
     /**
@@ -71,108 +71,90 @@ class EmployeeBankAccountsTest extends TestCase
     }
 
     /**
-     * Test "EmployeeBankAccounts"
+     * Test "WebhookEvent"
      */
-    public function testEmployeeBankAccounts()
+    public function testWebhookEvent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "bank_name"
+     * Test attribute "event_id"
      */
-    public function testPropertyBankName()
+    public function testPropertyEventId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "account_number"
+     * Test attribute "unified_api"
      */
-    public function testPropertyAccountNumber()
+    public function testPropertyUnifiedApi()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "account_name"
+     * Test attribute "service_id"
      */
-    public function testPropertyAccountName()
+    public function testPropertyServiceId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "account_type"
+     * Test attribute "consumer_id"
      */
-    public function testPropertyAccountType()
+    public function testPropertyConsumerId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "iban"
+     * Test attribute "entity_id"
      */
-    public function testPropertyIban()
+    public function testPropertyEntityId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "bic"
+     * Test attribute "entity_type"
      */
-    public function testPropertyBic()
+    public function testPropertyEntityType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "routing_number"
+     * Test attribute "entity_url"
      */
-    public function testPropertyRoutingNumber()
+    public function testPropertyEntityUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "bsb_number"
+     * Test attribute "execution_attempt"
      */
-    public function testPropertyBsbNumber()
+    public function testPropertyExecutionAttempt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "branch_identifier"
+     * Test attribute "occurred_at"
      */
-    public function testPropertyBranchIdentifier()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "bank_code"
-     */
-    public function testPropertyBankCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currency"
-     */
-    public function testPropertyCurrency()
+    public function testPropertyOccurredAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
