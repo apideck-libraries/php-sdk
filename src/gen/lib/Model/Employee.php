@@ -1265,7 +1265,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets direct_reports
      *
-     * @param string[]|null $direct_reports The direct reports refer to the individuals who report directly to a person in the organizational hierarchy.
+     * @param string[]|null $direct_reports Direct reports is an array of ids that reflect the individuals in an organizational hierarchy who are directly supervised by this specific employee.
      *
      * @return self
      */

@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 `employment_status` | [**\Apideck\Client\Model\EmploymentStatus**](EmploymentStatus.md) |  | [optional] 
 `employment_role` | [**\Apideck\Client\Model\EmployeeEmploymentRole**](EmployeeEmploymentRole.md) |  | [optional] 
 `manager` | [**\Apideck\Client\Model\EmployeeManager**](EmployeeManager.md) |  | [optional] 
-`direct_reports` | **string[]** | The direct reports refer to the individuals who report directly to a person in the organizational hierarchy. | [optional] 
+`direct_reports` | **string[]** | Direct reports is an array of ids that reflect the individuals in an organizational hierarchy who are directly supervised by this specific employee. | [optional] 
 `social_security_number` | **string** | A unique identifier assigned by the government. This field is considered sensitive information and may be subject to special security and privacy restrictions. | [optional] 
 `birthday` | **\DateTime** | The date of birth of the person. | [optional] 
 `deceased_on` | **\DateTime** | The date the person deceased. | [optional] 
