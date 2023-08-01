@@ -93,6 +93,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'string',
         'accounting_by_row' => 'bool',
         'bank_account' => '\Apideck\Client\Model\BankAccount',
+        'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -142,6 +143,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => null,
         'accounting_by_row' => null,
         'bank_account' => null,
+        'ledger_account' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -210,6 +212,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'language',
         'accounting_by_row' => 'accounting_by_row',
         'bank_account' => 'bank_account',
+        'ledger_account' => 'ledger_account',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -257,6 +260,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'setLanguage',
         'accounting_by_row' => 'setAccountingByRow',
         'bank_account' => 'setBankAccount',
+        'ledger_account' => 'setLedgerAccount',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -304,6 +308,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'getLanguage',
         'accounting_by_row' => 'getAccountingByRow',
         'bank_account' => 'getBankAccount',
+        'ledger_account' => 'getLedgerAccount',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -452,6 +457,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['language'] = $data['language'] ?? null;
         $this->container['accounting_by_row'] = $data['accounting_by_row'] ?? null;
         $this->container['bank_account'] = $data['bank_account'] ?? null;
+        $this->container['ledger_account'] = $data['ledger_account'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1333,6 +1339,30 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setBankAccount($bank_account)
     {
         $this->container['bank_account'] = $bank_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets ledger_account
+     *
+     * @return \Apideck\Client\Model\LinkedLedgerAccount|null
+     */
+    public function getLedgerAccount()
+    {
+        return $this->container['ledger_account'];
+    }
+
+    /**
+     * Sets ledger_account
+     *
+     * @param \Apideck\Client\Model\LinkedLedgerAccount|null $ledger_account ledger_account
+     *
+     * @return self
+     */
+    public function setLedgerAccount($ledger_account)
+    {
+        $this->container['ledger_account'] = $ledger_account;
 
         return $this;
     }

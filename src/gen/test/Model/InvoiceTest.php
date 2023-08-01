@@ -386,6 +386,15 @@ class InvoiceTest extends TestCase
     }
 
     /**
+     * Test attribute "ledger_account"
+     */
+    public function testPropertyLedgerAccount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()
