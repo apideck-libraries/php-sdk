@@ -296,6 +296,15 @@ class InvoiceTest extends TestCase
     }
 
     /**
+     * Test attribute "tracking_category"
+     */
+    public function testPropertyTrackingCategory()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "line_items"
      */
     public function testPropertyLineItems()

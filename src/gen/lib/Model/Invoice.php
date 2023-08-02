@@ -83,6 +83,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance' => 'float',
         'deposit' => 'float',
         'customer_memo' => 'string',
+        'tracking_category' => '\Apideck\Client\Model\LinkedTrackingCategory',
         'line_items' => '\Apideck\Client\Model\InvoiceLineItem[]',
         'billing_address' => '\Apideck\Client\Model\Address',
         'shipping_address' => '\Apideck\Client\Model\Address',
@@ -133,6 +134,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance' => null,
         'deposit' => null,
         'customer_memo' => null,
+        'tracking_category' => null,
         'line_items' => null,
         'billing_address' => null,
         'shipping_address' => null,
@@ -202,6 +204,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance' => 'balance',
         'deposit' => 'deposit',
         'customer_memo' => 'customer_memo',
+        'tracking_category' => 'tracking_category',
         'line_items' => 'line_items',
         'billing_address' => 'billing_address',
         'shipping_address' => 'shipping_address',
@@ -250,6 +253,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance' => 'setBalance',
         'deposit' => 'setDeposit',
         'customer_memo' => 'setCustomerMemo',
+        'tracking_category' => 'setTrackingCategory',
         'line_items' => 'setLineItems',
         'billing_address' => 'setBillingAddress',
         'shipping_address' => 'setShippingAddress',
@@ -298,6 +302,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance' => 'getBalance',
         'deposit' => 'getDeposit',
         'customer_memo' => 'getCustomerMemo',
+        'tracking_category' => 'getTrackingCategory',
         'line_items' => 'getLineItems',
         'billing_address' => 'getBillingAddress',
         'shipping_address' => 'getShippingAddress',
@@ -447,6 +452,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['balance'] = $data['balance'] ?? null;
         $this->container['deposit'] = $data['deposit'] ?? null;
         $this->container['customer_memo'] = $data['customer_memo'] ?? null;
+        $this->container['tracking_category'] = $data['tracking_category'] ?? null;
         $this->container['line_items'] = $data['line_items'] ?? null;
         $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
@@ -1099,6 +1105,30 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomerMemo($customer_memo)
     {
         $this->container['customer_memo'] = $customer_memo;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking_category
+     *
+     * @return \Apideck\Client\Model\LinkedTrackingCategory|null
+     */
+    public function getTrackingCategory()
+    {
+        return $this->container['tracking_category'];
+    }
+
+    /**
+     * Sets tracking_category
+     *
+     * @param \Apideck\Client\Model\LinkedTrackingCategory|null $tracking_category tracking_category
+     *
+     * @return self
+     */
+    public function setTrackingCategory($tracking_category)
+    {
+        $this->container['tracking_category'] = $tracking_category;
 
         return $this;
     }

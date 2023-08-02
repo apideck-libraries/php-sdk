@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 `balance` | **float** | Balance of invoice due. | [optional] 
 `deposit` | **float** | Amount of deposit made to this invoice. | [optional] 
 `customer_memo` | **string** | Customer memo | [optional] 
+`tracking_category` | [**\Apideck\Client\Model\LinkedTrackingCategory**](LinkedTrackingCategory.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\InvoiceLineItem[]**](InvoiceLineItem.md) |  | [optional] 
 `billing_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 `shipping_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
@@ -117,6 +118,7 @@ Name | Type | Description | Notes
 
 
 
+* [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 * [`InvoiceLineItem`](InvoiceLineItem.md)
 * [`Address`](Address.md)
 * [`Address`](Address.md)

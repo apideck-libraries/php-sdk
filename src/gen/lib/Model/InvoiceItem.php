@@ -76,6 +76,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asset_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'income_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'expense_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
+        'tracking_category' => '\Apideck\Client\Model\LinkedTrackingCategory',
         'active' => 'bool',
         'row_version' => 'string',
         'updated_by' => 'string',
@@ -109,6 +110,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asset_account' => null,
         'income_account' => null,
         'expense_account' => null,
+        'tracking_category' => null,
         'active' => null,
         'row_version' => null,
         'updated_by' => null,
@@ -161,6 +163,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asset_account' => 'asset_account',
         'income_account' => 'income_account',
         'expense_account' => 'expense_account',
+        'tracking_category' => 'tracking_category',
         'active' => 'active',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
@@ -192,6 +195,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asset_account' => 'setAssetAccount',
         'income_account' => 'setIncomeAccount',
         'expense_account' => 'setExpenseAccount',
+        'tracking_category' => 'setTrackingCategory',
         'active' => 'setActive',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
@@ -223,6 +227,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asset_account' => 'getAssetAccount',
         'income_account' => 'getIncomeAccount',
         'expense_account' => 'getExpenseAccount',
+        'tracking_category' => 'getTrackingCategory',
         'active' => 'getActive',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
@@ -322,6 +327,7 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['asset_account'] = $data['asset_account'] ?? null;
         $this->container['income_account'] = $data['income_account'] ?? null;
         $this->container['expense_account'] = $data['expense_account'] ?? null;
+        $this->container['tracking_category'] = $data['tracking_category'] ?? null;
         $this->container['active'] = $data['active'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -777,6 +783,30 @@ class InvoiceItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setExpenseAccount($expense_account)
     {
         $this->container['expense_account'] = $expense_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking_category
+     *
+     * @return \Apideck\Client\Model\LinkedTrackingCategory|null
+     */
+    public function getTrackingCategory()
+    {
+        return $this->container['tracking_category'];
+    }
+
+    /**
+     * Sets tracking_category
+     *
+     * @param \Apideck\Client\Model\LinkedTrackingCategory|null $tracking_category tracking_category
+     *
+     * @return self
+     */
+    public function setTrackingCategory($tracking_category)
+    {
+        $this->container['tracking_category'] = $tracking_category;
 
         return $this;
     }
