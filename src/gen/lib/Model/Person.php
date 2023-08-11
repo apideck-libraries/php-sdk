@@ -380,7 +380,7 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initials
      *
-     * @param string|null $initials initials
+     * @param string|null $initials Initials of the person
      *
      * @return self
      */
@@ -404,7 +404,7 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets birthday
      *
-     * @param \DateTime|null $birthday birthday
+     * @param \DateTime|null $birthday Date of birth
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deceased_on
      *
-     * @param \DateTime|null $deceased_on deceased_on
+     * @param \DateTime|null $deceased_on Date of death
      *
      * @return self
      */

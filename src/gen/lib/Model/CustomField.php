@@ -239,7 +239,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id id
+     * @param string $id Unique identifier for the custom field.
      *
      * @return self
      */
