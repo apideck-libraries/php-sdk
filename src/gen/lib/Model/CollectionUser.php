@@ -284,7 +284,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Full name of the user
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name First name of the user
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name Last name of the user
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email
      *
-     * @param string|null $email email
+     * @param string|null $email Email address of the user
      *
      * @return self
      */

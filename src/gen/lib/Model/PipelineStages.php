@@ -242,7 +242,7 @@ class PipelineStages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the Pipeline Stage.
      *
      * @return self
      */
@@ -266,7 +266,7 @@ class PipelineStages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name The name of the Pipeline Stage.
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class PipelineStages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param string|null $value value
+     * @param string|null $value The value of the Pipeline Stage.
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class PipelineStages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets display_order
      *
-     * @param int|null $display_order display_order
+     * @param int|null $display_order The order in which the Pipeline Stage is displayed in the UI.
      *
      * @return self
      */

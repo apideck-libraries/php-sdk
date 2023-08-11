@@ -459,7 +459,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name of the company
      *
      * @return self
      */
@@ -488,7 +488,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier for the company
      *
      * @return self
      */
@@ -512,7 +512,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets interaction_count
      *
-     * @param int|null $interaction_count interaction_count
+     * @param int|null $interaction_count Number of interactions
      *
      * @return self
      */
@@ -536,7 +536,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner_id
      *
-     * @param string|null $owner_id owner_id
+     * @param string|null $owner_id Owner ID
      *
      * @return self
      */
@@ -560,7 +560,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image
      *
-     * @param string|null $image image
+     * @param string|null $image The Image URL of the company
      *
      * @return self
      */
@@ -584,7 +584,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the company
      *
      * @return self
      */
@@ -608,7 +608,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vat_number
      *
-     * @param string|null $vat_number VAT number
+     * @param string|null $vat_number The VAT number of the company
      *
      * @return self
      */
@@ -656,7 +656,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status status
+     * @param string|null $status The status of the company
      *
      * @return self
      */
@@ -680,7 +680,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fax
      *
-     * @param string|null $fax fax
+     * @param string|null $fax The fax number of the company
      *
      * @return self
      */
@@ -704,7 +704,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets annual_revenue
      *
-     * @param string|null $annual_revenue Annual revenue
+     * @param string|null $annual_revenue The annual revenue of the company
      *
      * @return self
      */
@@ -752,7 +752,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets industry
      *
-     * @param string|null $industry Industry
+     * @param string|null $industry The industry represents the type of business the company is in.
      *
      * @return self
      */
@@ -776,7 +776,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ownership
      *
-     * @param string|null $ownership Ownership
+     * @param string|null $ownership The ownership indicates the type of ownership of the company.
      *
      * @return self
      */
@@ -800,7 +800,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sales_tax_number
      *
-     * @param string|null $sales_tax_number sales_tax_number
+     * @param string|null $sales_tax_number A sales tax number is a unique number that identifies a company for tax purposes.
      *
      * @return self
      */
@@ -824,7 +824,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payee_number
      *
-     * @param string|null $payee_number payee_number
+     * @param string|null $payee_number A payee number is a unique number that identifies a payee for tax purposes.
      *
      * @return self
      */
@@ -1208,7 +1208,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets read_only
      *
-     * @param bool|null $read_only read_only
+     * @param bool|null $read_only Whether the company is read-only or not
      *
      * @return self
      */
@@ -1232,7 +1232,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_activity_at
      *
-     * @param \DateTime|null $last_activity_at last_activity_at
+     * @param \DateTime|null $last_activity_at Last activity date
      *
      * @return self
      */
@@ -1256,7 +1256,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deleted
      *
-     * @param bool|null $deleted deleted
+     * @param bool|null $deleted Whether the company is deleted or not
      *
      * @return self
      */
@@ -1328,7 +1328,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by Updated by user ID
      *
      * @return self
      */
@@ -1352,7 +1352,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by Created by user ID
      *
      * @return self
      */
@@ -1376,7 +1376,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at Last updated date
      *
      * @return self
      */
@@ -1400,7 +1400,7 @@ class Company implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at Creation date
      *
      * @return self
      */

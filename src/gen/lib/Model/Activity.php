@@ -581,7 +581,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string $type type
+     * @param string $type The type of the activity
      *
      * @return self
      */
@@ -615,7 +615,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the activity
      *
      * @return self
      */
@@ -663,7 +663,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets activity_datetime
      *
-     * @param string|null $activity_datetime activity_datetime
+     * @param string|null $activity_datetime The date and time of the activity
      *
      * @return self
      */
@@ -687,7 +687,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets duration_seconds
      *
-     * @param int|null $duration_seconds duration_seconds
+     * @param int|null $duration_seconds The duration of the activity in seconds
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user_id
      *
-     * @param string|null $user_id user_id
+     * @param string|null $user_id The user related to the activity
      *
      * @return self
      */
@@ -740,7 +740,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account_id
      *
-     * @param string|null $account_id account_id
+     * @param string|null $account_id The account related to the activity
      *
      * @return self
      */
@@ -764,7 +764,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact_id
      *
-     * @param string|null $contact_id contact_id
+     * @param string|null $contact_id The contact related to the activity
      *
      * @return self
      */
@@ -788,7 +788,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The company related to the activity
      *
      * @return self
      */
@@ -812,7 +812,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets opportunity_id
      *
-     * @param string|null $opportunity_id opportunity_id
+     * @param string|null $opportunity_id The opportunity related to the activity
      *
      * @return self
      */
@@ -836,7 +836,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lead_id
      *
-     * @param string|null $lead_id lead_id
+     * @param string|null $lead_id The lead related to the activity
      *
      * @return self
      */
@@ -860,7 +860,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner_id
      *
-     * @param string|null $owner_id owner_id
+     * @param string|null $owner_id The owner of the activity
      *
      * @return self
      */
@@ -884,7 +884,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets campaign_id
      *
-     * @param string|null $campaign_id campaign_id
+     * @param string|null $campaign_id The campaign related to the activity
      *
      * @return self
      */
@@ -908,7 +908,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets case_id
      *
-     * @param string|null $case_id case_id
+     * @param string|null $case_id The case related to the activity
      *
      * @return self
      */
@@ -932,7 +932,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets asset_id
      *
-     * @param string|null $asset_id asset_id
+     * @param string|null $asset_id The asset related to the activity
      *
      * @return self
      */
@@ -956,7 +956,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contract_id
      *
-     * @param string|null $contract_id contract_id
+     * @param string|null $contract_id The contract related to the activity
      *
      * @return self
      */
@@ -980,7 +980,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets product_id
      *
-     * @param string|null $product_id product_id
+     * @param string|null $product_id The product related to the activity
      *
      * @return self
      */
@@ -1004,7 +1004,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets solution_id
      *
-     * @param string|null $solution_id solution_id
+     * @param string|null $solution_id The solution related to the activity
      *
      * @return self
      */
@@ -1028,7 +1028,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_object_id
      *
-     * @param string|null $custom_object_id custom_object_id
+     * @param string|null $custom_object_id The custom object related to the activity
      *
      * @return self
      */
@@ -1052,7 +1052,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The title of the activity
      *
      * @return self
      */
@@ -1076,7 +1076,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description A description of the activity
      *
      * @return self
      */
@@ -1100,7 +1100,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets note
      *
-     * @param string|null $note note
+     * @param string|null $note An internal note about the activity
      *
      * @return self
      */
@@ -1124,7 +1124,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets location
      *
-     * @param string|null $location location
+     * @param string|null $location The location of the activity
      *
      * @return self
      */
@@ -1172,7 +1172,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets all_day_event
      *
-     * @param bool|null $all_day_event all_day_event
+     * @param bool|null $all_day_event Whether the Activity is an all day event or not
      *
      * @return self
      */
@@ -1196,7 +1196,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets private
      *
-     * @param bool|null $private private
+     * @param bool|null $private Whether the Activity is private or not
      *
      * @return self
      */
@@ -1220,7 +1220,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets group_event
      *
-     * @param bool|null $group_event group_event
+     * @param bool|null $group_event Whether the Activity is a group event or not
      *
      * @return self
      */
@@ -1244,7 +1244,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets event_sub_type
      *
-     * @param string|null $event_sub_type event_sub_type
+     * @param string|null $event_sub_type The sub type of the group event
      *
      * @return self
      */
@@ -1268,7 +1268,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets group_event_type
      *
-     * @param string|null $group_event_type group_event_type
+     * @param string|null $group_event_type The type of the group event
      *
      * @return self
      */
@@ -1292,7 +1292,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets child
      *
-     * @param bool|null $child child
+     * @param bool|null $child Whether the activity is a child of another activity or not
      *
      * @return self
      */
@@ -1316,7 +1316,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets archived
      *
-     * @param bool|null $archived archived
+     * @param bool|null $archived Whether the activity is archived or not
      *
      * @return self
      */
@@ -1340,7 +1340,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deleted
      *
-     * @param bool|null $deleted deleted
+     * @param bool|null $deleted Whether the activity is deleted or not
      *
      * @return self
      */
@@ -1422,7 +1422,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets start_datetime
      *
-     * @param string|null $start_datetime start_datetime
+     * @param string|null $start_datetime The start date and time of the activity
      *
      * @return self
      */
@@ -1446,7 +1446,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets end_datetime
      *
-     * @param string|null $end_datetime end_datetime
+     * @param string|null $end_datetime The end date and time of the activity
      *
      * @return self
      */
@@ -1470,7 +1470,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets duration_minutes
      *
-     * @param int|null $duration_minutes duration_minutes
+     * @param int|null $duration_minutes The duration of the activity in minutes
      *
      * @return self
      */
@@ -1494,7 +1494,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets activity_date
      *
-     * @param string|null $activity_date activity_date
+     * @param string|null $activity_date The date of the activity
      *
      * @return self
      */
@@ -1518,7 +1518,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets end_date
      *
-     * @param string|null $end_date end_date
+     * @param string|null $end_date The end date of the activity
      *
      * @return self
      */
@@ -1542,7 +1542,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrent
      *
-     * @param bool|null $recurrent recurrent
+     * @param bool|null $recurrent Whether the activity is recurrent or not
      *
      * @return self
      */
@@ -1566,7 +1566,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reminder_datetime
      *
-     * @param string|null $reminder_datetime reminder_datetime
+     * @param string|null $reminder_datetime The date and time of the reminder
      *
      * @return self
      */
@@ -1590,7 +1590,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reminder_set
      *
-     * @param bool|null $reminder_set reminder_set
+     * @param bool|null $reminder_set Whether the reminder is set or not
      *
      * @return self
      */
@@ -1614,7 +1614,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets video_conference_url
      *
-     * @param string|null $video_conference_url video_conference_url
+     * @param string|null $video_conference_url The URL of the video conference
      *
      * @return self
      */
@@ -1638,7 +1638,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets video_conference_id
      *
-     * @param string|null $video_conference_id video_conference_id
+     * @param string|null $video_conference_id The ID of the video conference
      *
      * @return self
      */
@@ -1662,7 +1662,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_fields
      *
-     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields Custom fields of the activity
      *
      * @return self
      */
@@ -1710,7 +1710,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by The user who last updated the activity
      *
      * @return self
      */
@@ -1734,7 +1734,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by The user who created the activity
      *
      * @return self
      */
@@ -1758,7 +1758,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at The date and time when the activity was last updated
      *
      * @return self
      */
@@ -1782,7 +1782,7 @@ class Activity implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param string|null $created_at created_at
+     * @param string|null $created_at The date and time when the activity was created
      *
      * @return self
      */

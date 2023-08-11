@@ -267,7 +267,7 @@ class ApplicantWebsites implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets url
      *
-     * @param string $url url
+     * @param string $url The website URL
      *
      * @return self
      */
@@ -296,7 +296,7 @@ class ApplicantWebsites implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier for the website
      *
      * @return self
      */
@@ -320,7 +320,7 @@ class ApplicantWebsites implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type The type of website
      *
      * @return self
      */

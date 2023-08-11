@@ -297,7 +297,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets number
      *
-     * @param string $number number
+     * @param string $number The phone number
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier of the phone number
      *
      * @return self
      */
@@ -350,7 +350,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets country_code
      *
-     * @param string|null $country_code country_code
+     * @param string|null $country_code The country code of the phone number, e.g. +1
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets area_code
      *
-     * @param string|null $area_code area_code
+     * @param string|null $area_code The area code of the phone number, e.g. 323
      *
      * @return self
      */
@@ -398,7 +398,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets extension
      *
-     * @param string|null $extension extension
+     * @param string|null $extension The extension of the phone number
      *
      * @return self
      */
@@ -422,7 +422,7 @@ class PhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type The type of phone number
      *
      * @return self
      */

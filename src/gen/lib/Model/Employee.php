@@ -2040,7 +2040,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deleted
      *
-     * @param bool|null $deleted deleted
+     * @param bool|null $deleted Flag to indicate if the object is deleted.
      *
      * @return self
      */

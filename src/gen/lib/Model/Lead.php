@@ -64,7 +64,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'owner_id' => 'string',
         'company_id' => 'string',
-        'contact_id' => 'string',
+        'lead_id' => 'string',
         'lead_source' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
@@ -100,7 +100,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'owner_id' => null,
         'company_id' => null,
-        'contact_id' => null,
+        'lead_id' => null,
         'lead_source' => null,
         'first_name' => null,
         'last_name' => null,
@@ -155,7 +155,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'owner_id' => 'owner_id',
         'company_id' => 'company_id',
-        'contact_id' => 'contact_id',
+        'lead_id' => 'lead_id',
         'lead_source' => 'lead_source',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
@@ -189,7 +189,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'owner_id' => 'setOwnerId',
         'company_id' => 'setCompanyId',
-        'contact_id' => 'setContactId',
+        'lead_id' => 'setLeadId',
         'lead_source' => 'setLeadSource',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
@@ -223,7 +223,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'owner_id' => 'getOwnerId',
         'company_id' => 'getCompanyId',
-        'contact_id' => 'getContactId',
+        'lead_id' => 'getLeadId',
         'lead_source' => 'getLeadSource',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
@@ -308,7 +308,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['owner_id'] = $data['owner_id'] ?? null;
         $this->container['company_id'] = $data['company_id'] ?? null;
-        $this->container['contact_id'] = $data['contact_id'] ?? null;
+        $this->container['lead_id'] = $data['lead_id'] ?? null;
         $this->container['lead_source'] = $data['lead_source'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
@@ -386,7 +386,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Full name of the lead.
      *
      * @return self
      */
@@ -415,7 +415,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_name
      *
-     * @param string $company_name company_name
+     * @param string $company_name The name of the company the lead is associated with.
      *
      * @return self
      */
@@ -439,7 +439,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier for the contact.
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner_id
      *
-     * @param string|null $owner_id owner_id
+     * @param string|null $owner_id The owner of the lead.
      *
      * @return self
      */
@@ -487,7 +487,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The company the lead is associated with.
      *
      * @return self
      */
@@ -499,25 +499,25 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets contact_id
+     * Gets lead_id
      *
      * @return string|null
      */
-    public function getContactId()
+    public function getLeadId()
     {
-        return $this->container['contact_id'];
+        return $this->container['lead_id'];
     }
 
     /**
-     * Sets contact_id
+     * Sets lead_id
      *
-     * @param string|null $contact_id contact_id
+     * @param string|null $lead_id The identifier of the lead.
      *
      * @return self
      */
-    public function setContactId($contact_id)
+    public function setLeadId($lead_id)
     {
-        $this->container['contact_id'] = $contact_id;
+        $this->container['lead_id'] = $lead_id;
 
         return $this;
     }
@@ -535,7 +535,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lead_source
      *
-     * @param string|null $lead_source lead_source
+     * @param string|null $lead_source The source of the lead.
      *
      * @return self
      */
@@ -559,7 +559,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the lead.
      *
      * @return self
      */
@@ -583,7 +583,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the lead.
      *
      * @return self
      */
@@ -607,7 +607,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description The description of the lead.
      *
      * @return self
      */
@@ -631,7 +631,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets prefix
      *
-     * @param string|null $prefix prefix
+     * @param string|null $prefix The prefix of the lead.
      *
      * @return self
      */
@@ -655,7 +655,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the lead.
      *
      * @return self
      */
@@ -727,7 +727,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets monetary_amount
      *
-     * @param float|null $monetary_amount monetary_amount
+     * @param float|null $monetary_amount The monetary amount of the lead.
      *
      * @return self
      */
@@ -775,7 +775,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fax
      *
-     * @param string|null $fax fax
+     * @param string|null $fax The fax number of the lead.
      *
      * @return self
      */

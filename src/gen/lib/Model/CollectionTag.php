@@ -251,7 +251,7 @@ class CollectionTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name The name of the tag.
      *
      * @return self
      */

@@ -410,7 +410,7 @@ class BankAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets iban
      *
-     * @param string|null $iban iban
+     * @param string|null $iban The International Bank Account Number (IBAN).
      *
      * @return self
      */
@@ -434,7 +434,7 @@ class BankAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bic
      *
-     * @param string|null $bic bic
+     * @param string|null $bic The Bank Identifier Code (BIC).
      *
      * @return self
      */

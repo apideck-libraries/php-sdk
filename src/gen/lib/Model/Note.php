@@ -290,7 +290,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier of the note
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The title of the note
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets content
      *
-     * @param string|null $content content
+     * @param string|null $content The content of the note.
      *
      * @return self
      */
@@ -362,7 +362,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner_id
      *
-     * @param string|null $owner_id owner_id
+     * @param string|null $owner_id The user that owns the note.
      *
      * @return self
      */
@@ -386,7 +386,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact_id
      *
-     * @param string|null $contact_id contact_id
+     * @param string|null $contact_id The contact that is related to the note.
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The company that is related to the note.
      *
      * @return self
      */
@@ -434,7 +434,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets opportunity_id
      *
-     * @param string|null $opportunity_id opportunity_id
+     * @param string|null $opportunity_id The opportunity that is related to the note.
      *
      * @return self
      */
@@ -458,7 +458,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lead_id
      *
-     * @param string|null $lead_id lead_id
+     * @param string|null $lead_id The lead that is related to the note.
      *
      * @return self
      */
@@ -482,7 +482,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets active
      *
-     * @param bool|null $active active
+     * @param bool|null $active Whether the Note is active or not.
      *
      * @return self
      */
@@ -506,7 +506,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_by
      *
-     * @param string|null $updated_by updated_by
+     * @param string|null $updated_by The user that last updated the note.
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param string|null $created_by created_by
+     * @param string|null $created_by The user that created the note.
      *
      * @return self
      */
@@ -554,7 +554,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at The timestamp when the note was last updated
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param string|null $created_at created_at
+     * @param string|null $created_at The timestamp when the note was created
      *
      * @return self
      */

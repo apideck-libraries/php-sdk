@@ -501,7 +501,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Full name of the contact.
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier for the contact.
      *
      * @return self
      */
@@ -554,7 +554,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner_id
      *
-     * @param string|null $owner_id owner_id
+     * @param string|null $owner_id The owner of the contact.
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type The type of the contact.
      *
      * @return self
      */
@@ -612,7 +612,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id company_id
+     * @param string|null $company_id The company the contact is associated with.
      *
      * @return self
      */
@@ -636,7 +636,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_name
      *
-     * @param string|null $company_name company_name
+     * @param string|null $company_name The name of the company the contact is associated with.
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lead_id
      *
-     * @param string|null $lead_id lead_id
+     * @param string|null $lead_id The lead the contact is associated with.
      *
      * @return self
      */
@@ -684,7 +684,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_name
      *
-     * @param string|null $first_name first_name
+     * @param string|null $first_name The first name of the contact.
      *
      * @return self
      */
@@ -708,7 +708,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets middle_name
      *
-     * @param string|null $middle_name middle_name
+     * @param string|null $middle_name The middle name of the contact.
      *
      * @return self
      */
@@ -732,7 +732,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_name
      *
-     * @param string|null $last_name last_name
+     * @param string|null $last_name The last name of the contact.
      *
      * @return self
      */
@@ -756,7 +756,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets prefix
      *
-     * @param string|null $prefix prefix
+     * @param string|null $prefix The prefix of the contact.
      *
      * @return self
      */
@@ -780,7 +780,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets suffix
      *
-     * @param string|null $suffix suffix
+     * @param string|null $suffix The suffix of the contact.
      *
      * @return self
      */
@@ -804,7 +804,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets title
      *
-     * @param string|null $title title
+     * @param string|null $title The job title of the contact.
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets department
      *
-     * @param string|null $department department
+     * @param string|null $department The department of the contact.
      *
      * @return self
      */
@@ -876,7 +876,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets gender
      *
-     * @param string|null $gender gender
+     * @param string|null $gender The gender of the contact.
      *
      * @return self
      */
@@ -910,7 +910,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets birthday
      *
-     * @param string|null $birthday birthday
+     * @param string|null $birthday The birthday of the contact.
      *
      * @return self
      */
@@ -984,7 +984,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lead_source
      *
-     * @param string|null $lead_source lead_source
+     * @param string|null $lead_source The lead source of the contact.
      *
      * @return self
      */
@@ -1008,7 +1008,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fax
      *
-     * @param string|null $fax fax
+     * @param string|null $fax The fax number of the contact.
      *
      * @return self
      */
@@ -1032,7 +1032,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description The description of the contact.
      *
      * @return self
      */
@@ -1056,7 +1056,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets current_balance
      *
-     * @param float|null $current_balance current_balance
+     * @param float|null $current_balance The current balance of the contact.
      *
      * @return self
      */
@@ -1080,7 +1080,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status status
+     * @param string|null $status The status of the contact.
      *
      * @return self
      */
@@ -1104,7 +1104,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets active
      *
-     * @param bool|null $active active
+     * @param bool|null $active The active status of the contact.
      *
      * @return self
      */
@@ -1320,7 +1320,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_call_at
      *
-     * @param \DateTime|null $first_call_at first_call_at
+     * @param \DateTime|null $first_call_at The first call date of the contact.
      *
      * @return self
      */
@@ -1344,7 +1344,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets first_email_at
      *
-     * @param \DateTime|null $first_email_at first_email_at
+     * @param \DateTime|null $first_email_at The first email date of the contact.
      *
      * @return self
      */
@@ -1368,7 +1368,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets last_activity_at
      *
-     * @param \DateTime|null $last_activity_at last_activity_at
+     * @param \DateTime|null $last_activity_at The last activity date of the contact.
      *
      * @return self
      */
@@ -1392,7 +1392,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param \DateTime|null $updated_at updated_at
+     * @param \DateTime|null $updated_at The last update date of the contact.
      *
      * @return self
      */
@@ -1416,7 +1416,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param \DateTime|null $created_at created_at
+     * @param \DateTime|null $created_at The creation date of the contact.
      *
      * @return self
      */

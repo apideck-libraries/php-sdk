@@ -237,7 +237,7 @@ class SocialLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets url
      *
-     * @param string $url url
+     * @param string $url URL of the social link, e.g. https://www.twitter.com/apideck
      *
      * @return self
      */
@@ -266,7 +266,7 @@ class SocialLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id Unique identifier of the social link
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class SocialLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type Type of the social link, e.g. twitter
      *
      * @return self
      */

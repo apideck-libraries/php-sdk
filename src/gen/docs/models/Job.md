@@ -39,7 +39,7 @@ Name | Type | Description | Notes
 `tags` | **string[]** |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`deleted` | **bool** |  | [optional] 
+`deleted` | **bool** | Flag to indicate if the object is deleted. | [optional] 
 `owner_id` | **string** |  | [optional] 
 `published_at` | **\DateTime** |  | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 

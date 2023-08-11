@@ -359,7 +359,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string|null $id The unique identifier for the user
      *
      * @return self
      */
@@ -383,7 +383,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parent_id
      *
-     * @param string|null $parent_id parent_id
+     * @param string|null $parent_id The parent user id
      *
      * @return self
      */
@@ -407,7 +407,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets username
      *
-     * @param string|null $username username
+     * @param string|null $username The username of the user
      *
      * @return self
      */
@@ -625,7 +625,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image
      *
-     * @param string|null $image image
+     * @param string|null $image The URL of the user's avatar
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status status
+     * @param string|null $status The status of the user
      *
      * @return self
      */
@@ -697,7 +697,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets password
      *
-     * @param string|null $password password
+     * @param string|null $password The password of the user
      *
      * @return self
      */
@@ -769,7 +769,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_at
      *
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at The date and time when the user was last updated.
      *
      * @return self
      */
@@ -793,7 +793,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_at
      *
-     * @param string|null $created_at created_at
+     * @param string|null $created_at The date and time when the user was created.
      *
      * @return self
      */

@@ -125,9 +125,9 @@ class LeadTest extends TestCase
     }
 
     /**
-     * Test attribute "contact_id"
+     * Test attribute "lead_id"
      */
-    public function testPropertyContactId()
+    public function testPropertyLeadId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

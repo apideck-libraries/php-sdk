@@ -5,20 +5,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`id` | **string** |  | [optional] 
-`name` | **string** |  | [optional] 
-`first_name` | **string** |  | [optional] 
-`middle_name` | **string** |  | [optional] 
-`last_name` | **string** |  | [optional] 
-`prefix` | **string** |  | [optional] 
-`suffix` | **string** |  | [optional] 
-`email_address` | **string** |  | [optional] 
-`is_organizer` | **bool** |  | [optional] 
-`status` | **string** |  | [optional] 
-`user_id` | **string** |  | [optional] 
-`contact_id` | **string** |  | [optional] 
-`updated_at` | **\DateTime** |  | [optional] 
-`created_at` | **\DateTime** |  | [optional] 
+`id` | **string** | Unique identifier for the attendee | [optional] 
+`name` | **string** | Full name of the attendee | [optional] 
+`first_name` | **string** | First name of the attendee | [optional] 
+`middle_name` | **string** | Middle name of the attendee | [optional] 
+`last_name` | **string** | Last name of the attendee | [optional] 
+`prefix` | **string** | Prefix of the attendee | [optional] 
+`suffix` | **string** | Suffix of the attendee | [optional] 
+`email_address` | **string** | Email address of the attendee | [optional] 
+`is_organizer` | **bool** | Whether the attendee is the organizer of the activity | [optional] 
+`status` | **string** | Status of the attendee | [optional] 
+`user_id` | **string** | The identifier for a related user | [optional] 
+`contact_id` | **string** | The identifier for a related contact | [optional] 
+`updated_at` | **\DateTime** | The last time the attendee was updated (ISO 8601) | [optional] 
+`created_at` | **\DateTime** | The time the attendee was created (ISO 8601) | [optional] 
 
 
 
