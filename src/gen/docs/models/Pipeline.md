@@ -5,14 +5,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`name` | **string** |  | 
-`id` | **string** |  | [optional] 
+`name` | **string** | The name of the Pipeline. | 
+`id` | **string** | The unique identifier of the Pipeline. | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
-`archived` | **bool** |  | [optional] 
-`active` | **bool** |  | [optional] 
-`display_order` | **int** |  | [optional] 
-`win_probability_enabled` | **bool** |  | [optional] 
-`stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) |  | [optional] 
+`archived` | **bool** | Whether the Pipeline is archived or not. | [optional] 
+`active` | **bool** | Whether the Pipeline is active or not. | [optional] 
+`display_order` | **int** | The order in which the Pipeline is displayed in the UI. | [optional] 
+`win_probability_enabled` | **bool** | Whether the Pipeline has win probability enabled or not. | [optional] 
+`stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) | The Pipeline Stages. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 

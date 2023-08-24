@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 `last_name` | **string** | The last name of the person. | [optional] 
 `middle_name` | **string** | Middle name of the person. | [optional] 
 `gender` | [**\Apideck\Client\Model\Gender**](Gender.md) |  | [optional] 
-`initials` | **string** |  | [optional] 
-`birthday` | **\DateTime** |  | [optional] 
-`deceased_on` | **\DateTime** |  | [optional] 
+`initials` | **string** | Initials of the person | [optional] 
+`birthday` | **\DateTime** | Date of birth | [optional] 
+`deceased_on` | **\DateTime** | Date of death | [optional] 
 
 
 
