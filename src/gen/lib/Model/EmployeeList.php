@@ -1,6 +1,6 @@
 <?php
 /**
- * GetEmployeesResponse
+ * EmployeeList
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * GetEmployeesResponse Class Doc Comment
+ * EmployeeList Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class EmployeeList implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'GetEmployeesResponse';
+    protected static $openAPIModelName = 'EmployeeList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,14 +59,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status_code' => 'int',
-        'status' => 'string',
-        'service' => 'string',
-        'resource' => 'string',
-        'operation' => 'string',
-        'data' => '\Apideck\Client\Model\EmployeeList[]',
-        'meta' => '\Apideck\Client\Model\Meta',
-        'links' => '\Apideck\Client\Model\Links'
+        'id' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'updated_at' => '\DateTime',
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -77,14 +74,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'status_code' => null,
-        'status' => null,
-        'service' => null,
-        'resource' => null,
-        'operation' => null,
-        'data' => null,
-        'meta' => null,
-        'links' => null
+        'id' => null,
+        'first_name' => null,
+        'last_name' => null,
+        'updated_at' => 'date-time',
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -114,14 +108,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_code' => 'status_code',
-        'status' => 'status',
-        'service' => 'service',
-        'resource' => 'resource',
-        'operation' => 'operation',
-        'data' => 'data',
-        'meta' => 'meta',
-        'links' => 'links'
+        'id' => 'id',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'updated_at' => 'updated_at',
+        'created_at' => 'created_at'
     ];
 
     /**
@@ -130,14 +121,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'status_code' => 'setStatusCode',
-        'status' => 'setStatus',
-        'service' => 'setService',
-        'resource' => 'setResource',
-        'operation' => 'setOperation',
-        'data' => 'setData',
-        'meta' => 'setMeta',
-        'links' => 'setLinks'
+        'id' => 'setId',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'updated_at' => 'setUpdatedAt',
+        'created_at' => 'setCreatedAt'
     ];
 
     /**
@@ -146,14 +134,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'status_code' => 'getStatusCode',
-        'status' => 'getStatus',
-        'service' => 'getService',
-        'resource' => 'getResource',
-        'operation' => 'getOperation',
-        'data' => 'getData',
-        'meta' => 'getMeta',
-        'links' => 'getLinks'
+        'id' => 'getId',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'updated_at' => 'getUpdatedAt',
+        'created_at' => 'getCreatedAt'
     ];
 
     /**
@@ -213,14 +198,11 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['status_code'] = $data['status_code'] ?? null;
-        $this->container['status'] = $data['status'] ?? null;
-        $this->container['service'] = $data['service'] ?? null;
-        $this->container['resource'] = $data['resource'] ?? null;
-        $this->container['operation'] = $data['operation'] ?? null;
-        $this->container['data'] = $data['data'] ?? null;
-        $this->container['meta'] = $data['meta'] ?? null;
-        $this->container['links'] = $data['links'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['first_name'] = $data['first_name'] ?? null;
+        $this->container['last_name'] = $data['last_name'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
     }
 
     /**
@@ -232,24 +214,6 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['status_code'] === null) {
-            $invalidProperties[] = "'status_code' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['service'] === null) {
-            $invalidProperties[] = "'service' can't be null";
-        }
-        if ($this->container['resource'] === null) {
-            $invalidProperties[] = "'resource' can't be null";
-        }
-        if ($this->container['operation'] === null) {
-            $invalidProperties[] = "'operation' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -266,193 +230,121 @@ class GetEmployeesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets status_code
+     * Gets id
      *
-     * @return int
+     * @return string|null
      */
-    public function getStatusCode()
+    public function getId()
     {
-        return $this->container['status_code'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets status_code
+     * Sets id
      *
-     * @param int $status_code HTTP Response Status Code
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
-    public function setStatusCode($status_code)
+    public function setId($id)
     {
-        $this->container['status_code'] = $status_code;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets status
+     * Gets first_name
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus()
+    public function getFirstName()
     {
-        return $this->container['status'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets status
+     * Sets first_name
      *
-     * @param string $status HTTP Response Status
+     * @param string|null $first_name The first name of the person.
      *
      * @return self
      */
-    public function setStatus($status)
+    public function setFirstName($first_name)
     {
-        $this->container['status'] = $status;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets service
+     * Gets last_name
      *
-     * @return string
+     * @return string|null
      */
-    public function getService()
+    public function getLastName()
     {
-        return $this->container['service'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets service
+     * Sets last_name
      *
-     * @param string $service Apideck ID of service provider
+     * @param string|null $last_name The last name of the person.
      *
      * @return self
      */
-    public function setService($service)
+    public function setLastName($last_name)
     {
-        $this->container['service'] = $service;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
 
     /**
-     * Gets resource
+     * Gets updated_at
      *
-     * @return string
+     * @return \DateTime|null
      */
-    public function getResource()
+    public function getUpdatedAt()
     {
-        return $this->container['resource'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets resource
+     * Sets updated_at
      *
-     * @param string $resource Unified API resource name
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
      *
      * @return self
      */
-    public function setResource($resource)
+    public function setUpdatedAt($updated_at)
     {
-        $this->container['resource'] = $resource;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
 
     /**
-     * Gets operation
+     * Gets created_at
      *
-     * @return string
+     * @return \DateTime|null
      */
-    public function getOperation()
+    public function getCreatedAt()
     {
-        return $this->container['operation'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets operation
+     * Sets created_at
      *
-     * @param string $operation Operation performed
+     * @param \DateTime|null $created_at The date and time when the object was created.
      *
      * @return self
      */
-    public function setOperation($operation)
+    public function setCreatedAt($created_at)
     {
-        $this->container['operation'] = $operation;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \Apideck\Client\Model\EmployeeList[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \Apideck\Client\Model\EmployeeList[] $data data
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets meta
-     *
-     * @return \Apideck\Client\Model\Meta|null
-     */
-    public function getMeta()
-    {
-        return $this->container['meta'];
-    }
-
-    /**
-     * Sets meta
-     *
-     * @param \Apideck\Client\Model\Meta|null $meta meta
-     *
-     * @return self
-     */
-    public function setMeta($meta)
-    {
-        $this->container['meta'] = $meta;
-
-        return $this;
-    }
-
-    /**
-     * Gets links
-     *
-     * @return \Apideck\Client\Model\Links|null
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     *
-     * @param \Apideck\Client\Model\Links|null $links links
-     *
-     * @return self
-     */
-    public function setLinks($links)
-    {
-        $this->container['links'] = $links;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }

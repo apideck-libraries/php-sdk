@@ -242,6 +242,7 @@ docs/Model/Employee.md
 docs/Model/EmployeeCompensation.md
 docs/Model/EmployeeEmploymentRole.md
 docs/Model/EmployeeJob.md
+docs/Model/EmployeeList.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeePayrolls.md
@@ -844,6 +845,7 @@ lib/Model/Employee.php
 lib/Model/EmployeeCompensation.php
 lib/Model/EmployeeEmploymentRole.php
 lib/Model/EmployeeJob.php
+lib/Model/EmployeeList.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeePayrolls.php
@@ -1442,6 +1444,7 @@ test/Model/EmailTest.php
 test/Model/EmployeeCompensationTest.php
 test/Model/EmployeeEmploymentRoleTest.php
 test/Model/EmployeeJobTest.php
+test/Model/EmployeeListTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
 test/Model/EmployeePayrollsTest.php
