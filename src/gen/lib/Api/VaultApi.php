@@ -1368,7 +1368,19 @@ class VaultApi
         $multipart = false;
 
         // query params
-        if ($api !== null) {
+
+        if ('raw' === 'api') {
+            if('form' === 'form' && is_array($api)) {
+                foreach($api as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['api'] = $api ? 'true' : 'false';
+            }
+        }
+
+        if ($api !== null && 'api' !== 'raw') {
             if('form' === 'form' && is_array($api)) {
                 foreach($api as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1379,7 +1391,19 @@ class VaultApi
             }
         }
         // query params
-        if ($configured !== null) {
+
+        if ('raw' === 'configured') {
+            if('form' === 'form' && is_array($configured)) {
+                foreach($configured as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['configured'] = $configured ? 'true' : 'false';
+            }
+        }
+
+        if ($configured !== null && 'configured' !== 'raw') {
             if('form' === 'form' && is_array($configured)) {
                 foreach($configured as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3462,7 +3486,19 @@ class VaultApi
         $multipart = false;
 
         // query params
-        if ($start_datetime !== null) {
+
+        if ('raw' === 'start_datetime') {
+            if('form' === 'form' && is_array($start_datetime)) {
+                foreach($start_datetime as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['start_datetime'] = $start_datetime ? 'true' : 'false';
+            }
+        }
+
+        if ($start_datetime !== null && 'start_datetime' !== 'raw') {
             if('form' === 'form' && is_array($start_datetime)) {
                 foreach($start_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3473,7 +3509,19 @@ class VaultApi
             }
         }
         // query params
-        if ($end_datetime !== null) {
+
+        if ('raw' === 'end_datetime') {
+            if('form' === 'form' && is_array($end_datetime)) {
+                foreach($end_datetime as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['end_datetime'] = $end_datetime ? 'true' : 'false';
+            }
+        }
+
+        if ($end_datetime !== null && 'end_datetime' !== 'raw') {
             if('form' === 'form' && is_array($end_datetime)) {
                 foreach($end_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4298,7 +4346,19 @@ class VaultApi
         $multipart = false;
 
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4309,7 +4369,19 @@ class VaultApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5965,7 +6037,19 @@ class VaultApi
         $multipart = false;
 
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5976,7 +6060,19 @@ class VaultApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5987,7 +6083,19 @@ class VaultApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;

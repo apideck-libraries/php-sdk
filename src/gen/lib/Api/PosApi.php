@@ -458,7 +458,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -906,7 +918,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -917,7 +941,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -928,7 +964,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -939,7 +987,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1370,7 +1430,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1814,7 +1886,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1825,7 +1909,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2275,7 +2371,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2720,7 +2828,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3168,7 +3288,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3179,7 +3311,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3190,7 +3334,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3201,7 +3357,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3632,7 +3800,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4076,7 +4256,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4087,7 +4279,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4537,7 +4741,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4982,7 +5198,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5430,7 +5658,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5441,7 +5681,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5452,7 +5704,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5463,7 +5727,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5894,7 +6170,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6338,7 +6626,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6349,7 +6649,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6799,7 +7111,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7244,7 +7568,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7692,7 +8028,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7703,7 +8051,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7714,7 +8074,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7725,7 +8097,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8156,7 +8540,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8600,7 +8996,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8611,7 +9019,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9061,7 +9481,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9506,7 +9938,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9954,7 +10398,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9965,7 +10421,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9976,7 +10444,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9987,7 +10467,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10423,7 +10915,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10434,7 +10938,19 @@ class PosApi
             }
         }
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10883,7 +11399,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10894,7 +11422,19 @@ class PosApi
             }
         }
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10905,7 +11445,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11355,7 +11907,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11800,7 +12364,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12248,7 +12824,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12259,7 +12847,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12270,7 +12870,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12281,7 +12893,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12712,7 +13336,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -13156,7 +13792,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -13167,7 +13815,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -13617,7 +14277,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14062,7 +14734,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14515,7 +15199,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14526,7 +15222,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14537,7 +15245,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14548,7 +15268,19 @@ class PosApi
             }
         }
         // query params
-        if ($location_id !== null) {
+
+        if ('raw' === 'location_id') {
+            if('form' === 'form' && is_array($location_id)) {
+                foreach($location_id as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['location_id'] = $location_id ? 'true' : 'false';
+            }
+        }
+
+        if ($location_id !== null && 'location_id' !== 'raw') {
             if('form' === 'form' && is_array($location_id)) {
                 foreach($location_id as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14559,7 +15291,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -14990,7 +15734,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -15434,7 +16190,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -15445,7 +16213,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -15900,7 +16680,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -15911,7 +16703,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -16367,7 +17171,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -16812,7 +17628,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -17260,7 +18088,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -17271,7 +18111,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -17282,7 +18134,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -17293,7 +18157,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -17724,7 +18600,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -18168,7 +19056,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -18179,7 +19079,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -18629,7 +19541,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19074,7 +19998,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19522,7 +20458,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19533,7 +20481,19 @@ class PosApi
             }
         }
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19544,7 +20504,19 @@ class PosApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19555,7 +20527,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -19986,7 +20970,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -20430,7 +21426,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -20441,7 +21449,19 @@ class PosApi
             }
         }
         // query params
-        if ($fields !== null) {
+
+        if ('raw' === 'fields') {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+        if ($fields !== null && 'fields' !== 'raw') {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -20891,7 +21911,19 @@ class PosApi
         $multipart = false;
 
         // query params
-        if ($raw !== null) {
+
+        if ('raw' === 'raw') {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+        if ($raw !== null && 'raw' !== 'raw') {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
