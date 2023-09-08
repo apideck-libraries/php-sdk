@@ -1182,7 +1182,19 @@ class ConnectorApi
         $multipart = false;
 
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1193,7 +1205,19 @@ class ConnectorApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1204,7 +1228,19 @@ class ConnectorApi
             }
         }
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2337,7 +2373,19 @@ class ConnectorApi
         $multipart = false;
 
         // query params
-        if ($unified_api !== null) {
+
+        if ('raw' === 'unified_api') {
+            if('form' === 'form' && is_array($unified_api)) {
+                foreach($unified_api as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['unified_api'] = $unified_api ? 'true' : 'false';
+            }
+        }
+
+        if ($unified_api !== null && 'unified_api' !== 'raw') {
             if('form' === 'form' && is_array($unified_api)) {
                 foreach($unified_api as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2732,7 +2780,19 @@ class ConnectorApi
         $multipart = false;
 
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2743,7 +2803,19 @@ class ConnectorApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2754,7 +2826,19 @@ class ConnectorApi
             }
         }
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;

@@ -454,7 +454,19 @@ class WebhookApi
         $multipart = false;
 
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -465,7 +477,19 @@ class WebhookApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -476,7 +500,19 @@ class WebhookApi
             }
         }
         // query params
-        if ($filter !== null) {
+
+        if ('raw' === 'filter') {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+        if ($filter !== null && 'filter' !== 'raw') {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1293,7 +1329,19 @@ class WebhookApi
         $multipart = false;
 
         // query params
-        if ($cursor !== null) {
+
+        if ('raw' === 'cursor') {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+        if ($cursor !== null && 'cursor' !== 'raw') {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1304,7 +1352,19 @@ class WebhookApi
             }
         }
         // query params
-        if ($limit !== null) {
+
+        if ('raw' === 'limit') {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+        if ($limit !== null && 'limit' !== 'raw') {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;

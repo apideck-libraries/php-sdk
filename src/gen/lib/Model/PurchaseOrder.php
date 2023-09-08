@@ -85,6 +85,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'string',
         'tax_code' => 'string',
         'channel' => 'string',
+        'memo' => 'string',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -126,6 +127,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => null,
         'tax_code' => null,
         'channel' => null,
+        'memo' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -186,6 +188,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'payment_method',
         'tax_code' => 'tax_code',
         'channel' => 'channel',
+        'memo' => 'memo',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -225,6 +228,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'setPaymentMethod',
         'tax_code' => 'setTaxCode',
         'channel' => 'setChannel',
+        'memo' => 'setMemo',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -264,6 +268,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'getPaymentMethod',
         'tax_code' => 'getTaxCode',
         'channel' => 'getChannel',
+        'memo' => 'getMemo',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -377,6 +382,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['payment_method'] = $data['payment_method'] ?? null;
         $this->container['tax_code'] = $data['tax_code'] ?? null;
         $this->container['channel'] = $data['channel'] ?? null;
+        $this->container['memo'] = $data['memo'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1047,6 +1053,30 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setChannel($channel)
     {
         $this->container['channel'] = $channel;
+
+        return $this;
+    }
+
+    /**
+     * Gets memo
+     *
+     * @return string|null
+     */
+    public function getMemo()
+    {
+        return $this->container['memo'];
+    }
+
+    /**
+     * Sets memo
+     *
+     * @param string|null $memo Message for the supplier. This text appears on the Purchase Order.
+     *
+     * @return self
+     */
+    public function setMemo($memo)
+    {
+        $this->container['memo'] = $memo;
 
         return $this;
     }

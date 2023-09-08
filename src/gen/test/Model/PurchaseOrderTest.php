@@ -314,6 +314,15 @@ class PurchaseOrderTest extends TestCase
     }
 
     /**
+     * Test attribute "memo"
+     */
+    public function testPropertyMemo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()
