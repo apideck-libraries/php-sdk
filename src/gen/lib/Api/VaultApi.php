@@ -1370,6 +1370,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'api') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($api)) {
                 foreach($api as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1380,7 +1381,23 @@ class VaultApi
             }
         }
 
-        if ($api !== null && 'api' !== 'raw') {
+
+        if ($api !== null && 'sort' === 'api') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($api !== null && 'filter' === 'api') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($api !== null && !('api' === 'raw' || 'api' === 'sort' || 'api' === 'filter')) {
             if('form' === 'form' && is_array($api)) {
                 foreach($api as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1393,6 +1410,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'configured') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($configured)) {
                 foreach($configured as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1403,7 +1421,23 @@ class VaultApi
             }
         }
 
-        if ($configured !== null && 'configured' !== 'raw') {
+
+        if ($configured !== null && 'sort' === 'configured') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($configured !== null && 'filter' === 'configured') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($configured !== null && !('configured' === 'raw' || 'configured' === 'sort' || 'configured' === 'filter')) {
             if('form' === 'form' && is_array($configured)) {
                 foreach($configured as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3488,6 +3522,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'start_datetime') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($start_datetime)) {
                 foreach($start_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3498,7 +3533,23 @@ class VaultApi
             }
         }
 
-        if ($start_datetime !== null && 'start_datetime' !== 'raw') {
+
+        if ($start_datetime !== null && 'sort' === 'start_datetime') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($start_datetime !== null && 'filter' === 'start_datetime') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($start_datetime !== null && !('start_datetime' === 'raw' || 'start_datetime' === 'sort' || 'start_datetime' === 'filter')) {
             if('form' === 'form' && is_array($start_datetime)) {
                 foreach($start_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3511,6 +3562,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'end_datetime') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($end_datetime)) {
                 foreach($end_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3521,7 +3573,23 @@ class VaultApi
             }
         }
 
-        if ($end_datetime !== null && 'end_datetime' !== 'raw') {
+
+        if ($end_datetime !== null && 'sort' === 'end_datetime') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($end_datetime !== null && 'filter' === 'end_datetime') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($end_datetime !== null && !('end_datetime' === 'raw' || 'end_datetime' === 'sort' || 'end_datetime' === 'filter')) {
             if('form' === 'form' && is_array($end_datetime)) {
                 foreach($end_datetime as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4348,6 +4416,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4358,7 +4427,23 @@ class VaultApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4371,6 +4456,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4381,7 +4467,23 @@ class VaultApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6039,6 +6141,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6049,7 +6152,23 @@ class VaultApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6062,6 +6181,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6072,7 +6192,23 @@ class VaultApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6085,6 +6221,7 @@ class VaultApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6095,7 +6232,23 @@ class VaultApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;

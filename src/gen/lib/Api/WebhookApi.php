@@ -456,6 +456,7 @@ class WebhookApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -466,7 +467,23 @@ class WebhookApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -479,6 +496,7 @@ class WebhookApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -489,7 +507,23 @@ class WebhookApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -502,6 +536,7 @@ class WebhookApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -512,7 +547,23 @@ class WebhookApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1331,6 +1382,7 @@ class WebhookApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1341,7 +1393,23 @@ class WebhookApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1354,6 +1422,7 @@ class WebhookApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1364,7 +1433,23 @@ class WebhookApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
