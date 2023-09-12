@@ -460,6 +460,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -470,7 +471,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -925,6 +942,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -935,7 +953,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -948,6 +982,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -958,7 +993,23 @@ class HrisApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -971,6 +1022,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -981,7 +1033,23 @@ class HrisApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -994,6 +1062,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1004,7 +1073,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1017,6 +1102,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1027,7 +1113,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1460,6 +1562,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1470,7 +1573,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1916,6 +2035,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1926,7 +2046,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1939,6 +2075,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1949,7 +2086,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2401,6 +2554,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2411,7 +2565,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2858,6 +3028,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2868,7 +3039,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3323,6 +3510,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3333,7 +3521,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3346,6 +3550,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3356,7 +3561,23 @@ class HrisApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3369,6 +3590,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3379,7 +3601,23 @@ class HrisApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3392,6 +3630,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3402,7 +3641,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3415,6 +3670,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3425,7 +3681,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3858,6 +4130,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3868,7 +4141,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4314,6 +4603,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4324,7 +4614,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4337,6 +4643,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4347,7 +4654,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4799,6 +5122,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4809,7 +5133,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5271,6 +5611,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5281,7 +5622,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5294,6 +5651,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5304,7 +5662,23 @@ class HrisApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5317,6 +5691,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5327,7 +5702,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5340,6 +5731,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5350,7 +5742,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5807,6 +6215,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5817,7 +6226,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5830,6 +6255,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5840,7 +6266,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6299,6 +6741,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6309,7 +6752,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6322,6 +6781,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6332,7 +6792,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6345,6 +6821,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6355,7 +6832,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6796,6 +7289,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6806,7 +7300,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7271,6 +7781,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7281,7 +7792,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7294,6 +7821,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7304,7 +7832,23 @@ class HrisApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7317,6 +7861,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7327,7 +7872,23 @@ class HrisApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7340,6 +7901,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7350,7 +7912,23 @@ class HrisApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7363,6 +7941,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($sort)) {
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7373,7 +7952,23 @@ class HrisApi
             }
         }
 
-        if ($sort !== null && 'sort' !== 'raw') {
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
             if('form' === 'deepObject' && is_array($sort)) {
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7386,6 +7981,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7396,7 +7992,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7409,6 +8021,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7419,7 +8032,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7852,6 +8481,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7862,7 +8492,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8308,6 +8954,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8318,7 +8965,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8331,6 +8994,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8341,7 +9005,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8793,6 +9473,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8803,7 +9484,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9254,6 +9951,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9264,7 +9962,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9277,6 +9991,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9287,7 +10002,23 @@ class HrisApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9300,6 +10031,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9310,7 +10042,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9323,6 +10071,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9333,7 +10082,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9771,6 +10536,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9781,7 +10547,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9794,6 +10576,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -9804,7 +10587,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10245,6 +11044,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10255,7 +11055,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10715,6 +11531,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10725,7 +11542,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10738,6 +11571,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10748,7 +11582,23 @@ class HrisApi
             }
         }
 
-        if ($cursor !== null && 'cursor' !== 'raw') {
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10761,6 +11611,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10771,7 +11622,23 @@ class HrisApi
             }
         }
 
-        if ($limit !== null && 'limit' !== 'raw') {
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10784,6 +11651,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10794,7 +11662,23 @@ class HrisApi
             }
         }
 
-        if ($filter !== null && 'filter' !== 'raw') {
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10807,6 +11691,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10817,7 +11702,23 @@ class HrisApi
             }
         }
 
-        if ($pass_through !== null && 'pass_through' !== 'raw') {
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10830,6 +11731,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -10840,7 +11742,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11273,6 +12191,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11283,7 +12202,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11729,6 +12664,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11739,7 +12675,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11752,6 +12704,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -11762,7 +12715,23 @@ class HrisApi
             }
         }
 
-        if ($fields !== null && 'fields' !== 'raw') {
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12214,6 +13183,7 @@ class HrisApi
         // query params
 
         if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -12224,7 +13194,23 @@ class HrisApi
             }
         }
 
-        if ($raw !== null && 'raw' !== 'raw') {
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
