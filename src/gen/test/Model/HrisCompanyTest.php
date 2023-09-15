@@ -134,6 +134,15 @@ class HrisCompanyTest extends TestCase
     }
 
     /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "addresses"
      */
     public function testPropertyAddresses()

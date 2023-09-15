@@ -65,6 +65,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         'subdomain' => 'string',
         'status' => 'string',
         'company_number' => 'string',
+        'currency' => '\Apideck\Client\Model\Currency',
         'addresses' => '\Apideck\Client\Model\Address[]',
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'emails' => '\Apideck\Client\Model\Email[]',
@@ -91,6 +92,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         'subdomain' => null,
         'status' => null,
         'company_number' => null,
+        'currency' => null,
         'addresses' => null,
         'phone_numbers' => null,
         'emails' => null,
@@ -136,6 +138,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         'subdomain' => 'subdomain',
         'status' => 'status',
         'company_number' => 'company_number',
+        'currency' => 'currency',
         'addresses' => 'addresses',
         'phone_numbers' => 'phone_numbers',
         'emails' => 'emails',
@@ -160,6 +163,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         'subdomain' => 'setSubdomain',
         'status' => 'setStatus',
         'company_number' => 'setCompanyNumber',
+        'currency' => 'setCurrency',
         'addresses' => 'setAddresses',
         'phone_numbers' => 'setPhoneNumbers',
         'emails' => 'setEmails',
@@ -184,6 +188,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         'subdomain' => 'getSubdomain',
         'status' => 'getStatus',
         'company_number' => 'getCompanyNumber',
+        'currency' => 'getCurrency',
         'addresses' => 'getAddresses',
         'phone_numbers' => 'getPhoneNumbers',
         'emails' => 'getEmails',
@@ -278,6 +283,7 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['subdomain'] = $data['subdomain'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['company_number'] = $data['company_number'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['phone_numbers'] = $data['phone_numbers'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
@@ -507,6 +513,30 @@ class HrisCompany implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyNumber($company_number)
     {
         $this->container['company_number'] = $company_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return \Apideck\Client\Model\Currency|null
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param \Apideck\Client\Model\Currency|null $currency currency
+     *
+     * @return self
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
 
         return $this;
     }
