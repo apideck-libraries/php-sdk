@@ -500,7 +500,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bill_number
      *
-     * @param string|null $bill_number bill_number
+     * @param string|null $bill_number Reference to supplier bill number
      *
      * @return self
      */
