@@ -64,7 +64,7 @@ class GetEmployeePayrollsResponse implements ModelInterface, ArrayAccess, \JsonS
         'service' => 'string',
         'resource' => 'string',
         'operation' => 'string',
-        'data' => '\Apideck\Client\Model\EmployeePayrolls'
+        'data' => '\Apideck\Client\Model\EmployeePayroll[]'
     ];
 
     /**
@@ -376,7 +376,7 @@ class GetEmployeePayrollsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return \Apideck\Client\Model\EmployeePayrolls
+     * @return \Apideck\Client\Model\EmployeePayroll[]
      */
     public function getData()
     {
@@ -386,7 +386,7 @@ class GetEmployeePayrollsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \Apideck\Client\Model\EmployeePayrolls $data data
+     * @param \Apideck\Client\Model\EmployeePayroll[] $data data
      *
      * @return self
      */

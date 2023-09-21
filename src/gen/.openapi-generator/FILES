@@ -245,7 +245,6 @@ docs/Model/EmployeeJob.md
 docs/Model/EmployeeList.md
 docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
-docs/Model/EmployeePayrolls.md
 docs/Model/EmployeeSchedules.md
 docs/Model/EmployeesFilter.md
 docs/Model/EmployeesSort.md
@@ -848,7 +847,6 @@ lib/Model/EmployeeJob.php
 lib/Model/EmployeeList.php
 lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
-lib/Model/EmployeePayrolls.php
 lib/Model/EmployeeSchedules.php
 lib/Model/EmployeesFilter.php
 lib/Model/EmployeesSort.php
@@ -1447,7 +1445,6 @@ test/Model/EmployeeJobTest.php
 test/Model/EmployeeListTest.php
 test/Model/EmployeeManagerTest.php
 test/Model/EmployeePayrollTest.php
-test/Model/EmployeePayrollsTest.php
 test/Model/EmployeeSchedulesTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php

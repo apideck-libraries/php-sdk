@@ -80,18 +80,90 @@ class EmployeePayrollTest extends TestCase
     }
 
     /**
-     * Test attribute "employee"
+     * Test attribute "id"
      */
-    public function testPropertyEmployee()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "payroll"
+     * Test attribute "processed"
      */
-    public function testPropertyPayroll()
+    public function testPropertyProcessed()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "check_date"
+     */
+    public function testPropertyCheckDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "start_date"
+     */
+    public function testPropertyStartDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "end_date"
+     */
+    public function testPropertyEndDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "employee_id"
+     */
+    public function testPropertyEmployeeId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "company_id"
+     */
+    public function testPropertyCompanyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "processed_date"
+     */
+    public function testPropertyProcessedDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "totals"
+     */
+    public function testPropertyTotals()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "compensations"
+     */
+    public function testPropertyCompensations()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
