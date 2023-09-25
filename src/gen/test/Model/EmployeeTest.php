@@ -305,6 +305,15 @@ class EmployeeTest extends TestCase
     }
 
     /**
+     * Test attribute "ethnicity"
+     */
+    public function testPropertyEthnicity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "manager"
      */
     public function testPropertyManager()
