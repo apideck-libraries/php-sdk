@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 `subdomain` | **string** |  | [optional] 
 `status` | **string** |  | [optional] 
 `company_number` | **string** | An Company Number, Company ID or Company Code, is a unique number that has been assigned to each company. | [optional] 
+`currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
@@ -48,6 +49,7 @@ Name | Type | Description | Notes
 
 
 
+* [`Currency`](Currency.md)
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)

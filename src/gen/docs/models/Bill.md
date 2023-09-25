@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** | A unique identifier for an object. | [optional] 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
-`bill_number` | **string** |  | [optional] 
+`bill_number` | **string** | Reference to supplier bill number | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
