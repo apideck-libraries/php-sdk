@@ -170,6 +170,15 @@ class JournalEntryTest extends TestCase
     }
 
     /**
+     * Test attribute "number"
+     */
+    public function testPropertyNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

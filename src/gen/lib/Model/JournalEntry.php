@@ -69,6 +69,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'journal_symbol' => 'string',
         'tax_type' => 'string',
         'tax_code' => 'string',
+        'number' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -94,6 +95,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'journal_symbol' => null,
         'tax_type' => null,
         'tax_code' => null,
+        'number' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -138,6 +140,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'journal_symbol' => 'journal_symbol',
         'tax_type' => 'tax_type',
         'tax_code' => 'tax_code',
+        'number' => 'number',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -161,6 +164,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'journal_symbol' => 'setJournalSymbol',
         'tax_type' => 'setTaxType',
         'tax_code' => 'setTaxCode',
+        'number' => 'setNumber',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -184,6 +188,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'journal_symbol' => 'getJournalSymbol',
         'tax_type' => 'getTaxType',
         'tax_code' => 'getTaxCode',
+        'number' => 'getNumber',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -258,6 +263,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['journal_symbol'] = $data['journal_symbol'] ?? null;
         $this->container['tax_type'] = $data['tax_type'] ?? null;
         $this->container['tax_code'] = $data['tax_code'] ?? null;
+        $this->container['number'] = $data['number'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -534,6 +540,30 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTaxCode($tax_code)
     {
         $this->container['tax_code'] = $tax_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets number
+     *
+     * @return string|null
+     */
+    public function getNumber()
+    {
+        return $this->container['number'];
+    }
+
+    /**
+     * Sets number
+     *
+     * @param string|null $number Journal entry number.
+     *
+     * @return self
+     */
+    public function setNumber($number)
+    {
+        $this->container['number'] = $number;
 
         return $this;
     }
