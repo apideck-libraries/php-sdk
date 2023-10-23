@@ -62,7 +62,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'value' => 'AnyOfStringNumberBooleanObjectArray'
+        'value' => 'AnyOfStringNumberBooleanObjectArrayArray'
     ];
 
     /**
@@ -301,7 +301,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets value
      *
-     * @return AnyOfStringNumberBooleanObjectArray|null
+     * @return AnyOfStringNumberBooleanObjectArrayArray|null
      */
     public function getValue()
     {
@@ -311,7 +311,7 @@ class CustomField implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param AnyOfStringNumberBooleanObjectArray|null $value value
+     * @param AnyOfStringNumberBooleanObjectArrayArray|null $value value
      *
      * @return self
      */
