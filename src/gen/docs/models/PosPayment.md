@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 `wallet` | [**\Apideck\Client\Model\WalletDetails**](WalletDetails.md) |  | [optional] 
 `external_details` | [**\Apideck\Client\Model\PosPaymentExternalDetails**](PosPaymentExternalDetails.md) |  | [optional] 
 `service_charges` | [**\Apideck\Client\Model\ServiceCharge[]**](ServiceCharge.md) | Optional service charges or gratuity tip applied to the order. | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -113,6 +114,7 @@ Name | Type | Description | Notes
 * [`WalletDetails`](WalletDetails.md)
 * [`PosPaymentExternalDetails`](PosPaymentExternalDetails.md)
 * [`ServiceCharge`](ServiceCharge.md)
+
 
 
 

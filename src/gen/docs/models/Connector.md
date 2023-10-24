@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 `configurable_resources` | **string[]** | List of resources that have settings that can be configured. | [optional] 
 `supported_events` | [**\Apideck\Client\Model\ConnectorEvent[]**](ConnectorEvent.md) | List of events that are supported on the connector across all Unified APIs. | [optional] 
 `webhook_support` | [**\Apideck\Client\Model\WebhookSupport**](WebhookSupport.md) |  | [optional] 
+`schema_support` | [**\Apideck\Client\Model\SchemaSupport**](SchemaSupport.md) |  | [optional] 
 `docs` | [**\Apideck\Client\Model\ConnectorDoc[]**](ConnectorDoc.md) |  | [optional] 
 `tls_support` | [**\Apideck\Client\Model\ConnectorTlsSupport**](ConnectorTlsSupport.md) |  | [optional] 
 
@@ -104,6 +105,7 @@ Name | Type | Description | Notes
 
 * [`ConnectorEvent`](ConnectorEvent.md)
 * [`WebhookSupport`](WebhookSupport.md)
+* [`SchemaSupport`](SchemaSupport.md)
 * [`ConnectorDoc`](ConnectorDoc.md)
 * [`ConnectorTlsSupport`](ConnectorTlsSupport.md)
 

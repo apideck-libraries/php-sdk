@@ -1,6 +1,6 @@
 {
   "name": "@apideck/php",
-  "version": "2.5.5",
+  "version": "3.0.0",
   "description": "Apideck PHP SDK",
   "keywords": [
     "apideck",

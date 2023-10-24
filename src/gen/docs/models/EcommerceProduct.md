@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 `variants` | [**\Apideck\Client\Model\EcommerceProductVariants[]**](EcommerceProductVariants.md) |  | [optional] 
 `tags` | **string[]** | An array of tags for the product, used for organization and searching. | [optional] 
 `categories` | [**\Apideck\Client\Model\EcommerceProductCategories[]**](EcommerceProductCategories.md) | An array of categories for the product, used for organization and searching. | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
@@ -52,6 +53,7 @@ Name | Type | Description | Notes
 * [`EcommerceProductVariants`](EcommerceProductVariants.md)
 
 * [`EcommerceProductCategories`](EcommerceProductCategories.md)
+
 
 
 

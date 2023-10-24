@@ -18,6 +18,7 @@
 * [Delete Consumer](#consumersDelete)
 * [Get Consumer](#consumersOne)
 * [Update Consumer](#consumersUpdate)
+* [Get Resource Custom Fields](#customFieldsAll)
 * [Get All Consumer Request Logs](#logsAll)
 * [Create Session](#sessionsCreate)
 
@@ -37,7 +38,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unified_api** | **string**| Unified API |
  **service_id** | **string**| Service ID of the resource to return |
- **resource** | **string**| Resource Name |
+ **resource** | **string**| Name of the resource (plural) |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
 
@@ -103,7 +104,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_id** | **string**| Service ID of the resource to return |
  **unified_api** | **string**| Unified API |
- **resource** | **string**| Resource Name |
+ **resource** | **string**| Name of the resource (plural) |
  **connection** | [\Apideck\Client\Model\Connection](../models/\Apideck\Client\Model\Connection.md)| Fields that need to be updated on the resource |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
@@ -853,6 +854,72 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getVaultApi()->consumersUpdate('test_user_id', $consumer);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="customFieldsAll"></a>
+# Get Resource Custom Fields
+
+
+Method: **customFieldsAll**
+
+```php
+Apideck->getVaultApi()->customFieldsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unified_api** | **string**| Unified API |
+ **service_id** | **string**| Service ID of the resource to return |
+ **resource** | **string**| Name of the resource (plural) |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetCustomFieldsResponse`](../models/\Apideck\Client\Model\GetCustomFieldsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Custom mapping | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->customFieldsAll('crm', 'pipedrive', 'leads');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

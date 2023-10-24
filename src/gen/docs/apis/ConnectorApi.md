@@ -313,7 +313,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getConnectorApi()->connectorDocsOne('id_example', 'doc_id_example');
+  $response = $apideck->getConnectorApi()->connectorDocsOne('id_example', 'application_owner+oauth_credentials');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 `first_call_at` | **\DateTime** | The first call date of the contact. | [optional] 
 `first_email_at` | **\DateTime** | The first email date of the contact. | [optional] 
 `last_activity_at` | **\DateTime** | The last activity date of the contact. | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **\DateTime** | The last update date of the contact. | [optional] 
 `created_at` | **\DateTime** | The creation date of the contact. | [optional] 
 
@@ -109,6 +110,7 @@ Name | Type | Description | Notes
 * [`Email`](Email.md)
 
 * [`CustomField`](CustomField.md)
+
 
 
 
