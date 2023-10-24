@@ -60,6 +60,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -75,6 +76,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -109,6 +111,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -122,6 +125,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -135,6 +139,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -199,6 +204,7 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -249,6 +255,30 @@ class AtsActivity implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

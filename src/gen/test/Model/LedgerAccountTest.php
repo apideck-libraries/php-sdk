@@ -305,6 +305,15 @@ class LedgerAccountTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()

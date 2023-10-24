@@ -96,6 +96,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'cv_url' => 'string',
         'record_url' => 'string',
         'rejected_at' => '\DateTime',
+        'custom_mappings' => 'object',
         'deleted' => 'bool',
         'deleted_by' => 'string',
         'deleted_at' => '\DateTime',
@@ -150,6 +151,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'cv_url' => null,
         'record_url' => null,
         'rejected_at' => 'date-time',
+        'custom_mappings' => null,
         'deleted' => null,
         'deleted_by' => null,
         'deleted_at' => 'date-time',
@@ -223,6 +225,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'cv_url' => 'cv_url',
         'record_url' => 'record_url',
         'rejected_at' => 'rejected_at',
+        'custom_mappings' => 'custom_mappings',
         'deleted' => 'deleted',
         'deleted_by' => 'deleted_by',
         'deleted_at' => 'deleted_at',
@@ -275,6 +278,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'cv_url' => 'setCvUrl',
         'record_url' => 'setRecordUrl',
         'rejected_at' => 'setRejectedAt',
+        'custom_mappings' => 'setCustomMappings',
         'deleted' => 'setDeleted',
         'deleted_by' => 'setDeletedBy',
         'deleted_at' => 'setDeletedAt',
@@ -327,6 +331,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         'cv_url' => 'getCvUrl',
         'record_url' => 'getRecordUrl',
         'rejected_at' => 'getRejectedAt',
+        'custom_mappings' => 'getCustomMappings',
         'deleted' => 'getDeleted',
         'deleted_by' => 'getDeletedBy',
         'deleted_at' => 'getDeletedAt',
@@ -430,6 +435,7 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['cv_url'] = $data['cv_url'] ?? null;
         $this->container['record_url'] = $data['record_url'] ?? null;
         $this->container['rejected_at'] = $data['rejected_at'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['deleted_by'] = $data['deleted_by'] ?? null;
         $this->container['deleted_at'] = $data['deleted_at'] ?? null;
@@ -1347,6 +1353,30 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRejectedAt($rejected_at)
     {
         $this->container['rejected_at'] = $rejected_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

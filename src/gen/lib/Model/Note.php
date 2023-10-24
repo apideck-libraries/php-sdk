@@ -68,6 +68,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         'opportunity_id' => 'string',
         'lead_id' => 'string',
         'active' => 'bool',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => 'string',
@@ -91,6 +92,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         'opportunity_id' => null,
         'lead_id' => null,
         'active' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => null,
@@ -133,6 +135,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         'opportunity_id' => 'opportunity_id',
         'lead_id' => 'lead_id',
         'active' => 'active',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -154,6 +157,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         'opportunity_id' => 'setOpportunityId',
         'lead_id' => 'setLeadId',
         'active' => 'setActive',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -175,6 +179,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         'opportunity_id' => 'getOpportunityId',
         'lead_id' => 'getLeadId',
         'active' => 'getActive',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -247,6 +252,7 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['opportunity_id'] = $data['opportunity_id'] ?? null;
         $this->container['lead_id'] = $data['lead_id'] ?? null;
         $this->container['active'] = $data['active'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -489,6 +495,30 @@ class Note implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

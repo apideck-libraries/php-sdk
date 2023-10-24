@@ -66,7 +66,8 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         'gender' => '\Apideck\Client\Model\Gender',
         'initials' => 'string',
         'birthday' => '\DateTime',
-        'deceased_on' => '\DateTime'
+        'deceased_on' => '\DateTime',
+        'custom_mappings' => 'object'
     ];
 
     /**
@@ -84,7 +85,8 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         'gender' => null,
         'initials' => null,
         'birthday' => 'date',
-        'deceased_on' => 'date'
+        'deceased_on' => 'date',
+        'custom_mappings' => null
     ];
 
     /**
@@ -121,7 +123,8 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         'gender' => 'gender',
         'initials' => 'initials',
         'birthday' => 'birthday',
-        'deceased_on' => 'deceased_on'
+        'deceased_on' => 'deceased_on',
+        'custom_mappings' => 'custom_mappings'
     ];
 
     /**
@@ -137,7 +140,8 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         'gender' => 'setGender',
         'initials' => 'setInitials',
         'birthday' => 'setBirthday',
-        'deceased_on' => 'setDeceasedOn'
+        'deceased_on' => 'setDeceasedOn',
+        'custom_mappings' => 'setCustomMappings'
     ];
 
     /**
@@ -153,7 +157,8 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         'gender' => 'getGender',
         'initials' => 'getInitials',
         'birthday' => 'getBirthday',
-        'deceased_on' => 'getDeceasedOn'
+        'deceased_on' => 'getDeceasedOn',
+        'custom_mappings' => 'getCustomMappings'
     ];
 
     /**
@@ -221,6 +226,7 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['initials'] = $data['initials'] ?? null;
         $this->container['birthday'] = $data['birthday'] ?? null;
         $this->container['deceased_on'] = $data['deceased_on'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
     }
 
     /**
@@ -435,6 +441,30 @@ class Person implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDeceasedOn($deceased_on)
     {
         $this->container['deceased_on'] = $deceased_on;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

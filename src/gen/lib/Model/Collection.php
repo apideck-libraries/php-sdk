@@ -64,6 +64,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'name' => 'string',
         'description' => 'string',
+        'custom_mappings' => 'object',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime'
     ];
@@ -81,6 +82,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'name' => null,
         'description' => null,
+        'custom_mappings' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time'
     ];
@@ -117,6 +119,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'name' => 'name',
         'description' => 'description',
+        'custom_mappings' => 'custom_mappings',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at'
     ];
@@ -132,6 +135,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'name' => 'setName',
         'description' => 'setDescription',
+        'custom_mappings' => 'setCustomMappings',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt'
     ];
@@ -147,6 +151,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'name' => 'getName',
         'description' => 'getDescription',
+        'custom_mappings' => 'getCustomMappings',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt'
     ];
@@ -213,6 +218,7 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['type'] = $data['type'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
     }
@@ -360,6 +366,30 @@ class Collection implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

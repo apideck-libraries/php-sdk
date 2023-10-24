@@ -68,6 +68,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'present_at_all_locations' => 'bool',
         'modifiers' => 'object[]',
         'deleted' => 'bool',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -92,6 +93,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'present_at_all_locations' => null,
         'modifiers' => null,
         'deleted' => null,
+        'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -135,6 +137,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'present_at_all_locations' => 'present_at_all_locations',
         'modifiers' => 'modifiers',
         'deleted' => 'deleted',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -157,6 +160,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'present_at_all_locations' => 'setPresentAtAllLocations',
         'modifiers' => 'setModifiers',
         'deleted' => 'setDeleted',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -179,6 +183,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'present_at_all_locations' => 'getPresentAtAllLocations',
         'modifiers' => 'getModifiers',
         'deleted' => 'getDeleted',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -267,6 +272,7 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['present_at_all_locations'] = $data['present_at_all_locations'] ?? null;
         $this->container['modifiers'] = $data['modifiers'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -529,6 +535,30 @@ class ModifierGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDeleted($deleted)
     {
         $this->container['deleted'] = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

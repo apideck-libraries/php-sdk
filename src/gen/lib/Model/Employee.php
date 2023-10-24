@@ -117,6 +117,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'food_allergies' => 'string[]',
         'probation_period' => '\Apideck\Client\Model\ProbationPeriod',
         'tags' => 'string[]',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'deleted' => 'bool',
         'updated_by' => 'string',
@@ -191,6 +192,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'food_allergies' => null,
         'probation_period' => null,
         'tags' => null,
+        'custom_mappings' => null,
         'row_version' => null,
         'deleted' => null,
         'updated_by' => null,
@@ -284,6 +286,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'food_allergies' => 'food_allergies',
         'probation_period' => 'probation_period',
         'tags' => 'tags',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'deleted' => 'deleted',
         'updated_by' => 'updated_by',
@@ -356,6 +359,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'food_allergies' => 'setFoodAllergies',
         'probation_period' => 'setProbationPeriod',
         'tags' => 'setTags',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'deleted' => 'setDeleted',
         'updated_by' => 'setUpdatedBy',
@@ -428,6 +432,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'food_allergies' => 'getFoodAllergies',
         'probation_period' => 'getProbationPeriod',
         'tags' => 'getTags',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'deleted' => 'getDeleted',
         'updated_by' => 'getUpdatedBy',
@@ -570,6 +575,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['food_allergies'] = $data['food_allergies'] ?? null;
         $this->container['probation_period'] = $data['probation_period'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['deleted'] = $data['deleted'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -2029,6 +2035,30 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

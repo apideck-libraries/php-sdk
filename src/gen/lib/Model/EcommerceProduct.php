@@ -73,6 +73,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'variants' => '\Apideck\Client\Model\EcommerceProductVariants[]',
         'tags' => 'string[]',
         'categories' => '\Apideck\Client\Model\EcommerceProductCategories[]',
+        'custom_mappings' => 'object',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -99,6 +100,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'variants' => null,
         'tags' => null,
         'categories' => null,
+        'custom_mappings' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time'
     ];
@@ -144,6 +146,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'variants' => 'variants',
         'tags' => 'tags',
         'categories' => 'categories',
+        'custom_mappings' => 'custom_mappings',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     ];
@@ -168,6 +171,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'variants' => 'setVariants',
         'tags' => 'setTags',
         'categories' => 'setCategories',
+        'custom_mappings' => 'setCustomMappings',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -192,6 +196,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         'variants' => 'getVariants',
         'tags' => 'getTags',
         'categories' => 'getCategories',
+        'custom_mappings' => 'getCustomMappings',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -282,6 +287,7 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['variants'] = $data['variants'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
         $this->container['categories'] = $data['categories'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
     }
@@ -664,6 +670,30 @@ class EcommerceProduct implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCategories($categories)
     {
         $this->container['categories'] = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

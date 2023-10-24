@@ -98,6 +98,15 @@ class CollectionTicketCommentTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "created_by"
      */
     public function testPropertyCreatedBy()

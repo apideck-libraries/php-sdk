@@ -92,7 +92,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'string',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'row_version' => 'string'
+        'row_version' => 'string',
+        'custom_mappings' => 'object'
     ];
 
     /**
@@ -136,7 +137,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time',
-        'row_version' => null
+        'row_version' => null,
+        'custom_mappings' => null
     ];
 
     /**
@@ -199,7 +201,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at',
-        'row_version' => 'row_version'
+        'row_version' => 'row_version',
+        'custom_mappings' => 'custom_mappings'
     ];
 
     /**
@@ -241,7 +244,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt',
-        'row_version' => 'setRowVersion'
+        'row_version' => 'setRowVersion',
+        'custom_mappings' => 'setCustomMappings'
     ];
 
     /**
@@ -283,7 +287,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt',
-        'row_version' => 'getRowVersion'
+        'row_version' => 'getRowVersion',
+        'custom_mappings' => 'getCustomMappings'
     ];
 
     /**
@@ -404,6 +409,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
     }
 
     /**
@@ -1261,6 +1267,30 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRowVersion($row_version)
     {
         $this->container['row_version'] = $row_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

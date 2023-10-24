@@ -88,6 +88,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => '\Apideck\Client\Model\WalletDetails',
         'external_details' => '\Apideck\Client\Model\PosPaymentExternalDetails',
         'service_charges' => '\Apideck\Client\Model\ServiceCharge[]',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -131,6 +132,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => null,
         'external_details' => null,
         'service_charges' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -193,6 +195,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => 'wallet',
         'external_details' => 'external_details',
         'service_charges' => 'service_charges',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -234,6 +237,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => 'setWallet',
         'external_details' => 'setExternalDetails',
         'service_charges' => 'setServiceCharges',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -275,6 +279,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         'wallet' => 'getWallet',
         'external_details' => 'getExternalDetails',
         'service_charges' => 'getServiceCharges',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -415,6 +420,7 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['wallet'] = $data['wallet'] ?? null;
         $this->container['external_details'] = $data['external_details'] ?? null;
         $this->container['service_charges'] = $data['service_charges'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -1201,6 +1207,30 @@ class PosPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setServiceCharges($service_charges)
     {
         $this->container['service_charges'] = $service_charges;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

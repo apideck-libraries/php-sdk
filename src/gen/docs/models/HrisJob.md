@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 `department` | **string** | Department name | [optional] 
 `is_primary` | **bool** | Indicates whether this the employee's primary job. | [optional] 
 `location` | [**\Apideck\Client\Model\HrisJobLocation**](HrisJobLocation.md) |  | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 
 
 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 
 
 * [`HrisJobLocation`](HrisJobLocation.md)
+
 
 ---
 

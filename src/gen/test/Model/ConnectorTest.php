@@ -305,6 +305,15 @@ class ConnectorTest extends TestCase
     }
 
     /**
+     * Test attribute "schema_support"
+     */
+    public function testPropertySchemaSupport()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "docs"
      */
     public function testPropertyDocs()

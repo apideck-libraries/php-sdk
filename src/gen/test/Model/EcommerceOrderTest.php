@@ -251,6 +251,15 @@ class EcommerceOrderTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()

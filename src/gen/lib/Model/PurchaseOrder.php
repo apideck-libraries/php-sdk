@@ -86,6 +86,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'string',
         'channel' => 'string',
         'memo' => 'string',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -128,6 +129,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => null,
         'channel' => null,
         'memo' => null,
+        'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -189,6 +191,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'tax_code',
         'channel' => 'channel',
         'memo' => 'memo',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -229,6 +232,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'setTaxCode',
         'channel' => 'setChannel',
         'memo' => 'setMemo',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -269,6 +273,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'getTaxCode',
         'channel' => 'getChannel',
         'memo' => 'getMemo',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -383,6 +388,7 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['tax_code'] = $data['tax_code'] ?? null;
         $this->container['channel'] = $data['channel'] ?? null;
         $this->container['memo'] = $data['memo'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1077,6 +1083,30 @@ class PurchaseOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setMemo($memo)
     {
         $this->container['memo'] = $memo;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

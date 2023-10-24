@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 `processed_date` | **string** | The date the payroll was processed. | [optional] 
 `totals` | [**\Apideck\Client\Model\PayrollTotals**](.md) |  | [optional] 
 `compensations` | [**\Apideck\Client\Model\Compensation[]**](Compensation.md) | An array of compensations for the payroll. | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 
 
 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 
 * [``](.md)
 * [`Compensation`](Compensation.md)
+
 
 ---
 

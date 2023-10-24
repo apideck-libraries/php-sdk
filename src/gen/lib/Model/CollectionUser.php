@@ -65,6 +65,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'string',
         'email' => 'string',
         'photo_url' => 'string',
+        'custom_mappings' => 'object',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime'
     ];
@@ -83,6 +84,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => null,
         'email' => null,
         'photo_url' => null,
+        'custom_mappings' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time'
     ];
@@ -120,6 +122,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'last_name',
         'email' => 'email',
         'photo_url' => 'photo_url',
+        'custom_mappings' => 'custom_mappings',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at'
     ];
@@ -136,6 +139,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'setLastName',
         'email' => 'setEmail',
         'photo_url' => 'setPhotoUrl',
+        'custom_mappings' => 'setCustomMappings',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt'
     ];
@@ -152,6 +156,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'getLastName',
         'email' => 'getEmail',
         'photo_url' => 'getPhotoUrl',
+        'custom_mappings' => 'getCustomMappings',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt'
     ];
@@ -219,6 +224,7 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
         $this->container['photo_url'] = $data['photo_url'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
     }
@@ -387,6 +393,30 @@ class CollectionUser implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setPhotoUrl($photo_url)
     {
         $this->container['photo_url'] = $photo_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

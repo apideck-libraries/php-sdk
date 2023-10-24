@@ -67,7 +67,8 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'string',
         'processed_date' => 'string',
         'totals' => '\Apideck\Client\Model\PayrollTotals',
-        'compensations' => '\Apideck\Client\Model\Compensation[]'
+        'compensations' => '\Apideck\Client\Model\Compensation[]',
+        'custom_mappings' => 'object'
     ];
 
     /**
@@ -86,7 +87,8 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => null,
         'processed_date' => null,
         'totals' => null,
-        'compensations' => null
+        'compensations' => null,
+        'custom_mappings' => null
     ];
 
     /**
@@ -124,7 +126,8 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'company_id',
         'processed_date' => 'processed_date',
         'totals' => 'totals',
-        'compensations' => 'compensations'
+        'compensations' => 'compensations',
+        'custom_mappings' => 'custom_mappings'
     ];
 
     /**
@@ -141,7 +144,8 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'setCompanyId',
         'processed_date' => 'setProcessedDate',
         'totals' => 'setTotals',
-        'compensations' => 'setCompensations'
+        'compensations' => 'setCompensations',
+        'custom_mappings' => 'setCustomMappings'
     ];
 
     /**
@@ -158,7 +162,8 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'getCompanyId',
         'processed_date' => 'getProcessedDate',
         'totals' => 'getTotals',
-        'compensations' => 'getCompensations'
+        'compensations' => 'getCompensations',
+        'custom_mappings' => 'getCustomMappings'
     ];
 
     /**
@@ -227,6 +232,7 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['processed_date'] = $data['processed_date'] ?? null;
         $this->container['totals'] = $data['totals'] ?? null;
         $this->container['compensations'] = $data['compensations'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
     }
 
     /**
@@ -516,6 +522,30 @@ class Payroll implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompensations($compensations)
     {
         $this->container['compensations'] = $compensations;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

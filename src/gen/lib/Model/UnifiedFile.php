@@ -74,6 +74,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'permissions' => '\Apideck\Client\Model\UnifiedFilePermissions',
         'exportable' => 'bool',
         'export_formats' => 'string[]',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -103,6 +104,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'permissions' => null,
         'exportable' => null,
         'export_formats' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -151,6 +153,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'permissions' => 'permissions',
         'exportable' => 'exportable',
         'export_formats' => 'export_formats',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -178,6 +181,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'permissions' => 'setPermissions',
         'exportable' => 'setExportable',
         'export_formats' => 'setExportFormats',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -205,6 +209,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         'permissions' => 'getPermissions',
         'exportable' => 'getExportable',
         'export_formats' => 'getExportFormats',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -283,6 +288,7 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['permissions'] = $data['permissions'] ?? null;
         $this->container['exportable'] = $data['exportable'] ?? null;
         $this->container['export_formats'] = $data['export_formats'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -678,6 +684,30 @@ class UnifiedFile implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setExportFormats($export_formats)
     {
         $this->container['export_formats'] = $export_formats;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

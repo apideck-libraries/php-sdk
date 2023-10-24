@@ -95,6 +95,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'accounting_by_row' => 'bool',
         'bank_account' => '\Apideck\Client\Model\BankAccount',
         'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -146,6 +147,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'accounting_by_row' => null,
         'bank_account' => null,
         'ledger_account' => null,
+        'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -216,6 +218,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'accounting_by_row' => 'accounting_by_row',
         'bank_account' => 'bank_account',
         'ledger_account' => 'ledger_account',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -265,6 +268,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'accounting_by_row' => 'setAccountingByRow',
         'bank_account' => 'setBankAccount',
         'ledger_account' => 'setLedgerAccount',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -314,6 +318,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'accounting_by_row' => 'getAccountingByRow',
         'bank_account' => 'getBankAccount',
         'ledger_account' => 'getLedgerAccount',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -464,6 +469,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['accounting_by_row'] = $data['accounting_by_row'] ?? null;
         $this->container['bank_account'] = $data['bank_account'] ?? null;
         $this->container['ledger_account'] = $data['ledger_account'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1393,6 +1399,30 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLedgerAccount($ledger_account)
     {
         $this->container['ledger_account'] = $ledger_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

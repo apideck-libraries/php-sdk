@@ -83,6 +83,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'string',
         'payment_method' => 'string',
         'channel' => 'string',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -122,6 +123,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => null,
         'payment_method' => null,
         'channel' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -180,6 +182,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'status',
         'payment_method' => 'payment_method',
         'channel' => 'channel',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -217,6 +220,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'setStatus',
         'payment_method' => 'setPaymentMethod',
         'channel' => 'setChannel',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -254,6 +258,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'getStatus',
         'payment_method' => 'getPaymentMethod',
         'channel' => 'getChannel',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -363,6 +368,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['status'] = $data['status'] ?? null;
         $this->container['payment_method'] = $data['payment_method'] ?? null;
         $this->container['channel'] = $data['channel'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -988,6 +994,30 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setChannel($channel)
     {
         $this->container['channel'] = $channel;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

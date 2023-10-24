@@ -84,6 +84,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'sub_account' => 'bool',
         'sub_accounts' => 'object[]',
         'last_reconciliation_date' => '\DateTime',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -124,6 +125,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'sub_account' => null,
         'sub_accounts' => null,
         'last_reconciliation_date' => 'date',
+        'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -183,6 +185,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'sub_account' => 'sub_account',
         'sub_accounts' => 'sub_accounts',
         'last_reconciliation_date' => 'last_reconciliation_date',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -221,6 +224,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'sub_account' => 'setSubAccount',
         'sub_accounts' => 'setSubAccounts',
         'last_reconciliation_date' => 'setLastReconciliationDate',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -259,6 +263,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'sub_account' => 'getSubAccount',
         'sub_accounts' => 'getSubAccounts',
         'last_reconciliation_date' => 'getLastReconciliationDate',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -445,6 +450,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['sub_account'] = $data['sub_account'] ?? null;
         $this->container['sub_accounts'] = $data['sub_accounts'] ?? null;
         $this->container['last_reconciliation_date'] = $data['last_reconciliation_date'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1131,6 +1137,30 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLastReconciliationDate($last_reconciliation_date)
     {
         $this->container['last_reconciliation_date'] = $last_reconciliation_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

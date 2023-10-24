@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **string** | Date updated in ISO 8601 format | [optional] 
 `created_at` | **string** | Date created in ISO 8601 format | [optional] 
 
@@ -60,6 +61,7 @@ Name | Type | Description | Notes
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
+
 
 
 

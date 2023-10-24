@@ -296,6 +296,15 @@ class ConnectionTest extends TestCase
     }
 
     /**
+     * Test attribute "schema_support"
+     */
+    public function testPropertySchemaSupport()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "settings_required_for_authorization"
      */
     public function testPropertySettingsRequiredForAuthorization()
@@ -326,6 +335,15 @@ class ConnectionTest extends TestCase
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

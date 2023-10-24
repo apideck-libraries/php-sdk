@@ -67,6 +67,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         'price_amount' => 'float',
         'currency' => '\Apideck\Client\Model\Currency',
         'available' => 'bool',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -89,6 +90,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         'price_amount' => null,
         'currency' => null,
         'available' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -130,6 +132,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         'price_amount' => 'price_amount',
         'currency' => 'currency',
         'available' => 'available',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -150,6 +153,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         'price_amount' => 'setPriceAmount',
         'currency' => 'setCurrency',
         'available' => 'setAvailable',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -170,6 +174,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         'price_amount' => 'getPriceAmount',
         'currency' => 'getCurrency',
         'available' => 'getAvailable',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -241,6 +246,7 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['price_amount'] = $data['price_amount'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['available'] = $data['available'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -473,6 +479,30 @@ class Modifier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAvailable($available)
     {
         $this->container['available'] = $available;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

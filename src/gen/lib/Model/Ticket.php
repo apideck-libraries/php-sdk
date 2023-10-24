@@ -73,7 +73,8 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'string',
         'due_date' => '\DateTime',
         'completed_at' => '\DateTime',
-        'tags' => '\Apideck\Client\Model\CollectionTag[]'
+        'tags' => '\Apideck\Client\Model\CollectionTag[]',
+        'custom_mappings' => 'object'
     ];
 
     /**
@@ -98,7 +99,8 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => null,
         'due_date' => 'date-time',
         'completed_at' => 'date-time',
-        'tags' => null
+        'tags' => null,
+        'custom_mappings' => null
     ];
 
     /**
@@ -142,7 +144,8 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'created_by',
         'due_date' => 'due_date',
         'completed_at' => 'completed_at',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'custom_mappings' => 'custom_mappings'
     ];
 
     /**
@@ -165,7 +168,8 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'setCreatedBy',
         'due_date' => 'setDueDate',
         'completed_at' => 'setCompletedAt',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'custom_mappings' => 'setCustomMappings'
     ];
 
     /**
@@ -188,7 +192,8 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'getCreatedBy',
         'due_date' => 'getDueDate',
         'completed_at' => 'getCompletedAt',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'custom_mappings' => 'getCustomMappings'
     ];
 
     /**
@@ -282,6 +287,7 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['due_date'] = $data['due_date'] ?? null;
         $this->container['completed_at'] = $data['completed_at'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
     }
 
     /**
@@ -686,6 +692,30 @@ class Ticket implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

@@ -177,4 +177,13 @@ class ProfitAndLossTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

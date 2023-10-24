@@ -95,6 +95,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_call_at' => '\DateTime',
         'first_email_at' => '\DateTime',
         'last_activity_at' => '\DateTime',
+        'custom_mappings' => 'object',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime'
     ];
@@ -143,6 +144,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_call_at' => 'date-time',
         'first_email_at' => 'date-time',
         'last_activity_at' => 'date-time',
+        'custom_mappings' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time'
     ];
@@ -210,6 +212,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_call_at' => 'first_call_at',
         'first_email_at' => 'first_email_at',
         'last_activity_at' => 'last_activity_at',
+        'custom_mappings' => 'custom_mappings',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at'
     ];
@@ -256,6 +259,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_call_at' => 'setFirstCallAt',
         'first_email_at' => 'setFirstEmailAt',
         'last_activity_at' => 'setLastActivityAt',
+        'custom_mappings' => 'setCustomMappings',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt'
     ];
@@ -302,6 +306,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_call_at' => 'getFirstCallAt',
         'first_email_at' => 'getFirstEmailAt',
         'last_activity_at' => 'getLastActivityAt',
+        'custom_mappings' => 'getCustomMappings',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt'
     ];
@@ -435,6 +440,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['first_call_at'] = $data['first_call_at'] ?? null;
         $this->container['first_email_at'] = $data['first_email_at'] ?? null;
         $this->container['last_activity_at'] = $data['last_activity_at'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
     }
@@ -1375,6 +1381,30 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLastActivityAt($last_activity_at)
     {
         $this->container['last_activity_at'] = $last_activity_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

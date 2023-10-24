@@ -69,7 +69,8 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_id' => 'string',
         'net_income' => '\Apideck\Client\Model\ProfitAndLossNetIncome',
         'net_operating_income' => '\Apideck\Client\Model\ProfitAndLossNetOperatingIncome',
-        'gross_profit' => '\Apideck\Client\Model\ProfitAndLossGrossProfit'
+        'gross_profit' => '\Apideck\Client\Model\ProfitAndLossGrossProfit',
+        'custom_mappings' => 'object'
     ];
 
     /**
@@ -90,7 +91,8 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_id' => null,
         'net_income' => null,
         'net_operating_income' => null,
-        'gross_profit' => null
+        'gross_profit' => null,
+        'custom_mappings' => null
     ];
 
     /**
@@ -130,7 +132,8 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_id' => 'customer_id',
         'net_income' => 'net_income',
         'net_operating_income' => 'net_operating_income',
-        'gross_profit' => 'gross_profit'
+        'gross_profit' => 'gross_profit',
+        'custom_mappings' => 'custom_mappings'
     ];
 
     /**
@@ -149,7 +152,8 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_id' => 'setCustomerId',
         'net_income' => 'setNetIncome',
         'net_operating_income' => 'setNetOperatingIncome',
-        'gross_profit' => 'setGrossProfit'
+        'gross_profit' => 'setGrossProfit',
+        'custom_mappings' => 'setCustomMappings'
     ];
 
     /**
@@ -168,7 +172,8 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         'customer_id' => 'getCustomerId',
         'net_income' => 'getNetIncome',
         'net_operating_income' => 'getNetOperatingIncome',
-        'gross_profit' => 'getGrossProfit'
+        'gross_profit' => 'getGrossProfit',
+        'custom_mappings' => 'getCustomMappings'
     ];
 
     /**
@@ -239,6 +244,7 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['net_income'] = $data['net_income'] ?? null;
         $this->container['net_operating_income'] = $data['net_operating_income'] ?? null;
         $this->container['gross_profit'] = $data['gross_profit'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
     }
 
     /**
@@ -555,6 +561,30 @@ class ProfitAndLoss implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setGrossProfit($gross_profit)
     {
         $this->container['gross_profit'] = $gross_profit;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 `price` | [**\Apideck\Client\Model\Price**](Price.md) |  | [optional] 
 `error` | [**\Apideck\Client\Model\Error**](Error.md) |  | [optional] 
 `messaging_service_id` | **string** | The ID of the Messaging Service used with the message. In case of Plivo this links to the Powerpack ID. | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -107,6 +108,7 @@ Name | Type | Description | Notes
 
 * [`Price`](Price.md)
 * [`Error`](Error.md)
+
 
 
 

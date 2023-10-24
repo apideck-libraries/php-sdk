@@ -114,6 +114,8 @@ docs/Model/CreateConnectionResponse.md
 docs/Model/CreateConsumerResponse.md
 docs/Model/CreateContactResponse.md
 docs/Model/CreateCreditNoteResponse.md
+docs/Model/CreateCustomMappingRequest.md
+docs/Model/CreateCustomMappingResponse.md
 docs/Model/CreateCustomerResponse.md
 docs/Model/CreateDepartmentResponse.md
 docs/Model/CreateDriveGroupResponse.md
@@ -164,6 +166,8 @@ docs/Model/CreditNote.md
 docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
+docs/Model/CustomFieldFinder.md
+docs/Model/CustomMapping.md
 docs/Model/Customer.md
 docs/Model/CustomersFilter.md
 docs/Model/Deduction.md
@@ -286,7 +290,10 @@ docs/Model/GetCompanyInfoResponse.md
 docs/Model/GetCompanyResponse.md
 docs/Model/GetConnectionResponse.md
 docs/Model/GetConnectionsResponse.md
+docs/Model/GetConnectorResourceExampleResponse.md
+docs/Model/GetConnectorResourceExampleResponseData.md
 docs/Model/GetConnectorResourceResponse.md
+docs/Model/GetConnectorResourceSchemaResponse.md
 docs/Model/GetConnectorResponse.md
 docs/Model/GetConnectorsResponse.md
 docs/Model/GetConsumerResponse.md
@@ -296,6 +303,8 @@ docs/Model/GetContactResponse.md
 docs/Model/GetContactsResponse.md
 docs/Model/GetCreditNoteResponse.md
 docs/Model/GetCreditNotesResponse.md
+docs/Model/GetCustomFieldsResponse.md
+docs/Model/GetCustomMappingResponse.md
 docs/Model/GetCustomerResponse.md
 docs/Model/GetCustomersResponse.md
 docs/Model/GetDepartmentResponse.md
@@ -367,6 +376,8 @@ docs/Model/GetProductsResponse.md
 docs/Model/GetProfitAndLossResponse.md
 docs/Model/GetPurchaseOrderResponse.md
 docs/Model/GetPurchaseOrdersResponse.md
+docs/Model/GetResourceExampleResponse.md
+docs/Model/GetResourceSchemaResponse.md
 docs/Model/GetSharedLinkResponse.md
 docs/Model/GetSharedLinksResponse.md
 docs/Model/GetStoreResponse.md
@@ -497,10 +508,12 @@ docs/Model/PurchaseOrder.md
 docs/Model/RequestCountAllocation.md
 docs/Model/RequestRate.md
 docs/Model/ResolveWebhookResponse.md
+docs/Model/ResourceExample.md
 docs/Model/ResourceStatus.md
 docs/Model/Schedule.md
 docs/Model/ScheduleWorkPattern.md
 docs/Model/ScheduleWorkPatternOddWeeks.md
+docs/Model/SchemaSupport.md
 docs/Model/ServiceCharge.md
 docs/Model/Session.md
 docs/Model/SessionSettings.md
@@ -546,6 +559,8 @@ docs/Model/UpdateConsumerRequest.md
 docs/Model/UpdateConsumerResponse.md
 docs/Model/UpdateContactResponse.md
 docs/Model/UpdateCreditNoteResponse.md
+docs/Model/UpdateCustomMappingRequest.md
+docs/Model/UpdateCustomMappingResponse.md
 docs/Model/UpdateCustomerResponse.md
 docs/Model/UpdateDepartmentResponse.md
 docs/Model/UpdateDriveGroupResponse.md
@@ -716,6 +731,8 @@ lib/Model/CreateConnectionResponse.php
 lib/Model/CreateConsumerResponse.php
 lib/Model/CreateContactResponse.php
 lib/Model/CreateCreditNoteResponse.php
+lib/Model/CreateCustomMappingRequest.php
+lib/Model/CreateCustomMappingResponse.php
 lib/Model/CreateCustomerResponse.php
 lib/Model/CreateDepartmentResponse.php
 lib/Model/CreateDriveGroupResponse.php
@@ -766,6 +783,8 @@ lib/Model/CreditNote.php
 lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
+lib/Model/CustomFieldFinder.php
+lib/Model/CustomMapping.php
 lib/Model/Customer.php
 lib/Model/CustomersFilter.php
 lib/Model/Deduction.php
@@ -888,7 +907,10 @@ lib/Model/GetCompanyInfoResponse.php
 lib/Model/GetCompanyResponse.php
 lib/Model/GetConnectionResponse.php
 lib/Model/GetConnectionsResponse.php
+lib/Model/GetConnectorResourceExampleResponse.php
+lib/Model/GetConnectorResourceExampleResponseData.php
 lib/Model/GetConnectorResourceResponse.php
+lib/Model/GetConnectorResourceSchemaResponse.php
 lib/Model/GetConnectorResponse.php
 lib/Model/GetConnectorsResponse.php
 lib/Model/GetConsumerResponse.php
@@ -898,6 +920,8 @@ lib/Model/GetContactResponse.php
 lib/Model/GetContactsResponse.php
 lib/Model/GetCreditNoteResponse.php
 lib/Model/GetCreditNotesResponse.php
+lib/Model/GetCustomFieldsResponse.php
+lib/Model/GetCustomMappingResponse.php
 lib/Model/GetCustomerResponse.php
 lib/Model/GetCustomersResponse.php
 lib/Model/GetDepartmentResponse.php
@@ -969,6 +993,8 @@ lib/Model/GetProductsResponse.php
 lib/Model/GetProfitAndLossResponse.php
 lib/Model/GetPurchaseOrderResponse.php
 lib/Model/GetPurchaseOrdersResponse.php
+lib/Model/GetResourceExampleResponse.php
+lib/Model/GetResourceSchemaResponse.php
 lib/Model/GetSharedLinkResponse.php
 lib/Model/GetSharedLinksResponse.php
 lib/Model/GetStoreResponse.php
@@ -1100,10 +1126,12 @@ lib/Model/PurchaseOrder.php
 lib/Model/RequestCountAllocation.php
 lib/Model/RequestRate.php
 lib/Model/ResolveWebhookResponse.php
+lib/Model/ResourceExample.php
 lib/Model/ResourceStatus.php
 lib/Model/Schedule.php
 lib/Model/ScheduleWorkPattern.php
 lib/Model/ScheduleWorkPatternOddWeeks.php
+lib/Model/SchemaSupport.php
 lib/Model/ServiceCharge.php
 lib/Model/Session.php
 lib/Model/SessionSettings.php
@@ -1149,6 +1177,8 @@ lib/Model/UpdateConsumerRequest.php
 lib/Model/UpdateConsumerResponse.php
 lib/Model/UpdateContactResponse.php
 lib/Model/UpdateCreditNoteResponse.php
+lib/Model/UpdateCustomMappingRequest.php
+lib/Model/UpdateCustomMappingResponse.php
 lib/Model/UpdateCustomerResponse.php
 lib/Model/UpdateDepartmentResponse.php
 lib/Model/UpdateDriveGroupResponse.php
@@ -1315,6 +1345,8 @@ test/Model/CreateConnectionResponseTest.php
 test/Model/CreateConsumerResponseTest.php
 test/Model/CreateContactResponseTest.php
 test/Model/CreateCreditNoteResponseTest.php
+test/Model/CreateCustomMappingRequestTest.php
+test/Model/CreateCustomMappingResponseTest.php
 test/Model/CreateCustomerResponseTest.php
 test/Model/CreateDepartmentResponseTest.php
 test/Model/CreateDriveGroupResponseTest.php
@@ -1364,7 +1396,9 @@ test/Model/CreateWebhookResponseTest.php
 test/Model/CreditNoteTest.php
 test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
+test/Model/CustomFieldFinderTest.php
 test/Model/CustomFieldTest.php
+test/Model/CustomMappingTest.php
 test/Model/CustomerTest.php
 test/Model/CustomersFilterTest.php
 test/Model/DeductionTest.php
@@ -1487,7 +1521,10 @@ test/Model/GetCompanyInfoResponseTest.php
 test/Model/GetCompanyResponseTest.php
 test/Model/GetConnectionResponseTest.php
 test/Model/GetConnectionsResponseTest.php
+test/Model/GetConnectorResourceExampleResponseDataTest.php
+test/Model/GetConnectorResourceExampleResponseTest.php
 test/Model/GetConnectorResourceResponseTest.php
+test/Model/GetConnectorResourceSchemaResponseTest.php
 test/Model/GetConnectorResponseTest.php
 test/Model/GetConnectorsResponseTest.php
 test/Model/GetConsumerResponseTest.php
@@ -1497,6 +1534,8 @@ test/Model/GetContactResponseTest.php
 test/Model/GetContactsResponseTest.php
 test/Model/GetCreditNoteResponseTest.php
 test/Model/GetCreditNotesResponseTest.php
+test/Model/GetCustomFieldsResponseTest.php
+test/Model/GetCustomMappingResponseTest.php
 test/Model/GetCustomerResponseTest.php
 test/Model/GetCustomersResponseTest.php
 test/Model/GetDepartmentResponseTest.php
@@ -1568,6 +1607,8 @@ test/Model/GetProductsResponseTest.php
 test/Model/GetProfitAndLossResponseTest.php
 test/Model/GetPurchaseOrderResponseTest.php
 test/Model/GetPurchaseOrdersResponseTest.php
+test/Model/GetResourceExampleResponseTest.php
+test/Model/GetResourceSchemaResponseTest.php
 test/Model/GetSharedLinkResponseTest.php
 test/Model/GetSharedLinksResponseTest.php
 test/Model/GetStoreResponseTest.php
@@ -1698,10 +1739,12 @@ test/Model/PurchaseOrderTest.php
 test/Model/RequestCountAllocationTest.php
 test/Model/RequestRateTest.php
 test/Model/ResolveWebhookResponseTest.php
+test/Model/ResourceExampleTest.php
 test/Model/ResourceStatusTest.php
 test/Model/ScheduleTest.php
 test/Model/ScheduleWorkPatternOddWeeksTest.php
 test/Model/ScheduleWorkPatternTest.php
+test/Model/SchemaSupportTest.php
 test/Model/ServiceChargeTest.php
 test/Model/SessionSettingsTest.php
 test/Model/SessionTest.php
@@ -1747,6 +1790,8 @@ test/Model/UpdateConsumerRequestTest.php
 test/Model/UpdateConsumerResponseTest.php
 test/Model/UpdateContactResponseTest.php
 test/Model/UpdateCreditNoteResponseTest.php
+test/Model/UpdateCustomMappingRequestTest.php
+test/Model/UpdateCustomMappingResponseTest.php
 test/Model/UpdateCustomerResponseTest.php
 test/Model/UpdateDepartmentResponseTest.php
 test/Model/UpdateDriveGroupResponseTest.php

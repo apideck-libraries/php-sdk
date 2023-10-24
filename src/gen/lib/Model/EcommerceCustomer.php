@@ -70,6 +70,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         'phone_numbers' => '\Apideck\Client\Model\PhoneNumber[]',
         'addresses' => '\Apideck\Client\Model\EcommerceCustomerAddresses[]',
         'orders' => '\Apideck\Client\Model\LinkedEcommerceOrder[]',
+        'custom_mappings' => 'object',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -93,6 +94,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         'phone_numbers' => null,
         'addresses' => null,
         'orders' => null,
+        'custom_mappings' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time'
     ];
@@ -135,6 +137,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         'phone_numbers' => 'phone_numbers',
         'addresses' => 'addresses',
         'orders' => 'orders',
+        'custom_mappings' => 'custom_mappings',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     ];
@@ -156,6 +159,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         'phone_numbers' => 'setPhoneNumbers',
         'addresses' => 'setAddresses',
         'orders' => 'setOrders',
+        'custom_mappings' => 'setCustomMappings',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -177,6 +181,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         'phone_numbers' => 'getPhoneNumbers',
         'addresses' => 'getAddresses',
         'orders' => 'getOrders',
+        'custom_mappings' => 'getCustomMappings',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -264,6 +269,7 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['phone_numbers'] = $data['phone_numbers'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['orders'] = $data['orders'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
     }
@@ -574,6 +580,30 @@ class EcommerceCustomer implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function setOrders($orders)
     {
         $this->container['orders'] = $orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

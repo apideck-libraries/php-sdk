@@ -83,6 +83,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'emails' => '\Apideck\Client\Model\Email[]',
         'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'tags' => 'string[]',
+        'custom_mappings' => 'object',
         'updated_at' => 'string',
         'created_at' => 'string'
     ];
@@ -119,6 +120,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'emails' => null,
         'custom_fields' => null,
         'tags' => null,
+        'custom_mappings' => null,
         'updated_at' => null,
         'created_at' => null
     ];
@@ -174,6 +176,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'emails' => 'emails',
         'custom_fields' => 'custom_fields',
         'tags' => 'tags',
+        'custom_mappings' => 'custom_mappings',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at'
     ];
@@ -208,6 +211,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'emails' => 'setEmails',
         'custom_fields' => 'setCustomFields',
         'tags' => 'setTags',
+        'custom_mappings' => 'setCustomMappings',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt'
     ];
@@ -242,6 +246,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'emails' => 'getEmails',
         'custom_fields' => 'getCustomFields',
         'tags' => 'getTags',
+        'custom_mappings' => 'getCustomMappings',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt'
     ];
@@ -327,6 +332,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['emails'] = $data['emails'] ?? null;
         $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['tags'] = $data['tags'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
     }
@@ -950,6 +956,30 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

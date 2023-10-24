@@ -81,6 +81,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'object[]',
         'note' => 'string',
         'terms' => 'string',
+        'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -118,6 +119,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => null,
         'note' => null,
         'terms' => null,
+        'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -174,6 +176,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'allocations',
         'note' => 'note',
         'terms' => 'terms',
+        'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -209,6 +212,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'setAllocations',
         'note' => 'setNote',
         'terms' => 'setTerms',
+        'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -244,6 +248,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'getAllocations',
         'note' => 'getNote',
         'terms' => 'getTerms',
+        'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -366,6 +371,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['allocations'] = $data['allocations'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['terms'] = $data['terms'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -965,6 +971,30 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTerms($terms)
     {
         $this->container['terms'] = $terms;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

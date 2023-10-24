@@ -152,6 +152,15 @@ class FolderTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_mappings"
+     */
+    public function testPropertyCustomMappings()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

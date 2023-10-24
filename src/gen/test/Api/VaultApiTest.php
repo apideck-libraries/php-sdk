@@ -228,6 +228,18 @@ class VaultApiTest extends TestCase
     }
 
     /**
+     * Test case for customFieldsAll
+     *
+     * Get resource custom fields.
+     *
+     */
+    public function testCustomFieldsAll()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for logsAll
      *
      * Get all consumer request logs.

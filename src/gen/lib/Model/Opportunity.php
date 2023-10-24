@@ -95,6 +95,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         'date_stage_changed' => '\DateTime',
         'date_last_contacted' => '\DateTime',
         'date_lead_created' => '\DateTime',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -145,6 +146,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         'date_stage_changed' => 'date-time',
         'date_last_contacted' => 'date-time',
         'date_lead_created' => 'date-time',
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -214,6 +216,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         'date_stage_changed' => 'date_stage_changed',
         'date_last_contacted' => 'date_last_contacted',
         'date_lead_created' => 'date_lead_created',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -262,6 +265,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         'date_stage_changed' => 'setDateStageChanged',
         'date_last_contacted' => 'setDateLastContacted',
         'date_lead_created' => 'setDateLeadCreated',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -310,6 +314,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         'date_stage_changed' => 'getDateStageChanged',
         'date_last_contacted' => 'getDateLastContacted',
         'date_lead_created' => 'getDateLeadCreated',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -409,6 +414,7 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['date_stage_changed'] = $data['date_stage_changed'] ?? null;
         $this->container['date_last_contacted'] = $data['date_last_contacted'] ?? null;
         $this->container['date_lead_created'] = $data['date_lead_created'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -1314,6 +1320,30 @@ class Opportunity implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDateLeadCreated($date_lead_created)
     {
         $this->container['date_lead_created'] = $date_lead_created;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }
