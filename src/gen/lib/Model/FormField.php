@@ -69,6 +69,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'allow_custom_values' => 'bool',
         'disabled' => 'bool',
         'hidden' => 'bool',
+        'deprecated' => 'bool',
         'sensitive' => 'bool',
         'prefix' => 'string',
         'suffix' => 'string',
@@ -93,6 +94,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'allow_custom_values' => null,
         'disabled' => null,
         'hidden' => null,
+        'deprecated' => null,
         'sensitive' => null,
         'prefix' => null,
         'suffix' => null,
@@ -136,6 +138,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'allow_custom_values' => 'allow_custom_values',
         'disabled' => 'disabled',
         'hidden' => 'hidden',
+        'deprecated' => 'deprecated',
         'sensitive' => 'sensitive',
         'prefix' => 'prefix',
         'suffix' => 'suffix',
@@ -158,6 +161,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'allow_custom_values' => 'setAllowCustomValues',
         'disabled' => 'setDisabled',
         'hidden' => 'setHidden',
+        'deprecated' => 'setDeprecated',
         'sensitive' => 'setSensitive',
         'prefix' => 'setPrefix',
         'suffix' => 'setSuffix',
@@ -180,6 +184,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         'allow_custom_values' => 'getAllowCustomValues',
         'disabled' => 'getDisabled',
         'hidden' => 'getHidden',
+        'deprecated' => 'getDeprecated',
         'sensitive' => 'getSensitive',
         'prefix' => 'getPrefix',
         'suffix' => 'getSuffix',
@@ -290,6 +295,7 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['allow_custom_values'] = $data['allow_custom_values'] ?? false;
         $this->container['disabled'] = $data['disabled'] ?? null;
         $this->container['hidden'] = $data['hidden'] ?? null;
+        $this->container['deprecated'] = $data['deprecated'] ?? null;
         $this->container['sensitive'] = $data['sensitive'] ?? null;
         $this->container['prefix'] = $data['prefix'] ?? null;
         $this->container['suffix'] = $data['suffix'] ?? null;
@@ -575,6 +581,30 @@ class FormField implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setHidden($hidden)
     {
         $this->container['hidden'] = $hidden;
+
+        return $this;
+    }
+
+    /**
+     * Gets deprecated
+     *
+     * @return bool|null
+     */
+    public function getDeprecated()
+    {
+        return $this->container['deprecated'];
+    }
+
+    /**
+     * Sets deprecated
+     *
+     * @param bool|null $deprecated When the setting is deprecated, it should be hidden from the user interface. The value will still be stored on the connection for the sake of backwards compatibility.
+     *
+     * @return self
+     */
+    public function setDeprecated($deprecated)
+    {
+        $this->container['deprecated'] = $deprecated;
 
         return $this;
     }

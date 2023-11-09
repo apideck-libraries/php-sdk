@@ -170,6 +170,15 @@ class FormFieldTest extends TestCase
     }
 
     /**
+     * Test attribute "deprecated"
+     */
+    public function testPropertyDeprecated()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sensitive"
      */
     public function testPropertySensitive()
