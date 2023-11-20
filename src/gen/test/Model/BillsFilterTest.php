@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliersFilterTest
+ * BillsFilterTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SuppliersFilterTest Class Doc Comment
+ * BillsFilterTest Class Doc Comment
  *
  * @category    Class
- * @description SuppliersFilter
+ * @description BillsFilter
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SuppliersFilterTest extends TestCase
+class BillsFilterTest extends TestCase
 {
 
     /**
@@ -71,54 +71,9 @@ class SuppliersFilterTest extends TestCase
     }
 
     /**
-     * Test "SuppliersFilter"
+     * Test "BillsFilter"
      */
-    public function testSuppliersFilter()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "company_name"
-     */
-    public function testPropertyCompanyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "display_name"
-     */
-    public function testPropertyDisplayName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
+    public function testBillsFilter()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

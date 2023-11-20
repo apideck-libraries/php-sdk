@@ -1131,6 +1131,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -1139,9 +1140,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetBillsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function billsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function billsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->billsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        list($response) = $this->billsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -1156,6 +1157,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -1164,9 +1166,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetBillsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function billsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function billsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1377,6 +1379,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -1384,9 +1387,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function billsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function billsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->billsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields)
+        return $this->billsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1405,6 +1408,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -1412,10 +1416,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function billsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function billsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetBillsResponse';
-        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        $request = $this->billsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1459,6 +1463,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\BillsFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\BillsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -1466,7 +1471,7 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function billsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function billsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.billsAll, must be smaller than or equal to 200.');
@@ -1601,6 +1606,46 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
             }
         }
         // query params
@@ -4238,6 +4283,8 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\CreditNotesFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CreditNotesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -4245,9 +4292,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetCreditNotesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function creditNotesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function creditNotesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->creditNotesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        list($response) = $this->creditNotesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -4262,6 +4309,8 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\CreditNotesFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CreditNotesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -4269,9 +4318,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetCreditNotesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function creditNotesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function creditNotesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->creditNotesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        $request = $this->creditNotesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4482,15 +4531,17 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\CreditNotesFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CreditNotesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function creditNotesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function creditNotesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->creditNotesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields)
+        return $this->creditNotesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4509,16 +4560,18 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\CreditNotesFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CreditNotesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function creditNotesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function creditNotesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetCreditNotesResponse';
-        $request = $this->creditNotesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        $request = $this->creditNotesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4562,13 +4615,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\CreditNotesFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CreditNotesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function creditNotesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function creditNotesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.creditNotesAll, must be smaller than or equal to 200.');
@@ -4703,6 +4758,86 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort ? 'true' : 'false';
+            }
+        }
+
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
         // query params
@@ -6807,6 +6942,7 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\CustomersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CustomersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -6814,9 +6950,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetCustomersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function customersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function customersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->customersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        list($response) = $this->customersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -6832,6 +6968,7 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\CustomersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CustomersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -6839,9 +6976,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetCustomersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function customersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->customersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        $request = $this->customersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7053,15 +7190,16 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\CustomersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CustomersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function customersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->customersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields)
+        return $this->customersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7081,16 +7219,17 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\CustomersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CustomersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function customersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetCustomersResponse';
-        $request = $this->customersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        $request = $this->customersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7135,13 +7274,14 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\CustomersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\CustomersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function customersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function customersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.customersAll, must be smaller than or equal to 200.');
@@ -7316,6 +7456,46 @@ class AccountingApi
             }
             else {
                 $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort ? 'true' : 'false';
+            }
+        }
+
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
         // query params
@@ -12032,6 +12212,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\InvoicesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\InvoicesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -12040,9 +12221,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetInvoicesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function invoicesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function invoicesAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->invoicesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        list($response) = $this->invoicesAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -12057,6 +12238,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\InvoicesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\InvoicesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -12065,9 +12247,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetInvoicesResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function invoicesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function invoicesAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->invoicesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        $request = $this->invoicesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12278,6 +12460,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\InvoicesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\InvoicesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -12285,9 +12468,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function invoicesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function invoicesAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->invoicesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields)
+        return $this->invoicesAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12306,6 +12489,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\InvoicesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\InvoicesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -12313,10 +12497,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function invoicesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function invoicesAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetInvoicesResponse';
-        $request = $this->invoicesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $sort, $pass_through, $fields);
+        $request = $this->invoicesAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12360,6 +12544,7 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\InvoicesFilter $filter Apply filters (optional)
      * @param  \Apideck\Client\Model\InvoicesSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
@@ -12367,7 +12552,7 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function invoicesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $sort = null, $pass_through = null, $fields = null)
+    public function invoicesAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.invoicesAll, must be smaller than or equal to 200.');
@@ -12502,6 +12687,46 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
             }
         }
         // query params
@@ -17213,6 +17438,8 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\LedgerAccountsFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\LedgerAccountsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -17220,9 +17447,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetLedgerAccountsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function ledgerAccountsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function ledgerAccountsAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->ledgerAccountsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        list($response) = $this->ledgerAccountsAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -17237,6 +17464,8 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\LedgerAccountsFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\LedgerAccountsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -17244,9 +17473,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetLedgerAccountsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ledgerAccountsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function ledgerAccountsAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->ledgerAccountsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        $request = $this->ledgerAccountsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -17457,15 +17686,17 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\LedgerAccountsFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\LedgerAccountsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function ledgerAccountsAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->ledgerAccountsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields)
+        return $this->ledgerAccountsAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -17484,16 +17715,18 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\LedgerAccountsFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\LedgerAccountsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function ledgerAccountsAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetLedgerAccountsResponse';
-        $request = $this->ledgerAccountsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $pass_through, $fields);
+        $request = $this->ledgerAccountsAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -17537,13 +17770,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\LedgerAccountsFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\LedgerAccountsSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function ledgerAccountsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $pass_through = null, $fields = null)
+    public function ledgerAccountsAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.ledgerAccountsAll, must be smaller than or equal to 200.');
@@ -17678,6 +17913,86 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort ? 'true' : 'false';
+            }
+        }
+
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
         // query params
@@ -22979,14 +23294,16 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\PurchaseOrdersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PurchaseOrdersSort $sort Apply sorting (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetPurchaseOrdersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function purchaseOrdersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20)
+    public function purchaseOrdersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20, $filter = null, $sort = null)
     {
-        list($response) = $this->purchaseOrdersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit);
+        list($response) = $this->purchaseOrdersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit, $filter, $sort);
         return $response;
     }
 
@@ -23002,14 +23319,16 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\PurchaseOrdersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PurchaseOrdersSort $sort Apply sorting (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetPurchaseOrdersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purchaseOrdersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20)
+    public function purchaseOrdersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20, $filter = null, $sort = null)
     {
-        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit);
+        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit, $filter, $sort);
 
         try {
             $options = $this->createHttpClientOption();
@@ -23221,13 +23540,15 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\PurchaseOrdersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PurchaseOrdersSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseOrdersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20)
+    public function purchaseOrdersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20, $filter = null, $sort = null)
     {
-        return $this->purchaseOrdersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit)
+        return $this->purchaseOrdersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit, $filter, $sort)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -23247,14 +23568,16 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\PurchaseOrdersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PurchaseOrdersSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseOrdersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20)
+    public function purchaseOrdersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20, $filter = null, $sort = null)
     {
         $returnType = '\Apideck\Client\Model\GetPurchaseOrdersResponse';
-        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit);
+        $request = $this->purchaseOrdersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $pass_through, $limit, $filter, $sort);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -23299,11 +23622,13 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  \Apideck\Client\Model\PurchaseOrdersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PurchaseOrdersSort $sort Apply sorting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function purchaseOrdersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20)
+    public function purchaseOrdersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $pass_through = null, $limit = 20, $filter = null, $sort = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.purchaseOrdersAll, must be smaller than or equal to 200.');
@@ -23478,6 +23803,86 @@ class AccountingApi
             }
             else {
                 $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort ? 'true' : 'false';
+            }
+        }
+
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
 
@@ -25457,6 +25862,7 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\SuppliersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\SuppliersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -25464,9 +25870,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetSuppliersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function suppliersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function suppliersAll($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        list($response) = $this->suppliersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        list($response) = $this->suppliersAllWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
         return $response;
     }
 
@@ -25482,6 +25888,7 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\SuppliersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\SuppliersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
@@ -25489,9 +25896,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetSuppliersResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function suppliersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function suppliersAllWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        $request = $this->suppliersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        $request = $this->suppliersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -25703,15 +26110,16 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\SuppliersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\SuppliersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function suppliersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function suppliersAllAsync($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
-        return $this->suppliersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields)
+        return $this->suppliersAllAsyncWithHttpInfo($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -25731,16 +26139,17 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\SuppliersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\SuppliersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function suppliersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function suppliersAllAsyncWithHttpInfo($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetSuppliersResponse';
-        $request = $this->suppliersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $pass_through, $fields);
+        $request = $this->suppliersAllRequest($raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $filter, $sort, $pass_through, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -25785,13 +26194,14 @@ class AccountingApi
      * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
      * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
      * @param  \Apideck\Client\Model\SuppliersFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\SuppliersSort $sort Apply sorting (optional)
      * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function suppliersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $pass_through = null, $fields = null)
+    public function suppliersAllRequest($raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $filter = null, $sort = null, $pass_through = null, $fields = null)
     {
         if ($limit !== null && $limit > 200) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.suppliersAll, must be smaller than or equal to 200.');
@@ -25966,6 +26376,46 @@ class AccountingApi
             }
             else {
                 $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'sort') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort ? 'true' : 'false';
+            }
+        }
+
+
+        if ($sort !== null && 'sort' === 'sort') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($sort !== null && 'filter' === 'sort') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+            if('form' === 'deepObject' && is_array($sort)) {
+                foreach($sort as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['sort'] = $sort;
             }
         }
         // query params

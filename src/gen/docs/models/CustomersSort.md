@@ -1,11 +1,11 @@
-# Apideck.BillsSort
+# Apideck.CustomersSort
 
 ### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`by` | **string** | The field on which to sort the Bills | [optional] 
+`by` | **string** | The field on which to sort the Customers | [optional] 
 `direction` | [**\Apideck\Client\Model\SortDirection**](SortDirection.md) |  | [optional] 
 
 
@@ -13,12 +13,12 @@ Name | Type | Description | Notes
 
 
 <a name="BY"></a>
-## Enum: BillsSort.by
+## Enum: CustomersSort.by
 
-
-* `UPDATED_AT` (value: `'updated_at'`)
 
 * `CREATED_AT` (value: `'created_at'`)
+
+* `UPDATED_AT` (value: `'updated_at'`)
 
 
 

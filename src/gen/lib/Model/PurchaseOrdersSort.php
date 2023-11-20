@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliersFilter
+ * PurchaseOrdersSort
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * SuppliersFilter Class Doc Comment
+ * PurchaseOrdersSort Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
+class PurchaseOrdersSort implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SuppliersFilter';
+    protected static $openAPIModelName = 'PurchaseOrdersSort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,12 +59,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'company_name' => 'string',
-        'display_name' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'email' => 'string',
-        'updated_since' => '\DateTime'
+        'by' => 'string',
+        'direction' => '\Apideck\Client\Model\SortDirection'
     ];
 
     /**
@@ -75,12 +71,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'company_name' => null,
-        'display_name' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'email' => null,
-        'updated_since' => 'date-time'
+        'by' => null,
+        'direction' => null
     ];
 
     /**
@@ -110,12 +102,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'company_name' => 'company_name',
-        'display_name' => 'display_name',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'email' => 'email',
-        'updated_since' => 'updated_since'
+        'by' => 'by',
+        'direction' => 'direction'
     ];
 
     /**
@@ -124,12 +112,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'company_name' => 'setCompanyName',
-        'display_name' => 'setDisplayName',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'email' => 'setEmail',
-        'updated_since' => 'setUpdatedSince'
+        'by' => 'setBy',
+        'direction' => 'setDirection'
     ];
 
     /**
@@ -138,12 +122,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'company_name' => 'getCompanyName',
-        'display_name' => 'getDisplayName',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'email' => 'getEmail',
-        'updated_since' => 'getUpdatedSince'
+        'by' => 'getBy',
+        'direction' => 'getDirection'
     ];
 
     /**
@@ -187,6 +167,19 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const BY_UPDATED_AT = 'updated_at';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getByAllowableValues()
+    {
+        return [
+            self::BY_UPDATED_AT,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -203,12 +196,8 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['company_name'] = $data['company_name'] ?? null;
-        $this->container['display_name'] = $data['display_name'] ?? null;
-        $this->container['first_name'] = $data['first_name'] ?? null;
-        $this->container['last_name'] = $data['last_name'] ?? null;
-        $this->container['email'] = $data['email'] ?? null;
-        $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['by'] = $data['by'] ?? null;
+        $this->container['direction'] = $data['direction'] ?? null;
     }
 
     /**
@@ -219,6 +208,15 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($this->container['by']) && !in_array($this->container['by'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'by', must be one of '%s'",
+                $this->container['by'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -236,145 +234,59 @@ class SuppliersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets company_name
+     * Gets by
      *
      * @return string|null
      */
-    public function getCompanyName()
+    public function getBy()
     {
-        return $this->container['company_name'];
+        return $this->container['by'];
     }
 
     /**
-     * Sets company_name
+     * Sets by
      *
-     * @param string|null $company_name Company Name of supplier to search for
+     * @param string|null $by The field on which to sort the Purchase Orders
      *
      * @return self
      */
-    public function setCompanyName($company_name)
+    public function setBy($by)
     {
-        $this->container['company_name'] = $company_name;
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($by) && !in_array($by, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'by', must be one of '%s'",
+                    $by,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['by'] = $by;
 
         return $this;
     }
 
     /**
-     * Gets display_name
+     * Gets direction
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\SortDirection|null
      */
-    public function getDisplayName()
+    public function getDirection()
     {
-        return $this->container['display_name'];
+        return $this->container['direction'];
     }
 
     /**
-     * Sets display_name
+     * Sets direction
      *
-     * @param string|null $display_name Display Name of supplier to search for
+     * @param \Apideck\Client\Model\SortDirection|null $direction direction
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function setDirection($direction)
     {
-        $this->container['display_name'] = $display_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets first_name
-     *
-     * @return string|null
-     */
-    public function getFirstName()
-    {
-        return $this->container['first_name'];
-    }
-
-    /**
-     * Sets first_name
-     *
-     * @param string|null $first_name First name of supplier to search for
-     *
-     * @return self
-     */
-    public function setFirstName($first_name)
-    {
-        $this->container['first_name'] = $first_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_name
-     *
-     * @return string|null
-     */
-    public function getLastName()
-    {
-        return $this->container['last_name'];
-    }
-
-    /**
-     * Sets last_name
-     *
-     * @param string|null $last_name Last name of supplier to search for
-     *
-     * @return self
-     */
-    public function setLastName($last_name)
-    {
-        $this->container['last_name'] = $last_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string|null
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string|null $email Email of supplier to search for
-     *
-     * @return self
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_since
-     *
-     * @return \DateTime|null
-     */
-    public function getUpdatedSince()
-    {
-        return $this->container['updated_since'];
-    }
-
-    /**
-     * Sets updated_since
-     *
-     * @param \DateTime|null $updated_since updated_since
-     *
-     * @return self
-     */
-    public function setUpdatedSince($updated_since)
-    {
-        $this->container['updated_since'] = $updated_since;
+        $this->container['direction'] = $direction;
 
         return $this;
     }

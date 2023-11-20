@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliersFilterTest
+ * CustomersSortTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SuppliersFilterTest Class Doc Comment
+ * CustomersSortTest Class Doc Comment
  *
  * @category    Class
- * @description SuppliersFilter
+ * @description CustomersSort
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SuppliersFilterTest extends TestCase
+class CustomersSortTest extends TestCase
 {
 
     /**
@@ -71,63 +71,27 @@ class SuppliersFilterTest extends TestCase
     }
 
     /**
-     * Test "SuppliersFilter"
+     * Test "CustomersSort"
      */
-    public function testSuppliersFilter()
+    public function testCustomersSort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "by"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyBy()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "display_name"
+     * Test attribute "direction"
      */
-    public function testPropertyDisplayName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_since"
-     */
-    public function testPropertyUpdatedSince()
+    public function testPropertyDirection()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

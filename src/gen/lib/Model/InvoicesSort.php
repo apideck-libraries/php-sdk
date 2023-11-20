@@ -167,6 +167,7 @@ class InvoicesSort implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const BY_CREATED_AT = 'created_at';
     const BY_UPDATED_AT = 'updated_at';
 
     /**
@@ -177,6 +178,7 @@ class InvoicesSort implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getByAllowableValues()
     {
         return [
+            self::BY_CREATED_AT,
             self::BY_UPDATED_AT,
         ];
     }

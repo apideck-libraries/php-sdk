@@ -168,6 +168,7 @@ class BillsSort implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     const BY_UPDATED_AT = 'updated_at';
+    const BY_CREATED_AT = 'created_at';
 
     /**
      * Gets allowable values of the enum
@@ -178,6 +179,7 @@ class BillsSort implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         return [
             self::BY_UPDATED_AT,
+            self::BY_CREATED_AT,
         ];
     }
 

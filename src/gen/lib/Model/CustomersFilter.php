@@ -64,7 +64,8 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'string',
         'last_name' => 'string',
         'email' => 'string',
-        'status' => 'string'
+        'status' => 'string',
+        'updated_since' => '\DateTime'
     ];
 
     /**
@@ -80,7 +81,8 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => null,
         'last_name' => null,
         'email' => null,
-        'status' => null
+        'status' => null,
+        'updated_since' => 'date-time'
     ];
 
     /**
@@ -115,7 +117,8 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'email' => 'email',
-        'status' => 'status'
+        'status' => 'status',
+        'updated_since' => 'updated_since'
     ];
 
     /**
@@ -129,7 +132,8 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'email' => 'setEmail',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'updated_since' => 'setUpdatedSince'
     ];
 
     /**
@@ -143,7 +147,8 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'email' => 'getEmail',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'updated_since' => 'getUpdatedSince'
     ];
 
     /**
@@ -228,6 +233,7 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
+        $this->container['updated_since'] = $data['updated_since'] ?? null;
     }
 
     /**
@@ -413,6 +419,30 @@ class CustomersFilter implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_since
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedSince()
+    {
+        return $this->container['updated_since'];
+    }
+
+    /**
+     * Sets updated_since
+     *
+     * @param \DateTime|null $updated_since updated_since
+     *
+     * @return self
+     */
+    public function setUpdatedSince($updated_since)
+    {
+        $this->container['updated_since'] = $updated_since;
 
         return $this;
     }
