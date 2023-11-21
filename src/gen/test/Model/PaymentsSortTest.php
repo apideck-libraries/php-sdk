@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentsFilterTest
+ * PaymentsSortTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * PaymentsFilterTest Class Doc Comment
+ * PaymentsSortTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentsFilter
+ * @description PaymentsSort
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class PaymentsFilterTest extends TestCase
+class PaymentsSortTest extends TestCase
 {
 
     /**
@@ -71,18 +71,27 @@ class PaymentsFilterTest extends TestCase
     }
 
     /**
-     * Test "PaymentsFilter"
+     * Test "PaymentsSort"
      */
-    public function testPaymentsFilter()
+    public function testPaymentsSort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "updated_since"
+     * Test attribute "by"
      */
-    public function testPropertyUpdatedSince()
+    public function testPropertyBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "direction"
+     */
+    public function testPropertyDirection()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentsFilterTest
+ * JournalEntriesFilterTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * PaymentsFilterTest Class Doc Comment
+ * JournalEntriesFilterTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentsFilter
+ * @description JournalEntriesFilter
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class PaymentsFilterTest extends TestCase
+class JournalEntriesFilterTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class PaymentsFilterTest extends TestCase
     }
 
     /**
-     * Test "PaymentsFilter"
+     * Test "JournalEntriesFilter"
      */
-    public function testPaymentsFilter()
+    public function testJournalEntriesFilter()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

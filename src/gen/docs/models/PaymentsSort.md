@@ -1,11 +1,11 @@
-# Apideck.PurchaseOrdersSort
+# Apideck.PaymentsSort
 
 ### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`by` | **string** | The field on which to sort the Purchase Orders | [optional] 
+`by` | **string** | The field on which to sort the Payments | [optional] 
 `direction` | [**\Apideck\Client\Model\SortDirection**](SortDirection.md) |  | [optional] 
 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 
 <a name="BY"></a>
-## Enum: PurchaseOrdersSort.by
+## Enum: PaymentsSort.by
 
 
 * `UPDATED_AT` (value: `'updated_at'`)

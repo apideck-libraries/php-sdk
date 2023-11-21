@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentsFilter
+ * JournalEntriesFilter
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * PaymentsFilter Class Doc Comment
+ * JournalEntriesFilter Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
+class JournalEntriesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'PaymentsFilter';
+    protected static $openAPIModelName = 'JournalEntriesFilter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -423,6 +423,8 @@ docs/Model/Job.md
 docs/Model/JobLinks.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
+docs/Model/JournalEntriesFilter.md
+docs/Model/JournalEntriesSort.md
 docs/Model/JournalEntry.md
 docs/Model/JournalEntryLineItem.md
 docs/Model/Lead.md
@@ -488,6 +490,7 @@ docs/Model/PaymentFrequency.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
 docs/Model/PaymentsFilter.md
+docs/Model/PaymentsSort.md
 docs/Model/Payroll.md
 docs/Model/PayrollTotals.md
 docs/Model/PayrollsFilter.md
@@ -1050,6 +1053,8 @@ lib/Model/Job.php
 lib/Model/JobLinks.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
+lib/Model/JournalEntriesFilter.php
+lib/Model/JournalEntriesSort.php
 lib/Model/JournalEntry.php
 lib/Model/JournalEntryLineItem.php
 lib/Model/Lead.php
@@ -1116,6 +1121,7 @@ lib/Model/PaymentFrequency.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
 lib/Model/PaymentsFilter.php
+lib/Model/PaymentsSort.php
 lib/Model/Payroll.php
 lib/Model/PayrollTotals.php
 lib/Model/PayrollsFilter.php
@@ -1674,6 +1680,8 @@ test/Model/JobLinksTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
+test/Model/JournalEntriesFilterTest.php
+test/Model/JournalEntriesSortTest.php
 test/Model/JournalEntryLineItemTest.php
 test/Model/JournalEntryTest.php
 test/Model/LeadEventTypeTest.php
@@ -1739,6 +1747,7 @@ test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
 test/Model/PaymentsFilterTest.php
+test/Model/PaymentsSortTest.php
 test/Model/PayrollTest.php
 test/Model/PayrollTotalsTest.php
 test/Model/PayrollsFilterTest.php

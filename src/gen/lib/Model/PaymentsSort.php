@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentsFilter
+ * PaymentsSort
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * PaymentsFilter Class Doc Comment
+ * PaymentsSort Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
+class PaymentsSort implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'PaymentsFilter';
+    protected static $openAPIModelName = 'PaymentsSort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'updated_since' => '\DateTime'
+        'by' => 'string',
+        'direction' => '\Apideck\Client\Model\SortDirection'
     ];
 
     /**
@@ -70,7 +71,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'updated_since' => 'date-time'
+        'by' => null,
+        'direction' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'updated_since' => 'updated_since'
+        'by' => 'by',
+        'direction' => 'direction'
     ];
 
     /**
@@ -109,7 +112,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'updated_since' => 'setUpdatedSince'
+        'by' => 'setBy',
+        'direction' => 'setDirection'
     ];
 
     /**
@@ -118,7 +122,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'updated_since' => 'getUpdatedSince'
+        'by' => 'getBy',
+        'direction' => 'getDirection'
     ];
 
     /**
@@ -162,6 +167,21 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const BY_UPDATED_AT = 'updated_at';
+    const BY_CREATED_AT = 'created_at';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getByAllowableValues()
+    {
+        return [
+            self::BY_UPDATED_AT,
+            self::BY_CREATED_AT,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -178,7 +198,8 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['by'] = $data['by'] ?? null;
+        $this->container['direction'] = $data['direction'] ?? null;
     }
 
     /**
@@ -189,6 +210,15 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($this->container['by']) && !in_array($this->container['by'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'by', must be one of '%s'",
+                $this->container['by'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -206,25 +236,59 @@ class PaymentsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets updated_since
+     * Gets by
      *
-     * @return \DateTime|null
+     * @return string|null
      */
-    public function getUpdatedSince()
+    public function getBy()
     {
-        return $this->container['updated_since'];
+        return $this->container['by'];
     }
 
     /**
-     * Sets updated_since
+     * Sets by
      *
-     * @param \DateTime|null $updated_since updated_since
+     * @param string|null $by The field on which to sort the Payments
      *
      * @return self
      */
-    public function setUpdatedSince($updated_since)
+    public function setBy($by)
     {
-        $this->container['updated_since'] = $updated_since;
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($by) && !in_array($by, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'by', must be one of '%s'",
+                    $by,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['by'] = $by;
+
+        return $this;
+    }
+
+    /**
+     * Gets direction
+     *
+     * @return \Apideck\Client\Model\SortDirection|null
+     */
+    public function getDirection()
+    {
+        return $this->container['direction'];
+    }
+
+    /**
+     * Sets direction
+     *
+     * @param \Apideck\Client\Model\SortDirection|null $direction direction
+     *
+     * @return self
+     */
+    public function setDirection($direction)
+    {
+        $this->container['direction'] = $direction;
 
         return $this;
     }
