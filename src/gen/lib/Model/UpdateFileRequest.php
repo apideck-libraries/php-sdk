@@ -278,7 +278,7 @@ class UpdateFileRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets parent_folder_id
      *
-     * @param string|null $parent_folder_id The parent folder to create the new file within.
+     * @param string|null $parent_folder_id The parent folder to create the new file within. This can be an ID or a path depending on the downstream folder. Please see the connector section below to see downstream specific gotchas.
      *
      * @return self
      */
