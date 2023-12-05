@@ -1,6 +1,6 @@
 <?php
 /**
- * OpportunitiesFilter
+ * ActivitiesSort
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * OpportunitiesFilter Class Doc Comment
+ * ActivitiesSort Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
+class ActivitiesSort implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OpportunitiesFilter';
+    protected static $openAPIModelName = 'ActivitiesSort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,13 +59,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
-        'status' => 'string',
-        'monetary_amount' => 'float',
-        'win_probability' => 'float',
-        'company_id' => 'string',
-        'owner_id' => 'string',
-        'primary_contact_id' => 'string'
+        'by' => 'string',
+        'direction' => '\Apideck\Client\Model\SortDirection'
     ];
 
     /**
@@ -76,13 +71,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
-        'status' => null,
-        'monetary_amount' => null,
-        'win_probability' => null,
-        'company_id' => null,
-        'owner_id' => null,
-        'primary_contact_id' => null
+        'by' => null,
+        'direction' => null
     ];
 
     /**
@@ -112,13 +102,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
-        'status' => 'status',
-        'monetary_amount' => 'monetary_amount',
-        'win_probability' => 'win_probability',
-        'company_id' => 'company_id',
-        'owner_id' => 'owner_id',
-        'primary_contact_id' => 'primary_contact_id'
+        'by' => 'by',
+        'direction' => 'direction'
     ];
 
     /**
@@ -127,13 +112,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
-        'status' => 'setStatus',
-        'monetary_amount' => 'setMonetaryAmount',
-        'win_probability' => 'setWinProbability',
-        'company_id' => 'setCompanyId',
-        'owner_id' => 'setOwnerId',
-        'primary_contact_id' => 'setPrimaryContactId'
+        'by' => 'setBy',
+        'direction' => 'setDirection'
     ];
 
     /**
@@ -142,13 +122,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
-        'status' => 'getStatus',
-        'monetary_amount' => 'getMonetaryAmount',
-        'win_probability' => 'getWinProbability',
-        'company_id' => 'getCompanyId',
-        'owner_id' => 'getOwnerId',
-        'primary_contact_id' => 'getPrimaryContactId'
+        'by' => 'getBy',
+        'direction' => 'getDirection'
     ];
 
     /**
@@ -192,6 +167,21 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
         return self::$openAPIModelName;
     }
 
+    const BY_CREATED_AT = 'created_at';
+    const BY_UPDATED_AT = 'updated_at';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getByAllowableValues()
+    {
+        return [
+            self::BY_CREATED_AT,
+            self::BY_UPDATED_AT,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -208,13 +198,8 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['title'] = $data['title'] ?? null;
-        $this->container['status'] = $data['status'] ?? null;
-        $this->container['monetary_amount'] = $data['monetary_amount'] ?? null;
-        $this->container['win_probability'] = $data['win_probability'] ?? null;
-        $this->container['company_id'] = $data['company_id'] ?? null;
-        $this->container['owner_id'] = $data['owner_id'] ?? null;
-        $this->container['primary_contact_id'] = $data['primary_contact_id'] ?? null;
+        $this->container['by'] = $data['by'] ?? null;
+        $this->container['direction'] = $data['direction'] ?? null;
     }
 
     /**
@@ -225,6 +210,15 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($this->container['by']) && !in_array($this->container['by'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'by', must be one of '%s'",
+                $this->container['by'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -242,169 +236,59 @@ class OpportunitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets title
+     * Gets by
      *
      * @return string|null
      */
-    public function getTitle()
+    public function getBy()
     {
-        return $this->container['title'];
+        return $this->container['by'];
     }
 
     /**
-     * Sets title
+     * Sets by
      *
-     * @param string|null $title Title of the opportunity to filter on
+     * @param string|null $by The field on which to sort the Activities
      *
      * @return self
      */
-    public function setTitle($title)
+    public function setBy($by)
     {
-        $this->container['title'] = $title;
+        $allowedValues = $this->getByAllowableValues();
+        if (!is_null($by) && !in_array($by, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'by', must be one of '%s'",
+                    $by,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['by'] = $by;
 
         return $this;
     }
 
     /**
-     * Gets status
+     * Gets direction
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\SortDirection|null
      */
-    public function getStatus()
+    public function getDirection()
     {
-        return $this->container['status'];
+        return $this->container['direction'];
     }
 
     /**
-     * Sets status
+     * Sets direction
      *
-     * @param string|null $status Status to filter on
+     * @param \Apideck\Client\Model\SortDirection|null $direction direction
      *
      * @return self
      */
-    public function setStatus($status)
+    public function setDirection($direction)
     {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets monetary_amount
-     *
-     * @return float|null
-     */
-    public function getMonetaryAmount()
-    {
-        return $this->container['monetary_amount'];
-    }
-
-    /**
-     * Sets monetary_amount
-     *
-     * @param float|null $monetary_amount Monetary amount to filter on
-     *
-     * @return self
-     */
-    public function setMonetaryAmount($monetary_amount)
-    {
-        $this->container['monetary_amount'] = $monetary_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets win_probability
-     *
-     * @return float|null
-     */
-    public function getWinProbability()
-    {
-        return $this->container['win_probability'];
-    }
-
-    /**
-     * Sets win_probability
-     *
-     * @param float|null $win_probability Win probability to filter on
-     *
-     * @return self
-     */
-    public function setWinProbability($win_probability)
-    {
-        $this->container['win_probability'] = $win_probability;
-
-        return $this;
-    }
-
-    /**
-     * Gets company_id
-     *
-     * @return string|null
-     */
-    public function getCompanyId()
-    {
-        return $this->container['company_id'];
-    }
-
-    /**
-     * Sets company_id
-     *
-     * @param string|null $company_id Company ID to filter on
-     *
-     * @return self
-     */
-    public function setCompanyId($company_id)
-    {
-        $this->container['company_id'] = $company_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets owner_id
-     *
-     * @return string|null
-     */
-    public function getOwnerId()
-    {
-        return $this->container['owner_id'];
-    }
-
-    /**
-     * Sets owner_id
-     *
-     * @param string|null $owner_id Owner ID to filter on
-     *
-     * @return self
-     */
-    public function setOwnerId($owner_id)
-    {
-        $this->container['owner_id'] = $owner_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets primary_contact_id
-     *
-     * @return string|null
-     */
-    public function getPrimaryContactId()
-    {
-        return $this->container['primary_contact_id'];
-    }
-
-    /**
-     * Sets primary_contact_id
-     *
-     * @param string|null $primary_contact_id Primary contact ID to filter on
-     *
-     * @return self
-     */
-    public function setPrimaryContactId($primary_contact_id)
-    {
-        $this->container['primary_contact_id'] = $primary_contact_id;
+        $this->container['direction'] = $direction;
 
         return $this;
     }

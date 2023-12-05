@@ -123,4 +123,22 @@ class OpportunitiesFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "owner_id"
+     */
+    public function testPropertyOwnerId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "primary_contact_id"
+     */
+    public function testPropertyPrimaryContactId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

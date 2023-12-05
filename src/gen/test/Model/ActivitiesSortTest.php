@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivitiesFilterTest
+ * ActivitiesSortTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ActivitiesFilterTest Class Doc Comment
+ * ActivitiesSortTest Class Doc Comment
  *
  * @category    Class
- * @description ActivitiesFilter
+ * @description ActivitiesSort
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ActivitiesFilterTest extends TestCase
+class ActivitiesSortTest extends TestCase
 {
 
     /**
@@ -71,45 +71,27 @@ class ActivitiesFilterTest extends TestCase
     }
 
     /**
-     * Test "ActivitiesFilter"
+     * Test "ActivitiesSort"
      */
-    public function testActivitiesFilter()
+    public function testActivitiesSort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "company_id"
+     * Test attribute "by"
      */
-    public function testPropertyCompanyId()
+    public function testPropertyBy()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "owner_id"
+     * Test attribute "direction"
      */
-    public function testPropertyOwnerId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "contact_id"
-     */
-    public function testPropertyContactId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_since"
-     */
-    public function testPropertyUpdatedSince()
+    public function testPropertyDirection()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
