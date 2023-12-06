@@ -8,8 +8,6 @@ on:
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: write
-  issues: write
-  security-events: read
   
 jobs:
   release:
