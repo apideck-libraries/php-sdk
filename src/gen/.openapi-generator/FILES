@@ -24,6 +24,7 @@ docs/Api/VaultApi.md
 docs/Api/WebhookApi.md
 docs/Model/AccountingEventType.md
 docs/Model/ActivitiesFilter.md
+docs/Model/ActivitiesSort.md
 docs/Model/Activity.md
 docs/Model/ActivityAttendee.md
 docs/Model/Address.md
@@ -61,6 +62,7 @@ docs/Model/BankAccount.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
+docs/Model/BillsFilter.md
 docs/Model/BillsSort.md
 docs/Model/Branch.md
 docs/Model/CashDetails.md
@@ -163,6 +165,8 @@ docs/Model/CreateUserResponse.md
 docs/Model/CreateWebhookRequest.md
 docs/Model/CreateWebhookResponse.md
 docs/Model/CreditNote.md
+docs/Model/CreditNotesFilter.md
+docs/Model/CreditNotesSort.md
 docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
@@ -170,6 +174,7 @@ docs/Model/CustomFieldFinder.md
 docs/Model/CustomMapping.md
 docs/Model/Customer.md
 docs/Model/CustomersFilter.md
+docs/Model/CustomersSort.md
 docs/Model/Deduction.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
@@ -410,6 +415,7 @@ docs/Model/InvoiceItemSalesDetails.md
 docs/Model/InvoiceItemsFilter.md
 docs/Model/InvoiceLineItem.md
 docs/Model/InvoiceResponse.md
+docs/Model/InvoicesFilter.md
 docs/Model/InvoicesSort.md
 docs/Model/IssueTrackingEventType.md
 docs/Model/IssuesFilter.md
@@ -418,6 +424,8 @@ docs/Model/Job.md
 docs/Model/JobLinks.md
 docs/Model/JobSalary.md
 docs/Model/JobStatus.md
+docs/Model/JournalEntriesFilter.md
+docs/Model/JournalEntriesSort.md
 docs/Model/JournalEntry.md
 docs/Model/JournalEntryLineItem.md
 docs/Model/Lead.md
@@ -427,6 +435,8 @@ docs/Model/LeadsSort.md
 docs/Model/LedgerAccount.md
 docs/Model/LedgerAccountCategories.md
 docs/Model/LedgerAccountParentAccount.md
+docs/Model/LedgerAccountsFilter.md
+docs/Model/LedgerAccountsSort.md
 docs/Model/LinkedConnectorResource.md
 docs/Model/LinkedCustomer.md
 docs/Model/LinkedEcommerceCustomer.md
@@ -481,6 +491,7 @@ docs/Model/PaymentFrequency.md
 docs/Model/PaymentRequiredResponse.md
 docs/Model/PaymentUnit.md
 docs/Model/PaymentsFilter.md
+docs/Model/PaymentsSort.md
 docs/Model/Payroll.md
 docs/Model/PayrollTotals.md
 docs/Model/PayrollsFilter.md
@@ -505,6 +516,8 @@ docs/Model/ProfitAndLossNetOperatingIncome.md
 docs/Model/ProfitAndLossRecord.md
 docs/Model/ProfitAndLossSection.md
 docs/Model/PurchaseOrder.md
+docs/Model/PurchaseOrdersFilter.md
+docs/Model/PurchaseOrdersSort.md
 docs/Model/RequestCountAllocation.md
 docs/Model/RequestRate.md
 docs/Model/ResolveWebhookResponse.md
@@ -526,6 +539,7 @@ docs/Model/SortDirection.md
 docs/Model/Status.md
 docs/Model/Supplier.md
 docs/Model/SuppliersFilter.md
+docs/Model/SuppliersSort.md
 docs/Model/SupportedProperty.md
 docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
@@ -641,6 +655,7 @@ lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/AccountingEventType.php
 lib/Model/ActivitiesFilter.php
+lib/Model/ActivitiesSort.php
 lib/Model/Activity.php
 lib/Model/ActivityAttendee.php
 lib/Model/Address.php
@@ -678,6 +693,7 @@ lib/Model/BankAccount.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
+lib/Model/BillsFilter.php
 lib/Model/BillsSort.php
 lib/Model/Branch.php
 lib/Model/CashDetails.php
@@ -780,6 +796,8 @@ lib/Model/CreateUserResponse.php
 lib/Model/CreateWebhookRequest.php
 lib/Model/CreateWebhookResponse.php
 lib/Model/CreditNote.php
+lib/Model/CreditNotesFilter.php
+lib/Model/CreditNotesSort.php
 lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
@@ -787,6 +805,7 @@ lib/Model/CustomFieldFinder.php
 lib/Model/CustomMapping.php
 lib/Model/Customer.php
 lib/Model/CustomersFilter.php
+lib/Model/CustomersSort.php
 lib/Model/Deduction.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
@@ -1027,6 +1046,7 @@ lib/Model/InvoiceItemSalesDetails.php
 lib/Model/InvoiceItemsFilter.php
 lib/Model/InvoiceLineItem.php
 lib/Model/InvoiceResponse.php
+lib/Model/InvoicesFilter.php
 lib/Model/InvoicesSort.php
 lib/Model/IssueTrackingEventType.php
 lib/Model/IssuesFilter.php
@@ -1035,6 +1055,8 @@ lib/Model/Job.php
 lib/Model/JobLinks.php
 lib/Model/JobSalary.php
 lib/Model/JobStatus.php
+lib/Model/JournalEntriesFilter.php
+lib/Model/JournalEntriesSort.php
 lib/Model/JournalEntry.php
 lib/Model/JournalEntryLineItem.php
 lib/Model/Lead.php
@@ -1044,6 +1066,8 @@ lib/Model/LeadsSort.php
 lib/Model/LedgerAccount.php
 lib/Model/LedgerAccountCategories.php
 lib/Model/LedgerAccountParentAccount.php
+lib/Model/LedgerAccountsFilter.php
+lib/Model/LedgerAccountsSort.php
 lib/Model/LinkedConnectorResource.php
 lib/Model/LinkedCustomer.php
 lib/Model/LinkedEcommerceCustomer.php
@@ -1099,6 +1123,7 @@ lib/Model/PaymentFrequency.php
 lib/Model/PaymentRequiredResponse.php
 lib/Model/PaymentUnit.php
 lib/Model/PaymentsFilter.php
+lib/Model/PaymentsSort.php
 lib/Model/Payroll.php
 lib/Model/PayrollTotals.php
 lib/Model/PayrollsFilter.php
@@ -1123,6 +1148,8 @@ lib/Model/ProfitAndLossNetOperatingIncome.php
 lib/Model/ProfitAndLossRecord.php
 lib/Model/ProfitAndLossSection.php
 lib/Model/PurchaseOrder.php
+lib/Model/PurchaseOrdersFilter.php
+lib/Model/PurchaseOrdersSort.php
 lib/Model/RequestCountAllocation.php
 lib/Model/RequestRate.php
 lib/Model/ResolveWebhookResponse.php
@@ -1144,6 +1171,7 @@ lib/Model/SortDirection.php
 lib/Model/Status.php
 lib/Model/Supplier.php
 lib/Model/SuppliersFilter.php
+lib/Model/SuppliersSort.php
 lib/Model/SupportedProperty.php
 lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
@@ -1255,6 +1283,7 @@ test/Api/VaultApiTest.php
 test/Api/WebhookApiTest.php
 test/Model/AccountingEventTypeTest.php
 test/Model/ActivitiesFilterTest.php
+test/Model/ActivitiesSortTest.php
 test/Model/ActivityAttendeeTest.php
 test/Model/ActivityTest.php
 test/Model/AddressTest.php
@@ -1292,6 +1321,7 @@ test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
 test/Model/BillTest.php
+test/Model/BillsFilterTest.php
 test/Model/BillsSortTest.php
 test/Model/BranchTest.php
 test/Model/CashDetailsTest.php
@@ -1394,6 +1424,8 @@ test/Model/CreateUserResponseTest.php
 test/Model/CreateWebhookRequestTest.php
 test/Model/CreateWebhookResponseTest.php
 test/Model/CreditNoteTest.php
+test/Model/CreditNotesFilterTest.php
+test/Model/CreditNotesSortTest.php
 test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldFinderTest.php
@@ -1401,6 +1433,7 @@ test/Model/CustomFieldTest.php
 test/Model/CustomMappingTest.php
 test/Model/CustomerTest.php
 test/Model/CustomersFilterTest.php
+test/Model/CustomersSortTest.php
 test/Model/DeductionTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
@@ -1641,6 +1674,7 @@ test/Model/InvoiceItemsFilterTest.php
 test/Model/InvoiceLineItemTest.php
 test/Model/InvoiceResponseTest.php
 test/Model/InvoiceTest.php
+test/Model/InvoicesFilterTest.php
 test/Model/InvoicesSortTest.php
 test/Model/IssueTrackingEventTypeTest.php
 test/Model/IssuesFilterTest.php
@@ -1649,6 +1683,8 @@ test/Model/JobLinksTest.php
 test/Model/JobSalaryTest.php
 test/Model/JobStatusTest.php
 test/Model/JobTest.php
+test/Model/JournalEntriesFilterTest.php
+test/Model/JournalEntriesSortTest.php
 test/Model/JournalEntryLineItemTest.php
 test/Model/JournalEntryTest.php
 test/Model/LeadEventTypeTest.php
@@ -1658,6 +1694,8 @@ test/Model/LeadsSortTest.php
 test/Model/LedgerAccountCategoriesTest.php
 test/Model/LedgerAccountParentAccountTest.php
 test/Model/LedgerAccountTest.php
+test/Model/LedgerAccountsFilterTest.php
+test/Model/LedgerAccountsSortTest.php
 test/Model/LinkedConnectorResourceTest.php
 test/Model/LinkedCustomerTest.php
 test/Model/LinkedEcommerceCustomerTest.php
@@ -1712,6 +1750,7 @@ test/Model/PaymentRequiredResponseTest.php
 test/Model/PaymentTest.php
 test/Model/PaymentUnitTest.php
 test/Model/PaymentsFilterTest.php
+test/Model/PaymentsSortTest.php
 test/Model/PayrollTest.php
 test/Model/PayrollTotalsTest.php
 test/Model/PayrollsFilterTest.php
@@ -1736,6 +1775,8 @@ test/Model/ProfitAndLossRecordTest.php
 test/Model/ProfitAndLossSectionTest.php
 test/Model/ProfitAndLossTest.php
 test/Model/PurchaseOrderTest.php
+test/Model/PurchaseOrdersFilterTest.php
+test/Model/PurchaseOrdersSortTest.php
 test/Model/RequestCountAllocationTest.php
 test/Model/RequestRateTest.php
 test/Model/ResolveWebhookResponseTest.php
@@ -1757,6 +1798,7 @@ test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
 test/Model/SupplierTest.php
 test/Model/SuppliersFilterTest.php
+test/Model/SuppliersSortTest.php
 test/Model/SupportedPropertyChildPropertiesTest.php
 test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
