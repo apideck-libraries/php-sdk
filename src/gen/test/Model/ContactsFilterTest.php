@@ -116,6 +116,15 @@ class ContactsFilterTest extends TestCase
     }
 
     /**
+     * Test attribute "phone_number"
+     */
+    public function testPropertyPhoneNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "company_id"
      */
     public function testPropertyCompanyId()

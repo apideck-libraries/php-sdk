@@ -63,6 +63,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'string',
         'last_name' => 'string',
         'email' => 'string',
+        'phone_number' => 'string',
         'company_id' => 'string'
     ];
 
@@ -78,6 +79,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => null,
         'last_name' => null,
         'email' => null,
+        'phone_number' => null,
         'company_id' => null
     ];
 
@@ -112,6 +114,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'email' => 'email',
+        'phone_number' => 'phone_number',
         'company_id' => 'company_id'
     ];
 
@@ -125,6 +128,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'email' => 'setEmail',
+        'phone_number' => 'setPhoneNumber',
         'company_id' => 'setCompanyId'
     ];
 
@@ -138,6 +142,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'email' => 'getEmail',
+        'phone_number' => 'getPhoneNumber',
         'company_id' => 'getCompanyId'
     ];
 
@@ -202,6 +207,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['phone_number'] = $data['phone_number'] ?? null;
         $this->container['company_id'] = $data['company_id'] ?? null;
     }
 
@@ -321,6 +327,30 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return string|null
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param string|null $phone_number Phone number of the contact to filter on
+     *
+     * @return self
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }
