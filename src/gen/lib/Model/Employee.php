@@ -80,7 +80,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'string',
         'employment_start_date' => 'string',
         'employment_end_date' => 'string',
-        'leaving_reason' => 'OneOfStringNull',
+        'leaving_reason' => 'string',
         'employee_number' => 'string',
         'employment_status' => '\Apideck\Client\Model\EmploymentStatus',
         'employment_role' => '\Apideck\Client\Model\EmployeeEmploymentRole',
@@ -482,6 +482,25 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    const LEAVING_REASON_DISMISSED = 'dismissed';
+    const LEAVING_REASON_RESIGNED = 'resigned';
+    const LEAVING_REASON_REDUNDANCY = 'redundancy';
+    const LEAVING_REASON_OTHER = 'other';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLeavingReasonAllowableValues()
+    {
+        return [
+            self::LEAVING_REASON_DISMISSED,
+            self::LEAVING_REASON_RESIGNED,
+            self::LEAVING_REASON_REDUNDANCY,
+            self::LEAVING_REASON_OTHER,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -577,6 +596,15 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+        $allowedValues = $this->getLeavingReasonAllowableValues();
+        if (!is_null($this->container['leaving_reason']) && !in_array($this->container['leaving_reason'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'leaving_reason', must be one of '%s'",
+                $this->container['leaving_reason'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         if (!is_null($this->container['country_of_birth']) && (mb_strlen($this->container['country_of_birth']) > 2)) {
             $invalidProperties[] = "invalid value for 'country_of_birth', the character length must be smaller than or equal to 2.";
         }
@@ -1109,7 +1137,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets leaving_reason
      *
-     * @return OneOfStringNull|null
+     * @return string|null
      */
     public function getLeavingReason()
     {
@@ -1119,12 +1147,22 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets leaving_reason
      *
-     * @param OneOfStringNull|null $leaving_reason leaving_reason
+     * @param string|null $leaving_reason The reason because the employment ended.
      *
      * @return self
      */
     public function setLeavingReason($leaving_reason)
     {
+        $allowedValues = $this->getLeavingReasonAllowableValues();
+        if (!is_null($leaving_reason) && !in_array($leaving_reason, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'leaving_reason', must be one of '%s'",
+                    $leaving_reason,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['leaving_reason'] = $leaving_reason;
 
         return $this;
