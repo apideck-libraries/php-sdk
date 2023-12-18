@@ -541,7 +541,6 @@ docs/Model/Supplier.md
 docs/Model/SuppliersFilter.md
 docs/Model/SuppliersSort.md
 docs/Model/SupportedProperty.md
-docs/Model/SupportedPropertyChildProperties.md
 docs/Model/Tax.md
 docs/Model/TaxRate.md
 docs/Model/TaxRatesFilter.md
@@ -1173,7 +1172,6 @@ lib/Model/Supplier.php
 lib/Model/SuppliersFilter.php
 lib/Model/SuppliersSort.php
 lib/Model/SupportedProperty.php
-lib/Model/SupportedPropertyChildProperties.php
 lib/Model/Tax.php
 lib/Model/TaxRate.php
 lib/Model/TaxRatesFilter.php
@@ -1799,7 +1797,6 @@ test/Model/StatusTest.php
 test/Model/SupplierTest.php
 test/Model/SuppliersFilterTest.php
 test/Model/SuppliersSortTest.php
-test/Model/SupportedPropertyChildPropertiesTest.php
 test/Model/SupportedPropertyTest.php
 test/Model/TaxRateTest.php
 test/Model/TaxRatesFilterTest.php
