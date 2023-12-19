@@ -215,9 +215,6 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -236,7 +233,7 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return string
+     * @return string|null
      */
     public function getId()
     {
@@ -246,7 +243,7 @@ class LinkedSupplier implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id The ID of the supplier this entity is linked to.
+     * @param string|null $id The ID of the supplier this entity is linked to.
      *
      * @return self
      */
