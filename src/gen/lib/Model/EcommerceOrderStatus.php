@@ -53,6 +53,8 @@ class EcommerceOrderStatus
 
     const UNKNOWN = 'unknown';
 
+    const OTHER = 'other';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -64,7 +66,8 @@ class EcommerceOrderStatus
             self::COMPLETED,
             self::CANCELLED,
             self::ARCHIVED,
-            self::UNKNOWN
+            self::UNKNOWN,
+            self::OTHER
         ];
     }
 }
