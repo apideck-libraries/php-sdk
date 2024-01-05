@@ -387,6 +387,8 @@ docs/Model/GetSharedLinkResponse.md
 docs/Model/GetSharedLinksResponse.md
 docs/Model/GetStoreResponse.md
 docs/Model/GetStoresResponse.md
+docs/Model/GetSubsidiariesResponse.md
+docs/Model/GetSubsidiaryResponse.md
 docs/Model/GetSupplierResponse.md
 docs/Model/GetSuppliersResponse.md
 docs/Model/GetTaxRateResponse.md
@@ -537,6 +539,7 @@ docs/Model/SimpleFormFieldOption.md
 docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
+docs/Model/Subsidiary.md
 docs/Model/Supplier.md
 docs/Model/SuppliersFilter.md
 docs/Model/SuppliersSort.md
@@ -1017,6 +1020,8 @@ lib/Model/GetSharedLinkResponse.php
 lib/Model/GetSharedLinksResponse.php
 lib/Model/GetStoreResponse.php
 lib/Model/GetStoresResponse.php
+lib/Model/GetSubsidiariesResponse.php
+lib/Model/GetSubsidiaryResponse.php
 lib/Model/GetSupplierResponse.php
 lib/Model/GetSuppliersResponse.php
 lib/Model/GetTaxRateResponse.php
@@ -1168,6 +1173,7 @@ lib/Model/SimpleFormFieldOption.php
 lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
+lib/Model/Subsidiary.php
 lib/Model/Supplier.php
 lib/Model/SuppliersFilter.php
 lib/Model/SuppliersSort.php
@@ -1644,6 +1650,8 @@ test/Model/GetSharedLinkResponseTest.php
 test/Model/GetSharedLinksResponseTest.php
 test/Model/GetStoreResponseTest.php
 test/Model/GetStoresResponseTest.php
+test/Model/GetSubsidiariesResponseTest.php
+test/Model/GetSubsidiaryResponseTest.php
 test/Model/GetSupplierResponseTest.php
 test/Model/GetSuppliersResponseTest.php
 test/Model/GetTaxRateResponseTest.php
@@ -1794,6 +1802,7 @@ test/Model/SimpleFormFieldOptionTest.php
 test/Model/SocialLinkTest.php
 test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
+test/Model/SubsidiaryTest.php
 test/Model/SupplierTest.php
 test/Model/SuppliersFilterTest.php
 test/Model/SuppliersSortTest.php
