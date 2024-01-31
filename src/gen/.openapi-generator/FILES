@@ -22,7 +22,11 @@ docs/Api/PosApi.md
 docs/Api/SmsApi.md
 docs/Api/VaultApi.md
 docs/Api/WebhookApi.md
+docs/Model/AccountingDepartment.md
+docs/Model/AccountingDepartmentsFilter.md
 docs/Model/AccountingEventType.md
+docs/Model/AccountingLocation.md
+docs/Model/AccountingLocationsFilter.md
 docs/Model/ActivitiesFilter.md
 docs/Model/ActivitiesSort.md
 docs/Model/Activity.md
@@ -106,6 +110,8 @@ docs/Model/Contact.md
 docs/Model/ContactsFilter.md
 docs/Model/ContactsSort.md
 docs/Model/CopyFolderRequest.md
+docs/Model/CreateAccountingDepartmentResponse.md
+docs/Model/CreateAccountingLocationResponse.md
 docs/Model/CreateActivityResponse.md
 docs/Model/CreateApplicantResponse.md
 docs/Model/CreateApplicationResponse.md
@@ -177,6 +183,8 @@ docs/Model/Customer.md
 docs/Model/CustomersFilter.md
 docs/Model/CustomersSort.md
 docs/Model/Deduction.md
+docs/Model/DeleteAccountingDepartmentResponse.md
+docs/Model/DeleteAccountingLocationResponse.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
 docs/Model/DeleteApplicationResponse.md
@@ -272,6 +280,10 @@ docs/Model/FormField.md
 docs/Model/FormFieldOption.md
 docs/Model/FormFieldOptionGroup.md
 docs/Model/Gender.md
+docs/Model/GetAccountingDepartmentResponse.md
+docs/Model/GetAccountingDepartmentsResponse.md
+docs/Model/GetAccountingLocationResponse.md
+docs/Model/GetAccountingLocationsResponse.md
 docs/Model/GetActivitiesResponse.md
 docs/Model/GetActivityResponse.md
 docs/Model/GetApiResourceCoverageResponse.md
@@ -542,6 +554,7 @@ docs/Model/SocialLink.md
 docs/Model/SortDirection.md
 docs/Model/Status.md
 docs/Model/Subsidiary.md
+docs/Model/SubsidiaryReference.md
 docs/Model/Supplier.md
 docs/Model/SuppliersFilter.md
 docs/Model/SuppliersSort.md
@@ -566,6 +579,8 @@ docs/Model/UnifiedFile.md
 docs/Model/UnifiedFilePermissions.md
 docs/Model/UnifiedId.md
 docs/Model/UnprocessableResponse.md
+docs/Model/UpdateAccountingDepartmentResponse.md
+docs/Model/UpdateAccountingLocationResponse.md
 docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateApplicantResponse.md
 docs/Model/UpdateApplicationResponse.md
@@ -658,7 +673,11 @@ lib/Apideck.php
 lib/ApideckConfiguration.php
 lib/Configuration.php
 lib/HeaderSelector.php
+lib/Model/AccountingDepartment.php
+lib/Model/AccountingDepartmentsFilter.php
 lib/Model/AccountingEventType.php
+lib/Model/AccountingLocation.php
+lib/Model/AccountingLocationsFilter.php
 lib/Model/ActivitiesFilter.php
 lib/Model/ActivitiesSort.php
 lib/Model/Activity.php
@@ -742,6 +761,8 @@ lib/Model/Contact.php
 lib/Model/ContactsFilter.php
 lib/Model/ContactsSort.php
 lib/Model/CopyFolderRequest.php
+lib/Model/CreateAccountingDepartmentResponse.php
+lib/Model/CreateAccountingLocationResponse.php
 lib/Model/CreateActivityResponse.php
 lib/Model/CreateApplicantResponse.php
 lib/Model/CreateApplicationResponse.php
@@ -813,6 +834,8 @@ lib/Model/Customer.php
 lib/Model/CustomersFilter.php
 lib/Model/CustomersSort.php
 lib/Model/Deduction.php
+lib/Model/DeleteAccountingDepartmentResponse.php
+lib/Model/DeleteAccountingLocationResponse.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
 lib/Model/DeleteApplicationResponse.php
@@ -908,6 +931,10 @@ lib/Model/FormField.php
 lib/Model/FormFieldOption.php
 lib/Model/FormFieldOptionGroup.php
 lib/Model/Gender.php
+lib/Model/GetAccountingDepartmentResponse.php
+lib/Model/GetAccountingDepartmentsResponse.php
+lib/Model/GetAccountingLocationResponse.php
+lib/Model/GetAccountingLocationsResponse.php
 lib/Model/GetActivitiesResponse.php
 lib/Model/GetActivityResponse.php
 lib/Model/GetApiResourceCoverageResponse.php
@@ -1179,6 +1206,7 @@ lib/Model/SocialLink.php
 lib/Model/SortDirection.php
 lib/Model/Status.php
 lib/Model/Subsidiary.php
+lib/Model/SubsidiaryReference.php
 lib/Model/Supplier.php
 lib/Model/SuppliersFilter.php
 lib/Model/SuppliersSort.php
@@ -1203,6 +1231,8 @@ lib/Model/UnifiedFile.php
 lib/Model/UnifiedFilePermissions.php
 lib/Model/UnifiedId.php
 lib/Model/UnprocessableResponse.php
+lib/Model/UpdateAccountingDepartmentResponse.php
+lib/Model/UpdateAccountingLocationResponse.php
 lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateApplicantResponse.php
 lib/Model/UpdateApplicationResponse.php
@@ -1291,7 +1321,11 @@ test/Api/PosApiTest.php
 test/Api/SmsApiTest.php
 test/Api/VaultApiTest.php
 test/Api/WebhookApiTest.php
+test/Model/AccountingDepartmentTest.php
+test/Model/AccountingDepartmentsFilterTest.php
 test/Model/AccountingEventTypeTest.php
+test/Model/AccountingLocationTest.php
+test/Model/AccountingLocationsFilterTest.php
 test/Model/ActivitiesFilterTest.php
 test/Model/ActivitiesSortTest.php
 test/Model/ActivityAttendeeTest.php
@@ -1375,6 +1409,8 @@ test/Model/ContactTest.php
 test/Model/ContactsFilterTest.php
 test/Model/ContactsSortTest.php
 test/Model/CopyFolderRequestTest.php
+test/Model/CreateAccountingDepartmentResponseTest.php
+test/Model/CreateAccountingLocationResponseTest.php
 test/Model/CreateActivityResponseTest.php
 test/Model/CreateApplicantResponseTest.php
 test/Model/CreateApplicationResponseTest.php
@@ -1446,6 +1482,8 @@ test/Model/CustomerTest.php
 test/Model/CustomersFilterTest.php
 test/Model/CustomersSortTest.php
 test/Model/DeductionTest.php
+test/Model/DeleteAccountingDepartmentResponseTest.php
+test/Model/DeleteAccountingLocationResponseTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
 test/Model/DeleteApplicationResponseTest.php
@@ -1541,6 +1579,10 @@ test/Model/FormFieldOptionGroupTest.php
 test/Model/FormFieldOptionTest.php
 test/Model/FormFieldTest.php
 test/Model/GenderTest.php
+test/Model/GetAccountingDepartmentResponseTest.php
+test/Model/GetAccountingDepartmentsResponseTest.php
+test/Model/GetAccountingLocationResponseTest.php
+test/Model/GetAccountingLocationsResponseTest.php
 test/Model/GetActivitiesResponseTest.php
 test/Model/GetActivityResponseTest.php
 test/Model/GetApiResourceCoverageResponseTest.php
@@ -1810,6 +1852,7 @@ test/Model/SimpleFormFieldOptionTest.php
 test/Model/SocialLinkTest.php
 test/Model/SortDirectionTest.php
 test/Model/StatusTest.php
+test/Model/SubsidiaryReferenceTest.php
 test/Model/SubsidiaryTest.php
 test/Model/SupplierTest.php
 test/Model/SuppliersFilterTest.php
@@ -1835,6 +1878,8 @@ test/Model/UnifiedFilePermissionsTest.php
 test/Model/UnifiedFileTest.php
 test/Model/UnifiedIdTest.php
 test/Model/UnprocessableResponseTest.php
+test/Model/UpdateAccountingDepartmentResponseTest.php
+test/Model/UpdateAccountingLocationResponseTest.php
 test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateApplicantResponseTest.php
 test/Model/UpdateApplicationResponseTest.php
