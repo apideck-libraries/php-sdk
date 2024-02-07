@@ -272,8 +272,9 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const TYPE_ITEM = 'expense_item';
-    const TYPE_ACCOUNT = 'expense_account';
+    const TYPE_EXPENSE_ITEM = 'expense_item';
+    const TYPE_EXPENSE_ACCOUNT = 'expense_account';
+    const TYPE_OTHER = 'other';
 
     /**
      * Gets allowable values of the enum
@@ -283,8 +284,9 @@ class BillLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_ITEM,
-            self::TYPE_ACCOUNT,
+            self::TYPE_EXPENSE_ITEM,
+            self::TYPE_EXPENSE_ACCOUNT,
+            self::TYPE_OTHER,
         ];
     }
 

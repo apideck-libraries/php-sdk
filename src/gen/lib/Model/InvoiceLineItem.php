@@ -276,6 +276,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     const TYPE_DISCOUNT = 'discount';
     const TYPE_INFO = 'info';
     const TYPE_SUB_TOTAL = 'sub_total';
+    const TYPE_OTHER = 'other';
 
     /**
      * Gets allowable values of the enum
@@ -289,6 +290,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
             self::TYPE_DISCOUNT,
             self::TYPE_INFO,
             self::TYPE_SUB_TOTAL,
+            self::TYPE_OTHER,
         ];
     }
 
