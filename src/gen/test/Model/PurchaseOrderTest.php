@@ -125,6 +125,15 @@ class PurchaseOrderTest extends TestCase
     }
 
     /**
+     * Test attribute "company_id"
+     */
+    public function testPropertyCompanyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()

@@ -63,6 +63,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'downstream_id' => 'string',
         'bill_number' => 'string',
         'supplier' => '\Apideck\Client\Model\LinkedSupplier',
+        'company_id' => 'string',
         'currency' => '\Apideck\Client\Model\Currency',
         'currency_rate' => 'float',
         'tax_inclusive' => 'bool',
@@ -108,6 +109,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'downstream_id' => null,
         'bill_number' => null,
         'supplier' => null,
+        'company_id' => null,
         'currency' => null,
         'currency_rate' => null,
         'tax_inclusive' => null,
@@ -172,6 +174,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'downstream_id' => 'downstream_id',
         'bill_number' => 'bill_number',
         'supplier' => 'supplier',
+        'company_id' => 'company_id',
         'currency' => 'currency',
         'currency_rate' => 'currency_rate',
         'tax_inclusive' => 'tax_inclusive',
@@ -215,6 +218,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'downstream_id' => 'setDownstreamId',
         'bill_number' => 'setBillNumber',
         'supplier' => 'setSupplier',
+        'company_id' => 'setCompanyId',
         'currency' => 'setCurrency',
         'currency_rate' => 'setCurrencyRate',
         'tax_inclusive' => 'setTaxInclusive',
@@ -258,6 +262,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'downstream_id' => 'getDownstreamId',
         'bill_number' => 'getBillNumber',
         'supplier' => 'getSupplier',
+        'company_id' => 'getCompanyId',
         'currency' => 'getCurrency',
         'currency_rate' => 'getCurrencyRate',
         'tax_inclusive' => 'getTaxInclusive',
@@ -379,6 +384,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['downstream_id'] = $data['downstream_id'] ?? null;
         $this->container['bill_number'] = $data['bill_number'] ?? null;
         $this->container['supplier'] = $data['supplier'] ?? null;
+        $this->container['company_id'] = $data['company_id'] ?? null;
         $this->container['currency'] = $data['currency'] ?? null;
         $this->container['currency_rate'] = $data['currency_rate'] ?? null;
         $this->container['tax_inclusive'] = $data['tax_inclusive'] ?? null;
@@ -537,6 +543,30 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSupplier($supplier)
     {
         $this->container['supplier'] = $supplier;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_id
+     *
+     * @return string|null
+     */
+    public function getCompanyId()
+    {
+        return $this->container['company_id'];
+    }
+
+    /**
+     * Sets company_id
+     *
+     * @param string|null $company_id The company or subsidiary id the transaction belongs to
+     *
+     * @return self
+     */
+    public function setCompanyId($company_id)
+    {
+        $this->container['company_id'] = $company_id;
 
         return $this;
     }

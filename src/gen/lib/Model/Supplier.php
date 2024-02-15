@@ -64,6 +64,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_id' => 'string',
         'display_name' => 'string',
         'company_name' => 'string',
+        'company_id' => 'string',
         'title' => 'string',
         'first_name' => 'string',
         'middle_name' => 'string',
@@ -104,6 +105,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_id' => null,
         'display_name' => null,
         'company_name' => null,
+        'company_id' => null,
         'title' => null,
         'first_name' => null,
         'middle_name' => null,
@@ -163,6 +165,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_id' => 'display_id',
         'display_name' => 'display_name',
         'company_name' => 'company_name',
+        'company_id' => 'company_id',
         'title' => 'title',
         'first_name' => 'first_name',
         'middle_name' => 'middle_name',
@@ -201,6 +204,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_id' => 'setDisplayId',
         'display_name' => 'setDisplayName',
         'company_name' => 'setCompanyName',
+        'company_id' => 'setCompanyId',
         'title' => 'setTitle',
         'first_name' => 'setFirstName',
         'middle_name' => 'setMiddleName',
@@ -239,6 +243,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'display_id' => 'getDisplayId',
         'display_name' => 'getDisplayName',
         'company_name' => 'getCompanyName',
+        'company_id' => 'getCompanyId',
         'title' => 'getTitle',
         'first_name' => 'getFirstName',
         'middle_name' => 'getMiddleName',
@@ -349,6 +354,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['display_id'] = $data['display_id'] ?? null;
         $this->container['display_name'] = $data['display_name'] ?? null;
         $this->container['company_name'] = $data['company_name'] ?? null;
+        $this->container['company_id'] = $data['company_id'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['middle_name'] = $data['middle_name'] ?? null;
@@ -528,6 +534,30 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_id
+     *
+     * @return string|null
+     */
+    public function getCompanyId()
+    {
+        return $this->container['company_id'];
+    }
+
+    /**
+     * Sets company_id
+     *
+     * @param string|null $company_id The company or subsidiary id the transaction belongs to
+     *
+     * @return self
+     */
+    public function setCompanyId($company_id)
+    {
+        $this->container['company_id'] = $company_id;
 
         return $this;
     }

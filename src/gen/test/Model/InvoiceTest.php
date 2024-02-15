@@ -125,6 +125,15 @@ class InvoiceTest extends TestCase
     }
 
     /**
+     * Test attribute "company_id"
+     */
+    public function testPropertyCompanyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "invoice_date"
      */
     public function testPropertyInvoiceDate()

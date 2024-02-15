@@ -74,6 +74,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'customer' => '\Apideck\Client\Model\LinkedCustomer',
         'supplier' => '\Apideck\Client\Model\LinkedSupplier',
+        'company_id' => 'string',
         'reconciled' => 'bool',
         'status' => 'string',
         'type' => 'string',
@@ -111,6 +112,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'account' => null,
         'customer' => null,
         'supplier' => null,
+        'company_id' => null,
         'reconciled' => null,
         'status' => null,
         'type' => null,
@@ -167,6 +169,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'account' => 'account',
         'customer' => 'customer',
         'supplier' => 'supplier',
+        'company_id' => 'company_id',
         'reconciled' => 'reconciled',
         'status' => 'status',
         'type' => 'type',
@@ -202,6 +205,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'account' => 'setAccount',
         'customer' => 'setCustomer',
         'supplier' => 'setSupplier',
+        'company_id' => 'setCompanyId',
         'reconciled' => 'setReconciled',
         'status' => 'setStatus',
         'type' => 'setType',
@@ -237,6 +241,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'account' => 'getAccount',
         'customer' => 'getCustomer',
         'supplier' => 'getSupplier',
+        'company_id' => 'getCompanyId',
         'reconciled' => 'getReconciled',
         'status' => 'getStatus',
         'type' => 'getType',
@@ -369,6 +374,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['account'] = $data['account'] ?? null;
         $this->container['customer'] = $data['customer'] ?? null;
         $this->container['supplier'] = $data['supplier'] ?? null;
+        $this->container['company_id'] = $data['company_id'] ?? null;
         $this->container['reconciled'] = $data['reconciled'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
@@ -794,6 +800,30 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSupplier($supplier)
     {
         $this->container['supplier'] = $supplier;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_id
+     *
+     * @return string|null
+     */
+    public function getCompanyId()
+    {
+        return $this->container['company_id'];
+    }
+
+    /**
+     * Sets company_id
+     *
+     * @param string|null $company_id The company or subsidiary id the transaction belongs to
+     *
+     * @return self
+     */
+    public function setCompanyId($company_id)
+    {
+        $this->container['company_id'] = $company_id;
 
         return $this;
     }

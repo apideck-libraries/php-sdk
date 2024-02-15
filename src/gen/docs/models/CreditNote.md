@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 `total_amount` | **float** | Amount of transaction | 
 `number` | **string** | Credit note number. | [optional] 
 `customer` | [**\Apideck\Client\Model\LinkedCustomer**](LinkedCustomer.md) |  | [optional] 
+`company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
 `tax_inclusive` | **bool** | Amounts are including tax | [optional] 
@@ -71,6 +72,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedCustomer`](LinkedCustomer.md)
+
 * [`Currency`](Currency.md)
 
 

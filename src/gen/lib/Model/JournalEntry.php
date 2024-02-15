@@ -420,7 +420,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company_id
      *
-     * @param string|null $company_id The company or subsidiary the journal entry belongs to
+     * @param string|null $company_id The company or subsidiary id the transaction belongs to
      *
      * @return self
      */
