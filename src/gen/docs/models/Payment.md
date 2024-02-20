@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 `account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `customer` | [**\Apideck\Client\Model\LinkedCustomer**](LinkedCustomer.md) |  | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
+`company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `reconciled` | **bool** | Payment has been reconciled | [optional] 
 `status` | **string** | Status of payment | [optional] 
 `type` | **string** | Type of payment | [optional] 
@@ -91,6 +92,7 @@ Name | Type | Description | Notes
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 * [`LinkedCustomer`](LinkedCustomer.md)
 * [`LinkedSupplier`](LinkedSupplier.md)
+
 
 
 
