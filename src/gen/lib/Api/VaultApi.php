@@ -6249,14 +6249,15 @@ class VaultApi
      * @param  string $resource Name of the resource (plural) (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $resource_id This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetCustomFieldsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function customFieldsAll($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function customFieldsAll($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $resource_id = null)
     {
-        list($response) = $this->customFieldsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+        list($response) = $this->customFieldsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id, $resource_id);
         return $response;
     }
 
@@ -6270,14 +6271,15 @@ class VaultApi
      * @param  string $resource Name of the resource (plural) (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $resource_id This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetCustomFieldsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customFieldsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function customFieldsAllWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $resource_id = null)
     {
-        $request = $this->customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+        $request = $this->customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id, $resource_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6487,13 +6489,14 @@ class VaultApi
      * @param  string $resource Name of the resource (plural) (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $resource_id This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customFieldsAllAsync($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function customFieldsAllAsync($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $resource_id = null)
     {
-        return $this->customFieldsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id)
+        return $this->customFieldsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id, $resource_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6511,14 +6514,15 @@ class VaultApi
      * @param  string $resource Name of the resource (plural) (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $resource_id This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customFieldsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function customFieldsAllAsyncWithHttpInfo($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $resource_id = null)
     {
         $returnType = '\Apideck\Client\Model\GetCustomFieldsResponse';
-        $request = $this->customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id);
+        $request = $this->customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id, $x_apideck_app_id, $resource_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6561,11 +6565,12 @@ class VaultApi
      * @param  string $resource Name of the resource (plural) (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $resource_id This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function customFieldsAllRequest($unified_api, $service_id, $resource, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $resource_id = null)
     {
         // verify the required parameter 'unified_api' is set
         if ($unified_api === null || (is_array($unified_api) && count($unified_api) === 0)) {
@@ -6593,6 +6598,46 @@ class VaultApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+
+        if ('raw' === 'resource_id') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($resource_id)) {
+                foreach($resource_id as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['resource_id'] = $resource_id ? 'true' : 'false';
+            }
+        }
+
+
+        if ($resource_id !== null && 'sort' === 'resource_id') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($resource_id !== null && 'filter' === 'resource_id') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($resource_id !== null && !('resource_id' === 'raw' || 'resource_id' === 'sort' || 'resource_id' === 'filter')) {
+            if('form' === 'form' && is_array($resource_id)) {
+                foreach($resource_id as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['resource_id'] = $resource_id;
+            }
+        }
 
         // header params
         if ($x_apideck_consumer_id !== null) {
