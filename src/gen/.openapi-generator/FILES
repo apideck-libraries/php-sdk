@@ -266,6 +266,7 @@ docs/Model/EmployeeManager.md
 docs/Model/EmployeePayroll.md
 docs/Model/EmployeeSchedules.md
 docs/Model/EmployeesFilter.md
+docs/Model/EmployeesOneFilter.md
 docs/Model/EmployeesSort.md
 docs/Model/EmploymentStatus.md
 docs/Model/Error.md
@@ -917,6 +918,7 @@ lib/Model/EmployeeManager.php
 lib/Model/EmployeePayroll.php
 lib/Model/EmployeeSchedules.php
 lib/Model/EmployeesFilter.php
+lib/Model/EmployeesOneFilter.php
 lib/Model/EmployeesSort.php
 lib/Model/EmploymentStatus.php
 lib/Model/Error.php
@@ -1565,6 +1567,7 @@ test/Model/EmployeePayrollTest.php
 test/Model/EmployeeSchedulesTest.php
 test/Model/EmployeeTest.php
 test/Model/EmployeesFilterTest.php
+test/Model/EmployeesOneFilterTest.php
 test/Model/EmployeesSortTest.php
 test/Model/EmploymentStatusTest.php
 test/Model/ErrorTest.php
