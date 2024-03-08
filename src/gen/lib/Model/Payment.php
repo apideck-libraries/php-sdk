@@ -80,6 +80,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'allocations' => '\Apideck\Client\Model\PaymentAllocations[]',
         'note' => 'string',
+        'number' => 'string',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'row_version' => 'string',
         'display_id' => 'string',
         'custom_mappings' => 'object',
@@ -118,6 +120,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'allocations' => null,
         'note' => null,
+        'number' => null,
+        'custom_fields' => null,
         'row_version' => null,
         'display_id' => null,
         'custom_mappings' => null,
@@ -175,6 +179,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'allocations' => 'allocations',
         'note' => 'note',
+        'number' => 'number',
+        'custom_fields' => 'custom_fields',
         'row_version' => 'row_version',
         'display_id' => 'display_id',
         'custom_mappings' => 'custom_mappings',
@@ -211,6 +217,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'allocations' => 'setAllocations',
         'note' => 'setNote',
+        'number' => 'setNumber',
+        'custom_fields' => 'setCustomFields',
         'row_version' => 'setRowVersion',
         'display_id' => 'setDisplayId',
         'custom_mappings' => 'setCustomMappings',
@@ -247,6 +255,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'allocations' => 'getAllocations',
         'note' => 'getNote',
+        'number' => 'getNumber',
+        'custom_fields' => 'getCustomFields',
         'row_version' => 'getRowVersion',
         'display_id' => 'getDisplayId',
         'custom_mappings' => 'getCustomMappings',
@@ -380,6 +390,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['type'] = $data['type'] ?? null;
         $this->container['allocations'] = $data['allocations'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
+        $this->container['number'] = $data['number'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['display_id'] = $data['display_id'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
@@ -964,6 +976,54 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setNote($note)
     {
         $this->container['note'] = $note;
+
+        return $this;
+    }
+
+    /**
+     * Gets number
+     *
+     * @return string|null
+     */
+    public function getNumber()
+    {
+        return $this->container['number'];
+    }
+
+    /**
+     * Sets number
+     *
+     * @param string|null $number Payment number.
+     *
+     * @return self
+     */
+    public function setNumber($number)
+    {
+        $this->container['number'] = $number;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

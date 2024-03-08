@@ -82,6 +82,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'object[]',
         'note' => 'string',
         'terms' => 'string',
+        'billing_address' => '\Apideck\Client\Model\Address',
+        'shipping_address' => '\Apideck\Client\Model\Address',
         'custom_mappings' => 'object',
         'row_version' => 'string',
         'updated_by' => 'string',
@@ -121,6 +123,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => null,
         'note' => null,
         'terms' => null,
+        'billing_address' => null,
+        'shipping_address' => null,
         'custom_mappings' => null,
         'row_version' => null,
         'updated_by' => null,
@@ -179,6 +183,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'allocations',
         'note' => 'note',
         'terms' => 'terms',
+        'billing_address' => 'billing_address',
+        'shipping_address' => 'shipping_address',
         'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
@@ -216,6 +222,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'setAllocations',
         'note' => 'setNote',
         'terms' => 'setTerms',
+        'billing_address' => 'setBillingAddress',
+        'shipping_address' => 'setShippingAddress',
         'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
@@ -253,6 +261,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'allocations' => 'getAllocations',
         'note' => 'getNote',
         'terms' => 'getTerms',
+        'billing_address' => 'getBillingAddress',
+        'shipping_address' => 'getShippingAddress',
         'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
@@ -377,6 +387,8 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['allocations'] = $data['allocations'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['terms'] = $data['terms'] ?? null;
+        $this->container['billing_address'] = $data['billing_address'] ?? null;
+        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
@@ -1001,6 +1013,54 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTerms($terms)
     {
         $this->container['terms'] = $terms;
+
+        return $this;
+    }
+
+    /**
+     * Gets billing_address
+     *
+     * @return \Apideck\Client\Model\Address|null
+     */
+    public function getBillingAddress()
+    {
+        return $this->container['billing_address'];
+    }
+
+    /**
+     * Sets billing_address
+     *
+     * @param \Apideck\Client\Model\Address|null $billing_address billing_address
+     *
+     * @return self
+     */
+    public function setBillingAddress($billing_address)
+    {
+        $this->container['billing_address'] = $billing_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_address
+     *
+     * @return \Apideck\Client\Model\Address|null
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shipping_address'];
+    }
+
+    /**
+     * Sets shipping_address
+     *
+     * @param \Apideck\Client\Model\Address|null $shipping_address shipping_address
+     *
+     * @return self
+     */
+    public function setShippingAddress($shipping_address)
+    {
+        $this->container['shipping_address'] = $shipping_address;
 
         return $this;
     }

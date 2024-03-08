@@ -287,6 +287,24 @@ class CreditNoteTest extends TestCase
     }
 
     /**
+     * Test attribute "billing_address"
+     */
+    public function testPropertyBillingAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "shipping_address"
+     */
+    public function testPropertyShippingAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "custom_mappings"
      */
     public function testPropertyCustomMappings()
