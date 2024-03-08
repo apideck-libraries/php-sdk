@@ -242,6 +242,15 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "row_version"
      */
     public function testPropertyRowVersion()

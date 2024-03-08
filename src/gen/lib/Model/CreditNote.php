@@ -85,6 +85,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => '\Apideck\Client\Model\Address',
         'shipping_address' => '\Apideck\Client\Model\Address',
         'custom_mappings' => 'object',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -126,6 +127,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => null,
         'shipping_address' => null,
         'custom_mappings' => null,
+        'custom_fields' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -186,6 +188,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'billing_address',
         'shipping_address' => 'shipping_address',
         'custom_mappings' => 'custom_mappings',
+        'custom_fields' => 'custom_fields',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -225,6 +228,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'setBillingAddress',
         'shipping_address' => 'setShippingAddress',
         'custom_mappings' => 'setCustomMappings',
+        'custom_fields' => 'setCustomFields',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -264,6 +268,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'billing_address' => 'getBillingAddress',
         'shipping_address' => 'getShippingAddress',
         'custom_mappings' => 'getCustomMappings',
+        'custom_fields' => 'getCustomFields',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -390,6 +395,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['billing_address'] = $data['billing_address'] ?? null;
         $this->container['shipping_address'] = $data['shipping_address'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -1085,6 +1091,30 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomMappings($custom_mappings)
     {
         $this->container['custom_mappings'] = $custom_mappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

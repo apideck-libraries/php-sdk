@@ -77,6 +77,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'item' => '\Apideck\Client\Model\LinkedInvoiceItem',
         'tax_rate' => '\Apideck\Client\Model\LinkedTaxRate',
         'ledger_account' => '\Apideck\Client\Model\LinkedLedgerAccount',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'row_version' => 'string',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -110,6 +111,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'item' => null,
         'tax_rate' => null,
         'ledger_account' => null,
+        'custom_fields' => null,
         'row_version' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -162,6 +164,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'item' => 'item',
         'tax_rate' => 'tax_rate',
         'ledger_account' => 'ledger_account',
+        'custom_fields' => 'custom_fields',
         'row_version' => 'row_version',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -193,6 +196,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'item' => 'setItem',
         'tax_rate' => 'setTaxRate',
         'ledger_account' => 'setLedgerAccount',
+        'custom_fields' => 'setCustomFields',
         'row_version' => 'setRowVersion',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -224,6 +228,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'item' => 'getItem',
         'tax_rate' => 'getTaxRate',
         'ledger_account' => 'getLedgerAccount',
+        'custom_fields' => 'getCustomFields',
         'row_version' => 'getRowVersion',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -327,6 +332,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['item'] = $data['item'] ?? null;
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
         $this->container['ledger_account'] = $data['ledger_account'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -805,6 +811,30 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLedgerAccount($ledger_account)
     {
         $this->container['ledger_account'] = $ledger_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }
