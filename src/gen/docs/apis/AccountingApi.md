@@ -2582,7 +2582,7 @@ Apideck->getAccountingApi()->ledgerAccountsAdd($data)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_body** | [array<string,object>](../models/array<string,object>.md)|  |
+ **ledger_account** | [\Apideck\Client\Model\LedgerAccount](../models/\Apideck\Client\Model\LedgerAccount.md)|  |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
@@ -2853,7 +2853,7 @@ Apideck->getAccountingApi()->ledgerAccountsUpdate($data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the record you are acting upon. |
- **request_body** | [array<string,object>](../models/array<string,object>.md)|  |
+ **ledger_account** | [\Apideck\Client\Model\LedgerAccount](../models/\Apideck\Client\Model\LedgerAccount.md)|  |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |

@@ -19624,7 +19624,7 @@ class AccountingApi
      *
      * Create Ledger Account
      *
-     * @param  array<string,object> $request_body request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account ledger_account (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -19634,9 +19634,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\CreateLedgerAccountResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function ledgerAccountsAdd($request_body, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function ledgerAccountsAdd($ledger_account, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        list($response) = $this->ledgerAccountsAddWithHttpInfo($request_body, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        list($response) = $this->ledgerAccountsAddWithHttpInfo($ledger_account, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
         return $response;
     }
 
@@ -19645,7 +19645,7 @@ class AccountingApi
      *
      * Create Ledger Account
      *
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -19655,9 +19655,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\CreateLedgerAccountResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ledgerAccountsAddWithHttpInfo($request_body, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function ledgerAccountsAddWithHttpInfo($ledger_account, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        $request = $this->ledgerAccountsAddRequest($request_body, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->ledgerAccountsAddRequest($ledger_account, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -19862,7 +19862,7 @@ class AccountingApi
      *
      * Create Ledger Account
      *
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -19871,9 +19871,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsAddAsync($request_body, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function ledgerAccountsAddAsync($ledger_account, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        return $this->ledgerAccountsAddAsyncWithHttpInfo($request_body, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
+        return $this->ledgerAccountsAddAsyncWithHttpInfo($ledger_account, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -19886,7 +19886,7 @@ class AccountingApi
      *
      * Create Ledger Account
      *
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -19895,10 +19895,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsAddAsyncWithHttpInfo($request_body, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function ledgerAccountsAddAsyncWithHttpInfo($ledger_account, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
         $returnType = '\Apideck\Client\Model\CreateLedgerAccountResponse';
-        $request = $this->ledgerAccountsAddRequest($request_body, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
+        $request = $this->ledgerAccountsAddRequest($ledger_account, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -19936,7 +19936,7 @@ class AccountingApi
     /**
      * Create request for operation 'ledgerAccountsAdd'
      *
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -19945,12 +19945,12 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function ledgerAccountsAddRequest($request_body, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
+    public function ledgerAccountsAddRequest($ledger_account, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null)
     {
-        // verify the required parameter 'request_body' is set
-        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+        // verify the required parameter 'ledger_account' is set
+        if ($ledger_account === null || (is_array($ledger_account) && count($ledger_account) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request_body when calling ledgerAccountsAdd'
+                'Missing the required parameter $ledger_account when calling ledgerAccountsAdd'
             );
         }
 
@@ -20029,11 +20029,11 @@ class AccountingApi
         }
 
         // for model (json/xml)
-        if (isset($request_body)) {
+        if (isset($ledger_account)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($request_body));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($ledger_account));
             } else {
-                $httpBody = $request_body;
+                $httpBody = $ledger_account;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -21798,7 +21798,7 @@ class AccountingApi
      * Update Ledger Account
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  array<string,object> $request_body request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account ledger_account (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -21808,9 +21808,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\UpdateLedgerAccountResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function ledgerAccountsUpdate($id, $request_body, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function ledgerAccountsUpdate($id, $ledger_account, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        list($response) = $this->ledgerAccountsUpdateWithHttpInfo($id, $request_body, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        list($response) = $this->ledgerAccountsUpdateWithHttpInfo($id, $ledger_account, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
         return $response;
     }
 
@@ -21820,7 +21820,7 @@ class AccountingApi
      * Update Ledger Account
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -21830,9 +21830,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\UpdateLedgerAccountResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ledgerAccountsUpdateWithHttpInfo($id, $request_body, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function ledgerAccountsUpdateWithHttpInfo($id, $ledger_account, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        $request = $this->ledgerAccountsUpdateRequest($id, $request_body, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->ledgerAccountsUpdateRequest($id, $ledger_account, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         try {
             $options = $this->createHttpClientOption();
@@ -22038,7 +22038,7 @@ class AccountingApi
      * Update Ledger Account
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -22047,9 +22047,9 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsUpdateAsync($id, $request_body, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function ledgerAccountsUpdateAsync($id, $ledger_account, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        return $this->ledgerAccountsUpdateAsyncWithHttpInfo($id, $request_body, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+        return $this->ledgerAccountsUpdateAsyncWithHttpInfo($id, $ledger_account, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -22063,7 +22063,7 @@ class AccountingApi
      * Update Ledger Account
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -22072,10 +22072,10 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ledgerAccountsUpdateAsyncWithHttpInfo($id, $request_body, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function ledgerAccountsUpdateAsyncWithHttpInfo($id, $ledger_account, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         $returnType = '\Apideck\Client\Model\UpdateLedgerAccountResponse';
-        $request = $this->ledgerAccountsUpdateRequest($id, $request_body, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->ledgerAccountsUpdateRequest($id, $ledger_account, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -22114,7 +22114,7 @@ class AccountingApi
      * Create request for operation 'ledgerAccountsUpdate'
      *
      * @param  string $id ID of the record you are acting upon. (required)
-     * @param  array<string,object> $request_body (required)
+     * @param  \Apideck\Client\Model\LedgerAccount $ledger_account (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -22123,7 +22123,7 @@ class AccountingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function ledgerAccountsUpdateRequest($id, $request_body, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function ledgerAccountsUpdateRequest($id, $ledger_account, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -22131,10 +22131,10 @@ class AccountingApi
                 'Missing the required parameter $id when calling ledgerAccountsUpdate'
             );
         }
-        // verify the required parameter 'request_body' is set
-        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+        // verify the required parameter 'ledger_account' is set
+        if ($ledger_account === null || (is_array($ledger_account) && count($ledger_account) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request_body when calling ledgerAccountsUpdate'
+                'Missing the required parameter $ledger_account when calling ledgerAccountsUpdate'
             );
         }
 
@@ -22221,11 +22221,11 @@ class AccountingApi
         }
 
         // for model (json/xml)
-        if (isset($request_body)) {
+        if (isset($ledger_account)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($request_body));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($ledger_account));
             } else {
-                $httpBody = $request_body;
+                $httpBody = $ledger_account;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
