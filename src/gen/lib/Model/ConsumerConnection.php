@@ -74,7 +74,7 @@ class ConsumerConnection implements ModelInterface, ArrayAccess, \JsonSerializab
         'metadata' => 'array<string,object>',
         'created_at' => 'string',
         'updated_at' => 'string',
-        'state' => 'string'
+        'state' => '\Apideck\Client\Model\ConnectionState'
     ];
 
     /**
@@ -237,27 +237,6 @@ class ConsumerConnection implements ModelInterface, ArrayAccess, \JsonSerializab
         return self::$openAPIModelName;
     }
 
-    const STATE_AVAILABLE = 'available';
-    const STATE__CALLABLE = 'callable';
-    const STATE_ADDED = 'added';
-    const STATE_CONFIGURED = 'configured';
-    const STATE_AUTHORIZED = 'authorized';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStateAllowableValues()
-    {
-        return [
-            self::STATE_AVAILABLE,
-            self::STATE__CALLABLE,
-            self::STATE_ADDED,
-            self::STATE_CONFIGURED,
-            self::STATE_AUTHORIZED,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -300,15 +279,6 @@ class ConsumerConnection implements ModelInterface, ArrayAccess, \JsonSerializab
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getStateAllowableValues();
-        if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'state', must be one of '%s'",
-                $this->container['state'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -688,7 +658,7 @@ class ConsumerConnection implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets state
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\ConnectionState|null
      */
     public function getState()
     {
@@ -698,22 +668,12 @@ class ConsumerConnection implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets state
      *
-     * @param string|null $state state
+     * @param \Apideck\Client\Model\ConnectionState|null $state state
      *
      * @return self
      */
     public function setState($state)
     {
-        $allowedValues = $this->getStateAllowableValues();
-        if (!is_null($state) && !in_array($state, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'state', must be one of '%s'",
-                    $state,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['state'] = $state;
 
         return $this;

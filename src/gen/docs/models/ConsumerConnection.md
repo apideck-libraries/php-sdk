@@ -20,25 +20,8 @@ Name | Type | Description | Notes
 `metadata` | **array&lt;string,object&gt;** | Attach your own consumer specific metadata | [optional] 
 `created_at` | **string** |  | [optional] 
 `updated_at` | **string** |  | [optional] 
-`state` | **string** |  | [optional] 
+`state` | [**\Apideck\Client\Model\ConnectionState**](ConnectionState.md) |  | [optional] 
 
-
-
-
-
-<a name="STATE"></a>
-## Enum: ConsumerConnection.state
-
-
-* `AVAILABLE` (value: `'available'`)
-
-* `_CALLABLE` (value: `'callable'`)
-
-* `ADDED` (value: `'added'`)
-
-* `CONFIGURED` (value: `'configured'`)
-
-* `AUTHORIZED` (value: `'authorized'`)
 
 
 
@@ -59,7 +42,7 @@ Name | Type | Description | Notes
 
 
 
-
+* [`ConnectionState`](ConnectionState.md)
 
 ---
 
