@@ -9,7 +9,6 @@
 * [Delete Attachment](#attachmentsDelete)
 * [Download Attachment](#attachmentsDownload)
 * [Get Attachment](#attachmentsOne)
-* [Upload Attachment](#attachmentsUpload)
 * [Get BalanceSheet](#balanceSheetOne)
 * [Create Bill](#billsAdd)
 * [List Bills](#billsAll)
@@ -349,75 +348,6 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getAccountingApi()->attachmentsOne('invoice', '123456', 'id_example');
-  var_dump('API called successfully', $response);
-} catch(ApiException $error) {
-  var_dump('API called failed', $error);
-}
-
-```
-
-
-[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
-
-<a name="attachmentsUpload"></a>
-# Upload Attachment
-
-
-Method: **attachmentsUpload**
-
-```php
-Apideck->getAccountingApi()->attachmentsUpload($data)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reference_type** | [\Apideck\Client\Model\AttachmentReferenceType](../models/\Apideck\Client\Model\AttachmentReferenceType.md)| The reference type of the document. |
- **reference_id** | **string**| The reference id of the object to retrieve. |
- **x_apideck_metadata** | [\Apideck\Client\Model\CreateAttachmentRequest](../models/\Apideck\Client\Model\CreateAttachmentRequest.md)| Metadata to attach to the attachment file |
- **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
- **x_apideck_app_id** | **string**| The ID of your Unify application |
- **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
- **body** | **\SplFileObject**|  |
- **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
-
-
-
-### Response Type
-
-[`\Apideck\Client\Model\CreateAttachmentResponse`](../models/\Apideck\Client\Model\CreateAttachmentResponse.md)
-
-
-
-### HTTP response details
-| Status code | Description |
-|-------------|-------------|
-**201** | Attachments | 
-**400** | Bad Request | 
-**401** | Unauthorized | 
-**402** | Payment Required | 
-**404** | The specified resource was not found | 
-**422** | Unprocessable | 
-4/5xx | Unexpected error | 
-
-
-## Example Usage
-
-```php
-<?php
-require('vendor/autoload.php');
-
-use Apideck\Client\Apideck;
-use Apideck\Client\ApideckConfiguration;
-use Apideck\Client\ApiException;
-
-$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
-
-$apideck = new Apideck($config);
-
-try {
-  $response = $apideck->getAccountingApi()->attachmentsUpload('invoice', '123456', 'string');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

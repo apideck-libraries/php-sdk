@@ -120,18 +120,6 @@ class AccountingApiTest extends TestCase
     }
 
     /**
-     * Test case for attachmentsUpload
-     *
-     * Upload attachment.
-     *
-     */
-    public function testAttachmentsUpload()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for balanceSheetOne
      *
      * Get BalanceSheet.
