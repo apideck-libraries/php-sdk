@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 `type` | **string** | Type of payment | [optional] 
 `allocations` | [**\Apideck\Client\Model\PaymentAllocations[]**](PaymentAllocations.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
+`number` | **string** | Payment number. | [optional] 
+`custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `display_id` | **string** | Payment id to be displayed. | [optional] 
 `custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
@@ -98,6 +100,8 @@ Name | Type | Description | Notes
 
 * [`PaymentAllocations`](PaymentAllocations.md)
 
+
+* [`CustomField`](CustomField.md)
 
 
 
