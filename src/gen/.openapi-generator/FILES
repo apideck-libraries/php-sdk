@@ -49,6 +49,9 @@ docs/Model/ApplicationStage.md
 docs/Model/Assignee.md
 docs/Model/AtsActivity.md
 docs/Model/AtsEventType.md
+docs/Model/Attachment.md
+docs/Model/AttachmentReference.md
+docs/Model/AttachmentReferenceType.md
 docs/Model/AuthType.md
 docs/Model/BadRequestResponse.md
 docs/Model/BalanceSheet.md
@@ -115,6 +118,8 @@ docs/Model/CreateAccountingLocationResponse.md
 docs/Model/CreateActivityResponse.md
 docs/Model/CreateApplicantResponse.md
 docs/Model/CreateApplicationResponse.md
+docs/Model/CreateAttachmentRequest.md
+docs/Model/CreateAttachmentResponse.md
 docs/Model/CreateBillResponse.md
 docs/Model/CreateCommentResponse.md
 docs/Model/CreateCompanyResponse.md
@@ -188,6 +193,7 @@ docs/Model/DeleteAccountingLocationResponse.md
 docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
 docs/Model/DeleteApplicationResponse.md
+docs/Model/DeleteAttachmentResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCommentResponse.md
 docs/Model/DeleteCompanyResponse.md
@@ -295,6 +301,8 @@ docs/Model/GetApplicantResponse.md
 docs/Model/GetApplicantsResponse.md
 docs/Model/GetApplicationResponse.md
 docs/Model/GetApplicationsResponse.md
+docs/Model/GetAttachmentResponse.md
+docs/Model/GetAttachmentsResponse.md
 docs/Model/GetBalanceSheetResponse.md
 docs/Model/GetBillResponse.md
 docs/Model/GetBillsResponse.md
@@ -701,6 +709,9 @@ lib/Model/ApplicationStage.php
 lib/Model/Assignee.php
 lib/Model/AtsActivity.php
 lib/Model/AtsEventType.php
+lib/Model/Attachment.php
+lib/Model/AttachmentReference.php
+lib/Model/AttachmentReferenceType.php
 lib/Model/AuthType.php
 lib/Model/BadRequestResponse.php
 lib/Model/BalanceSheet.php
@@ -767,6 +778,8 @@ lib/Model/CreateAccountingLocationResponse.php
 lib/Model/CreateActivityResponse.php
 lib/Model/CreateApplicantResponse.php
 lib/Model/CreateApplicationResponse.php
+lib/Model/CreateAttachmentRequest.php
+lib/Model/CreateAttachmentResponse.php
 lib/Model/CreateBillResponse.php
 lib/Model/CreateCommentResponse.php
 lib/Model/CreateCompanyResponse.php
@@ -840,6 +853,7 @@ lib/Model/DeleteAccountingLocationResponse.php
 lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
 lib/Model/DeleteApplicationResponse.php
+lib/Model/DeleteAttachmentResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCommentResponse.php
 lib/Model/DeleteCompanyResponse.php
@@ -947,6 +961,8 @@ lib/Model/GetApplicantResponse.php
 lib/Model/GetApplicantsResponse.php
 lib/Model/GetApplicationResponse.php
 lib/Model/GetApplicationsResponse.php
+lib/Model/GetAttachmentResponse.php
+lib/Model/GetAttachmentsResponse.php
 lib/Model/GetBalanceSheetResponse.php
 lib/Model/GetBillResponse.php
 lib/Model/GetBillsResponse.php
@@ -1350,6 +1366,9 @@ test/Model/ApplicationTest.php
 test/Model/AssigneeTest.php
 test/Model/AtsActivityTest.php
 test/Model/AtsEventTypeTest.php
+test/Model/AttachmentReferenceTest.php
+test/Model/AttachmentReferenceTypeTest.php
+test/Model/AttachmentTest.php
 test/Model/AuthTypeTest.php
 test/Model/BadRequestResponseTest.php
 test/Model/BalanceSheetAssetsCurrentAssetsAccountsTest.php
@@ -1416,6 +1435,8 @@ test/Model/CreateAccountingLocationResponseTest.php
 test/Model/CreateActivityResponseTest.php
 test/Model/CreateApplicantResponseTest.php
 test/Model/CreateApplicationResponseTest.php
+test/Model/CreateAttachmentRequestTest.php
+test/Model/CreateAttachmentResponseTest.php
 test/Model/CreateBillResponseTest.php
 test/Model/CreateCommentResponseTest.php
 test/Model/CreateCompanyResponseTest.php
@@ -1489,6 +1510,7 @@ test/Model/DeleteAccountingLocationResponseTest.php
 test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
 test/Model/DeleteApplicationResponseTest.php
+test/Model/DeleteAttachmentResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCommentResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
@@ -1596,6 +1618,8 @@ test/Model/GetApplicantResponseTest.php
 test/Model/GetApplicantsResponseTest.php
 test/Model/GetApplicationResponseTest.php
 test/Model/GetApplicationsResponseTest.php
+test/Model/GetAttachmentResponseTest.php
+test/Model/GetAttachmentsResponseTest.php
 test/Model/GetBalanceSheetResponseTest.php
 test/Model/GetBillResponseTest.php
 test/Model/GetBillsResponseTest.php

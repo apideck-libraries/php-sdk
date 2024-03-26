@@ -116,6 +116,2705 @@ class AccountingApi
     }
 
     /**
+     * Operation attachmentsAll
+     *
+     * List Attachments
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\GetAttachmentsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function attachmentsAll($reference_type, $reference_id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $fields = null)
+    {
+        list($response) = $this->attachmentsAllWithHttpInfo($reference_type, $reference_id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $fields);
+        return $response;
+    }
+
+    /**
+     * Operation attachmentsAllWithHttpInfo
+     *
+     * List Attachments
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\GetAttachmentsResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function attachmentsAllWithHttpInfo($reference_type, $reference_id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $fields = null)
+    {
+        $request = $this->attachmentsAllRequest($reference_type, $reference_id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $fields);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\GetAttachmentsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetAttachmentsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\GetAttachmentsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\GetAttachmentsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation attachmentsAllAsync
+     *
+     * List Attachments
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsAllAsync($reference_type, $reference_id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $fields = null)
+    {
+        return $this->attachmentsAllAsyncWithHttpInfo($reference_type, $reference_id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $fields)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation attachmentsAllAsyncWithHttpInfo
+     *
+     * List Attachments
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsAllAsyncWithHttpInfo($reference_type, $reference_id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $fields = null)
+    {
+        $returnType = '\Apideck\Client\Model\GetAttachmentsResponse';
+        $request = $this->attachmentsAllRequest($reference_type, $reference_id, $raw, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $cursor, $limit, $fields);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'attachmentsAll'
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $cursor Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. (optional)
+     * @param  int $limit Number of results to return. Minimum 1, Maximum 200, Default 20 (optional, default to 20)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function attachmentsAllRequest($reference_type, $reference_id, $raw = false, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $cursor = null, $limit = 20, $fields = null)
+    {
+        // verify the required parameter 'reference_type' is set
+        if ($reference_type === null || (is_array($reference_type) && count($reference_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_type when calling attachmentsAll'
+            );
+        }
+        // verify the required parameter 'reference_id' is set
+        if ($reference_id === null || (is_array($reference_id) && count($reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_id when calling attachmentsAll'
+            );
+        }
+        if ($limit !== null && $limit > 200) {
+            throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.attachmentsAll, must be smaller than or equal to 200.');
+        }
+        if ($limit !== null && $limit < 1) {
+            throw new \InvalidArgumentException('invalid value for "$limit" when calling AccountingApi.attachmentsAll, must be bigger than or equal to 1.');
+        }
+
+
+        $resourcePath = '/accounting/attachments/{reference_type}/{reference_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+
+        if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+        // query params
+
+        if ('raw' === 'cursor') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor ? 'true' : 'false';
+            }
+        }
+
+
+        if ($cursor !== null && 'sort' === 'cursor') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($cursor !== null && 'filter' === 'cursor') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+            if('form' === 'form' && is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor;
+            }
+        }
+        // query params
+
+        if ('raw' === 'limit') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit ? 'true' : 'false';
+            }
+        }
+
+
+        if ($limit !== null && 'sort' === 'limit') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($limit !== null && 'filter' === 'limit') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+
+        if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($reference_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_type' . '}',
+                ObjectSerializer::toPathValue($reference_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($reference_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_id' . '}',
+                ObjectSerializer::toPathValue($reference_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation attachmentsDelete
+     *
+     * Delete Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\DeleteAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function attachmentsDelete($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        list($response) = $this->attachmentsDeleteWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        return $response;
+    }
+
+    /**
+     * Operation attachmentsDeleteWithHttpInfo
+     *
+     * Delete Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\DeleteAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function attachmentsDeleteWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $request = $this->attachmentsDeleteRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\DeleteAttachmentResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\DeleteAttachmentResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\DeleteAttachmentResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\DeleteAttachmentResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation attachmentsDeleteAsync
+     *
+     * Delete Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsDeleteAsync($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        return $this->attachmentsDeleteAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation attachmentsDeleteAsyncWithHttpInfo
+     *
+     * Delete Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsDeleteAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        $returnType = '\Apideck\Client\Model\DeleteAttachmentResponse';
+        $request = $this->attachmentsDeleteRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'attachmentsDelete'
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function attachmentsDeleteRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    {
+        // verify the required parameter 'reference_type' is set
+        if ($reference_type === null || (is_array($reference_type) && count($reference_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_type when calling attachmentsDelete'
+            );
+        }
+        // verify the required parameter 'reference_id' is set
+        if ($reference_id === null || (is_array($reference_id) && count($reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_id when calling attachmentsDelete'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling attachmentsDelete'
+            );
+        }
+
+        $resourcePath = '/accounting/attachments/{reference_type}/{reference_id}/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+
+        if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($reference_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_type' . '}',
+                ObjectSerializer::toPathValue($reference_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($reference_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_id' . '}',
+                ObjectSerializer::toPathValue($reference_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation attachmentsDownload
+     *
+     * Download Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function attachmentsDownload($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $fields = null)
+    {
+        list($response) = $this->attachmentsDownloadWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $fields);
+        return $response;
+    }
+
+    /**
+     * Operation attachmentsDownloadWithHttpInfo
+     *
+     * Download Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function attachmentsDownloadWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $fields = null)
+    {
+        $request = $this->attachmentsDownloadRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $fields);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\SplFileObject' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\SplFileObject', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\SplFileObject';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\SplFileObject',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation attachmentsDownloadAsync
+     *
+     * Download Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsDownloadAsync($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $fields = null)
+    {
+        return $this->attachmentsDownloadAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $fields)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation attachmentsDownloadAsyncWithHttpInfo
+     *
+     * Download Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsDownloadAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $fields = null)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->attachmentsDownloadRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $fields);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'attachmentsDownload'
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function attachmentsDownloadRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $fields = null)
+    {
+        // verify the required parameter 'reference_type' is set
+        if ($reference_type === null || (is_array($reference_type) && count($reference_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_type when calling attachmentsDownload'
+            );
+        }
+        // verify the required parameter 'reference_id' is set
+        if ($reference_id === null || (is_array($reference_id) && count($reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_id when calling attachmentsDownload'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling attachmentsDownload'
+            );
+        }
+
+        $resourcePath = '/accounting/attachments/{reference_type}/{reference_id}/{id}/download';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+
+        if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($reference_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_type' . '}',
+                ObjectSerializer::toPathValue($reference_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($reference_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_id' . '}',
+                ObjectSerializer::toPathValue($reference_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation attachmentsOne
+     *
+     * Get Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\GetAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function attachmentsOne($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    {
+        list($response) = $this->attachmentsOneWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        return $response;
+    }
+
+    /**
+     * Operation attachmentsOneWithHttpInfo
+     *
+     * Get Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\GetAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function attachmentsOneWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    {
+        $request = $this->attachmentsOneRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Apideck\Client\Model\GetAttachmentResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\GetAttachmentResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\GetAttachmentResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\GetAttachmentResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation attachmentsOneAsync
+     *
+     * Get Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsOneAsync($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    {
+        return $this->attachmentsOneAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation attachmentsOneAsyncWithHttpInfo
+     *
+     * Get Attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsOneAsyncWithHttpInfo($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    {
+        $returnType = '\Apideck\Client\Model\GetAttachmentResponse';
+        $request = $this->attachmentsOneRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'attachmentsOne'
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function attachmentsOneRequest($reference_type, $reference_id, $id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    {
+        // verify the required parameter 'reference_type' is set
+        if ($reference_type === null || (is_array($reference_type) && count($reference_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_type when calling attachmentsOne'
+            );
+        }
+        // verify the required parameter 'reference_id' is set
+        if ($reference_id === null || (is_array($reference_id) && count($reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_id when calling attachmentsOne'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling attachmentsOne'
+            );
+        }
+
+        $resourcePath = '/accounting/attachments/{reference_type}/{reference_id}/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+
+        if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+        // query params
+
+        if ('raw' === 'fields') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields ? 'true' : 'false';
+            }
+        }
+
+
+        if ($fields !== null && 'sort' === 'fields') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($fields !== null && 'filter' === 'fields') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+            if('form' === 'form' && is_array($fields)) {
+                foreach($fields as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['fields'] = $fields;
+            }
+        }
+
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($reference_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_type' . '}',
+                ObjectSerializer::toPathValue($reference_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($reference_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_id' . '}',
+                ObjectSerializer::toPathValue($reference_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation attachmentsUpload
+     *
+     * Upload attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  \Apideck\Client\Model\CreateAttachmentRequest $x_apideck_metadata Metadata to attach to the attachment file (optional)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  \SplFileObject $body body (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Apideck\Client\Model\CreateAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
+     */
+    public function attachmentsUpload($reference_type, $reference_id, $raw = false, $x_apideck_metadata = null, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    {
+        list($response) = $this->attachmentsUploadWithHttpInfo($reference_type, $reference_id, $raw, $x_apideck_metadata, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation attachmentsUploadWithHttpInfo
+     *
+     * Upload attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  \Apideck\Client\Model\CreateAttachmentRequest $x_apideck_metadata Metadata to attach to the attachment file (optional)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  \SplFileObject $body (optional)
+     *
+     * @throws \Apideck\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Apideck\Client\Model\CreateAttachmentResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function attachmentsUploadWithHttpInfo($reference_type, $reference_id, $raw = false, $x_apideck_metadata = null, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    {
+        $request = $this->attachmentsUploadRequest($reference_type, $reference_id, $raw, $x_apideck_metadata, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 201:
+                    if ('\Apideck\Client\Model\CreateAttachmentResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\CreateAttachmentResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Apideck\Client\Model\BadRequestResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\BadRequestResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Apideck\Client\Model\UnauthorizedResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnauthorizedResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\Apideck\Client\Model\PaymentRequiredResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\PaymentRequiredResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Apideck\Client\Model\NotFoundResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\NotFoundResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\Apideck\Client\Model\UnprocessableResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnprocessableResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\Apideck\Client\Model\UnexpectedErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Apideck\Client\Model\UnexpectedErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Apideck\Client\Model\CreateAttachmentResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\CreateAttachmentResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\BadRequestResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnauthorizedResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\PaymentRequiredResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\NotFoundResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnprocessableResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Apideck\Client\Model\UnexpectedErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation attachmentsUploadAsync
+     *
+     * Upload attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  \Apideck\Client\Model\CreateAttachmentRequest $x_apideck_metadata Metadata to attach to the attachment file (optional)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  \SplFileObject $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsUploadAsync($reference_type, $reference_id, $raw = false, $x_apideck_metadata = null, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    {
+        return $this->attachmentsUploadAsyncWithHttpInfo($reference_type, $reference_id, $raw, $x_apideck_metadata, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation attachmentsUploadAsyncWithHttpInfo
+     *
+     * Upload attachment
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  \Apideck\Client\Model\CreateAttachmentRequest $x_apideck_metadata Metadata to attach to the attachment file (optional)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  \SplFileObject $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function attachmentsUploadAsyncWithHttpInfo($reference_type, $reference_id, $raw = false, $x_apideck_metadata = null, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    {
+        $returnType = '\Apideck\Client\Model\CreateAttachmentResponse';
+        $request = $this->attachmentsUploadRequest($reference_type, $reference_id, $raw, $x_apideck_metadata, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'attachmentsUpload'
+     *
+     * @param  \Apideck\Client\Model\AttachmentReferenceType $reference_type The reference type of the document. (required)
+     * @param  string $reference_id The reference id of the object to retrieve. (required)
+     * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
+     * @param  \Apideck\Client\Model\CreateAttachmentRequest $x_apideck_metadata Metadata to attach to the attachment file (optional)
+     * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
+     * @param  string $x_apideck_app_id The ID of your Unify application (optional)
+     * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
+     * @param  \SplFileObject $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function attachmentsUploadRequest($reference_type, $reference_id, $raw = false, $x_apideck_metadata = null, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $body = null)
+    {
+        // verify the required parameter 'reference_type' is set
+        if ($reference_type === null || (is_array($reference_type) && count($reference_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_type when calling attachmentsUpload'
+            );
+        }
+        // verify the required parameter 'reference_id' is set
+        if ($reference_id === null || (is_array($reference_id) && count($reference_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $reference_id when calling attachmentsUpload'
+            );
+        }
+
+        $resourcePath = '/accounting/attachments/{reference_type}/{reference_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+
+        if ('raw' === 'raw') {
+            // Support for raw as true/false parameter
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw ? 'true' : 'false';
+            }
+        }
+
+
+        if ($raw !== null && 'sort' === 'raw') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($raw !== null && 'filter' === 'raw') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+            if('form' === 'form' && is_array($raw)) {
+                foreach($raw as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['raw'] = $raw;
+            }
+        }
+
+        // header params
+        if ($x_apideck_metadata !== null) {
+            $headerParams['x-apideck-metadata'] = ObjectSerializer::toHeaderValue($x_apideck_metadata);
+        }
+        // header params
+        if ($x_apideck_consumer_id !== null) {
+            $headerParams['x-apideck-consumer-id'] = ObjectSerializer::toHeaderValue($x_apideck_consumer_id);
+        }
+        // header params
+        if ($x_apideck_app_id !== null) {
+            $headerParams['x-apideck-app-id'] = ObjectSerializer::toHeaderValue($x_apideck_app_id);
+        }
+        // header params
+        if ($x_apideck_service_id !== null) {
+            $headerParams['x-apideck-service-id'] = ObjectSerializer::toHeaderValue($x_apideck_service_id);
+        }
+
+        // path params
+        if ($reference_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_type' . '}',
+                ObjectSerializer::toPathValue($reference_type),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($reference_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'reference_id' . '}',
+                ObjectSerializer::toPathValue($reference_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = $this->config->getDefaultHeaders();
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation balanceSheetOne
      *
      * Get BalanceSheet

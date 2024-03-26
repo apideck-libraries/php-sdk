@@ -72,6 +72,66 @@ class AccountingApiTest extends TestCase
     }
 
     /**
+     * Test case for attachmentsAll
+     *
+     * List Attachments.
+     *
+     */
+    public function testAttachmentsAll()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for attachmentsDelete
+     *
+     * Delete Attachment.
+     *
+     */
+    public function testAttachmentsDelete()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for attachmentsDownload
+     *
+     * Download Attachment.
+     *
+     */
+    public function testAttachmentsDownload()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for attachmentsOne
+     *
+     * Get Attachment.
+     *
+     */
+    public function testAttachmentsOne()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for attachmentsUpload
+     *
+     * Upload attachment.
+     *
+     */
+    public function testAttachmentsUpload()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for balanceSheetOne
      *
      * Get BalanceSheet.
