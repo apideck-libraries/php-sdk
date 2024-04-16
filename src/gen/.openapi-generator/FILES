@@ -506,6 +506,7 @@ docs/Model/OrderPickupDetailsRecipient.md
 docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
+docs/Model/OrdersSort.md
 docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
 docs/Model/PassThroughQuery.md
@@ -1167,6 +1168,7 @@ lib/Model/OrderPickupDetailsRecipient.php
 lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
+lib/Model/OrdersSort.php
 lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
 lib/Model/PassThroughQuery.php
@@ -1823,6 +1825,7 @@ test/Model/OrderRefundsTest.php
 test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
+test/Model/OrdersSortTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
 test/Model/PassThroughQueryTest.php
