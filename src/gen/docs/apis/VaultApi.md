@@ -950,6 +950,7 @@ Name | Type | Description  | Notes
  **resource** | **string**| Name of the resource (plural) |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **resource_id** | **string**| This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. |
 
 
 
