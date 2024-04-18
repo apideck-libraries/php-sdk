@@ -89,6 +89,15 @@ class AttachmentTest extends TestCase
     }
 
     /**
+     * Test attribute "display_id"
+     */
+    public function testPropertyDisplayId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

@@ -60,6 +60,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
+        'display_id' => 'string',
         'name' => 'string',
         'mime_type' => 'string',
         'size' => 'int',
@@ -80,6 +81,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'display_id' => null,
         'name' => null,
         'mime_type' => null,
         'size' => null,
@@ -119,6 +121,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'display_id' => 'display_id',
         'name' => 'name',
         'mime_type' => 'mime_type',
         'size' => 'size',
@@ -137,6 +140,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
+        'display_id' => 'setDisplayId',
         'name' => 'setName',
         'mime_type' => 'setMimeType',
         'size' => 'setSize',
@@ -155,6 +159,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
+        'display_id' => 'getDisplayId',
         'name' => 'getName',
         'mime_type' => 'getMimeType',
         'size' => 'getSize',
@@ -224,6 +229,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
+        $this->container['display_id'] = $data['display_id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['mime_type'] = $data['mime_type'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
@@ -279,6 +285,30 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_id
+     *
+     * @return string|null
+     */
+    public function getDisplayId()
+    {
+        return $this->container['display_id'];
+    }
+
+    /**
+     * Sets display_id
+     *
+     * @param string|null $display_id The display id of the file
+     *
+     * @return self
+     */
+    public function setDisplayId($display_id)
+    {
+        $this->container['display_id'] = $display_id;
 
         return $this;
     }
