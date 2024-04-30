@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceSheetAssetsCurrentAssets
+ * BalanceSheetAccount
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * BalanceSheetAssetsCurrentAssets Class Doc Comment
+ * BalanceSheetAccount Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \JsonSerializable
+class BalanceSheetAccount implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'BalanceSheet_assets_current_assets';
+    protected static $openAPIModelName = 'BalanceSheetAccount';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total' => 'float',
-        'accounts' => '\Apideck\Client\Model\BalanceSheetAssetsCurrentAssetsAccounts[]'
+        'account_id' => 'string',
+        'name' => 'string',
+        'value' => 'float',
+        'items' => 'AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]'
     ];
 
     /**
@@ -71,8 +73,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total' => null,
-        'accounts' => null
+        'account_id' => null,
+        'name' => null,
+        'value' => null,
+        'items' => null
     ];
 
     /**
@@ -102,8 +106,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'total' => 'total',
-        'accounts' => 'accounts'
+        'account_id' => 'account_id',
+        'name' => 'name',
+        'value' => 'value',
+        'items' => 'items'
     ];
 
     /**
@@ -112,8 +118,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'total' => 'setTotal',
-        'accounts' => 'setAccounts'
+        'account_id' => 'setAccountId',
+        'name' => 'setName',
+        'value' => 'setValue',
+        'items' => 'setItems'
     ];
 
     /**
@@ -122,8 +130,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'total' => 'getTotal',
-        'accounts' => 'getAccounts'
+        'account_id' => 'getAccountId',
+        'name' => 'getName',
+        'value' => 'getValue',
+        'items' => 'getItems'
     ];
 
     /**
@@ -183,8 +193,10 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['total'] = $data['total'] ?? null;
-        $this->container['accounts'] = $data['accounts'] ?? null;
+        $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
+        $this->container['value'] = $data['value'] ?? null;
+        $this->container['items'] = $data['items'] ?? null;
     }
 
     /**
@@ -196,12 +208,6 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
-        if ($this->container['total'] === null) {
-            $invalidProperties[] = "'total' can't be null";
-        }
-        if ($this->container['accounts'] === null) {
-            $invalidProperties[] = "'accounts' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -218,49 +224,97 @@ class BalanceSheetAssetsCurrentAssets implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets total
+     * Gets account_id
      *
-     * @return float
+     * @return string|null
      */
-    public function getTotal()
+    public function getAccountId()
     {
-        return $this->container['total'];
+        return $this->container['account_id'];
     }
 
     /**
-     * Sets total
+     * Sets account_id
      *
-     * @param float $total Total current assets
+     * @param string|null $account_id The unique identifier for the account.
      *
      * @return self
      */
-    public function setTotal($total)
+    public function setAccountId($account_id)
     {
-        $this->container['total'] = $total;
+        $this->container['account_id'] = $account_id;
 
         return $this;
     }
 
     /**
-     * Gets accounts
+     * Gets name
      *
-     * @return \Apideck\Client\Model\BalanceSheetAssetsCurrentAssetsAccounts[]
+     * @return string|null
      */
-    public function getAccounts()
+    public function getName()
     {
-        return $this->container['accounts'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets accounts
+     * Sets name
      *
-     * @param \Apideck\Client\Model\BalanceSheetAssetsCurrentAssetsAccounts[] $accounts accounts
+     * @param string|null $name Name of the report item
      *
      * @return self
      */
-    public function setAccounts($accounts)
+    public function setName($name)
     {
-        $this->container['accounts'] = $accounts;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return float|null
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param float|null $value The value of the account.
+     *
+     * @return self
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets items
+     *
+     * @return AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     *
+     * @param AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null $items items
+     *
+     * @return self
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
 
         return $this;
     }
