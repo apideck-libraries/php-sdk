@@ -1,6 +1,6 @@
 <?php
 /**
- * Attachment
+ * BalanceSheetLiabilitiesAccounts
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * Attachment Class Doc Comment
+ * BalanceSheetLiabilitiesAccounts Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
+class BalanceSheetLiabilitiesAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Attachment';
+    protected static $openAPIModelName = 'BalanceSheet_liabilities_accounts';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,14 +61,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'mime_type' => 'string',
-        'size' => 'int',
-        'reference' => '\Apideck\Client\Model\AttachmentReference',
-        'description' => 'string',
-        'updated_by' => 'string',
-        'created_by' => 'string',
-        'updated_at' => '\DateTime',
-        'created_at' => '\DateTime'
+        'value' => 'float'
     ];
 
     /**
@@ -81,14 +74,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'mime_type' => null,
-        'size' => null,
-        'reference' => null,
-        'description' => null,
-        'updated_by' => null,
-        'created_by' => null,
-        'updated_at' => 'date-time',
-        'created_at' => 'date-time'
+        'value' => null
     ];
 
     /**
@@ -120,14 +106,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'mime_type' => 'mime_type',
-        'size' => 'size',
-        'reference' => 'reference',
-        'description' => 'description',
-        'updated_by' => 'updated_by',
-        'created_by' => 'created_by',
-        'updated_at' => 'updated_at',
-        'created_at' => 'created_at'
+        'value' => 'value'
     ];
 
     /**
@@ -138,14 +117,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'mime_type' => 'setMimeType',
-        'size' => 'setSize',
-        'reference' => 'setReference',
-        'description' => 'setDescription',
-        'updated_by' => 'setUpdatedBy',
-        'created_by' => 'setCreatedBy',
-        'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt'
+        'value' => 'setValue'
     ];
 
     /**
@@ -156,14 +128,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'mime_type' => 'getMimeType',
-        'size' => 'getSize',
-        'reference' => 'getReference',
-        'description' => 'getDescription',
-        'updated_by' => 'getUpdatedBy',
-        'created_by' => 'getCreatedBy',
-        'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt'
+        'value' => 'getValue'
     ];
 
     /**
@@ -225,14 +190,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['mime_type'] = $data['mime_type'] ?? null;
-        $this->container['size'] = $data['size'] ?? null;
-        $this->container['reference'] = $data['reference'] ?? null;
-        $this->container['description'] = $data['description'] ?? null;
-        $this->container['updated_by'] = $data['updated_by'] ?? null;
-        $this->container['created_by'] = $data['created_by'] ?? null;
-        $this->container['updated_at'] = $data['updated_at'] ?? null;
-        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['value'] = $data['value'] ?? null;
     }
 
     /**
@@ -296,7 +254,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name The name of the file
+     * @param string|null $name The name of the liability account
      *
      * @return self
      */
@@ -308,193 +266,25 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets mime_type
+     * Gets value
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getMimeType()
+    public function getValue()
     {
-        return $this->container['mime_type'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets mime_type
+     * Sets value
      *
-     * @param string|null $mime_type The MIME type of the file.
+     * @param float|null $value The value of the liability
      *
      * @return self
      */
-    public function setMimeType($mime_type)
+    public function setValue($value)
     {
-        $this->container['mime_type'] = $mime_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return int|null
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param int|null $size The size of the file in bytes
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets reference
-     *
-     * @return \Apideck\Client\Model\AttachmentReference|null
-     */
-    public function getReference()
-    {
-        return $this->container['reference'];
-    }
-
-    /**
-     * Sets reference
-     *
-     * @param \Apideck\Client\Model\AttachmentReference|null $reference reference
-     *
-     * @return self
-     */
-    public function setReference($reference)
-    {
-        $this->container['reference'] = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string|null $description Optional description of the file
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_by
-     *
-     * @return string|null
-     */
-    public function getUpdatedBy()
-    {
-        return $this->container['updated_by'];
-    }
-
-    /**
-     * Sets updated_by
-     *
-     * @param string|null $updated_by The user who last updated the object.
-     *
-     * @return self
-     */
-    public function setUpdatedBy($updated_by)
-    {
-        $this->container['updated_by'] = $updated_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_by
-     *
-     * @return string|null
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['created_by'];
-    }
-
-    /**
-     * Sets created_by
-     *
-     * @param string|null $created_by The user who created the object.
-     *
-     * @return self
-     */
-    public function setCreatedBy($created_by)
-    {
-        $this->container['created_by'] = $created_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime|null $updated_at The date and time when the object was last updated.
-     *
-     * @return self
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime|null $created_at The date and time when the object was created.
-     *
-     * @return self
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
+        $this->container['value'] = $value;
 
         return $this;
     }

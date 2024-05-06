@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceSheetAccountRecordTest
+ * BalanceSheetEquityItemsTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * BalanceSheetAccountRecordTest Class Doc Comment
+ * BalanceSheetEquityItemsTest Class Doc Comment
  *
  * @category    Class
- * @description BalanceSheetAccountRecord
+ * @description BalanceSheetEquityItems
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class BalanceSheetAccountRecordTest extends TestCase
+class BalanceSheetEquityItemsTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class BalanceSheetAccountRecordTest extends TestCase
     }
 
     /**
-     * Test "BalanceSheetAccountRecord"
+     * Test "BalanceSheetEquityItems"
      */
-    public function testBalanceSheetAccountRecord()
+    public function testBalanceSheetEquityItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "account_id"
+     * Test attribute "id"
      */
-    public function testPropertyAccountId()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

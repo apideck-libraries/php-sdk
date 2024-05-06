@@ -1,6 +1,6 @@
 <?php
 /**
- * AttachmentTest
+ * BalanceSheetLiabilitiesAccountsTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AttachmentTest Class Doc Comment
+ * BalanceSheetLiabilitiesAccountsTest Class Doc Comment
  *
  * @category    Class
- * @description Attachment
+ * @description BalanceSheetLiabilitiesAccounts
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AttachmentTest extends TestCase
+class BalanceSheetLiabilitiesAccountsTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class AttachmentTest extends TestCase
     }
 
     /**
-     * Test "Attachment"
+     * Test "BalanceSheetLiabilitiesAccounts"
      */
-    public function testAttachment()
+    public function testBalanceSheetLiabilitiesAccounts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -98,72 +98,9 @@ class AttachmentTest extends TestCase
     }
 
     /**
-     * Test attribute "mime_type"
+     * Test attribute "value"
      */
-    public function testPropertyMimeType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "size"
-     */
-    public function testPropertySize()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "reference"
-     */
-    public function testPropertyReference()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_by"
-     */
-    public function testPropertyUpdatedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "created_by"
-     */
-    public function testPropertyCreatedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
+    public function testPropertyValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

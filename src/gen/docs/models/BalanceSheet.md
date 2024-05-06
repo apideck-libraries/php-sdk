@@ -5,14 +5,36 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`reports` | [**\Apideck\Client\Model\BalanceSheetReports[]**](BalanceSheetReports.md) |  | 
+`report_name` | **string** | The name of the report | 
+`start_date` | **string** | The start date of the report | 
+`assets` | [**\Apideck\Client\Model\BalanceSheetAssets**](BalanceSheetAssets.md) |  | 
+`liabilities` | [**\Apideck\Client\Model\BalanceSheetLiabilities**](BalanceSheetLiabilities.md) |  | 
+`equity` | [**\Apideck\Client\Model\BalanceSheetEquity**](BalanceSheetEquity.md) |  | 
+`id` | **string** | A unique identifier for an object. | [optional] 
+`end_date` | **string** | The start date of the report | [optional] 
+`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
+`updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 
 
 
 
 
 ## Referenced Types:
-* [`BalanceSheetReports`](BalanceSheetReports.md)
+
+
+* [`BalanceSheetAssets`](BalanceSheetAssets.md)
+* [`BalanceSheetLiabilities`](BalanceSheetLiabilities.md)
+* [`BalanceSheetEquity`](BalanceSheetEquity.md)
+
+
+
+
+
+
+
 
 ---
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceSheetAccountRecord
+ * BalanceSheetAssetsCurrentAssetsAccounts
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * BalanceSheetAccountRecord Class Doc Comment
+ * BalanceSheetAssetsCurrentAssetsAccounts Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSerializable
+class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'BalanceSheetAccountRecord';
+    protected static $openAPIModelName = 'BalanceSheet_assets_current_assets_accounts';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_id' => 'string',
+        'id' => 'string',
         'name' => 'string',
         'value' => 'float'
     ];
@@ -72,7 +72,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'account_id' => null,
+        'id' => null,
         'name' => null,
         'value' => null
     ];
@@ -104,7 +104,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'account_id' => 'account_id',
+        'id' => 'id',
         'name' => 'name',
         'value' => 'value'
     ];
@@ -115,7 +115,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'account_id' => 'setAccountId',
+        'id' => 'setId',
         'name' => 'setName',
         'value' => 'setValue'
     ];
@@ -126,7 +126,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'account_id' => 'getAccountId',
+        'id' => 'getId',
         'name' => 'getName',
         'value' => 'getValue'
     ];
@@ -188,7 +188,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
     }
@@ -218,25 +218,25 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets account_id
+     * Gets id
      *
      * @return string|null
      */
-    public function getAccountId()
+    public function getId()
     {
-        return $this->container['account_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets account_id
+     * Sets id
      *
-     * @param string|null $account_id The unique identifier for the account.
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */
-    public function setAccountId($account_id)
+    public function setId($id)
     {
-        $this->container['account_id'] = $account_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -254,7 +254,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets name
      *
-     * @param string|null $name Name of the report item
+     * @param string|null $name The name of the current asset account
      *
      * @return self
      */
@@ -278,7 +278,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets value
      *
-     * @param float|null $value The value of the account.
+     * @param float|null $value The value of the current asset
      *
      * @return self
      */

@@ -6,7 +6,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** | A unique identifier for an object. | [optional] 
-`display_id` | **string** | The display id of the file | [optional] 
 `name` | **string** | The name of the file | [optional] 
 `mime_type` | **string** | The MIME type of the file. | [optional] 
 `size` | **int** | The size of the file in bytes | [optional] 
@@ -22,7 +21,6 @@ Name | Type | Description | Notes
 
 
 ## Referenced Types:
-
 
 
 

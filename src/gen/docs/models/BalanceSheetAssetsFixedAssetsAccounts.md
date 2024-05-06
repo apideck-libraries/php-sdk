@@ -1,13 +1,13 @@
-# Apideck.BalanceSheetAccountRecord
+# Apideck.BalanceSheetAssetsFixedAssetsAccounts
 
 ### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`account_id` | **string** | The unique identifier for the account. | [optional] 
-`name` | **string** | Name of the report item | [optional] 
-`value` | **float** | The value of the account. | [optional] 
+`id` | **string** | A unique identifier for an object. | [optional] 
+`name` | **string** | The name of the fixed asset account | [optional] 
+`value` | **float** | The value of the fixed asset | [optional] 
 
 
 

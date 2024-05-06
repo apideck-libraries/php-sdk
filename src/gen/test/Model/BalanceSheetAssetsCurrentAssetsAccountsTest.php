@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceSheetAccountTest
+ * BalanceSheetAssetsCurrentAssetsAccountsTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * BalanceSheetAccountTest Class Doc Comment
+ * BalanceSheetAssetsCurrentAssetsAccountsTest Class Doc Comment
  *
  * @category    Class
- * @description BalanceSheetAccount
+ * @description BalanceSheetAssetsCurrentAssetsAccounts
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class BalanceSheetAccountTest extends TestCase
+class BalanceSheetAssetsCurrentAssetsAccountsTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class BalanceSheetAccountTest extends TestCase
     }
 
     /**
-     * Test "BalanceSheetAccount"
+     * Test "BalanceSheetAssetsCurrentAssetsAccounts"
      */
-    public function testBalanceSheetAccount()
+    public function testBalanceSheetAssetsCurrentAssetsAccounts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "account_id"
+     * Test attribute "id"
      */
-    public function testPropertyAccountId()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -101,15 +101,6 @@ class BalanceSheetAccountTest extends TestCase
      * Test attribute "value"
      */
     public function testPropertyValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "items"
-     */
-    public function testPropertyItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

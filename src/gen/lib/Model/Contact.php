@@ -97,8 +97,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_activity_at' => '\DateTime',
         'custom_mappings' => 'object',
         'updated_at' => '\DateTime',
-        'created_at' => '\DateTime',
-        'opportunity_ids' => 'string[]'
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -147,8 +146,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_activity_at' => 'date-time',
         'custom_mappings' => null,
         'updated_at' => 'date-time',
-        'created_at' => 'date-time',
-        'opportunity_ids' => null
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -216,8 +214,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_activity_at' => 'last_activity_at',
         'custom_mappings' => 'custom_mappings',
         'updated_at' => 'updated_at',
-        'created_at' => 'created_at',
-        'opportunity_ids' => 'opportunity_ids'
+        'created_at' => 'created_at'
     ];
 
     /**
@@ -264,8 +261,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_activity_at' => 'setLastActivityAt',
         'custom_mappings' => 'setCustomMappings',
         'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt',
-        'opportunity_ids' => 'setOpportunityIds'
+        'created_at' => 'setCreatedAt'
     ];
 
     /**
@@ -312,8 +308,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_activity_at' => 'getLastActivityAt',
         'custom_mappings' => 'getCustomMappings',
         'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt',
-        'opportunity_ids' => 'getOpportunityIds'
+        'created_at' => 'getCreatedAt'
     ];
 
     /**
@@ -448,7 +443,6 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['opportunity_ids'] = $data['opportunity_ids'] ?? null;
     }
 
     /**
@@ -1450,30 +1444,6 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets opportunity_ids
-     *
-     * @return string[]|null
-     */
-    public function getOpportunityIds()
-    {
-        return $this->container['opportunity_ids'];
-    }
-
-    /**
-     * Sets opportunity_ids
-     *
-     * @param string[]|null $opportunity_ids The opportunity ids of the contact.
-     *
-     * @return self
-     */
-    public function setOpportunityIds($opportunity_ids)
-    {
-        $this->container['opportunity_ids'] = $opportunity_ids;
 
         return $this;
     }

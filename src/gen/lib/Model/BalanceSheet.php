@@ -59,7 +59,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'reports' => '\Apideck\Client\Model\BalanceSheetReports[]'
+        'report_name' => 'string',
+        'start_date' => 'string',
+        'assets' => '\Apideck\Client\Model\BalanceSheetAssets',
+        'liabilities' => '\Apideck\Client\Model\BalanceSheetLiabilities',
+        'equity' => '\Apideck\Client\Model\BalanceSheetEquity',
+        'id' => 'string',
+        'end_date' => 'string',
+        'custom_mappings' => 'object',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'updated_at' => '\DateTime',
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -70,7 +81,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'reports' => null
+        'report_name' => null,
+        'start_date' => null,
+        'assets' => null,
+        'liabilities' => null,
+        'equity' => null,
+        'id' => null,
+        'end_date' => null,
+        'custom_mappings' => null,
+        'updated_by' => null,
+        'created_by' => null,
+        'updated_at' => 'date-time',
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -100,7 +122,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'reports' => 'reports'
+        'report_name' => 'report_name',
+        'start_date' => 'start_date',
+        'assets' => 'assets',
+        'liabilities' => 'liabilities',
+        'equity' => 'equity',
+        'id' => 'id',
+        'end_date' => 'end_date',
+        'custom_mappings' => 'custom_mappings',
+        'updated_by' => 'updated_by',
+        'created_by' => 'created_by',
+        'updated_at' => 'updated_at',
+        'created_at' => 'created_at'
     ];
 
     /**
@@ -109,7 +142,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'reports' => 'setReports'
+        'report_name' => 'setReportName',
+        'start_date' => 'setStartDate',
+        'assets' => 'setAssets',
+        'liabilities' => 'setLiabilities',
+        'equity' => 'setEquity',
+        'id' => 'setId',
+        'end_date' => 'setEndDate',
+        'custom_mappings' => 'setCustomMappings',
+        'updated_by' => 'setUpdatedBy',
+        'created_by' => 'setCreatedBy',
+        'updated_at' => 'setUpdatedAt',
+        'created_at' => 'setCreatedAt'
     ];
 
     /**
@@ -118,7 +162,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'reports' => 'getReports'
+        'report_name' => 'getReportName',
+        'start_date' => 'getStartDate',
+        'assets' => 'getAssets',
+        'liabilities' => 'getLiabilities',
+        'equity' => 'getEquity',
+        'id' => 'getId',
+        'end_date' => 'getEndDate',
+        'custom_mappings' => 'getCustomMappings',
+        'updated_by' => 'getUpdatedBy',
+        'created_by' => 'getCreatedBy',
+        'updated_at' => 'getUpdatedAt',
+        'created_at' => 'getCreatedAt'
     ];
 
     /**
@@ -178,7 +233,18 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['reports'] = $data['reports'] ?? null;
+        $this->container['report_name'] = $data['report_name'] ?? null;
+        $this->container['start_date'] = $data['start_date'] ?? null;
+        $this->container['assets'] = $data['assets'] ?? null;
+        $this->container['liabilities'] = $data['liabilities'] ?? null;
+        $this->container['equity'] = $data['equity'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['end_date'] = $data['end_date'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
+        $this->container['updated_by'] = $data['updated_by'] ?? null;
+        $this->container['created_by'] = $data['created_by'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
     }
 
     /**
@@ -190,9 +256,29 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['reports'] === null) {
-            $invalidProperties[] = "'reports' can't be null";
+        if ($this->container['report_name'] === null) {
+            $invalidProperties[] = "'report_name' can't be null";
         }
+        if ($this->container['start_date'] === null) {
+            $invalidProperties[] = "'start_date' can't be null";
+        }
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $this->container['start_date'])) {
+            $invalidProperties[] = "invalid value for 'start_date', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.";
+        }
+
+        if ($this->container['assets'] === null) {
+            $invalidProperties[] = "'assets' can't be null";
+        }
+        if ($this->container['liabilities'] === null) {
+            $invalidProperties[] = "'liabilities' can't be null";
+        }
+        if ($this->container['equity'] === null) {
+            $invalidProperties[] = "'equity' can't be null";
+        }
+        if (!is_null($this->container['end_date']) && !preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $this->container['end_date'])) {
+            $invalidProperties[] = "invalid value for 'end_date', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -209,25 +295,299 @@ class BalanceSheet implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets reports
+     * Gets report_name
      *
-     * @return \Apideck\Client\Model\BalanceSheetReports[]
+     * @return string
      */
-    public function getReports()
+    public function getReportName()
     {
-        return $this->container['reports'];
+        return $this->container['report_name'];
     }
 
     /**
-     * Sets reports
+     * Sets report_name
      *
-     * @param \Apideck\Client\Model\BalanceSheetReports[] $reports reports
+     * @param string $report_name The name of the report
      *
      * @return self
      */
-    public function setReports($reports)
+    public function setReportName($report_name)
     {
-        $this->container['reports'] = $reports;
+        $this->container['report_name'] = $report_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_date
+     *
+     * @return string
+     */
+    public function getStartDate()
+    {
+        return $this->container['start_date'];
+    }
+
+    /**
+     * Sets start_date
+     *
+     * @param string $start_date The start date of the report
+     *
+     * @return self
+     */
+    public function setStartDate($start_date)
+    {
+
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $start_date))) {
+            throw new \InvalidArgumentException("invalid value for $start_date when calling BalanceSheet., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.");
+        }
+
+        $this->container['start_date'] = $start_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets assets
+     *
+     * @return \Apideck\Client\Model\BalanceSheetAssets
+     */
+    public function getAssets()
+    {
+        return $this->container['assets'];
+    }
+
+    /**
+     * Sets assets
+     *
+     * @param \Apideck\Client\Model\BalanceSheetAssets $assets assets
+     *
+     * @return self
+     */
+    public function setAssets($assets)
+    {
+        $this->container['assets'] = $assets;
+
+        return $this;
+    }
+
+    /**
+     * Gets liabilities
+     *
+     * @return \Apideck\Client\Model\BalanceSheetLiabilities
+     */
+    public function getLiabilities()
+    {
+        return $this->container['liabilities'];
+    }
+
+    /**
+     * Sets liabilities
+     *
+     * @param \Apideck\Client\Model\BalanceSheetLiabilities $liabilities liabilities
+     *
+     * @return self
+     */
+    public function setLiabilities($liabilities)
+    {
+        $this->container['liabilities'] = $liabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets equity
+     *
+     * @return \Apideck\Client\Model\BalanceSheetEquity
+     */
+    public function getEquity()
+    {
+        return $this->container['equity'];
+    }
+
+    /**
+     * Sets equity
+     *
+     * @param \Apideck\Client\Model\BalanceSheetEquity $equity equity
+     *
+     * @return self
+     */
+    public function setEquity($equity)
+    {
+        $this->container['equity'] = $equity;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id A unique identifier for an object.
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_date
+     *
+     * @return string|null
+     */
+    public function getEndDate()
+    {
+        return $this->container['end_date'];
+    }
+
+    /**
+     * Sets end_date
+     *
+     * @param string|null $end_date The start date of the report
+     *
+     * @return self
+     */
+    public function setEndDate($end_date)
+    {
+
+        if (!is_null($end_date) && (!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $end_date))) {
+            throw new \InvalidArgumentException("invalid value for $end_date when calling BalanceSheet., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.");
+        }
+
+        $this->container['end_date'] = $end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_mappings
+     *
+     * @return object|null
+     */
+    public function getCustomMappings()
+    {
+        return $this->container['custom_mappings'];
+    }
+
+    /**
+     * Sets custom_mappings
+     *
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
+     *
+     * @return self
+     */
+    public function setCustomMappings($custom_mappings)
+    {
+        $this->container['custom_mappings'] = $custom_mappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by
+     *
+     * @return string|null
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updated_by'];
+    }
+
+    /**
+     * Sets updated_by
+     *
+     * @param string|null $updated_by The user who last updated the object.
+     *
+     * @return self
+     */
+    public function setUpdatedBy($updated_by)
+    {
+        $this->container['updated_by'] = $updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
+     *
+     * @return string|null
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     *
+     * @param string|null $created_by The user who created the object.
+     *
+     * @return self
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime|null $updated_at The date and time when the object was last updated.
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at The date and time when the object was created.
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
