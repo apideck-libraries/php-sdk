@@ -429,4 +429,13 @@ class ContactTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "opportunity_ids"
+     */
+    public function testPropertyOpportunityIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

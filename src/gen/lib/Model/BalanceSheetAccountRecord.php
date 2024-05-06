@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceSheetAssetsCurrentAssetsAccounts
+ * BalanceSheetAccountRecord
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * BalanceSheetAssetsCurrentAssetsAccounts Class Doc Comment
+ * BalanceSheetAccountRecord Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAccess, \JsonSerializable
+class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'BalanceSheet_assets_current_assets_accounts';
+    protected static $openAPIModelName = 'BalanceSheetAccountRecord';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
+        'account_id' => 'string',
         'name' => 'string',
         'value' => 'float'
     ];
@@ -72,7 +72,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
+        'account_id' => null,
         'name' => null,
         'value' => null
     ];
@@ -104,7 +104,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
+        'account_id' => 'account_id',
         'name' => 'name',
         'value' => 'value'
     ];
@@ -115,7 +115,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
+        'account_id' => 'setAccountId',
         'name' => 'setName',
         'value' => 'setValue'
     ];
@@ -126,7 +126,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
+        'account_id' => 'getAccountId',
         'name' => 'getName',
         'value' => 'getValue'
     ];
@@ -188,7 +188,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
+        $this->container['account_id'] = $data['account_id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
     }
@@ -218,25 +218,25 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
 
 
     /**
-     * Gets id
+     * Gets account_id
      *
      * @return string|null
      */
-    public function getId()
+    public function getAccountId()
     {
-        return $this->container['id'];
+        return $this->container['account_id'];
     }
 
     /**
-     * Sets id
+     * Sets account_id
      *
-     * @param string|null $id A unique identifier for an object.
+     * @param string|null $account_id The unique identifier for the account.
      *
      * @return self
      */
-    public function setId($id)
+    public function setAccountId($account_id)
     {
-        $this->container['id'] = $id;
+        $this->container['account_id'] = $account_id;
 
         return $this;
     }
@@ -254,7 +254,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
     /**
      * Sets name
      *
-     * @param string|null $name The name of the current asset account
+     * @param string|null $name Name of the report item
      *
      * @return self
      */
@@ -278,7 +278,7 @@ class BalanceSheetAssetsCurrentAssetsAccounts implements ModelInterface, ArrayAc
     /**
      * Sets value
      *
-     * @param float|null $value The value of the current asset
+     * @param float|null $value The value of the account.
      *
      * @return self
      */

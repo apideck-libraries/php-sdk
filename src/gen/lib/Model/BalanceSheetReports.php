@@ -1,6 +1,6 @@
 <?php
 /**
- * Attachment
+ * BalanceSheetReports
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * Attachment Class Doc Comment
+ * BalanceSheetReports Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
+class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Attachment';
+    protected static $openAPIModelName = 'BalanceSheet_reports';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,13 +59,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'end_date' => 'string',
+        'assets' => '\Apideck\Client\Model\BalanceSheetAccount',
+        'liabilities' => '\Apideck\Client\Model\BalanceSheetAccount',
+        'equity' => '\Apideck\Client\Model\BalanceSheetAccount',
         'id' => 'string',
-        'display_id' => 'string',
-        'name' => 'string',
-        'mime_type' => 'string',
-        'size' => 'int',
-        'reference' => '\Apideck\Client\Model\AttachmentReference',
-        'description' => 'string',
+        'report_name' => 'string',
+        'start_date' => 'string',
+        'currency' => '\Apideck\Client\Model\Currency',
+        'net_assets' => 'float',
+        'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -80,13 +83,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'end_date' => null,
+        'assets' => null,
+        'liabilities' => null,
+        'equity' => null,
         'id' => null,
-        'display_id' => null,
-        'name' => null,
-        'mime_type' => null,
-        'size' => null,
-        'reference' => null,
-        'description' => null,
+        'report_name' => null,
+        'start_date' => null,
+        'currency' => null,
+        'net_assets' => null,
+        'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -120,13 +126,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'end_date' => 'end_date',
+        'assets' => 'assets',
+        'liabilities' => 'liabilities',
+        'equity' => 'equity',
         'id' => 'id',
-        'display_id' => 'display_id',
-        'name' => 'name',
-        'mime_type' => 'mime_type',
-        'size' => 'size',
-        'reference' => 'reference',
-        'description' => 'description',
+        'report_name' => 'report_name',
+        'start_date' => 'start_date',
+        'currency' => 'currency',
+        'net_assets' => 'net_assets',
+        'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -139,13 +148,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'end_date' => 'setEndDate',
+        'assets' => 'setAssets',
+        'liabilities' => 'setLiabilities',
+        'equity' => 'setEquity',
         'id' => 'setId',
-        'display_id' => 'setDisplayId',
-        'name' => 'setName',
-        'mime_type' => 'setMimeType',
-        'size' => 'setSize',
-        'reference' => 'setReference',
-        'description' => 'setDescription',
+        'report_name' => 'setReportName',
+        'start_date' => 'setStartDate',
+        'currency' => 'setCurrency',
+        'net_assets' => 'setNetAssets',
+        'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -158,13 +170,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'end_date' => 'getEndDate',
+        'assets' => 'getAssets',
+        'liabilities' => 'getLiabilities',
+        'equity' => 'getEquity',
         'id' => 'getId',
-        'display_id' => 'getDisplayId',
-        'name' => 'getName',
-        'mime_type' => 'getMimeType',
-        'size' => 'getSize',
-        'reference' => 'getReference',
-        'description' => 'getDescription',
+        'report_name' => 'getReportName',
+        'start_date' => 'getStartDate',
+        'currency' => 'getCurrency',
+        'net_assets' => 'getNetAssets',
+        'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -228,13 +243,16 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['end_date'] = $data['end_date'] ?? null;
+        $this->container['assets'] = $data['assets'] ?? null;
+        $this->container['liabilities'] = $data['liabilities'] ?? null;
+        $this->container['equity'] = $data['equity'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['display_id'] = $data['display_id'] ?? null;
-        $this->container['name'] = $data['name'] ?? null;
-        $this->container['mime_type'] = $data['mime_type'] ?? null;
-        $this->container['size'] = $data['size'] ?? null;
-        $this->container['reference'] = $data['reference'] ?? null;
-        $this->container['description'] = $data['description'] ?? null;
+        $this->container['report_name'] = $data['report_name'] ?? null;
+        $this->container['start_date'] = $data['start_date'] ?? null;
+        $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['net_assets'] = $data['net_assets'] ?? null;
+        $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -250,6 +268,26 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['end_date'] === null) {
+            $invalidProperties[] = "'end_date' can't be null";
+        }
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $this->container['end_date'])) {
+            $invalidProperties[] = "invalid value for 'end_date', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.";
+        }
+
+        if ($this->container['assets'] === null) {
+            $invalidProperties[] = "'assets' can't be null";
+        }
+        if ($this->container['liabilities'] === null) {
+            $invalidProperties[] = "'liabilities' can't be null";
+        }
+        if ($this->container['equity'] === null) {
+            $invalidProperties[] = "'equity' can't be null";
+        }
+        if (!is_null($this->container['start_date']) && !preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $this->container['start_date'])) {
+            $invalidProperties[] = "invalid value for 'start_date', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -264,6 +302,107 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets end_date
+     *
+     * @return string
+     */
+    public function getEndDate()
+    {
+        return $this->container['end_date'];
+    }
+
+    /**
+     * Sets end_date
+     *
+     * @param string $end_date The start date of the report
+     *
+     * @return self
+     */
+    public function setEndDate($end_date)
+    {
+
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $end_date))) {
+            throw new \InvalidArgumentException("invalid value for $end_date when calling BalanceSheetReports., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.");
+        }
+
+        $this->container['end_date'] = $end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets assets
+     *
+     * @return \Apideck\Client\Model\BalanceSheetAccount
+     */
+    public function getAssets()
+    {
+        return $this->container['assets'];
+    }
+
+    /**
+     * Sets assets
+     *
+     * @param \Apideck\Client\Model\BalanceSheetAccount $assets assets
+     *
+     * @return self
+     */
+    public function setAssets($assets)
+    {
+        $this->container['assets'] = $assets;
+
+        return $this;
+    }
+
+    /**
+     * Gets liabilities
+     *
+     * @return \Apideck\Client\Model\BalanceSheetAccount
+     */
+    public function getLiabilities()
+    {
+        return $this->container['liabilities'];
+    }
+
+    /**
+     * Sets liabilities
+     *
+     * @param \Apideck\Client\Model\BalanceSheetAccount $liabilities liabilities
+     *
+     * @return self
+     */
+    public function setLiabilities($liabilities)
+    {
+        $this->container['liabilities'] = $liabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets equity
+     *
+     * @return \Apideck\Client\Model\BalanceSheetAccount
+     */
+    public function getEquity()
+    {
+        return $this->container['equity'];
+    }
+
+    /**
+     * Sets equity
+     *
+     * @param \Apideck\Client\Model\BalanceSheetAccount $equity equity
+     *
+     * @return self
+     */
+    public function setEquity($equity)
+    {
+        $this->container['equity'] = $equity;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -290,145 +429,126 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets display_id
+     * Gets report_name
      *
      * @return string|null
      */
-    public function getDisplayId()
+    public function getReportName()
     {
-        return $this->container['display_id'];
+        return $this->container['report_name'];
     }
 
     /**
-     * Sets display_id
+     * Sets report_name
      *
-     * @param string|null $display_id The display id of the file
+     * @param string|null $report_name The name of the report
      *
      * @return self
      */
-    public function setDisplayId($display_id)
+    public function setReportName($report_name)
     {
-        $this->container['display_id'] = $display_id;
+        $this->container['report_name'] = $report_name;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets start_date
      *
      * @return string|null
      */
-    public function getName()
+    public function getStartDate()
     {
-        return $this->container['name'];
+        return $this->container['start_date'];
     }
 
     /**
-     * Sets name
+     * Sets start_date
      *
-     * @param string|null $name The name of the file
+     * @param string|null $start_date The start date of the report
      *
      * @return self
      */
-    public function setName($name)
+    public function setStartDate($start_date)
     {
-        $this->container['name'] = $name;
+
+        if (!is_null($start_date) && (!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $start_date))) {
+            throw new \InvalidArgumentException("invalid value for $start_date when calling BalanceSheetReports., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.");
+        }
+
+        $this->container['start_date'] = $start_date;
 
         return $this;
     }
 
     /**
-     * Gets mime_type
+     * Gets currency
      *
-     * @return string|null
+     * @return \Apideck\Client\Model\Currency|null
      */
-    public function getMimeType()
+    public function getCurrency()
     {
-        return $this->container['mime_type'];
+        return $this->container['currency'];
     }
 
     /**
-     * Sets mime_type
+     * Sets currency
      *
-     * @param string|null $mime_type The MIME type of the file.
+     * @param \Apideck\Client\Model\Currency|null $currency currency
      *
      * @return self
      */
-    public function setMimeType($mime_type)
+    public function setCurrency($currency)
     {
-        $this->container['mime_type'] = $mime_type;
+        $this->container['currency'] = $currency;
 
         return $this;
     }
 
     /**
-     * Gets size
+     * Gets net_assets
      *
-     * @return int|null
+     * @return float|null
      */
-    public function getSize()
+    public function getNetAssets()
     {
-        return $this->container['size'];
+        return $this->container['net_assets'];
     }
 
     /**
-     * Sets size
+     * Sets net_assets
      *
-     * @param int|null $size The size of the file in bytes
+     * @param float|null $net_assets The net assets of the balance sheet
      *
      * @return self
      */
-    public function setSize($size)
+    public function setNetAssets($net_assets)
     {
-        $this->container['size'] = $size;
+        $this->container['net_assets'] = $net_assets;
 
         return $this;
     }
 
     /**
-     * Gets reference
+     * Gets custom_mappings
      *
-     * @return \Apideck\Client\Model\AttachmentReference|null
+     * @return object|null
      */
-    public function getReference()
+    public function getCustomMappings()
     {
-        return $this->container['reference'];
+        return $this->container['custom_mappings'];
     }
 
     /**
-     * Sets reference
+     * Sets custom_mappings
      *
-     * @param \Apideck\Client\Model\AttachmentReference|null $reference reference
+     * @param object|null $custom_mappings When custom mappings are configured on the resource, the result is included here.
      *
      * @return self
      */
-    public function setReference($reference)
+    public function setCustomMappings($custom_mappings)
     {
-        $this->container['reference'] = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string|null $description Optional description of the file
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
+        $this->container['custom_mappings'] = $custom_mappings;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AttachmentTest
+ * BalanceSheetReportsTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AttachmentTest Class Doc Comment
+ * BalanceSheetReportsTest Class Doc Comment
  *
  * @category    Class
- * @description Attachment
+ * @description BalanceSheetReports
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AttachmentTest extends TestCase
+class BalanceSheetReportsTest extends TestCase
 {
 
     /**
@@ -71,9 +71,45 @@ class AttachmentTest extends TestCase
     }
 
     /**
-     * Test "Attachment"
+     * Test "BalanceSheetReports"
      */
-    public function testAttachment()
+    public function testBalanceSheetReports()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "end_date"
+     */
+    public function testPropertyEndDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "assets"
+     */
+    public function testPropertyAssets()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "liabilities"
+     */
+    public function testPropertyLiabilities()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "equity"
+     */
+    public function testPropertyEquity()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,54 +125,45 @@ class AttachmentTest extends TestCase
     }
 
     /**
-     * Test attribute "display_id"
+     * Test attribute "report_name"
      */
-    public function testPropertyDisplayId()
+    public function testPropertyReportName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "start_date"
      */
-    public function testPropertyName()
+    public function testPropertyStartDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mime_type"
+     * Test attribute "currency"
      */
-    public function testPropertyMimeType()
+    public function testPropertyCurrency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "size"
+     * Test attribute "net_assets"
      */
-    public function testPropertySize()
+    public function testPropertyNetAssets()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "reference"
+     * Test attribute "custom_mappings"
      */
-    public function testPropertyReference()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
+    public function testPropertyCustomMappings()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
