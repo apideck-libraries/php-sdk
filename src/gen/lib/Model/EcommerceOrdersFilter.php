@@ -60,7 +60,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'email' => 'string',
-        'customer_id' => 'string'
+        'customer_id' => 'string',
+        'updated_since' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'email' => null,
-        'customer_id' => null
+        'customer_id' => null,
+        'updated_since' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'email' => 'email',
-        'customer_id' => 'customer_id'
+        'customer_id' => 'customer_id',
+        'updated_since' => 'updated_since'
     ];
 
     /**
@@ -113,7 +116,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'email' => 'setEmail',
-        'customer_id' => 'setCustomerId'
+        'customer_id' => 'setCustomerId',
+        'updated_since' => 'setUpdatedSince'
     ];
 
     /**
@@ -123,7 +127,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'email' => 'getEmail',
-        'customer_id' => 'getCustomerId'
+        'customer_id' => 'getCustomerId',
+        'updated_since' => 'getUpdatedSince'
     ];
 
     /**
@@ -185,6 +190,7 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $this->container['email'] = $data['email'] ?? null;
         $this->container['customer_id'] = $data['customer_id'] ?? null;
+        $this->container['updated_since'] = $data['updated_since'] ?? null;
     }
 
     /**
@@ -255,6 +261,30 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_since
+     *
+     * @return string|null
+     */
+    public function getUpdatedSince()
+    {
+        return $this->container['updated_since'];
+    }
+
+    /**
+     * Sets updated_since
+     *
+     * @param string|null $updated_since Minimum date the order was last modified
+     *
+     * @return self
+     */
+    public function setUpdatedSince($updated_since)
+    {
+        $this->container['updated_since'] = $updated_since;
 
         return $this;
     }
