@@ -61,7 +61,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'email' => 'string',
         'customer_id' => 'string',
-        'updated_since' => 'string'
+        'updated_since' => 'string',
+        'created_since' => 'string'
     ];
 
     /**
@@ -74,7 +75,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPIFormats = [
         'email' => null,
         'customer_id' => null,
-        'updated_since' => null
+        'updated_since' => null,
+        'created_since' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $attributeMap = [
         'email' => 'email',
         'customer_id' => 'customer_id',
-        'updated_since' => 'updated_since'
+        'updated_since' => 'updated_since',
+        'created_since' => 'created_since'
     ];
 
     /**
@@ -117,7 +120,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $setters = [
         'email' => 'setEmail',
         'customer_id' => 'setCustomerId',
-        'updated_since' => 'setUpdatedSince'
+        'updated_since' => 'setUpdatedSince',
+        'created_since' => 'setCreatedSince'
     ];
 
     /**
@@ -128,7 +132,8 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $getters = [
         'email' => 'getEmail',
         'customer_id' => 'getCustomerId',
-        'updated_since' => 'getUpdatedSince'
+        'updated_since' => 'getUpdatedSince',
+        'created_since' => 'getCreatedSince'
     ];
 
     /**
@@ -191,6 +196,7 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['email'] = $data['email'] ?? null;
         $this->container['customer_id'] = $data['customer_id'] ?? null;
         $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['created_since'] = $data['created_since'] ?? null;
     }
 
     /**
@@ -285,6 +291,30 @@ class EcommerceOrdersFilter implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setUpdatedSince($updated_since)
     {
         $this->container['updated_since'] = $updated_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_since
+     *
+     * @return string|null
+     */
+    public function getCreatedSince()
+    {
+        return $this->container['created_since'];
+    }
+
+    /**
+     * Sets created_since
+     *
+     * @param string|null $created_since Minimum date the order was created
+     *
+     * @return self
+     */
+    public function setCreatedSince($created_since)
+    {
+        $this->container['created_since'] = $created_since;
 
         return $this;
     }

@@ -105,4 +105,13 @@ class EcommerceOrdersFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "created_since"
+     */
+    public function testPropertyCreatedSince()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
