@@ -59,7 +59,8 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'updated_since' => '\DateTime'
+        'updated_since' => '\DateTime',
+        'created_since' => '\DateTime'
     ];
 
     /**
@@ -70,7 +71,8 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'updated_since' => 'date-time'
+        'updated_since' => 'date-time',
+        'created_since' => 'date-time'
     ];
 
     /**
@@ -100,7 +102,8 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'updated_since' => 'updated_since'
+        'updated_since' => 'updated_since',
+        'created_since' => 'created_since'
     ];
 
     /**
@@ -109,7 +112,8 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'updated_since' => 'setUpdatedSince'
+        'updated_since' => 'setUpdatedSince',
+        'created_since' => 'setCreatedSince'
     ];
 
     /**
@@ -118,7 +122,8 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'updated_since' => 'getUpdatedSince'
+        'updated_since' => 'getUpdatedSince',
+        'created_since' => 'getCreatedSince'
     ];
 
     /**
@@ -179,6 +184,7 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['created_since'] = $data['created_since'] ?? null;
     }
 
     /**
@@ -225,6 +231,30 @@ class InvoicesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setUpdatedSince($updated_since)
     {
         $this->container['updated_since'] = $updated_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_since
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedSince()
+    {
+        return $this->container['created_since'];
+    }
+
+    /**
+     * Sets created_since
+     *
+     * @param \DateTime|null $created_since created_since
+     *
+     * @return self
+     */
+    public function setCreatedSince($created_since)
+    {
+        $this->container['created_since'] = $created_since;
 
         return $this;
     }
