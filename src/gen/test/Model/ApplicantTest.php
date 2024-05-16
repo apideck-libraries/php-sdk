@@ -89,15 +89,6 @@ class ApplicantTest extends TestCase
     }
 
     /**
-     * Test attribute "position_id"
-     */
-    public function testPropertyPositionId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "name"
      */
     public function testPropertyName()

@@ -60,7 +60,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'position_id' => 'string',
         'name' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
@@ -115,7 +114,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'position_id' => null,
         'name' => null,
         'first_name' => null,
         'last_name' => null,
@@ -189,7 +187,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'position_id' => 'position_id',
         'name' => 'name',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
@@ -242,7 +239,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'position_id' => 'setPositionId',
         'name' => 'setName',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
@@ -295,7 +291,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'position_id' => 'getPositionId',
         'name' => 'getName',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
@@ -399,7 +394,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['position_id'] = $data['position_id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
@@ -489,30 +483,6 @@ class Applicant implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets position_id
-     *
-     * @return string|null
-     */
-    public function getPositionId()
-    {
-        return $this->container['position_id'];
-    }
-
-    /**
-     * Sets position_id
-     *
-     * @param string|null $position_id The PositionId the applicant applied for.
-     *
-     * @return self
-     */
-    public function setPositionId($position_id)
-    {
-        $this->container['position_id'] = $position_id;
 
         return $this;
     }
