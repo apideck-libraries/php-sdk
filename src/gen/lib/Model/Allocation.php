@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentAllocations
+ * Allocation
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * PaymentAllocations Class Doc Comment
+ * Allocation Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -42,7 +42,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializable
+class Allocation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Payment_allocations';
+    protected static $openAPIModelName = 'Allocation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,7 +62,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'string',
         'type' => 'string',
         'code' => 'string',
-        'amount' => 'float'
+        'amount' => 'float',
+        'allocation_id' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => null,
         'type' => null,
         'code' => null,
-        'amount' => null
+        'amount' => null,
+        'allocation_id' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'id',
         'type' => 'type',
         'code' => 'code',
-        'amount' => 'amount'
+        'amount' => 'amount',
+        'allocation_id' => 'allocation_id'
     ];
 
     /**
@@ -121,7 +124,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'setId',
         'type' => 'setType',
         'code' => 'setCode',
-        'amount' => 'setAmount'
+        'amount' => 'setAmount',
+        'allocation_id' => 'setAllocationId'
     ];
 
     /**
@@ -133,7 +137,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'getId',
         'type' => 'getType',
         'code' => 'getCode',
-        'amount' => 'getAmount'
+        'amount' => 'getAmount',
+        'allocation_id' => 'getAllocationId'
     ];
 
     /**
@@ -183,6 +188,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
     const TYPE_CREDIT_MEMO = 'credit_memo';
     const TYPE_OVER_PAYMENT = 'over_payment';
     const TYPE_PRE_PAYMENT = 'pre_payment';
+    const TYPE_JOURNAL_ENTRY = 'journal_entry';
+    const TYPE_OTHER = 'other';
 
     /**
      * Gets allowable values of the enum
@@ -198,6 +205,8 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
             self::TYPE_CREDIT_MEMO,
             self::TYPE_OVER_PAYMENT,
             self::TYPE_PRE_PAYMENT,
+            self::TYPE_JOURNAL_ENTRY,
+            self::TYPE_OTHER,
         ];
     }
 
@@ -220,6 +229,7 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->container['type'] = $data['type'] ?? null;
         $this->container['code'] = $data['code'] ?? null;
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['allocation_id'] = $data['allocation_id'] ?? null;
     }
 
     /**
@@ -357,6 +367,30 @@ class PaymentAllocations implements ModelInterface, ArrayAccess, \JsonSerializab
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_id
+     *
+     * @return string|null
+     */
+    public function getAllocationId()
+    {
+        return $this->container['allocation_id'];
+    }
+
+    /**
+     * Sets allocation_id
+     *
+     * @param string|null $allocation_id Unique identifier of the allocation
+     *
+     * @return self
+     */
+    public function setAllocationId($allocation_id)
+    {
+        $this->container['allocation_id'] = $allocation_id;
 
         return $this;
     }

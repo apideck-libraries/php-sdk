@@ -79,7 +79,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'account' => '\Apideck\Client\Model\LinkedLedgerAccount',
         'line_items' => '\Apideck\Client\Model\InvoiceLineItem[]',
-        'allocations' => 'object[]',
+        'allocations' => '\Apideck\Client\Model\Allocation[]',
         'note' => 'string',
         'terms' => 'string',
         'billing_address' => '\Apideck\Client\Model\Address',
@@ -954,7 +954,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets allocations
      *
-     * @return object[]|null
+     * @return \Apideck\Client\Model\Allocation[]|null
      */
     public function getAllocations()
     {
@@ -964,7 +964,7 @@ class CreditNote implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets allocations
      *
-     * @param object[]|null $allocations allocations
+     * @param \Apideck\Client\Model\Allocation[]|null $allocations allocations
      *
      * @return self
      */

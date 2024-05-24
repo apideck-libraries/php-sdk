@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentAllocationsTest
+ * AllocationTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * PaymentAllocationsTest Class Doc Comment
+ * AllocationTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentAllocations
+ * @description Allocation
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class PaymentAllocationsTest extends TestCase
+class AllocationTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class PaymentAllocationsTest extends TestCase
     }
 
     /**
-     * Test "PaymentAllocations"
+     * Test "Allocation"
      */
-    public function testPaymentAllocations()
+    public function testAllocation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -110,6 +110,15 @@ class PaymentAllocationsTest extends TestCase
      * Test attribute "amount"
      */
     public function testPropertyAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "allocation_id"
+     */
+    public function testPropertyAllocationId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
