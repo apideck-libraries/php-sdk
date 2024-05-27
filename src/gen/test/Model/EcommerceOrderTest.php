@@ -134,6 +134,15 @@ class EcommerceOrderTest extends TestCase
     }
 
     /**
+     * Test attribute "coupon_discount"
+     */
+    public function testPropertyCouponDiscount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "total_discount"
      */
     public function testPropertyTotalDiscount()
@@ -155,6 +164,15 @@ class EcommerceOrderTest extends TestCase
      * Test attribute "total_amount"
      */
     public function testPropertyTotalAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "refunded_amount"
+     */
+    public function testPropertyRefundedAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -72,6 +72,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         'unit_price' => 'string',
         'tax_rate' => 'string',
         'tax_amount' => 'string',
+        'is_refunded' => 'bool',
+        'refunded_amount' => 'string',
+        'refunded_quantity' => 'string',
+        'sub_total' => 'string',
         'discounts' => '\Apideck\Client\Model\EcommerceDiscount[]'
     ];
 
@@ -95,6 +99,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         'unit_price' => null,
         'tax_rate' => null,
         'tax_amount' => null,
+        'is_refunded' => null,
+        'refunded_amount' => null,
+        'refunded_quantity' => null,
+        'sub_total' => null,
         'discounts' => null
     ];
 
@@ -137,6 +145,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         'unit_price' => 'unit_price',
         'tax_rate' => 'tax_rate',
         'tax_amount' => 'tax_amount',
+        'is_refunded' => 'is_refunded',
+        'refunded_amount' => 'refunded_amount',
+        'refunded_quantity' => 'refunded_quantity',
+        'sub_total' => 'sub_total',
         'discounts' => 'discounts'
     ];
 
@@ -158,6 +170,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         'unit_price' => 'setUnitPrice',
         'tax_rate' => 'setTaxRate',
         'tax_amount' => 'setTaxAmount',
+        'is_refunded' => 'setIsRefunded',
+        'refunded_amount' => 'setRefundedAmount',
+        'refunded_quantity' => 'setRefundedQuantity',
+        'sub_total' => 'setSubTotal',
         'discounts' => 'setDiscounts'
     ];
 
@@ -179,6 +195,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         'unit_price' => 'getUnitPrice',
         'tax_rate' => 'getTaxRate',
         'tax_amount' => 'getTaxAmount',
+        'is_refunded' => 'getIsRefunded',
+        'refunded_amount' => 'getRefundedAmount',
+        'refunded_quantity' => 'getRefundedQuantity',
+        'sub_total' => 'getSubTotal',
         'discounts' => 'getDiscounts'
     ];
 
@@ -251,6 +271,10 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
         $this->container['unit_price'] = $data['unit_price'] ?? null;
         $this->container['tax_rate'] = $data['tax_rate'] ?? null;
         $this->container['tax_amount'] = $data['tax_amount'] ?? null;
+        $this->container['is_refunded'] = $data['is_refunded'] ?? null;
+        $this->container['refunded_amount'] = $data['refunded_amount'] ?? null;
+        $this->container['refunded_quantity'] = $data['refunded_quantity'] ?? null;
+        $this->container['sub_total'] = $data['sub_total'] ?? null;
         $this->container['discounts'] = $data['discounts'] ?? null;
     }
 
@@ -571,6 +595,102 @@ class EcommerceOrderLineItem implements ModelInterface, ArrayAccess, \JsonSerial
     public function setTaxAmount($tax_amount)
     {
         $this->container['tax_amount'] = $tax_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_refunded
+     *
+     * @return bool|null
+     */
+    public function getIsRefunded()
+    {
+        return $this->container['is_refunded'];
+    }
+
+    /**
+     * Sets is_refunded
+     *
+     * @param bool|null $is_refunded Whether the line item has been refunded.
+     *
+     * @return self
+     */
+    public function setIsRefunded($is_refunded)
+    {
+        $this->container['is_refunded'] = $is_refunded;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunded_amount
+     *
+     * @return string|null
+     */
+    public function getRefundedAmount()
+    {
+        return $this->container['refunded_amount'];
+    }
+
+    /**
+     * Sets refunded_amount
+     *
+     * @param string|null $refunded_amount The amount of the line item that has been refunded.
+     *
+     * @return self
+     */
+    public function setRefundedAmount($refunded_amount)
+    {
+        $this->container['refunded_amount'] = $refunded_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunded_quantity
+     *
+     * @return string|null
+     */
+    public function getRefundedQuantity()
+    {
+        return $this->container['refunded_quantity'];
+    }
+
+    /**
+     * Sets refunded_quantity
+     *
+     * @param string|null $refunded_quantity The quantity of the line item that has been refunded.
+     *
+     * @return self
+     */
+    public function setRefundedQuantity($refunded_quantity)
+    {
+        $this->container['refunded_quantity'] = $refunded_quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets sub_total
+     *
+     * @return string|null
+     */
+    public function getSubTotal()
+    {
+        return $this->container['sub_total'];
+    }
+
+    /**
+     * Sets sub_total
+     *
+     * @param string|null $sub_total The sub total for the product(s) or variant associated with the line item, excluding taxes and discounts.
+     *
+     * @return self
+     */
+    public function setSubTotal($sub_total)
+    {
+        $this->container['sub_total'] = $sub_total;
 
         return $this;
     }

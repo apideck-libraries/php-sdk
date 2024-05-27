@@ -188,6 +188,42 @@ class EcommerceOrderLineItemTest extends TestCase
     }
 
     /**
+     * Test attribute "is_refunded"
+     */
+    public function testPropertyIsRefunded()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "refunded_amount"
+     */
+    public function testPropertyRefundedAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "refunded_quantity"
+     */
+    public function testPropertyRefundedQuantity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sub_total"
+     */
+    public function testPropertySubTotal()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "discounts"
      */
     public function testPropertyDiscounts()
