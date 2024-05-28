@@ -72,7 +72,8 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
-        'created_at' => '\DateTime'
+        'created_at' => '\DateTime',
+        'uncategorized_items' => 'AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]'
     ];
 
     /**
@@ -96,7 +97,8 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
-        'created_at' => 'date-time'
+        'created_at' => 'date-time',
+        'uncategorized_items' => null
     ];
 
     /**
@@ -139,7 +141,8 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
-        'created_at' => 'created_at'
+        'created_at' => 'created_at',
+        'uncategorized_items' => 'uncategorized_items'
     ];
 
     /**
@@ -161,7 +164,8 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
-        'created_at' => 'setCreatedAt'
+        'created_at' => 'setCreatedAt',
+        'uncategorized_items' => 'setUncategorizedItems'
     ];
 
     /**
@@ -183,7 +187,8 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
-        'created_at' => 'getCreatedAt'
+        'created_at' => 'getCreatedAt',
+        'uncategorized_items' => 'getUncategorizedItems'
     ];
 
     /**
@@ -257,6 +262,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['uncategorized_items'] = $data['uncategorized_items'] ?? null;
     }
 
     /**
@@ -645,6 +651,30 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets uncategorized_items
+     *
+     * @return AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null
+     */
+    public function getUncategorizedItems()
+    {
+        return $this->container['uncategorized_items'];
+    }
+
+    /**
+     * Sets uncategorized_items
+     *
+     * @param AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null $uncategorized_items Items that are not categorized in the balance sheet
+     *
+     * @return self
+     */
+    public function setUncategorizedItems($uncategorized_items)
+    {
+        $this->container['uncategorized_items'] = $uncategorized_items;
 
         return $this;
     }

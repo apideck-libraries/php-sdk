@@ -35,6 +35,7 @@ use \Apideck\Client\ObjectSerializer;
  * BalanceSheetAccount Class Doc Comment
  *
  * @category Class
+ * @description A balance sheet account represents the financial position of a company at a specific point in time.
  * @package  Apideck\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

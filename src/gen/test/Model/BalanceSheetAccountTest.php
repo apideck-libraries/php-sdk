@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * BalanceSheetAccountTest Class Doc Comment
  *
  * @category    Class
- * @description BalanceSheetAccount
+ * @description A balance sheet account represents the financial position of a company at a specific point in time.
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

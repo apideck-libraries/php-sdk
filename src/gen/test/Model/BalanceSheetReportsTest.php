@@ -204,4 +204,13 @@ class BalanceSheetReportsTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "uncategorized_items"
+     */
+    public function testPropertyUncategorizedItems()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
