@@ -60,6 +60,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'account_id' => 'string',
+        'code' => 'string',
         'name' => 'string',
         'value' => 'float'
     ];
@@ -73,6 +74,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPIFormats = [
         'account_id' => null,
+        'code' => null,
         'name' => null,
         'value' => null
     ];
@@ -105,6 +107,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $attributeMap = [
         'account_id' => 'account_id',
+        'code' => 'code',
         'name' => 'name',
         'value' => 'value'
     ];
@@ -116,6 +119,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $setters = [
         'account_id' => 'setAccountId',
+        'code' => 'setCode',
         'name' => 'setName',
         'value' => 'setValue'
     ];
@@ -127,6 +131,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $getters = [
         'account_id' => 'getAccountId',
+        'code' => 'getCode',
         'name' => 'getName',
         'value' => 'getValue'
     ];
@@ -189,6 +194,7 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
     public function __construct(array $data = null)
     {
         $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['code'] = $data['code'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
     }
@@ -237,6 +243,30 @@ class BalanceSheetAccountRecord implements ModelInterface, ArrayAccess, \JsonSer
     public function setAccountId($account_id)
     {
         $this->container['account_id'] = $account_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     *
+     * @return string|null
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     *
+     * @param string|null $code The code of the account.
+     *
+     * @return self
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }

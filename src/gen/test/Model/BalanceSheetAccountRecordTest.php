@@ -89,6 +89,15 @@ class BalanceSheetAccountRecordTest extends TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
