@@ -46,6 +46,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | Created by user ID | [optional] 
 `updated_at` | **\DateTime** | Last updated date | [optional] 
 `created_at` | **\DateTime** | Creation date | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -82,6 +83,7 @@ Name | Type | Description | Notes
 * [`Email`](Email.md)
 * [`CompanyRowType`](CompanyRowType.md)
 * [`CustomField`](CustomField.md)
+
 
 
 
