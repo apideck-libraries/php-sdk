@@ -8,10 +8,10 @@ A balance sheet account represents the financial position of a company at a spec
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `account_id` | **string** | The unique identifier for the account. | [optional] 
-`code` | **string** | The code of the account. | [optional] 
-`name` | **string** | Name of the report item | [optional] 
-`value` | **float** | The value of the account. | [optional] 
-`items` | [**AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]**](AnyOfBalanceSheetAccountBalanceSheetAccountRecord.md) |  | [optional] 
+`code` | **string** | The account code of the account | [optional] 
+`name` | **string** | The name of the account. | [optional] 
+`value` | **float** | The amount or value of the item | [optional] 
+`items` | [**AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]**](AnyOfBalanceSheetAccountBalanceSheetAccountRecord.md) | A list of balance sheet accounts | [optional] 
 
 
 
