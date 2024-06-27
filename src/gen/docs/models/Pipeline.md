@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 `stages` | [**\Apideck\Client\Model\PipelineStages[]**](PipelineStages.md) | The Pipeline Stages. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 
 
 * [`PipelineStages`](PipelineStages.md)
+
 
 
 

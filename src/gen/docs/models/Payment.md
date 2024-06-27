@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 `reconciled` | **bool** | Payment has been reconciled | [optional] 
 `status` | **string** | Status of payment | [optional] 
 `type` | **string** | Type of payment | [optional] 
-`allocations` | [**\Apideck\Client\Model\PaymentAllocations[]**](PaymentAllocations.md) |  | [optional] 
+`allocations` | [**\Apideck\Client\Model\Allocation[]**](Allocation.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
 `number` | **string** | Payment number. | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -98,10 +99,11 @@ Name | Type | Description | Notes
 
 
 
-* [`PaymentAllocations`](PaymentAllocations.md)
+* [`Allocation`](Allocation.md)
 
 
 * [`CustomField`](CustomField.md)
+
 
 
 

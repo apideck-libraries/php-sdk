@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 `completed_at` | **\DateTime** | When the ticket was completed | [optional] 
 `tags` | [**\Apideck\Client\Model\CollectionTag[]**](CollectionTag.md) |  | [optional] 
 `custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -57,6 +58,7 @@ Name | Type | Description | Notes
 
 
 * [`CollectionTag`](CollectionTag.md)
+
 
 
 ---

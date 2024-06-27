@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user that created the note. | [optional] 
 `updated_at` | **string** | The timestamp when the note was last updated | [optional] 
 `created_at` | **string** | The timestamp when the note was created | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 

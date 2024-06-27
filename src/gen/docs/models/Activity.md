@@ -56,6 +56,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the activity | [optional] 
 `updated_at` | **string** | The date and time when the activity was last updated | [optional] 
 `created_at` | **string** | The date and time when the activity was created | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -144,6 +145,7 @@ Name | Type | Description | Notes
 
 * [`CustomField`](CustomField.md)
 * [`ActivityAttendee`](ActivityAttendee.md)
+
 
 
 

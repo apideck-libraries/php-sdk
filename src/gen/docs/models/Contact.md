@@ -45,6 +45,7 @@ Name | Type | Description | Notes
 `updated_at` | **\DateTime** | The last update date of the contact. | [optional] 
 `created_at` | **\DateTime** | The creation date of the contact. | [optional] 
 `opportunity_ids` | **string[]** | The opportunity ids of the contact. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -111,6 +112,7 @@ Name | Type | Description | Notes
 * [`Email`](Email.md)
 
 * [`CustomField`](CustomField.md)
+
 
 
 

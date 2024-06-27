@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 `custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **string** | The date and time when the user was last updated. | [optional] 
 `created_at` | **string** | The date and time when the user was created. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -50,6 +51,7 @@ Name | Type | Description | Notes
 
 * [`Address`](Address.md)
 * [`PhoneNumber`](PhoneNumber.md)
+
 
 
 

@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 `custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **string** | Date updated in ISO 8601 format | [optional] 
 `created_at` | **string** | Date created in ISO 8601 format | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -61,6 +62,7 @@ Name | Type | Description | Notes
 * [`PhoneNumber`](PhoneNumber.md)
 * [`Email`](Email.md)
 * [`CustomField`](CustomField.md)
+
 
 
 

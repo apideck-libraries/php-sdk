@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 `id` | **string** | A unique identifier for an object. | [optional] 
 `description` | **string** | Optional description of the folder. | [optional] 
 `drive_id` | **string** | ID of the drive to create the folder in. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
