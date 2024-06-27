@@ -177,6 +177,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
     const SUB_TYPE_PART_TIME = 'part_time';
     const SUB_TYPE_HOURLY = 'hourly';
     const SUB_TYPE_OTHER = 'other';
+    const SUB_TYPE_NOT_SPECIFIED = 'not_specified';
 
     /**
      * Gets allowable values of the enum
@@ -207,6 +208,7 @@ class EmployeeEmploymentRole implements ModelInterface, ArrayAccess, \JsonSerial
             self::SUB_TYPE_PART_TIME,
             self::SUB_TYPE_HOURLY,
             self::SUB_TYPE_OTHER,
+            self::SUB_TYPE_NOT_SPECIFIED,
         ];
     }
 
