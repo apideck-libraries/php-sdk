@@ -77,7 +77,8 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'string',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'pass_through' => 'object[]'
+        'pass_through' => 'object[]',
+        'policy_type' => 'string'
     ];
 
     /**
@@ -106,7 +107,8 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => null,
         'updated_at' => 'date-time',
         'created_at' => 'date-time',
-        'pass_through' => null
+        'pass_through' => null,
+        'policy_type' => null
     ];
 
     /**
@@ -154,7 +156,8 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
         'created_at' => 'created_at',
-        'pass_through' => 'pass_through'
+        'pass_through' => 'pass_through',
+        'policy_type' => 'policy_type'
     ];
 
     /**
@@ -181,7 +184,8 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt',
-        'pass_through' => 'setPassThrough'
+        'pass_through' => 'setPassThrough',
+        'policy_type' => 'setPolicyType'
     ];
 
     /**
@@ -208,7 +212,8 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt',
-        'pass_through' => 'getPassThrough'
+        'pass_through' => 'getPassThrough',
+        'policy_type' => 'getPolicyType'
     ];
 
     /**
@@ -352,6 +357,7 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['pass_through'] = $data['pass_through'] ?? null;
+        $this->container['policy_type'] = $data['policy_type'] ?? null;
     }
 
     /**
@@ -923,6 +929,30 @@ class TimeOffRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setPassThrough($pass_through)
     {
         $this->container['pass_through'] = $pass_through;
+
+        return $this;
+    }
+
+    /**
+     * Gets policy_type
+     *
+     * @return string|null
+     */
+    public function getPolicyType()
+    {
+        return $this->container['policy_type'];
+    }
+
+    /**
+     * Sets policy_type
+     *
+     * @param string|null $policy_type The policy type of the time off request
+     *
+     * @return self
+     */
+    public function setPolicyType($policy_type)
+    {
+        $this->container['policy_type'] = $policy_type;
 
         return $this;
     }

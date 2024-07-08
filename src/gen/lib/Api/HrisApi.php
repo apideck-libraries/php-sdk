@@ -11897,6 +11897,7 @@ class HrisApi
      * Delete Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -11906,9 +11907,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\DeleteTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function timeOffRequestsDelete($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsDelete($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        list($response) = $this->timeOffRequestsDeleteWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        list($response) = $this->timeOffRequestsDeleteWithHttpInfo($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
         return $response;
     }
 
@@ -11918,6 +11919,7 @@ class HrisApi
      * Delete Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -11927,9 +11929,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\DeleteTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function timeOffRequestsDeleteWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsDeleteWithHttpInfo($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        $request = $this->timeOffRequestsDeleteRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->timeOffRequestsDeleteRequest($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12135,6 +12137,7 @@ class HrisApi
      * Delete Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12143,9 +12146,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsDeleteAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsDeleteAsync($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        return $this->timeOffRequestsDeleteAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+        return $this->timeOffRequestsDeleteAsyncWithHttpInfo($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12159,6 +12162,7 @@ class HrisApi
      * Delete Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12167,10 +12171,10 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsDeleteAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsDeleteAsyncWithHttpInfo($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         $returnType = '\Apideck\Client\Model\DeleteTimeOffRequestResponse';
-        $request = $this->timeOffRequestsDeleteRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->timeOffRequestsDeleteRequest($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12209,6 +12213,7 @@ class HrisApi
      * Create request for operation 'timeOffRequestsDelete'
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12217,7 +12222,7 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function timeOffRequestsDeleteRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsDeleteRequest($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -12225,8 +12230,14 @@ class HrisApi
                 'Missing the required parameter $id when calling timeOffRequestsDelete'
             );
         }
+        // verify the required parameter 'employee_id' is set
+        if ($employee_id === null || (is_array($employee_id) && count($employee_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $employee_id when calling timeOffRequestsDelete'
+            );
+        }
 
-        $resourcePath = '/hris/time-off-requests/{id}';
+        $resourcePath = '/hris/time-off-requests/employees/{employee_id}/time-off-requests/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -12292,6 +12303,14 @@ class HrisApi
             $resourcePath = str_replace(
                 '{' . 'id' . '}',
                 ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($employee_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'employee_id' . '}',
+                ObjectSerializer::toPathValue($employee_id),
                 $resourcePath
             );
         }
@@ -12365,6 +12384,7 @@ class HrisApi
      * Get Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12375,9 +12395,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function timeOffRequestsOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function timeOffRequestsOne($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
     {
-        list($response) = $this->timeOffRequestsOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        list($response) = $this->timeOffRequestsOneWithHttpInfo($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
         return $response;
     }
 
@@ -12387,6 +12407,7 @@ class HrisApi
      * Get Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12397,9 +12418,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function timeOffRequestsOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function timeOffRequestsOneWithHttpInfo($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
     {
-        $request = $this->timeOffRequestsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        $request = $this->timeOffRequestsOneRequest($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12605,6 +12626,7 @@ class HrisApi
      * Get Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12614,9 +12636,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function timeOffRequestsOneAsync($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
     {
-        return $this->timeOffRequestsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields)
+        return $this->timeOffRequestsOneAsyncWithHttpInfo($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12630,6 +12652,7 @@ class HrisApi
      * Get Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12639,10 +12662,10 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function timeOffRequestsOneAsyncWithHttpInfo($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
     {
         $returnType = '\Apideck\Client\Model\GetTimeOffRequestResponse';
-        $request = $this->timeOffRequestsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        $request = $this->timeOffRequestsOneRequest($id, $employee_id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12681,6 +12704,7 @@ class HrisApi
      * Create request for operation 'timeOffRequestsOne'
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
@@ -12690,7 +12714,7 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function timeOffRequestsOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function timeOffRequestsOneRequest($id, $employee_id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -12698,8 +12722,14 @@ class HrisApi
                 'Missing the required parameter $id when calling timeOffRequestsOne'
             );
         }
+        // verify the required parameter 'employee_id' is set
+        if ($employee_id === null || (is_array($employee_id) && count($employee_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $employee_id when calling timeOffRequestsOne'
+            );
+        }
 
-        $resourcePath = '/hris/time-off-requests/{id}';
+        $resourcePath = '/hris/time-off-requests/employees/{employee_id}/time-off-requests/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -12808,6 +12838,14 @@ class HrisApi
                 $resourcePath
             );
         }
+        // path params
+        if ($employee_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'employee_id' . '}',
+                ObjectSerializer::toPathValue($employee_id),
+                $resourcePath
+            );
+        }
 
 
         if ($multipart) {
@@ -12878,6 +12916,7 @@ class HrisApi
      * Update Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  \Apideck\Client\Model\TimeOffRequest $time_off_request time_off_request (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -12888,9 +12927,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\UpdateTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function timeOffRequestsUpdate($id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsUpdate($id, $employee_id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        list($response) = $this->timeOffRequestsUpdateWithHttpInfo($id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        list($response) = $this->timeOffRequestsUpdateWithHttpInfo($id, $employee_id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
         return $response;
     }
 
@@ -12900,6 +12939,7 @@ class HrisApi
      * Update Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  \Apideck\Client\Model\TimeOffRequest $time_off_request (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -12910,9 +12950,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\UpdateTimeOffRequestResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function timeOffRequestsUpdateWithHttpInfo($id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsUpdateWithHttpInfo($id, $employee_id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        $request = $this->timeOffRequestsUpdateRequest($id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->timeOffRequestsUpdateRequest($id, $employee_id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         try {
             $options = $this->createHttpClientOption();
@@ -13118,6 +13158,7 @@ class HrisApi
      * Update Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  \Apideck\Client\Model\TimeOffRequest $time_off_request (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -13127,9 +13168,9 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsUpdateAsync($id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsUpdateAsync($id, $employee_id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
-        return $this->timeOffRequestsUpdateAsyncWithHttpInfo($id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
+        return $this->timeOffRequestsUpdateAsyncWithHttpInfo($id, $employee_id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13143,6 +13184,7 @@ class HrisApi
      * Update Time Off Request
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  \Apideck\Client\Model\TimeOffRequest $time_off_request (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -13152,10 +13194,10 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function timeOffRequestsUpdateAsyncWithHttpInfo($id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsUpdateAsyncWithHttpInfo($id, $employee_id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         $returnType = '\Apideck\Client\Model\UpdateTimeOffRequestResponse';
-        $request = $this->timeOffRequestsUpdateRequest($id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
+        $request = $this->timeOffRequestsUpdateRequest($id, $employee_id, $time_off_request, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13194,6 +13236,7 @@ class HrisApi
      * Create request for operation 'timeOffRequestsUpdate'
      *
      * @param  string $id ID of the record you are acting upon. (required)
+     * @param  string $employee_id ID of the employee you are acting upon. (required)
      * @param  \Apideck\Client\Model\TimeOffRequest $time_off_request (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
@@ -13203,12 +13246,18 @@ class HrisApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function timeOffRequestsUpdateRequest($id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
+    public function timeOffRequestsUpdateRequest($id, $employee_id, $time_off_request, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $id when calling timeOffRequestsUpdate'
+            );
+        }
+        // verify the required parameter 'employee_id' is set
+        if ($employee_id === null || (is_array($employee_id) && count($employee_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $employee_id when calling timeOffRequestsUpdate'
             );
         }
         // verify the required parameter 'time_off_request' is set
@@ -13218,7 +13267,7 @@ class HrisApi
             );
         }
 
-        $resourcePath = '/hris/time-off-requests/{id}';
+        $resourcePath = '/hris/time-off-requests/employees/{employee_id}/time-off-requests/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -13284,6 +13333,14 @@ class HrisApi
             $resourcePath = str_replace(
                 '{' . 'id' . '}',
                 ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($employee_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'employee_id' . '}',
+                ObjectSerializer::toPathValue($employee_id),
                 $resourcePath
             );
         }

@@ -249,4 +249,13 @@ class TimeOffRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "policy_type"
+     */
+    public function testPropertyPolicyType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

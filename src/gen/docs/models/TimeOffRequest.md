@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
+`policy_type` | **string** | The policy type of the time off request | [optional] 
 
 
 
@@ -96,6 +97,7 @@ Name | Type | Description | Notes
 
 
 * [`TimeOffRequestNotes`](TimeOffRequestNotes.md)
+
 
 
 

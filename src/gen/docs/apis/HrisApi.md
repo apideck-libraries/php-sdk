@@ -1530,6 +1530,7 @@ Apideck->getHrisApi()->timeOffRequestsDelete($data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the record you are acting upon. |
+ **employee_id** | **string**| ID of the employee you are acting upon. |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
@@ -1570,7 +1571,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getHrisApi()->timeOffRequestsDelete('id_example');
+  $response = $apideck->getHrisApi()->timeOffRequestsDelete('id_example', 'employee_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1596,6 +1597,7 @@ Apideck->getHrisApi()->timeOffRequestsOne($data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the record you are acting upon. |
+ **employee_id** | **string**| ID of the employee you are acting upon. |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
  **x_apideck_service_id** | **string**| Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. |
@@ -1637,7 +1639,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getHrisApi()->timeOffRequestsOne('id_example');
+  $response = $apideck->getHrisApi()->timeOffRequestsOne('id_example', 'employee_id_example');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
@@ -1663,6 +1665,7 @@ Apideck->getHrisApi()->timeOffRequestsUpdate($data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the record you are acting upon. |
+ **employee_id** | **string**| ID of the employee you are acting upon. |
  **time_off_request** | [\Apideck\Client\Model\TimeOffRequest](../models/\Apideck\Client\Model\TimeOffRequest.md)|  |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
@@ -1704,7 +1707,7 @@ $config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application
 $apideck = new Apideck($config);
 
 try {
-  $response = $apideck->getHrisApi()->timeOffRequestsUpdate('id_example', $timeOffRequest);
+  $response = $apideck->getHrisApi()->timeOffRequestsUpdate('id_example', 'employee_id_example', $timeOffRequest);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
