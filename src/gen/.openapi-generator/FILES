@@ -644,6 +644,8 @@ docs/Model/UpdateWebhookRequest.md
 docs/Model/UpdateWebhookResponse.md
 docs/Model/UploadSession.md
 docs/Model/User.md
+docs/Model/ValidateConnectionStateResponse.md
+docs/Model/ValidateConnectionStateResponseData.md
 docs/Model/VaultEventType.md
 docs/Model/VirtualWebhooks.md
 docs/Model/WalletDetails.md
@@ -1300,6 +1302,8 @@ lib/Model/UpdateWebhookRequest.php
 lib/Model/UpdateWebhookResponse.php
 lib/Model/UploadSession.php
 lib/Model/User.php
+lib/Model/ValidateConnectionStateResponse.php
+lib/Model/ValidateConnectionStateResponseData.php
 lib/Model/VaultEventType.php
 lib/Model/VirtualWebhooks.php
 lib/Model/WalletDetails.php
@@ -1951,6 +1955,8 @@ test/Model/UpdateWebhookRequestTest.php
 test/Model/UpdateWebhookResponseTest.php
 test/Model/UploadSessionTest.php
 test/Model/UserTest.php
+test/Model/ValidateConnectionStateResponseDataTest.php
+test/Model/ValidateConnectionStateResponseTest.php
 test/Model/VaultEventTypeTest.php
 test/Model/VirtualWebhooksTest.php
 test/Model/WalletDetailsTest.php
