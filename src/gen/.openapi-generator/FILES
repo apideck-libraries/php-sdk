@@ -32,6 +32,7 @@ docs/Model/ActivitiesSort.md
 docs/Model/Activity.md
 docs/Model/ActivityAttendee.md
 docs/Model/Address.md
+docs/Model/Allocation.md
 docs/Model/Api.md
 docs/Model/ApiResource.md
 docs/Model/ApiResourceCoverage.md
@@ -505,7 +506,6 @@ docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
 docs/Model/PassThroughQuery.md
 docs/Model/Payment.md
-docs/Model/PaymentAllocations.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentFrequency.md
 docs/Model/PaymentRequiredResponse.md
@@ -644,6 +644,8 @@ docs/Model/UpdateWebhookRequest.md
 docs/Model/UpdateWebhookResponse.md
 docs/Model/UploadSession.md
 docs/Model/User.md
+docs/Model/ValidateConnectionStateResponse.md
+docs/Model/ValidateConnectionStateResponseData.md
 docs/Model/VaultEventType.md
 docs/Model/VirtualWebhooks.md
 docs/Model/WalletDetails.md
@@ -687,6 +689,7 @@ lib/Model/ActivitiesSort.php
 lib/Model/Activity.php
 lib/Model/ActivityAttendee.php
 lib/Model/Address.php
+lib/Model/Allocation.php
 lib/Model/Api.php
 lib/Model/ApiResource.php
 lib/Model/ApiResourceCoverage.php
@@ -1161,7 +1164,6 @@ lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
 lib/Model/PassThroughQuery.php
 lib/Model/Payment.php
-lib/Model/PaymentAllocations.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentFrequency.php
 lib/Model/PaymentRequiredResponse.php
@@ -1300,6 +1302,8 @@ lib/Model/UpdateWebhookRequest.php
 lib/Model/UpdateWebhookResponse.php
 lib/Model/UploadSession.php
 lib/Model/User.php
+lib/Model/ValidateConnectionStateResponse.php
+lib/Model/ValidateConnectionStateResponseData.php
 lib/Model/VaultEventType.php
 lib/Model/VirtualWebhooks.php
 lib/Model/WalletDetails.php
@@ -1339,6 +1343,7 @@ test/Model/ActivitiesSortTest.php
 test/Model/ActivityAttendeeTest.php
 test/Model/ActivityTest.php
 test/Model/AddressTest.php
+test/Model/AllocationTest.php
 test/Model/ApiResourceCoverageCoverageTest.php
 test/Model/ApiResourceCoverageTest.php
 test/Model/ApiResourceLinkedResourcesTest.php
@@ -1811,7 +1816,6 @@ test/Model/OrdersSortTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
 test/Model/PassThroughQueryTest.php
-test/Model/PaymentAllocationsTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentFrequencyTest.php
 test/Model/PaymentRequiredResponseTest.php
@@ -1951,6 +1955,8 @@ test/Model/UpdateWebhookRequestTest.php
 test/Model/UpdateWebhookResponseTest.php
 test/Model/UploadSessionTest.php
 test/Model/UserTest.php
+test/Model/ValidateConnectionStateResponseDataTest.php
+test/Model/ValidateConnectionStateResponseTest.php
 test/Model/VaultEventTypeTest.php
 test/Model/VirtualWebhooksTest.php
 test/Model/WalletDetailsTest.php

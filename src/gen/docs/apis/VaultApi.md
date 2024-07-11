@@ -22,6 +22,7 @@
 * [Get Resource Custom Fields](#customFieldsAll)
 * [Get All Consumer Request Logs](#logsAll)
 * [Create Session](#sessionsCreate)
+* [Validate Connection State](#validateConnectionState)
 
 <a name="connectionSettingsAll"></a>
 # Get Resource Settings
@@ -1118,6 +1119,72 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getVaultApi()->sessionsCreate($session);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="validateConnectionState"></a>
+# Validate Connection State
+
+
+Method: **validateConnectionState**
+
+```php
+Apideck->getVaultApi()->validateConnectionState($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **service_id** | **string**| Service ID of the resource to return |
+ **unified_api** | **string**| Unified API |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **body** | **object**|  |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\ValidateConnectionStateResponse`](../models/\Apideck\Client\Model\ValidateConnectionStateResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Connection access token refreshed | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->validateConnectionState('pipedrive', 'crm', $validateConnectionState);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

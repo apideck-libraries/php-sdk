@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 `type` | **string** | Type of payment | [optional] 
 `account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\InvoiceLineItem[]**](InvoiceLineItem.md) |  | [optional] 
-`allocations` | **object[]** |  | [optional] 
+`allocations` | [**\Apideck\Client\Model\Allocation[]**](Allocation.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the credit note. | [optional] 
 `terms` | **string** | Optional terms to be associated with the credit note. | [optional] 
 `billing_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -91,13 +92,14 @@ Name | Type | Description | Notes
 
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 * [`InvoiceLineItem`](InvoiceLineItem.md)
-
+* [`Allocation`](Allocation.md)
 
 
 * [`Address`](Address.md)
 * [`Address`](Address.md)
 
 * [`CustomField`](CustomField.md)
+
 
 
 

@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
+`pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
 
@@ -81,6 +82,7 @@ Name | Type | Description | Notes
 
 * [`Currency`](Currency.md)
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
+
 
 
 
