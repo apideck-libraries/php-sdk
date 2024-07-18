@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 `department_id` | **string** | Department id | [optional] 
 `item` | [**\Apideck\Client\Model\LinkedInvoiceItem**](LinkedInvoiceItem.md) |  | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
+`tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `ledger_account` | [**\Apideck\Client\Model\LinkedLedgerAccount**](LinkedLedgerAccount.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
@@ -69,6 +70,7 @@ Name | Type | Description | Notes
 
 * [`LinkedInvoiceItem`](LinkedInvoiceItem.md)
 * [`LinkedTaxRate`](LinkedTaxRate.md)
+* [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 * [`LinkedLedgerAccount`](LinkedLedgerAccount.md)
 * [`CustomField`](CustomField.md)
 

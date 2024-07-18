@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 `terms` | **string** | Optional terms to be associated with the credit note. | [optional] 
 `billing_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 `shipping_address` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
+`tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
@@ -97,6 +98,7 @@ Name | Type | Description | Notes
 
 * [`Address`](Address.md)
 * [`Address`](Address.md)
+* [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 
 * [`CustomField`](CustomField.md)
 
