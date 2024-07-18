@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 `allocations` | [**\Apideck\Client\Model\Allocation[]**](Allocation.md) |  | [optional] 
 `note` | **string** | Optional note to be associated with the payment. | [optional] 
 `number` | **string** | Payment number. | [optional] 
+`tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `display_id` | **string** | Payment id to be displayed. | [optional] 
@@ -102,6 +103,7 @@ Name | Type | Description | Notes
 * [`Allocation`](Allocation.md)
 
 
+* [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 * [`CustomField`](CustomField.md)
 
 

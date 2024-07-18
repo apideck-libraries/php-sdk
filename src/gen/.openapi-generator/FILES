@@ -166,6 +166,7 @@ docs/Model/CreateTaxRateResponse.md
 docs/Model/CreateTenderResponse.md
 docs/Model/CreateTicketResponse.md
 docs/Model/CreateTimeOffRequestResponse.md
+docs/Model/CreateTrackingCategoryResponse.md
 docs/Model/CreateUploadSessionRequest.md
 docs/Model/CreateUploadSessionResponse.md
 docs/Model/CreateUserResponse.md
@@ -232,10 +233,12 @@ docs/Model/DeleteTaxRateResponse.md
 docs/Model/DeleteTenderResponse.md
 docs/Model/DeleteTicketResponse.md
 docs/Model/DeleteTimeOffRequestResponse.md
+docs/Model/DeleteTrackingCategoryResponse.md
 docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
+docs/Model/DeprecatedLinkedTrackingCategory.md
 docs/Model/Drive.md
 docs/Model/DriveGroup.md
 docs/Model/DriveGroupsFilter.md
@@ -417,6 +420,8 @@ docs/Model/GetTicketResponse.md
 docs/Model/GetTicketsResponse.md
 docs/Model/GetTimeOffRequestResponse.md
 docs/Model/GetTimeOffRequestsResponse.md
+docs/Model/GetTrackingCategoriesResponse.md
+docs/Model/GetTrackingCategoryResponse.md
 docs/Model/GetUploadSessionResponse.md
 docs/Model/GetUserResponse.md
 docs/Model/GetUsersResponse.md
@@ -575,6 +580,7 @@ docs/Model/TimeOffRequestNotes.md
 docs/Model/TimeOffRequestsFilter.md
 docs/Model/TooManyRequestsResponse.md
 docs/Model/TooManyRequestsResponseDetail.md
+docs/Model/TrackingCategory.md
 docs/Model/TrackingItem.md
 docs/Model/UnauthorizedResponse.md
 docs/Model/UnexpectedErrorResponse.md
@@ -638,6 +644,7 @@ docs/Model/UpdateTaxRateResponse.md
 docs/Model/UpdateTenderResponse.md
 docs/Model/UpdateTicketResponse.md
 docs/Model/UpdateTimeOffRequestResponse.md
+docs/Model/UpdateTrackingCategoryResponse.md
 docs/Model/UpdateUploadSessionResponse.md
 docs/Model/UpdateUserResponse.md
 docs/Model/UpdateWebhookRequest.md
@@ -823,6 +830,7 @@ lib/Model/CreateTaxRateResponse.php
 lib/Model/CreateTenderResponse.php
 lib/Model/CreateTicketResponse.php
 lib/Model/CreateTimeOffRequestResponse.php
+lib/Model/CreateTrackingCategoryResponse.php
 lib/Model/CreateUploadSessionRequest.php
 lib/Model/CreateUploadSessionResponse.php
 lib/Model/CreateUserResponse.php
@@ -889,10 +897,12 @@ lib/Model/DeleteTaxRateResponse.php
 lib/Model/DeleteTenderResponse.php
 lib/Model/DeleteTicketResponse.php
 lib/Model/DeleteTimeOffRequestResponse.php
+lib/Model/DeleteTrackingCategoryResponse.php
 lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
+lib/Model/DeprecatedLinkedTrackingCategory.php
 lib/Model/Drive.php
 lib/Model/DriveGroup.php
 lib/Model/DriveGroupsFilter.php
@@ -1074,6 +1084,8 @@ lib/Model/GetTicketResponse.php
 lib/Model/GetTicketsResponse.php
 lib/Model/GetTimeOffRequestResponse.php
 lib/Model/GetTimeOffRequestsResponse.php
+lib/Model/GetTrackingCategoriesResponse.php
+lib/Model/GetTrackingCategoryResponse.php
 lib/Model/GetUploadSessionResponse.php
 lib/Model/GetUserResponse.php
 lib/Model/GetUsersResponse.php
@@ -1233,6 +1245,7 @@ lib/Model/TimeOffRequestNotes.php
 lib/Model/TimeOffRequestsFilter.php
 lib/Model/TooManyRequestsResponse.php
 lib/Model/TooManyRequestsResponseDetail.php
+lib/Model/TrackingCategory.php
 lib/Model/TrackingItem.php
 lib/Model/UnauthorizedResponse.php
 lib/Model/UnexpectedErrorResponse.php
@@ -1296,6 +1309,7 @@ lib/Model/UpdateTaxRateResponse.php
 lib/Model/UpdateTenderResponse.php
 lib/Model/UpdateTicketResponse.php
 lib/Model/UpdateTimeOffRequestResponse.php
+lib/Model/UpdateTrackingCategoryResponse.php
 lib/Model/UpdateUploadSessionResponse.php
 lib/Model/UpdateUserResponse.php
 lib/Model/UpdateWebhookRequest.php
@@ -1477,6 +1491,7 @@ test/Model/CreateTaxRateResponseTest.php
 test/Model/CreateTenderResponseTest.php
 test/Model/CreateTicketResponseTest.php
 test/Model/CreateTimeOffRequestResponseTest.php
+test/Model/CreateTrackingCategoryResponseTest.php
 test/Model/CreateUploadSessionRequestTest.php
 test/Model/CreateUploadSessionResponseTest.php
 test/Model/CreateUserResponseTest.php
@@ -1543,10 +1558,12 @@ test/Model/DeleteTaxRateResponseTest.php
 test/Model/DeleteTenderResponseTest.php
 test/Model/DeleteTicketResponseTest.php
 test/Model/DeleteTimeOffRequestResponseTest.php
+test/Model/DeleteTrackingCategoryResponseTest.php
 test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
 test/Model/DepartmentTest.php
+test/Model/DeprecatedLinkedTrackingCategoryTest.php
 test/Model/DriveGroupTest.php
 test/Model/DriveGroupsFilterTest.php
 test/Model/DriveTest.php
@@ -1728,6 +1745,8 @@ test/Model/GetTicketResponseTest.php
 test/Model/GetTicketsResponseTest.php
 test/Model/GetTimeOffRequestResponseTest.php
 test/Model/GetTimeOffRequestsResponseTest.php
+test/Model/GetTrackingCategoriesResponseTest.php
+test/Model/GetTrackingCategoryResponseTest.php
 test/Model/GetUploadSessionResponseTest.php
 test/Model/GetUserResponseTest.php
 test/Model/GetUsersResponseTest.php
@@ -1886,6 +1905,7 @@ test/Model/TimeOffRequestTest.php
 test/Model/TimeOffRequestsFilterTest.php
 test/Model/TooManyRequestsResponseDetailTest.php
 test/Model/TooManyRequestsResponseTest.php
+test/Model/TrackingCategoryTest.php
 test/Model/TrackingItemTest.php
 test/Model/UnauthorizedResponseTest.php
 test/Model/UnexpectedErrorResponseTest.php
@@ -1949,6 +1969,7 @@ test/Model/UpdateTaxRateResponseTest.php
 test/Model/UpdateTenderResponseTest.php
 test/Model/UpdateTicketResponseTest.php
 test/Model/UpdateTimeOffRequestResponseTest.php
+test/Model/UpdateTrackingCategoryResponseTest.php
 test/Model/UpdateUploadSessionResponseTest.php
 test/Model/UpdateUserResponseTest.php
 test/Model/UpdateWebhookRequestTest.php

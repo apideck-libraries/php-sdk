@@ -13,7 +13,8 @@ Name | Type | Description | Notes
 `sub_total` | **float** | Sub-total amount, normally before tax. | [optional] 
 `total_amount` | **float** | Debit entries are considered positive, and credit entries are considered negative. | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
-`tracking_category` | [**\Apideck\Client\Model\LinkedTrackingCategory**](LinkedTrackingCategory.md) |  | [optional] 
+`tracking_category` | [**\Apideck\Client\Model\DeprecatedLinkedTrackingCategory**](DeprecatedLinkedTrackingCategory.md) |  | [optional] 
+`tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `customer` | [**\Apideck\Client\Model\LinkedCustomer**](LinkedCustomer.md) |  | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
 `department_id` | **string** | A unique identifier for an object. | [optional] 
@@ -43,6 +44,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedTaxRate`](LinkedTaxRate.md)
+* [`DeprecatedLinkedTrackingCategory`](DeprecatedLinkedTrackingCategory.md)
 * [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 * [`LinkedCustomer`](LinkedCustomer.md)
 * [`LinkedSupplier`](LinkedSupplier.md)
