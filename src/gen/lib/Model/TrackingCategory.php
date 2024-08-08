@@ -62,6 +62,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'parent_id' => 'string',
         'name' => 'string',
+        'code' => 'string',
         'status' => 'string',
         'custom_mappings' => 'object',
         'row_version' => 'string',
@@ -83,6 +84,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'parent_id' => null,
         'name' => null,
+        'code' => null,
         'status' => null,
         'custom_mappings' => null,
         'row_version' => null,
@@ -123,6 +125,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'parent_id' => 'parent_id',
         'name' => 'name',
+        'code' => 'code',
         'status' => 'status',
         'custom_mappings' => 'custom_mappings',
         'row_version' => 'row_version',
@@ -142,6 +145,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'parent_id' => 'setParentId',
         'name' => 'setName',
+        'code' => 'setCode',
         'status' => 'setStatus',
         'custom_mappings' => 'setCustomMappings',
         'row_version' => 'setRowVersion',
@@ -161,6 +165,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'parent_id' => 'getParentId',
         'name' => 'getName',
+        'code' => 'getCode',
         'status' => 'getStatus',
         'custom_mappings' => 'getCustomMappings',
         'row_version' => 'getRowVersion',
@@ -246,6 +251,7 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['id'] = $data['id'] ?? null;
         $this->container['parent_id'] = $data['parent_id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
+        $this->container['code'] = $data['code'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
@@ -357,6 +363,30 @@ class TrackingCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     *
+     * @return string|null
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     *
+     * @param string|null $code The code of the tracking category.
+     *
+     * @return self
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }
