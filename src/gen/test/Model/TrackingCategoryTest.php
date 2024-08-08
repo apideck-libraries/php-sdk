@@ -107,6 +107,15 @@ class TrackingCategoryTest extends TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()

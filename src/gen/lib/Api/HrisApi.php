@@ -8616,14 +8616,15 @@ class HrisApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      * @param  \Apideck\Client\Model\EmployeesOneFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetEmployeeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function employeesOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
+    public function employeesOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null, $pass_through = null)
     {
-        list($response) = $this->employeesOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
+        list($response) = $this->employeesOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter, $pass_through);
         return $response;
     }
 
@@ -8639,14 +8640,15 @@ class HrisApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      * @param  \Apideck\Client\Model\EmployeesOneFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetEmployeeResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function employeesOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
+    public function employeesOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null, $pass_through = null)
     {
-        $request = $this->employeesOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
+        $request = $this->employeesOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter, $pass_through);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8858,13 +8860,14 @@ class HrisApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      * @param  \Apideck\Client\Model\EmployeesOneFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function employeesOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
+    public function employeesOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null, $pass_through = null)
     {
-        return $this->employeesOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter)
+        return $this->employeesOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter, $pass_through)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8884,14 +8887,15 @@ class HrisApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      * @param  \Apideck\Client\Model\EmployeesOneFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function employeesOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
+    public function employeesOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null, $pass_through = null)
     {
         $returnType = '\Apideck\Client\Model\GetEmployeeResponse';
-        $request = $this->employeesOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
+        $request = $this->employeesOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter, $pass_through);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8936,11 +8940,12 @@ class HrisApi
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
      * @param  \Apideck\Client\Model\EmployeesOneFilter $filter Apply filters (optional)
+     * @param  \Apideck\Client\Model\PassThroughQuery $pass_through Optional unmapped key/values that will be passed through to downstream as query parameters. Ie: ?pass_through[search]&#x3D;leads becomes ?search&#x3D;leads (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function employeesOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
+    public function employeesOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null, $pass_through = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -9074,6 +9079,46 @@ class HrisApi
             }
             else {
                 $queryParams['filter'] = $filter;
+            }
+        }
+        // query params
+
+        if ('raw' === 'pass_through') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($pass_through)) {
+                foreach($pass_through as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['pass_through'] = $pass_through ? 'true' : 'false';
+            }
+        }
+
+
+        if ($pass_through !== null && 'sort' === 'pass_through') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+
+        if ($pass_through !== null && 'filter' === 'pass_through') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+            if('form' === 'deepObject' && is_array($pass_through)) {
+                foreach($pass_through as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['pass_through'] = $pass_through;
             }
         }
 
