@@ -63,6 +63,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'string',
         'id' => 'string',
         'owner_id' => 'string',
+        'owner_name' => 'string',
         'company_id' => 'string',
         'lead_id' => 'string',
         'lead_source' => 'string',
@@ -101,6 +102,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => null,
         'id' => null,
         'owner_id' => null,
+        'owner_name' => null,
         'company_id' => null,
         'lead_id' => null,
         'lead_source' => null,
@@ -158,6 +160,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'company_name',
         'id' => 'id',
         'owner_id' => 'owner_id',
+        'owner_name' => 'owner_name',
         'company_id' => 'company_id',
         'lead_id' => 'lead_id',
         'lead_source' => 'lead_source',
@@ -194,6 +197,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'setCompanyName',
         'id' => 'setId',
         'owner_id' => 'setOwnerId',
+        'owner_name' => 'setOwnerName',
         'company_id' => 'setCompanyId',
         'lead_id' => 'setLeadId',
         'lead_source' => 'setLeadSource',
@@ -230,6 +234,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'getCompanyName',
         'id' => 'getId',
         'owner_id' => 'getOwnerId',
+        'owner_name' => 'getOwnerName',
         'company_id' => 'getCompanyId',
         'lead_id' => 'getLeadId',
         'lead_source' => 'getLeadSource',
@@ -317,6 +322,7 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['company_name'] = $data['company_name'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['owner_id'] = $data['owner_id'] ?? null;
+        $this->container['owner_name'] = $data['owner_name'] ?? null;
         $this->container['company_id'] = $data['company_id'] ?? null;
         $this->container['lead_id'] = $data['lead_id'] ?? null;
         $this->container['lead_source'] = $data['lead_source'] ?? null;
@@ -482,6 +488,30 @@ class Lead implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setOwnerId($owner_id)
     {
         $this->container['owner_id'] = $owner_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_name
+     *
+     * @return string|null
+     */
+    public function getOwnerName()
+    {
+        return $this->container['owner_name'];
+    }
+
+    /**
+     * Sets owner_name
+     *
+     * @param string|null $owner_name The name of the owner of the lead.
+     *
+     * @return self
+     */
+    public function setOwnerName($owner_name)
+    {
+        $this->container['owner_name'] = $owner_name;
 
         return $this;
     }

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
 `department_id` | **string** | A unique identifier for an object. | [optional] 
 `location_id` | **string** | A unique identifier for an object. | [optional] 
+`line_number` | **int** | Line number of the resource | [optional] 
 
 
 
@@ -48,6 +49,7 @@ Name | Type | Description | Notes
 * [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
 * [`LinkedCustomer`](LinkedCustomer.md)
 * [`LinkedSupplier`](LinkedSupplier.md)
+
 
 
 

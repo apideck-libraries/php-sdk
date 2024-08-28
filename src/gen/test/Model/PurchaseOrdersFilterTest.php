@@ -87,4 +87,13 @@ class PurchaseOrdersFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "supplier_id"
+     */
+    public function testPropertySupplierId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

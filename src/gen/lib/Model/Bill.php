@@ -96,7 +96,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => '\DateTime',
         'row_version' => 'string',
         'custom_mappings' => 'object',
-        'pass_through' => 'object[]'
+        'pass_through' => 'object[]',
+        'accounting_period' => 'string'
     ];
 
     /**
@@ -144,7 +145,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => 'date-time',
         'row_version' => null,
         'custom_mappings' => null,
-        'pass_through' => null
+        'pass_through' => null,
+        'accounting_period' => null
     ];
 
     /**
@@ -211,7 +213,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => 'created_at',
         'row_version' => 'row_version',
         'custom_mappings' => 'custom_mappings',
-        'pass_through' => 'pass_through'
+        'pass_through' => 'pass_through',
+        'accounting_period' => 'accounting_period'
     ];
 
     /**
@@ -257,7 +260,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => 'setCreatedAt',
         'row_version' => 'setRowVersion',
         'custom_mappings' => 'setCustomMappings',
-        'pass_through' => 'setPassThrough'
+        'pass_through' => 'setPassThrough',
+        'accounting_period' => 'setAccountingPeriod'
     ];
 
     /**
@@ -303,7 +307,8 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => 'getCreatedAt',
         'row_version' => 'getRowVersion',
         'custom_mappings' => 'getCustomMappings',
-        'pass_through' => 'getPassThrough'
+        'pass_through' => 'getPassThrough',
+        'accounting_period' => 'getAccountingPeriod'
     ];
 
     /**
@@ -428,6 +433,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['row_version'] = $data['row_version'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['pass_through'] = $data['pass_through'] ?? null;
+        $this->container['accounting_period'] = $data['accounting_period'] ?? null;
     }
 
     /**
@@ -1381,6 +1387,30 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setPassThrough($pass_through)
     {
         $this->container['pass_through'] = $pass_through;
+
+        return $this;
+    }
+
+    /**
+     * Gets accounting_period
+     *
+     * @return string|null
+     */
+    public function getAccountingPeriod()
+    {
+        return $this->container['accounting_period'];
+    }
+
+    /**
+     * Sets accounting_period
+     *
+     * @param string|null $accounting_period Accounting period
+     *
+     * @return self
+     */
+    public function setAccountingPeriod($accounting_period)
+    {
+        $this->container['accounting_period'] = $accounting_period;
 
         return $this;
     }

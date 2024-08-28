@@ -62,7 +62,8 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'string',
         'owner_id' => 'string',
         'contact_id' => 'string',
-        'updated_since' => '\DateTime'
+        'updated_since' => '\DateTime',
+        'type' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => null,
         'owner_id' => null,
         'contact_id' => null,
-        'updated_since' => 'date-time'
+        'updated_since' => 'date-time',
+        'type' => 'string'
     ];
 
     /**
@@ -109,7 +111,8 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'company_id',
         'owner_id' => 'owner_id',
         'contact_id' => 'contact_id',
-        'updated_since' => 'updated_since'
+        'updated_since' => 'updated_since',
+        'type' => 'type'
     ];
 
     /**
@@ -121,7 +124,8 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'setCompanyId',
         'owner_id' => 'setOwnerId',
         'contact_id' => 'setContactId',
-        'updated_since' => 'setUpdatedSince'
+        'updated_since' => 'setUpdatedSince',
+        'type' => 'setType'
     ];
 
     /**
@@ -133,7 +137,8 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_id' => 'getCompanyId',
         'owner_id' => 'getOwnerId',
         'contact_id' => 'getContactId',
-        'updated_since' => 'getUpdatedSince'
+        'updated_since' => 'getUpdatedSince',
+        'type' => 'getType'
     ];
 
     /**
@@ -197,6 +202,7 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['owner_id'] = $data['owner_id'] ?? null;
         $this->container['contact_id'] = $data['contact_id'] ?? null;
         $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -315,6 +321,30 @@ class ActivitiesFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setUpdatedSince($updated_since)
     {
         $this->container['updated_since'] = $updated_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type Type to filter on
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

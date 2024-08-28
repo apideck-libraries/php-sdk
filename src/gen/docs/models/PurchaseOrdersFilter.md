@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `updated_since` | **\DateTime** |  | [optional] 
+`supplier_id` | **string** |  | [optional] 
 
 
 

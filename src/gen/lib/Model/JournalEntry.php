@@ -72,6 +72,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'string',
         'number' => 'string',
         'tracking_categories' => '\Apideck\Client\Model\LinkedTrackingCategory[]',
+        'accounting_period' => 'string',
         'custom_mappings' => 'object',
         'updated_by' => 'string',
         'created_by' => 'string',
@@ -102,6 +103,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => null,
         'number' => null,
         'tracking_categories' => null,
+        'accounting_period' => null,
         'custom_mappings' => null,
         'updated_by' => null,
         'created_by' => null,
@@ -151,6 +153,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'tax_code',
         'number' => 'number',
         'tracking_categories' => 'tracking_categories',
+        'accounting_period' => 'accounting_period',
         'custom_mappings' => 'custom_mappings',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
@@ -179,6 +182,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'setTaxCode',
         'number' => 'setNumber',
         'tracking_categories' => 'setTrackingCategories',
+        'accounting_period' => 'setAccountingPeriod',
         'custom_mappings' => 'setCustomMappings',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
@@ -207,6 +211,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         'tax_code' => 'getTaxCode',
         'number' => 'getNumber',
         'tracking_categories' => 'getTrackingCategories',
+        'accounting_period' => 'getAccountingPeriod',
         'custom_mappings' => 'getCustomMappings',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
@@ -286,6 +291,7 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['tax_code'] = $data['tax_code'] ?? null;
         $this->container['number'] = $data['number'] ?? null;
         $this->container['tracking_categories'] = $data['tracking_categories'] ?? null;
+        $this->container['accounting_period'] = $data['accounting_period'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
@@ -636,6 +642,30 @@ class JournalEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTrackingCategories($tracking_categories)
     {
         $this->container['tracking_categories'] = $tracking_categories;
+
+        return $this;
+    }
+
+    /**
+     * Gets accounting_period
+     *
+     * @return string|null
+     */
+    public function getAccountingPeriod()
+    {
+        return $this->container['accounting_period'];
+    }
+
+    /**
+     * Sets accounting_period
+     *
+     * @param string|null $accounting_period Accounting period
+     *
+     * @return self
+     */
+    public function setAccountingPeriod($accounting_period)
+    {
+        $this->container['accounting_period'] = $accounting_period;
 
         return $this;
     }
