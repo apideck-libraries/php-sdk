@@ -204,4 +204,13 @@ class JournalEntryLineItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "line_number"
+     */
+    public function testPropertyLineNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

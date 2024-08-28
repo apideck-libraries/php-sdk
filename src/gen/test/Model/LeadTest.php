@@ -116,6 +116,15 @@ class LeadTest extends TestCase
     }
 
     /**
+     * Test attribute "owner_name"
+     */
+    public function testPropertyOwnerName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "company_id"
      */
     public function testPropertyCompanyId()

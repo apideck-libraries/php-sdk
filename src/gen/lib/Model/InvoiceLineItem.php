@@ -464,7 +464,7 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets line_number
      *
-     * @param int|null $line_number Line number in the invoice
+     * @param int|null $line_number Line number of the resource
      *
      * @return self
      */

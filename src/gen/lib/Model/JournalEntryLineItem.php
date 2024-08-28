@@ -72,7 +72,8 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'customer' => '\Apideck\Client\Model\LinkedCustomer',
         'supplier' => '\Apideck\Client\Model\LinkedSupplier',
         'department_id' => 'string',
-        'location_id' => 'string'
+        'location_id' => 'string',
+        'line_number' => 'int'
     ];
 
     /**
@@ -96,7 +97,8 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'customer' => null,
         'supplier' => null,
         'department_id' => null,
-        'location_id' => null
+        'location_id' => null,
+        'line_number' => null
     ];
 
     /**
@@ -139,7 +141,8 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'customer' => 'customer',
         'supplier' => 'supplier',
         'department_id' => 'department_id',
-        'location_id' => 'location_id'
+        'location_id' => 'location_id',
+        'line_number' => 'line_number'
     ];
 
     /**
@@ -161,7 +164,8 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'customer' => 'setCustomer',
         'supplier' => 'setSupplier',
         'department_id' => 'setDepartmentId',
-        'location_id' => 'setLocationId'
+        'location_id' => 'setLocationId',
+        'line_number' => 'setLineNumber'
     ];
 
     /**
@@ -183,7 +187,8 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         'customer' => 'getCustomer',
         'supplier' => 'getSupplier',
         'department_id' => 'getDepartmentId',
-        'location_id' => 'getLocationId'
+        'location_id' => 'getLocationId',
+        'line_number' => 'getLineNumber'
     ];
 
     /**
@@ -272,6 +277,7 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->container['supplier'] = $data['supplier'] ?? null;
         $this->container['department_id'] = $data['department_id'] ?? null;
         $this->container['location_id'] = $data['location_id'] ?? null;
+        $this->container['line_number'] = $data['line_number'] ?? null;
     }
 
     /**
@@ -657,6 +663,30 @@ class JournalEntryLineItem implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setLocationId($location_id)
     {
         $this->container['location_id'] = $location_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets line_number
+     *
+     * @return int|null
+     */
+    public function getLineNumber()
+    {
+        return $this->container['line_number'];
+    }
+
+    /**
+     * Sets line_number
+     *
+     * @param int|null $line_number Line number of the resource
+     *
+     * @return self
+     */
+    public function setLineNumber($line_number)
+    {
+        $this->container['line_number'] = $line_number;
 
         return $this;
     }

@@ -599,9 +599,6 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
         $allowedValues = $this->getLeavingReasonAllowableValues();
         if (!is_null($this->container['leaving_reason']) && !in_array($this->container['leaving_reason'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -637,7 +634,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return string
+     * @return string|null
      */
     public function getId()
     {
@@ -647,7 +644,7 @@ class Employee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id A unique identifier for an object.
+     * @param string|null $id A unique identifier for an object.
      *
      * @return self
      */

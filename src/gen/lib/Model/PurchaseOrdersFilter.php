@@ -59,7 +59,8 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'updated_since' => '\DateTime'
+        'updated_since' => '\DateTime',
+        'supplier_id' => 'string'
     ];
 
     /**
@@ -70,7 +71,8 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'updated_since' => 'date-time'
+        'updated_since' => 'date-time',
+        'supplier_id' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'updated_since' => 'updated_since'
+        'updated_since' => 'updated_since',
+        'supplier_id' => 'supplier_id'
     ];
 
     /**
@@ -109,7 +112,8 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'updated_since' => 'setUpdatedSince'
+        'updated_since' => 'setUpdatedSince',
+        'supplier_id' => 'setSupplierId'
     ];
 
     /**
@@ -118,7 +122,8 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'updated_since' => 'getUpdatedSince'
+        'updated_since' => 'getUpdatedSince',
+        'supplier_id' => 'getSupplierId'
     ];
 
     /**
@@ -179,6 +184,7 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->container['updated_since'] = $data['updated_since'] ?? null;
+        $this->container['supplier_id'] = $data['supplier_id'] ?? null;
     }
 
     /**
@@ -225,6 +231,30 @@ class PurchaseOrdersFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setUpdatedSince($updated_since)
     {
         $this->container['updated_since'] = $updated_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets supplier_id
+     *
+     * @return string|null
+     */
+    public function getSupplierId()
+    {
+        return $this->container['supplier_id'];
+    }
+
+    /**
+     * Sets supplier_id
+     *
+     * @param string|null $supplier_id supplier_id
+     *
+     * @return self
+     */
+    public function setSupplierId($supplier_id)
+    {
+        $this->container['supplier_id'] = $supplier_id;
 
         return $this;
     }

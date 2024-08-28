@@ -326,6 +326,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     const CLASSIFICATION_OTHER_INCOME = 'other_income';
     const CLASSIFICATION_OTHER_EXPENSE = 'other_expense';
     const CLASSIFICATION_COSTS_OF_SALES = 'costs_of_sales';
+    const CLASSIFICATION_OTHER = 'other';
     const TYPE_ACCOUNTS_RECEIVABLE = 'accounts_receivable';
     const TYPE_REVENUE = 'revenue';
     const TYPE_SALES = 'sales';
@@ -367,6 +368,7 @@ class LedgerAccount implements ModelInterface, ArrayAccess, \JsonSerializable
             self::CLASSIFICATION_OTHER_INCOME,
             self::CLASSIFICATION_OTHER_EXPENSE,
             self::CLASSIFICATION_COSTS_OF_SALES,
+            self::CLASSIFICATION_OTHER,
         ];
     }
 

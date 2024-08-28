@@ -420,4 +420,13 @@ class BillTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "accounting_period"
+     */
+    public function testPropertyAccountingPeriod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

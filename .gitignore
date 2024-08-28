@@ -12,3 +12,4 @@ api_new.yml
 vendor/
 .env
 /out
+.idea

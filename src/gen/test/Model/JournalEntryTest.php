@@ -197,6 +197,15 @@ class JournalEntryTest extends TestCase
     }
 
     /**
+     * Test attribute "accounting_period"
+     */
+    public function testPropertyAccountingPeriod()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "custom_mappings"
      */
     public function testPropertyCustomMappings()
