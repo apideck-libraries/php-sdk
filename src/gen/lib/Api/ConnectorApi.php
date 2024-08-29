@@ -1203,7 +1203,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1211,7 +1210,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1243,7 +1249,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1251,7 +1256,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1283,7 +1295,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($filter !== null && 'filter' === 'filter') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1291,7 +1302,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+        if ($filter !== null && 'pass_through' === 'filter') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter' || 'filter' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2445,7 +2463,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($unified_api !== null && 'filter' === 'unified_api') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2453,7 +2470,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($unified_api !== null && !('unified_api' === 'raw' || 'unified_api' === 'sort' || 'unified_api' === 'filter')) {
+        if ($unified_api !== null && 'pass_through' === 'unified_api') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($unified_api !== null && !('unified_api' === 'raw' || 'unified_api' === 'sort' || 'unified_api' === 'filter' || 'unified_api' === 'pass_through')) {
             if('form' === 'form' && is_array($unified_api)) {
                 foreach($unified_api as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2869,7 +2893,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2877,7 +2900,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2909,7 +2939,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2917,7 +2946,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2949,7 +2985,6 @@ class ConnectorApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($filter !== null && 'filter' === 'filter') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2957,7 +2992,14 @@ class ConnectorApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+        if ($filter !== null && 'pass_through' === 'filter') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter' || 'filter' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;

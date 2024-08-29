@@ -506,7 +506,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -514,7 +513,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -546,7 +552,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -554,7 +559,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -586,7 +598,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -594,7 +605,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -626,7 +644,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($pass_through !== null && 'filter' === 'pass_through') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -634,7 +651,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+        if ($pass_through !== null && 'pass_through' === 'pass_through') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter' || 'pass_through' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -666,7 +690,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -674,7 +697,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1156,7 +1186,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1164,7 +1193,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1681,7 +1717,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1689,7 +1724,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1721,7 +1763,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1729,7 +1770,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1761,7 +1809,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1769,7 +1816,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1801,7 +1855,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($sort !== null && 'filter' === 'sort') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1809,7 +1862,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+        if ($sort !== null && 'pass_through' === 'sort') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter' || 'sort' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($sort)) {
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1841,7 +1901,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($pass_through !== null && 'filter' === 'pass_through') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1849,7 +1908,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+        if ($pass_through !== null && 'pass_through' === 'pass_through') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter' || 'pass_through' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -1881,7 +1947,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -1889,7 +1954,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2379,7 +2451,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2387,7 +2458,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2907,7 +2985,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2915,7 +2992,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2947,7 +3031,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2955,7 +3038,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -2987,7 +3077,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -2995,7 +3084,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3027,7 +3123,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -3035,7 +3130,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -3544,7 +3646,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -3552,7 +3653,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4045,7 +4153,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4053,7 +4160,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4556,7 +4670,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4564,7 +4677,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4596,7 +4716,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4604,7 +4723,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4636,7 +4762,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4644,7 +4769,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4676,7 +4808,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($sort !== null && 'filter' === 'sort') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4684,7 +4815,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+        if ($sort !== null && 'pass_through' === 'sort') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter' || 'sort' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($sort)) {
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4716,7 +4854,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($filter !== null && 'filter' === 'filter') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4724,7 +4861,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter')) {
+        if ($filter !== null && 'pass_through' === 'filter') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter' || 'filter' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($filter)) {
                 foreach($filter as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4756,7 +4900,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($pass_through !== null && 'filter' === 'pass_through') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4764,7 +4907,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+        if ($pass_through !== null && 'pass_through' === 'pass_through') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter' || 'pass_through' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -4796,7 +4946,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -4804,7 +4953,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5275,7 +5431,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -5283,7 +5438,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5767,7 +5929,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -5775,7 +5936,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -5807,7 +5975,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -5815,7 +5982,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6305,7 +6479,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6313,7 +6486,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6814,7 +6994,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6822,7 +7001,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6854,7 +7040,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6862,7 +7047,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6894,7 +7086,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6902,7 +7093,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6934,7 +7132,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($pass_through !== null && 'filter' === 'pass_through') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6942,7 +7139,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+        if ($pass_through !== null && 'pass_through' === 'pass_through') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter' || 'pass_through' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -6974,7 +7178,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -6982,7 +7185,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7458,7 +7668,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -7466,7 +7675,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7498,7 +7714,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -7506,7 +7721,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -7995,7 +8217,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8003,7 +8224,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8035,7 +8263,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($cursor !== null && 'filter' === 'cursor') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8043,7 +8270,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter')) {
+        if ($cursor !== null && 'pass_through' === 'cursor') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($cursor !== null && !('cursor' === 'raw' || 'cursor' === 'sort' || 'cursor' === 'filter' || 'cursor' === 'pass_through')) {
             if('form' === 'form' && is_array($cursor)) {
                 foreach($cursor as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8075,7 +8309,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($limit !== null && 'filter' === 'limit') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8083,7 +8316,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter')) {
+        if ($limit !== null && 'pass_through' === 'limit') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($limit !== null && !('limit' === 'raw' || 'limit' === 'sort' || 'limit' === 'filter' || 'limit' === 'pass_through')) {
             if('form' === 'form' && is_array($limit)) {
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8115,7 +8355,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($sort !== null && 'filter' === 'sort') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8123,7 +8362,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter')) {
+        if ($sort !== null && 'pass_through' === 'sort') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($sort !== null && !('sort' === 'raw' || 'sort' === 'sort' || 'sort' === 'filter' || 'sort' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($sort)) {
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8155,7 +8401,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($pass_through !== null && 'filter' === 'pass_through') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8163,7 +8408,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter')) {
+        if ($pass_through !== null && 'pass_through' === 'pass_through') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($pass_through !== null && !('pass_through' === 'raw' || 'pass_through' === 'sort' || 'pass_through' === 'filter' || 'pass_through' === 'pass_through')) {
             if('form' === 'deepObject' && is_array($pass_through)) {
                 foreach($pass_through as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8195,7 +8447,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8203,7 +8454,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8660,7 +8918,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($raw !== null && 'filter' === 'raw') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8668,7 +8925,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter')) {
+        if ($raw !== null && 'pass_through' === 'raw') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($raw !== null && !('raw' === 'raw' || 'raw' === 'sort' || 'raw' === 'filter' || 'raw' === 'pass_through')) {
             if('form' === 'form' && is_array($raw)) {
                 foreach($raw as $key => $value) {
                     $queryParams[$key] = $value;
@@ -8700,7 +8964,6 @@ class IssueTrackingApi
             $queryParams['sort['.$key.']'] = $value;
           }
         }
-
         if ($fields !== null && 'filter' === 'fields') {
           // Support for filter options
           $filter_data = $filter->jsonSerialize();
@@ -8708,7 +8971,14 @@ class IssueTrackingApi
             $queryParams['filter['.$key.']'] = $value;
           }
         }
-        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter')) {
+        if ($fields !== null && 'pass_through' === 'fields') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($fields !== null && !('fields' === 'raw' || 'fields' === 'sort' || 'fields' === 'filter' || 'fields' === 'pass_through')) {
             if('form' === 'form' && is_array($fields)) {
                 foreach($fields as $key => $value) {
                     $queryParams[$key] = $value;
