@@ -6,6 +6,7 @@ tmp/*
 .dist
 api_new.yml
 .eslintcache
+.idea
 
 .dist/*
 

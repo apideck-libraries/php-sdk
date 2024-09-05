@@ -64,6 +64,7 @@ docs/Model/BankAccount.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
+docs/Model/BillPayment.md
 docs/Model/BillsFilter.md
 docs/Model/BillsSort.md
 docs/Model/Branch.md
@@ -115,6 +116,7 @@ docs/Model/CreateApplicantResponse.md
 docs/Model/CreateApplicationResponse.md
 docs/Model/CreateAttachmentRequest.md
 docs/Model/CreateAttachmentResponse.md
+docs/Model/CreateBillPaymentResponse.md
 docs/Model/CreateBillResponse.md
 docs/Model/CreateCommentResponse.md
 docs/Model/CreateCompanyResponse.md
@@ -190,6 +192,7 @@ docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
 docs/Model/DeleteApplicationResponse.md
 docs/Model/DeleteAttachmentResponse.md
+docs/Model/DeleteBillPaymentResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCommentResponse.md
 docs/Model/DeleteCompanyResponse.md
@@ -238,6 +241,7 @@ docs/Model/DeleteUploadSessionResponse.md
 docs/Model/DeleteUserResponse.md
 docs/Model/DeleteWebhookResponse.md
 docs/Model/Department.md
+docs/Model/DeprecatedLinkedSupplier.md
 docs/Model/DeprecatedLinkedTrackingCategory.md
 docs/Model/Drive.md
 docs/Model/DriveGroup.md
@@ -302,6 +306,8 @@ docs/Model/GetApplicationsResponse.md
 docs/Model/GetAttachmentResponse.md
 docs/Model/GetAttachmentsResponse.md
 docs/Model/GetBalanceSheetResponse.md
+docs/Model/GetBillPaymentResponse.md
+docs/Model/GetBillPaymentsResponse.md
 docs/Model/GetBillResponse.md
 docs/Model/GetBillsResponse.md
 docs/Model/GetCollectionResponse.md
@@ -514,6 +520,8 @@ docs/Model/Payment.md
 docs/Model/PaymentCard.md
 docs/Model/PaymentFrequency.md
 docs/Model/PaymentRequiredResponse.md
+docs/Model/PaymentStatus.md
+docs/Model/PaymentType.md
 docs/Model/PaymentUnit.md
 docs/Model/PaymentsFilter.md
 docs/Model/PaymentsSort.md
@@ -594,6 +602,7 @@ docs/Model/UpdateAccountingLocationResponse.md
 docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateApplicantResponse.md
 docs/Model/UpdateApplicationResponse.md
+docs/Model/UpdateBillPaymentResponse.md
 docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCommentResponse.md
 docs/Model/UpdateCompanyResponse.md
@@ -728,6 +737,7 @@ lib/Model/BankAccount.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
+lib/Model/BillPayment.php
 lib/Model/BillsFilter.php
 lib/Model/BillsSort.php
 lib/Model/Branch.php
@@ -779,6 +789,7 @@ lib/Model/CreateApplicantResponse.php
 lib/Model/CreateApplicationResponse.php
 lib/Model/CreateAttachmentRequest.php
 lib/Model/CreateAttachmentResponse.php
+lib/Model/CreateBillPaymentResponse.php
 lib/Model/CreateBillResponse.php
 lib/Model/CreateCommentResponse.php
 lib/Model/CreateCompanyResponse.php
@@ -854,6 +865,7 @@ lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
 lib/Model/DeleteApplicationResponse.php
 lib/Model/DeleteAttachmentResponse.php
+lib/Model/DeleteBillPaymentResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCommentResponse.php
 lib/Model/DeleteCompanyResponse.php
@@ -902,6 +914,7 @@ lib/Model/DeleteUploadSessionResponse.php
 lib/Model/DeleteUserResponse.php
 lib/Model/DeleteWebhookResponse.php
 lib/Model/Department.php
+lib/Model/DeprecatedLinkedSupplier.php
 lib/Model/DeprecatedLinkedTrackingCategory.php
 lib/Model/Drive.php
 lib/Model/DriveGroup.php
@@ -966,6 +979,8 @@ lib/Model/GetApplicationsResponse.php
 lib/Model/GetAttachmentResponse.php
 lib/Model/GetAttachmentsResponse.php
 lib/Model/GetBalanceSheetResponse.php
+lib/Model/GetBillPaymentResponse.php
+lib/Model/GetBillPaymentsResponse.php
 lib/Model/GetBillResponse.php
 lib/Model/GetBillsResponse.php
 lib/Model/GetCollectionResponse.php
@@ -1179,6 +1194,8 @@ lib/Model/Payment.php
 lib/Model/PaymentCard.php
 lib/Model/PaymentFrequency.php
 lib/Model/PaymentRequiredResponse.php
+lib/Model/PaymentStatus.php
+lib/Model/PaymentType.php
 lib/Model/PaymentUnit.php
 lib/Model/PaymentsFilter.php
 lib/Model/PaymentsSort.php
@@ -1259,6 +1276,7 @@ lib/Model/UpdateAccountingLocationResponse.php
 lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateApplicantResponse.php
 lib/Model/UpdateApplicationResponse.php
+lib/Model/UpdateBillPaymentResponse.php
 lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCommentResponse.php
 lib/Model/UpdateCompanyResponse.php
@@ -1388,6 +1406,7 @@ test/Model/BalanceSheetTest.php
 test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
+test/Model/BillPaymentTest.php
 test/Model/BillTest.php
 test/Model/BillsFilterTest.php
 test/Model/BillsSortTest.php
@@ -1440,6 +1459,7 @@ test/Model/CreateApplicantResponseTest.php
 test/Model/CreateApplicationResponseTest.php
 test/Model/CreateAttachmentRequestTest.php
 test/Model/CreateAttachmentResponseTest.php
+test/Model/CreateBillPaymentResponseTest.php
 test/Model/CreateBillResponseTest.php
 test/Model/CreateCommentResponseTest.php
 test/Model/CreateCompanyResponseTest.php
@@ -1515,6 +1535,7 @@ test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
 test/Model/DeleteApplicationResponseTest.php
 test/Model/DeleteAttachmentResponseTest.php
+test/Model/DeleteBillPaymentResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCommentResponseTest.php
 test/Model/DeleteCompanyResponseTest.php
@@ -1563,6 +1584,7 @@ test/Model/DeleteUploadSessionResponseTest.php
 test/Model/DeleteUserResponseTest.php
 test/Model/DeleteWebhookResponseTest.php
 test/Model/DepartmentTest.php
+test/Model/DeprecatedLinkedSupplierTest.php
 test/Model/DeprecatedLinkedTrackingCategoryTest.php
 test/Model/DriveGroupTest.php
 test/Model/DriveGroupsFilterTest.php
@@ -1627,6 +1649,8 @@ test/Model/GetApplicationsResponseTest.php
 test/Model/GetAttachmentResponseTest.php
 test/Model/GetAttachmentsResponseTest.php
 test/Model/GetBalanceSheetResponseTest.php
+test/Model/GetBillPaymentResponseTest.php
+test/Model/GetBillPaymentsResponseTest.php
 test/Model/GetBillResponseTest.php
 test/Model/GetBillsResponseTest.php
 test/Model/GetCollectionResponseTest.php
@@ -1838,7 +1862,9 @@ test/Model/PassThroughQueryTest.php
 test/Model/PaymentCardTest.php
 test/Model/PaymentFrequencyTest.php
 test/Model/PaymentRequiredResponseTest.php
+test/Model/PaymentStatusTest.php
 test/Model/PaymentTest.php
+test/Model/PaymentTypeTest.php
 test/Model/PaymentUnitTest.php
 test/Model/PaymentsFilterTest.php
 test/Model/PaymentsSortTest.php
@@ -1919,6 +1945,7 @@ test/Model/UpdateAccountingLocationResponseTest.php
 test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateApplicantResponseTest.php
 test/Model/UpdateApplicationResponseTest.php
+test/Model/UpdateBillPaymentResponseTest.php
 test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCommentResponseTest.php
 test/Model/UpdateCompanyResponseTest.php

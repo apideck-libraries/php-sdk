@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 
 * `OTHER` (value: `'other'`)
 
+* `BILL` (value: `'bill'`)
+
 
 
 
