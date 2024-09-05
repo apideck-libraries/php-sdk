@@ -62,7 +62,8 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'phone_number' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'first_name' => null,
         'last_name' => null,
-        'email' => null
+        'email' => null,
+        'phone_number' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
-        'email' => 'email'
+        'email' => 'email',
+        'phone_number' => 'phone_number'
     ];
 
     /**
@@ -121,7 +124,8 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'phone_number' => 'setPhoneNumber'
     ];
 
     /**
@@ -133,7 +137,8 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'phone_number' => 'getPhoneNumber'
     ];
 
     /**
@@ -197,6 +202,7 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['phone_number'] = $data['phone_number'] ?? null;
     }
 
     /**
@@ -315,6 +321,30 @@ class LeadsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return string|null
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param string|null $phone_number Phone number of the lead to filter on
+     *
+     * @return self
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }
