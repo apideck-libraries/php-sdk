@@ -143,6 +143,15 @@ class AttachmentTest extends TestCase
     }
 
     /**
+     * Test attribute "parent_folder_id"
+     */
+    public function testPropertyParentFolderId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()

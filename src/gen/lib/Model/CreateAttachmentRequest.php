@@ -61,6 +61,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'name' => 'string',
         'description' => 'string',
+        'parent_folder_id' => 'string',
         'pass_through' => 'object[]'
     ];
 
@@ -74,6 +75,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
+        'parent_folder_id' => null,
         'pass_through' => null
     ];
 
@@ -106,6 +108,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'name' => 'name',
         'description' => 'description',
+        'parent_folder_id' => 'parent_folder_id',
         'pass_through' => 'pass_through'
     ];
 
@@ -117,6 +120,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'name' => 'setName',
         'description' => 'setDescription',
+        'parent_folder_id' => 'setParentFolderId',
         'pass_through' => 'setPassThrough'
     ];
 
@@ -128,6 +132,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'name' => 'getName',
         'description' => 'getDescription',
+        'parent_folder_id' => 'getParentFolderId',
         'pass_through' => 'getPassThrough'
     ];
 
@@ -190,6 +195,7 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->container['name'] = $data['name'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
+        $this->container['parent_folder_id'] = $data['parent_folder_id'] ?? null;
         $this->container['pass_through'] = $data['pass_through'] ?? null;
     }
 
@@ -264,6 +270,30 @@ class CreateAttachmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent_folder_id
+     *
+     * @return string|null
+     */
+    public function getParentFolderId()
+    {
+        return $this->container['parent_folder_id'];
+    }
+
+    /**
+     * Sets parent_folder_id
+     *
+     * @param string|null $parent_folder_id The folder id where this attachment belong to
+     *
+     * @return self
+     */
+    public function setParentFolderId($parent_folder_id)
+    {
+        $this->container['parent_folder_id'] = $parent_folder_id;
 
         return $this;
     }
