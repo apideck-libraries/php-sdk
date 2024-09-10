@@ -123,4 +123,13 @@ class TimeOffRequestsFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "company_id"
+     */
+    public function testPropertyCompanyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
