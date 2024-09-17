@@ -133,6 +133,7 @@ docs/Model/CreateDriveResponse.md
 docs/Model/CreateEcommerceCustomerResponse.md
 docs/Model/CreateEcommerceOrderResponse.md
 docs/Model/CreateEmployeeResponse.md
+docs/Model/CreateExpenseResponse.md
 docs/Model/CreateFileRequest.md
 docs/Model/CreateFileResponse.md
 docs/Model/CreateFolderRequest.md
@@ -206,6 +207,7 @@ docs/Model/DeleteDriveResponse.md
 docs/Model/DeleteEcommerceCustomerResponse.md
 docs/Model/DeleteEcommerceOrderResponse.md
 docs/Model/DeleteEmployeeResponse.md
+docs/Model/DeleteExpenseResponse.md
 docs/Model/DeleteFileResponse.md
 docs/Model/DeleteFolderResponse.md
 docs/Model/DeleteHrisCompanyResponse.md
@@ -279,6 +281,8 @@ docs/Model/EmployeesSort.md
 docs/Model/EmploymentStatus.md
 docs/Model/Error.md
 docs/Model/ExecuteWebhookResponse.md
+docs/Model/Expense.md
+docs/Model/ExpenseLineItem.md
 docs/Model/FileStorageEventType.md
 docs/Model/FileType.md
 docs/Model/FilesFilter.md
@@ -354,6 +358,8 @@ docs/Model/GetEmployeePayrollsResponse.md
 docs/Model/GetEmployeeResponse.md
 docs/Model/GetEmployeeSchedulesResponse.md
 docs/Model/GetEmployeesResponse.md
+docs/Model/GetExpenseResponse.md
+docs/Model/GetExpensesResponse.md
 docs/Model/GetFileResponse.md
 docs/Model/GetFilesResponse.md
 docs/Model/GetFolderResponse.md
@@ -620,6 +626,7 @@ docs/Model/UpdateDriveResponse.md
 docs/Model/UpdateEcommerceCustomerResponse.md
 docs/Model/UpdateEcommerceOrderResponse.md
 docs/Model/UpdateEmployeeResponse.md
+docs/Model/UpdateExpenseResponse.md
 docs/Model/UpdateFileRequest.md
 docs/Model/UpdateFileResponse.md
 docs/Model/UpdateFolderRequest.md
@@ -806,6 +813,7 @@ lib/Model/CreateDriveResponse.php
 lib/Model/CreateEcommerceCustomerResponse.php
 lib/Model/CreateEcommerceOrderResponse.php
 lib/Model/CreateEmployeeResponse.php
+lib/Model/CreateExpenseResponse.php
 lib/Model/CreateFileRequest.php
 lib/Model/CreateFileResponse.php
 lib/Model/CreateFolderRequest.php
@@ -879,6 +887,7 @@ lib/Model/DeleteDriveResponse.php
 lib/Model/DeleteEcommerceCustomerResponse.php
 lib/Model/DeleteEcommerceOrderResponse.php
 lib/Model/DeleteEmployeeResponse.php
+lib/Model/DeleteExpenseResponse.php
 lib/Model/DeleteFileResponse.php
 lib/Model/DeleteFolderResponse.php
 lib/Model/DeleteHrisCompanyResponse.php
@@ -952,6 +961,8 @@ lib/Model/EmployeesSort.php
 lib/Model/EmploymentStatus.php
 lib/Model/Error.php
 lib/Model/ExecuteWebhookResponse.php
+lib/Model/Expense.php
+lib/Model/ExpenseLineItem.php
 lib/Model/FileStorageEventType.php
 lib/Model/FileType.php
 lib/Model/FilesFilter.php
@@ -1027,6 +1038,8 @@ lib/Model/GetEmployeePayrollsResponse.php
 lib/Model/GetEmployeeResponse.php
 lib/Model/GetEmployeeSchedulesResponse.php
 lib/Model/GetEmployeesResponse.php
+lib/Model/GetExpenseResponse.php
+lib/Model/GetExpensesResponse.php
 lib/Model/GetFileResponse.php
 lib/Model/GetFilesResponse.php
 lib/Model/GetFolderResponse.php
@@ -1294,6 +1307,7 @@ lib/Model/UpdateDriveResponse.php
 lib/Model/UpdateEcommerceCustomerResponse.php
 lib/Model/UpdateEcommerceOrderResponse.php
 lib/Model/UpdateEmployeeResponse.php
+lib/Model/UpdateExpenseResponse.php
 lib/Model/UpdateFileRequest.php
 lib/Model/UpdateFileResponse.php
 lib/Model/UpdateFolderRequest.php
@@ -1476,6 +1490,7 @@ test/Model/CreateDriveResponseTest.php
 test/Model/CreateEcommerceCustomerResponseTest.php
 test/Model/CreateEcommerceOrderResponseTest.php
 test/Model/CreateEmployeeResponseTest.php
+test/Model/CreateExpenseResponseTest.php
 test/Model/CreateFileRequestTest.php
 test/Model/CreateFileResponseTest.php
 test/Model/CreateFolderRequestTest.php
@@ -1549,6 +1564,7 @@ test/Model/DeleteDriveResponseTest.php
 test/Model/DeleteEcommerceCustomerResponseTest.php
 test/Model/DeleteEcommerceOrderResponseTest.php
 test/Model/DeleteEmployeeResponseTest.php
+test/Model/DeleteExpenseResponseTest.php
 test/Model/DeleteFileResponseTest.php
 test/Model/DeleteFolderResponseTest.php
 test/Model/DeleteHrisCompanyResponseTest.php
@@ -1622,6 +1638,8 @@ test/Model/EmployeesSortTest.php
 test/Model/EmploymentStatusTest.php
 test/Model/ErrorTest.php
 test/Model/ExecuteWebhookResponseTest.php
+test/Model/ExpenseLineItemTest.php
+test/Model/ExpenseTest.php
 test/Model/FileStorageEventTypeTest.php
 test/Model/FileTypeTest.php
 test/Model/FilesFilterTest.php
@@ -1697,6 +1715,8 @@ test/Model/GetEmployeePayrollsResponseTest.php
 test/Model/GetEmployeeResponseTest.php
 test/Model/GetEmployeeSchedulesResponseTest.php
 test/Model/GetEmployeesResponseTest.php
+test/Model/GetExpenseResponseTest.php
+test/Model/GetExpensesResponseTest.php
 test/Model/GetFileResponseTest.php
 test/Model/GetFilesResponseTest.php
 test/Model/GetFolderResponseTest.php
@@ -1963,6 +1983,7 @@ test/Model/UpdateDriveResponseTest.php
 test/Model/UpdateEcommerceCustomerResponseTest.php
 test/Model/UpdateEcommerceOrderResponseTest.php
 test/Model/UpdateEmployeeResponseTest.php
+test/Model/UpdateExpenseResponseTest.php
 test/Model/UpdateFileRequestTest.php
 test/Model/UpdateFileResponseTest.php
 test/Model/UpdateFolderRequestTest.php
