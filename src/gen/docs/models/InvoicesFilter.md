@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `updated_since` | **\DateTime** |  | [optional] 
 `created_since` | **\DateTime** |  | [optional] 
+`number` | **string** | Invoice number to search for | [optional] 
 
 
 

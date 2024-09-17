@@ -96,4 +96,13 @@ class InvoicesFilterTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "number"
+     */
+    public function testPropertyNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
