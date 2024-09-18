@@ -188,6 +188,15 @@ class TimeOffRequestTest extends TestCase
     }
 
     /**
+     * Test attribute "day_part"
+     */
+    public function testPropertyDayPart()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "notes"
      */
     public function testPropertyNotes()
