@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 `size` | **int** | The size of the file in bytes | [optional] 
 `reference` | [**\Apideck\Client\Model\AttachmentReference**](AttachmentReference.md) |  | [optional] 
 `description` | **string** | Optional description of the file | [optional] 
+`parent_folder_id` | **string** | The folder id where this attachment belong to | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 
 
 * [`AttachmentReference`](AttachmentReference.md)
+
 
 
 
