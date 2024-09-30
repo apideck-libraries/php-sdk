@@ -5,6 +5,7 @@
 
 ## Methods
 
+* [List Connection Custom Mappings](#connectionCustomMappingsAll)
 * [Get Resource Settings](#connectionSettingsAll)
 * [Update Settings](#connectionSettingsUpdate)
 * [Get All Connections](#connectionsAll)
@@ -20,9 +21,77 @@
 * [Get Consumer](#consumersOne)
 * [Update Consumer](#consumersUpdate)
 * [Get Resource Custom Fields](#customFieldsAll)
+* [List Custom Mappings](#customMappingsAll)
 * [Get All Consumer Request Logs](#logsAll)
 * [Create Session](#sessionsCreate)
 * [Validate Connection State](#validateConnectionState)
+
+<a name="connectionCustomMappingsAll"></a>
+# List Connection Custom Mappings
+
+
+Method: **connectionCustomMappingsAll**
+
+```php
+Apideck->getVaultApi()->connectionCustomMappingsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unified_api** | **string**| Unified API |
+ **service_id** | **string**| Service ID of the resource to return |
+ **resource** | **string**| Name of the resource (plural) |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+ **resource_id** | **string**| This is the id of the resource you want to fetch when listing custom fields. For example, if you want to fetch custom fields for a specific contact, you would use the contact id. |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetCustomMappingsResponse`](../models/\Apideck\Client\Model\GetCustomMappingsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Custom mapping | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->connectionCustomMappingsAll('crm', 'pipedrive', 'leads');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
 
 <a name="connectionSettingsAll"></a>
 # Get Resource Settings
@@ -989,6 +1058,71 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getVaultApi()->customFieldsAll('crm', 'pipedrive', 'leads');
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="customMappingsAll"></a>
+# List Custom Mappings
+
+
+Method: **customMappingsAll**
+
+```php
+Apideck->getVaultApi()->customMappingsAll($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unified_api** | **string**| Unified API |
+ **service_id** | **string**| Service ID of the resource to return |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\GetCustomMappingsResponse`](../models/\Apideck\Client\Model\GetCustomMappingsResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Custom mapping | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->customMappingsAll('crm', 'pipedrive');
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);
