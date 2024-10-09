@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
-`uncategorized_items` | [**AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]**](AnyOfBalanceSheetAccountBalanceSheetAccountRecord.md) | A list of balance sheet accounts | [optional] 
+`uncategorized_items` | [**\Apideck\Client\Model\BalanceSheetAccount**](BalanceSheetAccount.md) |  | [optional] 
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 
 
 
-* [`AnyOfBalanceSheetAccountBalanceSheetAccountRecord`](AnyOfBalanceSheetAccountBalanceSheetAccountRecord.md)
+* [`BalanceSheetAccount`](BalanceSheetAccount.md)
 
 ---
 
