@@ -73,7 +73,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'created_by' => 'string',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'uncategorized_items' => 'AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]'
+        'uncategorized_items' => '\Apideck\Client\Model\BalanceSheetAccount'
     ];
 
     /**
@@ -658,7 +658,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets uncategorized_items
      *
-     * @return AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null
+     * @return \Apideck\Client\Model\BalanceSheetAccount|null
      */
     public function getUncategorizedItems()
     {
@@ -668,7 +668,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets uncategorized_items
      *
-     * @param AnyOfBalanceSheetAccountBalanceSheetAccountRecord[]|null $uncategorized_items A list of balance sheet accounts
+     * @param \Apideck\Client\Model\BalanceSheetAccount|null $uncategorized_items uncategorized_items
      *
      * @return self
      */
