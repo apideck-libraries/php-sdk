@@ -160,11 +160,11 @@ class WebhookEventType
 
     const ACCOUNTING_SUPPLIER_DELETED = 'accounting.supplier.deleted';
 
-    const ACCOUNTING_PURCHASE_ORDER_CREATED = 'accounting.purchase-order.created';
+    const ACCOUNTING_PURCHASE_ORDER_CREATED = 'accounting.purchase_order.created';
 
-    const ACCOUNTING_PURCHASE_ORDER_UPDATED = 'accounting.purchase-order.updated';
+    const ACCOUNTING_PURCHASE_ORDER_UPDATED = 'accounting.purchase_order.updated';
 
-    const ACCOUNTING_PURCHASE_ORDER_DELETED = 'accounting.purchase-order.deleted';
+    const ACCOUNTING_PURCHASE_ORDER_DELETED = 'accounting.purchase_order.deleted';
 
     const POS_ORDER_CREATED = 'pos.order.created';
 
