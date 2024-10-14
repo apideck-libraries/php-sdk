@@ -64,7 +64,8 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'string',
         'email' => 'string',
         'phone_number' => 'string',
-        'company_id' => 'string'
+        'company_id' => 'string',
+        'owner_id' => 'string'
     ];
 
     /**
@@ -80,7 +81,8 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => null,
         'email' => null,
         'phone_number' => null,
-        'company_id' => null
+        'company_id' => null,
+        'owner_id' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'last_name',
         'email' => 'email',
         'phone_number' => 'phone_number',
-        'company_id' => 'company_id'
+        'company_id' => 'company_id',
+        'owner_id' => 'owner_id'
     ];
 
     /**
@@ -129,7 +132,8 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'setLastName',
         'email' => 'setEmail',
         'phone_number' => 'setPhoneNumber',
-        'company_id' => 'setCompanyId'
+        'company_id' => 'setCompanyId',
+        'owner_id' => 'setOwnerId'
     ];
 
     /**
@@ -143,7 +147,8 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'getLastName',
         'email' => 'getEmail',
         'phone_number' => 'getPhoneNumber',
-        'company_id' => 'getCompanyId'
+        'company_id' => 'getCompanyId',
+        'owner_id' => 'getOwnerId'
     ];
 
     /**
@@ -209,6 +214,7 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['email'] = $data['email'] ?? null;
         $this->container['phone_number'] = $data['phone_number'] ?? null;
         $this->container['company_id'] = $data['company_id'] ?? null;
+        $this->container['owner_id'] = $data['owner_id'] ?? null;
     }
 
     /**
@@ -375,6 +381,30 @@ class ContactsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCompanyId($company_id)
     {
         $this->container['company_id'] = $company_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_id
+     *
+     * @return string|null
+     */
+    public function getOwnerId()
+    {
+        return $this->container['owner_id'];
+    }
+
+    /**
+     * Sets owner_id
+     *
+     * @param string|null $owner_id Unique identifier for the owner of the contact to filter on
+     *
+     * @return self
+     */
+    public function setOwnerId($owner_id)
+    {
+        $this->container['owner_id'] = $owner_id;
 
         return $this;
     }
