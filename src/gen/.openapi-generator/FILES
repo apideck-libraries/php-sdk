@@ -65,6 +65,7 @@ docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
 docs/Model/BillPayment.md
+docs/Model/BillPaymentAllocations.md
 docs/Model/BillsFilter.md
 docs/Model/BillsSort.md
 docs/Model/Branch.md
@@ -746,6 +747,7 @@ lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
 lib/Model/BillPayment.php
+lib/Model/BillPaymentAllocations.php
 lib/Model/BillsFilter.php
 lib/Model/BillsSort.php
 lib/Model/Branch.php
@@ -1422,6 +1424,7 @@ test/Model/BalanceSheetTest.php
 test/Model/BankAccountTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
+test/Model/BillPaymentAllocationsTest.php
 test/Model/BillPaymentTest.php
 test/Model/BillTest.php
 test/Model/BillsFilterTest.php
