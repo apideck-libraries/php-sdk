@@ -673,6 +673,7 @@ docs/Model/ValidateConnectionStateResponse.md
 docs/Model/ValidateConnectionStateResponseData.md
 docs/Model/VaultEventType.md
 docs/Model/VirtualWebhooks.md
+docs/Model/VirtualWebhooksResources.md
 docs/Model/WalletDetails.md
 docs/Model/Webhook.md
 docs/Model/WebhookEvent.md
@@ -1356,6 +1357,7 @@ lib/Model/ValidateConnectionStateResponse.php
 lib/Model/ValidateConnectionStateResponseData.php
 lib/Model/VaultEventType.php
 lib/Model/VirtualWebhooks.php
+lib/Model/VirtualWebhooksResources.php
 lib/Model/WalletDetails.php
 lib/Model/Webhook.php
 lib/Model/WebhookEvent.php
@@ -2033,6 +2035,7 @@ test/Model/UserTest.php
 test/Model/ValidateConnectionStateResponseDataTest.php
 test/Model/ValidateConnectionStateResponseTest.php
 test/Model/VaultEventTypeTest.php
+test/Model/VirtualWebhooksResourcesTest.php
 test/Model/VirtualWebhooksTest.php
 test/Model/WalletDetailsTest.php
 test/Model/WebhookEventLogAttemptsTest.php

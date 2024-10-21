@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 `employee_id` | **string** | ID of the employee | [optional] 
 `company_id` | **string** | The unique identifier of the company. | [optional] 
 `processed_date` | **string** | The date the payroll was processed. | [optional] 
-`totals` | [**\Apideck\Client\Model\PayrollTotals**](.md) |  | [optional] 
+`totals` | [**\Apideck\Client\Model\PayrollTotals**](PayrollTotals.md) |  | [optional] 
 `compensations` | [**\Apideck\Client\Model\Compensation[]**](Compensation.md) | An array of compensations for the payroll. | [optional] 
 
 
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 
 
 
-* [``](.md)
+* [`PayrollTotals`](PayrollTotals.md)
 * [`Compensation`](Compensation.md)
 
 ---
