@@ -61,9 +61,9 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'end_date' => 'string',
-        'assets' => '\Apideck\Client\Model\BalanceSheetAccount',
-        'liabilities' => '\Apideck\Client\Model\BalanceSheetAccount',
-        'equity' => '\Apideck\Client\Model\BalanceSheetAccount',
+        'assets' => '\Apideck\Client\Model\BalanceSheetAssetsAccount',
+        'liabilities' => '\Apideck\Client\Model\BalanceSheetLiabilitiesAccount',
+        'equity' => '\Apideck\Client\Model\BalanceSheetEquityAccount',
         'id' => 'string',
         'report_name' => 'string',
         'start_date' => 'string',
@@ -74,7 +74,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
         'created_by' => 'string',
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'uncategorized_items' => '\Apideck\Client\Model\BalanceSheetAccount'
+        'uncategorized_items' => '\Apideck\Client\Model\BalanceSheetUncategorizedItemsAccount'
     ];
 
     /**
@@ -342,7 +342,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets assets
      *
-     * @return \Apideck\Client\Model\BalanceSheetAccount
+     * @return \Apideck\Client\Model\BalanceSheetAssetsAccount
      */
     public function getAssets()
     {
@@ -352,7 +352,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets assets
      *
-     * @param \Apideck\Client\Model\BalanceSheetAccount $assets assets
+     * @param \Apideck\Client\Model\BalanceSheetAssetsAccount $assets assets
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets liabilities
      *
-     * @return \Apideck\Client\Model\BalanceSheetAccount
+     * @return \Apideck\Client\Model\BalanceSheetLiabilitiesAccount
      */
     public function getLiabilities()
     {
@@ -376,7 +376,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets liabilities
      *
-     * @param \Apideck\Client\Model\BalanceSheetAccount $liabilities liabilities
+     * @param \Apideck\Client\Model\BalanceSheetLiabilitiesAccount $liabilities liabilities
      *
      * @return self
      */
@@ -390,7 +390,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets equity
      *
-     * @return \Apideck\Client\Model\BalanceSheetAccount
+     * @return \Apideck\Client\Model\BalanceSheetEquityAccount
      */
     public function getEquity()
     {
@@ -400,7 +400,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets equity
      *
-     * @param \Apideck\Client\Model\BalanceSheetAccount $equity equity
+     * @param \Apideck\Client\Model\BalanceSheetEquityAccount $equity equity
      *
      * @return self
      */
@@ -659,7 +659,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets uncategorized_items
      *
-     * @return \Apideck\Client\Model\BalanceSheetAccount|null
+     * @return \Apideck\Client\Model\BalanceSheetUncategorizedItemsAccount|null
      */
     public function getUncategorizedItems()
     {
@@ -669,7 +669,7 @@ class BalanceSheetReports implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets uncategorized_items
      *
-     * @param \Apideck\Client\Model\BalanceSheetAccount|null $uncategorized_items uncategorized_items
+     * @param \Apideck\Client\Model\BalanceSheetUncategorizedItemsAccount|null $uncategorized_items uncategorized_items
      *
      * @return self
      */

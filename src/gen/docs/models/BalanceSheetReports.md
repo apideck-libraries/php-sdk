@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `end_date` | **string** | The start date of the report | 
-`assets` | [**\Apideck\Client\Model\BalanceSheetAccount**](BalanceSheetAccount.md) |  | 
-`liabilities` | [**\Apideck\Client\Model\BalanceSheetAccount**](BalanceSheetAccount.md) |  | 
-`equity` | [**\Apideck\Client\Model\BalanceSheetAccount**](BalanceSheetAccount.md) |  | 
+`assets` | [**\Apideck\Client\Model\BalanceSheetAssetsAccount**](BalanceSheetAssetsAccount.md) |  | 
+`liabilities` | [**\Apideck\Client\Model\BalanceSheetLiabilitiesAccount**](BalanceSheetLiabilitiesAccount.md) |  | 
+`equity` | [**\Apideck\Client\Model\BalanceSheetEquityAccount**](BalanceSheetEquityAccount.md) |  | 
 `id` | **string** | A unique identifier for an object. | [optional] 
 `report_name` | **string** | The name of the report | [optional] 
 `start_date` | **string** | The start date of the report | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
-`uncategorized_items` | [**\Apideck\Client\Model\BalanceSheetAccount**](BalanceSheetAccount.md) |  | [optional] 
+`uncategorized_items` | [**\Apideck\Client\Model\BalanceSheetUncategorizedItemsAccount**](BalanceSheetUncategorizedItemsAccount.md) |  | [optional] 
 
 
 
@@ -27,9 +27,9 @@ Name | Type | Description | Notes
 
 ## Referenced Types:
 
-* [`BalanceSheetAccount`](BalanceSheetAccount.md)
-* [`BalanceSheetAccount`](BalanceSheetAccount.md)
-* [`BalanceSheetAccount`](BalanceSheetAccount.md)
+* [`BalanceSheetAssetsAccount`](BalanceSheetAssetsAccount.md)
+* [`BalanceSheetLiabilitiesAccount`](BalanceSheetLiabilitiesAccount.md)
+* [`BalanceSheetEquityAccount`](BalanceSheetEquityAccount.md)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 
 
 
-* [`BalanceSheetAccount`](BalanceSheetAccount.md)
+* [`BalanceSheetUncategorizedItemsAccount`](BalanceSheetUncategorizedItemsAccount.md)
 
 ---
 
