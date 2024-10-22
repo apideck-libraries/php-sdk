@@ -20,8 +20,8 @@ Name | Type | Description | Notes
 `company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `reconciled` | **bool** | Indicates if the transaction has been reconciled. | [optional] 
 `status` | [**\Apideck\Client\Model\PaymentStatus**](PaymentStatus.md) |  | [optional] 
-`type` | [**\Apideck\Client\Model\PaymentType**](PaymentType.md) |  | [optional] 
-`allocations` | [**\Apideck\Client\Model\Allocation[]**](Allocation.md) |  | [optional] 
+`type` | **string** | Type of payment | [optional] 
+`allocations` | [**\Apideck\Client\Model\BillPaymentAllocations[]**](BillPaymentAllocations.md) |  | [optional] 
 `note` | **string** | Note associated with the transaction | [optional] 
 `number` | **string** | Number associated with the transaction | [optional] 
 `tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
@@ -35,6 +35,21 @@ Name | Type | Description | Notes
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
+
+
+
+
+<a name="TYPE"></a>
+## Enum: BillPayment.type
+
+
+* `PAYABLE_CREDIT` (value: `'accounts_payable_credit'`)
+
+* `PAYABLE_OVERPAYMENT` (value: `'accounts_payable_overpayment'`)
+
+* `PAYABLE_PREPAYMENT` (value: `'accounts_payable_prepayment'`)
+
+* `PAYABLE` (value: `'accounts_payable'`)
 
 
 
@@ -55,8 +70,8 @@ Name | Type | Description | Notes
 
 
 * [`PaymentStatus`](PaymentStatus.md)
-* [`PaymentType`](PaymentType.md)
-* [`Allocation`](Allocation.md)
+
+* [`BillPaymentAllocations`](BillPaymentAllocations.md)
 
 
 * [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
