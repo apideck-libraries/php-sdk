@@ -20,6 +20,7 @@
 * [Delete Consumer](#consumersDelete)
 * [Get Consumer](#consumersOne)
 * [Update Consumer](#consumersUpdate)
+* [Create Callback State](#createCallbackState)
 * [Get Resource Custom Fields](#customFieldsAll)
 * [List Custom Mappings](#customMappingsAll)
 * [Get All Consumer Request Logs](#logsAll)
@@ -991,6 +992,72 @@ $apideck = new Apideck($config);
 
 try {
   $response = $apideck->getVaultApi()->consumersUpdate('test_user_id', $consumer);
+  var_dump('API called successfully', $response);
+} catch(ApiException $error) {
+  var_dump('API called failed', $error);
+}
+
+```
+
+
+[[Back to top]](#) [[Back to API list]](../../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../../README.md)
+
+<a name="createCallbackState"></a>
+# Create Callback State
+
+
+Method: **createCallbackState**
+
+```php
+Apideck->getVaultApi()->createCallbackState($data)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **service_id** | **string**| Service ID of the resource to return |
+ **unified_api** | **string**| Unified API |
+ **create_callback_state_data** | [\Apideck\Client\Model\CreateCallbackStateData](../models/\Apideck\Client\Model\CreateCallbackStateData.md)| Callback state data |
+ **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
+ **x_apideck_app_id** | **string**| The ID of your Unify application |
+
+
+
+### Response Type
+
+[`\Apideck\Client\Model\CreateCallbackStateResponse`](../models/\Apideck\Client\Model\CreateCallbackStateResponse.md)
+
+
+
+### HTTP response details
+| Status code | Description |
+|-------------|-------------|
+**200** | Callback state created | 
+**400** | Bad Request | 
+**401** | Unauthorized | 
+**402** | Payment Required | 
+**404** | The specified resource was not found | 
+**422** | Unprocessable | 
+4/5xx | Unexpected error | 
+
+
+## Example Usage
+
+```php
+<?php
+require('vendor/autoload.php');
+
+use Apideck\Client\Apideck;
+use Apideck\Client\ApideckConfiguration;
+use Apideck\Client\ApiException;
+
+$config = new ApideckConfiguration('<insert-api-key-here>', '<insert-application-id-here>', '<insert-consumer-id-here>', '<insert-service-id-here>');
+
+$apideck = new Apideck($config);
+
+try {
+  $response = $apideck->getVaultApi()->createCallbackState('pipedrive', 'crm', $createCallbackState);
   var_dump('API called successfully', $response);
 } catch(ApiException $error) {
   var_dump('API called failed', $error);

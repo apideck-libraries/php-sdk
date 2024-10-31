@@ -123,6 +123,9 @@ docs/Model/CreateAttachmentRequest.md
 docs/Model/CreateAttachmentResponse.md
 docs/Model/CreateBillPaymentResponse.md
 docs/Model/CreateBillResponse.md
+docs/Model/CreateCallbackStateData.md
+docs/Model/CreateCallbackStateResponse.md
+docs/Model/CreateCallbackStateResponseData.md
 docs/Model/CreateCommentResponse.md
 docs/Model/CreateCompanyResponse.md
 docs/Model/CreateConnectionResponse.md
@@ -810,6 +813,9 @@ lib/Model/CreateAttachmentRequest.php
 lib/Model/CreateAttachmentResponse.php
 lib/Model/CreateBillPaymentResponse.php
 lib/Model/CreateBillResponse.php
+lib/Model/CreateCallbackStateData.php
+lib/Model/CreateCallbackStateResponse.php
+lib/Model/CreateCallbackStateResponseData.php
 lib/Model/CreateCommentResponse.php
 lib/Model/CreateCompanyResponse.php
 lib/Model/CreateConnectionResponse.php
@@ -1494,6 +1500,9 @@ test/Model/CreateAttachmentRequestTest.php
 test/Model/CreateAttachmentResponseTest.php
 test/Model/CreateBillPaymentResponseTest.php
 test/Model/CreateBillResponseTest.php
+test/Model/CreateCallbackStateDataTest.php
+test/Model/CreateCallbackStateResponseDataTest.php
+test/Model/CreateCallbackStateResponseTest.php
 test/Model/CreateCommentResponseTest.php
 test/Model/CreateCompanyResponseTest.php
 test/Model/CreateConnectionResponseTest.php
