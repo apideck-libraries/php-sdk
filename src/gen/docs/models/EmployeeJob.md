@@ -17,8 +17,22 @@ Name | Type | Description | Notes
 `hired_at` | **\DateTime** | The date on which the employee was hired by the organization | [optional] 
 `is_primary` | **bool** | Indicates whether this the employee's primary job. | [optional] 
 `is_manager` | **bool** | Indicates whether this the employee has a manager role. | [optional] 
+`status` | **string** | Indicates the status of the job. | [optional] 
 `location` | [**\Apideck\Client\Model\Address**](Address.md) |  | [optional] 
 
+
+
+
+
+<a name="STATUS"></a>
+## Enum: EmployeeJob.status
+
+
+* `ACTIVE` (value: `'active'`)
+
+* `INACTIVE` (value: `'inactive'`)
+
+* `OTHER` (value: `'other'`)
 
 
 
@@ -33,6 +47,7 @@ Name | Type | Description | Notes
 
 * [`Currency`](Currency.md)
 * [`PaymentUnit`](PaymentUnit.md)
+
 
 
 

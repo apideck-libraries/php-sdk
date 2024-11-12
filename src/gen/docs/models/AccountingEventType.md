@@ -53,11 +53,11 @@
 
 * `ACCOUNTING_SUPPLIER_DELETED` (value: `'accounting.supplier.deleted'`)
 
-* `ACCOUNTING_PURCHASE_ORDER_CREATED` (value: `'accounting.purchase-order.created'`)
+* `ACCOUNTING_PURCHASE_ORDER_CREATED` (value: `'accounting.purchase_order.created'`)
 
-* `ACCOUNTING_PURCHASE_ORDER_UPDATED` (value: `'accounting.purchase-order.updated'`)
+* `ACCOUNTING_PURCHASE_ORDER_UPDATED` (value: `'accounting.purchase_order.updated'`)
 
-* `ACCOUNTING_PURCHASE_ORDER_DELETED` (value: `'accounting.purchase-order.deleted'`)
+* `ACCOUNTING_PURCHASE_ORDER_DELETED` (value: `'accounting.purchase_order.deleted'`)
 
 * `ACCOUNTING_EXPENSE_CREATED` (value: `'accounting.expense.created'`)
 
