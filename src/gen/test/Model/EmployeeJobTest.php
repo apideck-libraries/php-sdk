@@ -189,6 +189,15 @@ class EmployeeJobTest extends TestCase
     }
 
     /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "location"
      */
     public function testPropertyLocation()
