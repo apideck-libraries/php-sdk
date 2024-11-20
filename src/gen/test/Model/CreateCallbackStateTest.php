@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateCallbackStateDataTest
+ * CreateCallbackStateTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * CreateCallbackStateDataTest Class Doc Comment
+ * CreateCallbackStateTest Class Doc Comment
  *
  * @category    Class
- * @description CreateCallbackStateData
+ * @description CreateCallbackState
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class CreateCallbackStateDataTest extends TestCase
+class CreateCallbackStateTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class CreateCallbackStateDataTest extends TestCase
     }
 
     /**
-     * Test "CreateCallbackStateData"
+     * Test "CreateCallbackState"
      */
-    public function testCreateCallbackStateData()
+    public function testCreateCallbackState()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

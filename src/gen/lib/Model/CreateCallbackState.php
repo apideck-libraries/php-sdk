@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateCallbackStateData
+ * CreateCallbackState
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * CreateCallbackStateData Class Doc Comment
+ * CreateCallbackState Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -43,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class CreateCallbackStateData implements ModelInterface, ArrayAccess, \JsonSerializable
+class CreateCallbackState implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class CreateCallbackStateData implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CreateCallbackStateData';
+    protected static $openAPIModelName = 'CreateCallbackState';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

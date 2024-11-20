@@ -6786,7 +6786,7 @@ class VaultApi
      *
      * @param  string $service_id Service ID of the resource to return (required)
      * @param  string $unified_api Unified API (required)
-     * @param  \Apideck\Client\Model\CreateCallbackStateData $create_callback_state_data Callback state data (required)
+     * @param  \Apideck\Client\Model\CreateCallbackState $create_callback_state Callback state data (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
@@ -6794,9 +6794,9 @@ class VaultApi
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\CreateCallbackStateResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function createCallbackState($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function createCallbackState($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
     {
-        list($response) = $this->createCallbackStateWithHttpInfo($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id, $x_apideck_app_id);
+        list($response) = $this->createCallbackStateWithHttpInfo($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id, $x_apideck_app_id);
         return $response;
     }
 
@@ -6807,7 +6807,7 @@ class VaultApi
      *
      * @param  string $service_id Service ID of the resource to return (required)
      * @param  string $unified_api Unified API (required)
-     * @param  \Apideck\Client\Model\CreateCallbackStateData $create_callback_state_data Callback state data (required)
+     * @param  \Apideck\Client\Model\CreateCallbackState $create_callback_state Callback state data (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
@@ -6815,9 +6815,9 @@ class VaultApi
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\CreateCallbackStateResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCallbackStateWithHttpInfo($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function createCallbackStateWithHttpInfo($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
     {
-        $request = $this->createCallbackStateRequest($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id, $x_apideck_app_id);
+        $request = $this->createCallbackStateRequest($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id, $x_apideck_app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7024,16 +7024,16 @@ class VaultApi
      *
      * @param  string $service_id Service ID of the resource to return (required)
      * @param  string $unified_api Unified API (required)
-     * @param  \Apideck\Client\Model\CreateCallbackStateData $create_callback_state_data Callback state data (required)
+     * @param  \Apideck\Client\Model\CreateCallbackState $create_callback_state Callback state data (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallbackStateAsync($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function createCallbackStateAsync($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
     {
-        return $this->createCallbackStateAsyncWithHttpInfo($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id, $x_apideck_app_id)
+        return $this->createCallbackStateAsyncWithHttpInfo($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id, $x_apideck_app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7048,17 +7048,17 @@ class VaultApi
      *
      * @param  string $service_id Service ID of the resource to return (required)
      * @param  string $unified_api Unified API (required)
-     * @param  \Apideck\Client\Model\CreateCallbackStateData $create_callback_state_data Callback state data (required)
+     * @param  \Apideck\Client\Model\CreateCallbackState $create_callback_state Callback state data (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallbackStateAsyncWithHttpInfo($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function createCallbackStateAsyncWithHttpInfo($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
     {
         $returnType = '\Apideck\Client\Model\CreateCallbackStateResponse';
-        $request = $this->createCallbackStateRequest($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id, $x_apideck_app_id);
+        $request = $this->createCallbackStateRequest($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id, $x_apideck_app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7098,14 +7098,14 @@ class VaultApi
      *
      * @param  string $service_id Service ID of the resource to return (required)
      * @param  string $unified_api Unified API (required)
-     * @param  \Apideck\Client\Model\CreateCallbackStateData $create_callback_state_data Callback state data (required)
+     * @param  \Apideck\Client\Model\CreateCallbackState $create_callback_state Callback state data (required)
      * @param  string $x_apideck_consumer_id ID of the consumer which you want to get or push data from (optional)
      * @param  string $x_apideck_app_id The ID of your Unify application (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCallbackStateRequest($service_id, $unified_api, $create_callback_state_data, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
+    public function createCallbackStateRequest($service_id, $unified_api, $create_callback_state, $x_apideck_consumer_id = null, $x_apideck_app_id = null)
     {
         // verify the required parameter 'service_id' is set
         if ($service_id === null || (is_array($service_id) && count($service_id) === 0)) {
@@ -7119,10 +7119,10 @@ class VaultApi
                 'Missing the required parameter $unified_api when calling createCallbackState'
             );
         }
-        // verify the required parameter 'create_callback_state_data' is set
-        if ($create_callback_state_data === null || (is_array($create_callback_state_data) && count($create_callback_state_data) === 0)) {
+        // verify the required parameter 'create_callback_state' is set
+        if ($create_callback_state === null || (is_array($create_callback_state) && count($create_callback_state) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $create_callback_state_data when calling createCallbackState'
+                'Missing the required parameter $create_callback_state when calling createCallbackState'
             );
         }
 
@@ -7173,11 +7173,11 @@ class VaultApi
         }
 
         // for model (json/xml)
-        if (isset($create_callback_state_data)) {
+        if (isset($create_callback_state)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($create_callback_state_data));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($create_callback_state));
             } else {
-                $httpBody = $create_callback_state_data;
+                $httpBody = $create_callback_state;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
