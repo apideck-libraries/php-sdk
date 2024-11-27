@@ -64,7 +64,7 @@ class BadRequestResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'error' => 'string',
         'type_name' => 'string',
         'message' => 'string',
-        'detail' => 'AnyOfStringObject',
+        'detail' => 'AnyOfStringMap',
         'ref' => 'string'
     ];
 
@@ -335,7 +335,7 @@ class BadRequestResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets detail
      *
-     * @return AnyOfStringObject|null
+     * @return AnyOfStringMap|null
      */
     public function getDetail()
     {
@@ -345,7 +345,7 @@ class BadRequestResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets detail
      *
-     * @param AnyOfStringObject|null $detail Contains parameter or domain specific information related to the error and why it occurred.
+     * @param AnyOfStringMap|null $detail Contains parameter or domain specific information related to the error and why it occurred.
      *
      * @return self
      */
