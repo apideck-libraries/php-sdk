@@ -1,6 +1,6 @@
 <?php
 /**
- * InvoiceItemsFilterTest
+ * InvoiceItemFilterTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InvoiceItemsFilterTest Class Doc Comment
+ * InvoiceItemFilterTest Class Doc Comment
  *
  * @category    Class
- * @description InvoiceItemsFilter
+ * @description InvoiceItemFilter
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InvoiceItemsFilterTest extends TestCase
+class InvoiceItemFilterTest extends TestCase
 {
 
     /**
@@ -72,18 +72,9 @@ class InvoiceItemsFilterTest extends TestCase
     }
 
     /**
-     * Test "InvoiceItemsFilter"
+     * Test "InvoiceItemFilter"
      */
-    public function testInvoiceItemsFilter()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
+    public function testInvoiceItemFilter()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

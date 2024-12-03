@@ -1,6 +1,6 @@
 <?php
 /**
- * InvoiceItemsFilter
+ * InvoiceItemFilter
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * InvoiceItemsFilter Class Doc Comment
+ * InvoiceItemFilter Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -43,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializable
+class InvoiceItemFilter implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'InvoiceItemsFilter';
+    protected static $openAPIModelName = 'InvoiceItemFilter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +60,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
         'type' => 'string'
     ];
 
@@ -72,7 +71,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
         'type' => null
     ];
 
@@ -103,7 +101,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
         'type' => 'type'
     ];
 
@@ -113,7 +110,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
         'type' => 'setType'
     ];
 
@@ -123,7 +119,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
         'type' => 'getType'
     ];
 
@@ -201,7 +196,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = $data['name'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
     }
 
@@ -237,30 +231,6 @@ class InvoiceItemsFilter implements ModelInterface, ArrayAccess, \JsonSerializab
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name Name of Invoice Items to search for
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets type

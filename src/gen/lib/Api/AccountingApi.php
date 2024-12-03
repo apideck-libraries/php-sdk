@@ -21116,14 +21116,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     * @param  \Apideck\Client\Model\InvoiceItemFilter $filter Apply filters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Apideck\Client\Model\GetInvoiceItemResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse
      */
-    public function invoiceItemsOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function invoiceItemsOne($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
     {
-        list($response) = $this->invoiceItemsOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        list($response) = $this->invoiceItemsOneWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
         return $response;
     }
 
@@ -21138,14 +21139,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     * @param  \Apideck\Client\Model\InvoiceItemFilter $filter Apply filters (optional)
      *
      * @throws \Apideck\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Apideck\Client\Model\GetInvoiceItemResponse|\Apideck\Client\Model\BadRequestResponse|\Apideck\Client\Model\UnauthorizedResponse|\Apideck\Client\Model\PaymentRequiredResponse|\Apideck\Client\Model\NotFoundResponse|\Apideck\Client\Model\UnprocessableResponse|\Apideck\Client\Model\UnexpectedErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function invoiceItemsOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function invoiceItemsOneWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
     {
-        $request = $this->invoiceItemsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        $request = $this->invoiceItemsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -21356,13 +21358,14 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     * @param  \Apideck\Client\Model\InvoiceItemFilter $filter Apply filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function invoiceItemsOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function invoiceItemsOneAsync($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
     {
-        return $this->invoiceItemsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields)
+        return $this->invoiceItemsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -21381,14 +21384,15 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     * @param  \Apideck\Client\Model\InvoiceItemFilter $filter Apply filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function invoiceItemsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function invoiceItemsOneAsyncWithHttpInfo($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
     {
         $returnType = '\Apideck\Client\Model\GetInvoiceItemResponse';
-        $request = $this->invoiceItemsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields);
+        $request = $this->invoiceItemsOneRequest($id, $x_apideck_consumer_id, $x_apideck_app_id, $x_apideck_service_id, $raw, $fields, $filter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -21432,11 +21436,12 @@ class AccountingApi
      * @param  string $x_apideck_service_id Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API. (optional)
      * @param  bool $raw Include raw response. Mostly used for debugging purposes (optional, default to false)
      * @param  string $fields The &#39;fields&#39; parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: &#x60;fields&#x3D;name,email,addresses.city&#x60;&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields \&quot;name\&quot;, \&quot;email\&quot; and \&quot;addresses.city\&quot;. If any other fields are available, they will be excluded. (optional)
+     * @param  \Apideck\Client\Model\InvoiceItemFilter $filter Apply filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function invoiceItemsOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null)
+    public function invoiceItemsOneRequest($id, $x_apideck_consumer_id = null, $x_apideck_app_id = null, $x_apideck_service_id = null, $raw = false, $fields = null, $filter = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -21542,6 +21547,52 @@ class AccountingApi
             }
             else {
                 $queryParams['fields'] = $fields;
+            }
+        }
+        // query params
+
+        if ('raw' === 'filter') {
+            // Support for raw as true/false parameter
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter ? 'true' : 'false';
+            }
+        }
+
+
+        if ($filter !== null && 'sort' === 'filter') {
+          // Support for sort options
+          $sort_data = $sort->jsonSerialize();
+          foreach($sort_data as $key => $value) {
+            $queryParams['sort['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && 'filter' === 'filter') {
+          // Support for filter options
+          $filter_data = $filter->jsonSerialize();
+          foreach($filter_data as $key => $value) {
+            $queryParams['filter['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && 'pass_through' === 'filter') {
+          // Support for pass_through options
+          $pass_through_data = $pass_through->jsonSerialize();
+          foreach($pass_through_data as $key => $value) {
+            $queryParams['pass_through['.$key.']'] = $value;
+          }
+        }
+        if ($filter !== null && !('filter' === 'raw' || 'filter' === 'sort' || 'filter' === 'filter' || 'filter' === 'pass_through')) {
+            if('form' === 'deepObject' && is_array($filter)) {
+                foreach($filter as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['filter'] = $filter;
             }
         }
 
