@@ -1018,7 +1018,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_id** | **string**| Service ID of the resource to return |
  **unified_api** | **string**| Unified API |
- **create_callback_state_data** | [\Apideck\Client\Model\CreateCallbackStateData](../models/\Apideck\Client\Model\CreateCallbackStateData.md)| Callback state data |
+ **create_callback_state** | [\Apideck\Client\Model\CreateCallbackState](../models/\Apideck\Client\Model\CreateCallbackState.md)| Callback state data |
  **x_apideck_consumer_id** | **string**| ID of the consumer which you want to get or push data from |
  **x_apideck_app_id** | **string**| The ID of your Unify application |
 
