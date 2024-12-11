@@ -32,6 +32,9 @@ docs/Model/ActivitiesSort.md
 docs/Model/Activity.md
 docs/Model/ActivityAttendee.md
 docs/Model/Address.md
+docs/Model/AgedCreditors.md
+docs/Model/AgedDebtors.md
+docs/Model/AgedReportFilter.md
 docs/Model/Allocation.md
 docs/Model/Api.md
 docs/Model/ApiResource.md
@@ -55,6 +58,8 @@ docs/Model/AttachmentReference.md
 docs/Model/AttachmentReferenceType.md
 docs/Model/AuthType.md
 docs/Model/BadRequestResponse.md
+docs/Model/BalanceByPeriod.md
+docs/Model/BalanceByTransaction.md
 docs/Model/BalanceSheet.md
 docs/Model/BalanceSheetAccount.md
 docs/Model/BalanceSheetAccountRecord.md
@@ -307,6 +312,8 @@ docs/Model/GetAccountingLocationResponse.md
 docs/Model/GetAccountingLocationsResponse.md
 docs/Model/GetActivitiesResponse.md
 docs/Model/GetActivityResponse.md
+docs/Model/GetAgedCreditorsResponse.md
+docs/Model/GetAgedDebtorsResponse.md
 docs/Model/GetApiResourceCoverageResponse.md
 docs/Model/GetApiResourceResponse.md
 docs/Model/GetApiResponse.md
@@ -529,6 +536,8 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/OrdersSort.md
+docs/Model/OutstandingBalance.md
+docs/Model/OutstandingBalanceByCurrency.md
 docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
 docs/Model/PassThroughQuery.md
@@ -723,6 +732,9 @@ lib/Model/ActivitiesSort.php
 lib/Model/Activity.php
 lib/Model/ActivityAttendee.php
 lib/Model/Address.php
+lib/Model/AgedCreditors.php
+lib/Model/AgedDebtors.php
+lib/Model/AgedReportFilter.php
 lib/Model/Allocation.php
 lib/Model/Api.php
 lib/Model/ApiResource.php
@@ -746,6 +758,8 @@ lib/Model/AttachmentReference.php
 lib/Model/AttachmentReferenceType.php
 lib/Model/AuthType.php
 lib/Model/BadRequestResponse.php
+lib/Model/BalanceByPeriod.php
+lib/Model/BalanceByTransaction.php
 lib/Model/BalanceSheet.php
 lib/Model/BalanceSheetAccount.php
 lib/Model/BalanceSheetAccountRecord.php
@@ -998,6 +1012,8 @@ lib/Model/GetAccountingLocationResponse.php
 lib/Model/GetAccountingLocationsResponse.php
 lib/Model/GetActivitiesResponse.php
 lib/Model/GetActivityResponse.php
+lib/Model/GetAgedCreditorsResponse.php
+lib/Model/GetAgedDebtorsResponse.php
 lib/Model/GetApiResourceCoverageResponse.php
 lib/Model/GetApiResourceResponse.php
 lib/Model/GetApiResponse.php
@@ -1221,6 +1237,8 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/OrdersSort.php
+lib/Model/OutstandingBalance.php
+lib/Model/OutstandingBalanceByCurrency.php
 lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
 lib/Model/PassThroughQuery.php
@@ -1411,6 +1429,9 @@ test/Model/ActivitiesSortTest.php
 test/Model/ActivityAttendeeTest.php
 test/Model/ActivityTest.php
 test/Model/AddressTest.php
+test/Model/AgedCreditorsTest.php
+test/Model/AgedDebtorsTest.php
+test/Model/AgedReportFilterTest.php
 test/Model/AllocationTest.php
 test/Model/ApiResourceCoverageCoverageTest.php
 test/Model/ApiResourceCoverageTest.php
@@ -1434,6 +1455,8 @@ test/Model/AttachmentReferenceTypeTest.php
 test/Model/AttachmentTest.php
 test/Model/AuthTypeTest.php
 test/Model/BadRequestResponseTest.php
+test/Model/BalanceByPeriodTest.php
+test/Model/BalanceByTransactionTest.php
 test/Model/BalanceSheetAccountRecordTest.php
 test/Model/BalanceSheetAccountTest.php
 test/Model/BalanceSheetAssetsAccountTest.php
@@ -1686,6 +1709,8 @@ test/Model/GetAccountingLocationResponseTest.php
 test/Model/GetAccountingLocationsResponseTest.php
 test/Model/GetActivitiesResponseTest.php
 test/Model/GetActivityResponseTest.php
+test/Model/GetAgedCreditorsResponseTest.php
+test/Model/GetAgedDebtorsResponseTest.php
 test/Model/GetApiResourceCoverageResponseTest.php
 test/Model/GetApiResourceResponseTest.php
 test/Model/GetApiResponseTest.php
@@ -1908,6 +1933,8 @@ test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OrdersSortTest.php
+test/Model/OutstandingBalanceByCurrencyTest.php
+test/Model/OutstandingBalanceTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
 test/Model/PassThroughQueryTest.php
