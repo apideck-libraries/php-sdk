@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `context` | **string** |  | [optional] 
-`error` | **array&lt;string,object&gt;** |  | [optional] 
+`error` | **object** |  | [optional] 
 
 
 

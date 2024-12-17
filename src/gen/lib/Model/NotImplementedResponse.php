@@ -64,7 +64,7 @@ class NotImplementedResponse implements ModelInterface, ArrayAccess, \JsonSerial
         'error' => 'string',
         'type_name' => 'string',
         'message' => 'string',
-        'detail' => 'AnyOfStringMap',
+        'detail' => 'AnyOfStringObject',
         'ref' => 'string'
     ];
 
@@ -335,7 +335,7 @@ class NotImplementedResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets detail
      *
-     * @return AnyOfStringMap|null
+     * @return AnyOfStringObject|null
      */
     public function getDetail()
     {
@@ -345,7 +345,7 @@ class NotImplementedResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets detail
      *
-     * @param AnyOfStringMap|null $detail Contains parameter or domain specific information related to the error and why it occurred.
+     * @param AnyOfStringObject|null $detail Contains parameter or domain specific information related to the error and why it occurred.
      *
      * @return self
      */
