@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 `supplier_id` | **string** | The ID of the supplier this entity is linked to. | [optional] 
 `company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `department_id` | **string** | The ID of the department this expense is linked to. | [optional] 
+`payment_type` | **string** | The type of payment for the expense. | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `currency_rate` | **float** | Currency Exchange Rate at the time entity was recorded/generated. | [optional] 
 `type` | **string** | The type of expense. | [optional] 
@@ -27,6 +28,19 @@ Name | Type | Description | Notes
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
+
+
+
+
+<a name="PAYMENT_TYPE"></a>
+## Enum: Expense.payment_type
+
+
+* `CASH` (value: `'cash'`)
+
+* `CHECK` (value: `'check'`)
+
+* `CREDIT_CARD` (value: `'credit_card'`)
 
 
 
@@ -46,6 +60,7 @@ Name | Type | Description | Notes
 
 
 * [`ExpenseLineItem`](ExpenseLineItem.md)
+
 
 
 
