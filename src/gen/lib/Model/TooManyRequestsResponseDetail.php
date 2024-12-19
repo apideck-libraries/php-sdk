@@ -61,7 +61,7 @@ class TooManyRequestsResponseDetail implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'context' => 'string',
-        'error' => 'array<string,object>'
+        'error' => 'object'
     ];
 
     /**
@@ -239,7 +239,7 @@ class TooManyRequestsResponseDetail implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets error
      *
-     * @return array<string,object>|null
+     * @return object|null
      */
     public function getError()
     {
@@ -249,7 +249,7 @@ class TooManyRequestsResponseDetail implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets error
      *
-     * @param array<string,object>|null $error error
+     * @param object|null $error error
      *
      * @return self
      */
