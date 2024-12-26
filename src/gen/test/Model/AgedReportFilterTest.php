@@ -90,6 +90,15 @@ class AgedReportFilterTest extends TestCase
     }
 
     /**
+     * Test attribute "supplier_id"
+     */
+    public function testPropertySupplierId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "report_as_of_date"
      */
     public function testPropertyReportAsOfDate()

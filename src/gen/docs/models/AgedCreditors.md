@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 `report_as_of_date` | **\DateTime** | The cutoff date for transactions included in the report. | [optional] 
 `period_count` | **int** | Number of aging periods shown in the report. | [optional] 
 `period_length` | **int** | Length of each aging period in days. | [optional] 
-`outstanding_balances` | [**\Apideck\Client\Model\OutstandingBalance[]**](OutstandingBalance.md) |  | [optional] 
+`outstanding_balances` | [**\Apideck\Client\Model\OutstandingBalanceBySupplier[]**](OutstandingBalanceBySupplier.md) |  | [optional] 
 
 
 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 
 
-* [`OutstandingBalance`](OutstandingBalance.md)
+* [`OutstandingBalanceBySupplier`](OutstandingBalanceBySupplier.md)
 
 ---
 

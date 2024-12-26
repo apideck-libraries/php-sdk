@@ -61,6 +61,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'currency' => '\Apideck\Client\Model\Currency',
+        'total_amount' => 'float',
         'balances_by_period' => '\Apideck\Client\Model\BalanceByPeriod[]'
     ];
 
@@ -73,6 +74,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPIFormats = [
         'currency' => null,
+        'total_amount' => null,
         'balances_by_period' => null
     ];
 
@@ -104,6 +106,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
      */
     protected static $attributeMap = [
         'currency' => 'currency',
+        'total_amount' => 'total_amount',
         'balances_by_period' => 'balances_by_period'
     ];
 
@@ -114,6 +117,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
      */
     protected static $setters = [
         'currency' => 'setCurrency',
+        'total_amount' => 'setTotalAmount',
         'balances_by_period' => 'setBalancesByPeriod'
     ];
 
@@ -124,6 +128,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
      */
     protected static $getters = [
         'currency' => 'getCurrency',
+        'total_amount' => 'getTotalAmount',
         'balances_by_period' => 'getBalancesByPeriod'
     ];
 
@@ -185,6 +190,7 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
     public function __construct(array $data = null)
     {
         $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['total_amount'] = $data['total_amount'] ?? null;
         $this->container['balances_by_period'] = $data['balances_by_period'] ?? null;
     }
 
@@ -232,6 +238,30 @@ class OutstandingBalanceByCurrency implements ModelInterface, ArrayAccess, \Json
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount
+     *
+     * @return float|null
+     */
+    public function getTotalAmount()
+    {
+        return $this->container['total_amount'];
+    }
+
+    /**
+     * Sets total_amount
+     *
+     * @param float|null $total_amount Total amount of the outstanding balance.
+     *
+     * @return self
+     */
+    public function setTotalAmount($total_amount)
+    {
+        $this->container['total_amount'] = $total_amount;
 
         return $this;
     }

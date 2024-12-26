@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
+`total_amount` | **float** | Total amount of the outstanding balance. | [optional] 
 `balances_by_period` | [**\Apideck\Client\Model\BalanceByPeriod[]**](BalanceByPeriod.md) |  | [optional] 
 
 
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 
 ## Referenced Types:
 * [`Currency`](Currency.md)
+
 * [`BalanceByPeriod`](BalanceByPeriod.md)
 
 ---

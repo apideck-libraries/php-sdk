@@ -536,8 +536,9 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/OrdersSort.md
-docs/Model/OutstandingBalance.md
 docs/Model/OutstandingBalanceByCurrency.md
+docs/Model/OutstandingBalanceByCustomer.md
+docs/Model/OutstandingBalanceBySupplier.md
 docs/Model/Owner.md
 docs/Model/PaginationCoverage.md
 docs/Model/PassThroughQuery.md
@@ -1237,8 +1238,9 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/OrdersSort.php
-lib/Model/OutstandingBalance.php
 lib/Model/OutstandingBalanceByCurrency.php
+lib/Model/OutstandingBalanceByCustomer.php
+lib/Model/OutstandingBalanceBySupplier.php
 lib/Model/Owner.php
 lib/Model/PaginationCoverage.php
 lib/Model/PassThroughQuery.php
@@ -1934,7 +1936,8 @@ test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OrdersSortTest.php
 test/Model/OutstandingBalanceByCurrencyTest.php
-test/Model/OutstandingBalanceTest.php
+test/Model/OutstandingBalanceByCustomerTest.php
+test/Model/OutstandingBalanceBySupplierTest.php
 test/Model/OwnerTest.php
 test/Model/PaginationCoverageTest.php
 test/Model/PassThroughQueryTest.php

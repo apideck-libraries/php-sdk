@@ -1,6 +1,6 @@
 <?php
 /**
- * BalanceByPeriod
+ * OutstandingBalanceBySupplier
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * BalanceByPeriod Class Doc Comment
+ * OutstandingBalanceBySupplier Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -43,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
+class OutstandingBalanceBySupplier implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'BalanceByPeriod';
+    protected static $openAPIModelName = 'OutstandingBalanceBySupplier';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +60,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'start_date' => '\DateTime',
-        'end_date' => '\DateTime',
-        'total_amount' => 'float',
-        'balances_by_transaction' => '\Apideck\Client\Model\BalanceByTransaction[]'
+        'supplier_id' => 'string',
+        'supplier_name' => 'string',
+        'outstanding_balances_by_currency' => '\Apideck\Client\Model\OutstandingBalanceByCurrency[]'
     ];
 
     /**
@@ -74,10 +73,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'start_date' => 'date',
-        'end_date' => 'date',
-        'total_amount' => null,
-        'balances_by_transaction' => null
+        'supplier_id' => null,
+        'supplier_name' => null,
+        'outstanding_balances_by_currency' => null
     ];
 
     /**
@@ -107,10 +105,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'start_date' => 'start_date',
-        'end_date' => 'end_date',
-        'total_amount' => 'total_amount',
-        'balances_by_transaction' => 'balances_by_transaction'
+        'supplier_id' => 'supplier_id',
+        'supplier_name' => 'supplier_name',
+        'outstanding_balances_by_currency' => 'outstanding_balances_by_currency'
     ];
 
     /**
@@ -119,10 +116,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'start_date' => 'setStartDate',
-        'end_date' => 'setEndDate',
-        'total_amount' => 'setTotalAmount',
-        'balances_by_transaction' => 'setBalancesByTransaction'
+        'supplier_id' => 'setSupplierId',
+        'supplier_name' => 'setSupplierName',
+        'outstanding_balances_by_currency' => 'setOutstandingBalancesByCurrency'
     ];
 
     /**
@@ -131,10 +127,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'start_date' => 'getStartDate',
-        'end_date' => 'getEndDate',
-        'total_amount' => 'getTotalAmount',
-        'balances_by_transaction' => 'getBalancesByTransaction'
+        'supplier_id' => 'getSupplierId',
+        'supplier_name' => 'getSupplierName',
+        'outstanding_balances_by_currency' => 'getOutstandingBalancesByCurrency'
     ];
 
     /**
@@ -194,10 +189,9 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['start_date'] = $data['start_date'] ?? null;
-        $this->container['end_date'] = $data['end_date'] ?? null;
-        $this->container['total_amount'] = $data['total_amount'] ?? null;
-        $this->container['balances_by_transaction'] = $data['balances_by_transaction'] ?? null;
+        $this->container['supplier_id'] = $data['supplier_id'] ?? null;
+        $this->container['supplier_name'] = $data['supplier_name'] ?? null;
+        $this->container['outstanding_balances_by_currency'] = $data['outstanding_balances_by_currency'] ?? null;
     }
 
     /**
@@ -225,97 +219,73 @@ class BalanceByPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets start_date
+     * Gets supplier_id
      *
-     * @return \DateTime|null
+     * @return string|null
      */
-    public function getStartDate()
+    public function getSupplierId()
     {
-        return $this->container['start_date'];
+        return $this->container['supplier_id'];
     }
 
     /**
-     * Sets start_date
+     * Sets supplier_id
      *
-     * @param \DateTime|null $start_date The starting date of the period. If not provided, it represents the oldest period, where all transactions due before the specified `end_date` are included.
+     * @param string|null $supplier_id Unique identifier for the supplier.
      *
      * @return self
      */
-    public function setStartDate($start_date)
+    public function setSupplierId($supplier_id)
     {
-        $this->container['start_date'] = $start_date;
+        $this->container['supplier_id'] = $supplier_id;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets supplier_name
      *
-     * @return \DateTime|null
+     * @return string|null
      */
-    public function getEndDate()
+    public function getSupplierName()
     {
-        return $this->container['end_date'];
+        return $this->container['supplier_name'];
     }
 
     /**
-     * Sets end_date
+     * Sets supplier_name
      *
-     * @param \DateTime|null $end_date The ending date of the period. If not provided, it represents an open-ended period starting from the `start_date`, typically capturing future-dated transactions that are not yet aged.
+     * @param string|null $supplier_name Full name of the supplier.
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setSupplierName($supplier_name)
     {
-        $this->container['end_date'] = $end_date;
+        $this->container['supplier_name'] = $supplier_name;
 
         return $this;
     }
 
     /**
-     * Gets total_amount
+     * Gets outstanding_balances_by_currency
      *
-     * @return float|null
+     * @return \Apideck\Client\Model\OutstandingBalanceByCurrency[]|null
      */
-    public function getTotalAmount()
+    public function getOutstandingBalancesByCurrency()
     {
-        return $this->container['total_amount'];
+        return $this->container['outstanding_balances_by_currency'];
     }
 
     /**
-     * Sets total_amount
+     * Sets outstanding_balances_by_currency
      *
-     * @param float|null $total_amount Total amount of the period.
+     * @param \Apideck\Client\Model\OutstandingBalanceByCurrency[]|null $outstanding_balances_by_currency outstanding_balances_by_currency
      *
      * @return self
      */
-    public function setTotalAmount($total_amount)
+    public function setOutstandingBalancesByCurrency($outstanding_balances_by_currency)
     {
-        $this->container['total_amount'] = $total_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets balances_by_transaction
-     *
-     * @return \Apideck\Client\Model\BalanceByTransaction[]|null
-     */
-    public function getBalancesByTransaction()
-    {
-        return $this->container['balances_by_transaction'];
-    }
-
-    /**
-     * Sets balances_by_transaction
-     *
-     * @param \Apideck\Client\Model\BalanceByTransaction[]|null $balances_by_transaction balances_by_transaction
-     *
-     * @return self
-     */
-    public function setBalancesByTransaction($balances_by_transaction)
-    {
-        $this->container['balances_by_transaction'] = $balances_by_transaction;
+        $this->container['outstanding_balances_by_currency'] = $outstanding_balances_by_currency;
 
         return $this;
     }

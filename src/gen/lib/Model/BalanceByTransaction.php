@@ -65,7 +65,8 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         'transaction_type' => 'string',
         'due_date' => '\DateTime',
         'original_amount' => 'float',
-        'outstanding_balance' => 'float'
+        'outstanding_balance' => 'float',
+        'transaction_number' => 'string'
     ];
 
     /**
@@ -81,7 +82,8 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         'transaction_type' => null,
         'due_date' => 'date',
         'original_amount' => null,
-        'outstanding_balance' => null
+        'outstanding_balance' => null,
+        'transaction_number' => null
     ];
 
     /**
@@ -116,7 +118,8 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         'transaction_type' => 'transaction_type',
         'due_date' => 'due_date',
         'original_amount' => 'original_amount',
-        'outstanding_balance' => 'outstanding_balance'
+        'outstanding_balance' => 'outstanding_balance',
+        'transaction_number' => 'transaction_number'
     ];
 
     /**
@@ -130,7 +133,8 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         'transaction_type' => 'setTransactionType',
         'due_date' => 'setDueDate',
         'original_amount' => 'setOriginalAmount',
-        'outstanding_balance' => 'setOutstandingBalance'
+        'outstanding_balance' => 'setOutstandingBalance',
+        'transaction_number' => 'setTransactionNumber'
     ];
 
     /**
@@ -144,7 +148,8 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         'transaction_type' => 'getTransactionType',
         'due_date' => 'getDueDate',
         'original_amount' => 'getOriginalAmount',
-        'outstanding_balance' => 'getOutstandingBalance'
+        'outstanding_balance' => 'getOutstandingBalance',
+        'transaction_number' => 'getTransactionNumber'
     ];
 
     /**
@@ -192,7 +197,7 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
     const TRANSACTION_TYPE_CREDIT_NOTE = 'credit_note';
     const TRANSACTION_TYPE_BILL = 'bill';
     const TRANSACTION_TYPE_PAYMENT = 'payment';
-    const TRANSACTION_TYPE_BILL_PAYMENT = 'bill-payment';
+    const TRANSACTION_TYPE_BILL_PAYMENT = 'bill_payment';
 
     /**
      * Gets allowable values of the enum
@@ -231,6 +236,7 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->container['due_date'] = $data['due_date'] ?? null;
         $this->container['original_amount'] = $data['original_amount'] ?? null;
         $this->container['outstanding_balance'] = $data['outstanding_balance'] ?? null;
+        $this->container['transaction_number'] = $data['transaction_number'] ?? null;
     }
 
     /**
@@ -416,6 +422,30 @@ class BalanceByTransaction implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setOutstandingBalance($outstanding_balance)
     {
         $this->container['outstanding_balance'] = $outstanding_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets transaction_number
+     *
+     * @return string|null
+     */
+    public function getTransactionNumber()
+    {
+        return $this->container['transaction_number'];
+    }
+
+    /**
+     * Sets transaction_number
+     *
+     * @param string|null $transaction_number Transaction number of the transaction.
+     *
+     * @return self
+     */
+    public function setTransactionNumber($transaction_number)
+    {
+        $this->container['transaction_number'] = $transaction_number;
 
         return $this;
     }

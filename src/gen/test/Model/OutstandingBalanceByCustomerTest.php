@@ -1,6 +1,6 @@
 <?php
 /**
- * OutstandingBalanceTest
+ * OutstandingBalanceByCustomerTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OutstandingBalanceTest Class Doc Comment
+ * OutstandingBalanceByCustomerTest Class Doc Comment
  *
  * @category    Class
- * @description OutstandingBalance
+ * @description OutstandingBalanceByCustomer
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OutstandingBalanceTest extends TestCase
+class OutstandingBalanceByCustomerTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class OutstandingBalanceTest extends TestCase
     }
 
     /**
-     * Test "OutstandingBalance"
+     * Test "OutstandingBalanceByCustomer"
      */
-    public function testOutstandingBalance()
+    public function testOutstandingBalanceByCustomer()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

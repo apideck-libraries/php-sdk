@@ -61,6 +61,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'customer_id' => 'string',
+        'supplier_id' => 'string',
         'report_as_of_date' => 'string',
         'period_count' => 'int',
         'period_length' => 'int'
@@ -75,6 +76,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'customer_id' => null,
+        'supplier_id' => null,
         'report_as_of_date' => null,
         'period_count' => null,
         'period_length' => null
@@ -108,6 +110,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'customer_id' => 'customer_id',
+        'supplier_id' => 'supplier_id',
         'report_as_of_date' => 'report_as_of_date',
         'period_count' => 'period_count',
         'period_length' => 'period_length'
@@ -120,6 +123,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'customer_id' => 'setCustomerId',
+        'supplier_id' => 'setSupplierId',
         'report_as_of_date' => 'setReportAsOfDate',
         'period_count' => 'setPeriodCount',
         'period_length' => 'setPeriodLength'
@@ -132,6 +136,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'customer_id' => 'getCustomerId',
+        'supplier_id' => 'getSupplierId',
         'report_as_of_date' => 'getReportAsOfDate',
         'period_count' => 'getPeriodCount',
         'period_length' => 'getPeriodLength'
@@ -195,6 +200,7 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['customer_id'] = $data['customer_id'] ?? null;
+        $this->container['supplier_id'] = $data['supplier_id'] ?? null;
         $this->container['report_as_of_date'] = $data['report_as_of_date'] ?? null;
         $this->container['period_count'] = $data['period_count'] ?? null;
         $this->container['period_length'] = $data['period_length'] ?? null;
@@ -260,6 +266,30 @@ class AgedReportFilter implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets supplier_id
+     *
+     * @return string|null
+     */
+    public function getSupplierId()
+    {
+        return $this->container['supplier_id'];
+    }
+
+    /**
+     * Sets supplier_id
+     *
+     * @param string|null $supplier_id Filter by supplier id
+     *
+     * @return self
+     */
+    public function setSupplierId($supplier_id)
+    {
+        $this->container['supplier_id'] = $supplier_id;
 
         return $this;
     }

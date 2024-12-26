@@ -133,4 +133,13 @@ class BalanceByTransactionTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "transaction_number"
+     */
+    public function testPropertyTransactionNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
