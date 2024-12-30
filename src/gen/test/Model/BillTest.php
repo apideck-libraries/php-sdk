@@ -405,6 +405,15 @@ class BillTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "custom_mappings"
      */
     public function testPropertyCustomMappings()
