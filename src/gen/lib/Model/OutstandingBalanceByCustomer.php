@@ -1,6 +1,6 @@
 <?php
 /**
- * OutstandingBalance
+ * OutstandingBalanceByCustomer
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Apideck\Client\ObjectSerializer;
 
 /**
- * OutstandingBalance Class Doc Comment
+ * OutstandingBalanceByCustomer Class Doc Comment
  *
  * @category Class
  * @package  Apideck\Client
@@ -43,7 +43,7 @@ use \Apideck\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class OutstandingBalance implements ModelInterface, ArrayAccess, \JsonSerializable
+class OutstandingBalanceByCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class OutstandingBalance implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OutstandingBalance';
+    protected static $openAPIModelName = 'OutstandingBalanceByCustomer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -231,7 +231,7 @@ class OutstandingBalance implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customer_id
      *
-     * @param string|null $customer_id Unique identifier for the customer or supplier.
+     * @param string|null $customer_id Unique identifier for the customer.
      *
      * @return self
      */
@@ -255,7 +255,7 @@ class OutstandingBalance implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customer_name
      *
-     * @param string|null $customer_name Full name of the customer or supplier.
+     * @param string|null $customer_name Full name of the customer.
      *
      * @return self
      */

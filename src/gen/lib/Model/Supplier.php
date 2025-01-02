@@ -86,6 +86,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'string',
         'channel' => 'string',
         'custom_mappings' => 'object',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'updated_by' => 'string',
         'created_by' => 'string',
         'updated_at' => '\DateTime',
@@ -129,6 +130,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => null,
         'channel' => null,
         'custom_mappings' => null,
+        'custom_fields' => null,
         'updated_by' => null,
         'created_by' => null,
         'updated_at' => 'date-time',
@@ -191,6 +193,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'payment_method',
         'channel' => 'channel',
         'custom_mappings' => 'custom_mappings',
+        'custom_fields' => 'custom_fields',
         'updated_by' => 'updated_by',
         'created_by' => 'created_by',
         'updated_at' => 'updated_at',
@@ -232,6 +235,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'setPaymentMethod',
         'channel' => 'setChannel',
         'custom_mappings' => 'setCustomMappings',
+        'custom_fields' => 'setCustomFields',
         'updated_by' => 'setUpdatedBy',
         'created_by' => 'setCreatedBy',
         'updated_at' => 'setUpdatedAt',
@@ -273,6 +277,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         'payment_method' => 'getPaymentMethod',
         'channel' => 'getChannel',
         'custom_mappings' => 'getCustomMappings',
+        'custom_fields' => 'getCustomFields',
         'updated_by' => 'getUpdatedBy',
         'created_by' => 'getCreatedBy',
         'updated_at' => 'getUpdatedAt',
@@ -386,6 +391,7 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['payment_method'] = $data['payment_method'] ?? null;
         $this->container['channel'] = $data['channel'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['updated_by'] = $data['updated_by'] ?? null;
         $this->container['created_by'] = $data['created_by'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
@@ -1061,6 +1067,30 @@ class Supplier implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomMappings($custom_mappings)
     {
         $this->container['custom_mappings'] = $custom_mappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

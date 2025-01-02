@@ -96,6 +96,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
         'row_version' => 'string',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]',
         'custom_mappings' => 'object',
         'pass_through' => 'object[]',
         'accounting_period' => 'string'
@@ -145,6 +146,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'date-time',
         'created_at' => 'date-time',
         'row_version' => null,
+        'custom_fields' => null,
         'custom_mappings' => null,
         'pass_through' => null,
         'accounting_period' => null
@@ -213,6 +215,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'updated_at',
         'created_at' => 'created_at',
         'row_version' => 'row_version',
+        'custom_fields' => 'custom_fields',
         'custom_mappings' => 'custom_mappings',
         'pass_through' => 'pass_through',
         'accounting_period' => 'accounting_period'
@@ -260,6 +263,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt',
         'row_version' => 'setRowVersion',
+        'custom_fields' => 'setCustomFields',
         'custom_mappings' => 'setCustomMappings',
         'pass_through' => 'setPassThrough',
         'accounting_period' => 'setAccountingPeriod'
@@ -307,6 +311,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt',
         'row_version' => 'getRowVersion',
+        'custom_fields' => 'getCustomFields',
         'custom_mappings' => 'getCustomMappings',
         'pass_through' => 'getPassThrough',
         'accounting_period' => 'getAccountingPeriod'
@@ -432,6 +437,7 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['row_version'] = $data['row_version'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
         $this->container['custom_mappings'] = $data['custom_mappings'] ?? null;
         $this->container['pass_through'] = $data['pass_through'] ?? null;
         $this->container['accounting_period'] = $data['accounting_period'] ?? null;
@@ -1340,6 +1346,30 @@ class Bill implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRowVersion($row_version)
     {
         $this->container['row_version'] = $row_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

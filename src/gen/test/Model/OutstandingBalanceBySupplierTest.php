@@ -1,6 +1,6 @@
 <?php
 /**
- * OutstandingBalanceByCurrencyTest
+ * OutstandingBalanceBySupplierTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace Apideck\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OutstandingBalanceByCurrencyTest Class Doc Comment
+ * OutstandingBalanceBySupplierTest Class Doc Comment
  *
  * @category    Class
- * @description OutstandingBalanceByCurrency
+ * @description OutstandingBalanceBySupplier
  * @package     Apideck\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OutstandingBalanceByCurrencyTest extends TestCase
+class OutstandingBalanceBySupplierTest extends TestCase
 {
 
     /**
@@ -72,36 +72,36 @@ class OutstandingBalanceByCurrencyTest extends TestCase
     }
 
     /**
-     * Test "OutstandingBalanceByCurrency"
+     * Test "OutstandingBalanceBySupplier"
      */
-    public function testOutstandingBalanceByCurrency()
+    public function testOutstandingBalanceBySupplier()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "supplier_id"
      */
-    public function testPropertyCurrency()
+    public function testPropertySupplierId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "total_amount"
+     * Test attribute "supplier_name"
      */
-    public function testPropertyTotalAmount()
+    public function testPropertySupplierName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "balances_by_period"
+     * Test attribute "outstanding_balances_by_currency"
      */
-    public function testPropertyBalancesByPeriod()
+    public function testPropertyOutstandingBalancesByCurrency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

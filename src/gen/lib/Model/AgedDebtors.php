@@ -64,7 +64,7 @@ class AgedDebtors implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_as_of_date' => '\DateTime',
         'period_count' => 'int',
         'period_length' => 'int',
-        'outstanding_balances' => '\Apideck\Client\Model\OutstandingBalance[]'
+        'outstanding_balances' => '\Apideck\Client\Model\OutstandingBalanceByCustomer[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class AgedDebtors implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets outstanding_balances
      *
-     * @return \Apideck\Client\Model\OutstandingBalance[]|null
+     * @return \Apideck\Client\Model\OutstandingBalanceByCustomer[]|null
      */
     public function getOutstandingBalances()
     {
@@ -339,7 +339,7 @@ class AgedDebtors implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets outstanding_balances
      *
-     * @param \Apideck\Client\Model\OutstandingBalance[]|null $outstanding_balances outstanding_balances
+     * @param \Apideck\Client\Model\OutstandingBalanceByCustomer[]|null $outstanding_balances outstanding_balances
      *
      * @return self
      */

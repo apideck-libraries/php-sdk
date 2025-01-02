@@ -80,7 +80,8 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => '\DateTime',
         'created_at' => '\DateTime',
         'pass_through' => 'object[]',
-        'subsidiaries' => 'object[]'
+        'subsidiaries' => 'object[]',
+        'custom_fields' => '\Apideck\Client\Model\CustomField[]'
     ];
 
     /**
@@ -111,7 +112,8 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'date-time',
         'created_at' => 'date-time',
         'pass_through' => null,
-        'subsidiaries' => null
+        'subsidiaries' => null,
+        'custom_fields' => null
     ];
 
     /**
@@ -161,7 +163,8 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'updated_at',
         'created_at' => 'created_at',
         'pass_through' => 'pass_through',
-        'subsidiaries' => 'subsidiaries'
+        'subsidiaries' => 'subsidiaries',
+        'custom_fields' => 'custom_fields'
     ];
 
     /**
@@ -190,7 +193,8 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'setUpdatedAt',
         'created_at' => 'setCreatedAt',
         'pass_through' => 'setPassThrough',
-        'subsidiaries' => 'setSubsidiaries'
+        'subsidiaries' => 'setSubsidiaries',
+        'custom_fields' => 'setCustomFields'
     ];
 
     /**
@@ -219,7 +223,8 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'updated_at' => 'getUpdatedAt',
         'created_at' => 'getCreatedAt',
         'pass_through' => 'getPassThrough',
-        'subsidiaries' => 'getSubsidiaries'
+        'subsidiaries' => 'getSubsidiaries',
+        'custom_fields' => 'getCustomFields'
     ];
 
     /**
@@ -317,6 +322,7 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['pass_through'] = $data['pass_through'] ?? null;
         $this->container['subsidiaries'] = $data['subsidiaries'] ?? null;
+        $this->container['custom_fields'] = $data['custom_fields'] ?? null;
     }
 
     /**
@@ -871,6 +877,30 @@ class TaxRate implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSubsidiaries($subsidiaries)
     {
         $this->container['subsidiaries'] = $subsidiaries;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \Apideck\Client\Model\CustomField[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \Apideck\Client\Model\CustomField[]|null $custom_fields custom_fields
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->container['custom_fields'] = $custom_fields;
 
         return $this;
     }

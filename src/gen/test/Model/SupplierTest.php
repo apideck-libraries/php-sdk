@@ -315,6 +315,15 @@ class SupplierTest extends TestCase
     }
 
     /**
+     * Test attribute "custom_fields"
+     */
+    public function testPropertyCustomFields()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "updated_by"
      */
     public function testPropertyUpdatedBy()
