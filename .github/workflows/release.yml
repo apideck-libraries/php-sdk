@@ -18,5 +18,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           commit: main
-          tag: 3.7.1
+          tag: 3.8.0
 
