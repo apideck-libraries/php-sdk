@@ -267,6 +267,7 @@ docs/Model/EcommerceCustomer.md
 docs/Model/EcommerceCustomerAddresses.md
 docs/Model/EcommerceCustomersFilter.md
 docs/Model/EcommerceDiscount.md
+docs/Model/EcommerceEventType.md
 docs/Model/EcommerceOrder.md
 docs/Model/EcommerceOrderLineItem.md
 docs/Model/EcommerceOrderStatus.md
@@ -467,6 +468,7 @@ docs/Model/InvoiceItem.md
 docs/Model/InvoiceItemFilter.md
 docs/Model/InvoiceItemSalesDetails.md
 docs/Model/InvoiceItemsFilter.md
+docs/Model/InvoiceItemsSort.md
 docs/Model/InvoiceLineItem.md
 docs/Model/InvoiceResponse.md
 docs/Model/InvoicesFilter.md
@@ -968,6 +970,7 @@ lib/Model/EcommerceCustomer.php
 lib/Model/EcommerceCustomerAddresses.php
 lib/Model/EcommerceCustomersFilter.php
 lib/Model/EcommerceDiscount.php
+lib/Model/EcommerceEventType.php
 lib/Model/EcommerceOrder.php
 lib/Model/EcommerceOrderLineItem.php
 lib/Model/EcommerceOrderStatus.php
@@ -1168,6 +1171,7 @@ lib/Model/InvoiceItem.php
 lib/Model/InvoiceItemFilter.php
 lib/Model/InvoiceItemSalesDetails.php
 lib/Model/InvoiceItemsFilter.php
+lib/Model/InvoiceItemsSort.php
 lib/Model/InvoiceLineItem.php
 lib/Model/InvoiceResponse.php
 lib/Model/InvoicesFilter.php
@@ -1666,6 +1670,7 @@ test/Model/EcommerceCustomerAddressesTest.php
 test/Model/EcommerceCustomerTest.php
 test/Model/EcommerceCustomersFilterTest.php
 test/Model/EcommerceDiscountTest.php
+test/Model/EcommerceEventTypeTest.php
 test/Model/EcommerceOrderLineItemTest.php
 test/Model/EcommerceOrderStatusTest.php
 test/Model/EcommerceOrderTest.php
@@ -1865,6 +1870,7 @@ test/Model/InvoiceItemFilterTest.php
 test/Model/InvoiceItemSalesDetailsTest.php
 test/Model/InvoiceItemTest.php
 test/Model/InvoiceItemsFilterTest.php
+test/Model/InvoiceItemsSortTest.php
 test/Model/InvoiceLineItemTest.php
 test/Model/InvoiceResponseTest.php
 test/Model/InvoiceTest.php
