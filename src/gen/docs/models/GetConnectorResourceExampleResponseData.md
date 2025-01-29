@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 `service_id` | **string** | Service provider identifier | [optional] 
 `resource` | [**\Apideck\Client\Model\LinkedConnectorResource**](LinkedConnectorResource.md) |  | [optional] 
 `example_response` | **object** |  | [optional] 
+`workflow_examples` | **array&lt;string,object&gt;** | If the resource has a workflow, this will contain the example response for each step | [optional] 
 
 
 
@@ -18,6 +19,7 @@ Name | Type | Description | Notes
 * [`UnifiedApiId`](UnifiedApiId.md)
 
 * [`LinkedConnectorResource`](LinkedConnectorResource.md)
+
 
 
 ---
