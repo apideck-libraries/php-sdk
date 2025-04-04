@@ -1068,6 +1068,7 @@ Name | Type | Description  | Notes
  **cursor** | **string**| Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. |
  **filter** | [\Apideck\Client\Model\FilesFilter](../models/\Apideck\Client\Model\FilesFilter.md)| Apply filters |
  **limit** | [**int**] | Number of results to return. Minimum 1, Maximum 200, Default 20 | (optional) defaults to 20
+ **raw** | [**bool**] | Include raw response. Mostly used for debugging purposes | (optional) defaults to false
 
 
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 `status_code` | **int** | HTTP Response Status Code | 
 `status` | **string** | HTTP Response Status | 
 `data` | [**\Apideck\Client\Model\ConnectorResource**](ConnectorResource.md) |  | 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 `meta` | [**\Apideck\Client\Model\Meta**](Meta.md) |  | [optional] 
 `links` | [**\Apideck\Client\Model\Links**](Links.md) |  | [optional] 
 
@@ -19,6 +20,7 @@ Name | Type | Description | Notes
 
 
 * [`ConnectorResource`](ConnectorResource.md)
+
 * [`Meta`](Meta.md)
 * [`Links`](Links.md)
 

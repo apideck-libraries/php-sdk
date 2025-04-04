@@ -5,16 +5,27 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`label` | **string** |  | [optional] 
-`value` | [**AnyOfStringIntegerNumberBooleanArray**](AnyOfStringIntegerNumberBooleanArray.md) |  | [optional] 
+`label` | **string** |  | 
+`option_type` | **string** |  | 
+`value` | [**OneOfStringIntegerNumberBooleanArray**](OneOfStringIntegerNumberBooleanArray.md) |  | [optional] 
 
+
+
+
+
+<a name="OPTION_TYPE"></a>
+## Enum: SimpleFormFieldOption.option_type
+
+
+* `SIMPLE` (value: `'simple'`)
 
 
 
 
 ## Referenced Types:
 
-* [`AnyOfStringIntegerNumberBooleanArray`](AnyOfStringIntegerNumberBooleanArray.md)
+
+* [`OneOfStringIntegerNumberBooleanArray`](OneOfStringIntegerNumberBooleanArray.md)
 
 ---
 

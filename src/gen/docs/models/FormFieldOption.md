@@ -5,20 +5,31 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`label` | **string** |  | [optional] 
-`value` | [**AnyOfStringIntegerNumberBooleanArray**](AnyOfStringIntegerNumberBooleanArray.md) |  | [optional] 
+`label` | **string** |  | 
+`option_type` | **string** |  | 
+`options` | [**\Apideck\Client\Model\SimpleFormFieldOption[]**](SimpleFormFieldOption.md) |  | 
+`value` | [**OneOfStringIntegerNumberBooleanArray**](OneOfStringIntegerNumberBooleanArray.md) |  | [optional] 
 `id` | **string** |  | [optional] 
-`options` | [**\Apideck\Client\Model\SimpleFormFieldOption[]**](SimpleFormFieldOption.md) |  | [optional] 
 
+
+
+
+
+<a name="OPTION_TYPE"></a>
+## Enum: FormFieldOption.option_type
+
+
+* `GROUP` (value: `'group'`)
 
 
 
 
 ## Referenced Types:
 
-* [`AnyOfStringIntegerNumberBooleanArray`](AnyOfStringIntegerNumberBooleanArray.md)
 
 * [`SimpleFormFieldOption`](SimpleFormFieldOption.md)
+* [`OneOfStringIntegerNumberBooleanArray`](OneOfStringIntegerNumberBooleanArray.md)
+
 
 ---
 

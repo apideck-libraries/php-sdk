@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 `data` | [**\Apideck\Client\Model\TrackingCategory[]**](TrackingCategory.md) |  | 
 `meta` | [**\Apideck\Client\Model\Meta**](Meta.md) |  | [optional] 
 `links` | [**\Apideck\Client\Model\Links**](Links.md) |  | [optional] 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 
 
 
@@ -27,6 +28,7 @@ Name | Type | Description | Notes
 * [`TrackingCategory`](TrackingCategory.md)
 * [`Meta`](Meta.md)
 * [`Links`](Links.md)
+
 
 ---
 
