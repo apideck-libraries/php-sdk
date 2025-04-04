@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 `consumer_id` | **string** |  | [optional] 
 `auth_type` | [**\Apideck\Client\Model\AuthType**](AuthType.md) |  | [optional] 
 `enabled` | **bool** |  | [optional] 
-`settings` | **object** | Connection settings. Values will persist to &#x60;form_fields&#x60; with corresponding id | [optional] 
+`settings` | **array&lt;string,object&gt;** | Connection settings. Values will persist to &#x60;form_fields&#x60; with corresponding id | [optional] 
 `metadata` | **array&lt;string,object&gt;** | Attach your own consumer specific metadata | [optional] 
 `created_at` | **string** |  | [optional] 
 `updated_at` | **string** |  | [optional] 

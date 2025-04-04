@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `id` | **string** | A unique identifier for an object. | 
-`total_amount` | **float** | The total amount of the transaction | 
+`total_amount` | **float** | The total amount of the transaction or record | 
 `transaction_date` | **\DateTime** | The date of the transaction - YYYY:MM::DDThh:mm:ss.sTZD | 
 `downstream_id` | **string** | The third-party API ID of original entity | [optional] 
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 

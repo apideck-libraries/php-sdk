@@ -119,6 +119,7 @@ docs/Model/Contact.md
 docs/Model/ContactsFilter.md
 docs/Model/ContactsSort.md
 docs/Model/CopyFolderRequest.md
+docs/Model/CostOfGoodsSold.md
 docs/Model/CreateAccountingDepartmentResponse.md
 docs/Model/CreateAccountingLocationResponse.md
 docs/Model/CreateActivityResponse.md
@@ -297,6 +298,7 @@ docs/Model/Error.md
 docs/Model/ExecuteWebhookResponse.md
 docs/Model/Expense.md
 docs/Model/ExpenseLineItem.md
+docs/Model/Expenses.md
 docs/Model/FileStorageEventType.md
 docs/Model/FileType.md
 docs/Model/FilesFilter.md
@@ -462,6 +464,7 @@ docs/Model/HrisEventType.md
 docs/Model/HrisJob.md
 docs/Model/HrisJobLocation.md
 docs/Model/HrisJobs.md
+docs/Model/Income.md
 docs/Model/IntegrationState.md
 docs/Model/Invoice.md
 docs/Model/InvoiceItem.md
@@ -538,6 +541,8 @@ docs/Model/OrderRefunds.md
 docs/Model/OrderTenders.md
 docs/Model/OrderType.md
 docs/Model/OrdersSort.md
+docs/Model/OtherExpenses.md
+docs/Model/OtherIncome.md
 docs/Model/OutstandingBalanceByCurrency.md
 docs/Model/OutstandingBalanceByCustomer.md
 docs/Model/OutstandingBalanceBySupplier.md
@@ -568,14 +573,11 @@ docs/Model/PosPaymentExternalDetails.md
 docs/Model/Price.md
 docs/Model/ProbationPeriod.md
 docs/Model/ProfitAndLoss.md
-docs/Model/ProfitAndLossExpenses.md
 docs/Model/ProfitAndLossFilter.md
-docs/Model/ProfitAndLossGrossProfit.md
-docs/Model/ProfitAndLossIncome.md
-docs/Model/ProfitAndLossNetIncome.md
-docs/Model/ProfitAndLossNetOperatingIncome.md
+docs/Model/ProfitAndLossIndicator.md
 docs/Model/ProfitAndLossRecord.md
 docs/Model/ProfitAndLossSection.md
+docs/Model/ProfitAndLossType.md
 docs/Model/PurchaseOrder.md
 docs/Model/PurchaseOrdersFilter.md
 docs/Model/PurchaseOrdersSort.md
@@ -619,6 +621,7 @@ docs/Model/TooManyRequestsResponseDetail.md
 docs/Model/TrackingCategory.md
 docs/Model/TrackingItem.md
 docs/Model/UnauthorizedResponse.md
+docs/Model/UncategorizedAccounts.md
 docs/Model/UnexpectedErrorResponse.md
 docs/Model/UnifiedApiId.md
 docs/Model/UnifiedFile.md
@@ -822,6 +825,7 @@ lib/Model/Contact.php
 lib/Model/ContactsFilter.php
 lib/Model/ContactsSort.php
 lib/Model/CopyFolderRequest.php
+lib/Model/CostOfGoodsSold.php
 lib/Model/CreateAccountingDepartmentResponse.php
 lib/Model/CreateAccountingLocationResponse.php
 lib/Model/CreateActivityResponse.php
@@ -1000,6 +1004,7 @@ lib/Model/Error.php
 lib/Model/ExecuteWebhookResponse.php
 lib/Model/Expense.php
 lib/Model/ExpenseLineItem.php
+lib/Model/Expenses.php
 lib/Model/FileStorageEventType.php
 lib/Model/FileType.php
 lib/Model/FilesFilter.php
@@ -1165,6 +1170,7 @@ lib/Model/HrisEventType.php
 lib/Model/HrisJob.php
 lib/Model/HrisJobLocation.php
 lib/Model/HrisJobs.php
+lib/Model/Income.php
 lib/Model/IntegrationState.php
 lib/Model/Invoice.php
 lib/Model/InvoiceItem.php
@@ -1242,6 +1248,8 @@ lib/Model/OrderRefunds.php
 lib/Model/OrderTenders.php
 lib/Model/OrderType.php
 lib/Model/OrdersSort.php
+lib/Model/OtherExpenses.php
+lib/Model/OtherIncome.php
 lib/Model/OutstandingBalanceByCurrency.php
 lib/Model/OutstandingBalanceByCustomer.php
 lib/Model/OutstandingBalanceBySupplier.php
@@ -1272,14 +1280,11 @@ lib/Model/PosPaymentExternalDetails.php
 lib/Model/Price.php
 lib/Model/ProbationPeriod.php
 lib/Model/ProfitAndLoss.php
-lib/Model/ProfitAndLossExpenses.php
 lib/Model/ProfitAndLossFilter.php
-lib/Model/ProfitAndLossGrossProfit.php
-lib/Model/ProfitAndLossIncome.php
-lib/Model/ProfitAndLossNetIncome.php
-lib/Model/ProfitAndLossNetOperatingIncome.php
+lib/Model/ProfitAndLossIndicator.php
 lib/Model/ProfitAndLossRecord.php
 lib/Model/ProfitAndLossSection.php
+lib/Model/ProfitAndLossType.php
 lib/Model/PurchaseOrder.php
 lib/Model/PurchaseOrdersFilter.php
 lib/Model/PurchaseOrdersSort.php
@@ -1323,6 +1328,7 @@ lib/Model/TooManyRequestsResponseDetail.php
 lib/Model/TrackingCategory.php
 lib/Model/TrackingItem.php
 lib/Model/UnauthorizedResponse.php
+lib/Model/UncategorizedAccounts.php
 lib/Model/UnexpectedErrorResponse.php
 lib/Model/UnifiedApiId.php
 lib/Model/UnifiedFile.php
@@ -1522,6 +1528,7 @@ test/Model/ContactTest.php
 test/Model/ContactsFilterTest.php
 test/Model/ContactsSortTest.php
 test/Model/CopyFolderRequestTest.php
+test/Model/CostOfGoodsSoldTest.php
 test/Model/CreateAccountingDepartmentResponseTest.php
 test/Model/CreateAccountingLocationResponseTest.php
 test/Model/CreateActivityResponseTest.php
@@ -1700,6 +1707,7 @@ test/Model/ErrorTest.php
 test/Model/ExecuteWebhookResponseTest.php
 test/Model/ExpenseLineItemTest.php
 test/Model/ExpenseTest.php
+test/Model/ExpensesTest.php
 test/Model/FileStorageEventTypeTest.php
 test/Model/FileTypeTest.php
 test/Model/FilesFilterTest.php
@@ -1865,6 +1873,7 @@ test/Model/HrisEventTypeTest.php
 test/Model/HrisJobLocationTest.php
 test/Model/HrisJobTest.php
 test/Model/HrisJobsTest.php
+test/Model/IncomeTest.php
 test/Model/IntegrationStateTest.php
 test/Model/InvoiceItemFilterTest.php
 test/Model/InvoiceItemSalesDetailsTest.php
@@ -1941,6 +1950,8 @@ test/Model/OrderTendersTest.php
 test/Model/OrderTest.php
 test/Model/OrderTypeTest.php
 test/Model/OrdersSortTest.php
+test/Model/OtherExpensesTest.php
+test/Model/OtherIncomeTest.php
 test/Model/OutstandingBalanceByCurrencyTest.php
 test/Model/OutstandingBalanceByCustomerTest.php
 test/Model/OutstandingBalanceBySupplierTest.php
@@ -1970,15 +1981,12 @@ test/Model/PosPaymentExternalDetailsTest.php
 test/Model/PosPaymentTest.php
 test/Model/PriceTest.php
 test/Model/ProbationPeriodTest.php
-test/Model/ProfitAndLossExpensesTest.php
 test/Model/ProfitAndLossFilterTest.php
-test/Model/ProfitAndLossGrossProfitTest.php
-test/Model/ProfitAndLossIncomeTest.php
-test/Model/ProfitAndLossNetIncomeTest.php
-test/Model/ProfitAndLossNetOperatingIncomeTest.php
+test/Model/ProfitAndLossIndicatorTest.php
 test/Model/ProfitAndLossRecordTest.php
 test/Model/ProfitAndLossSectionTest.php
 test/Model/ProfitAndLossTest.php
+test/Model/ProfitAndLossTypeTest.php
 test/Model/PurchaseOrderTest.php
 test/Model/PurchaseOrdersFilterTest.php
 test/Model/PurchaseOrdersSortTest.php
@@ -2022,6 +2030,7 @@ test/Model/TooManyRequestsResponseTest.php
 test/Model/TrackingCategoryTest.php
 test/Model/TrackingItemTest.php
 test/Model/UnauthorizedResponseTest.php
+test/Model/UncategorizedAccountsTest.php
 test/Model/UnexpectedErrorResponseTest.php
 test/Model/UnifiedApiIdTest.php
 test/Model/UnifiedFilePermissionsTest.php

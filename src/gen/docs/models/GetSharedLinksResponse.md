@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 `resource` | **string** | Unified API resource name | 
 `operation` | **string** | Operation performed | 
 `data` | [**\Apideck\Client\Model\SharedLink[]**](SharedLink.md) |  | 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 `meta` | [**\Apideck\Client\Model\Meta**](Meta.md) |  | [optional] 
 `links` | [**\Apideck\Client\Model\Links**](Links.md) |  | [optional] 
 
@@ -25,6 +26,7 @@ Name | Type | Description | Notes
 
 
 * [`SharedLink`](SharedLink.md)
+
 * [`Meta`](Meta.md)
 * [`Links`](Links.md)
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 `resource` | **string** | Unified API resource name | 
 `operation` | **string** | Operation performed | 
 `data` | [**\Apideck\Client\Model\TaxRate**](TaxRate.md) |  | 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 
 
 
@@ -23,6 +24,7 @@ Name | Type | Description | Notes
 
 
 * [`TaxRate`](TaxRate.md)
+
 
 ---
 

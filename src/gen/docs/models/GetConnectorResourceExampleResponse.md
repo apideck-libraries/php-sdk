@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 `status_code` | **int** | HTTP Response Status Code | 
 `status` | **string** | HTTP Response Status | 
 `data` | [**\Apideck\Client\Model\GetConnectorResourceExampleResponseData**](GetConnectorResourceExampleResponseData.md) |  | 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 
 
 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 
 
 * [`GetConnectorResourceExampleResponseData`](GetConnectorResourceExampleResponseData.md)
+
 
 ---
 

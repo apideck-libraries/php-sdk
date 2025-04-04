@@ -127,6 +127,12 @@
 
 * `ACCOUNTING_PURCHASE_ORDER_DELETED` (value: `'accounting.purchase_order.deleted'`)
 
+* `ACCOUNTING_CREDIT_NOTE_CREATED` (value: `'accounting.credit_note.created'`)
+
+* `ACCOUNTING_CREDIT_NOTE_UPDATED` (value: `'accounting.credit_note.updated'`)
+
+* `ACCOUNTING_CREDIT_NOTE_DELETED` (value: `'accounting.credit_note.deleted'`)
+
 * `POS_ORDER_CREATED` (value: `'pos.order.created'`)
 
 * `POS_ORDER_UPDATED` (value: `'pos.order.updated'`)

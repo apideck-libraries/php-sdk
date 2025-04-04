@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 `tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `customer` | [**\Apideck\Client\Model\LinkedCustomer**](LinkedCustomer.md) |  | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
-`department_id` | **string** | A unique identifier for an object. | [optional] 
-`location_id` | **string** | A unique identifier for an object. | [optional] 
+`department_id` | **string** | The ID of the department | [optional] 
+`location_id` | **string** | The ID of the location | [optional] 
 `line_number` | **int** | Line number of the resource | [optional] 
 
 

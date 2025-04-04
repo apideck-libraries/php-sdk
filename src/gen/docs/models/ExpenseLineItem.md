@@ -10,8 +10,9 @@ Name | Type | Description | Notes
 `tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `account_id` | **string** | The unique identifier for the ledger account. | [optional] 
 `customer_id` | **string** | The ID of the customer this expense item is linked to. | [optional] 
-`department_id` | **string** | The ID of the department this expense item is linked to. | [optional] 
-`location_id` | **string** | The ID of the location this expense item is linked to. | [optional] 
+`department_id` | **string** | The ID of the department | [optional] 
+`location_id` | **string** | The ID of the location | [optional] 
+`subsidiary_id` | **string** | The ID of the subsidiary | [optional] 
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `description` | **string** | The expense line item description | [optional] 
 `billable` | **bool** | Boolean that indicates if the line item is billable or not. | [optional] 
@@ -24,6 +25,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedTrackingCategory`](LinkedTrackingCategory.md)
+
 
 
 

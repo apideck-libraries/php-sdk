@@ -1,12 +1,18 @@
-# Apideck.ProfitAndLossNetOperatingIncome
+# Apideck.Income
 
 ### Description
+
+The operating income accounts
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`total` | **float** | Total net operating income | 
+`total` | **float** | The aggregated total of all accounts within this category. | 
 `records` | [**AnyOfProfitAndLossSectionProfitAndLossRecord[]**](AnyOfProfitAndLossSectionProfitAndLossRecord.md) |  | 
+`id` | **string** | A unique identifier for an object. | [optional] 
+`code` | **string** | The account code of the account | [optional] 
+`title` | **string** | The name of the account. | [optional] 
+`type` | [**\Apideck\Client\Model\ProfitAndLossType**](ProfitAndLossType.md) |  | [optional] 
 
 
 
@@ -15,6 +21,10 @@ Name | Type | Description | Notes
 ## Referenced Types:
 
 * [`AnyOfProfitAndLossSectionProfitAndLossRecord`](AnyOfProfitAndLossSectionProfitAndLossRecord.md)
+
+
+
+* [`ProfitAndLossType`](ProfitAndLossType.md)
 
 ---
 

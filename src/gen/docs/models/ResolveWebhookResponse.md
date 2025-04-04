@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 `status` | **string** | HTTP Response Status | 
 `request_id` | **string** | UUID of the request received | [optional] 
 `timestamp` | **string** | ISO Datetime webhook event was received | [optional] 
+`_raw` | **array&lt;string,object&gt;** | Raw response from the integration when raw=true query param is provided | [optional] 
 
 
 

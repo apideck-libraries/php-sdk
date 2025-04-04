@@ -5,10 +5,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-`type` | **string** |  | 
-`id` | **string** |  | [optional] 
-`title` | **string** |  | [optional] 
-`total` | **float** |  | [optional] 
+`total` | **float** | The aggregated total of all accounts within this category. | 
+`id` | **string** | A unique identifier for an object. | [optional] 
+`code` | **string** | The account code of the account | [optional] 
+`title` | **string** | The name of the account. | [optional] 
+`type` | [**\Apideck\Client\Model\ProfitAndLossType**](ProfitAndLossType.md) |  | [optional] 
 `records` | [**AnyOfProfitAndLossSectionProfitAndLossRecord[]**](AnyOfProfitAndLossSectionProfitAndLossRecord.md) |  | [optional] 
 
 
@@ -20,6 +21,7 @@ Name | Type | Description | Notes
 
 
 
+* [`ProfitAndLossType`](ProfitAndLossType.md)
 * [`AnyOfProfitAndLossSectionProfitAndLossRecord`](AnyOfProfitAndLossSectionProfitAndLossRecord.md)
 
 ---
