@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `websites` | [**\Apideck\Client\Model\Website[]**](Website.md) |  | [optional] 
 `debtor_id` | **string** |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `deleted` | **bool** |  | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 

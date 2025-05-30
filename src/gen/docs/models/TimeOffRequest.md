@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 `amount` | **float** | The amount of time off requested. | [optional] 
 `day_part` | **string** | The day part of the time off request. | [optional] 
 `notes` | [**\Apideck\Client\Model\TimeOffRequestNotes**](TimeOffRequestNotes.md) |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 

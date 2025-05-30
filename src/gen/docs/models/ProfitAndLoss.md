@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 `gross_profit` | [**\Apideck\Client\Model\ProfitAndLossIndicator**](ProfitAndLossIndicator.md) |  | [optional] 
 `net_operating_income` | [**\Apideck\Client\Model\ProfitAndLossIndicator**](ProfitAndLossIndicator.md) |  | [optional] 
 `net_income` | [**\Apideck\Client\Model\ProfitAndLossIndicator**](ProfitAndLossIndicator.md) |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `customer` | **string** | The customer id | [optional] 
 
 

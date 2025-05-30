@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 `cv_url` | **string** |  | [optional] 
 `record_url` | **string** |  | [optional] 
 `rejected_at` | **\DateTime** |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `deleted` | **bool** | Flag to indicate if the object is deleted. | [optional] 
 `deleted_by` | **string** | The user who deleted the object. | [optional] 
 `deleted_at` | **\DateTime** | The time at which the object was deleted. | [optional] 

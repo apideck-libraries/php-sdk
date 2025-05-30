@@ -26,7 +26,8 @@ Name | Type | Description | Notes
 `tracking` | [**\Apideck\Client\Model\TrackingItem[]**](TrackingItem.md) |  | [optional] 
 `line_items` | [**\Apideck\Client\Model\EcommerceOrderLineItem[]**](EcommerceOrderLineItem.md) |  | [optional] 
 `note` | **string** | Note for the order. | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`refunds` | [**\Apideck\Client\Model\EcommerceOrderRefund[]**](EcommerceOrderRefund.md) |  | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 
@@ -98,6 +99,7 @@ Name | Type | Description | Notes
 * [`TrackingItem`](TrackingItem.md)
 * [`EcommerceOrderLineItem`](EcommerceOrderLineItem.md)
 
+* [`EcommerceOrderRefund`](EcommerceOrderRefund.md)
 
 
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 `initials` | **string** | Initials of the person | [optional] 
 `birthday` | **\DateTime** | Date of birth | [optional] 
 `deceased_on` | **\DateTime** | Date of death | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 
 
 

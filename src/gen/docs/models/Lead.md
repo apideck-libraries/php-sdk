@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `name` | **string** | Full name of the lead. | 
-`company_name` | **string** | The name of the company the lead is associated with. | 
 `id` | **string** | Unique identifier for the contact. | [optional] 
+`company_name` | **string** | The name of the company the lead is associated with. | [optional] 
 `owner_id` | **string** | The owner of the lead. | [optional] 
 `owner_name` | **string** | The name of the owner of the lead. | [optional] 
 `company_id` | **string** | The company the lead is associated with. | [optional] 
@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 `emails` | [**\Apideck\Client\Model\Email[]**](Email.md) |  | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `tags` | **string[]** |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **string** | Date updated in ISO 8601 format | [optional] 
 `created_at` | **string** | Date created in ISO 8601 format | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 `currency` | [**\Apideck\Client\Model\Currency**](Currency.md) |  | [optional] 
 `company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `line_items` | [**\Apideck\Client\Model\JournalEntryLineItem[]**](JournalEntryLineItem.md) | Requires a minimum of 2 line items that sum to 0 | [optional] 
+`status` | **string** | Journal entry status | [optional] 
 `memo` | **string** | Reference for the journal entry. | [optional] 
 `posted_at` | **\DateTime** | This is the date on which the journal entry was added. This can be different from the creation date and can also be backdated. | [optional] 
 `journal_symbol` | **string** | Journal symbol of the entry. For example IND for indirect costs | [optional] 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 `number` | **string** | Journal entry number. | [optional] 
 `tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
 `accounting_period` | **string** | Accounting period | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
@@ -32,6 +33,27 @@ Name | Type | Description | Notes
 
 
 
+<a name="STATUS"></a>
+## Enum: JournalEntry.status
+
+
+* `DRAFT` (value: `'draft'`)
+
+* `PENDING_APPROVAL` (value: `'pending_approval'`)
+
+* `APPROVED` (value: `'approved'`)
+
+* `POSTED` (value: `'posted'`)
+
+* `VOIDED` (value: `'voided'`)
+
+* `REJECTED` (value: `'rejected'`)
+
+* `DELETED` (value: `'deleted'`)
+
+
+
+
 ## Referenced Types:
 
 
@@ -39,6 +61,7 @@ Name | Type | Description | Notes
 * [`Currency`](Currency.md)
 
 * [`JournalEntryLineItem`](JournalEntryLineItem.md)
+
 
 
 
