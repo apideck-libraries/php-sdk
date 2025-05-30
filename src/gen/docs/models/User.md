@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 `password` | **string** | The password of the user | [optional] 
 `addresses` | [**\Apideck\Client\Model\Address[]**](Address.md) |  | [optional] 
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **string** | The date and time when the user was last updated. | [optional] 
 `created_at` | **string** | The date and time when the user was created. | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 

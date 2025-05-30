@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `description` | **string** | The expense line item description | [optional] 
 `billable` | **bool** | Boolean that indicates if the line item is billable or not. | [optional] 
+`line_number` | **int** | Line number of the resource | [optional] 
 
 
 
@@ -31,6 +32,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedTaxRate`](LinkedTaxRate.md)
+
 
 
 

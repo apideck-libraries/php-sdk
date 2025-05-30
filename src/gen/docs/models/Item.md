@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 `available` | **bool** |  | [optional] 
 `hidden` | **bool** |  | [optional] 
 `version` | **string** | The user who last updated the object. | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `deleted` | **bool** | Flag to indicate if the object is deleted. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
 `created_by` | **string** | The user who created the object. | [optional] 

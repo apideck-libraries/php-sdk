@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 `phone_numbers` | [**\Apideck\Client\Model\PhoneNumber[]**](PhoneNumber.md) | An array of phone numbers for the customer. | [optional] 
 `addresses` | [**\Apideck\Client\Model\EcommerceCustomerAddresses[]**](EcommerceCustomerAddresses.md) | An array of addresses for the customer. | [optional] 
 `orders` | [**\Apideck\Client\Model\LinkedEcommerceOrder[]**](LinkedEcommerceOrder.md) |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 

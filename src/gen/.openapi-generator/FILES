@@ -70,6 +70,9 @@ docs/Model/BalanceSheetLiabilitiesAccount.md
 docs/Model/BalanceSheetReports.md
 docs/Model/BalanceSheetUncategorizedItemsAccount.md
 docs/Model/BankAccount.md
+docs/Model/BankFeedAccount.md
+docs/Model/BankFeedStatement.md
+docs/Model/BankFeedStatementTransactions.md
 docs/Model/Benefit.md
 docs/Model/Bill.md
 docs/Model/BillLineItem.md
@@ -127,6 +130,8 @@ docs/Model/CreateApplicantResponse.md
 docs/Model/CreateApplicationResponse.md
 docs/Model/CreateAttachmentRequest.md
 docs/Model/CreateAttachmentResponse.md
+docs/Model/CreateBankFeedAccountResponse.md
+docs/Model/CreateBankFeedStatementResponse.md
 docs/Model/CreateBillPaymentResponse.md
 docs/Model/CreateBillResponse.md
 docs/Model/CreateCallbackState.md
@@ -140,6 +145,8 @@ docs/Model/CreateContactResponse.md
 docs/Model/CreateCreditNoteResponse.md
 docs/Model/CreateCustomMappingRequest.md
 docs/Model/CreateCustomMappingResponse.md
+docs/Model/CreateCustomObjectResponse.md
+docs/Model/CreateCustomObjectSchemaResponse.md
 docs/Model/CreateCustomerResponse.md
 docs/Model/CreateDepartmentResponse.md
 docs/Model/CreateDriveGroupResponse.md
@@ -192,11 +199,19 @@ docs/Model/CreateWebhookResponse.md
 docs/Model/CreditNote.md
 docs/Model/CreditNotesFilter.md
 docs/Model/CreditNotesSort.md
+docs/Model/CreditOrDebit.md
 docs/Model/CrmEventType.md
 docs/Model/Currency.md
 docs/Model/CustomField.md
 docs/Model/CustomFieldFinder.md
 docs/Model/CustomMapping.md
+docs/Model/CustomObject.md
+docs/Model/CustomObjectFields.md
+docs/Model/CustomObjectSchema.md
+docs/Model/CustomObjectSchemaFields.md
+docs/Model/CustomObjectSchemaOptions.md
+docs/Model/CustomObjectSchemasSort.md
+docs/Model/CustomObjectsSort.md
 docs/Model/Customer.md
 docs/Model/CustomersFilter.md
 docs/Model/CustomersSort.md
@@ -207,6 +222,8 @@ docs/Model/DeleteActivityResponse.md
 docs/Model/DeleteApplicantResponse.md
 docs/Model/DeleteApplicationResponse.md
 docs/Model/DeleteAttachmentResponse.md
+docs/Model/DeleteBankFeedAccountResponse.md
+docs/Model/DeleteBankFeedStatementResponse.md
 docs/Model/DeleteBillPaymentResponse.md
 docs/Model/DeleteBillResponse.md
 docs/Model/DeleteCommentResponse.md
@@ -214,6 +231,8 @@ docs/Model/DeleteCompanyResponse.md
 docs/Model/DeleteConsumerResponse.md
 docs/Model/DeleteContactResponse.md
 docs/Model/DeleteCreditNoteResponse.md
+docs/Model/DeleteCustomObjectResponse.md
+docs/Model/DeleteCustomObjectSchemaResponse.md
 docs/Model/DeleteCustomerResponse.md
 docs/Model/DeleteDepartmentResponse.md
 docs/Model/DeleteDriveGroupResponse.md
@@ -271,6 +290,7 @@ docs/Model/EcommerceDiscount.md
 docs/Model/EcommerceEventType.md
 docs/Model/EcommerceOrder.md
 docs/Model/EcommerceOrderLineItem.md
+docs/Model/EcommerceOrderRefund.md
 docs/Model/EcommerceOrderStatus.md
 docs/Model/EcommerceOrdersFilter.md
 docs/Model/EcommerceProduct.md
@@ -328,6 +348,10 @@ docs/Model/GetApplicationsResponse.md
 docs/Model/GetAttachmentResponse.md
 docs/Model/GetAttachmentsResponse.md
 docs/Model/GetBalanceSheetResponse.md
+docs/Model/GetBankFeedAccountResponse.md
+docs/Model/GetBankFeedAccountsResponse.md
+docs/Model/GetBankFeedStatementResponse.md
+docs/Model/GetBankFeedStatementsResponse.md
 docs/Model/GetBillPaymentResponse.md
 docs/Model/GetBillPaymentsResponse.md
 docs/Model/GetBillResponse.md
@@ -360,6 +384,10 @@ docs/Model/GetCreditNotesResponse.md
 docs/Model/GetCustomFieldsResponse.md
 docs/Model/GetCustomMappingResponse.md
 docs/Model/GetCustomMappingsResponse.md
+docs/Model/GetCustomObjectResponse.md
+docs/Model/GetCustomObjectSchemaResponse.md
+docs/Model/GetCustomObjectSchemasResponse.md
+docs/Model/GetCustomObjectsResponse.md
 docs/Model/GetCustomerResponse.md
 docs/Model/GetCustomersResponse.md
 docs/Model/GetDepartmentResponse.md
@@ -473,6 +501,7 @@ docs/Model/InvoiceItemSalesDetails.md
 docs/Model/InvoiceItemsFilter.md
 docs/Model/InvoiceItemsSort.md
 docs/Model/InvoiceLineItem.md
+docs/Model/InvoicePaymentAllocations.md
 docs/Model/InvoiceResponse.md
 docs/Model/InvoicesFilter.md
 docs/Model/InvoicesSort.md
@@ -633,6 +662,8 @@ docs/Model/UpdateAccountingLocationResponse.md
 docs/Model/UpdateActivityResponse.md
 docs/Model/UpdateApplicantResponse.md
 docs/Model/UpdateApplicationResponse.md
+docs/Model/UpdateBankFeedAccountResponse.md
+docs/Model/UpdateBankFeedStatementResponse.md
 docs/Model/UpdateBillPaymentResponse.md
 docs/Model/UpdateBillResponse.md
 docs/Model/UpdateCommentResponse.md
@@ -644,6 +675,8 @@ docs/Model/UpdateContactResponse.md
 docs/Model/UpdateCreditNoteResponse.md
 docs/Model/UpdateCustomMappingRequest.md
 docs/Model/UpdateCustomMappingResponse.md
+docs/Model/UpdateCustomObjectResponse.md
+docs/Model/UpdateCustomObjectSchemaResponse.md
 docs/Model/UpdateCustomerResponse.md
 docs/Model/UpdateDepartmentResponse.md
 docs/Model/UpdateDriveGroupResponse.md
@@ -776,6 +809,9 @@ lib/Model/BalanceSheetLiabilitiesAccount.php
 lib/Model/BalanceSheetReports.php
 lib/Model/BalanceSheetUncategorizedItemsAccount.php
 lib/Model/BankAccount.php
+lib/Model/BankFeedAccount.php
+lib/Model/BankFeedStatement.php
+lib/Model/BankFeedStatementTransactions.php
 lib/Model/Benefit.php
 lib/Model/Bill.php
 lib/Model/BillLineItem.php
@@ -833,6 +869,8 @@ lib/Model/CreateApplicantResponse.php
 lib/Model/CreateApplicationResponse.php
 lib/Model/CreateAttachmentRequest.php
 lib/Model/CreateAttachmentResponse.php
+lib/Model/CreateBankFeedAccountResponse.php
+lib/Model/CreateBankFeedStatementResponse.php
 lib/Model/CreateBillPaymentResponse.php
 lib/Model/CreateBillResponse.php
 lib/Model/CreateCallbackState.php
@@ -846,6 +884,8 @@ lib/Model/CreateContactResponse.php
 lib/Model/CreateCreditNoteResponse.php
 lib/Model/CreateCustomMappingRequest.php
 lib/Model/CreateCustomMappingResponse.php
+lib/Model/CreateCustomObjectResponse.php
+lib/Model/CreateCustomObjectSchemaResponse.php
 lib/Model/CreateCustomerResponse.php
 lib/Model/CreateDepartmentResponse.php
 lib/Model/CreateDriveGroupResponse.php
@@ -898,11 +938,19 @@ lib/Model/CreateWebhookResponse.php
 lib/Model/CreditNote.php
 lib/Model/CreditNotesFilter.php
 lib/Model/CreditNotesSort.php
+lib/Model/CreditOrDebit.php
 lib/Model/CrmEventType.php
 lib/Model/Currency.php
 lib/Model/CustomField.php
 lib/Model/CustomFieldFinder.php
 lib/Model/CustomMapping.php
+lib/Model/CustomObject.php
+lib/Model/CustomObjectFields.php
+lib/Model/CustomObjectSchema.php
+lib/Model/CustomObjectSchemaFields.php
+lib/Model/CustomObjectSchemaOptions.php
+lib/Model/CustomObjectSchemasSort.php
+lib/Model/CustomObjectsSort.php
 lib/Model/Customer.php
 lib/Model/CustomersFilter.php
 lib/Model/CustomersSort.php
@@ -913,6 +961,8 @@ lib/Model/DeleteActivityResponse.php
 lib/Model/DeleteApplicantResponse.php
 lib/Model/DeleteApplicationResponse.php
 lib/Model/DeleteAttachmentResponse.php
+lib/Model/DeleteBankFeedAccountResponse.php
+lib/Model/DeleteBankFeedStatementResponse.php
 lib/Model/DeleteBillPaymentResponse.php
 lib/Model/DeleteBillResponse.php
 lib/Model/DeleteCommentResponse.php
@@ -920,6 +970,8 @@ lib/Model/DeleteCompanyResponse.php
 lib/Model/DeleteConsumerResponse.php
 lib/Model/DeleteContactResponse.php
 lib/Model/DeleteCreditNoteResponse.php
+lib/Model/DeleteCustomObjectResponse.php
+lib/Model/DeleteCustomObjectSchemaResponse.php
 lib/Model/DeleteCustomerResponse.php
 lib/Model/DeleteDepartmentResponse.php
 lib/Model/DeleteDriveGroupResponse.php
@@ -977,6 +1029,7 @@ lib/Model/EcommerceDiscount.php
 lib/Model/EcommerceEventType.php
 lib/Model/EcommerceOrder.php
 lib/Model/EcommerceOrderLineItem.php
+lib/Model/EcommerceOrderRefund.php
 lib/Model/EcommerceOrderStatus.php
 lib/Model/EcommerceOrdersFilter.php
 lib/Model/EcommerceProduct.php
@@ -1034,6 +1087,10 @@ lib/Model/GetApplicationsResponse.php
 lib/Model/GetAttachmentResponse.php
 lib/Model/GetAttachmentsResponse.php
 lib/Model/GetBalanceSheetResponse.php
+lib/Model/GetBankFeedAccountResponse.php
+lib/Model/GetBankFeedAccountsResponse.php
+lib/Model/GetBankFeedStatementResponse.php
+lib/Model/GetBankFeedStatementsResponse.php
 lib/Model/GetBillPaymentResponse.php
 lib/Model/GetBillPaymentsResponse.php
 lib/Model/GetBillResponse.php
@@ -1066,6 +1123,10 @@ lib/Model/GetCreditNotesResponse.php
 lib/Model/GetCustomFieldsResponse.php
 lib/Model/GetCustomMappingResponse.php
 lib/Model/GetCustomMappingsResponse.php
+lib/Model/GetCustomObjectResponse.php
+lib/Model/GetCustomObjectSchemaResponse.php
+lib/Model/GetCustomObjectSchemasResponse.php
+lib/Model/GetCustomObjectsResponse.php
 lib/Model/GetCustomerResponse.php
 lib/Model/GetCustomersResponse.php
 lib/Model/GetDepartmentResponse.php
@@ -1179,6 +1240,7 @@ lib/Model/InvoiceItemSalesDetails.php
 lib/Model/InvoiceItemsFilter.php
 lib/Model/InvoiceItemsSort.php
 lib/Model/InvoiceLineItem.php
+lib/Model/InvoicePaymentAllocations.php
 lib/Model/InvoiceResponse.php
 lib/Model/InvoicesFilter.php
 lib/Model/InvoicesSort.php
@@ -1340,6 +1402,8 @@ lib/Model/UpdateAccountingLocationResponse.php
 lib/Model/UpdateActivityResponse.php
 lib/Model/UpdateApplicantResponse.php
 lib/Model/UpdateApplicationResponse.php
+lib/Model/UpdateBankFeedAccountResponse.php
+lib/Model/UpdateBankFeedStatementResponse.php
 lib/Model/UpdateBillPaymentResponse.php
 lib/Model/UpdateBillResponse.php
 lib/Model/UpdateCommentResponse.php
@@ -1351,6 +1415,8 @@ lib/Model/UpdateContactResponse.php
 lib/Model/UpdateCreditNoteResponse.php
 lib/Model/UpdateCustomMappingRequest.php
 lib/Model/UpdateCustomMappingResponse.php
+lib/Model/UpdateCustomObjectResponse.php
+lib/Model/UpdateCustomObjectSchemaResponse.php
 lib/Model/UpdateCustomerResponse.php
 lib/Model/UpdateDepartmentResponse.php
 lib/Model/UpdateDriveGroupResponse.php
@@ -1479,6 +1545,9 @@ test/Model/BalanceSheetReportsTest.php
 test/Model/BalanceSheetTest.php
 test/Model/BalanceSheetUncategorizedItemsAccountTest.php
 test/Model/BankAccountTest.php
+test/Model/BankFeedAccountTest.php
+test/Model/BankFeedStatementTest.php
+test/Model/BankFeedStatementTransactionsTest.php
 test/Model/BenefitTest.php
 test/Model/BillLineItemTest.php
 test/Model/BillPaymentAllocationsTest.php
@@ -1536,6 +1605,8 @@ test/Model/CreateApplicantResponseTest.php
 test/Model/CreateApplicationResponseTest.php
 test/Model/CreateAttachmentRequestTest.php
 test/Model/CreateAttachmentResponseTest.php
+test/Model/CreateBankFeedAccountResponseTest.php
+test/Model/CreateBankFeedStatementResponseTest.php
 test/Model/CreateBillPaymentResponseTest.php
 test/Model/CreateBillResponseTest.php
 test/Model/CreateCallbackStateResponseDataTest.php
@@ -1549,6 +1620,8 @@ test/Model/CreateContactResponseTest.php
 test/Model/CreateCreditNoteResponseTest.php
 test/Model/CreateCustomMappingRequestTest.php
 test/Model/CreateCustomMappingResponseTest.php
+test/Model/CreateCustomObjectResponseTest.php
+test/Model/CreateCustomObjectSchemaResponseTest.php
 test/Model/CreateCustomerResponseTest.php
 test/Model/CreateDepartmentResponseTest.php
 test/Model/CreateDriveGroupResponseTest.php
@@ -1601,11 +1674,19 @@ test/Model/CreateWebhookResponseTest.php
 test/Model/CreditNoteTest.php
 test/Model/CreditNotesFilterTest.php
 test/Model/CreditNotesSortTest.php
+test/Model/CreditOrDebitTest.php
 test/Model/CrmEventTypeTest.php
 test/Model/CurrencyTest.php
 test/Model/CustomFieldFinderTest.php
 test/Model/CustomFieldTest.php
 test/Model/CustomMappingTest.php
+test/Model/CustomObjectFieldsTest.php
+test/Model/CustomObjectSchemaFieldsTest.php
+test/Model/CustomObjectSchemaOptionsTest.php
+test/Model/CustomObjectSchemaTest.php
+test/Model/CustomObjectSchemasSortTest.php
+test/Model/CustomObjectTest.php
+test/Model/CustomObjectsSortTest.php
 test/Model/CustomerTest.php
 test/Model/CustomersFilterTest.php
 test/Model/CustomersSortTest.php
@@ -1616,6 +1697,8 @@ test/Model/DeleteActivityResponseTest.php
 test/Model/DeleteApplicantResponseTest.php
 test/Model/DeleteApplicationResponseTest.php
 test/Model/DeleteAttachmentResponseTest.php
+test/Model/DeleteBankFeedAccountResponseTest.php
+test/Model/DeleteBankFeedStatementResponseTest.php
 test/Model/DeleteBillPaymentResponseTest.php
 test/Model/DeleteBillResponseTest.php
 test/Model/DeleteCommentResponseTest.php
@@ -1623,6 +1706,8 @@ test/Model/DeleteCompanyResponseTest.php
 test/Model/DeleteConsumerResponseTest.php
 test/Model/DeleteContactResponseTest.php
 test/Model/DeleteCreditNoteResponseTest.php
+test/Model/DeleteCustomObjectResponseTest.php
+test/Model/DeleteCustomObjectSchemaResponseTest.php
 test/Model/DeleteCustomerResponseTest.php
 test/Model/DeleteDepartmentResponseTest.php
 test/Model/DeleteDriveGroupResponseTest.php
@@ -1679,6 +1764,7 @@ test/Model/EcommerceCustomersFilterTest.php
 test/Model/EcommerceDiscountTest.php
 test/Model/EcommerceEventTypeTest.php
 test/Model/EcommerceOrderLineItemTest.php
+test/Model/EcommerceOrderRefundTest.php
 test/Model/EcommerceOrderStatusTest.php
 test/Model/EcommerceOrderTest.php
 test/Model/EcommerceOrdersFilterTest.php
@@ -1737,6 +1823,10 @@ test/Model/GetApplicationsResponseTest.php
 test/Model/GetAttachmentResponseTest.php
 test/Model/GetAttachmentsResponseTest.php
 test/Model/GetBalanceSheetResponseTest.php
+test/Model/GetBankFeedAccountResponseTest.php
+test/Model/GetBankFeedAccountsResponseTest.php
+test/Model/GetBankFeedStatementResponseTest.php
+test/Model/GetBankFeedStatementsResponseTest.php
 test/Model/GetBillPaymentResponseTest.php
 test/Model/GetBillPaymentsResponseTest.php
 test/Model/GetBillResponseTest.php
@@ -1769,6 +1859,10 @@ test/Model/GetCreditNotesResponseTest.php
 test/Model/GetCustomFieldsResponseTest.php
 test/Model/GetCustomMappingResponseTest.php
 test/Model/GetCustomMappingsResponseTest.php
+test/Model/GetCustomObjectResponseTest.php
+test/Model/GetCustomObjectSchemaResponseTest.php
+test/Model/GetCustomObjectSchemasResponseTest.php
+test/Model/GetCustomObjectsResponseTest.php
 test/Model/GetCustomerResponseTest.php
 test/Model/GetCustomersResponseTest.php
 test/Model/GetDepartmentResponseTest.php
@@ -1881,6 +1975,7 @@ test/Model/InvoiceItemTest.php
 test/Model/InvoiceItemsFilterTest.php
 test/Model/InvoiceItemsSortTest.php
 test/Model/InvoiceLineItemTest.php
+test/Model/InvoicePaymentAllocationsTest.php
 test/Model/InvoiceResponseTest.php
 test/Model/InvoiceTest.php
 test/Model/InvoicesFilterTest.php
@@ -2042,6 +2137,8 @@ test/Model/UpdateAccountingLocationResponseTest.php
 test/Model/UpdateActivityResponseTest.php
 test/Model/UpdateApplicantResponseTest.php
 test/Model/UpdateApplicationResponseTest.php
+test/Model/UpdateBankFeedAccountResponseTest.php
+test/Model/UpdateBankFeedStatementResponseTest.php
 test/Model/UpdateBillPaymentResponseTest.php
 test/Model/UpdateBillResponseTest.php
 test/Model/UpdateCommentResponseTest.php
@@ -2053,6 +2150,8 @@ test/Model/UpdateContactResponseTest.php
 test/Model/UpdateCreditNoteResponseTest.php
 test/Model/UpdateCustomMappingRequestTest.php
 test/Model/UpdateCustomMappingResponseTest.php
+test/Model/UpdateCustomObjectResponseTest.php
+test/Model/UpdateCustomObjectSchemaResponseTest.php
 test/Model/UpdateCustomerResponseTest.php
 test/Model/UpdateDepartmentResponseTest.php
 test/Model/UpdateDriveGroupResponseTest.php

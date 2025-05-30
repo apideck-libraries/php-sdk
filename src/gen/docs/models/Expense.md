@@ -22,10 +22,12 @@ Name | Type | Description | Notes
 `tax_rate` | [**\Apideck\Client\Model\LinkedTaxRate**](LinkedTaxRate.md) |  | [optional] 
 `total_amount` | **float** | The total amount of the expense line item. | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `updated_at` | **\DateTime** | The date and time when the object was last updated. | [optional] 
 `created_at` | **\DateTime** | The date and time when the object was created. | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
+`updated_by` | **string** | The user who last updated the object. | [optional] 
+`created_by` | **string** | The user who created the object. | [optional] 
 `pass_through` | **object[]** | The pass_through property allows passing service-specific, custom data or structured modifications in request body when creating or updating resources. | [optional] 
 
 
@@ -74,6 +76,8 @@ Name | Type | Description | Notes
 * [`LinkedTaxRate`](LinkedTaxRate.md)
 
 * [`CustomField`](CustomField.md)
+
+
 
 
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 `po_number` | **string** | A PO Number uniquely identifies a purchase order and is generally defined by the buyer. | [optional] 
 `reference` | **string** | Optional purchase order reference. | [optional] 
 `supplier` | [**\Apideck\Client\Model\LinkedSupplier**](LinkedSupplier.md) |  | [optional] 
+`subsidiary_id` | **string** | The ID of the subsidiary | [optional] 
 `company_id` | **string** | The company or subsidiary id the transaction belongs to | [optional] 
 `status` | **string** |  | [optional] 
 `issued_date` | **\DateTime** | Date purchase order was issued - YYYY-MM-DD. | [optional] 
@@ -34,7 +35,7 @@ Name | Type | Description | Notes
 `channel` | **string** | The channel through which the transaction is processed. | [optional] 
 `memo` | **string** | Message for the supplier. This text appears on the Purchase Order. | [optional] 
 `tracking_categories` | [**\Apideck\Client\Model\LinkedTrackingCategory[]**](LinkedTrackingCategory.md) | A list of linked tracking categories. | [optional] 
-`custom_mappings` | **object** | When custom mappings are configured on the resource, the result is included here. | [optional] 
+`custom_mappings` | **array&lt;string,object&gt;** | When custom mappings are configured on the resource, the result is included here. | [optional] 
 `custom_fields` | [**\Apideck\Client\Model\CustomField[]**](CustomField.md) |  | [optional] 
 `row_version` | **string** | A binary value used to detect updates to a object and prevent data conflicts. It is incremented each time an update is made to the object. | [optional] 
 `updated_by` | **string** | The user who last updated the object. | [optional] 
@@ -72,6 +73,7 @@ Name | Type | Description | Notes
 
 
 * [`LinkedSupplier`](LinkedSupplier.md)
+
 
 
 

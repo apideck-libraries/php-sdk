@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 `updated_since` | **\DateTime** |  | [optional] 
+`invoice_id` | **string** |  | [optional] 
 
 
 
